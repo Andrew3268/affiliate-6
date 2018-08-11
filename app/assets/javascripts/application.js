@@ -14,6 +14,7 @@
 //= require jquery.min
 //= require jquery.dropotron.min
 //= require jquery_ujs
+//= require cocoon
 //= require util
 //= require breakpoints.min
 //= require browser.min

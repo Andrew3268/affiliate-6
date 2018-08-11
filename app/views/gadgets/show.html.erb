@@ -1,5 +1,6 @@
 <h1><%= @gadget.gg_title %></h1>
 <p><%= @gadget.gg_intro %></p>
+<p><%= @gadget.user.name %></p>
 
 <%= link_to "Home", root_path %>
 <%= link_to "Edit", edit_gadget_path(@gadget) %>
