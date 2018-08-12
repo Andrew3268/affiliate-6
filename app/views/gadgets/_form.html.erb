@@ -1,6 +1,72 @@
-<%= simple_form_for @gadget do |f| %>
- <%= f.input :gg_title %>
- <%= f.input :gg_intro %>
 
- <%= f.button :submit %>
-<% end %>
+  <%= simple_form_for @gadget do |f| %>
+   
+   <div class="form_border">
+    <%= f.input :gg_title, label: 'Title' %>
+    <%= f.input :gg_intro, label: 'Intro' %>
+    <%= f.input :gg_img, label: 'Image URL' %>
+    <%= f.input :gg_url, label: 'Product URL' %>
+    <%= f.input :gg_from, label: 'Product Site' %>
+   </div>
+   
+   <div class="form_border">
+    <%= f.input :gg_aprice, label: 'Current Price' %>
+    <%= f.input :gg_bprice, label: 'Original Price' %>
+    <%= f.input :gg_sales, label: 'Sale Percentage' %>
+   </div>
+
+   <div class="form_border">
+    <%= f.input :gg_youtube01, label: 'Youtube First' %>
+    <%= f.input :gg_youtube02, label: 'Youtube Second' %>
+   </div>
+   
+   <div class="form_border">
+    <%= f.input :gg_source_01, label: 'Source_01' %>
+    <%= f.input :gg_source_02, label: 'Source_02' %>
+    <%= f.input :gg_source_03, label: 'Source_03' %>
+    <%= f.input :gg_source_04, label: 'Source_04' %>
+    <%= f.input :gg_source_05, label: 'Source_05' %>
+    <%= f.input :gg_source_06, label: 'Source_06' %>
+    <%= f.input :gg_source_07, label: 'Source_07' %>
+    <%= f.input :gg_source_08, label: 'Source_08' %>
+    <%= f.input :gg_source_09, label: 'Source_09' %>
+    <%= f.input :gg_source_10, label: 'Source_10' %>
+   </div>
+   
+   <div class="form_border">
+    <%= f.input :gg_summary, label: 'Summary' %>
+    <%= f.input :gg_bottomline, label: 'Bottom Line' %>
+   </div>
+   
+   <div class="procon_wrap">
+    <div class="pros">
+     <%= f.input :gg_pro_01, label: 'Pro_01' %>
+     <%= f.input :gg_pro_02, label: 'Pro_02' %>
+     <%= f.input :gg_pro_03, label: 'Pro_03' %>
+     <%= f.input :gg_pro_04, label: 'Pro_04' %>
+     <%= f.input :gg_pro_05, label: 'Pro_05' %>
+     <%= f.input :gg_pro_06, label: 'Pro_06' %>
+     <%= f.input :gg_pro_07, label: 'Pro_07' %>
+     <%= f.input :gg_pro_08, label: 'Pro_08' %>
+     <%= f.input :gg_pro_09, label: 'Pro_09'%>
+     <%= f.input :gg_pro_10, label: 'Pro_10'%>
+    </div>
+    <div class="cons">
+     <%= f.input :gg_con_01, label: 'con_01' %>
+     <%= f.input :gg_con_02, label: 'con_02' %>
+     <%= f.input :gg_con_03, label: 'con_03' %>
+     <%= f.input :gg_con_04, label: 'con_04' %>
+     <%= f.input :gg_con_05, label: 'con_05'%>
+     <%= f.input :gg_con_06, label: 'con_06' %>
+     <%= f.input :gg_con_07, label: 'con_07' %>
+    </div>
+   </div>
+
+   
+   <div class="form_btn">
+    <%= f.button :submit %>
+   </div>
+  <% end %>
+
+
+ 

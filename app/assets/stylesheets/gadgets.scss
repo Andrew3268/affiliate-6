@@ -1,3 +1,97 @@
 // Place all the styles related to the Gadgets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* =============== Gadget From =============== */
+.gadget_form {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 2em;
+}
+.form_border {
+  border: 2px solid;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.procon_wrap .pros,
+.procon_wrap .cons {
+  float: left;
+  width: 48%;
+  margin: 1%;
+  padding: 1%;
+  border: 2px solid; 
+}
+.form_btn {
+  margin-top: 92em;
+}
+
+/* =============== Gadget show =============== */
+.show_image, 
+.show_content  {
+  float: left;
+  width: 50%;
+  padding: 1%;
+}
+.show_image img {
+  width: 100%;
+}
+
+/* =============== Social Sharing =============== */
+.social {
+  position: fixed;
+  top: 25%;
+  list-style-type: none;
+  z-index: 11;
+}
+.social li {
+  width: 65px;
+  text-align: center;
+  margin: 0 0 10px 0;
+}
+.social li:hover {
+  width: 75px;
+}
+.social li a {
+  display: block;
+  width: 100%;
+  background: #2a2a2a;
+  font-size: 30px;
+  color: #fff;
+  padding: 10px;
+}
+.social li a.facebook:hover {
+  background: #3b5997;
+}
+.social li a.twitter:hover {
+  background: #2daae1;
+}
+.social li a.whatsapp:hover {
+  background: #5abe42;
+}
+.social li a.pinterest:hover {
+  background: #ca2026;
+}
+.social span {
+  display: none;
+}
+
+/* =============== Responsive Youtube =============== */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+  margin-top: 2em;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -19,4 +19,5 @@
 //= require breakpoints.min
 //= require browser.min
 //= require main
+//= require gadget
 //= require_tree .

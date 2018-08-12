@@ -1,7 +1,55 @@
-<h1><%= @gadget.gg_title %></h1>
-<p><%= @gadget.gg_intro %></p>
-<p><%= @gadget.user.name %></p>
+<div id="page-wrapper">
+ <%= render 'shared/header' %>
 
-<%= link_to "Home", root_path %>
-<%= link_to "Edit", edit_gadget_path(@gadget) %>
-<%= link_to "Delete", gadget_path(@gadget), method: :delete, data: { confirm: "Are you Sure?" } %>
+   <section id="main">
+    <div class="gadget_container container">
+     <%= render 'gadgets/content' %>
+    </div>
+   </section>
+   
+   <section id="main">
+    <div class="gadget_container container">
+     <div class="row">
+
+      <div id="content" class="col-8 col-12-medium">
+       <h2>Summary</h2>
+       <%= render 'gadgets/reason' %>
+
+       <div class="video-container">
+        <iframe width="560" height="315" src="<%= @gadget.gg_youtube01 %>" frameborder="0"encrypted-media" allowfullscreen></iframe>
+        <iframe width="560" height="315" src="<%= @gadget.gg_youtube02 %>" frameborder="0"encrypted-media" allowfullscreen></iframe>
+       </div>
+      
+       <h2>Source</h2>
+       <%= render 'gadgets/source' %>
+      </div><!-- /#content -->
+
+     <div id="sidebar" class="col-4 col-12-medium">
+      <%= render 'gadgets/sidebar' %>
+     </div><!-- /#sidebar -->
+
+     </div>
+    </div>
+   </section>
+
+ <%= link_to "Home", root_path %>
+ <%= link_to "Edit", edit_gadget_path(@gadget) %>
+ <%= link_to "Delete", gadget_path(@gadget), method: :delete, data: { confirm: "Are you Sure?" } %>
+</div>
+
+<!-- Social Shring -->
+<ul class="social">
+  <!-- FaceBook -->
+  <a class="facebook" id="shareFB" href="https://www.facebook.com/sharer/sharer.php?u=<%= url_for([@gadget, { 
+   only_path: false }]) %>&t=<%= @gadget.gg_title %>"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"   target="_blank" title="Share on Facebook"><li><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li></a>
+  <script type="text/javascript">document.getElementById("shareFB").setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u=" + document.URL);
+  </script>
+  <!-- Twitter -->
+  <a class="twitter" href="https://twitter.com/share?url=<%= url_for([@gadget, { 
+   only_path: false }]) %>&via=ohigottabuythis&text=<%= @gadget.gg_title %>"
+   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
+   target="_blank" title="Share on Twitter">
+   <li><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
+  </a>
+</ul>

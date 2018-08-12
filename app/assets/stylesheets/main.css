@@ -62,7 +62,7 @@ input, select, textarea {
     box-sizing: inherit;
   }
   body {
-    background: #f0f0f0;
+    /*background: #f0f0f0;*/
   }
     body.is-preload *, body.is-preload *:before, body.is-preload *:after {
       -moz-animation: none !important;
@@ -175,6 +175,9 @@ input, select, textarea {
     @media screen and (max-width: 1280px) {
       .container {
         width: calc(100% - 80px);
+      }
+      .gadget_container {
+        width: calc(80% - 80px);
       }
     }
     @media screen and (max-width: 980px) {
@@ -1279,7 +1282,7 @@ input, select, textarea {
     -webkit-appearance: none;
     display: block;
     border: 0;
-    background: #e8e8e8;
+    /*background: #e8e8e8;*/
     width: 100%;
     box-shadow: inset 2px 2px 0px 0px rgba(0, 0, 0, 0.1);
     border-radius: 4px;
@@ -1294,7 +1297,7 @@ input, select, textarea {
       background: #f0f0f0;
     }
   form textarea {
-    min-height: 11em;
+    min-height: 6em;
   }
   form ::-webkit-input-placeholder {
     color: #555 !important;
