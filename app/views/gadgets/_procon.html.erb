@@ -1,5 +1,6 @@
- <p><%= @gadget.gg_summary %></p>
- <h1>사야하는 몇가지 이유</h1>
+ <p><%= @gadget.gg_summary %></p><br>
+
+ <h1 class="pros_title"><i class="fa fa-check-circle"></i> 사야하는 몇가지 이유</h1>
  <ul>
   <% if @gadget.gg_pro_01.present? %>
    <li><%= @gadget.gg_pro_01 %></li>
@@ -31,8 +32,9 @@
   <% if @gadget.gg_pro_10.present? %>
    <li><%= @gadget.gg_pro_10 %></li>
   <% end %>
- </ul>
- <h1>사지 말아야할 몇가지 이유</h1>
+ </ul><br>
+
+ <h1 class="cons_title"><i class="fa fa-times-circle"></i> 사지 말아야할 몇가지 이유</h1>
  <ul>
   <% if @gadget.gg_con_01.present? %>
    <li><%= @gadget.gg_con_01 %></li>
@@ -55,6 +57,8 @@
   <% if @gadget.gg_con_07.present? %>
    <li><%= @gadget.gg_con_07 %></li>
   <% end %>
- </ul>
+ </ul><br>
+
  <h2>Bottom Line</h2>
  <p><%= @gadget.gg_bottomline %></p>
+ <a href="<%= @gadget.gg_url %>" class="button icon">$<%= @gadget.gg_aprice %> from <%= @gadget.gg_from %></a>

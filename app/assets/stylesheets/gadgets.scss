@@ -2,6 +2,44 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* =============== Index Common  =============== */
+/* ================
+ line-number :2
+ ================= */
+.gadget_title {
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -moz-line-clamp: 2; 
+  -webkit-line-clamp: 2; /* number of line */ 
+  -ms-line-clamp: 2;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  word-wrap:break-word;
+}
+
+/* ================
+ line-number :3
+ ================= */
+.gadget_intro {
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -moz-line-clamp: 3; 
+  -webkit-line-clamp: 3; /* number of line */ 
+  -ms-line-clamp: 3;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  word-wrap:break-word;
+}
+
+/* =============== Index Page  =============== */
+.gadget_img {
+  width: 100%;
+}
+
 /* =============== Gadget From =============== */
 .gadget_form {
   margin: 0 auto;
@@ -29,13 +67,34 @@
 .show_image, 
 .show_content  {
   float: left;
-  width: 50%;
+  width: 48%;
   padding: 1%;
+  margin-right: 2%;
 }
 .show_image img {
   width: 100%;
+  height: 300px;
+  object-fit: contain;
 }
-
+.video-container {
+  margin-bottom: 1em;
+}
+.pros_title {
+  color: green;
+}
+.cons_title {
+  color: red;
+}
+.gadget_source {
+  border: 2px solid;
+  padding: 1em;
+}
+@media screen and (max-width: 500px) {
+.show_image, 
+.show_content {
+  width: 100%;
+}
+}
 /* =============== Social Sharing =============== */
 .social {
   position: fixed;

@@ -13,21 +13,24 @@
 
       <div id="content" class="col-8 col-12-medium">
        <h2>Summary</h2>
-       <%= render 'gadgets/reason' %>
+       <%= render 'gadgets/procon' %>
 
        <% if @gadget.gg_youtube01.present? %>
        <div class="video-container">
         <iframe width="560" height="315" src="<%= @gadget.gg_youtube01 %>" frameborder="0"encrypted-media" allowfullscreen></iframe>
        </div>
        <% end %>
-       <% if @gadget.gg_youtube01.present? %>
+
+       <% if @gadget.gg_youtube02.present? %>
        <div class="video-container">
         <iframe width="560" height="315" src="<%= @gadget.gg_youtube02 %>" frameborder="0"encrypted-media" allowfullscreen></iframe>
-       </div>
+       </div><br>
        <% end %>
       
-       <h2>Source</h2>
-       <%= render 'gadgets/source' %>
+       <div class="gadget_source">
+        <h2>Source</h2>
+        <%= render 'gadgets/source' %>
+       </div>
       </div><!-- /#content -->
 
      <div id="sidebar" class="col-4 col-12-medium">
