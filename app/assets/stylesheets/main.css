@@ -1986,7 +1986,7 @@ input, select, textarea {
       h2, h3, h4, h5, h6 {
         font-size: 1.2em;
         letter-spacing: 2px;
-        text-align: center;
+        /*text-align: center;*/
         margin: 0 0 1em 0;
       }
         h2 br, h3 br, h4 br, h5 br, h6 br {

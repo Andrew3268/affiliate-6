@@ -36,6 +36,9 @@
 }
 
 /* =============== Index Page  =============== */
+header {
+  height: 3.5em;
+}
 .main_gadget {
   height: 250px;
 }
@@ -125,11 +128,33 @@
   text-decoration: line-through;
 }
 .show_button {
-  width: 58%;
-  margin-top: -1.3em;
+  width: 42%;
+  margin: -1.3em 0 0 0;
 }
 .content_border {
   border-bottom: 1px solid;
+}
+.show_border {
+  border-bottom: 1px dotted;
+  width:80%;
+  margin: 0 auto;
+}
+.show_admin_wrap ul {
+  padding: 0em;
+}
+.show_admin_wrap ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0em;
+  margin: 0em;
+}
+.show_admin_wrap ul li:nth-child(2) {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -1.9em;
+}
+.show_admin_wrap a {
+  margin: 0 0.3em;
 }
 /* =============== Social Sharing =============== */
 .social {
@@ -201,6 +226,28 @@
     margin-top: 1.3em;
   }
   .show_button {
-    margin-top: -1.2em;
+    margin: -1.2em 0 0 0;
+  }
+  #header > .container {
+    padding: 4em 0 2em 0;
   }
 }
+
+@media only screen
+and (min-width : 501px)  
+and (max-width : 750px) {
+
+}
+
+@media only screen
+and (min-width : 751px)  
+and (max-width : 1023px) {
+
+}
+
+@media screen 
+and (min-width: 1024px)
+and (max-width : 1600px) { 
+
+}
+

@@ -6,6 +6,8 @@
      <%= render 'gadgets/content' %>
     </div>
    </section>
+
+   <div class="show_border"></div>
    
    <section id="main">
     <div class="gadget_container container">
@@ -40,10 +42,7 @@
      </div>
     </div>
    </section>
-
- <%= link_to "Home", root_path %>
- <%= link_to "Edit", edit_gadget_path(@gadget) %>
- <%= link_to "Delete", gadget_path(@gadget), method: :delete, data: { confirm: "Are you Sure?" } %>
+   
 </div>
 
 <!-- Social Shring -->

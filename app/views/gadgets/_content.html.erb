@@ -2,17 +2,25 @@
 
  <div class="show_image">
   <img src="<%= @gadget.gg_img %>">
-  <p><%= @gadget.gg_from %></p>
  </div>
 
  <div class="show_content">
-
   <h1><%= @gadget.gg_title %></h1>
   <h3>What's This?</h3>
   <p><%= @gadget.gg_intro %></p>
-  <p>by oh,i gotta buy this</p>
-  <!-- <p>by @gadget.user.name </p> -->
-
+  <div class="show_admin_wrap">
+    <ul>
+      <li><p><%= @gadget.gg_from %></p></li>
+      <li>
+        <div class="show_admin">
+         <%= link_to "Home", root_path %>
+         <%= link_to "Edit", edit_gadget_path(@gadget) %>
+         <%= link_to "Delete", gadget_path(@gadget), method: :delete, data: { confirm: "Are you Sure?" } %>
+        </div>
+      </li>
+    </ul>
+  </div>
+ 
   <div class="content_border"></div>
 
   <div class="main_price_wrap">
@@ -31,6 +39,6 @@
       </div>
     </div>
   </div>
-
  </div><!--/.show_content-->
+
 </div><!--/.show_detail-->
