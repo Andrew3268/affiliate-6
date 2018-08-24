@@ -2,6 +2,11 @@ class GadgetsController < ApplicationController
 
   before_action :find_gadget, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+  before_action :log_impression, :only=> [:show]
+
+  def log_impression
+    @gadget.impressions.create(ip_address: request.remote_ip,user_id:current_user.id)
+  end
 
   def index
     @gadgets = Gadget.all.order("created_at DESC")
@@ -43,6 +48,10 @@ class GadgetsController < ApplicationController
 
   def find_gadget
     @gadget = Gadget.find(params[:id]) 
+  end
+
+  def find_impression
+    @gadget = Curation.find(params[:id])
   end
 
   def gadget_params

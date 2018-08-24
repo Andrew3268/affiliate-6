@@ -48,11 +48,21 @@ header {
 }
 .main_price {
   float: left;
-  width: 40%;
+  width: 50%;
   margin-top: 1.4em;
 }
 .main_price p:nth-child(1) {
   font-size: 1.5em;
+}
+.main_price ul {
+  padding: 0em;
+  text-align: left;
+}
+.main_price ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 0em;
+  margin: 0 0.5em 0 0;
 }
 .main_button {
   float: right;
@@ -115,16 +125,18 @@ header {
   border: 2px solid;
   padding: 1em;
 }
-.main_price ul {
+.show_price ul,
+.show_admin_wrap ul {
   padding: 0em;
 }
-.main_price ul li {
+.show_price ul li,
+.show_admin_wrap ul li {
   list-style: none;
   display: inline-block;
   padding: 0em;
   margin: 0em;
 }
-.main_price ul li:nth-child(1) {
+.show_price ul li:nth-child(1) {
   text-decoration: line-through;
 }
 .show_button {
@@ -138,15 +150,6 @@ header {
   border-bottom: 1px dotted;
   width:80%;
   margin: 0 auto;
-}
-.show_admin_wrap ul {
-  padding: 0em;
-}
-.show_admin_wrap ul li {
-  list-style: none;
-  display: inline-block;
-  padding: 0em;
-  margin: 0em;
 }
 .show_admin_wrap ul li:nth-child(2) {
   display: flex;
