@@ -12,13 +12,183 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   
 </head>
-<body class="homepage is-preload">
+<body onload="convertCurrency();" class="homepage is-preload" >
 
  <p class="notice"><%= notice %></p>
  <p class="alert"><%= alert %></p>
 
 <%= yield %>
 <%= javascript_include_tag 'application' %>
+ <!-- for Isotope -->
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+
+<!-- product isotope and page number on gadget page -->
+<script>
+$(document).ready( function() {
+  var currentFilter="*";
+  
+  var datafilder;
+  
+  var postscount;
+  
+  var perpage;
+  
+  var page_post=10;
+
+  //isotope create
+  var itemSelector = '.grid-item'; 
+  var $main_container = $('#main_container').isotope({
+    itemSelector: itemSelector,
+    masonry: {
+      columnWidth: itemSelector,
+      isFitWidth: true
+    }
+  });
+  var selector = itemSelector;
+  
+  function changeFilter(selector){
+    $main_container.isotope({
+      filter: selector
+    });
+  }
+  function gopage(n){
+    var selector = itemSelector;
+    if(currentFilter!="*"){
+      selector =selector+'[data-filter="'+currentFilter+'"]';
+    }
+    selector=selector+'[data-page="'+n+'"]';
+    changeFilter(selector);
+  }
+  
+  function paginclass(){
+    if(currentFilter!="*"){
+      postscount=$(".grid-item[data-filter="+currentFilter+"]").length;
+    }else{
+      postscount=$(".grid-item").length;
+    }
+    
+    perpage=Math.ceil(postscount/page_post);
+    var selector = itemSelector;
+    if(currentFilter!="*"){
+      selector =selector+'[data-filter="'+currentFilter+'"]';
+    }
+    
+    var item=1;
+    var page=1;
+    $main_container.children(selector).each(function(){
+      if( item > page_post ) {
+        page=page+1;
+        item = 1;
+      }
+      $(this).attr("data-page", page);
+      item=item+1;
+    });
+  }
+
+  function paginclume(){
+    $(".page_pagin").remove();
+
+    var pagecon=$("<div class='page_pagin'></div>");
+    
+    var page_number;
+    var i=1;
+    while(i<=perpage){
+      page_number=$("<a href='javascript:void(0);' data-page="+i+"></a>");
+      page_number.html(i);
+      i=i+1;
+      pagecon.append(page_number);
+    }
+    
+    
+    $('#main_container').after(pagecon);
+
+  }
+
+
+  paginclass();
+  gopage(1);
+  paginclume();
+  $(".page_pagin a").click(function(){
+    var page_number=$(this).attr("data-page");
+    gopage(page_number);
+    console.log("page_number",page_number);
+  });
+  
+  $('.filters a').click(function(){
+    currentFilter=$(this).attr("data-filter");
+    
+    paginclass();
+    gopage(1);
+    paginclume();
+  $(".page_pagin a").click(function(){
+    var page_number=$(this).attr("data-page");
+    gopage(page_number);
+    console.log("page_number",page_number);
+  });
+  });
+});
+</script>
+
+
+<script>
+
+function convertCurrency() {
+  let fromCurrency = encodeURIComponent($('#from').val());
+  let toCurrency = encodeURIComponent($('#to').val());
+  let fromAmount = $('#fromAmount').val();
+  let query = fromCurrency + '_' + toCurrency;
+   //let toAmount =  ;
+  /** Looping through currency **/
+  let currenciesUrl  = 'https://free.currencyconverterapi.com/api/v5/currencies';
+      $.ajax({
+              url: currenciesUrl,
+              type:"GET",
+              success: (result) => {
+                result = result.results;
+               for (const props in result) {
+                  console.log(props);
+                 //  if(props === "USD") {
+                 //     delete result[props];
+                 // }  
+              let html = `<option value="${props}">${result[props]["currencyName"]}(${props})</option>`;
+              
+                 $(".currency").append(html);
+                } 
+              },
+              error: (xhr,status,error) => {console.log(status)}, 
+              dataType: 'jsonp',
+        });  
+  
+
+  let url = 'https://free.currencyconverterapi.com/api/v5/convert?q='
+            + query + '&compact=ultra&apiKey=';
+    
+   var result = $.ajax({
+              url: url,
+              type:"GET",
+              success: (data) => {
+               let val = data[query];
+                  if (val) {
+              let total = val * fromAmount;
+              let toAmount = Math.round(total * 100) / 100;
+                 $('#toAmount').val(toAmount);
+              } else {
+                var err = new Error("Value not found for " + query);
+              
+            }
+              },
+              error: function(xhr,status,error) {
+                console.log(status);
+              }, dataType: 'jsonp',
+        });  
+       return result;
+}
+
+
+</script>
+
+
 
 
 </body>

@@ -25,9 +25,29 @@
 
   <div class="main_price_wrap">
     <div class="main_price show_price">
-      <p>$<%= @gadget.gg_aprice %></p>
+      
+      <div class="currency_wrapper">
+        <ul>
+          <li>$<%= @gadget.gg_aprice %></li>
+          <li>
+             <div class="currency_converter">
+              <input id="fromAmount" type="text" class="form-control" onkeyup="convertCurrency();" value="<%= @gadget.gg_aprice %>">
+              <select class="form-control currency" id="from" onchange="convertCurrency();">
+                 <option value="USD">US Dollar(USD)</option>
+              </select>  
+             </div>
+             ₩</i><input id="toAmount" type="text" class="krw form-control" aria-label="..."> 원
+             <div class="currency_converter">
+              <select class="form-control currency" id="to" onchange="convertCurrency();">
+                <option value="KRW">Korea(KRW)</option>
+              </select>             
+             </div>
+          </li>          
+        </ul>
+      </div>
+
       <ul>
-        <li>$<%= @gadget.gg_bprice %></li> |
+        <li class="original_price">$<%= @gadget.gg_bprice %></li> |
         <li><%= @gadget.gg_sales %>% Off</li>
       </ul>
     </div>
@@ -39,6 +59,10 @@
       </div>
     </div>
   </div>
+
+  
  </div><!--/.show_content-->
+
+    
 
 </div><!--/.show_detail-->

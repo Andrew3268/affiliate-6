@@ -3,9 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* =============== Index Common  =============== */
-/* ================
+/* ---------------
  line-number :2
- ================= */
+ --------------- */
 .main_title {
   overflow: hidden; 
   text-overflow: ellipsis; 
@@ -19,9 +19,9 @@
   word-wrap:break-word;
 }
 
-/* ================
+/* ---------------
  line-number :3
- ================= */
+--------------- */
 .main_intro {
   overflow: hidden; 
   text-overflow: ellipsis; 
@@ -69,29 +69,6 @@ header {
   width: 50%;
 }
 
-/* =============== Gadget From =============== */
-.gadget_form {
-  margin: 0 auto;
-  width: 90%;
-  margin-top: 2em;
-}
-.form_border {
-  border: 2px solid;
-  padding: 1em;
-  margin-bottom: 2em;
-}
-.procon_wrap .pros,
-.procon_wrap .cons {
-  float: left;
-  width: 48%;
-  margin: 1%;
-  padding: 1%;
-  border: 2px solid; 
-}
-.form_btn {
-  margin-top: 92em;
-}
-
 /* =============== Gadget show =============== */
 .show_image, 
 .show_content  {
@@ -136,7 +113,7 @@ header {
   padding: 0em;
   margin: 0em;
 }
-.show_price ul li:nth-child(1) {
+.show_price ul .original_price {
   text-decoration: line-through;
 }
 .show_button {
@@ -159,6 +136,45 @@ header {
 .show_admin_wrap a {
   margin: 0 0.3em;
 }
+.currency_converter {
+  display: none;
+}
+.currency_wrapper ul li {
+  list-style: none;
+  display: inline-block;
+}
+
+.currency_wrapper ul li:nth-child(2) {
+  margin-left: 1em;
+}
+.krw {
+  width: 4.3em;
+  border: none;
+}
+
+/* =============== Gadget From =============== */
+.gadget_form {
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 2em;
+}
+.form_border {
+  border: 2px solid;
+  padding: 1em;
+  margin-bottom: 2em;
+}
+.procon_wrap .pros,
+.procon_wrap .cons {
+  float: left;
+  width: 48%;
+  margin: 1%;
+  padding: 1%;
+  border: 2px solid; 
+}
+.form_btn {
+  margin-top: 92em;
+}
+
 /* =============== Social Sharing =============== */
 .social {
   position: fixed;

@@ -5,7 +5,8 @@ class GadgetsController < ApplicationController
   before_action :log_impression, :only=> [:show]
 
   def log_impression
-    @gadget.impressions.create(ip_address: request.remote_ip,user_id:current_user.id)
+    @gadget.impressions.create(ip_address: request.remote_ip)
+    # @gadget.impressions.create(ip_address: request.remote_ip,user_id:current_user.id)
   end
 
   def index
