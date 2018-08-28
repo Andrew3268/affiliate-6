@@ -1,11 +1,18 @@
 <div id="page-wrapper">
   <%= render 'shared/header' %>
 
+  <div class="container">
+    <%= link_to "All", root_path %>
+    <% Category.all.each do |category| %>
+     <%= link_to category.name, gadgets_path(category: category.name) %>
+    <% end %>
+  </div>
+
+
   <!-- Features -->
     <section id="features">
       <div class="container">
         <div class="row aln-center">
-
 
           <% @gadgets.each do |gadget| %>
             <div class="col-4 col-6-medium col-12-small">
@@ -39,7 +46,7 @@
           
 
         
-          <div class="col-4 col-6-medium col-12-small grid-item city" data-filter="city">
+         <!--  <div class="col-4 col-6-medium col-12-small grid-item city" data-filter="city">
             <section>
               <header>
                 <h3 class="main_title">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과</h3>
@@ -175,7 +182,7 @@
                 </div>
               </div>
             </section>
-          </div>
+          </div> -->
 
         </div><!--/.row aln-center-->
       </div><!--/.container-->
