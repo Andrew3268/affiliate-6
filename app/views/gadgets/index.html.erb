@@ -2,10 +2,15 @@
   <%= render 'shared/header' %>
 
   <div class="container">
-    <%= link_to "All", root_path %>
-    <% Category.all.each do |category| %>
-     <%= link_to category.name, gadgets_path(category: category.name) %>
-    <% end %>
+    <div class="eb_nav">
+      <a href="#" class="menu-trigger">Menu</a>
+      <ul>
+        <li><%= link_to "All", root_path %></li>
+        <% Category.all.each do |category| %>
+         <li><%= link_to category.name, gadgets_path(category: category.name) %></li>
+        <% end %>
+      </ul>
+   </div>
   </div>
 
 
@@ -187,35 +192,8 @@
         </div><!--/.row aln-center-->
       </div><!--/.container-->
     </section>
-<!-- 
-      <div class="isotopeclass">
 
-        <ul class="filters">
-          <li><a href="javascript:void(0);" data-filter="*">all</a></li>
-          <li><a href="javascript:void(0);" data-filter="city">city</a></li>
-          <li><a href="javascript:void(0);" data-filter="cats">cats</a></li>
-          <li><a href="javascript:void(0);" data-filter="test">test</a></li>
-        </ul>
-        
-          <div id="container" class="isotope">
-            <div class="grid-item city" data-filter="city">city1</div>
-            <div class="grid-item cats" data-filter="cats">cats2</div>
-            <div class="grid-item city" data-filter="city">city5</div>
-            <div class="grid-item cats" data-filter="cats">cats3</div>
-            <div class="grid-item city" data-filter="city">city5</div>
-            <div class="grid-item city" data-filter="city">city5</div>
-            <div class="grid-item city" data-filter="city">city4</div>
-            <div class="grid-item cats" data-filter="cats">cats1</div>
-            <div class="grid-item cats" data-filter="cats">cats1</div>
-            <div class="grid-item city" data-filter="city">city4</div>
-            <div class="grid-item city" data-filter="city">city2</div>
-            <div class="grid-item cats" data-filter="cats">cats1</div>
-            <div class="grid-item city" data-filter="city">city2</div>
-            <div class="grid-item test" data-filter="test">test</div>
-            <div class="grid-item test" data-filter="test">test</div>
-          </div>
 
-       </div> -->
 
    <!-- render 'gadgets/blog' -->
  <%= render 'shared/footer' %>
