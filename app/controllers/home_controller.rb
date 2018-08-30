@@ -4,4 +4,7 @@ class HomeController < ApplicationController
 
   def hotdeal
   end
+
+
 end
+

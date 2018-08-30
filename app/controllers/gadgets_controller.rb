@@ -16,7 +16,14 @@ class GadgetsController < ApplicationController
       @category_id = Category.find_by(name: params[:category]).id
       @gadgets = Gadget.where(category_id: @category_id).order("created_at DESC").page(params[:page]).per(21)
     end
+
+    if params[:search]
+      @gadget_search_term = params[:search]
+      @gadgets = @gadgets.search_by(@gadget_search_term)
+    end
   end
+
+
 
   def show
   end

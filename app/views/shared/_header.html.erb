@@ -2,9 +2,13 @@
 <section id="header">
   <div class="container">
 
-    <!-- Logo -->
-      <h1 id="logo"><a href="/">Where Can I Get this?</a></h1>
-      <p>당신만 몰랐 던 그것!! 어디서 GET 할 수 있는지 내가 알려줄께.</p>
+  <!-- Logo -->
+    <h1 id="logo"><a href="/">Where Can I Get this?</a></h1>
+    <p>당신만 몰랐 던 그것!! 어디서 GET 할 수 있는지 내가 알려줄께.</p>
+
+     <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
+       <%= text_field_tag :search, @gadget_search_term, placeholder: "Search..." %>
+      <% end %>
 
     <!-- Nav -->
       <nav id="nav">
