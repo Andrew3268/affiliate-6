@@ -1,20 +1,18 @@
 <div id="page-wrapper">
   <%= render 'shared/header' %>
 
-  <div class="container">
-    <div class="eb_nav">
-      <a href="#" class="menu-trigger">Menu</a>
-      <ul>
-        <li><%= link_to "All", root_path %></li>
-        <% Category.all.each do |category| %>
-         <li><%= link_to category.name, gadgets_path(category: category.name) %></li>
-        <% end %>
-      </ul>
-   </div>
-  </div>
+    <div class="container">
+      <div class="eb_nav">
+        <a href="#" class="menu-trigger">Menu</a>
+        <ul>
+          <li><%= link_to "All", root_path %></li>
+          <% Category.all.each do |category| %>
+           <li><%= link_to category.name, gadgets_path(category: category.name) %></li>
+          <% end %>
+        </ul>
+     </div>
+    </div>
 
-
-  <!-- Features -->
     <section id="features">
       <div class="container">
         <div class="row aln-center">
@@ -34,7 +32,6 @@
                     <p>$<%= gadget.gg_aprice %></p>
                     <ul>
                      <li>#<%= gadget.gg_from %></p></li>   
-                     <li> <%= "#{ gadget.unique_impression_count }" %> views</li>   
                     </ul>
                   </div>
                   <div class="main_button">
@@ -48,152 +45,10 @@
               </section>
             </div>
           <% end %>
-          
-
-        
-         <!--  <div class="col-4 col-6-medium col-12-small grid-item city" data-filter="city">
-            <section>
-              <header>
-                <h3 class="main_title">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과</h3>
-              </header>
-              <a href="#" class="main_gadget image featured"><img src="https://cdn.shopify.com/s/files/1/1196/9896/collections/Iphone_SmartWatch_1_8ac8d0c3-f3ea-4a25-84fd-f57b230d6096_580x.jpg?v=1503340748" alt="" /></a>
-              <p class="main_intro">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과, 새겨지는 풀이 있습니다. 둘 것은 무엇인지 버리었습니다. 위에도 비둘기, 이제 헤는 걱정도 어머님, 버리었습니다. 토끼, 마리아 멀리 언덕 한 이름을 있습니다. 소녀들의 별을 걱정도 어머님, 아이들의 계십니다. 이제 이 아름다운 있습니다.</p>
-              <div class="main_price_wrap">
-                <div class="main_price">
-                  <p>$100.00</p>
-                  <p>#amazon.com</p>
-                </div>
-                <div class="main_button">
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><a href="#" class="button">Check it Out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div class="col-4 col-6-medium col-12-small grid-item city" data-filter="city">
-            <section>
-              <header>
-                <h3 class="main_title">이름자 어머니, 슬퍼하는 별 계십니다</h3>
-              </header>
-              <a href="#" class="main_gadget image featured"><img src="//source.unsplash.com/500x304" alt="" /></a>
-              <p class="main_intro">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과, 새겨지는 풀이 있습니다. 둘 것은 무엇인지 버리었습니다. 위에도 비둘기, 이제 헤는 걱정도 어머님, 버리었습니다. 토끼, 마리아 멀리 언덕 한 이름을 있습니다. 소녀들의 별을 걱정도 어머님, 아이들의 계십니다. 이제 이 아름다운 있습니다.</p>
-              <div class="main_price_wrap">
-                <div class="main_price">
-                  <p>$100.00</p>
-                  <p>#amazon.com</p>
-                </div>
-                <div class="main_button">
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><a href="#" class="button">Check it Out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-           <div class="col-4 col-6-medium col-12-small grid-item city" data-filter="city">
-            <section>
-              <header>
-                <h3 class="main_title">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과</h3>
-              </header>
-              <a href="#" class="main_gadget image featured"><img src="https://cdn.shopify.com/s/files/1/1196/9896/collections/Iphone_SmartWatch_1_8ac8d0c3-f3ea-4a25-84fd-f57b230d6096_580x.jpg?v=1503340748" alt="" /></a>
-              <p class="main_intro">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과, 새겨지는 풀이 있습니다. 둘 것은 무엇인지 버리었습니다. 위에도 비둘기, 이제 헤는 걱정도 어머님, 버리었습니다. 토끼, 마리아 멀리 언덕 한 이름을 있습니다. 소녀들의 별을 걱정도 어머님, 아이들의 계십니다. 이제 이 아름다운 있습니다.</p>
-              <div class="main_price_wrap">
-                <div class="main_price">
-                  <p>$100.00</p>
-                  <p>#amazon.com</p>
-                </div>
-                <div class="main_button">
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><a href="#" class="button">Check it Out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div class="col-4 col-6-medium col-12-small grid-item cats" data-filter="cats">
-            <section>
-              <header>
-                <h3 class="main_title">이름자 어머니, 슬퍼하는 별 계십니다</h3>
-              </header>
-              <a href="#" class="main_gadget image featured"><img src="//source.unsplash.com/500x304" alt="" /></a>
-              <p class="main_intro">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과, 새겨지는 풀이 있습니다. 둘 것은 무엇인지 버리었습니다. 위에도 비둘기, 이제 헤는 걱정도 어머님, 버리었습니다. 토끼, 마리아 멀리 언덕 한 이름을 있습니다. 소녀들의 별을 걱정도 어머님, 아이들의 계십니다. 이제 이 아름다운 있습니다.</p>
-              <div class="main_price_wrap">
-                <div class="main_price">
-                  <p>$100.00</p>
-                  <p>#amazon.com</p>
-                </div>
-                <div class="main_button">
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><a href="#" class="button">Check it Out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-           <div class="col-4 col-6-medium col-12-small grid-item cats" data-filter="cats">
-            <section>
-              <header>
-                <h3 class="main_title">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과</h3>
-              </header>
-              <a href="#" class="main_gadget image featured"><img src="https://cdn.shopify.com/s/files/1/1196/9896/collections/Iphone_SmartWatch_1_8ac8d0c3-f3ea-4a25-84fd-f57b230d6096_580x.jpg?v=1503340748" alt="" /></a>
-              <p class="main_intro">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과, 새겨지는 풀이 있습니다. 둘 것은 무엇인지 버리었습니다. 위에도 비둘기, 이제 헤는 걱정도 어머님, 버리었습니다. 토끼, 마리아 멀리 언덕 한 이름을 있습니다. 소녀들의 별을 걱정도 어머님, 아이들의 계십니다. 이제 이 아름다운 있습니다.</p>
-              <div class="main_price_wrap">
-                <div class="main_price">
-                  <p>$100.00</p>
-                  <p>#amazon.com</p>
-                </div>
-                <div class="main_button">
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><a href="#" class="button">Check it Out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div class="col-4 col-6-medium col-12-small grid-item cats" data-filter="cats">
-            <section>
-              <header>
-                <h3 class="main_title">이름자 어머니, 슬퍼하는 별 계십니다</h3>
-              </header>
-              <a href="#" class="main_gadget image featured"><img src="//source.unsplash.com/500x304" alt="" /></a>
-              <p class="main_intro">이름자 어머니, 슬퍼하는 별 계십니다. 무엇인지 했던 가득 내 이런 어머니, 봅니다. 별빛이 마리아 가을로 밤이 프랑시스 까닭입니다. 때 봄이 이웃 내린 별에도 이름과, 새겨지는 풀이 있습니다. 둘 것은 무엇인지 버리었습니다. 위에도 비둘기, 이제 헤는 걱정도 어머님, 버리었습니다. 토끼, 마리아 멀리 언덕 한 이름을 있습니다. 소녀들의 별을 걱정도 어머님, 아이들의 계십니다. 이제 이 아름다운 있습니다.</p>
-              <div class="main_price_wrap">
-                <div class="main_price">
-                  <p>$100.00</p>
-                  <p>#amazon.com</p>
-                </div>
-                <div class="main_button">
-                  <div class="col-12">
-                    <ul class="actions">
-                      <li><a href="#" class="button">Check it Out</a></li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div> -->
-
         </div><!--/.row aln-center-->
+        <%= paginate @gadgets %>
       </div><!--/.container-->
     </section>
-
-
 
    <!-- render 'gadgets/blog' -->
  <%= render 'shared/footer' %>

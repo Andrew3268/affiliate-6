@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   
-  # get 'home/index'
+  get 'home/hotdeal'
 
   devise_for :users
   resources :gadgets

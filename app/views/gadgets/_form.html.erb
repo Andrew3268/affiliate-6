@@ -2,7 +2,7 @@
   <%= simple_form_for @gadget do |f| %>
 
    <div class="form_border">
-    <%= f.collection_select :category_id, Category.all, :id, :name, {promt: "Choose a category"} %>
+    <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a category" } %>
    </div>
 
    <div class="form_border">

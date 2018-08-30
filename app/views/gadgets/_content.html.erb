@@ -16,6 +16,7 @@
          <%= link_to "Home", root_path %>
          <%= link_to "Edit", edit_gadget_path(@gadget) %>
          <%= link_to "Delete", gadget_path(@gadget), method: :delete, data: { confirm: "Are you Sure?" } %>
+         <%= "#{ @gadget.unique_impression_count }" %> views
         </div>
       </li>
     </ul>
@@ -29,7 +30,7 @@
       <div class="currency_wrapper">
         <ul>
           <li>$<%= @gadget.gg_aprice %></li>
-          <li>
+          <!-- <li>
              <div class="currency_converter">
               <input id="fromAmount" type="text" class="form-control" onkeyup="convertCurrency();" value="<%= @gadget.gg_aprice %>">
               <select class="form-control currency" id="from" onchange="convertCurrency();">
@@ -42,7 +43,7 @@
                 <option value="KRW">Korea(KRW)</option>
               </select>             
              </div>
-          </li>          
+          </li>           -->
         </ul>
       </div>
 
