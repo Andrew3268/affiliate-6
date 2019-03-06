@@ -18,11 +18,12 @@ class CreateGadgets < ActiveRecord::Migration
       t.string :gg_source_03
       t.string :gg_source_04
       t.string :gg_source_05
-      t.string :gg_source_06
-      t.string :gg_source_07
-      t.string :gg_source_08
-      t.string :gg_source_09
-      t.string :gg_source_10
+      t.string :gg_source_link_01
+      t.string :gg_source_link_02
+      t.string :gg_source_link_03
+      t.string :gg_source_link_04
+      t.string :gg_source_link_05
+      t.text :gg_intro
       t.text :gg_pro_01
       t.text :gg_pro_02
       t.text :gg_pro_03
@@ -46,7 +47,6 @@ class CreateGadgets < ActiveRecord::Migration
       t.string :gg_option_04
       t.string :gg_option_05
       t.string :gg_option_06
-      t.text :gg_intro
       t.string :gg_spare_01
       t.string :gg_spare_02
       t.string :gg_spare_03

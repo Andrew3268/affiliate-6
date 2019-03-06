@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   
   get 'home/hotdeal'
+  
+  get ':controller(/:action(/:id))'
+  post ':controller(/:action(/:id))'
 
   devise_for :users
   resources :gadgets

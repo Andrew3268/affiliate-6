@@ -19,4 +19,9 @@ class Gadget < ActiveRecord::Base
       gadget_search_term: "%#{gadget_search_term.downcase}%")
    end
 
+   def self.search_by(gadget_search_term)
+    where("LOWER(gg_intro) LIKE :gadget_search_term", 
+      gadget_search_term: "%#{gadget_search_term.downcase}%")
+   end
+
 end

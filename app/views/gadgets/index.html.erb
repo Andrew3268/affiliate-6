@@ -9,6 +9,7 @@
           <% Category.all.each do |category| %>
            <li><%= link_to category.name, gadgets_path(category: category.name) %></li>
           <% end %>
+          <li><%= link_to "New Gadget", new_gadget_path %></li>
         </ul>
      </div>
     </div>
@@ -25,7 +26,7 @@
                 </header>
                 
                 <%= link_to (image_tag gadget.gg_img), gadget, {:class =>"main_gadget image featured"} %>
-
+              
                 <p class="main_intro"><%= gadget.gg_intro %></p>
                 <div class="main_price_wrap">
                   <div class="main_price">
@@ -37,7 +38,7 @@
                   <div class="main_button">
                     <div class="col-12">
                       <ul class="actions">
-                        <li><a href="<%= gadget.gg_url %>" class="button">Check it Out</a></li>
+                        <li><a target="_blank" href="<%= gadget.gg_url %>" class="button">Check it Out</a></li>
                       </ul>
                     </div>
                   </div>

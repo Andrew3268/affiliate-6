@@ -2,6 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.deal_sidebar_container {
+  width: 100%;
+  margin: 12% auto;
+  margin-top: 0.5em;
+  padding: 0;
+  box-shadow: 0 10px 5px -5px rgba(0, 0, 0, 0.1);
+}
+
+
 /* This is for hot deal section */
 .dis_grid {
   display: flex;
@@ -38,15 +48,33 @@
   padding: 0 0.5rem;
   margin-bottom: 1em;
 }
+.dis_source {
+  font-size: 0.7em;
+  padding: 0 0.5rem;
+  font-weight: bold;
+}
 .dis_card--content ul li {
   list-style: none;
   display: inline-block;
   margin: 0em;
 }
 .dis_card--content ul {
-  margin: 0em;
-  text-align: center;
+  margin: 0 0 1em 0;
   padding: 0em;
+}
+.dis_card--content p {
+  color: #000;
+  margin-bottom: 0.5em;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  display: -webkit-box;
+  -moz-line-clamp: 2; 
+  -webkit-line-clamp: 2; /* number of line */ 
+  -ms-line-clamp: 2;
+  -moz-box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -ms-box-orient: vertical;
+  word-wrap:break-word;
 }
 .dis_price li:nth-child(1) {
   font-size: 1.3em;
@@ -60,19 +88,11 @@
 .feedback p {
   margin: 0em;
 }
-.dis_btn li {
+.dis_btn {
   padding: 0 0.7em;
   margin-bottom: 0.3em;
-}
-.dis_btn li:nth-child(1) {
-  border: 2px dotted #2ebfac;
-  color: #2ebfac;
-  padding: 0 -1em;
-} 
-.dis_btn li:nth-child(2) {
-  background-color: #2ebfac;
-  padding: 0 1em;
-  border-radius: 0.7em;
+  background: black;
+  text-align: center;
 }
 .dis_btn a {
   color: white;
@@ -86,6 +106,12 @@
   text-transform: uppercase;
 }
 
+.dis_card--image img {
+  /* position: absolute; */
+  width: 100%;
+  height: 10em;
+  object-fit: contain;
+}
 @media screen and (max-width: 800px) {
 .dis_card--image {
     width: 25%;
@@ -93,14 +119,6 @@
     min-width: 40%;
     /* padding-bottom: 25%; */
   }
-}
-.dis_card--image img {
-  /* position: absolute; */
-  width: 100%;
-  height: 12em;
-  object-fit: contain;
-}
-@media screen and (max-width: 800px) {
   .dis_card--image img {
     height: 100%;
     width: 100%;
@@ -110,5 +128,19 @@
   .dis_container h1 {
     font-size: 14px;
   }
+  .dis_source {
+    display: none;
+  }
 }
+
 /* This is for hot deal section */
+
+
+
+
+
+
+
+
+
+

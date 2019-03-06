@@ -175,7 +175,7 @@ input, select, textarea {
     }
     @media screen and (max-width: 1280px) {
       .container {
-        width: calc(80% - 80px);
+        width: calc(100% - 80px);
       }
       .gadget_container {
         width: calc(80% - 80px);
@@ -208,7 +208,7 @@ input, select, textarea {
       justify-content: flex-start;
     }
     .row.aln-center {
-      justify-content: center;
+      /*justify-content: center;*/
     }
     .row.aln-right {
       justify-content: flex-end;
@@ -393,7 +393,7 @@ input, select, textarea {
           justify-content: flex-start;
         }
         .row.aln-center {
-          justify-content: center;
+          /*justify-content: center;*/
         }
         .row.aln-right {
           justify-content: flex-end;
@@ -578,7 +578,7 @@ input, select, textarea {
           justify-content: flex-start;
         }
         .row.aln-center {
-          justify-content: center;
+          /*justify-content: center;*/
         }
         .row.aln-right {
           justify-content: flex-end;
@@ -763,7 +763,7 @@ input, select, textarea {
           justify-content: flex-start;
         }
         .row.aln-center {
-          justify-content: center;
+          /*justify-content: center;*/
         }
         .row.aln-right {
           justify-content: flex-end;
@@ -948,7 +948,7 @@ input, select, textarea {
           justify-content: flex-start;
         }
         .row.aln-center {
-          justify-content: center;
+          /*justify-content: center;*/
         }
         .row.aln-right {
           justify-content: flex-end;
@@ -1171,7 +1171,7 @@ input, select, textarea {
     padding-left: 1em;
   }
     ul li {
-      padding-left: 0.5em;
+      /*padding-left: 0.5em;*/
       margin: 0.75em 0 0.75em 0;
     }
       ul li:first-child {
@@ -1270,7 +1270,7 @@ input, select, textarea {
     text-transform: uppercase;
     color: #888;
     display: block;
-    margin: 0 0 1em 0;
+    /*margin: 0 0 1em 0;*/
   }
   form input[type="text"],
   form input[type="email"]
@@ -1291,6 +1291,7 @@ input, select, textarea {
     border-radius: 5px;
     line-height: 1.25em;
     padding: 0.75em 1em 0.75em 1em;
+    margin-bottom: 1em;
   }
     form input[type="text"]:focus,
     form input[type="email"]
@@ -1771,6 +1772,9 @@ input, select, textarea {
     /* Header */
       #header > .container {
         padding: 12em 0 5em 0;
+      }
+      #header > .show_container {
+        padding: 4em 0 5em 0;
       }
       #header h1 {
         font-size: 2.5em;

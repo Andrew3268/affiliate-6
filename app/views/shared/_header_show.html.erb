@@ -1,24 +1,13 @@
-<!-- Header -->
 <section id="header">
-  <div class="container">
+  <div class="show_container container">
 
-  <!-- Logo -->
-    <h1 id="logo"><a href="/">Where Can I Get this?</a></h1>
-    <p>당신만 몰랐 던 그것!! 어디서 GET 할 수 있는지 내가 알려줄께.</p>
-    
-    <div class="search_box">
-      <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
-        <%= text_field_tag :search, @gadget_search_term, placeholder: "Search..." %>
-      <% end %>
-    </div>
-    <!-- Nav -->
       <nav id="nav">
         <ul>
           <li><a class="icon fa-home" href="/"><span>Home</span></a></li>
           <li>
             <a href="#" class="icon fa-bar-chart-o"><span>HotDeals</span></a>
             <ul>
-              <li><a href="/home/hotdeal">해외 HOTDEALS</a></li>
+              <li><a href="#">해외 HOTDEALS</a></li>
               <li><a href="#">국내 HOTDEALS</a></li>
               <li><a href="#">Etiam dolore nisl</a></li>
               <li>
