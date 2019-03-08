@@ -12,10 +12,6 @@
 //
 //= require jquery
 //= require jquery.min
-//= require jquery.dropotron.min
 //= require jquery_ujs
-//= require util
-//= require breakpoints.min
-//= require browser.min
 //= require main
 //= require_tree .
