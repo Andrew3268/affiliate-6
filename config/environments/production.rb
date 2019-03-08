@@ -29,7 +29,7 @@ Rails.application.configure do
   # config.assets.css_compressor = :sass
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  3 = false
+  config.serve_static_assets = false
 
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
