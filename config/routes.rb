@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   
-  get 'home/hotdeal'
-  get 'home/deals'
+  get 'deals/promo_codes'
+  get 'deals/coupons'
+  get 'deals/quick_search'
+  get 'deals/promotions'
+  get 'deals/codes'
   
   # get ':controller(/:action(/:id))'
   # post ':controller(/:action(/:id))'

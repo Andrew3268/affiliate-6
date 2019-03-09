@@ -1,6 +1,5 @@
 <div class="layout">
   <%= render '/shared/header' %>
-</div><!--layout-->
 
 <div class="gadgets">
   <div class="wrap">
@@ -14,16 +13,39 @@
 
       <div class="container"> 
 
+        <% @gadgets.each do |gadget| %>
+          <article class="sydney melbourne">
+            <a href="#"><img src="<%= gadget.gg_img %>">
+             <i><%= gadget.gg_title %></i><b><%= gadget.gg_aprice %></b>
+            </a>
+            <div>
+              <a href="https://www.JustinNorth.com.au" target="_blank"><%= gadget.gg_from %></a>
+              <b><%= gadget.gg_title %></b>
+              <div class="details">
+                <div class="bio">
+                  <p><%= gadget.gg_intro %></p>
+                  <a target="_blank" href="<%= gadget.gg_url %>">Shop Now</a>
+                </div>
+                <div class="etc">
+                  <p>what is the good contents in here?</p>
+                </div>
+              </div>
+            </div>
+          </article>  
+        <% end %>
+
         <article class="sydney melbourne">
-          <a href="#" data-cat="columns" data-state="nat"><img src="https://images.unsplash.com/photo-1551895763-554bd1c491eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>3rd, 10th & 11th July, 2013</i><b>Justin North</b></a>
+          <a href="#"><img src="https://images.unsplash.com/photo-1551978240-54c1cd1a13b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>First Restaurateur Justin North is one of Sydney's most widely recognised chefs</i><b>$100.00</b></a>
           <div>
             <a href="https://www.JustinNorth.com.au" target="_blank">JustinNorth.com.au</a>
-            <i>3rd, 10th & 11th July, 2013</i>
             <b>Justin North</b>
             <div class="details">
               <div class="bio">
-                <p>Restaurateur Justin North is one of Sydney's most widely recognised chefs - his philosophical approach to sustainability and ethical eating has seen him be described as a visionary within the industry. The contemporary flavours and sophisticated style of his food has resulted in many awards: Becasse was named runner-up for the 2009 Sydney Morning Herald Restaurant of the year award while Justin was awarded the title of '2009 Chef of the Year'. </p>
-                
+                <p>First Restaurateur Justin North is one of Sydney's most widely recognised chefs - his philosophical approach to sustainability and ethical eating has seen him be described as a visionary within the industry. The contemporary flavours and sophisticated style of his food has resulted in many awards: Becasse was named runner-up for the 2009 Sydney Morning Herald Restaurant of the year award while Justin was awarded the title of '2009 Chef of the Year'. </p>
+                <a href="#n">Shop Now</a>
+              </div>
+              <div class="etc">
+                <p>Second Justin North is one of Sydney's most widely recognised chefs - his philosophical approach to sustainability and ethical eating has seen him be described as a visionary within the industry. The contemporary flavours and sophisticated style of his food has resulted in many awards: Becasse was named runner-up for the 2009 Sydney Morning Herald Restaurant of the year award while Justin was awarded the title of '2009 Chef of the Year'. </p>
               </div>
             </div>
           </div>
@@ -32,7 +54,6 @@
             <a href="#" data-cat="features" data-state="vic"><img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>19th & 22nd July (Dinner), 2013</i><b>Dani Venn</b></a>
             <div>
               <a href="http://www.danivenn.com" target="_blank">danivenn.com</a>
-              <i>19th & 22nd July (Dinner), 2013</i>
               <b>Dani Venn</b>
               <div class="details">
                 <div class="bio">
@@ -92,3 +113,4 @@
 
   </div><!--wrap-->
 </div><!--gadgets-->
+</div><!--layout-->

@@ -22,8 +22,6 @@ class GadgetsController < ApplicationController
     end
   end
 
-
-
   def show
   end
 

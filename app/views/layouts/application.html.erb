@@ -20,64 +20,8 @@
 <%= yield %>
 <%= javascript_include_tag 'application' %>
  <!-- for Isotope -->
-<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script> -->
 
-<!-- Currency on Show page of Gadgets -->
-<!-- <script>
-function convertCurrency() {
-  let fromCurrency = encodeURIComponent($('#from').val());
-  let toCurrency = encodeURIComponent($('#to').val());
-  let fromAmount = $('#fromAmount').val();
-  let query = fromCurrency + '_' + toCurrency;
-   //let toAmount =  ;
-  /** Looping through currency **/
-  let currenciesUrl  = 'https://free.currencyconverterapi.com/api/v5/currencies';
-      $.ajax({
-              url: currenciesUrl,
-              type:"GET",
-              success: (result) => {
-                result = result.results;
-               for (const props in result) {
-                  console.log(props);
-                 //  if(props === "USD") {
-                 //     delete result[props];
-                 // }  
-              let html = `<option value="${props}">${result[props]["currencyName"]}(${props})</option>`;
-              
-                 $(".currency").append(html);
-                } 
-              },
-              error: (xhr,status,error) => {console.log(status)}, 
-              dataType: 'jsonp',
-        });  
-  
-
-  let url = 'https://free.currencyconverterapi.com/api/v5/convert?q='
-            + query + '&compact=ultra&apiKey=';
-    
-   var result = $.ajax({
-              url: url,
-              type:"GET",
-              success: (data) => {
-               let val = data[query];
-                  if (val) {
-              let total = val * fromAmount;
-              let toAmount = Math.round(total * 100) / 100;
-                 $('#toAmount').val(toAmount);
-              } else {
-                var err = new Error("Value not found for " + query);
-              
-            }
-              },
-              error: function(xhr,status,error) {
-                console.log(status);
-              }, dataType: 'jsonp',
-        });  
-       return result;
-}
-
-
-</script> -->
 
 <!-- Sidebar Tab On Show Page -->
 <script>
@@ -85,22 +29,6 @@ function convertCurrency() {
 jQuery(document).ready(function($){ $(".multitab-widget-content-widget-id").hide(); $("ul.multitab-widget-content-tabs-id li:first a").addClass("multitab-widget-current").show(); $(".multitab-widget-content-widget-id:first").show(); $("ul.multitab-widget-content-tabs-id li a").click(function() { $("ul.multitab-widget-content-tabs-id li a").removeClass("multitab-widget-current a"); $(this).addClass("multitab-widget-current"); $(".multitab-widget-content-widget-id").hide(); var activeTab = $(this).attr("href"); $(activeTab).fadeIn(); return false; }); });
 //]]>
 </script>
-
-<!-- Responsive Main Menu -->
-<script>
-  $(document).ready(function() {
-  $('.eb_nav .menu-trigger').click(function() {
-    $('.eb_nav ul').slideToggle(500);
-  });//end slide toggle
-  
-  $(window).resize(function() {   
-    if (  $(window).width() > 500 ) {     
-      $('.eb_nav ul').removeAttr('style');
-     }
-  });//end resize
-});//end ready
-</script>
-
 
 
 

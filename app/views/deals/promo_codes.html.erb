@@ -1,0 +1,84 @@
+<div class="layout"><!--layout-->
+    
+    <%= render 'shared/header' %>
+    <%= render 'deals/header' %>    
+    
+    <div class="codes common_layout">
+      <div class="wrap">
+        <div class="lt_cnt">
+          <h2>Promotion Codes</h2>
+
+          <div class="note">
+            <ul>
+              <li>Deals & pricing may change or expire at anytime.</li>
+              <li>Some of promotion codes can expire fast.</li>
+              <li>Free Shipping: Prime or $35+ of all other eligible items.<a href="/blog/blog_01">(What's PRIME?)</a></li>
+              <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
+            </ul>
+          </div>
+          
+         <div class="toggle">
+            <ul>
+              <li>
+                <a href="#n">HOW TO USE</a>
+                <ul>
+                  <li>Click "Copy & Use code"</li>
+                  <li>Click "Buy Now or Add to Cart"</li>
+                  <li>Proceed with payment then the code is automatically applied.</li>
+                </ul>
+              </li>
+              <li>
+                <a href="#n">LAST 7 DAYS CODES LIST</a>
+                <ul>
+                  <li><a href="#n">Feb. 10. 2019 <span>(expration:02/15 ~ 03/15)</span></a></li>
+                  <li><a href="#n">Feb. 09. 2019  <span>(expration:02/15 ~ 03/15)</span></a></li>
+                  <li><a href="#n">Feb. 08. 2019</a></li>
+                  <li><a href="#n">Feb. 07. 2019</a></li>
+                  <li><a href="#n">Feb. 06. 2019</a></li>
+                  <li><a href="#n">Feb. 05. 2019</a></li>
+                  <li><a href="#n">Feb. 04. 2019</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!--./toggle-->
+          
+          
+          <div class="lt_sort_box clearfix">
+            <ul class="clearfix">
+              <li><a href="/deals/promo_codes" class="pure-button">All</a></li>
+              <li><a href="#" class="pure-button sort1">Price High</a></li>
+              <li><a href="#" class="pure-button sort2">Price Low</a></li>
+              <li><a href="#" class="pure-button sort3">Sale High</a></li>
+              <li><a href="#" class="pure-button sort4">Sale Low</a></li>
+            </ul>
+          </div>
+
+         
+        </div><!--./lt_cnt-->
+        
+        <div class="rt_cnt">
+          <h2>Promo Codes on Amazon Feb. 10. 2019</h2>
+          
+          <div class="sort_box clearfix">
+            <ul>
+              <li><a href="/deals/promo_codes" class="pure-button">All</a></li>
+              <li><a href="#" class="pure-button sort1">Price High</a></li>
+              <li><a href="#" class="pure-button sort2">Price Low</a></li>
+              <li><a href="#" class="pure-button sort3">Sale High</a></li>
+              <li><a href="#" class="pure-button sort4">Sale Low</a></li>
+            </ul>
+          </div>
+          
+         
+          <div class="card_wrap sort-list">
+            <%= render 'deals/body_promocode' %>
+          </div>
+          
+        </div><!--./rt_cnt-->    
+
+      </div><!--./warp-->
+    </div><!--./codes-->
+  </div><!--./layout-->
+<script>
+ <%= render(:partial => 'codes', :handlers => [:erb], :formats => [:js]) %>
+</script>

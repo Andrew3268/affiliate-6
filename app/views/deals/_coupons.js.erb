@@ -1,0 +1,67 @@
+
+//Begin filter
+    (function() {
+      var $imgs = $('.coupons_wrap div.card');
+      var $buttons = $('#buttons');
+      var tagged = {};
+    
+      $imgs.each(function() {
+        var img = this;
+        var tags = $(this).data('tags');
+    
+        if (tags) {
+          tags.split(',').forEach(function(tagName) {
+            if (tagged[tagName] == null) {
+              tagged[tagName] = [];
+            }
+            tagged[tagName].push(img);
+          })
+        }
+      })
+    
+      $('<button/>', {
+        text: 'Show All',
+        class: 'active',
+        click: function() {
+          $(this)
+            .addClass('active')
+            .siblings()
+            .removeClass('active');
+          $imgs.show();
+        }
+      }).appendTo($buttons);
+    
+      $.each(tagged, function(tagName) {
+        var $n = $(tagged[tagName]).length;
+        $('<button/>', {
+          text: tagName + '(' + $n + ')',
+          click: function() {
+            $(this)
+              .addClass('active')
+              .siblings()
+              .removeClass('active');
+            $imgs
+              .hide()
+              .filter(tagged[tagName])
+              .show();
+          }
+        }).appendTo($buttons);
+      });
+    }())
+//end
+
+//Begin sticky&following sidebar
+$(function () {
+  var offset = $(".coupons .lt_cnt .lt_cnt_box").offset();
+  var topPadding = 100;
+  $(window).scroll(function () {
+      if ($(window).scrollTop() > 700) {
+          $(".coupons .lt_cnt .lt_cnt_box").addClass("on");
+
+      } else {
+          $(".coupons .lt_cnt .lt_cnt_box").removeClass("on");
+
+        };
+    });
+});
+//End
