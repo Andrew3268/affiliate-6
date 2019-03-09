@@ -7,11 +7,18 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 ########### For Category of Price ##############
-Category.create(name: "Menu 01")
-Category.create(name: "Menu 02")
-Category.create(name: "Menu 03")
-Category.create(name: "Menu 04")
-Category.create(name: "Menu 05")
+# Category.create(name: "Menu 01")
+# Category.create(name: "Menu 02")
+# Category.create(name: "Menu 03")
+# Category.create(name: "Menu 04")
+# Category.create(name: "Menu 05")
+
+Category.create(name: "Tech")
+Category.create(name: "Geeky & Ridiculous")
+Category.create(name: "Home & Kitchen")
+Category.create(name: "Travel")
+Category.create(name: "Outdoor & Sports")
+Category.create(name: "Pet Sutff")
 ########### End Category of Price ##############
 
 # Gadget.create(user_id: 1, 

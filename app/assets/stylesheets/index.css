@@ -1,0 +1,41 @@
+.gadgets{margin:270px 0;}
+/*.index_gad{margin:30px 0;}*/
+.gadgets .card_wrap{column-width:300px;column-gap:10px;}
+.gadgets .card_wrap .card{margin:10px 1%;;position: relative;background: #fff; overflow: hidden;display:inline-block;}
+.gadgets .card_wrap .card, 
+.gadgets .card-nav ul{box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);}
+.gadgets .card_wrap .card-header,
+.gadgets .card_wrap .card-body{position:relative;padding:5px;text-align:center;}
+.gadgets .card_wrap .card-body h4{margin-top:15px;}
+.gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#000;font-size:16px;border-bottom:1px solid #ccc;}
+.gadgets .card_wrap .card-body p{margin:10px 0;}
+.gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}
+.gadgets .card_wrap .card-body .btn>em{float:left;font-size:17px;background:#000;color:#fff;padding:3px 20px;border:1px solid #000;line-height:20px;}
+.gadgets .card_wrap .card-body .btn>a{float:left;text-decoration:none;color:#000;font-size:20px;border:1px solid #000;padding:3px 20px;line-height:20px;}
+.gadgets .card_wrap .card-body .admin{margin-top:-20px;}
+.gadgets .card_wrap .card-body .admin>em>a{text-decoration:none;color:#fff;}
+.gadgets .card_wrap .card-header img{display:block;width:100%;}
+.gadgets .card_wrap .with-photo/*do not delete*/
+.gadgets .card_wrap .card-header{height:208px;padding:0;overflow:hidden;}
+.gadgets .card_wrap .start{position:absolute;top:-45px;left:15px;}
+.gadgets .card_wrap .start img{width:30px;}
+
+@media screen and (max-width:640px){
+  .gadgets{margin:80px 0;}
+  .gadgets .card_wrap .card-body .admin{margin-top:-10px;}
+  .gadgets .card_wrap .card-header{padding:5px;}
+  .gadgets .card_wrap .card-body{padding:10px;}
+  .gadgets .card_wrap .card-body h4{margin:15px 0;}
+  .gadgets .card_wrap .start{top:-45px;}
+}
+
+@media screen and (min-width:641px) and (max-width:1199px){
+  .gadgets{margin:160px 0;}
+  .gadgets .card_wrap .card-header{padding:5px;}
+  .gadgets .card_wrap .card-body{padding:10px;}
+  .gadgets .card_wrap .card-body h4{margin:15px 0;}
+  .gadgets .card_wrap .start{top:-45px;}
+}
+
+
+
