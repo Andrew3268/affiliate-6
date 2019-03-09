@@ -1,0 +1,262 @@
+<div class="layout"><!--layout-->
+    
+    <%= render 'posts/header' %>
+
+    <!-- for play youtube video-->
+    <div class="overlay-video">
+      <div class="videoWrapperExt">
+        <div class="videoWrapper">
+          <div class="video_close"></div>
+          <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>        
+    </div>
+
+    <div class="cu_wrap clearfix">
+      <div class="wrap">
+        
+        <div class="detitle">
+          <h2><span><%= @recommend.re_title %></span></h2>
+          <p><%= @recommend.sub_intro %></p>
+        </div>
+        
+        <div class="cu_box clearfix">
+          <div class="num">
+            <p>1</p>
+          </div>
+          <div class="pic">
+            <a target="_blank" href="<%= @recommend.sub_link_01 %>"><img src="<%= @recommend.sub_image_01 %>" alt="<%= @recommend.sub_title_01 %>"></a>
+            <% if @recommend.sub_youtube_01.present? %>
+              <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_01 %>">
+                <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+              </div>
+            <% end %>
+          </div>
+          <div class="inner">
+            <strong><span>1.</span><%= @recommend.sub_title_01 %></strong>
+            <span>by <%= @recommend.sub_source_01 %></span>
+            <p><%= @recommend.sub_intro_01 %></p>
+            <div class="btn clearfix">
+              <em>$<%= @recommend.sub_price_01 %></em><a target="_blank" href="<%= @recommend.sub_link_01 %>">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cu_box clearfix">
+          <div class="num">
+            <p>2</p>
+          </div>
+          <div class="pic">
+            <a target="_blank" href="<%= @recommend.sub_link_02 %>"><img src="<%= @recommend.sub_image_02 %>" alt="<%= @recommend.sub_title_02 %>"></a>
+            <% if @recommend.sub_youtube_02.present? %>
+              <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_02 %>">
+                <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+              </div>
+            <% end %>
+          </div>
+          <div class="inner">
+            <strong><span>2.</span><%= @recommend.sub_title_02 %></strong>
+            <span>by <%= @recommend.sub_source_02 %></span>
+            <p><%= @recommend.sub_intro_02 %></p>
+            <div class="btn clearfix">
+              <em>$<%= @recommend.sub_price_02 %></em><a target="_blank" href="<%= @recommend.sub_link_02 %>">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cu_box clearfix">
+          <div class="num">
+            <p>3</p>
+          </div>
+          <div class="pic">
+            <a target="_blank" href="<%= @recommend.sub_link_03 %>"><img src="<%= @recommend.sub_image_03 %>" alt="<%= @recommend.sub_title_03 %>"></a>
+            <% if @recommend.sub_youtube_03.present? %>
+              <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_03 %>">
+                <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+              </div>
+            <% end %>
+          </div>
+          <div class="inner">
+            <strong><span>3.</span><%= @recommend.sub_title_03 %></strong>
+            <span>by <%= @recommend.sub_source_03 %></span>
+            <p><%= @recommend.sub_intro_03 %></p>
+            <div class="btn clearfix">
+              <em>$<%= @recommend.sub_price_03 %></em><a target="_blank" href="<%= @recommend.sub_link_03 %>">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cu_box clearfix">
+          <div class="num">
+            <p>4</p>
+          </div>
+          <div class="pic">
+            <a target="_blank" href="<%= @recommend.sub_link_04 %>"><img src="<%= @recommend.sub_image_04 %>" alt="<%= @recommend.sub_title_04 %>"></a>
+            <% if @recommend.sub_youtube_04.present? %>
+              <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_04 %>">
+                <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+              </div>
+            <% end %>
+          </div>
+          <div class="inner">
+            <strong><span>4.</span><%= @recommend.sub_title_04 %></strong>
+            <span>by <%= @recommend.sub_source_04 %></span>
+            <p><%= @recommend.sub_intro_04 %></p>
+            <div class="btn clearfix">
+              <em>$<%= @recommend.sub_price_04 %></em><a target="_blank" href="<%= @recommend.sub_link_04 %>">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="cu_box clearfix">
+          <div class="num">
+            <p>5</p>
+          </div>
+          <div class="pic">
+            <a target="_blank" href="<%= @recommend.sub_link_05 %>"><img src="<%= @recommend.sub_image_05 %>" alt="<%= @recommend.sub_title_05 %>"></a>
+            <% if @recommend.sub_youtube_05.present? %>
+              <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_05 %>">
+                <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+              </div>
+            <% end %>
+          </div>
+          <div class="inner">
+            <strong><span>5.</span><%= @recommend.sub_title_05 %></strong>
+            <span>by <%= @recommend.sub_source_05 %></span>
+            <p><%= @recommend.sub_intro_05 %></p>
+            <div class="btn clearfix">
+              <em>$<%= @recommend.sub_price_05 %></em><a target="_blank" href="<%= @recommend.sub_link_05 %>">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <% if @recommend.sub_title_06.present? %>
+          <div class="cu_box clearfix">
+            <div class="num">
+              <p>6</p>
+            </div>
+            <div class="pic">
+              <a target="_blank" href="<%= @recommend.sub_link_06 %>"><img src="<%= @recommend.sub_image_06 %>" alt="<%= @recommend.sub_title_06 %>"></a>
+              <% if @recommend.sub_youtube_06.present? %>
+                <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_06 %>">
+                  <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+                </div>
+              <% end %>
+            </div>
+            <div class="inner">
+              <strong><span>6.</span><%= @recommend.sub_title_06 %></strong>
+              <span>by <%= @recommend.sub_source_06 %></span>
+              <p><%= @recommend.sub_intro_06 %></p>
+              <div class="btn clearfix">
+                <em>$<%= @recommend.sub_price_06 %></em><a target="_blank" href="<%= @recommend.sub_link_06 %>">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <% if @recommend.sub_title_07.present? %>
+          <div class="cu_box clearfix">
+            <div class="num">
+              <p>7</p>
+            </div>
+            <div class="pic">
+              <a target="_blank" href="<%= @recommend.sub_link_07 %>"><img src="<%= @recommend.sub_image_07 %>" alt="<%= @recommend.sub_title_07 %>"></a>
+              <% if @recommend.sub_youtube_07.present? %>
+                <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_07 %>">
+                  <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+                </div>
+              <% end %>
+            </div>
+            <div class="inner">
+              <strong><span>7.</span><%= @recommend.sub_title_07 %></strong>
+              <span>by <%= @recommend.sub_source_07 %></span>
+              <p><%= @recommend.sub_intro_07 %></p>
+              <div class="btn clearfix">
+                <em>$<%= @recommend.sub_price_07 %></em><a target="_blank" href="<%= @recommend.sub_link_07 %>">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <% if @recommend.sub_title_08.present? %>
+          <div class="cu_box clearfix">
+            <div class="num">
+              <p>8</p>
+            </div>
+            <div class="pic">
+              <a target="_blank" href="<%= @recommend.sub_link_08 %>"><img src="<%= @recommend.sub_image_08 %>" alt="<%= @recommend.sub_title_08 %>"></a>
+              <% if @recommend.sub_youtube_08.present? %>
+                <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_08 %>">
+                  <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+                </div>
+              <% end %>
+            </div>
+            <div class="inner">
+              <strong><span>8.</span><%= @recommend.sub_title_08 %></strong>
+              <span>by <%= @recommend.sub_source_08 %></span>
+              <p><%= @recommend.sub_intro_08 %></p>
+              <div class="btn clearfix">
+                <em>$<%= @recommend.sub_price_08 %></em><a target="_blank" href="<%= @recommend.sub_link_08 %>">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <% if @recommend.sub_title_09.present? %>
+          <div class="cu_box clearfix">
+            <div class="num">
+              <p>9</p>
+            </div>
+            <div class="pic">
+              <a target="_blank" href="<%= @recommend.sub_link_09 %>"><img src="<%= @recommend.sub_image_09 %>" alt="<%= @recommend.sub_title_09 %>"></a>
+              <% if @recommend.sub_youtube_01.present? %>
+                <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_01 %>">
+                  <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+                </div>
+              <% end %>
+            </div>
+            <div class="inner">
+              <strong><span>9.</span><%= @recommend.sub_title_09 %></strong>
+              <span>by <%= @recommend.sub_source_09 %></span>
+              <p><%= @recommend.sub_intro_09 %></p>
+              <div class="btn clearfix">
+                <em>$<%= @recommend.sub_price_09 %></em><a target="_blank" href="<%= @recommend.sub_link_09 %>">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+
+        <% if @recommend.sub_title_10.present? %>
+          <div class="cu_box clearfix">
+            <div class="num">
+              <p>10</p>
+            </div>
+            <div class="pic">
+              <a target="_blank" href="<%= @recommend.sub_link_10 %>"><img src="<%= @recommend.sub_image_10 %>" alt="<%= @recommend.sub_title_10 %>"></a>
+              <% if @recommend.sub_youtube_10.present? %>
+                <div class="js-overlay-start start" data-url="<%= @recommend.sub_youtube_10 %>">
+                  <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+                </div>
+              <% end %>
+            </div>
+            <div class="inner">
+              <strong><span>10.</span><%= @recommend.sub_title_10 %></strong>
+              <span>by <%= @recommend.sub_source_10 %></span>
+              <p><%= @recommend.sub_intro_10 %></p>
+              <div class="btn clearfix">
+                <em>$<%= @recommend.sub_price_10 %></em><a target="_blank" href="<%= @recommend.sub_link_10 %>">Buy Now</a>
+              </div>
+            </div>
+          </div>
+        <% end %>
+    
+      </div><!--./wrap-->
+    </div><!--./cu_wrap-->
+    
+    <!-- Loading 
+    <div class="loading">
+      <h1 class="loading-title">loading</h1>
+      <div class="loading-progress"></div>
+    </div>
+    -->   
+</div><!--./layout-->

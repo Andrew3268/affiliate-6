@@ -12,7 +12,19 @@ Rails.application.routes.draw do
   devise_for :users
   resources :gadgets
   # root 'gadgets#index'
-  root 'home#index'
+  # root 'home#index'
+
+  resources :recommends
+  root 'recommends#index'
+
+  get 'editors/index'
+  get 'editors/editor_01'
+
+  get 'gift_guides/index'
+  get 'gift_guides/gift_guide_01'
+  
+  get 'blogs/index'
+  get 'blogs/blog_01'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
