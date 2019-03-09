@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :gadgets
   # root 'gadgets#index'
-  # root 'home#index'
+  root 'home#index'
 
   resources :recommends
-  root 'recommends#index'
+  # root 'recommends#index'
 
   get 'editors/index'
   get 'editors/editor_01'
