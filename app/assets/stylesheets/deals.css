@@ -12,7 +12,7 @@
   .codes .lt_cnt .toggle>ul>li>ul>li>a>span{font-size:13px;}
 
   .codes .lt_cnt .lt_sort_box{display:none;}
-  .codes .lt_cnt .lt_sort_box.on{display:block;position:fixed;top:80px;width:270px;}
+  .codes .lt_cnt .lt_sort_box.on{display:block;position:fixed;top:255px;width:270px;}
   .codes .lt_cnt .lt_sort_box p{border-bottom:1px solid;}
   .codes .lt_cnt .lt_sort_box ul{background:#000;padding:10px;}
   .codes .lt_cnt .lt_sort_box ul li{float:left;width:100%;margin:1% 0;border:1px solid #fff;background:#000}
