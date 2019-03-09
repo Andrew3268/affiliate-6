@@ -1,42 +1,31 @@
-<!-- Header -->
-<section id="header">
-  <div class="container">
+<header class="clearfix">
+  <div class="wrap">
+    <button class="gnb_open2"><img src="<%=asset_path 'more_black.png' %>" alt="open mobile menu" /></button>
+    <div class="gnb_pc clearfix">
+      <a href="/"><img class="oh_logo" src="<%=asset_path 'oh_logo.jpg' %>" alt="ohigottabuythis" /></a>
 
-  <!-- Logo -->
-    <h1 id="logo"><a href="/">Where Can I Get this?</a></h1>
-    <p>당신만 몰랐 던 그것!! 어디서 GET 할 수 있는지 내가 알려줄께.</p>
-    
-    <div class="search_box">
-      <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
-        <%= text_field_tag :search, @gadget_search_term, placeholder: "Search..." %>
-      <% end %>
+      <div class="visual">
+        <h1><a href="/"><img src="<%=asset_path 'visual_01.jpg' %>" alt="ohigottabuythis" /></a></h1>
+      </div>
+
+      <ul class="clearfix">
+        <li><a href="/gadgets/index">CATEGORY<span>,</span></a></li>
+        <li><a href="/recommends/">FEATURED<span>,</span></a></li>
+        <li><a href="/deals/promo_codes">DEALS <em>of Amazon</em></a></li>
+      </ul>      
     </div>
-    <!-- Nav -->
-      <nav id="nav">
-        <ul>
-          <li><a class="icon fa-home" href="/"><span>Home</span></a></li>
-          <li>
-            <a href="#" class="icon fa-bar-chart-o"><span>HotDeals</span></a>
-            <ul>
-              <li><a href="/home/hotdeal">해외 HOTDEALS</a></li>
-              <li><a href="#">국내 HOTDEALS</a></li>
-              <li><a href="#">Etiam dolore nisl</a></li>
-              <li>
-                <a href="#">Phasellus consequat</a>
-                <ul>
-                  <li><a href="#">Magna phasellus</a></li>
-                  <li><a href="#">Etiam dolore nisl</a></li>
-                  <li><a href="#">Phasellus consequat</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Veroeros feugiat</a></li>
-            </ul>
-          </li>
-          <li><a class="icon fa-cog" href="left-sidebar.html"><span>Left Sidebar</span></a></li>
-          <li><a class="icon fa-retweet" href="right-sidebar.html"><span>Right Sidebar</span></a></li>
-          <li><a class="icon fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
-        </ul>
-      </nav>
+    
+    <div class="gnb_m">      
+      <ul class="clearfix">
+        <li><a href="/">HOME<span>,</span></a></li> 
+        <li><a href="/gadgets/index">CATEGORY<span>,</span></a></li>
+        <li><a href="/recommends/">FEATURED<span>,</span></a></li>
+        <li><a href="/deals/promo_codes">DEALS <em>of Amazon</em></a></li>
+      </ul>
+      <button class="gnb_close"><img src="<%=asset_path 'close_white.png' %>" alt="모바일 메뉴 닫기" /></button>
+      
+    </div><!--./gnb_m-->
+  </div><!--./wrap-->
+</header>
 
-  </div>
-</section>
+

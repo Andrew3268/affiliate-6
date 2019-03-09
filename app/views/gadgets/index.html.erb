@@ -1,31 +1,94 @@
-<header class="clearfix">
-  <div class="wrap">
-    <button class="gnb_open2"><img src="<%=asset_path 'more_black.png' %>" alt="open mobile menu" /></button>
-    <div class="gnb_pc clearfix">
-      <a href="/"><img class="oh_logo" src="<%=asset_path 'oh_logo.jpg' %>" alt="ohigottabuythis" /></a>
+<div class="layout">
+  <%= render '/shared/header' %>
+</div><!--layout-->
 
-      <div class="visual">
-        <h1><a href="/"><img src="<%=asset_path 'visual_01.jpg' %>" alt="ohigottabuythis" /></a></h1>
+<div class="gadgets">
+  <div class="wrap">
+
+    <div class="bigBox">
+      <div class="filters">
+        <a href="#" class="active-filter" data-filter="all">ALL</a>
+        <a href="#" data-filter="sydney">SYDNEY</a>
+        <a href="#" data-filter="melbourne">MELBOURNE</a>
       </div>
 
-      <ul class="clearfix">
-        <li><a href="/gadgets/index">CATEGORY<span>,</span></a></li>
-        <li><a href="/recommends/">FEATURED<span>,</span></a></li>
-        <li><a href="/deals/promo_codes">DEALS <em>of Amazon</em></a></li>
-      </ul>      
-    </div>
-    
-    <div class="gnb_m">      
-      <ul class="clearfix">
-        <li><a href="/">HOME<span>,</span></a></li> 
-        <li><a href="/gadgets/index">CATEGORY<span>,</span></a></li>
-        <li><a href="/recommends/">FEATURED<span>,</span></a></li>
-        <li><a href="/deals/promo_codes">DEALS <em>of Amazon</em></a></li>
-      </ul>
-      <button class="gnb_close"><img src="<%=asset_path 'close_white.png' %>" alt="모바일 메뉴 닫기" /></button>
-      
-    </div><!--./gnb_m-->
-  </div><!--./wrap-->
-</header>
+      <div class="container"> 
 
+        <article class="sydney melbourne">
+          <a href="#" data-cat="columns" data-state="nat"><img src="https://images.unsplash.com/photo-1551895763-554bd1c491eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>3rd, 10th & 11th July, 2013</i><b>Justin North</b></a>
+          <div>
+            <a href="https://www.JustinNorth.com.au" target="_blank">JustinNorth.com.au</a>
+            <i>3rd, 10th & 11th July, 2013</i>
+            <b>Justin North</b>
+            <div class="details">
+              <div class="bio">
+                <p>Restaurateur Justin North is one of Sydney's most widely recognised chefs - his philosophical approach to sustainability and ethical eating has seen him be described as a visionary within the industry. The contemporary flavours and sophisticated style of his food has resulted in many awards: Becasse was named runner-up for the 2009 Sydney Morning Herald Restaurant of the year award while Justin was awarded the title of '2009 Chef of the Year'. </p>
+                
+              </div>
+            </div>
+          </div>
+        </article>
+          <article class="melbourne">
+            <a href="#" data-cat="features" data-state="vic"><img src="https://images.unsplash.com/photo-1551966775-a4ddc8df052b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>19th & 22nd July (Dinner), 2013</i><b>Dani Venn</b></a>
+            <div>
+              <a href="http://www.danivenn.com" target="_blank">danivenn.com</a>
+              <i>19th & 22nd July (Dinner), 2013</i>
+              <b>Dani Venn</b>
+              <div class="details">
+                <div class="bio">
+                  <p>MasterChef audience favourite Dani Venn made a big splash on our screens in 2011. The MasterChef judges and audience alike were impressed with her knowledge of Asian flavours, skill in the kitchen and her enthusiastic and relentless energy. Dani always wore her heart on her plate and was always happy, whether laughing or crying. "Dani has such an infectious personality. Her laugh lit up the MasterChef kitchen"- Matt Preston. Since leaving the competition, Dani has been developing her food blog www.danivenn.com, and expanding her career aspirations and media opportunities. She performs cooking demonstrations all over Australia and makes regular appearances on the Nova 100 Breakfast show in Melbourne with Kate Langbroek and Dave Hughes. Dani also has television and book projects in development.</p>
+                </div>
+              </div>
+            </div>
+          </article>
 
+          <article class="sydney melbourne">
+            <a href="#" data-cat="news" data-state="nat"><img src="https://images.unsplash.com/photo-1551946696-8c21fe7ff456?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>5th July, 2013</i><b>Julie Goodwin</b></a>
+            <div>
+              <a href="https://www.juliegoodwin.com.au" target="_blank">juliegoodwin.com.au</a>
+              <i>5th July, 2013</i>
+              <b>Julie Goodwin</b>
+              <div class="details">
+                <div class="bio">
+                  <p>Julie Goodwin is the winner of the first Australian Masterchef crown. In 2009 Network Ten's Masterchef Series took Australian television by storm. In a finale watched by almost 4 million Australians, Julie Goodwin took out the title of Australia's first ever 'MasterChef and the life of the dedicated wife and mother of 3 changed forever.</p>
+
+                  <p>Julie's first book 'Our Family Table' published with Random House in 2010, stayed at No.1 Bestseller for over 10 weeks, having sold over 200,000 copies to date, it is one of Australia's largest selling cook books ever. Julie's second book, 'Heart of the Home', was released for Christmas 2011, with a third book due for release in 2013.</p>
+                  <p>Julie has maintained a high media profile as a regular columnist for the Australian's Women's Weekly and resident cook on the Today Show for Ch9. and an audience favourite guest on Ten's Can Of Worms.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sydney">
+            <a href="#" data-cat="features" data-state="nat"><img src="https://images.unsplash.com/photo-1552031536-c64b001fdc05?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>6th, 18th & 21st July, 2013</i><b>Justine Schofield</b></a>
+            <div>
+              <a href="https://www.justineschofield.com.au" target="_blank">justineschofield.com.au</a>
+              <i>6th, 18th & 21st July, 2013</i>
+              <b>Justine Schofield</b>
+              <div class="details">
+                <div class="bio">
+                  <p>A favourite finalist on MasterChef Series 1, Justine is a down to earth, half French and half Australian gourmet cook. Growing up with her mother owning a French restaurant, Justine Schofield is naturally passionate about French cuisine. Often referred to as a young 'Rachel Rae', Justine now hosts her own TV show, 'Everyday Gourment' on Ch10, has appeared at Good Food Shows nationally, and is in high demand catering and appearing at corporate events.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="sydney">
+            <a href="#" data-cat="features" data-state="nat"><img src="https://images.unsplash.com/photo-1551992315-907fbf183932?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"><i>12th & 13th July, 2013</i><b>Colin Fassnidge</b></a>
+            <div>
+              <a href="https://fourinhand.com.au" target="_blank">fourinhand.com.au</a>
+              <i>12th & 13th July, 2013</i>
+              <b>Colin Fassnidge</b>
+              <div class="details">
+                <div class="bio">
+                  <p>Dublin born Colin Fassnidge has been the Head Chef of the Four in Hand since October 2005. During Colin's time at the Four in Hand, The Dining Room has been exalted through reviews. Awards include the Good Food Guide One Chefs Hat and adding the prestigious Second Hat in 2010. The Dining Room has always been in The Gourmet Travellers Top 100. Colin is also behind the Paddington Arms and 4Fourteen in Surry Hills. Colin was a popular contributing Chef on the Masterchef Series - introducing Australian's to the culinary delights of pig's tail and winning out against Contestant Jay Huxley in a great Steak & Kidney Pie Challenge.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+          <div class="content"></div>
+       </div>
+      </div> <!--end Big box -->
+
+  </div><!--wrap-->
+</div><!--gadgets-->
