@@ -1,6 +1,8 @@
 class RecommendsController < ApplicationController
 
   before_action :find_recommend, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :log_impression, :only=> [:show]
 
   def index
     @recommends = Recommend.all.order("created_at DESC")
@@ -10,11 +12,11 @@ class RecommendsController < ApplicationController
   end
 
   def new
-    @recommend = Recommend.new
+    @recommend = current_user.recommends.build
   end
 
   def create
-    @recommend = Recommend.new(recommend_params)
+    @recommend = current_user.recommends.build(recommend_params)
       if @recommend.save
         redirect_to @recommend
       else
