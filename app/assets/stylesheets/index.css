@@ -38,4 +38,12 @@
 }
 
 
-
+/* index_01 */
+.in_featured{margin-top:20px;}
+.in_featured a{text-decoration:none;color:#3d3d3d;}
+.in_featured .inner{margin-top:10px;}
+.in_featured .inner img{width:100%;padding:5px;} 
+.in_featured .btn{}
+.card_wrap .card .btn a{text-decoration:none;color:#fff;}
+.card_wrap .mid_image{position:relative;}
+.card_wrap .mid_image .start{position:absolute;bottom:10px;right:10px;width:40px;}

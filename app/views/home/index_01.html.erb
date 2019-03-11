@@ -1,0 +1,137 @@
+<div class="layout"><!--layout-->
+    
+    <%= render 'shared/header' %>
+    <!-- for play youtube video-->
+    <div class="overlay-video">
+      <div class="videoWrapperExt">
+        <div class="videoWrapper">
+          <div class="video_close"></div>
+          <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>        
+     </div>
+    
+    <div class="location clearfix">
+      <div class="wrap">
+        <!-- <div class="inner">
+          <span><a href="/recommends/">Featured</a></span> > <a href="/editors/index">Editor's Pick</a> > <a href="">The standard Lorem Ipsum passage, used since the 1500s</a>
+        </div> -->
+      </div>
+    </div>
+    
+    <div class="edtor_detail clearfix">
+      <div class="wrap">
+      
+        <div class="left">
+          <div class="inner_wrap">
+            <div class="inner">
+              <strong>02.</strong>
+              <p>26.</p>
+              <em>2019.</em>
+            </div>
+          </div>
+          
+          <!-- <div class="inner_wrap2">
+            <h2>The standard Lorem Ipsum passage, used since the 1500s</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div> -->
+
+          <div class="in_featured">
+            <% @recommends.each do |recommend| %>
+              <div class="inner_wrap2">
+                <h2><%= link_to recommend.re_title, recommend %></h2>
+                <p><%= link_to recommend.re_intro, recommend %></p>
+              
+
+                <div class="filter-node" data-filter='["<%= recommend.re_filter %>"]'>
+                  <div class="inner">
+                    <%= link_to (image_tag recommend.re_image), recommend %>
+                  </div>
+                  <div class="btn clearfix admin">
+                    <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
+                  </div>    
+                </div>
+              </div>
+            <% end %>
+          </div><!--in_featured-->
+        </div><!--left-->
+        
+        <div class="card_wrap">
+
+          <% @gadgets.each do |gadget| %>
+            <div class="card">
+              <em><%= gadget.gg_title %></em>
+              <div class="mid_image">
+                <a target="_blank" href="<%= gadget.gg_url %>"><img src="<%= gadget.gg_img %>" alt="<%= gadget.gg_title %>" /></a>
+                <% if gadget.gg_youtube01.present? %>
+                  <div class="js-overlay-start start" data-url= "<%= gadget.gg_youtube01 %>">
+                    <button><img src="<%=asset_path 'youtube_02.png' %>" alt="" /></button>
+                  </div>
+                <% end %>
+              </div>
+              <p><%= gadget.gg_intro %></p>
+              <div class="btn clearfix">
+                <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
+              </div>
+              <div class="btn clearfix admin">
+                <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
+              </div>   
+            </div>
+          <% end %>
+
+          <div class="card">
+            <em>1914 translation by H. Rackham</em>
+            <div class="mid_image">
+              <img src="https://images.unsplash.com/photo-1517524285303-d6fc683dddf8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
+            </div>
+            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
+            <div class="btn clearfix">
+              <em>$100.00</em><a href="#n">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <em>1914 translation by H. Rackham</em>
+            <div class="mid_image">
+              <img src="https://images.unsplash.com/photo-1498182462175-4aaddb8e7f80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
+            </div>
+            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
+            <div class="btn clearfix">
+              <em>$100.00</em><a href="#n">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <em>1914 translation by H. Rackham</em>
+            <div class="mid_image">
+              <img src="https://images.unsplash.com/photo-1517856713891-215e57a13c0d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
+            </div>
+            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
+            <div class="btn clearfix">
+              <em>$100.00</em><a href="#n">Buy Now</a>
+            </div>
+          </div>
+      
+          <div class="card">
+            <em>1914 translation by H. Rackham</em>
+            <div class="mid_image">
+              <img src="https://images.unsplash.com/photo-1436262513933-a0b06755c784?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
+            </div>
+            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
+            <div class="btn clearfix">
+              <em>$100.00</em><a href="#n">Buy Now</a>
+            </div>
+          </div>
+          <div class="card">
+            <em>1914 translation by H. Rackham</em>
+            <div class="mid_image">
+              <img src="https://images.unsplash.com/photo-1498354136128-58f790194fa7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="" />
+            </div>
+            <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system</p>
+            <div class="btn clearfix">
+              <em>$100.00</em><a href="#n">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>  
+  </div><!--./layout-->

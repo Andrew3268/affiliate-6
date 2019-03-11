@@ -54,7 +54,7 @@
 .on_gadgets{margin:300px 0 0 310px;width:900px;}
 .on_gadgets .current_category p{font-size:17px;text-transform:uppercase;font-weight:600;width:200px;border-bottom:1px solid;}
 .on_gadgets .card_wrap{column-width:250px;column-gap:10px;}
-.on_gadgets .card_wrap .card{margin:10px 1%;;position: relative;border-radius:10px;background: #fff; overflow: hidden;display:inline-block;}
+.on_gadgets .card_wrap .card{margin:10px 1%;;position:relative;border-radius:10px;background: #fff; overflow: hidden;display:inline-block;}
 .on_gadgets .card_wrap .card, 
 .on_gadgets .card-nav ul{box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);}
 .on_gadgets .card_wrap .card-header,
