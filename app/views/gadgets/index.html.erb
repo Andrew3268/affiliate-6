@@ -25,7 +25,10 @@
                 <li><%= link_to "All Gadgets", gadgets_path %></li>
                 <% Category.all.each do |category| %>
                   <li><%= link_to category.name, gadgets_path(category: category.name) %></li>
-                <% end %>               
+                <% end %>
+                <% if can? :update, @gadgets %>
+                  <li><%= link_to "New Gadgets", new_gadget_path %></li>               
+                <% end %>
               </ul>
               <button class="gnb_close"><img src="<%=asset_path 'close_white.png' %>" alt="close menu" /></button>
             </div>

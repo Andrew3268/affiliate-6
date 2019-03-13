@@ -20,7 +20,7 @@
 .gadgets .card_wrap .start{position:absolute;top:-45px;left:15px;}
 .gadgets .card_wrap .start img{width:30px;}
 
-@media screen and (max-width:640px){
+
   .gadgets{margin:80px 0;}
   .gadgets .card_wrap .card-body .admin{margin-top:-10px;}
   .gadgets .card_wrap .card-header{padding:5px;}
@@ -47,3 +47,6 @@
 .card_wrap .card .btn a{text-decoration:none;color:#fff;}
 .card_wrap .mid_image{position:relative;}
 .card_wrap .mid_image .start{position:absolute;bottom:10px;right:10px;width:40px;}
+@media screen and (max-width:640px){
+  .lf_none{display:none;}
+}

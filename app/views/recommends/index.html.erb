@@ -8,7 +8,7 @@
         <ul class="clearfix">
           <li><a class="active" href="/featured/index">Featured</a></li>
           <!--<li><a href="/guides/index">Gift Guide</a></li>-->
-          <li><a href="/editors/index">Editor's Pick</a></li>
+          <!-- <li><a href="/editors/index">Editor's Pick</a></li> -->
           <li><a href="/blogs/index">Blog</a></li>
         </ul>
       </div>
@@ -19,7 +19,7 @@
           <h2>Featured</h2>
           <div class="note">
             <ul>
-              <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</li>
+              <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
             </ul>
           </div>
           <button class="gnb_open"><img src="<%=asset_path 'open_black.png' %>" alt="모바일 메뉴 열기" /></button>
@@ -37,11 +37,11 @@
             <ul class="filter-search">
               <li><button class="filter-button btn btn-md btn-primary" data-filter="*">All Featured</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="tech">Tech+</button></li>
+              <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
               <li><button class="filter-button btn btn-md" data-filter="smarthome">Smart Home</button></li>
               <li><button class="filter-button btn btn-md" data-filter="kitchen">Kitchen&Home</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="fashion">Fashion</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="travel">Travel</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
               <% if can? :update, @recommends %>
                 <li><%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %></li>
                 <li><a class="filter-button" href="/categories/">Manage Categories</a></li>
@@ -59,11 +59,11 @@
             <ul class="filter-search">
               <li><button class="filter-button btn btn-md btn-primary" data-filter="*">All Featured</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="tech">Tech+</button></li>
+              <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
               <li><button class="filter-button btn btn-md" data-filter="smarthome">Smart Home</button></li>
               <li><button class="filter-button btn btn-md" data-filter="kitchen">Kitchen&Home</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="fashion">Fashion</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="travel">Travel</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
             </ul>
             <button class="gnb_close"><img src="<%=asset_path 'close_white.png' %>" alt="모바일 메뉴 닫기" />
           </div>

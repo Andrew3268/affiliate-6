@@ -14,14 +14,14 @@
 .gadgets_wrapper main .gnb_open_b,
 .gadgets_wrapper main .gnb_close{display:none;}
 
-@media screen and (max-width:680px){
+@media screen and (max-width:680px){.gadgets_wrapper main #filter .ui-group label
   .gadgets_wrapper{margin-top:60px;}
   .gadgets_wrapper main #filter{position:fixed;right:-800px;top:0;width:100%;z-index:302;background:#000;}
   .gadgets_wrapper main #filter.on{top:0;}
   .gadgets_wrapper main #filter .ui-group{padding:30px;}
   .gadgets_wrapper main #filter .color_group{margin-top:0;}
-  .gadgets_wrapper main #filter .ui-group label{font-weight:bold;text-transform:uppercase;color:#fff;border-bottom:1px solid #fff;}
-  .gadgets_wrapper main #filter .ui-group ul li a{font-size:20px;color:#fff;line-height:1;font-weight:bold;text-transform:uppercase;}
+  .gadgets_wrapper main #filter .ui-group label{font-size:50px;font-weight:bold;text-transform:uppercase;color:#fff;border-bottom:1px solid #fff;}
+  .gadgets_wrapper main #filter .ui-group ul li a{font-size:50px;color:#fff;line-height:1;font-weight:bold;text-transform:uppercase;}
   .gadgets_wrapper main .gnb_open{display:block;position:fixed;right:-10px;top:2px;z-index:301;margin:0 5%;}
   .gadgets_wrapper main .gnb_open img{width:40px;height:40px;}
   .gadgets_wrapper main .gnb_kbg{display:none;position:fixed;left:0;top:0;width:100%;height:100%; background:rgba(0,0,0,0.5);z-index:301;}
