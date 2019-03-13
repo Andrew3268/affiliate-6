@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   resources :recommends
   # root 'recommends#index'
 
+  resources :categories
+  # root 'categories#index'
+
   get 'editors/index'
   get 'editors/editor_01'
 

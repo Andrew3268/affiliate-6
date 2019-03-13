@@ -25,8 +25,8 @@
         <div class="left">
           <div class="inner_wrap">
             <div class="inner">
-              <strong>02.</strong>
-              <p>26.</p>
+              <strong>Featured.</strong>
+              <p>Mar.</p>
               <em>2019.</em>
             </div>
           </div>
@@ -47,9 +47,11 @@
                   <div class="inner">
                     <%= link_to (image_tag recommend.re_image), recommend %>
                   </div>
-                  <div class="btn clearfix admin">
-                    <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
-                  </div>    
+                  <% if can? :update, recommend %>
+                    <div class="btn clearfix admin">
+                      <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
+                    </div>    
+                  <% end %>
                 </div>
               </div>
             <% end %>
@@ -73,9 +75,11 @@
               <div class="btn clearfix">
                 <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
               </div>
-              <div class="btn clearfix admin">
-                <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
-              </div>   
+              <% if can? :update, gadget %>
+                <div class="btn clearfix admin">
+                  <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
+                </div>   
+              <% end %>
             </div>
           <% end %>
 

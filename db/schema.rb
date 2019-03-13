@@ -11,12 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190309140236) do
+ActiveRecord::Schema.define(version: 20190313124502) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "gadgets", force: :cascade do |t|
@@ -42,6 +44,37 @@ ActiveRecord::Schema.define(version: 20190309140236) do
     t.string   "gg_source_link_04"
     t.string   "gg_source_link_05"
     t.text     "gg_intro"
+    t.text     "gg_pro_01"
+    t.text     "gg_pro_02"
+    t.text     "gg_pro_03"
+    t.text     "gg_pro_04"
+    t.text     "gg_pro_05"
+    t.text     "gg_pro_06"
+    t.text     "gg_pro_07"
+    t.text     "gg_pro_08"
+    t.text     "gg_pro_09"
+    t.text     "gg_pro_10"
+    t.text     "gg_con_01"
+    t.text     "gg_con_02"
+    t.text     "gg_con_03"
+    t.text     "gg_con_04"
+    t.text     "gg_con_05"
+    t.text     "gg_con_06"
+    t.text     "gg_con_07"
+    t.string   "gg_option_01"
+    t.string   "gg_option_02"
+    t.string   "gg_option_03"
+    t.string   "gg_option_04"
+    t.string   "gg_option_05"
+    t.string   "gg_option_06"
+    t.string   "gg_spare_01"
+    t.string   "gg_spare_02"
+    t.string   "gg_spare_03"
+    t.string   "gg_spare_04"
+    t.string   "gg_spare_05"
+    t.text     "gg_spare_06"
+    t.text     "gg_spare_07"
+    t.text     "gg_spare_08"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "user_id"
@@ -166,6 +199,17 @@ ActiveRecord::Schema.define(version: 20190309140236) do
     t.datetime "updated_at",     null: false
   end
 
+  create_table "roles", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "resource_id"
+    t.string   "resource_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
+  add_index "roles", ["name"], name: "index_roles_on_name"
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -184,5 +228,12 @@ ActiveRecord::Schema.define(version: 20190309140236) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+
+  create_table "users_roles", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "role_id"
+  end
+
+  add_index "users_roles", ["user_id", "role_id"], name: "index_users_roles_on_user_id_and_role_id"
 
 end

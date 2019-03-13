@@ -2,7 +2,8 @@ class GadgetsController < ApplicationController
 
   before_action :find_gadget, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :log_impression, :only=> [:show]
+  # before_action :log_impression, :only=> [:show]
+  load_and_authorize_resource
 
   def log_impression
     @gadget.impressions.create(ip_address: request.remote_ip)

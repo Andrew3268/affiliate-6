@@ -8,13 +8,15 @@
         <p><%= link_to recommend.re_intro, recommend %></p>
         </a>
     </div>
+    <% if can? :update, recommend %>
       <div class="btn clearfix admin">
         <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
       </div>    
+    <% end %>
   </div>
 <% end %>
 
-<div class="filter-node" data-filter='["travel"]'>
+<!-- <div class="filter-node" data-filter='["travel"]'>
   <div class="inner">
     <a href="/featured/featured_01"><img src="https://i.pinimg.com/564x/4c/14/ae/4c14ae6547540a6dc4d51d5061c4d731.jpg" alt="" /></a>
     <em>Travel</em>
@@ -67,4 +69,4 @@
       <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
     </a>
   </div>
-</div>
+</div> -->

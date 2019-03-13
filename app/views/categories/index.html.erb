@@ -1,0 +1,35 @@
+<header id="header">
+  <%= render 'shared/header' %> 
+</header>
+    
+<div class="category_wrap">
+  <div class="wrap">
+   <h1>List of categories</h1>
+    <%= link_to "Add New Category", new_category_path %>
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Category ID</th>
+        <th colspan="2">Option</th>
+      </tr>
+      <% @categories.each do |category| %>
+       <tr>
+        <td><%= category.name %></td>
+        <td><%= category.category_id %></td>
+        <td><%= link_to "Edit", edit_category_path(category) %></td>
+        <td><%= link_to "Delete", category_path(category), method: :delete, data: {confirm: "Are you sure?"} %></td>
+       </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+

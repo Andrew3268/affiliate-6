@@ -6,6 +6,8 @@ gem 'devise', '~> 4.3'
 gem 'impressionist', '~> 1.6', '>= 1.6.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'figaro'
+gem 'cancancan', '~> 2.3'
+gem 'rolify', '~> 5.2'
 
 # group :production do
 #   gem 'mysql2'
