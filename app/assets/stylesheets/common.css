@@ -211,7 +211,6 @@ header .gnb_m,header .gnb_open2{display:none;}
   .common_layout .lt_cnt .note{margin-bottom:10px;}
 }
 
-
 /* Youtube */
 .overlay-video{display:none;-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity: 0;-webkit-transition:opacity 600ms ease-in;transition:opacity 600ms ease-in;-webkit-transition:opacity .6s;transition:opacity .6s;position:fixed;top:0;left:0;height:100%;width:100%;background:rgba(0, 0, 0, 0.7);z-index:310;}
 .o1{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";opacity:1;-webkit-transition: opacity 600ms ease-out;transition:opacity 600ms ease-out;-webkit-transition:opacity .6s;transition:opacity .6s;}

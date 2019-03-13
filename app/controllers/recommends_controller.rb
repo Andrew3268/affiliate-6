@@ -2,7 +2,7 @@ class RecommendsController < ApplicationController
 
   before_action :find_recommend, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
-  before_action :log_impression, :only=> [:show]
+  # before_action :log_impression, :only=> [:show]
 
   def index
     @recommends = Recommend.all.order("created_at DESC")
