@@ -260,3 +260,5 @@ header .gnb_m,header .gnb_open2{display:none;}
   .devise .box .box_right{float:left;width:100%;margin:0;}
 }
 
+/* category */
+.category_wrap{margin-top:250px;}

@@ -77,7 +77,7 @@
   .on_gadgets .card_wrap .card-header{padding:5px;}
   .on_gadgets .card_wrap .card-body{padding:10px;}
   .on_gadgets .card_wrap .card-body h4{margin:15px 0;}
-  .on_gadgets .card_wrap .start{top:-45px;}
+  /*.on_gadgets .card_wrap .start{top:-45px;}*/
 }
 
 @media screen and (min-width:681px) and (max-width:1199px){
@@ -85,7 +85,7 @@
   .on_gadgets .card_wrap .card-header{padding:5px;}
   .on_gadgets .card_wrap .card-body{padding:10px;}
   .on_gadgets .card_wrap .card-body h4{margin:15px 0;}
-  .on_gadgets .card_wrap .start{top:-45px;}
+  /*.on_gadgets .card_wrap .start{top:-45px;}*/
 }
 
 
