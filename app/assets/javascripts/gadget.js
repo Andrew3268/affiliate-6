@@ -1,4 +1,4 @@
-// Define Functions for index of gadgets page
+// Define Functions for index of gadgets page for index_01.html
 
 function contentDiv() {
     $('.added').remove();
