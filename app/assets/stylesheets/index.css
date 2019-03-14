@@ -21,13 +21,13 @@
 .gadgets .card_wrap .start img{width:30px;}
 
 
-  .gadgets{margin:80px 0;}
-  .gadgets .card_wrap .card-body .admin{margin-top:-10px;}
-  .gadgets .card_wrap .card-header{padding:5px;}
-  .gadgets .card_wrap .card-body{padding:10px;}
-  .gadgets .card_wrap .card-body h4{margin:15px 0;}
-  .gadgets .card_wrap .start{top:-45px;}
-}
+.gadgets{margin:80px 0;}
+.gadgets .card_wrap .card-body .admin{margin-top:-10px;}
+.gadgets .card_wrap .card-header{padding:5px;}
+.gadgets .card_wrap .card-body{padding:10px;}
+.gadgets .card_wrap .card-body h4{margin:15px 0;}
+.gadgets .card_wrap .start{top:-45px;}
+
 
 @media screen and (min-width:641px) and (max-width:1199px){
   .gadgets{margin:160px 0;}
