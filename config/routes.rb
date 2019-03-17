@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   resources :gadgets
   # root 'gadgets#index'
   # root 'home#index'
-  root 'home#index_01'
+  # root 'home#index_01'
+  root 'home#index_02'
 
   resources :recommends
   # root 'recommends#index'

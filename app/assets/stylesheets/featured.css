@@ -278,7 +278,7 @@
 .edtor_detail .card_wrap{column-width:270px;column-gap:15px;}
 .edtor_detail .card_wrap .card{display: inline-block;margin:0;margin-bottom:20px;}
 .edtor_detail .card_wrap .card em{border-bottom:1px solid #3d3d3d;display:block;text-align:right;font-weight:400;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.edtor_detail .card_wrap .card p{border-bottom:1px solid #ccc;padding-bottom:5px;padding:15px;}
+.edtor_detail .card_wrap .card p{border-bottom:1px solid #ccc;padding-bottom:5px;padding:15px 0;}
 .edtor_detail .card_wrap .card .mid_image{margin:5px 0 10px 0;}
 .edtor_detail .card_wrap .card .mid_image img{width:100%;/*-webkit-filter: grayscale(100%);filter: gray;*/}
 .edtor_detail .card_wrap .card .mid_image img:hover{-webkit-filter:grayscale(0%);filter:none;}
