@@ -14,10 +14,10 @@
 .gadgets .card_wrap .card-body .btn>a{float:left;text-decoration:none;color:#000;font-size:20px;border:1px solid #000;padding:3px 20px;line-height:20px;}
 .gadgets .card_wrap .card-body .admin{margin-top:-20px;}
 .gadgets .card_wrap .card-body .admin>em>a{text-decoration:none;color:#fff;}
-.gadgets .card_wrap .card-header img{display:block;width:100%;}
+.gadgets .card_wrap .card-header img{display:block;width:80%;margin:0 auto;}
 .gadgets .card_wrap .with-photo/*do not delete*/
 .gadgets .card_wrap .card-header{height:208px;padding:0;overflow:hidden;}
-.gadgets .card_wrap .start{position:absolute;top:-45px;left:15px;}
+.gadgets .card_wrap .start{position:absolute;top:-45px;right:20px;}
 .gadgets .card_wrap .start img{width:30px;}
 
 @media screen and (max-width:640px){
