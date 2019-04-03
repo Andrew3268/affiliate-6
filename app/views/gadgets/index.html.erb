@@ -65,11 +65,11 @@
                       <div class="btn clearfix">
                         <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
                       </div>
-                      <% if can? :update, gadget %>
-                        <div class="btn clearfix admin">
+                      <%# if can? :update, gadget %>
+                        <!-- <div class="btn clearfix admin">
                           <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
-                        </div>     
-                      <% end %>          
+                        </div> -->     
+                      <%# end %>          
                     </section>
                   </div>
                 <% end %>
