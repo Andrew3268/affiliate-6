@@ -19,7 +19,13 @@
           <h2><span><%= @recommend.re_title %></span></h2>
           <p><%= @recommend.sub_intro %></p>
         </div>
-        
+
+        <% if can? :update, @recommend %>
+          <div class="btn clearfix admin">
+            <em><%= link_to "Edit", edit_recommend_path(@recommend) %></em><%= link_to "Delete", recommend_path(@recommend), method: :delete, data: {confirm: "Are you sure?"}%>
+          </div>    
+        <% end %>
+            
         <div class="cu_box clearfix">
           <div class="num">
             <p>1</p>
