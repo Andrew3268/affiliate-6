@@ -56,8 +56,11 @@
                 amzn_assoc_design = "text_links";
                 </script>
                 <script src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US"></script> -->
-
-               <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+                <% if can? :update, gadget %>
+                  <div class="pinterest">
+                   <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+                  </div>
+                <% end %>
               </section>
             </div>
           <% end %>

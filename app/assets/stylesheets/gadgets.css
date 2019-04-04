@@ -14,14 +14,15 @@
 .gadgets_wrapper main .gnb_open_b,
 .gadgets_wrapper main .gnb_close{display:none;}
 
-@media screen and (max-width:680px){.gadgets_wrapper main #filter .ui-group label
+@media screen and (max-width:680px){
+  .gadgets_wrapper main #filter .ui-group label{}
   .gadgets_wrapper{margin-top:60px;}
   .gadgets_wrapper main #filter{position:fixed;right:-800px;top:0;width:100%;z-index:302;background:#000;}
   .gadgets_wrapper main #filter.on{top:0;}
   .gadgets_wrapper main #filter .ui-group{padding:30px;}
   .gadgets_wrapper main #filter .color_group{margin-top:0;}
   .gadgets_wrapper main #filter .ui-group label{font-size:50px;font-weight:bold;text-transform:uppercase;color:#fff;border-bottom:1px solid #fff;}
-  .gadgets_wrapper main #filter .ui-group ul li a{font-size:50px;color:#fff;line-height:1;font-weight:bold;text-transform:uppercase;}
+  .gadgets_wrapper main #filter .ui-group ul li a{font-size:30px;color:#fff;line-height:1;font-weight:bold;text-transform:uppercase;}
   .gadgets_wrapper main .gnb_open{display:block;position:fixed;right:-10px;top:2px;z-index:301;margin:0 5%;}
   .gadgets_wrapper main .gnb_open img{width:40px;height:40px;}
   .gadgets_wrapper main .gnb_kbg{display:none;position:fixed;left:0;top:0;width:100%;height:100%; background:rgba(0,0,0,0.5);z-index:301;}
@@ -60,7 +61,7 @@
 .on_gadgets .card_wrap .card-header,
 .on_gadgets .card_wrap .card-body{position:relative;padding:5px;text-align:center;}
 .on_gadgets .card_wrap .card-body h4{margin-top:15px;}
-.on_gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#000;}
+.on_gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#3d3d3d;border-bottom:1px solid #ddd;}
 .on_gadgets .card_wrap .card-body p{margin:10px 0;}
 .on_gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}
 .on_gadgets .card_wrap .card-body .btn>em{float:left;font-size:17px;background:#000;color:#fff;padding:3px 20px;border:1px solid #000;line-height:20px;}
@@ -69,7 +70,7 @@
 .on_gadgets .card_wrap .card-header img{display:block;width:100%;border-radius:10px;}
 .on_gadgets .card_wrap .with-photo
 .on_gadgets .card_wrap .card-header{height:208px;padding:0;overflow:hidden;}
-.on_gadgets .card_wrap .start{position:absolute;top:-45px;left:15px;}
+.on_gadgets .card_wrap .start{position:absolute;top:-45px;right:15px;}
 .on_gadgets .card_wrap .start img{width:30px;}
 
 @media screen and (max-width:680px){
