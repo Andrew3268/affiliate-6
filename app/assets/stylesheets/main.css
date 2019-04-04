@@ -32,9 +32,6 @@
 .content p {font-size: 13px;line-height: 17px;color:#fff;}
 .bigbox {width: 100%;padding: 20px;overflow: hidden;}
 
-/* For Form */
-.gadget_form{margin-top:250px;}
-
 
 @media screen and (max-width:640px){
   .gadgets .bigBox{margin-top:60px;}

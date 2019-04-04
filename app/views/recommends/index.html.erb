@@ -64,6 +64,16 @@
               <li><button class="filter-button btn btn-md" data-filter="kitchen">Kitchen&Home</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="fashion">Fashion</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="travel">Travel</button></li>
+              <% if can? :update, @recommends %>
+                <li><%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %></li>
+                <li><a class="filter-button" href="/categories/">Manage Categories</a></li>
+                <% if user_signed_in? %>
+                  <li><%= link_to "Log out", destroy_user_session_path, method: :delete, :class => "filter-button"  %></li>
+                <% else %>
+                 <li><%= link_to "Log in", new_user_session_path, :class => "filter-button"  %></li>
+                 <!--<li><%= link_to "Sign up", new_user_registration_path %></li>-->
+                <% end %>
+              <% end %>
             </ul>
             <button class="gnb_close"><img src="<%=asset_path 'close_white.png' %>" alt="모바일 메뉴 닫기" />
           </div>
