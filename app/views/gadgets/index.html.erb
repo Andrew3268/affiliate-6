@@ -69,7 +69,12 @@
                         <!-- <div class="btn clearfix admin">
                           <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
                         </div> -->     
-                      <%# end %>          
+                      <%# end %>
+                      <% if can? :update, gadget %>
+                        <div class="pinterest">
+                         <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+                        </div>
+                      <% end %>          
                     </section>
                   </div>
                 <% end %>
