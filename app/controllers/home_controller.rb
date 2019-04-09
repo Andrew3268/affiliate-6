@@ -9,7 +9,7 @@ class HomeController < ApplicationController
   end
 
   def index_02
-    @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per(21)
+    @gadgets = Gadget.all.order("created_at DESC")
   end
 
 end
