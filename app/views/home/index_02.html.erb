@@ -14,7 +14,6 @@
 
     <div class="gadgets">
       <div class="wrap">
-        
         <div class="card_wrap clearfix">
           <% @gadgets.each do |gadget| %>
             <div class="card with-photo">
@@ -65,7 +64,7 @@
             </div>
           <% end %>
         </div><!--./card_wrap-->
-
+        <%= will_paginate @gadgets %>
     </div><!--./wrap-->
   </div><!--./gadgets-->
 </div><!--./layout-->

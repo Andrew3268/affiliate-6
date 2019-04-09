@@ -8,7 +8,7 @@ gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'figaro'
 gem 'cancancan', '~> 2.3'
 gem 'rolify', '~> 5.2'
-
+gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 # group :production do
 #   gem 'mysql2'
 # end
