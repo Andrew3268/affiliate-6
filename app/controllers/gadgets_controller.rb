@@ -11,10 +11,10 @@ class GadgetsController < ApplicationController
 
   def index
     if params[:category].blank?
-      @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(30)
+      @gadgets = Gadget.all.order("created_at DESC")
     else
       @category_id = Category.find_by(name: params[:category]).id
-      @gadgets = Gadget.where(category_id: @category_id).order("created_at DESC").page(params[:page]).per_page(30)
+      @gadgets = Gadget.where(category_id: @category_id).order("created_at DESC")
     end
 
     if params[:search]

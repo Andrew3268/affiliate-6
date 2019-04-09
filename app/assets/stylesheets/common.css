@@ -224,7 +224,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 }
 
 /* Input Form */
-.input_wrap{margin:0 auto;}
+.input_wrap{margin:0 auto;margin-top:250px;}
 .input_wrap .input_header{}
 .input_wrap .input_header .input_header_box,
 .input_wrap .input_body_left,
