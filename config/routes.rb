@@ -12,9 +12,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :gadgets
   # root 'gadgets#index'
+  root 'gadgets#index01'
   # root 'home#index'
   # root 'home#index_01'
-  root 'home#index_02'
+  # root 'home#index_02'
 
   resources :recommends
   # root 'recommends#index'
@@ -30,6 +31,8 @@ Rails.application.routes.draw do
   
   get 'blogs/index'
   get 'blogs/blog_01'
+
+  get 'promocodes_days/day_01'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
