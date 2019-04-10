@@ -12,10 +12,10 @@ Rails.application.routes.draw do
   devise_for :users
   resources :gadgets
   # root 'gadgets#index'
-  root 'gadgets#index01'
+  # root 'gadgets#index01'
   # root 'home#index'
   # root 'home#index_01'
-  # root 'home#index_02'
+  root 'home#index_02'
 
   resources :recommends
   # root 'recommends#index'
