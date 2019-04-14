@@ -3,10 +3,8 @@
     <div class="inner">
       <%= link_to (image_tag recommend.re_image), recommend %>
       <em><%= recommend.re_filter %></em>
-        <a href="/featured/featured_01">
-        <h3><%= link_to recommend.re_title, recommend %></h3>
-        <p><%= link_to recommend.re_intro, recommend %></p>
-        </a>
+      <h3><%= link_to recommend.re_title, recommend %></h3>
+      <p><%= link_to recommend.re_intro, recommend %></p>
     </div>
     <% if can? :update, recommend %>
       <div class="btn clearfix admin">

@@ -10,6 +10,7 @@ class RecommendsController < ApplicationController
   end
 
   def show
+    @recommends = Recommend.all.order("created_at DESC").limit(6)
   end
 
   def new
