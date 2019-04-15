@@ -431,7 +431,7 @@
     <div class="wrap">
       <div class="show_more_box">
         <h2>More Featured</h2>
-        <% @recommends.each do |recommend| %>
+        <% @related.each do |recommend| %>
           <div class="show_more_ctn">
             <%= link_to (image_tag recommend.re_image), recommend %>
             <em><%= recommend.re_filter %></em>
