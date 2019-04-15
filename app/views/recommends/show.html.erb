@@ -429,16 +429,18 @@
     </div><!--./cu_wrap-->
 
     <div class="wrap">
-      <div class="show_more_box">
-        <h2>More Featured</h2>
-        <% @related.each do |recommend| %>
-          <div class="show_more_ctn">
-            <%= link_to (image_tag recommend.re_image), recommend %>
-            <em><%= recommend.re_filter %></em>
-            <h3><%= link_to recommend.re_title, recommend %></h3>
-            <p><%= link_to recommend.re_intro, recommend %></p>
-          </div>
-        <% end %>
+      <div class="show_more_wrapper clearfix">
+        <div class="show_more_box">
+          <h2>More Featured</h2>
+          <% @related.each do |recommend| %>
+            <div class="show_more_ctn">
+              <%= link_to (image_tag recommend.re_image), recommend %>
+              <em><%= recommend.re_filter %></em>
+              <h3><%= link_to recommend.re_title, recommend %></h3>
+              <p><%= link_to recommend.re_intro, recommend %></p>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     

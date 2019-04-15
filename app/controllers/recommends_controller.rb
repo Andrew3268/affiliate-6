@@ -10,7 +10,7 @@ class RecommendsController < ApplicationController
   end
 
   def show
-    @related = Recommend.where.not(id: @recommend).order("created_at DESC").limit(3)
+    @related = Recommend.where.not(id: @recommend).order("created_at DESC").limit(6)
   end
 
   def new

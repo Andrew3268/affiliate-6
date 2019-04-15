@@ -33,6 +33,7 @@ Rails.application.routes.draw do
   get 'blogs/blog_01'
 
   get 'promocodes_days/day_01'
+  get 'promocodes_days/day_02'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
