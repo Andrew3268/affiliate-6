@@ -3,10 +3,10 @@
 .gadgets_wrapper main #filter{float:left;width:290px;background:#fff;border-right:1px solid #ccc;}
 .gadgets_wrapper main #filter.on{position:fixed;top:100px;}
 .gadgets_wrapper main #filter .ui-group{}
-.gadgets_wrapper main #filter .ui-group label{font-size:30px;border-bottom:1px solid #ccc;padding-bottom:3px;margin-bottom:20px;display:block;width:80%;}
+.gadgets_wrapper main #filter .ui-group label{font-family: 'Montserrat', sans-serif;font-size:30px;border-bottom:1px solid #ccc;padding-bottom:3px;margin-bottom:20px;display:block;width:80%;}
 .gadgets_wrapper main #filter .ui-group ul{padding:0 10px;}
 .gadgets_wrapper main #filter .ui-group ul li{}
-.gadgets_wrapper main #filter .ui-group ul li a{margin-top:15px;cursor:pointer;display:block;text-decoration:none;color:#3d3d3d;}
+.gadgets_wrapper main #filter .ui-group ul li a{font-family: 'Montserrat', sans-serif;margin-top:15px;cursor:pointer;display:block;text-decoration:none;color:#3d3d3d;}
 .gadgets_wrapper main #filter .ui-group ul li a.active{background:#000;color:#fff;}
 .gadgets_wrapper main #filter .ui-group input{display:none;}
 .gadgets_wrapper main #filter .color_group{margin-top:20px;}
@@ -53,16 +53,16 @@
 }
 
 .on_gadgets{margin:300px 0 0 310px;width:900px;}
-.on_gadgets .current_category p{font-size:17px;text-transform:uppercase;font-weight:600;width:200px;border-bottom:1px solid;}
+.on_gadgets .current_category p{font-family: 'Montserrat', sans-serif;font-size:17px;text-transform:uppercase;font-weight:600;width:200px;border-bottom:1px solid #616161;;}
 .on_gadgets .card_wrap{column-width:250px;column-gap:10px;}
-.on_gadgets .card_wrap .card{margin:10px 1%;;position:relative;border-radius:10px;background: #fff; overflow: hidden;display:inline-block;}
+.on_gadgets .card_wrap .card{margin:10px 1%;;position:relative;background: #fff; overflow: hidden;display:inline-block;}
 .on_gadgets .card_wrap .card, 
-.on_gadgets .card-nav ul{box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);}
+.on_gadgets .card-nav ul{border-bottom:1px solid #ccc;}
 .on_gadgets .card_wrap .card-header,
-.on_gadgets .card_wrap .card-body{position:relative;padding:5px;text-align:center;}
-.on_gadgets .card_wrap .card-body h4{margin-top:15px;}
-.on_gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#3d3d3d;border-bottom:1px solid #ddd;}
-.on_gadgets .card_wrap .card-body p{margin:10px 0;}
+.on_gadgets .card_wrap .card-body{position:relative;padding:5px;}
+.on_gadgets .card_wrap .card-body h4{margin-top:15px;line-height:1.2;font-family: 'Montserrat', sans-serif;}
+.on_gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#616161;}
+.on_gadgets .card_wrap .card-body p{margin:10px 0;font-weight:300;color:#616161;}
 .on_gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}
 .on_gadgets .card_wrap .card-body .btn>em{float:left;font-size:17px;background:#000;color:#fff;padding:3px 20px;border:1px solid #000;line-height:20px;}
 .on_gadgets .card_wrap .card-body .btn>a{float:left;text-decoration:none;color:#000;font-size:20px;border:1px solid #000;padding:3px 20px;line-height:20px;}

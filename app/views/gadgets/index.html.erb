@@ -39,7 +39,7 @@
             
               <div class="current_category">
                 <% if params[:category].present? %>
-                  <p><%= params[:category] %></h2>
+                  <p><%= params[:category] %></p>
                 <% else %>
                   <p>all gadgets</p>
                 <% end %>
@@ -60,7 +60,7 @@
 
                      
                       <h4><a target="_blank" href="<%= gadget.gg_url %>"><%= gadget.gg_title %></a></h4>
-                      <!-- <p><%= gadget.gg_intro %></p> -->
+                      <p><%= gadget.gg_intro %></p>
                       <div class="btn clearfix">
                         <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
                       </div>

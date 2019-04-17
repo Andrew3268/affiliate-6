@@ -1,5 +1,6 @@
 /*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
 h1,h2,h3,h4,h5,h6,p,ul,li,address,form,fieldset,legend,input,button,dl,dt,dd,table,thead,tbody,tfoot,tr,th,td{margin:0;padding:0;font-family:inherit;}
 /*기본여백 삭제, font-family:inherit;는 특정 태그는 body에서 지정한 서체를 상속받지 못함. 그래서 강제로 상속받도록 지정  */
 a img{border:0;}/* a태그로 감싼 이미지의 파란 테두리 삭제 (ie9-10) */
@@ -51,8 +52,8 @@ header .gnb_pc>ul>li:nth-child(3){width:200px;}
 header .gnb_pc>ul>li>a{font-size:60px;text-decoration:none;color:#000;line-height:60px;display:inline-block;font-weight:600;}
 header .gnb_pc>ul>li>a>em{display:block;font-size:17px;text-align:right;line-height:1;}
 header .gnb_pc>ul.sub_index_02>li>a>em{display:inline-block;font-size:17px;text-align:right;line-height:1;} /* for index_02 */
-header .gnb_pc>ul>li>a.active{background:rgba(255,0,0,0.2);}
-header .gnb_pc>ul>li>a:hover{background:rgba(255,0,0,0.2);}
+header .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
+header .gnb_pc>ul>li>a:hover{background:rgba(26,26,255,0.2);padding:0 10px;}
 header .gnb_pc .search{display:none;}
 header .gnb_m,header .gnb_open2{display:none;}
 
@@ -68,7 +69,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   header.on .gnb_pc>ul>li{float:left;width:150px;font-weight:400;text-align:center;}
   header.on .gnb_pc>ul>li:nth-child(3){width:190px;}
   header.on .gnb_pc>ul>li>a{font-size:20px;line-height:50px;}
-  header.on .gnb_pc>ul>li>a.active{background:rgba(255,0,0,0.2);padding:0 10px;}
+  header.on .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
   header.on .gnb_pc>ul>li>a>em{display:inline-block;}
   header.on .gnb_pc>ul>li>a>span{display:none;}
 }
@@ -187,9 +188,9 @@ header .gnb_m,header .gnb_open2{display:none;}
 /* Common Layout */
 .common_layout{margin:30px 0 0 0;}
 .common_layout .lt_cnt{float:left;width:290px;margin-right:2%;}
-.common_layout .lt_cnt h2{border-bottom:2px solid #000;padding-bottom:3px;margin-bottom:10px;}
+.common_layout .lt_cnt h2{color:#616161;border-bottom:2px solid #616161;padding-bottom:3px;margin-bottom:10px;font-family: 'Montserrat', sans-serif;}
 .common_layout .rt_cnt{float:left;width:73%;}
-.common_layout .rt_cnt h2{border-bottom:2px solid #000;padding-bottom:3px;margin-bottom:10px;}
+.common_layout .rt_cnt h2{color:#616161;border-bottom:2px solid #616161;padding-bottom:3px;margin-bottom:10px;font-family: 'Montserrat', sans-serif;}
 .common_layout .lt_cnt .note{margin-bottom:20px;padding:0 17px;}
 .common_layout .lt_cnt .note p{font-size:13px;color:#3d3d3d;}
 .common_layout .lt_cnt .note>ul>li{list-style:circle;font-size:13px;color:#3d3d3d;padding:5px 0;}

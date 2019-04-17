@@ -29,16 +29,20 @@
                   </div>
                 <% end %>
 
-                <h4><a target="_blank" href="<%= gadget.gg_url %>"><%= gadget.gg_title %></a></h4>
-                
-                <div class="btn clearfix">
-                  <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
-                </div>
-                <% if can? :update, gadget %>
-                  <div class="btn clearfix admin">
-                    <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
-                  </div>   
+                <% if gadget.gg_title.present? %>
+                  <span><%= gadget.gg_from %></span>
+                  <h4><a target="_blank" href="<%= gadget.gg_url %>"><%= gadget.gg_title %></a></h4>
+                  <p><%= gadget.gg_intro %></p>
+                  <div class="btn clearfix">
+                    <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
+                  </div>
                 <% end %>
+                  <% if can? :update, gadget %>
+                    <div class="btn clearfix admin">
+                      <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
+                    </div>   
+                  <% end %>
+
 
                 <!-- <script type="text/javascript">
                 amzn_assoc_placement = "adunit0";
