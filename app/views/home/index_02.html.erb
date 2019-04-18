@@ -72,6 +72,11 @@
         <%= will_paginate @gadgets %>
     </div><!--./wrap-->
   </div><!--./gadgets-->
+  <% if can? :update, @gadget %>
+    <div class="add_gadget">
+      <a href="/gadgets/new"><img src="<%=asset_path 'add.png' %>"></a>
+    </div>
+  <% end %>
 </div><!--./layout-->
 
      

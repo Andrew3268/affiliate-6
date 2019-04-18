@@ -1,14 +1,14 @@
 .gadgets{margin:270px 0;}
 /*.index_gad{margin:30px 0;}*/
 .gadgets .card_wrap{column-width:300px;column-gap:10px;}
-.gadgets .card_wrap .card{margin:20px 1%;;position: relative;background: #fff; overflow: hidden;display:inline-block;}
+.gadgets .card_wrap .card{margin:20px 4%;;position: relative;background: #fff; overflow: hidden;display:inline-block;}
 .gadgets .card_wrap .card, 
 .gadgets .card-nav ul{/*box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);*//*border-radius:10px;*/border-bottom:1px solid #ccc;}
 .gadgets .card_wrap .card-header,
 .gadgets .card_wrap .card-body{position:relative;padding:5px;font-family: 'Montserrat', sans-serif;font-weight:100;}
 .gadgets .card_wrap .card-body span{border-bottom:1px solid #ccc;width:55%;display:block;color:#616161;}
 .gadgets .card_wrap .card-body h4{margin-top:10px;line-height:1.2;font-weight:100;}
-.gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#3d3d3d;font-size:26px;}
+.gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#616161;font-size:26px;}
 .gadgets .card_wrap .card-body p{margin:10px 0;font-weight:300;color:#616161;}
 .gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}
 .gadgets .card_wrap .card-body .btn>em{float:left;font-size:17px;background:#000;color:#fff;padding:3px 20px;border:1px solid #000;line-height:20px;}
@@ -21,6 +21,9 @@
 .gadgets .card_wrap .start{position:absolute;top:-45px;right:20px;}
 .gadgets .card_wrap .start img{width:30px;}
 
+.add_gadget{position:fixed;right:10px;bottom:20px;}
+.add_gadget img{width:80px;}
+
 @media screen and (max-width:640px){
   .gadgets{margin:80px 0;}
   .gadgets .card_wrap .card-body .admin{margin-top:-10px;}
@@ -29,6 +32,7 @@
   .gadgets .card_wrap .card-body h4{margin:15px 0;}
   .gadgets .card_wrap .card-body .pinterest{display:none;}
   .gadgets .card_wrap .start{top:-45px;}
+  .add_gadget img{width:40px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
@@ -36,7 +40,8 @@
   .gadgets .card_wrap .card-header{padding:5px;}
   .gadgets .card_wrap .card-body{padding:10px;}
   .gadgets .card_wrap .card-body h4{margin:15px 0;}
-  .gadgets .card_wrap .start{top:-45px;}
+  .gadgets .card_wrap .start{top:-45px;} 
+  .add_gadget img{width:60px;} 
 }
 
 
