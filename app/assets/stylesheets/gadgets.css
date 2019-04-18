@@ -59,8 +59,8 @@
 .on_gadgets .card_wrap .card, 
 .on_gadgets .card-nav ul{border-bottom:1px solid #ccc;}
 .on_gadgets .card_wrap .card-header,
-.on_gadgets .card_wrap .card-body{position:relative;padding:5px;}
-.on_gadgets .card_wrap .card-body h4{margin-top:15px;line-height:1.2;font-family: 'Montserrat', sans-serif;}
+.on_gadgets .card_wrap .card-body{position:relative;padding:5px;font-family: 'Montserrat', sans-serif;font-weight:100;}
+.on_gadgets .card_wrap .card-body h4{margin-top:15px;line-height:1.2;font-weight:100;}
 .on_gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#616161;}
 .on_gadgets .card_wrap .card-body p{margin:10px 0;font-weight:300;color:#616161;}
 .on_gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
 .gadgets{margin:270px 0;}
 /*.index_gad{margin:30px 0;}*/
 .gadgets .card_wrap{column-width:300px;column-gap:10px;}
@@ -6,9 +5,9 @@
 .gadgets .card_wrap .card, 
 .gadgets .card-nav ul{/*box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);*//*border-radius:10px;*/border-bottom:1px solid #ccc;}
 .gadgets .card_wrap .card-header,
-.gadgets .card_wrap .card-body{position:relative;padding:5px;}
+.gadgets .card_wrap .card-body{position:relative;padding:5px;font-family: 'Montserrat', sans-serif;font-weight:100;}
 .gadgets .card_wrap .card-body span{border-bottom:1px solid #ccc;width:55%;display:block;color:#616161;}
-.gadgets .card_wrap .card-body h4{margin-top:10px;line-height:1.2;font-family: 'Montserrat', sans-serif;}
+.gadgets .card_wrap .card-body h4{margin-top:10px;line-height:1.2;font-weight:100;}
 .gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#3d3d3d;font-size:26px;}
 .gadgets .card_wrap .card-body p{margin:10px 0;font-weight:300;color:#616161;}
 .gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}
