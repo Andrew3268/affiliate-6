@@ -14,6 +14,7 @@
 .gadgets_wrapper main .gnb_open_b,
 .gadgets_wrapper main .gnb_close{display:none;}
 
+
 @media screen and (max-width:680px){
   .gadgets_wrapper main #filter .ui-group label{}
   .gadgets_wrapper{margin-top:60px;}
@@ -72,6 +73,8 @@
 .on_gadgets .card_wrap .card-header{height:208px;padding:0;overflow:hidden;}
 .on_gadgets .card_wrap .start{position:absolute;top:-45px;right:15px;}
 .on_gadgets .card_wrap .start img{width:30px;}
+.on_gadgets .card_wrap .card-body .admin{margin-top:-15px;}
+.on_gadgets .card_wrap .card-body .admin>em>a{text-decoration:none;color:#fff;}
 
 @media screen and (max-width:680px){
   .on_gadgets{margin:0;width:100%;}
