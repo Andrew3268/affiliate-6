@@ -48,7 +48,7 @@
                 <% @gadgets.each do |gadget| %>
                   <div class="card with-photo">
                     <div class="card-header">
-                     <a target="_blank" href="<%= gadget.gg_url %>"><img src="<%= gadget.gg_img %>" alt=""></a>
+                     <a target="_blank" href="<%= gadget.gg_url %>"><img src="<%= gadget.gg_img %>" alt="<%= gadget.gg_title %>"></a>
                     </div>
                     
                     <section class="card-body">
