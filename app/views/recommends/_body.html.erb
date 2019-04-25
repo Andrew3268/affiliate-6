@@ -11,6 +11,11 @@
         <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
       </div>    
     <% end %>
+    <% if can? :update, recommend %>
+      <div class="pinterest">
+       <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+      </div>
+    <% end %>   
   </div>
 <% end %>
 
