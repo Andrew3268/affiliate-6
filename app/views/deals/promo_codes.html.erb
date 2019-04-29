@@ -1,80 +1,77 @@
 <div class="layout"><!--layout-->
     
-    <%= render 'shared/header' %>
-    <%= render 'deals/header' %>    
-    
-    <div class="codes common_layout">
-      <div class="wrap">
-        <div class="lt_cnt">
-          <h2>Promotion Codes</h2>
-          
-         <div class="toggle">
-            <ul>
-              <li>
-                <a href="#n">NOTES</a>
-                <ul>
-                  <li>Deals & pricing may change or expire at anytime.</li>
-                  <li>Some of promotion codes can expire fast.</li>
-                  <li>Free Shipping: Prime or $35+ of all other eligible items.<a href="/blog/blog_01">(What's PRIME?)</a></li>
-                  <li>Oh,igottabuythis is a participant in the Amazon Services LLC Associates Program & the Amazon EU Associates Programme, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com, Amazon.ca, Amazon.co.uk and affiliated sites.</li>
-                  <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
-                </ul>
-              </li>
-              <li>
-                <a href="#n">HOW TO USE</a>
-                <ul>
-                  <li>Click "Copy & Use code"</li>
-                  <li>Click "Buy Now or Add to Cart"</li>
-                  <li>Proceed with payment then the code is automatically applied.</li>
-                </ul>
-              </li>
-              <li>
-                <a href="#n">LAST 7 DAYS CODES LIST</a>
-                <ul>
-                  <%= render 'shared/promocodes_days' %>
-                </ul>
-              </li>
-            </ul>
-          </div><!--./toggle-->
-          
-          
-          <div class="lt_sort_box clearfix">
-            <ul class="clearfix">
-              <li><a href="/deals/promo_codes" class="pure-button">All</a></li>
-              <li><a href="#" class="pure-button sort1">Price High</a></li>
-              <li><a href="#" class="pure-button sort2">Price Low</a></li>
-              <li><a href="#" class="pure-button sort3">Sale High</a></li>
-              <li><a href="#" class="pure-button sort4">Sale Low</a></li>
-            </ul>
-          </div>
-
-         
-        </div><!--./lt_cnt-->
+  <%= render 'shared/header' %>
+  <%= render 'deals/header' %>    
+  
+  <div class="codes common_layout">
+    <div class="wrap">
+      <div class="lt_cnt">
+        <h2>Promotion Codes</h2>
         
-        <div class="rt_cnt">
-          <h2>Promo Codes on Amazon Apr 2019</h2>
-          
-          <div class="sort_box clearfix">
-            <ul>
-              <li><a href="/deals/promo_codes" class="pure-button">All</a></li>
-              <li><a href="#" class="pure-button sort1">Price High</a></li>
-              <li><a href="#" class="pure-button sort2">Price Low</a></li>
-              <li><a href="#" class="pure-button sort3">Sale High</a></li>
-              <li><a href="#" class="pure-button sort4">Sale Low</a></li>
-            </ul>
-          </div>
-          
-         
-          <div class="card_wrap sort-list">
-            <%= render 'deals/body_promocode' %>
-          </div>
-          
-        </div><!--./rt_cnt-->    
+       <div class="toggle">
+          <ul>
+            <li>
+              <a href="#n">NOTES</a>
+              <ul>
+                <li>Deals & pricing may change or expire at anytime.</li>
+                <li>Some of promotion codes can expire fast.</li>
+                <li>Free Shipping: Prime or $35+ of all other eligible items.<a href="/blog/blog_01">(What's PRIME?)</a></li>
+                <li>Oh,igottabuythis is a participant in the Amazon Services LLC Associates Program & the Amazon EU Associates Programme, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com, Amazon.ca, Amazon.co.uk and affiliated sites.</li>
+                <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#n">HOW TO USE</a>
+              <ul>
+                <li>Click "Copy & Use code"</li>
+                <li>Click "Buy Now or Add to Cart"</li>
+                <li>Proceed with payment then the code is automatically applied.</li>
+              </ul>
+            </li>
+            <li>
+              <a href="#n">LAST 7 DAYS CODES LIST</a>
+              <ul>
+                <%= render 'shared/promocodes_days' %>
+              </ul>
+            </li>
+          </ul>
+        </div><!--./toggle-->
+        
+        <div class="lt_sort_box clearfix">
+          <ul class="clearfix">
+            <li><a href="/deals/promo_codes" class="pure-button">All</a></li>
+            <li><a href="#" class="pure-button sort1">Price High</a></li>
+            <li><a href="#" class="pure-button sort2">Price Low</a></li>
+            <li><a href="#" class="pure-button sort3">Sale High</a></li>
+            <li><a href="#" class="pure-button sort4">Sale Low</a></li>
+          </ul>
+        </div>
+       
+      </div><!--./lt_cnt-->
+      
+      <div class="rt_cnt">
+        <h2>Promo Codes on Amazon Apr 2019</h2>
+        
+        <div class="sort_box clearfix">
+          <ul>
+            <li><a href="/deals/promo_codes" class="pure-button">All</a></li>
+            <li><a href="#" class="pure-button sort1">Price High</a></li>
+            <li><a href="#" class="pure-button sort2">Price Low</a></li>
+            <li><a href="#" class="pure-button sort3">Sale High</a></li>
+            <li><a href="#" class="pure-button sort4">Sale Low</a></li>
+          </ul>
+        </div>
+        
+        <div class="card_wrap sort-list">
+          <%= render 'deals/body_promocode' %>
+        </div>
+        
+      </div><!--./rt_cnt-->    
 
-      </div><!--./warp-->
-    </div><!--./codes-->
-    <button id='goup'><img src="<%=asset_path 'goup.png' %>"></button>
-  </div><!--./layout-->
+    </div><!--./warp-->
+  </div><!--./codes-->
+  <button id='goup'><img src="<%=asset_path 'goup.png' %>"></button>
+</div><!--./layout-->
 <script>
  <%= render(:partial => 'codes', :handlers => [:erb], :formats => [:js]) %>
 </script>
