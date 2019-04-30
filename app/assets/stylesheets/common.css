@@ -109,7 +109,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   header .visual{}
   header .visual img{width:85%;}
   header .gnb_pc>ul{float:right;margin-top:0px;}
-  header .gnb_pc>ul>li{float:left;width:160px;text-align:center;}
+  header .gnb_pc>ul>li{float:left;width:175px;text-align:center;}
   header .gnb_pc>ul>li:nth-child(3){width:110px;}
   header .gnb_pc>ul>li>a{font-size:30px;line-height:1;}
   header.on{border-bottom:1px solid #ccc;height:60px;}
@@ -166,10 +166,10 @@ header .gnb_m,header .gnb_open2{display:none;}
   .sub_nav .sub_nav_pc{display:none;}
 
   .sub_nav .gnb_m{display:block;background:#000;position:fixed;right:-800px;top:0;width:60%;z-index:303;}
-  .sub_nav .gnb_m>ul{margin:50px 0 0 5%;}
+  .sub_nav .gnb_m>ul{margin:10px 0 0 5%;}
   .sub_nav .gnb_m>ul>li{border-right:none;float:none;}
-  .sub_nav .gnb_m>ul>li>a{text-decoration:none;font-size:40px;font-weight:600;line-height:1.3;text-align:left;color:#fff;display:block;}
-  .sub_nav .gnb_m>ul>li>a.active{color:#fff;font-weight:500;/*border-bottom:2px solid #fff;*/}
+  .sub_nav .gnb_m>ul>li>a{text-decoration:none;font-size:45px;line-height:1.1;font-family: 'Anton', sans-serif;;text-align:left;color:#fff;display:block;}
+  /*.sub_nav .gnb_m>ul>li>a.active{color:#fff;font-weight:500;/*border-bottom:2px solid #fff;*/}*/
   .sub_nav .gnb_m>ul>li>a>em{font-size:17px;}
   .sub_nav .gnb_m>ul>li>ul{margin-left:30px;}
   .sub_nav .gnb_m>ul>li>ul>li{}

@@ -3,10 +3,10 @@
 .gadgets_wrapper main #filter{float:left;width:290px;background:#fff;border-right:1px solid #ccc;}
 .gadgets_wrapper main #filter.on{position:fixed;top:100px;}
 .gadgets_wrapper main #filter .ui-group{}
-.gadgets_wrapper main #filter .ui-group label{font-family: 'Montserrat', sans-serif;font-size:30px;border-bottom:1px solid #ccc;padding-bottom:3px;margin-bottom:20px;display:block;width:80%;}
-.gadgets_wrapper main #filter .ui-group ul{padding:0 10px;}
+.gadgets_wrapper main #filter .ui-group label{font-family: 'Anton', sans-serif;font-size:50px;border-bottom:1px solid #ccc;padding-bottom:3px;margin-bottom:20px;display:block;width:60%;}
+.gadgets_wrapper main #filter .ui-group ul{}
 .gadgets_wrapper main #filter .ui-group ul li{}
-.gadgets_wrapper main #filter .ui-group ul li a{font-family: 'Montserrat', sans-serif;margin-top:15px;cursor:pointer;display:block;text-decoration:none;color:#3d3d3d;}
+.gadgets_wrapper main #filter .ui-group ul li a{font-size:45px;font-family: 'Anton', sans-serif;line-height:1.1;cursor:pointer;display:block;text-decoration:none;color:#000;}
 .gadgets_wrapper main #filter .ui-group ul li a.active{background:#000;color:#fff;}
 .gadgets_wrapper main #filter .ui-group input{display:none;}
 .gadgets_wrapper main #filter .color_group{margin-top:20px;}
@@ -35,7 +35,7 @@
   .gadgets_wrapper{margin-top:180px;}
   .gadgets_wrapper main #filter{position:fixed;right:-800px;top:0;width:50%;z-index:302;}
   .gadgets_wrapper main #filter.on{top:0;}
-  .gadgets_wrapper main #filter .ui-group{padding:30px;}
+  .gadgets_wrapper main #filter .ui-group{margin:10px 0 0 5%;}
   .gadgets_wrapper main #filter .color_group{margin-top:0;}
   .gadgets_wrapper main #filter .ui-group .control label,
   .gadgets_wrapper main #filter .color_group .color-circle{font-size:17px;}
