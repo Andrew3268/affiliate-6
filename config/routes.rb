@@ -31,6 +31,7 @@ Rails.application.routes.draw do
   
   get 'blogs/index'
   get 'blogs/blog_01'
+  get 'blogs/blog_02'
 
   get 'promocodes_days/day_01'
   get 'promocodes_days/day_02'
