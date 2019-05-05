@@ -9,6 +9,7 @@ gem 'figaro'
 gem 'cancancan', '~> 2.3'
 gem 'rolify', '~> 5.2'
 gem 'will_paginate', '~> 3.1', '>= 3.1.7'
+gem 'haml', '~> 5.0', '>= 5.0.4'
 # group :production do
 #   gem 'mysql2'
 # end
