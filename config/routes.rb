@@ -5,9 +5,6 @@ Rails.application.routes.draw do
   get 'deals/quick_search'
   get 'deals/promotions'
   get 'deals/codes'
-  
-  # get ':controller(/:action(/:id))'
-  # post ':controller(/:action(/:id))'
 
   devise_for :users
   resources :gadgets
