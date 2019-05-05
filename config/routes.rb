@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   get 'promocodes_days/day_06'
   get 'promocodes_days/day_07'
 
-  get '/sitemap' => 'sitemaps#index'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -94,5 +94,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  
+  get '/sitemap' => 'sitemap#index',defaults: {format: "xml"}
 end
