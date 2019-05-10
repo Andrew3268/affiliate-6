@@ -11,7 +11,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
-
   </head>
   <body>
 
@@ -218,28 +217,6 @@
     <div id="amzn-assoc-ad-9964b306-5e55-4810-adb9-cb2e4b817f96"></div><script async src="//z-na.amazon-adsystem.com/widgets/onejs?MarketPlace=US&adInstanceId=9964b306-5e55-4810-adb9-cb2e4b817f96"></script>
   </footer>
 
-  <script>
-    // .open_modal results in overlay opening
-    $(".open_modal").on("click", function(){
-      // apply modal active class
-      $(".modal_overlay").addClass("modal_active");
-      // stop body scroll whlist modal open
-      $("body").addClass("noscroll");
-      // animate the overlay content
-      $(".modal_overlay .content").addClass("active_animation");
-    });
-    
-    // remove modal active
-    $(".close_modal").on("click", function(){
-      // remove the overlay class
-      $(".modal_overlay").removeClass("modal_active");
-      // allow body scroll
-      $("body").removeClass("noscroll");
-      // remove animation
-      $(".modal_overlay .content").removeClass("active_animation");
-    });
-
-  </script>
 
   </body>
 </html>
