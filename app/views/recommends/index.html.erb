@@ -38,9 +38,9 @@
               <li><button class="filter-button btn btn-md btn-primary" data-filter="*">All Featured</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="gadgets">Gadgets</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
-              <li><button class="filter-button btn btn-md" data-filter="home&kitchen">Home&Kitchen</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="fashion">Fashion</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="travel">Travel</button></li>
+              <li><button class="filter-button btn btn-md" data-filter="home&kitchen">Home&Kitchen</button></li>
               <% if can? :update, @recommends %>
                 <li><%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %></li>
                 <li><a class="filter-button" href="/categories/">Manage Categories</a></li>
@@ -59,9 +59,9 @@
               <li><button class="filter-button btn btn-md btn-primary" data-filter="*">All Featured</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="gadgets">Gadgets</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
-              <li><button class="filter-button btn btn-md" data-filter="home&kitchen">Home&Kitchen</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="fashion">Fashion</button></li>
               <li><button class="filter-button btn btn-md white-text" data-filter="travel">Travel</button></li>
+              <li><button class="filter-button btn btn-md" data-filter="home&kitchen">Home&Kitchen</button></li>
               <% if can? :update, @recommends %>
                 <li><%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %></li>
                 <li><a class="filter-button" href="/categories/">Manage Categories</a></li>

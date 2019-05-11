@@ -5,7 +5,7 @@
       <ul>
         <li>Deals & pricing may change or expire at anytime.</li>
         <li>Some of promotion codes can expire fast.</li>
-        <li>Free Shipping: Prime or $35+ of all other eligible items.<a href="/blogs/blog_01">(What's PRIME?)</a></li>
+        <li>Free Shipping: Prime or $25+ of all other eligible items.<a target="_blank" href="/blogs/blog_01">(What's PRIME?)</a></li>
         <li>Oh,igottabuythis is a participant in the Amazon Services LLC Associates Program & the Amazon EU Associates Programme, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com, Amazon.ca, Amazon.co.uk and affiliated sites.</li>
         <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
       </ul>
@@ -17,17 +17,23 @@
         <li>Click "Use Code"</li>
         <li>Click "Buy Now or Add to Cart"</li>
         <li>Enter your promotional code into the box of "Gift cards & promotional codes"</li>
+        <!-- <li>Proceed with payment then the code is automatically applied.</li> -->
       </ul>
     </li>
-    <li>
+    <li class="last7days">
       <a href="#n">LAST 7 DAYS CODES LIST</a>
       <ul>
         <%= render 'shared/promocodes_days' %>
       </ul>
     </li>
   </ul>
-
 </div><!--./toggle-->
+<div class="last7days_pc">
+  <p>LAST 7 DAYS CODES LIST</p>
+  <ul>
+    <%= render 'shared/promocodes_days' %>
+  </ul>
+</div>
 <div class="today_code">
  <a href="/deals/promo_codes">Today's PromoCodes</a>
 </div>
