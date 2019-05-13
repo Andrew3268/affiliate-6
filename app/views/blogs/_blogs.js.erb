@@ -1,0 +1,12 @@
+$(document).ready(function(){
+$(".page1").hide();
+$(".tab-menu-wp ul li:first").addClass("active");
+$(".page1:first").fadeIn();
+$(".tab-menu-wp ul li").click(function(){
+    var index = $(this).index();
+    $(".page1").hide();
+    $(".tab-menu-wp ul li").removeClass("active");
+  $(".tab-menu-wp ul li:eq("+index+")").addClass("active");
+    $(".page1:eq("+index+")").fadeIn();
+  });
+});
