@@ -1,0 +1,15 @@
+<h2>Latest Gadgets</h2>
+<% @gadgets.each do |gadget| %>
+  <div class="gadget_blog clearfix">
+    <a target="_blank" href="<%= gadget.gg_url %>"><img src="<%= gadget.gg_img %>" alt="<%= gadget.gg_title %>"></a>
+  </div>
+<% end %>
+
+<h2>Latest Featured</h2>
+<% @recommends.each do |recommend| %>
+  <div class="inner clearfix">
+    <%= link_to (image_tag recommend.re_image), recommend %>
+    <em><%= recommend.re_filter %></em>
+    <h3><%= link_to recommend.re_title, recommend %></h3>
+  </div>
+<% end %>

@@ -7,7 +7,7 @@
 
         <div class="blog_tit">
           <h2><span>How to sign up & cancel "Amazon Prime free 30-day trial"</span></h2>
-          <address>May. 12. 2019.</address><em>Oh,i gotta buy this</em>
+          <address>May. 12. 2019.</address><em>by Oh,i gotta buy this</em>
           <p>Do you have account of Amazon? If you have it, you could upgrade to Amazon Prime and it's as easy as signing up your account in the first place. But if you’re new to Amazon, don’t worry, just follow the step-by-step instructions below.</p>
           <div class="inner_btn">
             <a target="_blank" href="https://amzn.to/2YcWjd1">Try free 30-day trial</a>
@@ -143,14 +143,7 @@
       </div><!--./blog_body-->
 
       <div class="blog_side">
-        <h2>Latest Featured</h2>
-        <% @recommends.each do |recommend| %>
-          <div class="inner">
-            <%= link_to (image_tag recommend.re_image), recommend %>
-            <em><%= recommend.re_filter %></em>
-            <h3><%= link_to recommend.re_title, recommend %></h3>
-          </div>
-        <% end %>
+        <%= render 'blogs/sidebar' %>
       </div>
 
    </div><!--./warp-->
