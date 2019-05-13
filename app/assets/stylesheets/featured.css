@@ -126,7 +126,7 @@
 .cu_wrap .detitle .trial{}
 .cu_wrap .detitle .trial a{background:#08f;color:#fff;padding:10px;}
 .cu_wrap .detitle .admin a{text-decoration:none;color:#3d3d3d;margin-left:15px;}
-.cu_wrap .cu_box{margin:50px 0;border-bottom:1px solid #ccc;padding-bottom:50px;}
+.cu_wrap .cu_box{margin:50px 0;/*border-bottom:1px solid #ccc;padding-bottom:50px;*/}
 .cu_wrap .num{float:left;width:200px;text-align:center;}
 .cu_wrap .num>p{font-size:100px;border-bottom:1px solid #3d3d3d;display:inline-block;line-height:1;}
 .cu_wrap .pic{float:left;width:450px;height:300px;margin-right:40px;position:relative;}
