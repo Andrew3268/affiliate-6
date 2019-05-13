@@ -394,8 +394,10 @@
 .blogs .blog_side .inner{font-family: 'Montserrat', sans-serif;margin-bottom:35px;}
 .blogs .blog_side .inner em{display:block;border-bottom:1px solid #ccc;width:50%;}
 .blogs .blog_side .inner a{text-decoration:none;color:#616161;display:block;}
-.blogs .blog_side .gadget_blog{float:left;width:48%;margin:0 1%;}
-.blogs .blog_side .gadget_blog img{width:100%;height:150px;object-fit:cover;margin-bottom:30px;}
+.blogs .blog_side .bg_wrap,
+.blogs .blog_side .bf_wrap{margin-bottom:20px;border-bottom:1px solid #ccc;padding-bottom:20px;}
+.blogs .blog_side .gadget_blog{float:left;width:48%;margin:0.5% 1%;}
+.blogs .blog_side .gadget_blog img{width:100%;height:150px;object-fit:cover;}
 
 @media screen and (max-width:640px){
   .blogs{margin-top:60px;}
