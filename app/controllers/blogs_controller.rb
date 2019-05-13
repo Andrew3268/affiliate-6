@@ -16,7 +16,7 @@ class BlogsController < ApplicationController
   private
 
   def find_blog
-    @gadgets = Gadget.all.order("created_at DESC").limit(2)
+    @gadgets = Gadget.all.order("created_at DESC").limit(10)
     @recommends = Recommend.all.order("created_at DESC").limit(3)
   end
 end
