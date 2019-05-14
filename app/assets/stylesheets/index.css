@@ -6,7 +6,8 @@
 .gadgets .card-nav ul{/*box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);*//*border-radius:10px;*/border-bottom:1px solid #ccc;}
 .gadgets .card_wrap .card-header,
 .gadgets .card_wrap .card-body{position:relative;padding:5px;font-family: 'Montserrat', sans-serif;font-weight:100;}
-.gadgets .card_wrap .card-body span{border-bottom:1px solid #ccc;width:55%;display:block;color:#616161;}
+.gadgets .card_wrap .card-body span{border-bottom:1px solid #ccc;width:55%;display:inline;color:#616161;text-transform:uppercase;}
+.gadgets .card_wrap .card-body .to_featured{float:right;margin-right:1%;text-decoration:none;color:#616161;}
 .gadgets .card_wrap .card-body h4{margin-top:10px;line-height:1.2;font-weight:100;}
 .gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#616161;font-size:26px;}
 .gadgets .card_wrap .card-body p{margin:10px 0;font-weight:300;color:#616161;}
@@ -20,6 +21,8 @@
 .gadgets .card_wrap .card-header{height:208px;padding:0;overflow:hidden;}
 .gadgets .card_wrap .start{position:absolute;top:-45px;right:20px;}
 .gadgets .card_wrap .start img{width:30px;}
+.gadgets .card_wrap .crowdfunding{position:absolute;top:-45px;left:10px;}
+.gadgets .card_wrap .crowdfunding p{color:#fff;background:#87c442;padding:0 5px;border-radius:7px;}
 
 .add_gadget{position:fixed;right:10px;bottom:20px;}
 .add_gadget img{width:80px;}

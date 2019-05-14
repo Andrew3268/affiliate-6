@@ -1,7 +1,35 @@
 <div id="page-wrapper">
  <%= render 'shared/header' %>
  <div class="gadget_form">
-  <%= render 'form' %>
+  <div class="layout"><!--layout-->
+    <div class="wrap">
+      <%= simple_form_for @gadget do |f| %>
+
+       <div class="form_border">
+         <div class="form_select">
+          <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a category" } %>
+          <%= f.select :gg_option_01, ([["NONE", ""], "Crowdfunding"])%>
+         </div>
+
+         <div class="form_input">
+          <%= f.input :gg_from, label: 'Source' %>
+          <%= f.input :gg_title, label: 'Title' %>
+          <%= f.input :gg_intro, label: 'Intro' %>
+          <%= f.input :gg_img, label: 'Image URL' %>
+          <%= f.input :gg_url, label: 'Product URL' %>
+          <%= f.input :gg_aprice, label: 'Current Price' %>
+          <%= f.input :gg_option_02, label: 'Discover More' %>
+          <%= f.input :gg_youtube01, label: 'Youtube First' %>
+         </div>
+            
+         <div class="form_btn">
+          <%= f.button :submit %>
+         </div>
+         
+        </div>
+      <% end %>
+    </div>
+  </div>
+
  </div>
- 
 </div>
