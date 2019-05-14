@@ -8,7 +8,7 @@
        <div class="form_border">
          <div class="form_select">
           <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a category" } %>
-          <%= f.select :gg_option_01, ([["NONE", ""], "Crowdfunding"])%>
+          <%= f.select :gg_option_01, ([["Crowdfunding", ""], "YES"])%>
          </div>
 
          <div class="form_input">
