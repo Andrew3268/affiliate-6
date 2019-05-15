@@ -7,7 +7,7 @@
 .gadgets .card_wrap .card-header,
 .gadgets .card_wrap .card-body{position:relative;padding:5px;font-family: 'Montserrat', sans-serif;font-weight:100;}
 .gadgets .card_wrap .card-body span{border-bottom:1px solid #ccc;width:55%;display:inline;color:#616161;text-transform:uppercase;}
-.gadgets .card_wrap .card-body .to_featured{float:right;margin-right:1%;text-decoration:none;color:#616161;}
+.gadgets .card_wrap .card-body .to_featured{float:right;margin-right:1%;text-decoration:none;color:#fff;background:#ff4d4d;border-radius:10px;padding:0 10px;}
 .gadgets .card_wrap .card-body h4{margin-top:10px;line-height:1.2;font-weight:100;}
 .gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#616161;font-size:26px;}
 .gadgets .card_wrap .card-body p{margin:10px 0;font-weight:300;color:#616161;}
