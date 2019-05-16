@@ -14,14 +14,9 @@ class Gadget < ActiveRecord::Base
        impressions.group(:ip_address).size.keys.length #TESTED
    end
 
-   def self.search_by(gadget_search_term)
-    where("LOWER(gg_title) LIKE :gadget_search_term", 
-      gadget_search_term: "%#{gadget_search_term.downcase}%")
-   end
-
-   def self.search_by(gadget_search_term)
-    where("LOWER(gg_intro) LIKE :gadget_search_term", 
-      gadget_search_term: "%#{gadget_search_term.downcase}%")
-   end
+   def self.search_by(search_term)
+    where("LOWER(gg_title) LIKE :search_term OR LOWER(gg_intro) LIKE :search_term", 
+      search_term: "%#{search_term.downcase}%")
+   end 
 
 end
