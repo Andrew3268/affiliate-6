@@ -15,7 +15,7 @@
   .codes .lt_cnt .toggle>ul>li>ul>li>a>span{font-size:13px;}
   .codes .lt_cnt .toggle>ul>.last7days{display:none;}
   .codes .lt_cnt .last7days_pc>p{padding:8px 0;border-bottom:1px solid #3d3d3d;} 
-  .codes .lt_cnt .last7days_pc>ul>li>a{text-decoration:none;color:#08f;display:block;font-size:15px;padding:5px;}
+  .codes .lt_cnt .last7days_pc>ul>li>a{text-decoration:none;color:#fff;display:block;font-size:15px;padding:5px 15px;background:#08f;margin:5px;border-radius:10px;}
   .codes .lt_cnt .toggle>ul>li>ul>.about_db_dis{}
   .codes .lt_cnt .toggle>ul>li>ul>.about_db_dis>.dou_red{background:#ff4d4d;color:#fff;padding:0 10px;border-radius:10px;}
   .codes .lt_cnt .toggle>ul>li>ul>.about_db_dis>.dou_green{background:#87c442;color:#fff;padding:0 10px;border-radius:10px}
@@ -73,10 +73,15 @@
   .codes .lt_cnt .toggle>ul>li{padding:8px 0;border-bottom:1px solid #3d3d3d;background:url(<%=asset_path 'toggle_show_btn.png' %>) top 10px right 10px no-repeat;}
   .codes .lt_cnt .toggle>ul>li.on{border-bottom:1px solid #3d3d3d;background:url(<%=asset_path 'toggle_hide_btn.png' %>) top 12px right 10px no-repeat;}
   .codes .lt_cnt .toggle>ul>li>a{text-decoration:none;color:#000;display:block;}
-  .codes .lt_cnt .toggle>ul>li>ul{display:none;list-style:decimal;padding-left:17px;}
-  .codes .lt_cnt .toggle>ul>li>ul>li{padding:5px 10px;list-style: decimal;}
-  .codes .lt_cnt .toggle>ul>li>ul>li>a{text-decoration:none;color:#08f;display:block;}
+  .codes .lt_cnt .toggle>ul>li>ul{display:none;/*list-style:decimal;*/}
+  /*.codes .lt_cnt .toggle>ul>li>ul>li{list-style:decimal;}*/
+  .codes .lt_cnt .toggle>ul>li>ul>li>a{text-decoration:none;color:#fff;display:block;padding:5px 15px;background:#08f;margin:5px;border-radius:10px;}
   .codes .lt_cnt .last7days_pc{display:none;}
+
+  .codes .lt_cnt .toggle>ul>li>ul>.about_db_dis{}
+  .codes .lt_cnt .toggle>ul>li>ul>.about_db_dis>.dou_red{background:#ff4d4d;color:#fff;padding:0 10px;border-radius:10px;}
+  .codes .lt_cnt .toggle>ul>li>ul>.about_db_dis>.dou_green{background:#87c442;color:#fff;padding:0 10px;border-radius:10px}
+  .codes .lt_cnt .toggle>ul>li>ul>.about_db_dis>em{display:block;padding:0 5px;margin-bottom:10px;}
 
   .codes .lt_cnt .today_code{padding:8px 0;background:#000;margin:5px 0;text-align:center;}
   .codes .lt_cnt .today_code a{text-decoration:none;color:#fff;display:block;}
