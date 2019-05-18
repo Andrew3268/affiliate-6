@@ -16,7 +16,7 @@ class Gadget < ActiveRecord::Base
 
    def self.search_by(search_term)
     where("LOWER(gg_title) LIKE :search_term OR LOWER(gg_intro) LIKE :search_term", 
-      search_term: "%#{search_term.downcase}%")
+    search_term: "%#{search_term.downcase}%")
    end 
 
 end

@@ -64,7 +64,7 @@
 
 .featured .filter-group{column-count:2;column-gap:15px;}
 .featured .filter-group .filter-node{display:inline-block;box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);padding:15px 10px;margin-bottom:20px;}
-.featured .filter-group .filter-node .inner{font-family: 'Montserrat', sans-serif;font-weight:100;}
+.featured .filter-group .filter-node .inner{font-family:'Montserrat', sans-serif;font-weight:100;}
 .featured .filter-group .filter-node .inner a{text-decoration:none;color:#616161;}
 .featured .filter-group .filter-node .inner img{width:100%;margin-bottom:5px;-webkit-filter: grayscale(100%);filter: gray;}
 .featured .filter-group .filter-node .inner img:hover{-webkit-filter: grayscale(0%);filter: none;}

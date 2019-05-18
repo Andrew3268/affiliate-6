@@ -14,11 +14,13 @@
 
     <div class="gadgets">
       <div class="wrap">
-        <!--<%= form_for "",url: gadgets_path, role: "search", method: :get do %>
-          <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
-        <% end %>-->
 
-          
+        <div class="search_box">
+          <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
+          <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
+          <% end %>
+        </div>
+   
         <div class="card_wrap clearfix">
           <% @gadgets.each do |gadget| %>
             <div class="card with-photo">

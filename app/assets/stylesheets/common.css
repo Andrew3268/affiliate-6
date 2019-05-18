@@ -276,5 +276,6 @@ header .gnb_m,header .gnb_open2{display:none;}
 .category_wrap{margin-top:250px;}
 
 
-
-
+/*search*/
+.search_box input{font-size:35px;padding:10px;margin-left:20px;border:none;border-bottom:1px solid #ccc;}
+  
