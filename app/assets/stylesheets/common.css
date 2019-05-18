@@ -111,7 +111,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   header .visual{}
   header .visual img{width:85%;}
   header .gnb_pc>ul{float:right;margin-top:0px;}
-  header .gnb_pc>ul>li{float:left;width:175px;text-align:center;}
+  header .gnb_pc>ul>li{float:left;width:180px;text-align:center;}
   header .gnb_pc>ul>li:nth-child(3){width:110px;}
   header .gnb_pc>ul>li>a{font-size:30px;line-height:1;}
   header.on{border-bottom:1px solid #ccc;height:60px;}
