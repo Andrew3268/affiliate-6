@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'deals/quick_search'
   get 'deals/promotions'
   get 'deals/codes'
+  get 'deals/bestdeals'
 
   devise_for :users
   resources :gadgets
@@ -38,6 +39,14 @@ Rails.application.routes.draw do
   get 'promocodes_days/day_05'
   get 'promocodes_days/day_06'
   get 'promocodes_days/day_07'
+
+  get 'deals_days/day_01'
+  get 'deals_days/day_02'
+  get 'deals_days/day_03'
+  get 'deals_days/day_04'
+  get 'deals_days/day_05'
+  get 'deals_days/day_06'
+  get 'deals_days/day_07'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

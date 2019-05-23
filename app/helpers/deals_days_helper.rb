@@ -1,0 +1,2 @@
+module DealsDaysHelper
+end

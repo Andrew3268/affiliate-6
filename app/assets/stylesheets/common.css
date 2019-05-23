@@ -55,8 +55,8 @@ header .gnb_pc>ul>li:nth-child(3){width:200px;}
 header .gnb_pc>ul>li>a{font-size:60px;text-decoration:none;color:#000;line-height:60px;display:inline-block;font-weight:600;}
 header .gnb_pc>ul>li>a>em{display:block;font-size:17px;text-align:right;line-height:1;}
 header .gnb_pc>ul.sub_index_02>li>a>em{display:inline-block;font-size:17px;text-align:right;line-height:1;} /* for index_02 */
-header .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
-header .gnb_pc>ul>li>a:hover{background:rgba(26,26,255,0.2);padding:0 10px;}
+header .gnb_pc>ul>li>a.active{background:#000;padding:0 10px;color:#fff;}
+header .gnb_pc>ul>li>a:hover{background:#000;padding:0 10px;color:#fff;}
 header .gnb_pc .search{display:none;}
 header .gnb_m,header .gnb_open2{display:none;}
 
@@ -72,9 +72,25 @@ header .gnb_m,header .gnb_open2{display:none;}
   header.on .gnb_pc>ul>li{float:left;width:150px;font-weight:400;text-align:center;}
   header.on .gnb_pc>ul>li:nth-child(3){width:190px;}
   header.on .gnb_pc>ul>li>a{font-size:20px;line-height:50px;}
-  header.on .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
+  header.on .gnb_pc>ul>li>a.active{background:#000;padding:0 10px;color:#fff;}
   header.on .gnb_pc>ul>li>a>em{display:inline-block;}
   header.on .gnb_pc>ul>li>a>span{display:none;}
+}
+
+@media screen and (min-width:680px){
+  .header_short{border-bottom:1px solid #ccc;}
+  .header_short .gnb_pc{margin-top:0;text-align:center}
+  .header_short .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:11px 10px 0 0;}
+
+  .header_short .visual{float:left;margin-top:15px;height:100%;}
+  .header_short .visual img{width:260px;}
+  .header_short .gnb_pc>ul{float:left;margin:0 0 0 0;padding:10px 0;}
+  .header_short .gnb_pc>ul>li{float:left;width:150px;font-weight:400;text-align:center;}
+  .header_short .gnb_pc>ul>li:nth-child(3){width:190px;}
+  .header_short .gnb_pc>ul>li>a{font-size:20px;line-height:50px;}
+  .header_short .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
+  .header_short .gnb_pc>ul>li>a>em{display:inline-block;}
+  .header_short .gnb_pc>ul>li>a>span{display:none;}
 }
 
 @media screen and (max-width:680px){

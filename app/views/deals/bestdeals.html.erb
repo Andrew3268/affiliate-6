@@ -6,7 +6,7 @@
   <div class="codes common_layout">
     <div class="wrap">
       <div class="lt_cnt">
-        <h2>Promotion Codes</h2>
+        <h2>Amazon Best Deals</h2>
         
        <div class="toggle">
           <ul>
@@ -14,42 +14,30 @@
               <a href="#n">NOTES</a>
               <ul>
                 <li>Deals & pricing may change or expire at anytime.</li>
-                <li>Some of promotion codes can expire fast.</li>
                 <li>Free Shipping: Prime or $25+ of all other eligible items.<a target="_blank" href="/blogs/blog_01">(What's PRIME?)</a></li>
                 <li>We have just made your life easier. We offer a quick way to find the best deals. You'll find what you're looking for at a great price.</li>
                 <li>Oh,igottabuythis is a participant in the Amazon Services LLC Associates Program & the Amazon EU Associates Programme, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com, Amazon.ca, Amazon.co.uk and affiliated sites.</li>
                 <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
               </ul>
             </li>
-            <li>
-              <a href="#n">HOW TO USE</a>
+            <!-- <li>
+              <a href="#n">NONE</a>
               <ul>
-                <li>Copy "Promotional Code"</li>
-                <li>Click "Use Code"</li>
-                <li>Click "Buy Now or Add to Cart"</li>
-                <li>Enter your promotional code into the box of "Gift cards & promotional codes"</li>
-                <!-- <li>Proceed with payment then the code is automatically applied.</li> -->
-                <li class="about_db_dis">
-                  <p>What is "Double Discount"</p>
-                  <span class="dou_red">Double Discount</span>
-                  <em>You can get extra discount by applying promotional code to the product that is being discounting.</em>
-                  <span class="dou_green">Double Discount</span>
-                  <em>You can get extra discount by applying promotional code and get additional discount by applying coupon on the detail page of product.</em>
-                </li>
+                <li></li>
               </ul>
-            </li>
-            <li class="last7days">
-              <a href="#n">LAST 7 DAYS CODES LIST</a>
+            </li> -->
+            <li class="last7days bestdeals">
+              <a href="#n">LAST 7 DAYS BEST DEALS</a>
               <ul>
-                <%= render 'shared/promocodes_days' %>
+                <%= render 'shared/bestdeals_days' %>
               </ul>
             </li>
           </ul>
         </div><!--./toggle-->
-        <div class="last7days_pc">
-          <p>LAST 7 DAYS CODES LIST</p>
+        <div class="last7days_pc bestdeals">
+          <p>LAST 7 DAYS BEST DEALS LIST</p>
           <ul>
-            <%= render 'shared/promocodes_days' %>
+            <%= render 'shared/bestdeals_days' %>
           </ul>
         </div>
         
@@ -66,7 +54,7 @@
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
-        <h2>Promotion Codes on Amazon May. 23. 2019.</h2>
+        <h2>Best Deals on Amazon May. 23. 2019.</h2>
         
         <div class="sort_box clearfix">
           <ul>
@@ -79,9 +67,9 @@
         </div>
         
         <div class="card_wrap sort-list">
-          <%= render 'deals/body_promocode' %>
+          <%= render 'deals/body_bestdeals' %>
         </div>
-        <p class="updating">Promotional codes are still updating... :D</h2>
+        <p class="updating">We are still updating the best deals... :D</h2>
         
       </div><!--./rt_cnt-->    
 

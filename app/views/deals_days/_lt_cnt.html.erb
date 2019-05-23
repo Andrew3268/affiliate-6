@@ -1,0 +1,44 @@
+<div class="toggle">
+  <ul>
+    <li>
+      <a href="#n">NOTES</a>
+      <ul>
+        <li>Deals & pricing may change or expire at anytime.</li>
+        <!-- <li>Some of promotion codes can expire fast.</li> -->
+        <li>Free Shipping: Prime or $25+ of all other eligible items.<a target="_blank" href="/blogs/blog_01">(What's PRIME?)</a></li>
+        <li>We have just made your life easier. We offer a quick way to find the best deals. You'll find what you're looking for at a great price.</li>
+        <li>Oh,igottabuythis is a participant in the Amazon Services LLC Associates Program & the Amazon EU Associates Programme, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com, Amazon.ca, Amazon.co.uk and affiliated sites.</li>
+        <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
+      </ul>
+    </li>
+    <!-- <li>
+      <a href="#n">NONE</a>
+      <ul>
+        <li></li>
+      </ul>
+    </li> -->
+    <li class="last7days">
+      <a href="#n">LAST 7 DAYS BEST DEALS</a>
+      <ul>
+        <%= render 'shared/bestdeals_days' %>
+      </ul>
+    </li>
+  </ul>
+</div><!--./toggle-->
+<div class="last7days_pc bestdeals">
+  <p>LAST 7 DAYS BEST DEALS LIST</p>
+  <ul>
+    <%= render 'shared/bestdeals_days' %>
+  </ul>
+</div>
+
+<div class="lt_sort_box clearfix">
+  <ul class="clearfix">
+    <li><a href="/deals/promo_codes" class="pure-button">All Codes</a></li>
+    <li><a href="#" class="pure-button sort1">Price High</a></li>
+    <li><a href="#" class="pure-button sort2">Price Low</a></li>
+    <li><a href="#" class="pure-button sort3">Sale High</a></li>
+    <li><a href="#" class="pure-button sort4">Sale Low</a></li>
+  </ul>
+</div>
+
