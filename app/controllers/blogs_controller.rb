@@ -7,7 +7,11 @@ class BlogsController < ApplicationController
 
   def blog_02
     @random = *(1..45)
-    @lotto = @random.sample(6).sort
+    @lotto_1 = @random.sample(6).sort
+    @lotto_2 = @random.sample(6).sort
+    @lotto_3 = @random.sample(6).sort
+    @lotto_4 = @random.sample(6).sort
+    @lotto_5 = @random.sample(6).sort
   end
 
   def blog_03
