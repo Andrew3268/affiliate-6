@@ -372,7 +372,7 @@
 
 /* Begin Blog Detail */
 .blogs{margin:300px 0 100px 0 ;font-family: 'Montserrat', sans-serif;}
-.blogs .blog_body{float:left;width:60%;margin:0 0 0 2.5%;border-right:1px solid #ccc;padding-right:2.5%;}
+.blogs .blog_body{width:60%;margin:0 auto;}
 .blogs .blog_body img{width:100%;}
 .blogs .blog_body h2{font-family: 'Montserrat', sans-serif;line-height:1.2;}
 .blogs .blog_body .blog2sub_title h2{margin-top:30px;}
@@ -456,3 +456,4 @@
   .blogs .blog_side .tab-menu-box .inner address{font-size:15px;}
 }
 /* End Blog Detail */
+
