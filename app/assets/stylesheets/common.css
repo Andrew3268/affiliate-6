@@ -38,7 +38,7 @@ body{/*font-family: 'Noto Sans KR','맑은고딕',sans-serif;*/font-family: 'Not
 /*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
 /*@import url(font.css);*/
 
-a{-webkit-transition: all .3s ease;-moz-transition: all .3s ease;-ms-transition: all .3s ease;-o-transition: all .3s ease;transition: all .3s ease;}
+/*a{-webkit-transition: all .3s ease;-moz-transition: all .3s ease;-ms-transition: all .3s ease;-o-transition: all .3s ease;transition: all .3s ease;}*/
 
 header{position:fixed;left:0;top:0;width:100%;background:#fff;z-index:301;}
 header .gnb_pc{margin-top:10px;text-align:center;}
