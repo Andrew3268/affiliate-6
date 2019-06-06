@@ -77,22 +77,6 @@ header .gnb_m,header .gnb_open2{display:none;}
   header.on .gnb_pc>ul>li>a>span{display:none;}
 }
 
-@media screen and (min-width:680px){
-  .header_short{border-bottom:1px solid #ccc;}
-  .header_short .gnb_pc{margin-top:0;text-align:center}
-  .header_short .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:11px 10px 0 0;}
-
-  .header_short .visual{float:left;margin-top:20px;height:100%;}
-  .header_short .visual img{width:260px;}
-  .header_short .gnb_pc>ul{float:left;margin:0 0 0 0;padding:10px 0;}
-  .header_short .gnb_pc>ul>li{float:left;width:150px;font-weight:400;text-align:center;}
-  .header_short .gnb_pc>ul>li:nth-child(3){width:190px;}
-  .header_short .gnb_pc>ul>li>a{font-size:20px;line-height:50px;}
-  .header_short .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
-  .header_short .gnb_pc>ul>li>a>em{display:inline-block;}
-  .header_short .gnb_pc>ul>li>a>span{display:none;}
-}
-
 @media screen and (max-width:680px){
   header .wrap{margin:0}
   header .gnb_pc{margin-top:0px;text-align:center;min-width:auto;border-bottom:1px solid #ccc;}
@@ -114,12 +98,6 @@ header .gnb_m,header .gnb_open2{display:none;}
   header .gnb_open2{display:block;position:fixed;left:-20px;top:9px;z-index:301;margin:0 5%;}
   header .gnb_open2 img{width:55px;height:30px;}
   header .gnb_pc_scroll{display:none;}
-
- /* header .membership{}
-  header .membership p{color:#fff;font-size:20px;}
-  header .membership ul{margin:20px 0 0 5%;}
-  header .membership ul li{float:left;width:120px;text-align:center;background:#fff;border:1px solid #000;}
-  header .membership ul li a{display:block;text-decoration:none;color:#000;font-size:25px;line-height:1.3;}*/
 }
 
 @media screen and (min-width:681px) and (max-width:1199px){
@@ -148,6 +126,45 @@ header .gnb_m,header .gnb_open2{display:none;}
   header .visual{float:none;margin-top:7px;}
   header .visual img{width:50%;}
 }
+
+/* For header_short */
+@media screen and (min-width:680px){
+  .header_short{border-bottom:1px solid #ccc;}
+  .header_short .gnb_pc{margin-top:0;text-align:center}
+  .header_short .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:11px 10px 0 0;}
+  .header_short .visual{float:left;margin-top:15px;height:100%;}
+  .header_short .visual img{width:260px;}
+  .header_short .gnb_pc>ul{float:left;margin:0 0 0 0;padding:10px 0;}
+  .header_short .gnb_pc>ul>li{float:left;width:150px;font-weight:400;text-align:center;}
+  .header_short .gnb_pc>ul>li:nth-child(3){width:190px;}
+  .header_short .gnb_pc>ul>li>a{font-size:20px;line-height:50px;}
+  .header_short .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
+  .header_short .gnb_pc>ul>li>a>em{display:inline-block;}
+  .header_short .gnb_pc>ul>li>a>span{display:none;}
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+  .header_short{border-bottom:1px solid #ccc;}
+  .header_short .gnb_pc{margin-top:0;text-align:center}
+  .header_short .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:30px;height:30px;margin:11px 10px 0 0;}
+  .header_short .visual{float:left;margin-top:9px;height:100%;}
+  .header_short .visual img{width:200px;}
+  .header_short .gnb_pc>ul{float:left;padding:0;}
+  .header_short .gnb_pc>ul>li{float:left;width:120px;font-weight:400;text-align:center;}
+  .header_short .gnb_pc>ul>li:nth-child(3){width:190px;}
+  .header_short .gnb_pc>ul>li>a{font-size:15px;line-height:50px;}
+  .header_short .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
+  .header_short .gnb_pc>ul>li>a>em{display:inline-block;}
+  .header_short .gnb_pc>ul>li>a>span{display:none;}
+}
+@media screen and (max-width:680px){
+  .header_short .wrap{margin:0}
+  .header_short .gnb_pc{margin-top:0px;text-align:center;min-width:auto;border-bottom:1px solid #ccc;}
+  .header_short .visual{float:none;margin-top:10px;}
+  .header_short .visual img{width:50%;}
+  .header_short .gnb_pc>ul{display:none;}
+  .header_short .gnb_pc_scroll{display:none;}
+}
+/* For header_short */
 
 /* Deals&Gadgets sub menu */
 .sub_nav{margin-top:300px;}
@@ -300,6 +317,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .search_box input{font-size:20px;padding:5px;}
 }
 
+/* for pagination */
 .pagination{}
 .pagination a{font-size:20px;text-decoration:none;color:#000;margin:0 0.5%;}
 .pagination a.next_page,.pagination a.previous_page{font-size:15px;}

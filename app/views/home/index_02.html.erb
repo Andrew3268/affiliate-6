@@ -47,7 +47,8 @@
                   <% if gadget.gg_option_02.present? %>
                     <a class="to_featured" href="<%= gadget.gg_option_02 %>">Discover More</a>
                   <% end %>
-                  <h4><a target="_blank" href="<%= gadget.gg_url %>"><%= gadget.gg_title %></a></h4>
+                  <!-- <h4><a target="_blank" href="<%= gadget.gg_url %>"><%= gadget.gg_title %></a></h4> -->
+                  <h4><%= link_to gadget.gg_title, gadget %></h4>
                   <!-- <p><%= gadget.gg_intro %></p> -->
                   <div class="btn clearfix">
                     <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>

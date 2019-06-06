@@ -1,3 +1,32 @@
+<div class="layout">
+  <%= render 'shared/header_short' %>
+  <div class="show_wrap clearfix">
+    <div class="wrap">
+        
+      <div class="show_box clearfix">
+        <div class="show_img">
+          <img src="<%= @gadget.gg_img %>">
+        </div>
+        <div class="show_inner">
+         <h2><%= @gadget.gg_title %></h2>
+         <strong>BY <%= @gadget.gg_from %></strong>
+         <% if @gadget.gg_intro.present? %>
+           <span><p><%= @gadget.gg_intro %></p></span>
+         <% end %>
+         <p>$<%= @gadget.gg_aprice %></p>
+         <a href="#n">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
+         <!-- <div class="option_btn">
+           <a href="/gadgets?category=Tech">See More Tech</a>
+         </div> -->
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+
 <!-- Social Shring -->
 <!-- <ul class="social">
 
@@ -14,3 +43,6 @@
    <li><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
   </a>
 </ul> -->
+
+
+
