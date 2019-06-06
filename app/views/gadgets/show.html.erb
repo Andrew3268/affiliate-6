@@ -19,6 +19,12 @@
            <a href="/gadgets?category=Tech">See More Tech</a>
          </div> -->
         </div>
+
+        <% if can? :update, @gadget %>
+          <div class="pinterest">
+           <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+          </div>
+        <% end %>  
         
       </div>
       
