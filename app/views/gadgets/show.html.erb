@@ -5,10 +5,10 @@
         
       <div class="show_box clearfix">
         <div class="show_img">
-          <img src="<%= @gadget.gg_img %>">
+          <a href="<%= @gadget.gg_url %>"><img src="<%= @gadget.gg_img %>"></a>
         </div>
         <div class="show_inner">
-         <h2><%= @gadget.gg_title %></h2>
+         <h2><a href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
          <strong>BY <%= @gadget.gg_from %></strong>
          <% if @gadget.gg_intro.present? %>
            <span><p><%= @gadget.gg_intro %></p></span>
@@ -25,7 +25,7 @@
            <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
           </div>
         <% end %>  
-        
+
       </div>
       
     </div>
