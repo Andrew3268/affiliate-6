@@ -5,6 +5,7 @@
      <div class="form_border">
        <div class="form_select">
         <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a category" } %>
+        <%= f.collection_select :subcategory_id, Subcategory.all, :id, :subname, { prompt: "Choose a sub_category" } %>
         <%= f.select :gg_option_01, options_for_select([["Crowdfunding", ""], "YES"])%>
        </div>
 

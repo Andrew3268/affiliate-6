@@ -21,6 +21,9 @@ Rails.application.routes.draw do
   resources :categories
   # root 'categories#index'
 
+  resources :subcategories
+  # root 'subcategories#index'
+
   get 'editors/index'
   get 'editors/editor_01'
 

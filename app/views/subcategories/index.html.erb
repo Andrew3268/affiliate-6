@@ -1,0 +1,24 @@
+<header id="header">
+  <%= render 'shared/header' %> 
+</header>
+    
+<div class="category_wrap">
+  <div class="wrap">
+   <h1>List of categories</h1>
+    <%= link_to "Add New Category", new_subcategory_path %>
+    <table>
+      <tr>
+        <th>Sub Category</th>
+        <th>Sub Category ID</th>
+        <th colspan="2">Option</th>
+      </tr>
+      <% @subcategories.each do |subcategory| %>
+       <tr>
+        <td><%= subcategory.subname %></td>
+        <td><%= link_to "Edit", edit_subcategory_path(subcategory) %></td>
+        <td><%= link_to "Delete", subcategory_path(subcategory), method: :delete, data: {confirm: "Are you sure?"} %></td>
+       </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
