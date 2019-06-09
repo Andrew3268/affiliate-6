@@ -17,6 +17,10 @@ class BlogsController < ApplicationController
   def blog_03
   end
 
+  def blog_04
+  end
+
+
   private
 
   def find_blog
