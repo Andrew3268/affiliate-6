@@ -2,8 +2,62 @@
   <%= render 'shared/header' %> 
 </header>
 
+<div class="category_wrap clearfix">
+  <div class="wrap">
+    <div class="cateogry_box">
+      <a href="#n">
+        <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <div class="centered">GADGETS</div>
+      </a>
+    </div>
+
+    <div class="cateogry_box">
+      <a href="#n">
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <div class="centered">GEEKY</div>
+      </a>
+    </div>
+
+    <div class="cateogry_box">
+      <a href="#n">
+        <img src="https://images.unsplash.com/photo-1556910633-5099dc3971e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <div class="centered">HOME&KITCHEN</div>
+      </a>
+    </div>
+
+    <div class="cateogry_box">
+      <a href="#n">
+        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <div class="centered">TRAVEL</div>
+      </a>
+    </div>
+
+    <div class="cateogry_box">
+      <a href="#n">
+        <img src="https://images.unsplash.com/photo-1414016642750-7fdd78dc33d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <div class="centered">OUTDOOR</div>
+      </a>
+    </div>
+
+    <div class="cateogry_box">
+      <a href="#n">
+        <img src="https://images.unsplash.com/photo-1488977321720-6672ab3ed60f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <div class="centered">CELLPHONE</div>
+      </a>
+    </div>
+
+    <div class="cateogry_box">
+      <a href="#n">
+        <img src="https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+        <div class="centered">FASHION</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+
 <% if can? :update, @category %>    
-  <div class="category_wrap">
+  <div class="categories">
     <div class="wrap">
      <h1>List of categories</h1>
       <%= link_to "Add New Category", new_category_path %>
@@ -25,13 +79,6 @@
     </div>
   </div>
 <% end %>
-
-<div class="categories">
-  <div class="wrap">
-    
-  </div>
-</div>
-
 
 
 
