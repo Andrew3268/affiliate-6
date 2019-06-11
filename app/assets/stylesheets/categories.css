@@ -6,13 +6,25 @@
 .category_wrap .cateogry_box a img{width:100%;height:250px;border-radius:30px;border:7px solid #000;object-fit:cover;}
 .category_wrap .cateogry_box a .centered{font-size:35px;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
 
+
+.categories{margin:100px 0;}
+.categories h2{border-bottom:3px solid;}
+.categories a{text-decoration:none;color:#08f;}
+.categories table {border-collapse: collapse;width: 100%;}
+.categories th{border-bottom:1px solid;}
+.categories th, td {text-align: left;padding: 8px;text-align:center;}
+.categories tr:nth-child(even) {background-color: #f2f2f2;}
+
+
 @media screen and (max-width:640px){
   .category_wrap{margin-top:60px;}
+  .category_wrap h2{margin-left:0%;font-size:25px;}
   .category_wrap .cateogry_box{float:none;width:100%;margin:5% 0;}  
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
   .category_wrap{margin-top:170px;}
+  .category_wrap h2{margin-left:0%;font-size:30px;}
   .category_wrap .cateogry_box a{height:200px;}
   .category_wrap .cateogry_box a img{height:200px;}
   .category_wrap .cateogry_box a .centered{font-size:30px;}

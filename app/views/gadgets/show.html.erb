@@ -28,7 +28,8 @@
 
       </div>
 
-      <div class="show_box_down clearfix">
+      <!-- <div class="show_box_down clearfix">
+        <h2>RELATED</h2>
         <% @relative_sub_category.shuffle.take(4).each do |subcategory| %>
           <% if subcategory.subcategory_id == @gadget.subcategory_id %>
             <div class="sbd_box">
@@ -36,13 +37,13 @@
                 <%= link_to (image_tag subcategory.gg_img), subcategory %>
               </div>
               <div class="down_inner">
-                <p><%= link_to subcategory.gg_title, subcategory %></p>
               </div>
             </div>
           <% end %>
         <% end %>
       </div> 
-    </div>
+    </div> -->
+    
   </div>
 </div>
 
