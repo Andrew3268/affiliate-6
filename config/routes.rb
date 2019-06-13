@@ -27,8 +27,9 @@ Rails.application.routes.draw do
   get 'editors/index'
   get 'editors/editor_01'
 
-  get 'gift_guides/index'
-  get 'gift_guides/gift_guide_01'
+  get 'guides/index'
+  get 'guides/gift_guide_01'
+  get 'guides/gift_guide_02'
   
   get 'blogs/index'
   get 'blogs/blog_01'
