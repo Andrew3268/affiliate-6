@@ -229,12 +229,12 @@
 
 
 /* Begin Gift Guide Detail Page */
-.giftail{margin-top:40px;}
+.giftail{margin-top:40px;font-family: 'Montserrat', sans-serif;}
 .giftail .card_wrap .inner_wrap{margin:0 0 30px 0;}
 .giftail .card_wrap{column-width:290px;column-gap:15px;}
 .giftail .card_wrap .card{display:inline-block;margin:0 0 30px 0;}
-.giftail .card_wrap .inner_wrap .inner{border-top:2px solid;border-bottom:2px solid;padding-bottom:20px;text-align:right;width:30%;line-height:1.3;}
-.giftail .card_wrap .inner_wrap .inner strong{font-size:50px;font-weight:600;color:#000;}
+.giftail .card_wrap .inner_wrap .inner{border-top:2px solid;border-bottom:2px solid;padding-bottom:20px;text-align:right;line-height:1.3;}
+.giftail .card_wrap .inner_wrap .inner strong{font-size:55px;font-weight:bold;color:#000;}
 .giftail .card_wrap .card .mid_image{margin:5px 0 10px 0;}
 .giftail .card_wrap .card .mid_image img{width:100%;}
 /*.giftail .card_wrap .card .mid_image img{width:100%;-webkit-filter:grayscale(100%);filter:gray;}
