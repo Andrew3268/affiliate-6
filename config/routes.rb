@@ -30,6 +30,7 @@ Rails.application.routes.draw do
   get 'guides/index'
   get 'guides/gift_guide_01'
   get 'guides/gift_guide_02'
+  get 'guides/gift_guide_03'
   
   get 'blogs/index'
   get 'blogs/blog_01'
