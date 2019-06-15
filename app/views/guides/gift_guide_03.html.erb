@@ -1,28 +1,157 @@
 <div class="layout"><!--layout-->
-    
-  <%= render 'shared/header' %>
+  <div class="wrap">
+  <%= render 'shared/header_short' %>
 
-  <div class="location clearfix">
+<!--   <div class="location clearfix">
     <div class="wrap">
       <div class="inner">
         <span><a href="/recommends/">Featured</a></span> > <a href="/guides/index">Gift Guide</a> > <a href="">FOR HIM</a>
       </div>
     </div>
+  </div> -->
+
+  <div class="guide_header">
+    <h2>38 Father's Day Gift Ideas for the Coolest Dad Around</h2>
   </div>
 
-  <div class="guide_wrapping">
-    <div class="wrap">
-      <div class="image_box">
-        <a href="#n"><img src="https://www.uncommongoods.com/images/items/23900/23960_1_640px.jpg" alt="" /></a>
+  <div class="guide_show">
+   
+    <div class="flex guide_show_wrap" id="gallery">
+      <div class="flex column" onclick="currentSlide(1)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/616sJVZ0ixL._SX679_.jpg">
       </div>
-      <div class="inner">
-        <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
-        <strong>BY AMAZON</strong>
-        <em>$100.00</em>
-        <p>$70.00 (30% OFF)</p>
-        <span>Check it Out at <a href="#n">Amazon</a></span>
+      <div class="flex column" onclick="currentSlide(2)">
+        <img src="https://www.skyfloatx.com/uploads/1/2/4/6/124665177/2_2_orig.jpg">
       </div>
-    </div>
-  </div>
+      <div class="flex column" onclick="currentSlide(3)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71ld5uSFhQL._SX522_.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(4)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/810ngHHl63L._SX522_.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(5)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61VYkz33WNL._SX522_.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(6)">
+        <img src="https://www.uncommongoods.com/images/items/23900/23960_1_640px.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(1)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/616sJVZ0ixL._SX679_.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(2)">
+        <img src="https://www.skyfloatx.com/uploads/1/2/4/6/124665177/2_2_orig.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(3)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/71ld5uSFhQL._SX522_.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(4)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/810ngHHl63L._SX522_.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(5)">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/61VYkz33WNL._SX522_.jpg">
+      </div>
+      <div class="flex column" onclick="currentSlide(6)">
+        <img src="https://www.uncommongoods.com/images/items/23900/23960_1_640px.jpg">
+      </div>
+    </div><!--./show_wrap-->
 
-</div>
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span> <!--close button--> 
+
+        <div class="flex slides claerfix">
+          <div class="numbering">1 / 6</div>
+          <div class="img_box">
+           <a target="_blank" href="#n"><img src="https://images-na.ssl-images-amazon.com/images/I/616sJVZ0ixL._SX679_.jpg"></a>
+          </div>
+          <div class="inner">
+            <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
+            <strong>BY AMAZON</strong>
+            <em>$100.00</em>
+            <p>$70.00 (30% OFF)</p>
+            <span>Check it Out at <a href="#n">Amazon</a></span>
+          </div>
+        </div>
+
+        <div class="flex slides">
+          <div class="numbering">2 / 6</div>
+          <div class="img_box">
+           <img src="https://www.skyfloatx.com/uploads/1/2/4/6/124665177/2_2_orig.jpg">
+          </div>
+          <div class="inner">
+            <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
+            <strong>BY AMAZON</strong>
+            <em>$100.00</em>
+            <p>$70.00 (30% OFF)</p>
+            <span>Check it Out at <a href="#n">Amazon</a></span>
+          </div>
+        </div>
+
+        <div class="flex slides">
+          <div class="numbering">3 / 6</div>
+          <div class="img_box">
+           <img src="https://images-na.ssl-images-amazon.com/images/I/71ld5uSFhQL._SX522_.jpg">
+          </div>
+          <div class="inner">
+            <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
+            <strong>BY AMAZON</strong>
+            <em>$100.00</em>
+            <p>$70.00 (30% OFF)</p>
+            <span>Check it Out at <a href="#n">Amazon</a></span>
+          </div>
+        </div>
+        
+        <div class="flex slides">
+          <div class="numbering">4 / 6</div>
+          <div class="img_box">
+           <img src="https://images-na.ssl-images-amazon.com/images/I/810ngHHl63L._SX522_.jpg">
+          </div>
+          <div class="inner">
+            <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
+            <strong>BY AMAZON</strong>
+            <em>$100.00</em>
+            <p>$70.00 (30% OFF)</p>
+            <span>Check it Out at <a href="#n">Amazon</a></span>
+          </div>
+        </div>
+
+        <div class="flex slides">
+          <div class="numbering">5 / 6</div>
+          <div class="img_box">
+           <img src="https://images-na.ssl-images-amazon.com/images/I/61VYkz33WNL._SX522_.jpg">
+          </div>
+          <div class="inner">
+            <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
+            <strong>BY AMAZON</strong>
+            <em>$100.00</em>
+            <p>$70.00 (30% OFF)</p>
+            <span>Check it Out at <a href="#n">Amazon</a></span>
+          </div>
+        </div>
+
+        <div class="flex slides">
+          <div class="numbering">6 / 6</div>
+          <div class="img_box">
+           <img src="https://www.uncommongoods.com/images/items/23900/23960_1_640px.jpg">
+          </div>
+          <div class="inner">
+            <h2>But I must explain to you how all this mistaken idea of denouncing pleasure</h2>
+            <strong>BY AMAZON</strong>
+            <em>$100.00</em>
+            <p>$70.00 (30% OFF)</p>
+            <span>Check it Out at <a href="#n"> Amazon</a></span>
+          </div>
+        </div>
+
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+      </div><!--./modal-content-->
+    </div><!--./modal-->
+  </div><!--./guide_show-->
+ </div><!--./wrap-->
+</div><!-- layout -->
+
+<script>
+  <%= render(:partial => 'guide', :handlers => [:erb], :formats => [:js]) %>
+</script>
