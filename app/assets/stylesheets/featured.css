@@ -200,8 +200,7 @@
 .guide_wrap .guide_boxes .box_img a ul li{float:left;width:31.33%;margin:0 1%;}
 .guide_wrap .guide_boxes .box_img a ul li img{width:100%;} 
 .guide_wrap .guide_boxes .box_inner{float:left;width:48%;margin:0 1%;border:5px solid;height:170px;}
-.guide_wrap .guide_boxes .box_inner a{text-decoration:none;color:#000;}
-.guide_wrap .guide_boxes .box_inner a:hover{text-decoration:underline;}
+.guide_wrap .guide_boxes .box_inner a{;color:#000;}
 .guide_wrap .guide_boxes .box_inner a p{font-size:40px;font-weight:700;padding:10px;line-height:1.1;}
 
 @media screen and (max-width:640px){
