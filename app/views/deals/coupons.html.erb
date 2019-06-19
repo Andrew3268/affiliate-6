@@ -1,10 +1,10 @@
 <div class="layout"><!--layout-->
-    
+  <div class="wrap"> 
   <%= render 'shared/header' %>
   <%= render 'deals/header' %> 
   
   <div class="coupons common_layout clearfix">
-    <div class="wrap">
+    
       <div class="lt_cnt">
         <h2>Sales & Coupons</h2>
 
@@ -32,9 +32,10 @@
           <%= render 'deals/body_coupon' %>
         </div><!--./coupons_wrap-->
       </div><!--./rt_cnt-->
-    </div><!--./wrap-->
-  </div><!--./coupons-->
-  <button id='goup'><img src="<%=asset_path 'goup.png' %>"></button>
+    
+    </div><!--./coupons-->
+    <button id='goup'><img src="<%=asset_path 'goup.png' %>"></button>
+  </div><!--./wrap-->
 </div><!--./layout-->
 <script>
   <%= render(:partial => 'coupons', :handlers => [:erb], :formats => [:js]) %>

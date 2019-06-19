@@ -1,13 +1,12 @@
 <div class="layout"><!--layout-->
-    
+  <div class="wrap">    
   <%= render 'shared/header' %>
   <%= render 'deals/header' %>    
   
   <div class="codes common_layout">
-    <div class="wrap">
       <div class="lt_cnt">
         <h2>Promotion Codes</h2>
-        
+
        <div class="toggle">
           <ul>
             <li>
@@ -93,9 +92,10 @@
         
       </div><!--./rt_cnt-->    
 
-    </div><!--./warp-->
-  </div><!--./codes-->
+    
+   </div><!--./codes-->
   <button id='goup'><img src="<%=asset_path 'goup.png' %>"></button>
+  </div><!--./warp-->
 </div><!--./layout-->
 <script>
  <%= render(:partial => 'codes', :handlers => [:erb], :formats => [:js]) %>

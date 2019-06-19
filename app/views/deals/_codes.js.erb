@@ -151,6 +151,18 @@
       slides[slideIndex - 1].classList.remove('hide') // since we're starting at 1, we have to subtract 1 
       slides[slideIndex - 1].classList.add('pop'); // then add pop, which shows the image 
     }
+
+    // Tab menu of Shoes
+    $('.tabs nav li').click(function() {
+      var $this = $(this);
+      if ($this.hasClass('current')) return;
+      
+      var $env = $this.closest('.tabs');
+      
+      $env.find('nav li, .shoes_content section').removeClass('current');
+      $this.addClass('current');
+      $env.find('#' + $this.data('section')).addClass('current');
+    });
   
 
 
