@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'deals/promotions'
   get 'deals/codes'
   get 'deals/bestdeals'
+  get 'deals/shoes'
 
   devise_for :users
   resources :gadgets
