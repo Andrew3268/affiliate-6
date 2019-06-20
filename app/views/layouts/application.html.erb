@@ -29,7 +29,12 @@
    <p class="notice"><%= notice %></p>
    <p class="alert"><%= alert %></p>
 
-  <%= yield %>
+   <div class="layout"><!--layout-->
+    <div class="wrap">
+     <%= yield %> 
+    </div>
+   </div>
+   
   <%= javascript_include_tag 'application' %>
    <!-- for Isotope -->
   <!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script> -->

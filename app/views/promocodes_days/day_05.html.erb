@@ -1,17 +1,16 @@
 <div class="layout"><!--layout-->
-    
+  <div class="wrap">  
     <%= render 'shared/header' %>
     <%= render 'deals/header' %>    
     
     <div class="codes common_layout">
-      <div class="wrap">
         <div class="lt_cnt">
           <h2>Promotion Codes</h2>
           <%= render 'promocodes_days/lt_cnt' %>
         </div><!--./lt_cnt-->
         
         <div class="rt_cnt">
-          <h2>Promotion Code We Picked On Amazon Jun. 12. 2019</h2>
+          <h2>Promotion Code We Picked On Amazon Jun. 19. 2019</h2>
           
           <div class="sort_box clearfix">
             <ul>
@@ -30,9 +29,9 @@
           
         </div><!--./rt_cnt-->    
 
-      </div><!--./warp-->
     </div><!--./codes-->
     <button id='goup'><img src="<%=asset_path 'goup.png' %>"></button>
+   </div><!--./warp-->
   </div><!--./layout-->
 <script>
  <%= render(:partial => 'codes', :handlers => [:erb], :formats => [:js]) %>
