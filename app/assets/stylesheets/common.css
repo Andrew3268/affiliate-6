@@ -35,6 +35,13 @@ body{/*font-family: 'Noto Sans KR','맑은고딕',sans-serif;*/font-family: 'Not
   .wrap{width:auto;margin:0 5%;}
 }
 
+#goup{position:fixed;bottom:10px;right:14px;display:none;}
+#goup img{width:50px;}
+@media screen and (min-width:641px) and (max-width:1199px){
+  #goup{right:13px;}
+}
+
+
 /*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
 /*@import url(font.css);*/
 
@@ -127,7 +134,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   header .visual img{width:50%;}
 }
 
-/* For header_short */
+/* Begin For header_short */
 @media screen and (min-width:680px){
   .header_short{border-bottom:1px solid #ccc;}
   .header_short .gnb_pc{margin-top:0;text-align:center}
@@ -164,7 +171,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .header_short .gnb_pc>ul{display:none;}
   .header_short .gnb_pc_scroll{display:none;}
 }
-/* For header_short */
+/* End For header_short */
 
 
 .deals_nav{margin-top:255px;display:block;font-family: 'Anton', sans-serif;}
@@ -180,7 +187,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 @media screen and (min-width:641px) and (max-width:1199px){
   .deals_nav{margin-top:180px;}
   .deals_nav ul>li{width:165px;}
-  .deals_nav ul>li>a{font-size:20px;}
+  .deals_nav ul>li>a{font-size:17px;}
 }
 
 /* Deals&Gadgets sub menu */
@@ -188,7 +195,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .sub_nav .sub_nav_pc{}
 .sub_nav .sub_nav_pc>ul{}
 .sub_nav .sub_nav_pc>ul>li{float:left;width:150px;text-align:center;}
-.sub_nav .shoes_nav_pc{margin:0 1%;}
+.sub_nav .shoes_nav_pc{margin:0;}
 .sub_nav .shoes_nav_pc>ul{background:#000;padding:5px 0;}
 .sub_nav .shoes_nav_pc>ul>li{width:auto;margin:0 2%;}
 .sub_nav .sub_nav_pc>ul>li>a{text-decoration:none;color:#000;font-size:20px;display:block;font-weight:400;}
