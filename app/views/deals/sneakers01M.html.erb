@@ -186,20 +186,21 @@
             <span class="close shoes_close">&times;</span> <!--close button--> 
 
             <!-- <div class="flex slides clearfix">
-              <div class="numbering shoes_numbering">Current_Page / Total_Page</div>
+              <div class="numbering shoes_numbering">Current_Num / Total_Num</div>
               <div class="inner_wrap shoes_wrap">
                 <div class="img_box">
-                 <a target="_blank" href="Shoes_URL"><img src="Image_URL"></a>
+                 <a target="_blank" href="Shoes_Link"><img src="Image_Link"></a>
                 </div>
                 <div class="inner shoes_inner">
-                  <h2>Shoes_Title</h2>
-                  <strong>BY Shoes_Retailer</strong>
-                  <em>$Regular_Price</em>
-                  <p class="price">$Discounts_Price (Percentage% OFF)</p>
-                  <p class="color">Available Colors: Color_List</p>
-                  <p class="size">Available Sizes: Size_List</p>
-                  <a href="#n">Check it Out on <span>Shoes_Retailer</span></a>
-                  <h5>*Pricing may change and deals can expire fast.</h5>
+                 <h2><a target="_blank" href="Shoes_Link">SHoes_Title</a></h2>
+                 <strong>BY AMAZON</strong>
+                 <em>$Reg_Price</em><p class="price">$Dis_Pricec ( Percentage% OFF)</p>
+                 <address>*Lower price available on select options</address>
+                 <p class="color">Available Colors: Ava_Colors</p>
+                 <p class="size">Available Sizes: Ava_Sizes</p>
+                 <div class="size_table"><h4 id="clickMeBtn">Size Guide</h4><%= render 'deals/sizeM_table' %></div>
+                 <div class="btn"><a href="#n">Check it Out on <span>Amazon</span></a></div>
+                  <div class="notes"><h5>*Pricing may change and deals can expire fast.</h5><h5>*Condition of color and size may change.</h5></div>
                 </div>
               </div>
             </div> -->
@@ -211,24 +212,15 @@
                  <a target="_blank" href="#n"><img src="https://needsupply.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/3/5/356686M106328_M106328_1.jpg"></a>
                 </div>
                 <div class="inner shoes_inner">
-                  <h2>The Original As Seen on TV Handsfree Easy Jar Opener</h2>
-                  <strong>BY AMAZON</strong>
-                  <em>$100.00</em>
-                  <p class="price">$70.00 (30% OFF)</p>
-                  <address>Lower price available on select options</address>
-                  <p class="color">Available Colors: Tan</p>
-                  <p class="size">Available Sizes: 7M , 7.5M , 8M , 8.5M , 9M , 9.5M , 10M , 10.5M , 11M , 11.5M , 12M , 13M , 14M</p>
-                  <a href="#n">Check it Out on <span>Amazon</span></a>
-                  <div class="notes">
-                    <h5>*Pricing may change and deals can expire fast.</h5>
-                    <h5>*Condition of color and size may change.</h5>
-                  </div>
-                  <div class="wrapper">
-                    <button id="popup">Modal Me</button>
-                  </div>
-                  <div class="size_container">
-                    <span class="btn-open">open</span>
-                  </div>
+                 <h2><a target="_blank" href="#n">The Original As Seen on TV Handsfree Easy Jar Opener</a></h2>
+                 <strong>BY AMAZON</strong>
+                 <em>$100.00</em><p class="price">$70.00 (30% OFF)</p>
+                 <address>*Lower price available on select options</address>
+                 <p class="color">Available Colors: Tan</p>
+                 <p class="size">Available Sizes: 7M , 7.5M , 8M , 8.5M , 9M , 9.5M , 10M , 10.5M , 11M , 11.5M , 12M , 13M , 14M</p>
+                 <div class="size_table"><h4 id="clickMeBtn">Size Guide</h4><%= render 'deals/sizeM_table' %></div>
+                 <div class="btn"><a href="#n">Check it Out on <span>Amazon</span></a></div>
+                  <div class="notes"><h5>*Pricing may change and deals can expire fast.</h5><h5>*Condition of color and size may change.</h5></div>
                 </div>
               </div>
             </div>
