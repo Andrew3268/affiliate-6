@@ -495,20 +495,6 @@
 /* End Blog Detail */
 
 
-.popup-container{position: fixed;width:70%;height:90%;background:#000;left: 50%;top: 50%;transform: translate(-50%, -50%);display:none;z-index: 999;}
-.popup-content table{color:#fff;margin:10px auto;border-collapse:collapse;}
-.popup-content table tr:nth-child(even) {background-color:#fff;color:#000;}
-.popup-content table tr td{padding:5px;}
-.popup-content table tr th{width:100px;padding:8px;}
-#closeBtn{position:absolute;right:30px;top:10px;color:#fff;cursor:pointer;margin:0;padding:0;}
-#clickMeBtn{cursor:pointer;}
-@media screen and (max-width:640px){
-  .popup-container{position: fixed;width:100%;height:100%;}
-  .popup-content table{margin:50px auto;}
-}
-@media screen and (min-width:641px) and (max-width:1199px){
-  .popup-container{width:80%;}
-  .popup-content table{margin:70px auto;}
-}
+
 
 

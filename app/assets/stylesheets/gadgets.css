@@ -115,7 +115,7 @@
 .show_wrap .show_box .show_inner h2{font-size:30px;}
 .show_wrap .show_box .show_inner h2 a{text-decoration:none;color:#000;background:none;padding:0;}
 .show_wrap .show_box .show_inner h2 a:hover{text-decoration:underline;}
-.show_wrap .show_box .show_inner strong{text-transform:uppercase;font-size:17px;color:#616161;letter-spacing:5px;border-bottom:1px solid #616161;}
+.show_wrap .show_box .show_inner strong{text-transform:uppercase;font-size:17px;color:#616161;letter-spacing:5px;border-bottom:1px solid #616161;font-weight:400;}
 .show_wrap .show_box .show_inner span{}
 .show_wrap .show_box .show_inner span p{font-size:15px;font-weight:400px;}
 .show_wrap .show_box .show_inner p{margin:25px 0;font-size:20px;}
