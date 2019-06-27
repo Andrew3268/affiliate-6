@@ -1,4 +1,4 @@
-.gadgets{margin:270px 0;}
+.gadgets{margin:270px 0 0 0;}
 /*.index_gad{margin:30px 0;}*/
 .gadgets .card_wrap{column-width:300px;column-gap:10px;}
 .gadgets .card_wrap .card{margin:20px 4%;;position: relative;background: #fff; overflow: hidden;display:inline-block;}
@@ -24,7 +24,7 @@
 .gadgets .card_wrap .crowdfunding{position:absolute;top:-45px;left:10px;}
 .gadgets .card_wrap .crowdfunding p{color:#fff;background:#87c442;padding:0 5px;border-radius:7px;}
 
-.add_gadget{position:fixed;right:10px;bottom:20px;}
+.add_gadget{position:fixed;right:10px;bottom:20px;z-index:1;}
 .add_gadget img{width:80px;}
 
 @media screen and (max-width:640px){

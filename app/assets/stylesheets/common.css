@@ -349,6 +349,10 @@ header .gnb_m,header .gnb_open2{display:none;}
 .pagination .current{background:#000;color:#fff;font-size:30px;border:1px solid;padding:0 10px;}
 
 
+/* for Footer Section */
+.footer{background:#303036;color:#d3d3d3;height:400px;position:relative;}
+.footer .footer-content{}
+.footer .footer-bottom{background:#343a40;color:#686868;height:50px;width:100%;text-align:center;position:absolute;bottom:0px;left:0px;padding-top:13px;}
 
 
 
