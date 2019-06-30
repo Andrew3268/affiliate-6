@@ -350,17 +350,20 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 /* for Footer Section */
-.footer{background:#303036;color:#d3d3d3;height:400px;position:relative;}
-.footer .footer-content{height:350px;display:flex;}
-.footer .footer-content .footer-section{flex:1;padding:25px;}
+.footer{background:#000;color:#fff;height:400px;position:relative;font-family: 'Montserrat', sans-serif;}
+.footer .footer-content{height:350px;}
+.footer .footer-content .footer-section{padding:25px;}
 .footer .footer-content h1, .footer .footer-content h2{color:#fff;}
+.footer .footer-content .about{float:left;width:34%;margin-right:1%;}
+.footer .footer-content .links{float:left;width:24%;margin-right:1%;}
+.footer .footer-content .contact-form{float:left;width:40%;}
 .footer .footer-content .about p{margin:10px 0;}
 .footer .footer-content .about h1 span{color:#08f;}
 .footer .footer-content .about .contact span{display:block;margin-bottom:8px;}
 .footer .footer-content .about .socials a{border:1px solid #616161;width:45px;height:41px;padding-top:5px;margin-right:5px;text-align:center;display:inline-block;font-size:1.3em;border-radius:5px;transition:all .3s;}
 .footer .footer-content .about .socials a:hover{border:1px solid #fff;color:#fff;transition:all .3s;}
-.footer .footer-content .links ul a{padding:0 10px;display:block;margin-bottom:10px;font-size:17px;text-decoration:none;color:#d3d3d3;transition:all .3s;}
-.footer .footer-content .links ul a:hover{color:#fff;margin-left:15px;transition:all .3s;}
+.footer .footer-content .links ul a{padding:0 10px;display:block;margin-bottom:10px;font-size:17px;text-decoration:none;color:#fff;transition:all .3s;}
+.footer .footer-content .links ul a:hover{font-weight:bold;margin-left:15px;transition:all .3s;}
 .footer .footer-content .contact-form .contact-input{background:#272727;color:#fff;margin-bottom:10px;line-height:1.5rem;padding:.9rem 1.4rem;width:100%;border:none;}
 .footer .footer-content .contact-form .contact-input:focus{background:#1a1a1a;}
 .footer .footer-content .contact-form .btn{padding:5px 10px;background:#006669;color:#fff;border:1px solid transparent;border-radius:5px;}
