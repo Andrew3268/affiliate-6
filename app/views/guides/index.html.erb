@@ -12,10 +12,106 @@
         </ul>
       </div>
 
-      <div class="guide_wrap">
+      <div class="promotions common_layout clearfix">
 
+       <!--  <div class="filter-search guide_controll">
+          <button class="filter-button btn btn-md btn-primary" data-filter="*">All</button>
+          <button class="filter-button btn btn-md red white-text" data-filter="him">Him</button>
+          <button class="filter-button btn btn-md orange" data-filter="her">Her</button>
+          <button class="filter-button btn btn-md yellow" data-filter="dad">Dad</button>
+          <button class="filter-button btn btn-md blue white-text" data-filter="mom">Mom</button>
+          <button class="filter-button btn btn-md green white-text" data-filter="friend">Friend</button>
+          <input type="text" class="form-control" placeholder="Search gift you want to">
+        </div>
+ -->
 
-      </div>
+      
+         <%= render 'guides/navbar' %>
+      
+
+        <div class="filter-group guide_wrap">
+
+          <div class="filter-node promotion_box" data-filter='["him"," Amazon | Saless & Coupons, May 2019"]'>
+            <!-- <div class="image_box">
+              <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+            </div> -->
+            <div class="node-box inner">
+              <h2><a href="/guides/gift_guide_01">Amazon | Saless & Coupons, May 2019</a></h2>
+              <div class="gift_category">for him</div>
+              <p>This is a limited time offer. Offer good while supplies last. Offer is restricted to select AmazonFresh customers who are recipients of this offer. Offer applies to first-time customer orders. Offer is valid on orders of $100 or more.</p>
+              <span>Last Updated: Jun. 15th. 2019</span>
+            </div>
+            <div class="btn">
+              <a href="#n">Read More</a>
+            </div>
+          </div>
+
+          <div class="filter-node promotion_box" data-filter='["her"," Take $25 off your first AmazonFresh order of $100 or more."]'>
+            <div class="image_box">
+              <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            <div class="node-box inner">
+              <h2><a href="/guides/gift_guide_01">Take $25 off your first AmazonFresh order of $100 or more.</a></h2>
+              <div class="gift_category">for him</div>
+              <span>Last Updated: Jun. 15th. 2019</span>
+            </div>
+            <div class="btn">
+              <a href="#n">Read More</a>
+            </div>
+          </div>
+
+          <div class="filter-node promotion_box" data-filter='["dad"," Up to 30% off | Amazon Elements"]'>
+            <div class="node-box inner">
+              <h2><a href="/guides/gift_guide_01">Up to 30% off | Amazon Elements</a></h2>
+              <p>This is a limited time offer. Offer good while supplies last. Offer is restricted to select AmazonFresh customers who are recipients of this offer. Offer applies to first-time customer orders. Offer is valid on orders of $100 or more.</p>
+              <span>Last Updated: Jun. 15th. 2019</span>
+            </div>
+            <div class="btn">
+              <a href="#n">Read More</a>
+            </div>
+          </div>
+
+          <div class="filter-node promotion_box" data-filter='["mom"," Up to 50% off Electronics Clippable Coupons"]'>
+            <div class="node-box inner">
+              <h2><a href="/guides/gift_guide_01">Up to 50% off Electronics Clippable Coupons</a></h2>
+              <p>This is a limited time offer. Offer good while supplies last. Offer is restricted to select AmazonFresh customers who are recipients of this offer. Offer applies to first-time customer orders. Offer is valid on orders of $100 or more.</p>
+              <span>Last Updated: Jun. 15th. 2019</span>
+            </div>
+            <div class="btn">
+              <a href="#n">Read More</a>
+            </div>
+          </div>
+
+          <div class="filter-node promotion_box" data-filter='["friend"," Up to 15% & FREE Shipping | Subscribe & Save"]'>
+            <div class="node-box inner">
+              <h2><a href="/guides/gift_guide_01">Up to 15% & FREE Shipping | Subscribe & Save</a></h2>
+              <p>This is a limited time offer. Offer good while supplies last. Offer is restricted to select AmazonFresh customers who are recipients of this offer. Offer applies to first-time customer orders. Offer is valid on orders of $100 or more.</p>
+              <span>Last Updated: Jun. 15th. 2019</span>
+            </div>
+            <div class="btn">
+              <a href="#n">Read More</a>
+            </div>
+          </div>
+
+          <div class="filter-node promotion_box" data-filter='["him"," Amazon | Up to 20% Off Subscribe & Save"]'>
+            <div class="image_box">
+              <img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+            </div>
+            <div class="node-box inner">
+              <h2><a href="/guides/gift_guide_01">Amazon | Up to 20% Off Subscribe & Save</a></h2>
+             
+              <span>Last Updated: Jun. 15th. 2019</span>
+            </div>
+            <div class="btn">
+              <a href="#n">Read More</a>
+            </div>
+          </div>
+        </div><!--./guide_wrap-->
+        
 
     </div><!--./wrap-->
   </div><!--./layout-->
+
+<script>
+  <%= render(:partial => 'guide', :handlers => [:erb], :formats => [:js]) %>
+</script>

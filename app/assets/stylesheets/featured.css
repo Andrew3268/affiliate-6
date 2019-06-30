@@ -496,6 +496,46 @@
 /* End Blog Detail */
 
 
+/* Begin Promotion */
+.promotions{margin-bottom:200px;font-family: 'Montserrat', sans-serif;color:#616161;}
+.promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:60px;}
+.promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
+.promotions .guide_controll{background:#000;}
+.promotions .guide_controll .btn{font-size:20px;margin:0 1%;color:#fff;}
+.promotions .guide_controll .form-control{margin:10px 0;width:300px;padding:5px;line-height:25px;}
+.promotions .promotion_box{float:left;width:31.3333%;height:450px;margin:0 1% 2% 1%;border:1px solid;position:relative;}
+.promotions .promotion_box .image_box{}
+.promotions .promotion_box  img{width:100%;height:200px;margin-bottom:-15px;}
+.promotions .promotion_box .inner{padding:20px;}
+.promotions .promotion_box .inner h2{font-size:27px;line-height:1.2;font-weight:100;}
+.promotions .promotion_box .inner h2 a{text-decoration:none;color:#616161;}
+.promotions .promotion_box .inner h2 a:hover{text-decoration:underline;}
+.promotions .promotion_box .inner .gift_category{text-transform:uppercase;margin-top:5px;}
+.promotions .promotion_box .inner p{margin-top:15px;}
+.promotions .promotion_box .inner em{margin-top:15px;font-size:20px;font-weight:500;display:block;}
+.promotions .promotion_box .inner span{display:block;position:absolute;bottom:50px;}
+.promotions .promotion_box .btn{position:absolute;bottom:0;line-height:42px;border-top:1px solid;padding:0 20px;}
+/*.promotions .promotion_box .btn:hover{border-top:3px solid;font-weight:bold;}*/
+.promotions .promotion_box .btn a{text-decoration:none;color:#616161;font-size:20px;}
+.filter-node.filter-me {opacity:0 !important; visibility:hidden; position:absolute; top: 2000px;}
+
+@media screen and (max-width:640px){
+  .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
+  .promotions .promotion_box{float:none;width:100%;margin-bottom:35px;}
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+  .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:35px;}
+  .promotions .guide_controll .btn{font-size:17px;}
+  .promotions .guide_controll .form-control{margin:3px 0 10px 0;width:100%;}
+  .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
+  .promotions .promotion_box{width:48%;}
+}
+
+/* End Promotion */
+
+
+
+
 
 
 

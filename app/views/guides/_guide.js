@@ -57,4 +57,6 @@
       // we remove hide to show the image in slides connected to the thumbnail 
       slides[slideIndex - 1].classList.remove('hide') // since we're starting at 1, we have to subtract 1 
       slides[slideIndex - 1].classList.add('pop'); // then add pop, which shows the image 
-    }
+    } 
+
+ 
