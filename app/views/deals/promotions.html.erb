@@ -1,103 +1,14 @@
-  <div class="layout"><!--layout-->
-    
-    <%= render 'shared/header' %>
-    <%= render 'deals/header' %> 
-    
+<div class="layout"><!--layout-->
+ <div class="wrap">   
+  <%= render 'shared/header' %>
+  <%= render 'deals/header' %>    
+  
     <div class="promotions common_layout clearfix">
-      <div class="wrap">
+      <%= render 'deals/navbar' %>      
+      <div class="filter-group guide_wrap">
+        <%= render 'deals/body_promotions' %>
+      </div><!--./filter-group-->
+    </div>
 
-        <!-- <div class="lt_cnt">
-          <h2>Promotions</h2>
-          <div class="note">
-            <ul>
-              <li> We've put together a list of events and special offers to give you a simple way to take advantage of promotions across our website.</li>
-              <li>We have just made your life easier. We offer a quick way to find the best deals. You'll find what you're looking for at a great price.</li>
-              <li>Oh,igottabuythis is a participant in the Amazon Services LLC Associates Program & the Amazon EU Associates Programme, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com, Amazon.ca, Amazon.co.uk and affiliated sites.</li>
-              <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
-            </ul>
-          </div>
-        </div>
-        
-        <div class="rt_cnt">
-          <h2>Promotions on Amazon</h2>
-          <div class="box_wrap">
-          </div>
-        </div> -->
-
-        <div class="promotion_box">
-          <!-- <img src="" alt=""> -->
-          <div class="inner">
-            <h2><a target="_blank" href="#n">Take $25 off your first AmazonFresh order of $100 or more.</a></h2>
-            <p>This is a limited time offer. Offer good while supplies last. Offer is restricted to select AmazonFresh customers who are recipients of this offer. Offer applies to first-time customer orders. Offer is valid on orders of $100 or more.</p>
-            <span>End Date : On going.</span>
-          </div>
-          <div class="btn">
-            <a href="#n">Discover More</a>
-          </div>
-        </div>
-
-        <div class="promotion_box">
-          <div class="image_box">
-            <a target="_blank" href="#n"><img src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
-          </div>
-          <div class="inner">
-            <h2><a target="_blank" href="#n">Amazon | Up to 80% off Warehouse Products</a></h2>
-            <span>End Date : On going.</span>
-          </div>
-          <div class="btn">
-            <a href="#n">Discover More</a>
-          </div>
-        </div>
-
-        <div class="promotion_box">
-          <!-- <img src="" alt=""> -->
-          <div class="inner">
-            <h2><a target="_blank" href="#n">Up to 50% off | Great deals on like-new products on Amazon Renewed</a></h2>
-            <p>Amazon Warehouse offers deals on hundreds of thousands of warehouse-damaged, returned, open-box, and pre-owned items.</p>
-            <em>CODE: 20EXTRA</em>
-            <span>End Date : On going.</span>
-          </div>
-          <div class="btn">
-            <a href="#n">Discover More</a>
-          </div>
-        </div>
-
-        <div class="promotion_box">
-          <!-- <img src="" alt=""> -->
-          <div class="inner">
-            <h2><a target="_blank" href="#n">Take $25 off your first AmazonFresh order of $100 or more.</a></h2>
-            <p>This is a limited time offer. Offer good while supplies last. Offer is restricted to select AmazonFresh customers who are recipients of this offer. Offer applies to first-time customer orders. Offer is valid on orders of $100 or more.</p>
-            <span>End Date : On going.</span>
-          </div>
-          <div class="btn">
-            <a href="#n">Discover More</a>
-          </div>
-        </div>
-
-        <div class="promotion_box">
-          <!-- <img src="" alt=""> -->
-          <div class="inner">
-            <h2><a target="_blank" href="#n">Up to 50% off | Great deals on like-new products on Amazon Renewed</a></h2>
-            <p>Amazon Warehouse offers deals on hundreds of thousands of warehouse-damaged, returned, open-box, and pre-owned items.</p>
-            <span>End Date : On going.</span>
-          </div>
-          <div class="btn">
-            <a href="#n">Discover More</a>
-          </div>
-        </div>
-
-         <div class="promotion_box">
-          <a target="_blank" href="#n"><img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt=""></a>
-          <div class="inner">
-            <h2><a target="_blank" href="#n">Amazon | Up to 80% off Warehouse Products</a></h2>
-            <span>End Date : On going.</span>
-          </div>
-          <div class="btn">
-            <a href="#n">Discover More</a>
-          </div>
-        </div>
-        
-
-      </div><!--./wrap-->
-    </div><!--./promotions-->   
-  </div>
+  </div><!--./wrap-->
+</div><!--./layout-->

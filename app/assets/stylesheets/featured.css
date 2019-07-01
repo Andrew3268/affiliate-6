@@ -45,7 +45,7 @@
 .featured .sm_pc .search_bar{position:relative;margin-top:20px;border:1px solid #ccc;}
 .featured .sm_pc .search_bar .form-control{padding:5px 0;width:80%;border:none;}
 .featured .sm_pc .search_bar img{position:absolute;top:3px;right:5px;}
-.featured .sm_pc .filter-search{margin-top:10px;padding:5px 10px;}
+/*.featured .sm_pc .filter-search{margin-top:10px;padding:5px 10px;}*/
 .featured .sm_pc .filter-search li{margin:5px 0;text-align:center;}
 .featured .sm_pc .filter-search li a{text-decoration:none;}
 .featured .sm_pc .filter-button{font-family: 'Anton', sans-serif;line-height:1.1;font-size:45px;color:#000;width:100%;}
@@ -499,13 +499,16 @@
 /* Begin Promotion */
 .promotions{margin-bottom:200px;font-family: 'Montserrat', sans-serif;color:#616161;}
 .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:60px;}
+.promotions .featured .sm_pc .amzpromo button{width:145px;}
+.promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;}
+.promotions .featured .sm_mobile .guide_controll p{font-size:40px;color:#fff;}
 .promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
 .promotions .guide_controll{background:#000;}
 .promotions .guide_controll .btn{font-size:20px;margin:0 1%;color:#fff;}
 .promotions .guide_controll .form-control{margin:10px 0;width:300px;padding:5px;line-height:25px;}
 .promotions .promotion_box{float:left;width:31.3333%;height:450px;margin:0 1% 2% 1%;border:1px solid;position:relative;}
 .promotions .promotion_box .image_box{}
-.promotions .promotion_box  img{width:100%;height:200px;margin-bottom:-15px;}
+.promotions .promotion_box img{width:100%;height:200px;margin-bottom:-15px;object-fit:cover;}
 .promotions .promotion_box .inner{padding:20px;}
 .promotions .promotion_box .inner h2{font-size:27px;line-height:1.2;font-weight:100;}
 .promotions .promotion_box .inner h2 a{text-decoration:none;color:#616161;}
@@ -525,6 +528,7 @@
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:35px;}
+  .promotions .featured .sm_pc .amzpromo button{width:145px;}
   .promotions .guide_controll .btn{font-size:17px;}
   .promotions .guide_controll .form-control{margin:3px 0 10px 0;width:100%;}
   .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
