@@ -500,7 +500,7 @@
 .promotions{margin-bottom:200px;font-family: 'Montserrat', sans-serif;color:#616161;}
 .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:60px;}
 .promotions .featured .sm_pc .amzpromo button{width:145px;}
-.promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;}
+.promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:50px;}
 .promotions .featured .sm_mobile .guide_controll p{font-size:40px;color:#fff;}
 .promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
 .promotions .guide_controll{background:#000;}
