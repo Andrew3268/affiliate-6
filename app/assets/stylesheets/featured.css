@@ -515,6 +515,8 @@
 .promotions .promotion_box .inner h2 a:hover{text-decoration:underline;}
 .promotions .promotion_box .inner .gift_category{text-transform:uppercase;margin-top:5px;}
 .promotions .promotion_box .inner p{margin-top:15px;}
+.promotions .promotion_box .inner ul{margin:5px 0 0 15px;}
+.promotions .promotion_box .inner ul li{list-style:disc;}
 .promotions .promotion_box .inner em{margin-top:15px;font-size:20px;font-weight:500;display:block;}
 .promotions .promotion_box .inner span{display:block;position:absolute;bottom:50px;}
 .promotions .promotion_box .btn{position:absolute;bottom:0;line-height:42px;border-top:1px solid;padding:0 20px;}
