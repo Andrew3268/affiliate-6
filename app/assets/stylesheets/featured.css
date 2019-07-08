@@ -571,7 +571,7 @@
 .btn-outline{background-color: transparent;border: 3px solid #ffffff;}
 .btn-outline:hover {border-color: #2a9fff;color: #2a9fff;box-shadow: 0px 1px 8px 0px rgba(245, 199, 0, 0.2);}
 @media screen and (max-width:640px){
-  .movie-card__title {margin:160px 0 5px 0;}
+  .movie-card__title{font-size:20px;margin:160px 0 5px 0;}
   .movie-card__content a{font-size:15px;margin:7px;}
   .movie-card[data-movie="Blade Runner"]{margin-bottom:60px;}
 }
