@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'deals/promotions'
   get 'deals/codes'
   get 'deals/bestdeals'
+  get 'deals/amz_prime'
   get 'deals/shoes'
   get 'deals/sneakers01M'
   get 'deals/sneakers01W'
@@ -31,14 +32,14 @@ Rails.application.routes.draw do
   get 'editors/editor_01'
 
   get 'guides/index'
-  get 'guides/gift_guide_01'
-  get 'guides/gift_guide_02'
-  get 'guides/gift_guide_03'
+  get 'guides/guide_01'
+  get 'guides/guide_02'
+  get 'guides/guide_03'
   
   get 'blogs/index'
-  get 'blogs/blog_01'
-  get 'blogs/blog_02'
-  get 'blogs/blog_03'
+  get 'blogs/blog_01_amz_prime'
+  get 'blogs/blog_02_amz_trial'
+  get 'blogs/blog_03_memorialday'
   get 'blogs/fourthofjuly'
 
   get 'promocodes_days/day_01'

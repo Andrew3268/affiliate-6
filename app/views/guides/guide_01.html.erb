@@ -2,23 +2,25 @@
   <div class="wrap">
   <%= render 'shared/header_short' %>
 
-<!--   <div class="location clearfix">
-    <div class="wrap">
-      <div class="inner">
-        <span><a href="/recommends/">Featured</a></span> > <a href="/guides/index">Gift Guide</a> > <a href="">FOR HIM</a>
-      </div>
-    </div>
+<!--   <div class="guide_header">
+    <h2 class="pink">Gift for people who are CRAZY about PINK!</h2>
   </div> -->
 
-  <div class="guide_header">
-    <h2>38 Father's Day Gift Ideas for the Coolest Dad Around</h2>
+  <div class="guide_show_header" id="movie-card-list">
+    <div class="movie-card" data-section="batman">
+      <div class="movie-card__overlay"></div>                
+      <div class="movie-card__content">
+        <div class="movie-card__header">
+          <h1 class="movie-card__title gift_show_title">Gift for people who are CRAZY about BATMAN!</h1>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="guide_show clearfix">
-    
 
     <div class="flex guide_show_wrap" id="gallery">
-      <!-- <div class="column_box">
+      <!-- <div class="column_box last_column_box">
         <div class="flex column" onclick="currentSlide(Page_Number)">
           <img src="Image_URL">
         </div>
@@ -28,10 +30,11 @@
         <div class="flex column" onclick="currentSlide(Page_Number)">
           <img src="Image_URL">
         </div>
-        <div class="flex column" onclick="currentSlide(Page_Number)">
+        <div class="flex column last_box" onclick="currentSlide(Page_Number)">
           <img src="Image_URL">
         </div>
       </div> -->
+
       <div class="column_box">
         <div class="flex column" onclick="currentSlide(1)">
           <img src="https://images-na.ssl-images-amazon.com/images/I/616sJVZ0ixL._SX679_.jpg">
@@ -60,6 +63,7 @@
           <img src="https://images-na.ssl-images-amazon.com/images/I/71uX2g5BzvL._SX522_.jpg">
         </div>
       </div>
+
     </div><!--./show_wrap-->
 
     <div id="myModal" class="modal">
@@ -67,7 +71,43 @@
       <div class="modal-content">
         <span class="close">&times;</span> <!--close button--> 
 
+        <!-- <div class="flex slides clearfix">
+          <div class="numbering">Current_Page / Total_Page</div>
+          <div class="inner_wrap">
+            <div class="img_box">
+             <a target="_blank" href="Product_URL"><img src="Image_URL"></a>
+            </div>
+            <div class="inner">
+              <h2><a href="Product_URL">Image_Title</a></h2>
+              <strong>BY Product_Source</strong>
+              <em>$Reg_Price</em>
+              <p>$Current_Price (Percentage% OFF)</p>
+              <div class="btn">
+                <a href="Product_URL">Check it Out on <span>Product_Source</span></a>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
         <div class="flex slides clearfix">
+          <div class="numbering">Current_Page / Total_Page</div>
+          <div class="inner_wrap">
+            <div class="img_box">
+             <a target="_blank" href="Product_URL"><img src="Image_URL"></a>
+            </div>
+            <div class="inner">
+              <h2><a href="Product_URL">Image_Title</a></h2>
+              <strong>BY Product_Source</strong>
+              <em>$Reg_Price</em>
+              <p>$Current_Price (Percentage% OFF)</p>
+              <div class="btn">
+                <a href="Product_URL">Check it Out on <span>Product_Source</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       <!--  <div class="flex slides clearfix">
           <div class="numbering">1 / 6</div>
           <div class="inner_wrap">
             <div class="img_box">
@@ -187,7 +227,7 @@
               <a href="#n">Check it Out on <span>Amazon</span></a>
             </div>
           </div>
-        </div>
+        </div> -->
 
 
 
