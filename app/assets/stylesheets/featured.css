@@ -572,7 +572,7 @@
   .movie-card__content {margin-top: 1em;width: 100%;float: inherit;max-width: 100%;padding: 0 1em 1em;}
 }
 .movie-card__header{margin-bottom: 0;}
-.movie-card__title {color:#fff;margin-top:-10px;}
+.movie-card__title{color:#fff;margin-top:-10px;}
 .movie-card__info{text-transform:uppercase;letter-spacing:2px;font-size:13px;color:#2a9fff;line-height:1;margin:0;font-weight:700;margin-top:-10px;}
 .movie-card__desc {font-weight: 300;color:#fff;}
 .movie-card__content .btn{padding: .5rem 2rem;/*background-color: rgba(255, 255, 255, 0.4);*/color: white;}
@@ -584,8 +584,9 @@
   .movie-card[data-movie="Blade Runner"]{margin-bottom:60px;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
+  .movie-card__title{font-size:17px;}
   .movie-card__content a{font-size:15px;margin:3px 0;}
-  .movie-card__info{font-size:10px;}
+  .movie-card__info{font-size:10px;margin-top:-3px;}
   .movie-card__content .btn{padding:3px 10px;}
 }
 
