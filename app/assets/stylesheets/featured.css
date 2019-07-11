@@ -284,7 +284,7 @@
   .guide_show .column_box .last_box{border:none;}
   .guide_show .column{width:48%;border:none;padding:0;margin:1%;box-shadow:0 4px 11px 0 rgba(221,221,221,.5);}
   .guide_show .column:hover{box-shadow: 0 0 0;}
-  .guide_show .column img{width:100%;height:175px;object-fit:cover;border-radius:10px;}
+  .guide_show .column img{height:175px;object-fit:contain;border-radius:10px;}
   .guide_show .shoes_column img{object-fit:contain;}
   .guide_show .close{right:-20px;}
   .guide_show .modal-content{margin:50px auto 0 auto;}
@@ -556,13 +556,14 @@
   .movie-card {background-position: 50% 0%;background-size: cover;height: 400px;}
 }
 .movie-card[data-section="deals"]{background-image:url(https://images.unsplash.com/photo-1561132680-1c6abcf10a81?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);}
+.movie-card[data-section="pink"]{background-image:url(https://images.unsplash.com/photo-1490367605959-06955305859b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);}
 .movie-card[data-section="batman"]{background-image:url(https://images.unsplash.com/photo-1497124401559-3e75ec2ed794?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);}
-.movie-card[data-section="marvel"]{background-image:url(https://images.unsplash.com/photo-1505489435671-80a165c60816?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60);}
-.movie-card__overlay {width: 100%;height: 100%;border-radius: 8px;background: linear-gradient(to right, rgba(42, 159, 255, 0.2) 0%, #212120 45%, #212120 100%);background-blend-mode: multiply;position: absolute;top: 0;bottom: 0;right: 0;left: 0;}
+.movie-card[data-section="marvel"]{background-image:url(https://upload.wikimedia.org/wikipedia/commons/0/04/MarvelLogo.svg);}
+.movie-card__overlay{width: 100%;height: 100%;border-radius: 8px;background:linear-gradient(to right, rgba(42, 159, 255, 0.2) 0%, #212120 45%, #212120 100%);background-blend-mode: multiply;position: absolute;top: 0;bottom: 0;right: 0;left: 0;}
+.pink{background:linear-gradient(to right, rgba(300, 159, 255, 0.2) 0%, #ffc1cb 45%, #ffc1cb 100%);}
 @media screen and (max-width: 600px) {
-  .movie-card__overlay {
-    background: linear-gradient(to bottom, rgba(42, 159, 255, 0.2) 0%, #212120 60%, #212120 100%);
-  }
+  .movie-card__overlay {background:linear-gradient(to bottom, rgba(42, 159, 255, 0.2) 0%, #212120 60%, #212120 100%);}
+  .pink{background:linear-gradient(to bottom, rgba(300, 159, 255, 0.2) 0%, #ffc1cb 45%, #ffc1cb 100%);}
 }
 .movie-card__content {width: 100%;max-width:430px;display: flex;align-items: flex-start;flex-direction: column;position: relative;float: right;padding:15px 20px 20px 0;}
 .movie-card__content a{text-decoration:none;color:#fff;font-size:17px;display:block;margin:10px 0;}
