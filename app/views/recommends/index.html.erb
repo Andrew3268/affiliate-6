@@ -1,98 +1,22 @@
 <div class="layout"><!--layout-->
-    
+ <div class="wrap">   
   <%= render 'shared/header' %>
-    
-  <div class="wrap">
-    
-      <div class="cu_sub_nav">
-        <ul class="clearfix">
-          <li><a class="active" href="/recommends">Featured</a></li>
-          <!--<li><a href="/guides/index">Gift Guide</a></li>-->
-          <!-- <li><a href="/editors/index">Editor's Pick</a></li> -->
-          <!-- <li><a href="/blogs/index">Blog</a></li> -->
-        </ul>
-      </div>
+  
+    <div class="cu_sub_nav">
+      <ul class="clearfix">
+        <li><a class="active" href="/recommends">Editor's Pick TOP 10</a></li>
+        <!-- <li><a href="/guides/index">Gift Guide</a></li> -->
+        <!-- <li><a href="/editors/index">Editor's Pick</a></li> -->
+        <!-- <li><a href="/blogs/index">Blog</a></li> -->
+      </ul>
+    </div>
 
-      <div class="featured common_layout clearfix">
-      
-        <div class="lt_cnt deal">
-          <h2>Featured</h2>
-          <!-- <div class="note">
-            <ul>
-              <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
-            </ul>
-          </div> -->
-          <button class="gnb_open"><img src="<%=asset_path 'open_black.png' %>" alt="모바일 메뉴 열기" /></button>
-          <div class="sm_pc">
-            
-           <!--  <div class="search_bar">
-              <input type="text" class="form-control" placeholder="Search...">
-              <img src="<%=asset_path 'search.png' %>" alt="" />
-            </div>
-            
-            <%= form_for "",url: recommends_path, role: "search", method: :get do %>
-              <%= text_field_tag :search, @search_term,placeholder: "Search..." %>
-            <% end %> -->
+    <div class="promotions common_layout clearfix">
+      <%= render 'recommends/navbar' %>
+      <div class="filter-group guide_wrap">
+        <%= render 'recommends/body' %>
+      </div><!--./guide_wrap-->
+    </div>      
 
-            <ul class="filter-search">
-              <li><button class="filter-button btn btn-md btn-primary" data-filter="*">All Featured</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="gadgets">Gadgets</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="fashion">Fashion</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="travel">Travel</button></li>
-              <li><button class="filter-button btn btn-md" data-filter="home&kitchen">Home&Kitchen</button></li>
-              <% if can? :update, @recommends %>
-                <li><%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %></li>
-                <li><a class="filter-button" href="/categories/">Manage Categories</a></li>
-                <% if user_signed_in? %>
-                  <li><%= link_to "Log out", destroy_user_session_path, method: :delete, :class => "filter-button"  %></li>
-                <% else %>
-                 <li><%= link_to "Log in", new_user_session_path, :class => "filter-button"  %></li>
-                 <!--<li><%= link_to "Sign up", new_user_registration_path %></li>-->
-                <% end %>
-              <% end %>
-            </ul>
-          </div>
-          
-          <div class="sm_mobile">
-            <ul class="filter-search">
-              <li><button class="filter-button btn btn-md btn-primary" data-filter="*">All Featured</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="gadgets">Gadgets</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="geeky">Geeky</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="fashion">Fashion</button></li>
-              <li><button class="filter-button btn btn-md white-text" data-filter="travel">Travel</button></li>
-              <li><button class="filter-button btn btn-md" data-filter="home&kitchen">Home&Kitchen</button></li>
-              <% if can? :update, @recommends %>
-                <li><%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %></li>
-                <li><a class="filter-button" href="/categories/">Manage Categories</a></li>
-                <% if user_signed_in? %>
-                  <li><%= link_to "Log out", destroy_user_session_path, method: :delete, :class => "filter-button"  %></li>
-                <% else %>
-                 <li><%= link_to "Log in", new_user_session_path, :class => "filter-button"  %></li>
-                 <!--<li><%= link_to "Sign up", new_user_registration_path %></li>-->
-                <% end %>
-              <% end %>
-            </ul>
-            <button class="gnb_close"><img src="<%=asset_path 'close_white.png' %>" alt="모바일 메뉴 닫기" />
-          </div>
-        
-        </div><!--./lt_cnt-->
-        <div class="gnb_kbg"></div>
-        
-        <div class="rt_cnt">
-          <h2>We Love </h2>
-          <div class="filter-group clearfix">
-            <%= render 'recommends/body' %>
-          </div>
-
-        </div><!--./rt_cnt-->
-      </div><!--./featured-->
   </div><!--./wrap-->
 </div><!--./layout-->
-<script> 
-  <%= render(:partial => 'jquery', :handlers => [:erb], :formats => [:js]) %>
-</script>
-
-
-
-

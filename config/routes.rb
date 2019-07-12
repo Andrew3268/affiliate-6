@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 
   resources :recommends
   # root 'recommends#index'
+  # root 'recommends#index_02'
 
   resources :categories
   # root 'categories#index'

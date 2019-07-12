@@ -9,6 +9,10 @@ class RecommendsController < ApplicationController
     @recommends = Recommend.all.order("created_at DESC")
   end
 
+  def index_02
+    @recommends = Recommend.all.order("created_at DESC")
+  end
+
   def show
     @related = Recommend.where.not(id: @recommend).order("created_at DESC").limit(6)
   end

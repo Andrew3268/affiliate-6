@@ -1,0 +1,54 @@
+<div class="layout"><!--layout-->
+ <div class="wrap">   
+  <%= render 'shared/header' %>
+  
+    <div class="cu_sub_nav">
+      <ul class="clearfix">
+        <li><a class="active" href="/recommends">Editor's Pick Top 10</a></li>
+        <li><a href="/guides/index">Gift Guide</a></li>
+        <!-- <li><a href="/editors/index">Editor's Pick</a></li> -->
+        <!-- <li><a href="/blogs/index">Blog</a></li> -->
+      </ul>
+    </div>
+
+    <div class="promotions common_layout clearfix">
+   
+      <%= render 'recommends/navbar' %>
+      <div class="filter-group guide_wrap">
+
+        <!-- <div class="filter-node promotion_box" data-filter='["Categories","Products_Title"]'>
+          <div class="image_box"><a href="/guides/Guide_Link"><img src="Image_URL" alt=""></a></div>
+          <div class="node-box inner">
+            <h2><a href="/guides/Guide_Link">Products_Title</a></h2>
+            <span>Last Updated: Mon. Day. 2019</span>
+          </div>
+          <div class="btn"><a href="/guides/Guide_Link">Read More</a></div>
+        </div> -->
+
+      <% @recommends.each do |recommend| %>
+        <div class="filter-node promotion_box" data-filter='["<%= recommend.re_filter %>","<%= recommend.re_title %>"]'>
+          <div class="image_box"><%= link_to (image_tag recommend.re_image), recommend %></div>
+          <div class="node-box inner">
+            <h2><%= link_to recommend.re_title, recommend %></h2>
+            <p><%= link_to recommend.re_intro, recommend %></p>
+            <span>Last Updated: Mon. Day. 2019</span>
+          </div>
+          <!-- <div class="btn"><a href="/guides/Guide_Link">Read More</a></div> -->
+          <% if can? :update, recommend %>
+            <div class="btn clearfix admin">
+              <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
+            </div>    
+          <% end %>
+          <% if can? :update, recommend %>
+            <div class="pinterest">
+             <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+            </div>
+          <% end %>  
+        </div> 
+      <% end %>
+      
+      </div><!--./guide_wrap-->
+      
+
+  </div><!--./wrap-->
+</div><!--./layout-->
