@@ -1,11 +1,11 @@
 class BlogsController < ApplicationController
 
-  before_action :find_blog, only: [:blog_01, :blog_02, :blog_03]
+  before_action :find_blog, only: [:blog_01_amz_prime, :blog_02_amz_trial, :blog_03_memorialday]
 
-  def blog_01
+  def blog_01_amz_prime
   end
 
-  def blog_02
+  def blog_02_amz_trial
     @random = *(1..45)
     @lotto_1 = @random.sample(6).sort
     @lotto_2 = @random.sample(6).sort
@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
     @lotto_5 = @random.sample(6).sort
   end
 
-  def blog_03
+  def blog_03_memorialday
   end
 
   def fourthofjuly

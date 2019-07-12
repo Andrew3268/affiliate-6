@@ -15,7 +15,7 @@
 @media screen and (max-width:640px){
   .cu_sub_nav{margin:75px 0 -10px 0;}
   .cu_sub_nav ul>li{float:left;width:50%;text-align:center;}
-  .cu_sub_nav ul>li>a{font-size:18px;}
+  .cu_sub_nav ul>li>a{font-size:16px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
