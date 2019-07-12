@@ -532,6 +532,8 @@
 .promotions .promotion_box .btn{position:absolute;bottom:0;line-height:42px;border-top:1px solid;padding:0 20px;}
 /*.promotions .promotion_box .btn:hover{border-top:3px solid;font-weight:bold;}*/
 .promotions .promotion_box .btn a{text-decoration:none;color:#616161;font-size:20px;}
+.promotions .admin{float:right;}
+.promotions .admin a{text-decoration:none;color:#616161;}
 .filter-node.filter-me {opacity:0 !important; visibility:hidden; position:absolute; top: 2000px;}
 
 @media screen and (max-width:640px){

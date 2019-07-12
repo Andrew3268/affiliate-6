@@ -20,9 +20,6 @@
     <div class="btn clearfix admin">
       <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
     </div>    
-    <% if user_signed_in? %>
-     <li><%= link_to "Log out", destroy_user_session_path, method: :delete, :class => "filter-button"%></li>
-    <% end %>
     <% if can? :update, recommend %>
       <div class="pinterest">
        <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
