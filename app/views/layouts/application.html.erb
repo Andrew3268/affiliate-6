@@ -308,6 +308,15 @@
     //End show mobile menu on Guide page
 
 
+    //Copy Promo Code on Promo_Codes Page
+    $("button").click(function(){
+      $(this).parent().find("textarea").select();
+        //$("textarea").select();
+        document.execCommand('copy');
+    });
+    // End
+
+
   
   </script>
 

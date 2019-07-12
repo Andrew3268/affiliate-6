@@ -11,6 +11,10 @@ fieldset{border:0;}/*테두리삭제*/
 legend{display:none;}/* 숨김 */
 button{border:0;background:none;cursor:pointer;}
 table caption{display:none;}
+textarea.code_area{resize:none;font-size:20px;height:31px;text-align:center;border:1px solid #616161;}
+button.copycode{background:#000;color:#fff;font-size:17.5px;padding:5px;position:relative;top:-9px;}
+textarea.code_area_sec{resize:none;font-size:15px;height:26px;text-align:center;width:20%;margin:0 1.5%;font-weight:bold;}
+button.copycode_sec{background:#000;color:#fff;font-size:17.5px;padding:5px;width:20%;margin:0 1.5%;}
 
 .clearfix:after{display:block;clear:both;content:".";visibility:hidden;height:0;}
 .clearfix{display:block;}
