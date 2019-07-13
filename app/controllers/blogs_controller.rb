@@ -6,15 +6,15 @@ class BlogsController < ApplicationController
   end
 
   def blog_02_amz_trial
+  end
+
+  def blog_03_memorialday
     @random = *(1..45)
     @lotto_1 = @random.sample(6).sort
     @lotto_2 = @random.sample(6).sort
     @lotto_3 = @random.sample(6).sort
     @lotto_4 = @random.sample(6).sort
     @lotto_5 = @random.sample(6).sort
-  end
-
-  def blog_03_memorialday
   end
 
   def fourthofjuly
