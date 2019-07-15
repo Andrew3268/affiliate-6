@@ -36,8 +36,8 @@
       </div> -->
 
       <div class="column_box last_column_box">
-        <div class="flex column" onclick="currentSlide(Page_Number)">
-          <img src="Image_URL">
+        <div class="flex column" onclick="currentSlide(1)">
+          <img src="https://images-na.ssl-images-amazon.com/images/I/81PUN7xsJWL._SX679_.jpg">
         </div>
         <div class="flex column" onclick="currentSlide(Page_Number)">
           <img src="Image_URL">
@@ -57,7 +57,7 @@
       <div class="modal-content">
         <span class="close">&times;</span> <!--close button--> 
 
-        <!-- <div class="flex slides clearfix">
+       <!--  <div class="flex slides clearfix">
           <div class="numbering">Current_Page / Total_Page</div>
           <div class="inner_wrap">
             <div class="img_box">
@@ -66,8 +66,7 @@
             <div class="inner">
               <h2><a href="Product_URL">Image_Title</a></h2>
               <strong>BY Product_Source</strong>
-              <em>$Reg_Price</em>
-              <p>$Current_Price (Percentage% OFF)</p>
+              <div class="pricing"><em>$Reg_Price</em><p>$Current_Price (Percentage% OFF)</p></div>
               <div class="btn">
                 <a href="Product_URL">Check it Out on <span>Product_Source</span></a>
               </div>
@@ -76,16 +75,34 @@
         </div> -->
 
          <div class="flex slides clearfix">
+          <div class="numbering">1 / Total_Page</div>
+          <div class="inner_wrap">
+            <div class="img_box">
+             <a target="_blank" href="https://amzn.to/2lkBQVd"><img src="https://images-na.ssl-images-amazon.com/images/I/81PUN7xsJWL._SX679_.jpg"></a>
+            </div>
+            <div class="inner">
+              <h2><a href="https://amzn.to/2lkBQVd">Disney Mickey Mouse Hand Oven Glove</a></h2>
+              <strong>BY Seven20</strong>
+              <div class="pricing">
+                <p>$27.99</p>
+              </div>
+              <div class="btn">
+                <a href="https://amzn.to/2lkBQVd">Check it Out on <span>Amazon</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex slides clearfix">
           <div class="numbering">Current_Page / Total_Page</div>
           <div class="inner_wrap">
             <div class="img_box">
-             <a target="_blank" href="Product_URL"><img src="Image_URL"></a>
+             <a target="_blank" href="Product_URL"><img src="Image_URL" alt=""></a>
             </div>
             <div class="inner">
               <h2><a href="Product_URL">Image_Title</a></h2>
               <strong>BY Product_Source</strong>
-              <em>$Reg_Price</em>
-              <p>$Current_Price (Percentage% OFF)</p>
+              <div class="pricing"><em>$Reg_Price</em><p>$Current_Price (Percentage% OFF)</p></div>
               <div class="btn">
                 <a href="Product_URL">Check it Out on <span>Product_Source</span></a>
               </div>
@@ -97,13 +114,12 @@
           <div class="numbering">Current_Page / Total_Page</div>
           <div class="inner_wrap">
             <div class="img_box">
-             <a target="_blank" href="Product_URL"><img src="Image_URL"></a>
+             <a target="_blank" href="Product_URL"><img src="Image_URL" alt=""></a>
             </div>
             <div class="inner">
               <h2><a href="Product_URL">Image_Title</a></h2>
               <strong>BY Product_Source</strong>
-              <em>$Reg_Price</em>
-              <p>$Current_Price (Percentage% OFF)</p>
+              <div class="pricing"><em>$Reg_Price</em><p>$Current_Price (Percentage% OFF)</p></div>
               <div class="btn">
                 <a href="Product_URL">Check it Out on <span>Product_Source</span></a>
               </div>
@@ -115,38 +131,19 @@
           <div class="numbering">Current_Page / Total_Page</div>
           <div class="inner_wrap">
             <div class="img_box">
-             <a target="_blank" href="Product_URL"><img src="Image_URL"></a>
+             <a target="_blank" href="Product_URL"><img src="Image_URL" alt=""></a>
             </div>
             <div class="inner">
               <h2><a href="Product_URL">Image_Title</a></h2>
               <strong>BY Product_Source</strong>
-              <em>$Reg_Price</em>
-              <p>$Current_Price (Percentage% OFF)</p>
+              <div class="pricing"><em>$Reg_Price</em><p>$Current_Price (Percentage% OFF)</p></div>
               <div class="btn">
                 <a href="Product_URL">Check it Out on <span>Product_Source</span></a>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="flex slides clearfix">
-          <div class="numbering">Current_Page / Total_Page</div>
-          <div class="inner_wrap">
-            <div class="img_box">
-             <a target="_blank" href="Product_URL"><img src="Image_URL"></a>
-            </div>
-            <div class="inner">
-              <h2><a href="Product_URL">Image_Title</a></h2>
-              <strong>BY Product_Source</strong>
-              <em>$Reg_Price</em>
-              <p>$Current_Price (Percentage% OFF)</p>
-              <div class="btn">
-                <a href="Product_URL">Check it Out on <span>Product_Source</span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+       
         <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
         <a class="next" onclick="changeSlide(1)">&#10095;</a>
 

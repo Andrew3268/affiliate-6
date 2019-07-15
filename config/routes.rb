@@ -48,7 +48,7 @@ Rails.application.routes.draw do
   get 'blogs/blog_01_amz_prime'
   get 'blogs/blog_02_amz_trial'
   get 'blogs/blog_03_memorialday'
-  get 'blogs/fourthofjuly'
+  get 'blogs/blackfridayinjuly'
 
   get 'promocodes_days/day_01'
   get 'promocodes_days/day_02'
