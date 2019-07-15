@@ -9,7 +9,7 @@
 .cu_sub_nav{margin-top:270px;font-family: 'Montserrat', sans-serif;}
 .cu_sub_nav ul{}
 .cu_sub_nav ul>li{float:left;width:250px;text-align:center;}
-.cu_sub_nav ul>li>a{text-decoration:none;color:#3d3d3d;display:block;font-weight:bold;font-size:25px;}
+.cu_sub_nav ul>li>a{text-decoration:none;color:#3d3d3d;display:block;font-size:25px;}
 .cu_sub_nav ul>li>a.active{color:#000;font-weight:500;border-bottom:2px solid;}
 
 @media screen and (max-width:640px){
@@ -254,7 +254,8 @@
 .guide_show .slides .inner_wrap .inner h2 a{text-decoration:none;color:#000;}
 .guide_show .slides .inner_wrap .inner h2 a:hover{text-decoration:underline;}
 .guide_show .slides .inner_wrap .inner strong{font-size:14px;color:#ccc;font-weight:100;text-transform:uppercase;}
-.guide_show .slides .inner_wrap .inner em{display:block;margin-top:30px;font-weight:bold;font-size:20px;text-decoration:line-through;}
+.guide_show .slides .inner_wrap .inner .pricing{margin-top:30px;}
+.guide_show .slides .inner_wrap .inner em{display:block;font-weight:bold;font-size:20px;text-decoration:line-through;}
 .guide_show .slides .inner_wrap .inner p{font-weight:bold;font-size:20px;display:block;margin-bottom:60px;}
 .guide_show .slides .inner_wrap .inner .color{margin-bottom:0;font-weight:400;font-size:15px;color:#616161;}
 .guide_show .slides .inner_wrap .inner .size{font-weight:400;font-size:15px;color:#616161;margin-bottom:50px;}

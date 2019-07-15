@@ -36,6 +36,13 @@ Rails.application.routes.draw do
   get 'guides/guide_01'
   get 'guides/guide_02'
   get 'guides/guide_03'
+  get 'guides/guide_04'
+  get 'guides/guide_05'
+  get 'guides/guide_06'
+  get 'guides/guide_07'
+  get 'guides/guide_08'
+  get 'guides/guide_09'
+  get 'guides/guide_10'
   
   get 'blogs/index'
   get 'blogs/blog_01_amz_prime'
