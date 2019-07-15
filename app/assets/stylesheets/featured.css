@@ -439,6 +439,9 @@
 .blogs .blog_body .blog_ctn .inner span{background:#000;color:#fff;padding:0 5px;}
 .blogs .blog_body .blog_ctn .inner{margin-top:10px;}
 .blogs .blog_body .blog_ctn .inner p{margin-bottom:7px;}
+
+.blogs .blog_body .blog_ctn .banner{margin-top:15px;}
+.blogs .blog_body .blog_ctn .banner a{text-decoration:none;background:#000;color:#fff;padding:10px;text-align:center;display:block;margin-bottom:5px;}
 /*Begin blogs_sidebar*/
 .blogs .blog_side{float:left;width:30%;margin:0 2.5% 0 2.5%;}
 .blogs .blog_side img{width:100%;}
@@ -484,7 +487,7 @@
   .blogs .blog_body{float:none;width:100%;margin:0;border:none;padding:0;}
   .blogs .blog_body .blog_tit h2 span{font-size:20px;}
   .blogs .blog_body .blog_tit .inner_btn a{display:block;margin-bottom:5px;text-align:center;}
-  .blogs .blog_body .blog_ctn{padding:0;}
+  .blogs .blog_body .blog_ctn{margin-top:80px;padding:0;}
   .blogs .blog_body .blog_tit .inner_btn{margin-bottom:20px;border-bottom:1px solid #ccc;padding-bottom:20px;}
   .blogs .blog_side{float:none;width:auto;margin:0 5%;}
   .blogs .blog_side .inner img{width:100%;}
