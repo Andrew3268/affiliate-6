@@ -45,7 +45,7 @@ class GadgetsController < ApplicationController
 
   def update
     if @gadget.update(gadget_params)
-      redirect_to '/gadgets'
+      redirect_to '/'
     else
       render 'edit'
     end
