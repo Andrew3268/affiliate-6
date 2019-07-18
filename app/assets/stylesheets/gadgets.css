@@ -141,7 +141,7 @@
   .show_wrap .show_box .show_inner h2{font-size:20px;}
   .show_wrap .show_box .show_inner strong{font-size:15px;}
   .show_wrap .show_box .show_inner span p{font-size:13px;}
-
+  .show_wrap .show_box .show_inner .m_btn{width:100%;text-align:center;font-size:17px;}
   .show_wrap .show_box_down{width:100%;margin:0;}
   .show_wrap .show_box_down .sbd_box{float:left;width:48%;margin:2% 1%;}
   .show_wrap .show_box_down .sbd_box .down_img{height:175px;}
