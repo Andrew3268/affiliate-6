@@ -41,10 +41,4 @@ $(document).ready(function(){
   }
   //End
 
-
-
-  
-
-
-
 });

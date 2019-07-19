@@ -83,7 +83,6 @@ header .gnb_m,header .gnb_open2{display:none;}
   header.on{border-bottom:1px solid #ccc;}
   header.on .gnb_pc{margin-top:0;text-align:center}
   header.on .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:11px 10px 0 0;}
-
   header.on .visual{float:left;margin-top:18px;height:100%;}
   header.on .visual img{width:260px;}
   header.on .gnb_pc>ul{float:left;margin:0 0 0 0;padding:10px 0;}
@@ -128,10 +127,8 @@ header .gnb_m,header .gnb_open2{display:none;}
   header .gnb_pc>ul>li>a{font-size:30px;line-height:1;}
   header.on{border-bottom:1px solid #ccc;height:60px;}
   header.on .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:6px 10px 0 0;}
-
   header.on .visual{float:left;margin-top:15px;}
   header.on .visual img{width:200px;}
-  
   header.on .gnb_pc>ul{margin:0 0 0 20px;padding:5px 0;}
   header.on .gnb_pc>ul>li{width:108px}
   header.on .gnb_pc>ul>li:nth-child(3){width:150px;}
@@ -147,40 +144,32 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 /* Begin For header_short */
 @media screen and (min-width:680px){
-  .header_short{border-bottom:1px solid #ccc;}
-  .header_short .gnb_pc{margin-top:0;text-align:center}
-  .header_short .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:11px 10px 0 0;}
-  .header_short .visual{float:left;margin-top:15px;height:100%;}
-  .header_short .visual img{width:260px;}
-  .header_short .gnb_pc>ul{float:left;margin:0 0 0 0;padding:10px 0;}
-  .header_short .gnb_pc>ul>li{float:left;width:150px;font-weight:400;text-align:center;}
-  .header_short .gnb_pc>ul>li:nth-child(3){width:190px;}
-  .header_short .gnb_pc>ul>li>a{font-size:20px;line-height:50px;}
-  .header_short .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
-  .header_short .gnb_pc>ul>li>a>em{display:inline-block;}
-  .header_short .gnb_pc>ul>li>a>span{display:none;}
+  .m_header{display:none;}
+  .fix_header{position:fixed;background:#fff;height:60px;width:100%;top:0;left:0;border-bottom:1px solid #ccc;padding-left:48px;}
+  .fix_header img{display:inline-block;float:left;width:50px;height:50px;margin:6px 10px 0 0;}
+  .fix_header .fix_visual{float:left;height:100%;}
+  .fix_header .fix_visual img{width:260px;height:30px;margin-top:15px;}
+  .fix_header ul{float:left;margin:0;padding:5px 0;}
+  .fix_header ul>li{float:left;width:150px;font-weight:400;text-align:center;}
+  .fix_header ul>li:nth-child(3){width:190px;}
+  .fix_header ul>li>a{text-decoration:none;color:#000;font-size:20px;line-height:50px;}
+  .fix_header ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
+  .fix_header ul>li>a>em{display:inline-block;}
+  .fix_header ul>li>a>span{display:none;}
+}
+
+@media screen and (max-width:680px){
+  .fix_header_wrap{display:none;}
+  .m_header{display:block;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
-  .header_short{border-bottom:1px solid #ccc;}
-  .header_short .gnb_pc{margin-top:0;text-align:center}
-  .header_short .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:30px;height:30px;margin:11px 10px 0 0;}
-  .header_short .visual{float:left;margin-top:9px;height:100%;}
-  .header_short .visual img{width:200px;}
-  .header_short .gnb_pc>ul{float:left;padding:0;}
-  .header_short .gnb_pc>ul>li{float:left;width:120px;font-weight:400;text-align:center;}
-  .header_short .gnb_pc>ul>li:nth-child(3){width:190px;}
-  .header_short .gnb_pc>ul>li>a{font-size:15px;line-height:50px;}
-  .header_short .gnb_pc>ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
-  .header_short .gnb_pc>ul>li>a>em{display:inline-block;}
-  .header_short .gnb_pc>ul>li>a>span{display:none;}
-}
-@media screen and (max-width:680px){
-  .header_short .wrap{margin:0}
-  .header_short .gnb_pc{margin-top:0px;text-align:center;min-width:auto;border-bottom:1px solid #ccc;}
-  .header_short .visual{float:none;margin-top:10px;}
-  .header_short .visual img{width:50%;}
-  .header_short .gnb_pc>ul{display:none;}
-  .header_short .gnb_pc_scroll{display:none;}
+  .fix_header{height:50px;}
+  .fix_header img{width:30px;height:30px;}
+  .fix_header .fix_visual{float:left;height:100%;}
+  .fix_header .fix_visual img{width:200px;height:25px;margin-top:13px;}
+  .fix_header ul{padding:0;}
+  .fix_header ul>li{width:120px;}
+  .fix_header ul>li>a{font-size:15px;} 
 }
 /* End For header_short */
 
