@@ -1,6 +1,6 @@
 .gadgets_wrapper{margin-top:300px;}
 .gadgets_wrapper main {}
-.gadgets_wrapper main #filter{float:left;width:290px;background:#000;border-right:1px solid #ccc;color:#fff;}
+.gadgets_wrapper main #filter{float:left;width:290px;background:#fff;border-right:1px solid #ccc;}
 .gadgets_wrapper main #filter.on{position:fixed;top:100px;}
 .gadgets_wrapper main #filter .ui-group{}
 .gadgets_wrapper main #filter .ui-group label{font-family: 'Anton', sans-serif;font-size:50px;border-bottom:1px solid #ccc;padding-bottom:3px;margin-bottom:20px;display:block;width:60%;}
@@ -32,7 +32,7 @@
 
 @media screen and (min-width:681px) and (max-width:1199px){
   .gadgets_wrapper{margin-top:180px;}
-  .gadgets_wrapper main #filter{position:fixed;right:-800px;top:0;width:50%;z-index:302;}
+  .gadgets_wrapper main #filter{position:fixed;right:-800px;top:0;width:50%;z-index:302;background:#000;color:#fff;}
   .gadgets_wrapper main #filter.on{top:0;}
   .gadgets_wrapper main #filter .ui-group{margin:10px 0 0 5%;}
   .gadgets_wrapper main #filter .color_group{margin-top:0;}
