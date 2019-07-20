@@ -40,7 +40,7 @@
   .gadgets_wrapper main #filter .ui-group .control label,
   .gadgets_wrapper main #filter .color_group .color-circle{font-size:17px;}
   
-  .gadgets_wrapper main .gnb_open{display:block;position:fixed;right:5px;top:40px;z-index:301;margin:0 5%;}
+  .gadgets_wrapper main .gnb_open{display:block;position:fixed;right:5px;top:160px;z-index:301;margin:0 5%;}
   .gadgets_wrapper main .gnb_open.on{display:none;}
   .gadgets_wrapper main .gnb_open img{width:40px;height:40px;}
   /*
