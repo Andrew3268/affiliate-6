@@ -377,7 +377,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .footer .footer-content{height:auto;}
   .footer .footer-content .footer-section{padding:15px;}
   .footer .footer-content .about{float:none;width:100%;margin-right:0%;}
-  .footer .footer-content .links{float:none;width:100%;margin-right:%;}
+  .footer .footer-content .links{float:none;width:100%;margin-right:0%;}
   .footer .footer-content .contact-form{float:none;width:100%;}
   .footer .footer-content .links ul a{margin-bottom:5px;}
 }
