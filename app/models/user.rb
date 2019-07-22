@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
   has_many :gadgets
   has_many :recommends
   has_many :categories
+  has_many :messages
 
 end

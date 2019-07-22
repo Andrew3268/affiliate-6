@@ -1,0 +1,7 @@
+<%= simple_form_for @message do |f| %>
+  <%= f.input :m_spare_01, label: "Your name" %>
+  <%= f.input :mmail, label: "Your e-mail" %>
+  <%= f.input :mtitle, label: "Title" %>
+  <%= f.input :mcontent, label: "Comments", as: :text, :input_html => { :rows => 10 } %>
+  <%= f.button :submit, 'Send Message' %>
+<% end %>

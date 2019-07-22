@@ -1,0 +1,30 @@
+<div class="layout"><!--layout-->
+  <div class="wrap">
+  <%= render 'shared/header_short' %>
+
+    <div class="flash_message">
+      <% if flash[:message_board] %>  
+         <h2><%=flash[:message_board]%></h2>
+         <h3>Thank you so much for your message :D</h3>    
+         <p></p>
+      <% end %>
+    </div>
+
+    <% if can? :update, @messages %>
+      <div class="comment_show">
+        <h1><%= @message.mtitle %></h1>
+        <h3><%= @message.m_spare_01 %> | <%= @message.mmail %></h3>
+        <h5><%= @message.created_at.strftime("%B %d %Y, %l:%M%P") %></h5>
+        <p><%= @message.mcontent %></p>
+
+        <div class="btn">
+          <a href="/messages">HOME</a>
+          <%= link_to "Edit", edit_message_path(@message) %>
+          <%= link_to "Delete", message_path(@message), method: :delete, data: { confirm: "Are you sure?" } %>
+        </div>
+      </div>
+    <% end %>
+
+  </div>
+</div>
+<%= render 'shared/footer' %>

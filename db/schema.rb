@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190606134618) do
+ActiveRecord::Schema.define(version: 20190722013617) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -108,6 +108,30 @@ ActiveRecord::Schema.define(version: 20190606134618) do
   add_index "impressions", ["impressionable_type", "impressionable_id", "session_hash"], name: "poly_session_index"
   add_index "impressions", ["impressionable_type", "message", "impressionable_id"], name: "impressionable_type_message_index"
   add_index "impressions", ["user_id"], name: "index_impressions_on_user_id"
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "mtitle"
+    t.string   "mmail"
+    t.text     "mcontent"
+    t.string   "m_spare_01"
+    t.string   "m_spare_02"
+    t.string   "m_spare_03"
+    t.string   "m_spare_04"
+    t.string   "m_spare_05"
+    t.string   "m_spare_06"
+    t.string   "m_spare_07"
+    t.string   "m_spare_08"
+    t.string   "m_spare_09"
+    t.string   "m_spare_10"
+    t.text     "m_spare_11"
+    t.text     "m_spare_12"
+    t.text     "m_spare_13"
+    t.text     "m_spare_14"
+    t.text     "m_spare_15"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "recommends", force: :cascade do |t|
     t.integer  "user_id"

@@ -66,6 +66,9 @@ Rails.application.routes.draw do
   get 'deals_days/day_06'
   get 'deals_days/day_07'
 
+  resources :messages
+  # root 'messages#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
