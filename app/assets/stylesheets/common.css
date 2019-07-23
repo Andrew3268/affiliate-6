@@ -399,11 +399,11 @@ header .gnb_m,header .gnb_open2{display:none;}
 .message table tr th:nth-child(1){width:60%;}
 .message table tr td a{text-decoration:none;color:#000;}
 
-/*Contact Section*/
+/*Message Input Section*/
 .contact_form{width:800px;margin:65px auto 100px auto;}
 .contact_form input, .contact_form textarea{background:#272727;color:#fff;margin-bottom:10px;line-height:1.5rem;padding:.5rem .8rem;width:100%;border:none;border-radius:10px;}
 .contact_form input:focus, .contact_form textarea:focus{background:#1a1a1a;}
-.contact_form .btn{padding:5px 10px;background:#006669;color:#fff;border:1px solid transparent;border-radius:5px;}
+.contact_form .btn{padding:5px 10px;background:#08f;color:#fff;border:1px solid transparent;border-radius:5px;}
 
 /*Message Show Section*/
 .flash_message{width:1000px;margin:150px auto 50px auto;text-align:center}
@@ -413,4 +413,10 @@ header .gnb_m,header .gnb_open2{display:none;}
 .comment_show p{margin:30px 0 20px 0;}
 .comment_show a{text-decoration:none;background:#000;color:#fff;padding:5px 7px;border-radius:10px;display:inline-block;}
 
+@media screen and (max-width:640px){
+  .contact_form{width:100%;margin:70px 0 0 0;}
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+  .contact_form{width:100%;margin:70px 0 0 0;}
+}
   
