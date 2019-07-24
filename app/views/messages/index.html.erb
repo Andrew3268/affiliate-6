@@ -3,16 +3,37 @@
   <%= render 'shared/header' %>
 
     <div class="about_us">
-      <div class="mission">
-        <h1>Out Mission #1</h1>
-      </div>
 
-      <div class="works">
-      </div>
+      <div class="mission sections">
+       <h2>Our Mission</h2>
+       <p><span>#1</span> "Oh,igottabuythis"is the curation platform to discover awesome products from around the world. Staying up to date with the latest tech, the newest brilliant inventions, odd gadgets unique & weird design products.
+       </p>
+       <p><span>#2</span> "Oh,igottabuythis" is the deal information platform to find thousands of Amazon best deals, coupon codes, promotions you love. Easy to keep up to date with the latest information of promotion codes, coupons, sales and so on. <br />We are going to update more information of other online stores!! Coming Soon  :D</p>
 
-      <div class="contact_us">
        
       </div>
+
+      <div class="works sections">
+        <h2>How It Works</h2>
+        <p>"Oh,igottabuythis" contains affiliate links, which means that if you click on one of the product links, we’ll receive a small commission. This help support us and allows to continue to find and share good prodcuts and deals. Thank you for the support!</p>
+      </div>
+
+      <div class="qna sections">
+       <h2>Q&A</h2>
+       <h3># Do you actually sell products on this website?</h3>
+       <p>We do not sell any of the products here. We are simply linking to products you can find on other online stores like Amazon, Alibaba, Walmart, Kickstarter, Indiegogo, etc…</p>
+       <p>Please remember that we are not an actual webstore. We do not sell anything ourselves, and we do not ship anything ourselves. We cannot assist you with your purchase orders, and we do not know if a product can be shipped internationally.</p>
+       <h3># The product you're linking to is no longer available, or the link is broken?</h3>
+       <p>Sometimes products will run out of stock or completely be removed from the websites. If you find something like that, please let us know which item it is, so we can update it. We would be much obliged.</p>
+      </div>
+
+      <div class="bottom sections clearfix">
+        <h2>Notes</h2>
+        <p>"Oh,igottabuythis" acknowledge some content in this process, the aim is to provide for the convenience to the user. By specifying the source, we respect other people`s rights, as well as to provide support for those who own the contents. Please let us know if your writing has been copied in a way that infringes on copyright infringement, and we will try to work hard to resolve this issue.</p>
+
+        <a href="/messages/new">Contac Us</a>
+      </div>
+ 
 
       <% if can? :update, @messages %>
         <div class="message">

@@ -390,10 +390,18 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 /*About Us*/
-.about_us{margin-top:270px;}
+.about_us{width:1000px;margin:270px auto 50px auto;font-family: 'Montserrat', sans-serif;}
+.about_us .sections{margin-bottom:50px;border-bottom:1px solid #ccc;padding-bottom:10px;}
+.about_us h2{margin-bottom:15px;color:#fff;background:#000;padding:7px 10px;border-radius:10px;display:inline-block;}
+.about_us h3{padding:0 10px;margin-bottom:5px;}
+.about_us p{padding:0 10px;margin-bottom:15px;line-height:25px;}
+.about_us .mission p span{font-size:30px;}
+.about_us .qna p{padding:0 20px;}
+.about_us .bottom a{font-size:25px;text-decoration:none;background:#08f;color:#fff;padding:5px 20px;margin-right:10px;float:right;border-radius:10px;}
+
 
 /*Message Section*/
-.message{width:1000px;margin:150px auto 100px auto;}
+.message{margin-top:100px;}
 .message table {border-collapse: collapse;width: 100%;}
 .message th, td {padding: 8px;text-align: left;border-bottom: 1px solid #ddd;}
 .message table tr th:nth-child(1){width:60%;}
