@@ -38,3 +38,13 @@
    </div><!--./warp-->
   </div><!--./blogs-->
 </div><!--./layout-->
+
+<% if can? :update, @gadgets %>
+  <div class="wrap">
+    <%= @lotto_1 %><br />
+    <%= @lotto_2 %><br />
+    <%= @lotto_3 %><br />
+    <%= @lotto_4 %><br />
+    <%= @lotto_5 %>
+  </div>
+<% end %>
