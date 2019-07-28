@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
     
   end
 
-  def fourthofjuly
+  def blackfridayinjuly
     @random = *(1..45)
     @lotto_1 = @random.sample(6).sort
     @lotto_2 = @random.sample(6).sort
