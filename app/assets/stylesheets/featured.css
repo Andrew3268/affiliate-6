@@ -423,8 +423,7 @@
 .blogs .blog_body img{width:100%;}
 .blogs .blog_body h2{font-family: 'Montserrat', sans-serif;line-height:1.2;}
 .blogs .blog_body .blog2sub_title h2{margin-top:30px;}
-.blogs .blog_body .blog_tit{}
-.blogs .blog_body .blog_tit h2 span{font-size:40px;}
+.blogs .blog_body .blog_tit h2{font-size:40px;} 
 .blogs .blog_body .blog_tit p{margin:10px 0 20px 0;}
 .blogs .blog_body .blog_tit p a{text-decoration:none;color:#08f;}
 .blogs .blog_body .blog_tit address{display:inline-block;margin-right:5px;}
