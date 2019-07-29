@@ -408,10 +408,14 @@ header .gnb_m,header .gnb_open2{display:none;}
 .message table tr td a{text-decoration:none;color:#000;}
 
 /*Message Input Section*/
-.contact_form{width:800px;margin:65px auto 100px auto;}
-.contact_form input, .contact_form textarea{background:#272727;color:#fff;margin-bottom:10px;line-height:1.5rem;padding:.5rem .8rem;width:100%;border:none;border-radius:10px;}
-.contact_form input:focus, .contact_form textarea:focus{background:#1a1a1a;}
-.contact_form .btn{padding:5px 10px;background:#08f;color:#fff;border:1px solid transparent;border-radius:5px;}
+.contact_form{width:800px;margin:80px auto 0 auto;}
+.contact_form input, .contact_form textarea{background:#fff;color:#000;margin-bottom:10px;line-height:1.5rem;padding:.5rem .8rem;width:100%;border:1px solid #616161;border-radius:10px;}
+.contact_form input:focus, .contact_form textarea:focus{background:#fff;}
+.contact_form .m_name, .contact_form .m_mail{width:48%;float:left;}
+.contact_form .m_name{margin-right:2%;}
+.contact_form .m_mail{margin-left:2%;}
+.contact_form p{margin-bottom:10px;}
+.contact_form .btn{width:100px;padding:5px 10px;background:#08f;color:#fff;border:1px solid transparent;border-radius:5px;}
 
 /*Message Show Section*/
 .flash_message{width:1000px;margin:150px auto 50px auto;text-align:center}
