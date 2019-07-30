@@ -495,6 +495,7 @@
 @media screen and (min-width:641px) and (max-width:1199px){
   .blogs{margin:170px 0 100px 0 ;}
   .blogs .blog_side{padding:0;}
+  .blogs .blog_body{width:100%;}
   .blogs .blog_body .blog_tit h2 span{font-size:25px;}
   .blogs .blog_body .blog_ctn{padding:0;}
   .blogs .blog_side .gadget_blog img{height:80px;}
