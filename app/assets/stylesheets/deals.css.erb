@@ -353,8 +353,9 @@
   .popup-content table{margin:70px auto;}
 }
 
-
 /* For Editors' Pick */
+.editor_mobile{display:none;}
+.header_short_sub_nav{margin-top:90px;}
 .editors_pick{}
 .editors_pick .editors_box{float:left;width:18%;margin:0 1% 5% 1%;height:400px;}
 .editors_pick .editors_box img{width:100%;height:200px;object-fit:contain;}
@@ -370,6 +371,33 @@
 .editors_pick .editors_box .btn a{background:#000;color:#fff;text-decoration:none;padding:10px;display:block;border-radius:15px;}
 
 
+
+/* Drop Menu for Editors' Pick */
+.dropmenu{width:145px;display:inline-block;vertical-align:middle;}
+/*.dropmenu ul{margin: 0;padding: 0;}*/
+.dropmenu li{float:left;list-style:none;position:relative;background:#000;color:#fff;}
+.dropmenu li button{background:#000;}
+.dropmenu li a{text-decoration:none;color:#fff;display:block;padding:0.5em 1em;margin-left:15px;font-family: 'Montserrat', sans-serif;}
+.dropmenu li ul{display:none;position:absolute;left:0;top:100%;z-index:999;}
+.dropmenu li ul li{float:none;}
+.dropmenu li:hover{background:#000;}
+.dropmenu li:hover>ul{display:block;}
+.dropmenu li.dir>a:after{content: " +";color:#fff;}
+.dropmenu:after{content: "";display:table;clear:both;}
+@media screen and (max-width:640px){
+  .editor_mobile{display:block;}
+  .editors .editor_mobile .filter-search{margin:0;}
+  .editors .editor_mobile button.btn-md{margin-top:10px;text-align:left;}
+  .editors .editor_mobile .dropmenu{width:100px;}
+  .editors .editor_mobile .dropmenu ul{margin-top:10px;} 
+  .editors .editor_mobile .dropmenu ul li button{width:104px;margin:0 0 15px 10px;}
+  .editors .editor_mobile .dropmenu li{margin-top:-12px;}
+  .editors .editor_mobile .dropmenu li a{padding:0;margin:0;}
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+  .header_short_sub_nav{margin-top:80px;}
+  .dropmenu li a{padding:0;margin-left:33px;}
+}
 
 
 
