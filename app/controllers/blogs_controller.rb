@@ -9,7 +9,9 @@ class BlogsController < ApplicationController
   end
 
   def blog_03_backtoschool
-    
+  end
+
+  def blog_04_thebestdealsofweek
   end
 
   def blackfridayinjuly
