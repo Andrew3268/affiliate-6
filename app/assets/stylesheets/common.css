@@ -335,6 +335,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 }
 
 /*search*/
+.search_box{float:left;}
 .search_box input{font-size:35px;padding:10px;margin-left:20px;border:none;border-bottom:1px solid #ccc;}
 @media screen and (max-width:640px){
   .search_box input{font-size:15px;padding:5px;margin-left:5%;}
@@ -342,6 +343,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 @media screen and (min-width:641px) and (max-width:1199px){
   .search_box input{font-size:20px;padding:5px;}
 }
+
+.translate{float:left;}
 
 /* for pagination */
 .pagination{}

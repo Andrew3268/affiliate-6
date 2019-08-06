@@ -15,10 +15,21 @@
     <div class="gadgets">
       <div class="wrap">
 
-        <div class="search_box">
-          <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
-          <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
-          <% end %>
+        <div class="home_top clearfix">
+          <!-- <div class="translate">
+             <div id="google_translate_element"></div>
+            <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+            }
+            </script>
+            <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          </div> -->
+          <div class="search_box">
+            <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
+            <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
+            <% end %>
+          </div>
         </div>
    
         <div class="card_wrap clearfix">
