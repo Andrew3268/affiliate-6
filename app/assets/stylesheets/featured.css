@@ -513,7 +513,9 @@
 .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:60px;}
 .promotions .featured .sm_pc .guide_controll button.top_10{width:123px;}
 .promotions .featured .sm_pc .amzpromo button{width:145px;}
+.promotions .featured .sm_pc .amzpromo button.reviewed{width:121px;}
 .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:50px;}
+.promotions .featured .sm_pc .amzpromo button
 .promotions .featured .sm_mobile .guide_controll p{font-size:40px;color:#fff;}
 .promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
 .promotions .guide_controll{background:#000;}
@@ -541,7 +543,7 @@
 .filter-node.filter-me {opacity:0 !important; visibility:hidden; position:absolute; top: 2000px;}
 
 @media screen and (max-width:640px){
-  .promotions .guide_controll .btn{margin:0 2%;letter-spacing:1.6px;}
+  .promotions .guide_controll .btn{margin:0 2.8%;letter-spacing:1.6px;}
   .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
   .promotions .promotion_box{float:none;width:100%;margin-bottom:35px;}
   .promotions .guide_controll .form-control{width:95%;margin:10px 2.5%;}
@@ -549,6 +551,8 @@
 @media screen and (min-width:641px) and (max-width:1199px){
   .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:35px;}
   .promotions .featured .sm_pc .amzpromo button{width:121px;}
+  .promotions .featured .sm_pc .amzpromo button.reviewed{width:105px;}
+  .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:20px;}
   .promotions .featured .sm_pc .guide_controll button.top_10{width:98px;font-size:15px;border:1px solid;margin-bottom:5px;}
   .promotions .guide_controll .btn{font-size:17px;}
   .promotions .guide_controll .form-control{margin:3px 0 10px 0;width:100%;}
