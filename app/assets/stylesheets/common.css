@@ -384,6 +384,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .footer .footer-content .about{float:none;width:100%;margin-right:0%;}
   .footer .footer-content .links{float:none;width:100%;margin-right:0%;}
   .footer .footer-content .contact-form{float:none;width:100%;}
+  .footer .footer-content .contact-form ul li{margin-bottom:5%;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .footer .footer-content .footer-section{padding:15px 0;}
@@ -393,21 +394,28 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 /*About Us*/
-.about_us{width:1000px;margin:270px auto 50px auto;font-family: 'Montserrat', sans-serif;}
-.about_us .sections{margin-bottom:50px;border-bottom:1px solid #ccc;padding-bottom:10px;}
+.about_us{width:1000px;margin:100px auto 50px auto;font-family: 'Montserrat', sans-serif;}
+.about_us .sections{margin-bottom:100px;border-bottom:1px solid #ccc;padding-bottom:10px;}
 .about_us h2{margin-bottom:15px;color:#fff;background:#000;padding:7px 10px;border-radius:10px;display:inline-block;}
 .about_us h3{padding:0 10px;margin-bottom:5px;}
 .about_us p{padding:0 10px;margin-bottom:15px;line-height:25px;}
-.about_us .mission p span{font-size:30px;}
+.about_us .headline{font-size:100px;font-weight:bold;margin-bottom:25px;letter-spacing:10px;}
+.about_us .mission .under_head{margin-bottom:55px;}
+.about_us .mission .left,
+.about_us .mission .right{float:left;width:48%;margin:0 1%;}
+.about_us .mission p span{font-size:50px;font-weight:bold;}
+.about_us .works .works_box{float:left;width:31.33%;margin:15px 1% 0 1%;text-align:center;}
+.about_us .bodyline{font-size:40px;font-weight:bold;}
 .about_us .qna p{padding:0 20px;}
-.about_us .bottom a{font-size:25px;text-decoration:none;background:#08f;color:#fff;padding:5px 20px;margin-right:10px;float:right;border-radius:10px;}
+.about_us .qna a{font-size:25px;text-decoration:none;background:#08f;color:#fff;padding:5px 20px;margin-right:10px;float:right;border-radius:10px;}
 
 
 /*Message Section*/
 .message{margin-top:100px;}
 .message table {border-collapse: collapse;width: 100%;}
 .message th, td {padding: 8px;text-align: left;border-bottom: 1px solid #ddd;}
-.message table tr th:nth-child(1){width:60%;}
+.message table tr th:nth-child(2){width:50%;}
+.message table tr th:nth-child(3){width:150px;}
 .message table tr td a{text-decoration:none;color:#000;}
 
 /*Message Input Section*/
@@ -419,6 +427,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 .contact_form .m_mail{margin-left:2%;}
 .contact_form p{margin-bottom:10px;}
 .contact_form .btn{width:100px;padding:5px 10px;background:#08f;color:#fff;border:1px solid transparent;border-radius:5px;}
+.field_with_errors .error{position:absolute;top:193px;right:250px;color:red;}/* email validates */
+#message_m_spare_02{margin-bottom:5px;background:#000;color:#fff;}
 
 /*Message Show Section*/
 .flash_message{width:1000px;margin:150px auto 50px auto;text-align:center}
@@ -427,6 +437,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .comment_show{margin-top:100px;}
 .comment_show p{margin:30px 0 20px 0;}
 .comment_show a{text-decoration:none;background:#000;color:#fff;padding:5px 7px;border-radius:10px;display:inline-block;}
+
 
 @media screen and (max-width:640px){
   .contact_form{width:100%;margin:70px 0 0 0;}

@@ -1,38 +1,63 @@
 <div class="layout"><!--layout-->
   <div class="wrap">
-  <%= render 'shared/header' %>
+  <%= render 'shared/header_short' %>
 
     <div class="about_us">
+      <div class="mission sections clearfix">
+        <p class="headline">ABOUT</p>
+        <h2 class="under_head">It is discount platform but also trending item platform.</h2>
+        <div class="left">
+          <p><span>#1</span> "Oh,igottabuythis"is the curation platform to discover awesome products from around the world. Staying up to date with the latest tech, the newest brilliant inventions, odd gadgets unique & weird design products.</p>
+        </div>
+        <div class="right">
+          <p><span>#2</span> "Oh,igottabuythis" is the deal information platform to find thousands of Amazon best deals, coupon codes, promotions you love. Easy to keep up to date with the latest information of deals.<!-- promotion codes, coupons, sales and so on. <br />We are going to update more information of other online stores!! Coming Soon  :D --></p>
+        </div>
 
-      <div class="mission sections">
-       <h2>Our Mission</h2>
+
+      <!--  <h2>Our Mission</h2>
        <p><span>#1</span> "Oh,igottabuythis"is the curation platform to discover awesome products from around the world. Staying up to date with the latest tech, the newest brilliant inventions, odd gadgets unique & weird design products.
        </p>
-       <p><span>#2</span> "Oh,igottabuythis" is the deal information platform to find thousands of Amazon best deals, coupon codes, promotions you love. Easy to keep up to date with the latest information of promotion codes, coupons, sales and so on. <br />We are going to update more information of other online stores!! Coming Soon  :D</p>
-
-       
+       <p><span>#2</span> "Oh,igottabuythis" is the deal information platform to find thousands of Amazon best deals, coupon codes, promotions you love. Easy to keep up to date with the latest information of promotion codes, coupons, sales and so on. <br />We are going to update more information of other online stores!! Coming Soon  :D</p> -->
       </div>
 
-      <div class="works sections">
-        <h2>How It Works</h2>
+      <div class="works sections clearfix">
+        <p class="bodyline">HOW IT WORKS</p>
+        <!-- <h2 class="under_head">Quick way to find awesome products and the best deals. </h2> -->
+
+        <div class="left works_box">
+          <h3>Discover</h3>
+          <p>We Discover the best deals and trending items</p>
+        </div>
+
+        <div class="middle works_box">
+          <h3>Curate</h3>
+          <p>We Discover the best deals and trending items</p>
+        </div>
+
+        <div class="right works_box">
+          <h3>Share</h3>
+          <p>We Discover the best deals and trending items</p>
+        </div>
+
         <p>"Oh,igottabuythis" contains affiliate links, which means that if you click on one of the product links, we’ll receive a small commission. This help support us and allows to continue to find and share good prodcuts and deals. Thank you for the support!</p>
       </div>
 
-      <div class="qna sections">
-       <h2>Q&A</h2>
+      <div class="qna sections clearfix">
+       <p class="bodyline">Q & A</p>
        <h3># Do you actually sell products on this website?</h3>
        <p>We do not sell any of the products here. We are simply linking to products you can find on other online stores like Amazon, Alibaba, Walmart, Kickstarter, Indiegogo, etc…</p>
        <p>Please remember that we are not an actual webstore. We do not sell anything ourselves, and we do not ship anything ourselves. We cannot assist you with your purchase orders, and we do not know if a product can be shipped internationally.</p>
        <h3># The product you're linking to is no longer available, or the link is broken?</h3>
        <p>Sometimes products will run out of stock or completely be removed from the websites. If you find something like that, please let us know which item it is, so we can update it. We would be much obliged.</p>
+       <a href="/messages/new">Contac Us</a>
       </div>
 
-      <div class="bottom sections clearfix">
+<!--       <div class="bottom sections clearfix">
         <h2>Notes</h2>
         <p>"Oh,igottabuythis" acknowledge some content in this process, the aim is to provide for the convenience to the user. By specifying the source, we respect other people`s rights, as well as to provide support for those who own the contents. Please let us know if your writing has been copied in a way that infringes on copyright infringement, and we will try to work hard to resolve this issue.</p>
 
-        <a href="/messages/new">Contac Us</a>
-      </div>
+        
+      </div> -->
  
 
       <% if can? :update, @messages %>
@@ -40,12 +65,14 @@
           <h2>Check your messages from customers</h2>  
           <table>
             <tr>
+              <th>Type</th>
               <th>Title</th>
               <th>Name</th>
               <th>Writed Time</th>
             </tr>
             <% @messages.each do |message| %>
             <tr>
+              <td><%= message.m_spare_02 %></td>
               <td><%= link_to message.mtitle, message %></td>
               <td><%= message.m_spare_01 %></td>
               <td><%= message.created_at.strftime("%B %d %Y, %l:%M%P") %> | <%= link_to "Delete", message_path(message), method: :delete, data: { confirm: "Are you sure?" } %></td>
