@@ -1,3 +1,13 @@
+<!-- for play youtube video-->
+<div class="overlay-video">
+  <div class="videoWrapperExt">
+    <div class="videoWrapper">
+      <div class="video_close"></div>
+      <iframe id="player" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>        
+</div>
+
 <div class="layout">
   <%= render 'shared/header_short' %>
   <div class="show_wrap clearfix">
@@ -6,6 +16,11 @@
       <div class="show_box clearfix">
         <div class="show_img">
           <a target="_blank" href="<%= @gadget.gg_url %>"><img src="<%= @gadget.gg_img %>"></a>
+          <% if @gadget.gg_youtube01.present? %>
+            <div class="js-overlay-start start" data-url= "<%= @gadget.gg_youtube01 %>">
+              <button><img src="<%=asset_path 'youtube_02.png' %>" alt="Play Youtube" /></button>
+            </div>
+          <% end %>
         </div>
         <div class="show_inner">
          <h2><a target="_blank" href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
