@@ -28,7 +28,8 @@
 .add_gadget img{width:80px;}
 
 @media screen and (max-width:640px){
-  .gadgets{margin:80px 0;}
+  .gadgets{margin:60px 0;}
+  .gadgets .card_wrap .card{margin:20px 0;}
   .gadgets .card_wrap .card-body .admin{margin-top:-10px;}
   .gadgets .card_wrap .card-header{padding:5px;}
   .gadgets .card_wrap .card-body{padding:10px;}
