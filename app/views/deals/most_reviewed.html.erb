@@ -2,8 +2,26 @@
  <div class="wrap">   
   <%= render 'shared/header' %>
   <%= render 'deals/header' %>
+  <div class="codes">
+    <div class="lt_cnt most_categories">
+      <div class="toggle">
+        <ul>
+          <li>
+            <a href="#n">Categories of Most Reviewed</a>
+            <ul>
+              <li><a href="#n">Electronic</a></li>
+              <li><a href="#n">Home</a></li>
+              <li><a href="#n">Kitchen</a></li>
+              <li><a href="#n">Beauty</a></li>
+              <li><a href="#n">Travel</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>  
   
-  <div class="promotions editors_pick common_layout clearfix">
+  <div class="promotions editors_pick common_layout most_wrapper clearfix">
     <%= render 'deals/navbar_most_reviewed' %>
     <div class="filter-group guide_wrap">
       <div class="mt_info">
@@ -16,6 +34,10 @@
 
   </div><!--./wrap-->
 </div><!--./layout-->
+
+<script>
+ <%= render(:partial => 'codes', :handlers => [:erb], :formats => [:js]) %>
+</script>
 
 
 
