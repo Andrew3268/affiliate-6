@@ -192,13 +192,14 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 /* Deals&Gadgets sub menu */
 .sub_nav{margin-top:260px;font-family: 'Anton', sans-serif;}
-.sub_nav .sub_nav_pc>ul>li{float:left;width:150px;text-align:center;}
-.sub_nav .sub_nav_pc>ul>li.coumos{width:260px;}
+.sub_nav .sub_nav_pc>ul>li{float:left;width:150px;/*text-align:center;*/}
+.sub_nav .sub_nav_pc>ul>li.coumos1{width:135px;}
+.sub_nav .sub_nav_pc>ul>li.coumos{width:275px;}
 .sub_nav .shoes_nav_pc{margin:0;}
 .sub_nav .shoes_nav_pc>ul{background:#000;padding:5px 0;}
 .sub_nav .shoes_nav_pc>ul>li{width:auto;margin:0 2%;}
 .sub_nav .sub_nav_pc>ul>li>a{text-decoration:none;color:#000;font-size:20px;display:block;font-weight:400;}
-.sub_nav .sub_nav_pc>ul>li>a.active{color:#000;font-weight:bold;border-bottom:2px solid #000;}
+.sub_nav .sub_nav_pc>ul>li>a.active{color:#000;font-weight:bold;border-bottom:2px solid #000;display:inline;}
 .sub_nav .gnb_open,
 .sub_nav .gnb_open_b,
 .sub_nav .gnb_m,
@@ -446,6 +447,8 @@ header .gnb_m,header .gnb_open2{display:none;}
   .contact_form{width:100%;margin:70px 0 0 0;}
 }
   
+/* Amazon Search */
+div#amzn-native-ad-0 .amzn-native-header{display:none;}
 
 
 

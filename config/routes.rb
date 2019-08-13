@@ -7,10 +7,13 @@ Rails.application.routes.draw do
   get 'deals/codes'
   get 'deals/bestdeals'
   get 'deals/most_reviewed'
+  get 'deals/most_reviewed_elec'
   get 'deals/editors_pick'
   get 'deals/shoes'
   get 'deals/sneakers01M'
   get 'deals/sneakers01W'
+
+  get 'most_reviews/electronics'
 
   devise_for :users
   resources :gadgets
