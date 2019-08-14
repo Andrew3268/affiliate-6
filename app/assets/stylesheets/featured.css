@@ -209,7 +209,7 @@
 
 @media screen and (max-width:640px){
   .guide_wrap{margin-top:15px;}
-  .guide_wrap .mt_info{margin-bottom:15px;padding:0 5px;}
+  .guide_wrap .mt_info{margin:-10px 0 15px 0;padding:0 5px;}
   .guide_wrap .mt_info h2{font-size:17px;}
   .guide_wrap .mt_info p{font-size:11px;}
   .guide_wrap .guide_boxes{margin:50px 0;border-bottom:1px solid #ccc;padding-bottom:30px;}
@@ -551,7 +551,7 @@
 .filter-node.filter-me {opacity:0 !important; visibility:hidden; position:absolute; top: 2000px;}
 
 @media screen and (max-width:640px){
-  .promotions .guide_controll .btn{margin:0 2.8%;letter-spacing:1.3px;}
+  .promotions .guide_controll .btn{margin-right:13px;letter-spacing:1.3px;}
   .promotions .promotion_box{margin:10px 0 35px 0;}
   .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
   .promotions .promotion_box{float:none;width:100%;margin-bottom:35px;}
