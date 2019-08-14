@@ -393,14 +393,35 @@ header .gnb_m,header .gnb_open2{display:none;}
   .footer .footer-content .about .socials a{width:40px;height:40px;}
 }
 
+.footer2{margin:50px 0 15px 0;width:100%;bottom:0;}
+.footer2 ul{}
+.footer2 ul li{float:left;margin-right:30px;}
+.footer2 ul li a{text-decoration:none;color:#000;}
+.footer2 .footer_up{display:block;border-top:1px solid #616161;padding:7px 0;}
+.footer2 .footer_up ul li{border:1px solid;padding:1px 5px 2px 5px;}
+.footer2 .footer_up ul li a{font-size:11px;}
+.footer2 .footer_up ul li a img{width:20px;vertical-align:bottom;margin-right:3px;}
+.footer2 .footer_down{border-top:4px solid #000;padding:5px 0;}
+
+@media screen and (max-width:400px){
+  .footer2 .footer_up ul li a{font-size:10px;}
+  .footer2 .footer_up ul li a img{width:17px;}
+}
+@media screen and (max-width:640px){
+  .footer2{margin:30px 0 15px 0;}
+  .footer2 .footer_up ul li{width:23%;margin:0 1%;padding:2px;}
+  .footer2 .footer_down ul li{margin:0 10px 5px 0;}
+}
+
+
 
 /*About Us*/
-.about_us{width:1000px;margin:100px auto 50px auto;font-family: 'Montserrat', sans-serif;}
+.about_us{width:1000px;margin:120px auto 0 auto;font-family: 'Montserrat', sans-serif;}
 .about_us .sections{margin-bottom:100px;border-bottom:1px solid #ccc;padding-bottom:10px;}
 .about_us h2{margin-bottom:15px;color:#fff;background:#000;padding:7px 10px;border-radius:10px;display:inline-block;}
 .about_us h3{padding:0 10px;margin-bottom:5px;}
 .about_us p{padding:0 10px;margin-bottom:15px;line-height:25px;}
-.about_us .headline{font-size:100px;font-weight:bold;margin-bottom:25px;letter-spacing:10px;}
+.about_us .headline{font-size:150px;font-weight:bold;margin-bottom:25px;}
 .about_us .mission .under_head{margin-bottom:55px;}
 .about_us .mission .left,
 .about_us .mission .right{float:left;width:48%;margin:0 1%;}
@@ -409,6 +430,23 @@ header .gnb_m,header .gnb_open2{display:none;}
 .about_us .bodyline{font-size:40px;font-weight:bold;}
 .about_us .qna p{padding:0 20px;}
 .about_us .qna a{font-size:25px;text-decoration:none;background:#08f;color:#fff;padding:5px 20px;margin-right:10px;float:right;border-radius:10px;}
+
+@media screen and (max-width:640px){
+  .about_us{width:100%;margin-top:100px;}
+  .about_us .sections{margin-bottom:50px;}
+  .about_us .headline{font-size:80px;margin-bottom:13px;}
+  .about_us h2{font-size:12px;}
+  .about_us h3{padding:0;}
+  .about_us p{margin-bottom:20px;}
+  .about_us .mission .under_head{margin-bottom:30px;}
+  .about_us .mission .left,
+  .about_us .mission .right{float:none;width:100%;margin:0;}
+  .about_us .qna p{padding:0;}
+}
+
+@media screen and (min-width:641px) and (max-width:1199px){
+  .about_us{width:100%;margin-top:120px;}
+}
 
 
 /*Message Section*/
