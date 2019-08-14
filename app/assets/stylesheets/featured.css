@@ -208,6 +208,7 @@
 .guide_wrap .guide_boxes .box_inner a p{font-size:40px;font-weight:700;padding:10px;line-height:1.1;}
 
 @media screen and (max-width:640px){
+  .guide_wrap{margin-top:15px;}
   .guide_wrap .mt_info{margin-bottom:15px;padding:0 5px;}
   .guide_wrap .mt_info h2{font-size:17px;}
   .guide_wrap .mt_info p{font-size:11px;}

@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'deals/promo_codes'
   get 'deals/coupons'
   get 'deals/quick_search'
+  get 'deals/quick_search_01'
   get 'deals/promotions'
   get 'deals/codes'
   get 'deals/bestdeals'

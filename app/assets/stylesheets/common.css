@@ -470,7 +470,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 #message_m_spare_02{margin-bottom:5px;background:#000;color:#fff;}
 
 /*Message Show Section*/
-.flash_message{width:1000px;margin:150px auto 50px auto;text-align:center}
+.flash_message{width:1000px;margin:150px auto 50px auto;text-align:center;}
 .flash_message h2{font-size:40px;}
 .flash_message h3{font-size:25px;}
 .comment_show{margin-top:100px;}
@@ -480,9 +480,13 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 @media screen and (max-width:640px){
   .contact_form{width:100%;margin:70px 0 0 0;}
+  .field_with_errors .error{top:172px;right:30px;}
+  .flash_message{width:100%;margin:100px auto 0px auto;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .contact_form{width:100%;margin:70px 0 0 0;}
+  .field_with_errors .error{top:172px;right:50px;}
+  .flash_message{width:100%;margin:100px auto 0px auto;}
 }
   
 /* Amazon Search3 */
