@@ -28,7 +28,7 @@
 .add_gadget img{width:80px;}
 
 @media screen and (max-width:640px){
-  .gadgets{margin:60px 0;}
+  .gadgets{margin:60px 0 0 0;}
   .gadgets .card_wrap .card{margin:20px 0;}
   .gadgets .card_wrap .card-body .admin{margin-top:-10px;}
   .gadgets .card_wrap .card-header{padding:5px;}
@@ -40,7 +40,7 @@
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
-  .gadgets{margin:160px 0;}
+  .gadgets{margin:160px 0 0 0;}
   .gadgets .card_wrap .card-header{padding:5px;}
   .gadgets .card_wrap .card-body{padding:10px;}
   .gadgets .card_wrap .card-body h4{margin:15px 0;}
