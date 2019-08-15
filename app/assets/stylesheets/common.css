@@ -352,59 +352,19 @@ header .gnb_m,header .gnb_open2{display:none;}
 .pagination a.next_page,.pagination a.previous_page{font-size:15px;}
 .pagination .current{background:#000;color:#fff;font-size:30px;border:1px solid;padding:0 10px;}
 
-
-/* for Footer Section */
-.footer{background:#000;color:#fff;font-family: 'Montserrat', sans-serif;margin-top:75px;}
-.footer .footer-content .footer-section{padding:10px;}
-.footer .footer-content h1, .footer .footer-content h2{color:#fff;margin-bottom:5px;}
-.footer .footer-content .about{float:left;width:49%;margin-right:1%;}
-.footer .footer-content .contact-form{float:left;width:49%;margin-left:1%;}
-.footer .footer-content .about p{margin-bottom:10px;}
-.footer .footer-content .about h2 span{color:#08f;}
-.footer .footer-content .about .contact span{display:block;margin-bottom:8px;}
-.footer .footer-content .about .socials a{width:45px;padding-top:5px;margin-right:5px;text-align:center;display:inline-block;font-size:1.3em;border-radius:5px;}
-.footer .footer-content .about .socials a img{background:#fff;}
-.footer .footer-content .about .socials .footer_tube img{width:48px;}
-.footer .footer-content .contact-form ul{padding:0 10px;margin-top:10px;}
-.footer .footer-content .contact-form ul li{float:left;margin:0 2% 2% 0;}
-.footer .footer-content .contact-form ul li a{text-decoration:none;color:#000;background:#fff;padding:5px 7px;border-radius:10px;font-size:12px;}
-.footer .footer-content .contact_us{}
-.footer .footer-content .contact_us a{text-decoration:none;color:#fff;}
-.footer .footer-bottom{background:#000;height:50px;width:100%;text-align:center;position:absolute;bottom:0px;left:0px;}
-.footer .footer-bottom .quick_menu{}
-.footer .footer-bottom .quick_menu ul{margin-left:60px;}
-.footer .footer-bottom .quick_menu ul li{float:left;margin:0 1%;}
-.footer .footer-bottom .quick_menu ul li h3{line-height:20px;}
-.footer .footer-bottom .quick_menu ul li a{text-decoration:none;color:#fff;transition:all .3s;}
-.footer .footer-bottom .quick_menu ul li a:hover{font-weight:bold;margin-left:15px;transition:all .3s;}
-
-@media screen and (max-width:640px){
-  .footer{height:auto;}
-  .footer .footer-content{height:auto;}
-  .footer .footer-content .footer-section{padding:15px;}
-  .footer .footer-content .about{float:none;width:100%;margin-right:0%;}
-  .footer .footer-content .links{float:none;width:100%;margin-right:0%;}
-  .footer .footer-content .contact-form{float:none;width:100%;}
-  .footer .footer-content .contact-form ul li{margin-bottom:5%;}
-}
-@media screen and (min-width:641px) and (max-width:1199px){
-  .footer .footer-content .footer-section{padding:15px 0;}
-  .footer .footer-content h1, .footer .footer-content h2{font-size:18px;}
-  .footer .footer-content .about .socials a{width:40px;height:40px;}
-}
-
+/* For Footer Section */
 .footer2{margin:50px 0 15px 0;width:100%;bottom:0;}
 .footer2 ul{}
-.footer2 ul li{float:left;margin-right:30px;}
+.footer2 ul li{float:left;margin-right:20px;}
 .footer2 ul li a{text-decoration:none;color:#000;}
 .footer2 .footer_up{display:block;border-top:1px solid #616161;padding:7px 0;}
 .footer2 .footer_up ul li{border:1px solid;padding:1px 5px 2px 5px;}
-.footer2 .footer_up ul li a{font-size:11px;}
+.footer2 .footer_up ul li a{font-size:9px;}
 .footer2 .footer_up ul li a img{width:20px;vertical-align:bottom;margin-right:3px;}
 .footer2 .footer_down{border-top:4px solid #000;padding:5px 0;}
 
 @media screen and (max-width:400px){
-  .footer2 .footer_up ul li a{font-size:10px;}
+  .footer2 .footer_up ul li a{font-size:8px;}
   .footer2 .footer_up ul li a img{width:17px;}
 }
 @media screen and (max-width:640px){
@@ -412,7 +372,6 @@ header .gnb_m,header .gnb_open2{display:none;}
   .footer2 .footer_up ul li{width:23%;margin:0 1%;padding:2px;}
   .footer2 .footer_down ul li{margin:0 10px 5px 0;}
 }
-
 
 
 /*About Us*/
@@ -434,8 +393,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 @media screen and (max-width:640px){
   .about_us{width:100%;margin-top:100px;}
   .about_us .sections{margin-bottom:50px;}
-  .about_us .headline{font-size:80px;margin-bottom:13px;}
-  .about_us h2{font-size:12px;}
+  .about_us .headline{font-size:65px;margin-bottom:7px;}
+  .about_us h2{font-size:15px;}
   .about_us h3{padding:0;}
   .about_us p{margin-bottom:20px;}
   .about_us .mission .under_head{margin-bottom:30px;}
