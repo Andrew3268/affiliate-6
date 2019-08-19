@@ -10,6 +10,8 @@
   .codes .lt_cnt .toggle>ul>li>ul{display:none;padding-left:17px;}
   .codes .lt_cnt .toggle>ul>li>ul>li{font-size:13px;padding:5px 10px;list-style: decimal;color:#3d3d3d;}
   .codes .lt_cnt .toggle>ul>li>ul>li>a{text-decoration:none;color:#08f;display:block;}
+  .codes .lt_cnt .toggle>ul>li>ul.most_ul>li{font-size:20px;padding:1.5px 10px;}
+  .codes .lt_cnt .toggle>ul>li>ul.most_ul>li>a{color:#000;}
   .codes .lt_cnt .toggle>ul>li>ul>li>a>span{font-size:13px;}
   .codes .lt_cnt .toggle>ul>.last7days{display:none;}
   .codes .lt_cnt .last7days_pc>p{padding:8px 0;border-bottom:1px solid #3d3d3d;} 
@@ -461,3 +463,19 @@
 
 
 
+.most_box{float:left;width:18%;margin:1%;overflow:hidden;}
+.most_box img{width:100%;height:170px;object-fit:cover;}
+.most_box .overlay-container{display:block;position:relative;}
+.most_box .overlay-container::before{content:attr(data-overlay-text);font:1em/1.5em 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;position:absolute;z-index:1;/*On top of parent*/top:40%;width:100%;text-align:center;color:#fff;background:rgba(128, 128, 128, 0.8);opacity:0;-moz-transform:translateY(0);-ms-transform:translateY(0);-o-transform:translateY(0);-webkit-transform:translateY(0);transform:translateY(0);-moz-transition:all 0.3s;-o-transition:all 0.3s;-webkit-transition:all 0.3s;transition:all 0.3s;}
+.most_box .overlay-container:hover::before{opacity:1;-moz-transform:translateY(20px);-ms-transform:translateY(20px);-o-transform:translateY(20px);-webkit-transform:translateY(20px);transform:translateY(20px);}
+.most_box .overlay-container .overlay-img{-moz-transform:scale(1);-ms-transform:scale(1);-o-transform:scale(1);-webkit-transform:scale(1);transform:scale(1);-moz-transition:all 0.3s;-o-transition:all 0.3s;-webkit-transition:all 0.3s;transition:all 0.3s;}
+.most_box .overlay-container:hover .overlay-img{-moz-transform:scale(1.2);-ms-transform:scale(1.2);-o-transform:scale(1.2);-webkit-transform:scale(1.2);transform:scale(1.2);}
+@media screen and (max-width:640px){
+  .most_review_sub{margin-top:85px;}
+  .most_box{float:left;width:48%;}
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+  .most_review_sub{margin-top:233px;}
+  .most_review_wrap{margin-top:10px;}
+  .most_box{float:left;width:23%;}
+}

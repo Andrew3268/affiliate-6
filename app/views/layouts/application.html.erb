@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Oh,igottabuythis - It is discount platform but also trending item platform.</title>
+    <!-- <title>Oh,igottabuythis - It is discount platform but also trending item platform.</title> -->
+    <!-- <title><%= yield(:title) %></title> -->
+    <title>Oh,igottabuythis - <%= content_for?(:title) ? yield(:title) : 'It is discount platform but also trending item platform.' %> </title>
+
     <meta name="description" content="oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.">
     <meta name='keywords' content='amazon,coupon,promo codes,gadget,deals'/>
     <meta charset="utf-8"/>
