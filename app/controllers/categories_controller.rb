@@ -6,6 +6,12 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.all.order("created_at DESC")
+    set_meta_tags title: 'Categories of awesome gadgets',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'will change this description',
+                  keywords: 'a,b,c,d'
+
   end
 
   def show

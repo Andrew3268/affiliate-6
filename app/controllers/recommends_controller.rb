@@ -7,14 +7,29 @@ class RecommendsController < ApplicationController
 
   def index
     @recommends = Recommend.all.order("created_at DESC")
+    set_meta_tags title: 'Featured Gadgets',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'you have to change this description',
+                  keywords: 'a,b,c,d'
   end
 
   def index_02
     @recommends = Recommend.all.order("created_at DESC")
+    set_meta_tags title: 'Featured Gadgets',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'you have to change this description',
+                  keywords: 'a,b,c,d'
   end
 
   def show
     @related = Recommend.where.not(id: @recommend).order("created_at DESC").limit(6)
+    set_meta_tags title: '@recommend.re_title',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: '@recommend.sub_intro',
+                  keywords: 'a,b,c,d'
   end
 
   def new

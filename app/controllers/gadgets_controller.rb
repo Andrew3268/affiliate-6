@@ -25,6 +25,19 @@ class GadgetsController < ApplicationController
 
   def show
     @relative_sub_category = Gadget.where(subcategory_id: @gadget.subcategory_id)
+    set_meta_tags title: @gadget.gg_title,
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: @gadget.gg_intro,
+                  keywords: 'a,b,c,d',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: @gadget.gg_title,
+                    description: @gadget.gg_intro,
+                    image: @gadget.gg_img
+                  }
+
   end
 
   def new

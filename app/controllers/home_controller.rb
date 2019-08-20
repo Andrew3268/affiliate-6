@@ -14,6 +14,12 @@ class HomeController < ApplicationController
       @search_term = params[:search]
       @gadgets = @gadgets.search_by(@search_term)
     end
+
+    set_meta_tags title: 'It is discount platform but also trending item platform',
+                    site: 'Oh,igottabuythis',
+                    revierse: true,
+                    description: 'oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
+                    keywords: 'gadget,deals,coupon,promocodes'
   end 
 end
 
