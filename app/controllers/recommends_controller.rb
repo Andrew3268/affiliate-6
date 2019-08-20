@@ -10,8 +10,22 @@ class RecommendsController < ApplicationController
     set_meta_tags title: 'Featured Gadgets',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'you have to change this description',
-                  keywords: 'a,b,c,d'
+                  description: 'we help you find the best gadgets what you are looking for',
+                  keywords: 'gift guide,tech blog,featured,recommend gadgets',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Featured Gadgets',
+                    description: 'we help you find the best gadgets what you are looking for',
+                    # image: 
+                  },
+                  og: {
+                    title: 'Featured Gadgets',
+                    description: 'we help you find the best gadgets what you are looking for',
+                    type: 'website',
+                    url: 'http://www.ohigottabuythis.net/recommends/',
+                    # image:
+                  }
   end
 
   def index_02
@@ -20,16 +34,44 @@ class RecommendsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'you have to change this description',
-                  keywords: 'a,b,c,d'
+                  keywords: 'gift guide,tech blog,featured,recommend gadgets',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Featured Gadgets',
+                    description: 'we help you find the best gadgets what you are looking for',
+                    # image: 
+                  },
+                  og: {
+                    title: 'Featured Gadgets',
+                    description: 'we help you find the best gadgets what you are looking for',
+                    type: 'website',
+                    url: 'http://www.ohigottabuythis.net/recommends/',
+                    # image:
+                  }
   end
 
   def show
     @related = Recommend.where.not(id: @recommend).order("created_at DESC").limit(6)
-    set_meta_tags title: '@recommend.re_title',
+    set_meta_tags title: @recommend.re_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: '@recommend.sub_intro',
-                  keywords: 'a,b,c,d'
+                  description: @recommend.sub_intro,
+                  keywords: 'gift guide,tech blog,featured,recommend gadgets',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: @recommend.re_title,
+                    description: @recommend.sub_intro,
+                    image: @recommend.re_image
+                  },
+                  og: {
+                    title: @recommend.re_title,
+                    description: @recommend.sub_intro,
+                    type: 'website',
+                    url: recommend_url(@recommend),
+                    image: @recommend.re_image
+                  }
   end
 
   def new

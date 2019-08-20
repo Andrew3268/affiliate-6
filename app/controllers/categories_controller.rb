@@ -9,8 +9,22 @@ class CategoriesController < ApplicationController
     set_meta_tags title: 'Categories of awesome gadgets',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'will change this description',
-                  keywords: 'a,b,c,d'
+                  description: 'Find the coolest itmes we picked from all of the world',
+                  keywords: 'gadgets,geeky,home,kitchen,travel,outdoor,smartphone,fashion',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Categories of awesome gadgets',
+                    description: 'Find the coolest itmes we picked from all of the world',
+                    # image: 
+                  },
+                  og: {
+                    title: 'Categories of awesome gadgets',
+                    description: 'Find the coolest itmes we picked from all of the world',
+                    type: 'website',
+                    url: 'http://www.ohigottabuythis.net/categories/',
+                    # image:
+                  }
 
   end
 

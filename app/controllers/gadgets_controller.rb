@@ -29,15 +29,21 @@ class GadgetsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: @gadget.gg_intro,
-                  keywords: 'a,b,c,d',
+                  keywords: 'gadgets,tech,tech news,new technology',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: @gadget.gg_title,
                     description: @gadget.gg_intro,
                     image: @gadget.gg_img
+                  },
+                  og: {
+                    title: @gadget.gg_title,
+                    description: @gadget.gg_intro,
+                    type: 'website',
+                    url: gadget_url(@gadget),
+                    image: @gadget.gg_img
                   }
-
   end
 
   def new

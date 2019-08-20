@@ -4,6 +4,25 @@ class MessagesController < ApplicationController
 
   def index
     @messages = Message.all.order("created_at DESC")
+    set_meta_tags title: 'You want to know about us?',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'It is discount platform but also trending item platform',
+                  keywords: 'about us,feedback,question',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'You want to know about us?',
+                    description: 'It is discount platform but also trending item platform',
+                    # image: 
+                  },
+                  og: {
+                    title: 'You want to know about us?',
+                    description: 'It is discount platform but also trending item platform',
+                    type: 'website',
+                    url: 'http://www.ohigottabuythis.net/messages/',
+                    # image:
+                  }
   end
 
   def show
@@ -11,6 +30,25 @@ class MessagesController < ApplicationController
 
   def new
     @message = Message.new
+    set_meta_tags title: 'Get a question? Get in touch with us!',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'If you have any question or give feedback just do it!!',
+                  keywords: 'about us,feedback,question',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Get a question? Get in touch with us!',
+                    description: 'If you have any question or give feedback just do it!!',
+                    # image: 
+                  },
+                  og: {
+                    title: 'Get a question? Get in touch with us!',
+                    description: 'If you have any question or give feedback just do it!!',
+                    type: 'website',
+                    url: 'http://www.ohigottabuythis.net/messages/new/',
+                    # image:
+                  }
   end
 
   def create
