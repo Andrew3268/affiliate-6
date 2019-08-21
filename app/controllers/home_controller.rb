@@ -15,24 +15,24 @@ class HomeController < ApplicationController
       @gadgets = @gadgets.search_by(@search_term)
     end
 
-   set_meta_tags  title: 'It is discount platform but also trending item platform',
+   set_meta_tags  title: 'The Best Deals, Coupons, Promo Codes, Discounts',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
-                  keywords: 'gadget,deals,coupon,promocodes',
+                  description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
+                  keywords: 'gadget,deals,coupon,promo codes,bargains',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'It is discount platform but also trending item platform',
-                    description: 'oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
-                    image: "<%=asset_path 'visual_01.jpg' %>"
+                    title: 'The Best Deals, Coupons, Promo Codes, Discounts',
+                    description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
+                    # image: "<%=asset_path 'visual_01.jpg' %>"
                   },
                   og: {
-                    title: 'It is discount platform but also trending item platform',
-                    description: 'oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
+                    title: 'The Best Deals, Coupons, Promo Codes, Discounts',
+                    description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net',
-                    image: "<%=asset_path 'visual_01.jpg' %>"
+                    # image: "<%=asset_path 'visual_01.jpg' %>"
                   }
   end 
 end

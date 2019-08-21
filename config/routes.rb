@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'deals/sneakers01M'
   get 'deals/sneakers01W'
 
-  get 'most_reviews/electronics'
+  get 'most_reviews/coffee_gadgets'
 
   devise_for :users
   resources :gadgets

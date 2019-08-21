@@ -89,4 +89,7 @@ class DealsController < ApplicationController
 
   end
 
+  def most_reviewed
+  end
+
 end
