@@ -10,6 +10,7 @@
           <%= f.collection_select :category_id, Category.all, :id, :name, { prompt: "Choose a category" } %>
           <%= f.collection_select :subcategory_id, Subcategory.all, :id, :subname, { prompt: "Choose a sub_category" } %>
           <%= f.select :gg_option_01, ([["Crowdfunding", ""], "YES"])%>
+          <%= f.select :gg_option_03, ([["Buy Now", ""], "Learn More"])%>
          </div>
 
          <div class="form_input">
