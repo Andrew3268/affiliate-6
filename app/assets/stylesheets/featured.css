@@ -563,7 +563,7 @@
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:35px;}
-  .promotions .featured .sm_pc .amzpromo button{width:121px;}
+  .promotions .featured .sm_pc .amzpromo button{width:130px;}
   .promotions .featured .sm_pc .amzpromo button.reviewed{width:105px;}
   .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:20px;}
   .promotions .featured .sm_pc .guide_controll button.top_10{width:98px;font-size:15px;border:1px solid;margin-bottom:5px;}
