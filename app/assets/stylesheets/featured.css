@@ -19,7 +19,7 @@
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
-  .cu_sub_nav{margin:160px 0 -20px 0;}
+  .cu_sub_nav{margin:180px 0 -20px 0;}
 }
 
 /* Current Location */
@@ -72,6 +72,7 @@
 	.featured{margin:30px 0 0 0;}
   .featured .deal h2{display:none;}
 	.featured .sm_pc{display:none;}
+  .featured .most_pc{display:block;}
 	.featured .sm_mobile{display:block;height:200px;background:#000;position:fixed;right:-800px;top:0;width:80%;z-index:303;}
 	.featured .gnb_open{display:block;position:fixed;right:0;top:2px;z-index:301;margin:0 5%}
 	.featured .gnb_open img{width:40px;height:40px;}
@@ -79,7 +80,7 @@
 	.featured .gnb_close img{width:40px;height:40px;}
 	.featured .gnb_kbg{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:301;}
 	
-	.featured .filter-search{margin:10px 0 0 5%;}
+	/*.featured .filter-search{margin:10px 0 0 5%;}*/
 	.featured .filter-search .filter-button{font-family: 'Anton', sans-serif;color:#fff;font-weight:bold;padding:0;font-size:35px;text-transform:uppercase;line-height:1.1;}
 	.featured .featured_left, .featured .featured_right{float:none;width:100%;margin:0;}
 	
@@ -522,10 +523,12 @@
 .promotions{font-family: 'Montserrat', sans-serif;color:#616161;}
 .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:60px;}
 .promotions .featured .sm_pc .guide_controll button.top_10{width:123px;}
+.promotions .featured .sm_pc .most_rev button{width:145px;}
+.promotions .featured .sm_pc .most_rev button.reviewed{width:121px;}
+.promotions .featured .sm_pc .most_rev button.btn-primary{width:50px;margin-left:50px;}
 .promotions .featured .sm_pc .amzpromo button{width:145px;}
 .promotions .featured .sm_pc .amzpromo button.reviewed{width:121px;}
 .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:50px;}
-.promotions .featured .sm_pc .amzpromo button
 .promotions .featured .sm_mobile .guide_controll p{font-size:40px;color:#fff;}
 .promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
 .promotions .guide_controll{background:#000;}
@@ -554,15 +557,25 @@
 .filter-node.filter-me {opacity:0 !important; visibility:hidden; position:absolute; top: 2000px;}
 
 @media screen and (max-width:640px){
-  .promotions .guide_controll .btn{margin-right:13px;letter-spacing:1.3px;}
+  .promotions .featured .sm_pc .amzpromo button{width:105px;}
+  .promotions .featured .sm_pc .amzpromo button.btn-primary{width:30px;margin-left:10px;}
+  .promotions .featured .sm_pc .most_rev button{width:140px;}
+  .promotions .featured .sm_pc .most_rev button.btn-primary{width:30px;margin-left:10px;}
+  .promotions .featured .sm_pc .guide_controll button{line-height:15px;font-size:15px;padding-top:8px;}
+  .promotions .guide_controll{padding-left:20px;}
+  .promotions .most_rev, .promotions .amzpromo{padding-left:0;}
+  .promotions .guide_controll .btn{margin:0;letter-spacing:0.5px;}
   .promotions .promotion_box{margin:10px 0 35px 0;}
   .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
   .promotions .promotion_box{float:none;width:100%;margin-bottom:35px;}
-  .promotions .guide_controll .form-control{width:95%;margin:10px 2.5%;display:none;}
+  .promotions .guide_controll .form-control{width:95%;margin:10px 2.5%;}
   .most_wrapper{margin-top:-25px;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:35px;}
+  .promotions .featured .sm_pc .most_rev button{width:130px;}
+  .promotions .featured .sm_pc .most_rev button.reviewed{width:105px;}
+  .promotions .featured .sm_pc .most_rev button.btn-primary{width:50px;margin-left:20px;}
   .promotions .featured .sm_pc .amzpromo button{width:130px;}
   .promotions .featured .sm_pc .amzpromo button.reviewed{width:105px;}
   .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:20px;}
@@ -574,7 +587,6 @@
   .most_wrapper{margin-top:-25px;}
 }
 /* End Promotion */
-
 
 
 .movie-card {background-size: contain;background-repeat: no-repeat;width: 100%;height: 100%;min-height: 300px;display: block;margin-bottom:30px;border-radius: 8px;/*box-shadow: 0px 8px 12px 0px rgba(0, 0, 0, 0.25);*/position: relative;}
