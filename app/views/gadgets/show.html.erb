@@ -19,6 +19,7 @@
          <% if @gadget.gg_intro.present? %>
            <span><p><%= @gadget.gg_intro %></p></span>
          <% end %>
+         <p class="keyword"><%= @gadget.gg_option_04 %></p>
          <p>$<%= @gadget.gg_aprice %></p>
          <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
          <!-- <div class="option_btn">
@@ -54,7 +55,6 @@
     
   </div>
 </div>
-
 
 <!-- Social Shring -->
 <!-- <ul class="social">
