@@ -527,7 +527,7 @@
 .promotions .featured .sm_pc .most_rev button.reviewed{width:121px;}
 .promotions .featured .sm_pc .most_rev button.btn-primary{width:50px;margin-left:50px;}
 .promotions .featured .sm_pc .amzpromo button{width:145px;}
-.promotions .featured .sm_pc .amzpromo button.reviewed{width:121px;}
+.promotions .featured .sm_pc .amzpromo button.reviewed{width:80px;}
 .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:50px;}
 .promotions .featured .sm_mobile .guide_controll p{font-size:40px;color:#fff;}
 .promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
@@ -560,7 +560,7 @@
   .promotions .featured .sm_pc .amzpromo button{width:105px;}
   .promotions .featured .sm_pc .amzpromo button.btn-primary{width:30px;margin-left:10px;}
   .promotions .featured .sm_pc .most_rev button{width:140px;}
-  .promotions .featured .sm_pc .most_rev button.btn-primary{width:40px;background:#fff;color:#000;margin-left:10px;}
+  .promotions .featured .sm_pc .most_rev button.btn-primary{width:40px;background:#fff;color:#000;margin:0 10px;}
   .promotions .featured .sm_pc .guide_controll button{line-height:15px;font-size:15px;padding-top:15px;}
   .promotions .guide_controll{padding-left:20px;}
   .promotions .most_rev, .promotions .amzpromo{padding-left:0;}
@@ -577,7 +577,7 @@
   .promotions .featured .sm_pc .most_rev button.reviewed{width:110px;}
   .promotions .featured .sm_pc .most_rev button.btn-primary{width:50px;margin-left:20px;}
   .promotions .featured .sm_pc .amzpromo button{width:130px;}
-  .promotions .featured .sm_pc .amzpromo button.reviewed{width:105px;}
+  .promotions .featured .sm_pc .amzpromo button.reviewed{width:69px;}
   .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:20px;}
   .promotions .featured .sm_pc .guide_controll button.top_10{width:98px;font-size:15px;border:1px solid;margin-bottom:5px;}
   .promotions .guide_controll .btn{font-size:17px;}
