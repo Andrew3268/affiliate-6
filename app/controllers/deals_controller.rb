@@ -1,21 +1,21 @@
 class DealsController < ApplicationController
 
   def promo_codes
-      set_meta_tags title: 'Promo Codes on Amazon',
+      set_meta_tags title: 'Promo Codes, Coupon Codes on Amazon',
                     site: 'Oh,igottabuythis',
                     revierse: true,
-                    description: 'Save money by getting promo codes',
+                    description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
                     keywords: 'promo codes,amazon,coupon,deals',
                     twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Promo Codes on Amazon',
-                    description: 'Save money by getting promo codes',
+                    title: 'Promo Codes, Coupon Codes on Amazon',
+                    description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
                     # image: 
                     },
                     og: {
-                      title: 'Promo Codes on Amazon',
-                      description: 'Save money by getting promo codes',
+                      title: 'Promo Codes, Coupon Codes on Amazon',
+                      description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
                       type: 'website',
                       url: 'http://www.ohigottabuythis.net/deals/promo_codes',
                       # image: 
@@ -23,21 +23,21 @@ class DealsController < ApplicationController
   end
 
   def bestdeals
-    set_meta_tags title: 'The Best Deals on Amazon',
+    set_meta_tags title: 'Updated daily with best deals of Amazon',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'Get a good products as a good price',
-                  keywords: 'best price,best deals,items,products',
+                  description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
+                  keywords: 'best price,best deals,latest deals,amazon',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'The Best Deals on Amazon',
-                    description: 'Get a good products as a good price',
+                    title: 'Updated daily with best deals of Amazon',
+                    description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
                     # image: 
                   },
                   og: {
-                    title: 'The Best Deals on Amazon',
-                    description: 'Get a good products as a good price',
+                    title: 'Updated daily with best deals of Amazon',
+                    description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/bestdeals',
                     # image: 
@@ -49,7 +49,7 @@ class DealsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Take promotions, sales, offer, brand deals on Amazon',
-                  keywords: 'promotions,sales,offer,brand deals',
+                  keywords: 'promotions,sales,offer,brand deals,amazon',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
@@ -71,7 +71,7 @@ class DealsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
-                  keywords: 'search,quick search,deals,sales',
+                  keywords: 'search,quick search,deals,sales,amazon',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
