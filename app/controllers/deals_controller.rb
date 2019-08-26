@@ -90,6 +90,25 @@ class DealsController < ApplicationController
   end
 
   def most_reviewed
+    set_meta_tags title: 'most-Reviewed Products on Amazon',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
+                  keywords: 'search,quick search,deals,sales,amazon',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Quick Search on Amazon',
+                    description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
+                    # image: 
+                  },
+                  og: {
+                    title: 'Quick Search on Amazon',
+                    description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
+                    type: 'website',
+                    url: 'http://www.ohigottabuythis.net/deals/quick_search',
+                    # image: 
+                  }
   end
 
 end
