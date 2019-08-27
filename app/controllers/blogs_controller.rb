@@ -1,8 +1,6 @@
 class BlogsController < ApplicationController
 
   before_action :find_blog, only: [:blog_01_amz_prime, :blog_02_amz_trial, :blog_03_memorialday]
-  before_filter :errors_footer, only: [:errors_page]
-
 
   def blog_01_amz_prime
   end
@@ -24,11 +22,6 @@ class BlogsController < ApplicationController
     @lotto_4 = @random.sample(6).sort
     @lotto_5 = @random.sample(6).sort
   end
-
-  def errors_footer
-    @errors_footer = true
-  end
-
 
   private
 

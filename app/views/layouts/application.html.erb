@@ -33,8 +33,7 @@
 
 
   <%= yield %> 
-  <%= render partial: "shared/footer2" unless current_page?('/blogs/errors_page')%>
-   
+  <%= render 'shared/footer2' %> 
   <%= javascript_include_tag 'application' %>
    <!-- for Isotope -->
   <!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script> -->

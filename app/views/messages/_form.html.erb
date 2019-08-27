@@ -1,5 +1,5 @@
 <%= simple_form_for @message do |f| %>
-  <%= f.select :m_spare_02, options_for_select([["Categories", ""], "Questions", "Feedback", "etc"])%>
+  <%= f.select :m_spare_02, options_for_select([["Categories", ""], "Questions", "Feedback", "Error", "etc"])%>
   <%= f.input :m_spare_01, placeholder: 'Your name', label: false, input_html: { class: 'm_name' }  %>
   <%= f.input :mmail, placeholder: 'Your email',as: :email, label: false, input_html: { class: 'm_mail' }  %>
   <%= f.input :mtitle, placeholder: 'Subject', label: false %>
