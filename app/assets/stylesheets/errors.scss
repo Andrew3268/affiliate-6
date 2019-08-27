@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-body {
+.errors_wrap{
   height: 100vh;
   background-image: radial-gradient(closest-side, #020202, black);
   text-align: center;
@@ -12,12 +12,13 @@ body {
   line-height: 1.5;
 }
 
-.logo {
-  margin: 40px auto;
-  display: block;
+
+.errors_logo {
+  width:500px;
+  margin: 70px auto 20px auto;
 }
 
-h1 {
+.errors_ctn h1 {
   font-size: 24px;
   line-height: 40px;
   margin: 0 auto 16px;
@@ -28,7 +29,7 @@ h1 {
   max-width: 600px;
 }
 
-p {
+.errors_ctn p {
   color: #D6DCE0;
   font-weight: 300;
   max-width: 600px;
@@ -37,10 +38,10 @@ p {
   letter-spacing: 0.5px;
   padding: 0 20px;
 }
-p a {
+.errors_ctn p a {
   color: inherit;
 }
-p a:hover {
+.errors_ctn p a:hover {
   color: #fff;
 }
 
@@ -188,4 +189,5 @@ p a:hover {
     right: 30%;
   }
 }
+
 

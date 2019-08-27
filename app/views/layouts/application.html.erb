@@ -33,7 +33,7 @@
 
 
   <%= yield %> 
-  <%= render 'shared/footer2' %>
+  <%= render partial: "shared/footer2" unless current_page?('/blogs/errors_page')%>
    
   <%= javascript_include_tag 'application' %>
    <!-- for Isotope -->
