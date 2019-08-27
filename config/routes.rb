@@ -57,7 +57,9 @@ Rails.application.routes.draw do
   get 'blogs/blog_03_backtoschool'
   get 'blogs/blog_04_thebestdealsofweek'
   get 'blogs/blackfridayinjuly'
+  get 'blogs/error_page'
   
+
   get 'promocodes_days/day_01'
   get 'promocodes_days/day_02'
   get 'promocodes_days/day_03'
