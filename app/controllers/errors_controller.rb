@@ -4,7 +4,7 @@ class ErrorsController < ApplicationController
     render status: 404
   end
 
-  def server_error
+  def server_errors
     render status: 500
   end
 
