@@ -489,7 +489,7 @@ div#amzn-native-ad-0 .amzn-native-header{display:none;}
 
 @media screen and (max-width:640px){
   .errors_logo{width:320px;}
-  .errors_ctn h1{line-height:30px;}
+  .errors_ctn h1{line-height:20px;font-size:17px;}
   .browser{width:280px;margin-left:-140px;}
   .browser .eye{left:30%;}
   .browser .eye + .eye{left:auto;right:30%;}
