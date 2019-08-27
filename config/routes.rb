@@ -78,6 +78,10 @@ Rails.application.routes.draw do
   resources :messages
   # root 'messages#index'
 
+  get '/404' , to: 'error#not_found'
+  get '/422' , to: 'error#unacceptable'
+  get '/500' , to: 'error#server_errors'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
