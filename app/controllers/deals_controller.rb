@@ -90,23 +90,26 @@ class DealsController < ApplicationController
   end
 
   def most_reviewed
-    set_meta_tags title: 'most-Reviewed Products on Amazon',
+    set_meta_tags title: 'Most-Reviewed Products on Amazon',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
-                  keywords: 'search,quick search,deals,sales,amazon',
+                  description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
+                                So we’ve done the work for you. ',
+                  keywords: 'most reviews,highest reviewed,popular',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Quick Search on Amazon',
-                    description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
+                    title: 'Most-Reviewed Products on Amazon',
+                    description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
+                                So we’ve done the work for you. ',
                     # image: 
                   },
                   og: {
-                    title: 'Quick Search on Amazon',
-                    description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
+                    title: 'Most-Reviewed Products on Amazon',
+                    description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
+                                So we’ve done the work for you. ',
                     type: 'website',
-                    url: 'http://www.ohigottabuythis.net/deals/quick_search',
+                    url: 'http://www.ohigottabuythis.net/deals/most_reviewed',
                     # image: 
                   }
   end
