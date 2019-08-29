@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get 'deals/bestdeals'
   get 'deals/most_test'
   get 'deals/most_reviewed'
-  get 'deals/most_reviewed_m'
+  get 'deals/most_handpick'
   # get 'deals/most_reviewed_computer'
   get 'deals/editors_pick'
   get 'deals/shoes'
@@ -58,6 +58,7 @@ Rails.application.routes.draw do
   get 'blogs/blog_04_thebestdealsofweek'
   get 'blogs/blackfridayinjuly'
   get 'blogs/promocodes'
+  get 'blogs/labordeals'
 
   get 'promocodes_days/day_01'
   get 'promocodes_days/day_02'
