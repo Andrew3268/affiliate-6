@@ -23,6 +23,10 @@ class BlogsController < ApplicationController
     @lotto_5 = @random.sample(6).sort
   end
 
+  def labordeals
+    
+  end
+
   private
 
   def find_blog
