@@ -14,7 +14,7 @@ class BlogsController < ApplicationController
   def blog_04_thebestdealsofweek
   end
 
-  def blackfridayinjuly
+  def be_rich
     @random = *(1..45)
     @lotto_1 = @random.sample(6).sort
     @lotto_2 = @random.sample(6).sort
