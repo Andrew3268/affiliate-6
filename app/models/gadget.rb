@@ -1,4 +1,8 @@
 class Gadget < ActiveRecord::Base
+
+  extend FriendlyId
+  friendly_id :gg_title, use: :slugged
+
   belongs_to :user
   belongs_to :category
   belongs_to :subcategory

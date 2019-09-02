@@ -11,6 +11,8 @@ gem 'rolify', '~> 5.2'
 gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'meta-tags'
+gem 'friendly_id'
+
 # group :production do
 #   gem 'mysql2'
 # end

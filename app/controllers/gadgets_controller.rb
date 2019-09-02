@@ -78,7 +78,7 @@ class GadgetsController < ApplicationController
   private
 
   def find_gadget
-    @gadget = Gadget.find(params[:id]) 
+    @gadget = Gadget.friendly.find(params[:id]) 
   end
 
   def find_impression
