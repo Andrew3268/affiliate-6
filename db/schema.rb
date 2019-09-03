@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190902213518) do
+ActiveRecord::Schema.define(version: 20190903200702) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -237,7 +237,10 @@ ActiveRecord::Schema.define(version: 20190902213518) do
     t.string   "sub_youtube_10"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
+    t.string   "slug"
   end
+
+  add_index "recommends", ["slug"], name: "index_recommends_on_slug", unique: true
 
   create_table "roles", force: :cascade do |t|
     t.string   "name"

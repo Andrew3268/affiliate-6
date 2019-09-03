@@ -106,7 +106,7 @@ class RecommendsController < ApplicationController
   private
 
   def find_recommend
-    @recommend = Recommend.find(params[:id])
+    @recommend = Recommend.friendly.find(params[:id])
   end
 
   def recommend_params

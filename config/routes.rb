@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'deals/promotions'
   get 'deals/codes'
   get 'deals/bestdeals'
+  get 'deals/bestdeals2'
   get 'deals/most_test'
   get 'deals/most_reviewed'
   get 'deals/most_handpick'

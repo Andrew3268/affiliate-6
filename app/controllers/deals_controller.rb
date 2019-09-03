@@ -44,6 +44,9 @@ class DealsController < ApplicationController
                   }
   end
 
+  def bestdeals2
+  end
+
   def promotions
     set_meta_tags title: 'Promotions on Amazon',
                   site: 'Oh,igottabuythis',
