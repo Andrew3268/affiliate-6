@@ -23,8 +23,11 @@ class BlogsController < ApplicationController
     @lotto_5 = @random.sample(6).sort
   end
 
-  def labordeals
-    
+  def labordeals    
+  end
+
+  def gadget_test
+    @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(50)
   end
 
   private

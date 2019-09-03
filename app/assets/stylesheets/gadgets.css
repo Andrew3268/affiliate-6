@@ -1,3 +1,5 @@
+.new_gadget_wrap{margin-top:100px;}
+
 .gadgets_wrapper{margin-top:300px;}
 .gadgets_wrapper main {}
 .gadgets_wrapper main #filter{float:left;width:290px;background:#fff;border-right:1px solid #ccc;}
@@ -95,6 +97,7 @@
   .on_gadgets .card_wrap .card-body h4{margin:15px 0;}
   /*.on_gadgets .card_wrap .start{top:-45px;}*/
 }
+
 /* For Form */
 .gadget_form{margin-top:250px;}
 .form_border{width:70%;margin:0 auto;}
