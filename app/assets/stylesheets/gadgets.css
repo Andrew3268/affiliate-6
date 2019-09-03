@@ -68,6 +68,7 @@
 .on_gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}
 .on_gadgets .card_wrap .card-body .btn>em{float:left;font-size:17px;background:#000;color:#fff;padding:3px 20px;border:1px solid #000;line-height:20px;}
 .on_gadgets .card_wrap .card-body .btn>a{float:left;text-decoration:none;color:#000;font-size:20px;border:1px solid #000;padding:3px 20px;line-height:20px;}
+.on_gadgets .card_wrap .card-body .btn>.learnmore{background:#000;color:#fff;}
 .on_gadgets .card_wrap .card-body .card_btn a{text-decoration:none;color:#000;}
 .on_gadgets .card_wrap .card-header img{display:block;width:100%;border-radius:10px;}
 .on_gadgets .card_wrap .with-photo
