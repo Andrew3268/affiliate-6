@@ -26,6 +26,9 @@ class BlogsController < ApplicationController
   def labordeals    
   end
 
+  
+
+
   def gadget_test
     @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(50)
   end
