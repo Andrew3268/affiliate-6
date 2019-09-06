@@ -1,6 +1,4 @@
-.new_gadget_wrap{margin-top:100px;}
-
-.gadgets_wrapper{margin-top:300px;}
+.gadgets_wrapper{margin-top:100px;}
 .gadgets_wrapper main {}
 .gadgets_wrapper main #filter{float:left;width:290px;background:#fff;border-right:1px solid #ccc;}
 .gadgets_wrapper main #filter.on{position:fixed;top:100px;}
@@ -54,10 +52,12 @@
   .gadgets_wrapper main .gnb_close img{width:50px;height:50px;}
 }
 
-.on_gadgets{margin:300px 0 0 310px;width:900px;}
-.on_gadgets .current_category p{font-family: 'Montserrat', sans-serif;font-size:17px;text-transform:uppercase;font-weight:600;width:200px;border-bottom:1px solid #616161;;}
+.on_gadgets{}
+.on_gadgets .current_category{text-align:center;margin-bottom:30px;}
+.on_gadgets .current_category span{font-family: 'Montserrat', sans-serif;font-size:50px;text-transform:uppercase;font-weight:600;width:200px;border-bottom:1px solid #616161;}
+.on_gadgets .current_category p a{text-decoration:none;font-size:17px;color:#000;}
 .on_gadgets .card_wrap{column-width:250px;column-gap:10px;}
-.on_gadgets .card_wrap .card{margin:10px 1%;;position:relative;background: #fff; overflow: hidden;display:inline-block;}
+.on_gadgets .card_wrap .card{margin:20px 5%;;position:relative;background: #fff; overflow: hidden;display:inline-block;}
 .on_gadgets .card_wrap .card, 
 .on_gadgets .card-nav ul{border-bottom:1px solid #ccc;}
 .on_gadgets .card_wrap .card-header,
@@ -84,6 +84,9 @@
 
 @media screen and (max-width:680px){
   .on_gadgets{margin:0;width:100%;}
+  .on_gadgets .current_category{margin-bottom:30px;}
+  .on_gadgets .current_category span{font-size:20px;}
+  .on_gadgets .current_category p a{font-size:15px;}
   .on_gadgets .card_wrap .card-header{padding:5px;}
   .on_gadgets .card_wrap .card-body{padding:10px;}
   .on_gadgets .card_wrap .card-body h4{margin:15px 0;font-size:20px;}
@@ -91,7 +94,11 @@
 }
 
 @media screen and (min-width:681px) and (max-width:1199px){
-  .on_gadgets{margin:80px 0;width:100%;}
+  .gadgets_wrapper{margin-top:65px;}
+    .on_gadgets .current_category{margin-bottom:30px;}
+  .on_gadgets .current_category span{font-size:35px;}
+  .on_gadgets .current_category p a{font-size:20px;}
+  .on_gadgets{width:100%;}
   .on_gadgets .card_wrap .card-header{padding:5px;}
   .on_gadgets .card_wrap .card-body{padding:10px;}
   .on_gadgets .card_wrap .card-body h4{margin:15px 0;}

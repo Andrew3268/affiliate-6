@@ -98,7 +98,7 @@ class DealsController < ApplicationController
                   revierse: true,
                   description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
                                 So we’ve done the work for you. ',
-                  keywords: 'most reviews,highest reviewed,popular',
+                  keywords: 'most reviews,highest reviewed,popular, amazon reviews',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
