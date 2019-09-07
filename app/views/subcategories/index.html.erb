@@ -2,7 +2,7 @@
   <%= render 'shared/header' %> 
 </header>
     
-<div class="category_wrap">
+<!-- <div class="category_wrap">
   <div class="wrap">
    <h1>List of Sub_Categories</h1>
     <%= link_to "Add New Category", new_subcategory_path %>
@@ -20,5 +20,35 @@
        </tr>
       <% end %>
     </table>
+  </div>
+</div> -->
+
+<div class="subcategory_wrap clearfix">
+  <div class="wrap">
+
+
+    <% if can? :update, @category %>    
+      <div class="categories">
+        <div class="wrap">
+         <h2>List of categories for ADMIN</h2>
+          <%= link_to "Add New Sub_Category", new_subcategory_path %>
+          <table>
+            <tr>
+              <th>Category</th>
+              <th colspan="2">Option</th>
+            </tr>
+            <% @subcategories.each do |category| %>
+             <tr>
+              <td><%= category.subname %></td>
+              <td><%= link_to "Edit", edit_category_path(category) %></td>
+              <td><%= link_to "Delete", category_path(category), method: :delete, data: {confirm: "Are you sure?"} %></td>
+             </tr>
+            <% end %>
+          </table>
+        </div>
+      </div>
+    <% end %>
+
+
   </div>
 </div>
