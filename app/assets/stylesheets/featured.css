@@ -422,7 +422,7 @@
 .promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
 .promotions .guide_controll{background:#000;}
 .promotions .guide_controll .btn{font-size:19px;margin:0 0.5%;color:#fff;}
-.promotions .guide_controll .form-control{margin:10px 0;width:335px;padding:5px;line-height:25px;margin-left:45px;}
+.promotions .guide_controll .form-control{margin:10px 0;width:335px;padding:5px;line-height:25px;margin-left:35px;}
 .promotions .guide_controll p{font-size:40px;color:#fff;}
 .promotions .promotion_box{float:left;width:31.3333%;height:450px;margin:0 1% 2% 1%;border:1px solid;position:relative;}
 .promotions .promotion_box .image_box{}

@@ -105,7 +105,7 @@ class DealsController < ApplicationController
                     title: 'Most-Reviewed Products on Amazon',
                     description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
                                 So we’ve done the work for you. ',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/62/76/c0/6276c0be1f32d32072554f912385770e.jpg',
                   },
                   og: {
                     title: 'Most-Reviewed Products on Amazon',
