@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   get 'deals/most_test'
   get 'deals/most_reviewed'
   get 'deals/most_handpick'
-  # get 'deals/most_reviewed_computer'
   get 'deals/editors_pick'
   get 'deals/shoes'
   get 'deals/sneakers01M'

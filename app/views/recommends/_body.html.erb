@@ -16,15 +16,17 @@
     <!-- <span>Last Updated: <%= recommend.sub_number_01 %></span> -->
   </div>
   <!-- <div class="btn"><a href="/guides/Guide_Link">Read More</a></div> -->
-  <% if can? :update, recommend %>
+  
     <div class="btn clearfix admin">
-      <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
+      <span><%= link_to "Read More", recommend %></span>
+      <% if can? :update, recommend %>
+        <em><%= link_to "Edit", edit_recommend_path(recommend) %></em><%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
+      <% end %>  
     </div>    
     <% if can? :update, recommend %>
       <div class="pinterest">
        <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
       </div>
     <% end %>
-  <% end %>  
  </div> 
 <% end %>

@@ -1,6 +1,6 @@
 <div class="layout"><!--layout-->
   
-  <%= render 'shared/header' %>
+  <%= render 'shared/header_short' %>
 
   <!-- for play youtube video-->
   <div class="overlay-video">
@@ -15,10 +15,19 @@
   <div class="cu_wrap clearfix">
     <div class="wrap">
       
+      <div class="recommend_location guide_location clearfix">
+       <ul>
+          <li><a href="/">Home <em>/</em></a></li>
+          <li><a href="/recommends">Featured <em>/</em></a></li>
+          <li><a href="/recommends">Editor's Pick <em>/</em></a></li>
+        </ul>
+      </div>
       <div class="detitle">
-        <h2><span><%= @recommend.re_title %></span></h2>
-        <!-- <span class="post_date"><%= @recommend.sub_number_01 %><em>by Oh,i gotta buy this</em></span> -->
-        <p><%= @recommend.sub_intro %></p>
+        <div class="tit_int">
+          <h2><span><%= @recommend.re_title %></span></h2>
+          <!-- <span class="post_date"><%= @recommend.sub_number_01 %><em>by Oh,i gotta buy this</em></span> -->
+          <p><%= @recommend.sub_intro %></p>
+        </div>
         <% if can? :update, @recommend %>
           <div class="btn clearfix admin">
             <em><%= link_to "Edit", edit_recommend_path(@recommend) %></em><%= link_to "Delete", recommend_path(@recommend), method: :delete, data: {confirm: "Are you sure?"}%>
