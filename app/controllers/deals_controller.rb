@@ -113,7 +113,7 @@ class DealsController < ApplicationController
                                 So we’ve done the work for you. ',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/most_reviewed',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/62/76/c0/6276c0be1f32d32072554f912385770e.jpg'
                   }
   end
 
