@@ -9,115 +9,41 @@
     <%= render 'deals/header' %>    
 
     <div class="codes common_layout">
-        <div class="lt_cnt">
-          <h2>Promotion Codes</h2>
-
-         <div class="toggle">
-            <ul>
-              <li>
-                <a href="#n">Notes</a>
-                <ul>
-                  <li>Deals & pricing may change or expire at anytime.</li>
-                  <li>Some of promotion codes can expire fast.</li>
-                  <li>Average rating and Reviews may change after promo codes updated date.</li>
-                  <li>Free Shipping: Prime or $25+ of all other eligible items.<a target="_blank" href="/blogs/blog_01">(What's PRIME?)</a></li>
-                  <li>We have just made your life easier. We offer a quick way to find the best deals. You'll find what you're looking for at a great price.</li>
-                  <li>Our website contains affiliate link which means that if you click on one of the product links and buy we’ll receive a small commission. This help supports us and allows us to continue to keep finding and sharing good deals.</li>
-                  <li>Oh,igottabuythis is a participant in the Amazon Services LLC Associates Program & the Amazon EU Associates Programme, an affiliate advertising program designed to provide a means for us to earn fees by linking to Amazon.com, Amazon.ca, Amazon.co.uk and affiliated sites.</li>
-                </ul>
-              </li>
-              <li>
-                <a href="#n">How to use</a>
-                <ul>
-                  <li>Copy "Promotional Code"</li>
-                  <li>Click "Use Code"</li>
-                  <li>Click "Buy Now or Add to Cart"</li>
-                  <li>Enter your promotional code into the box of "Gift cards & promotional codes"</li>
-                  <!-- <li>Proceed with payment then the code is automatically applied.</li> -->
-                  <li class="about_db_dis">
-                    <!-- <p>What the "Extra Discount" is?</p> -->
-                    <span class="double red">Extra Discount</span>
-                    <em>You can get extra discount by applying promotional code to the product that is being discounting.</em>
-                    <span class="double green">Coupon Deals</span>
-                    <em>You can get extra discount by applying promotional code and get additional discount by applying coupon on the detail page of product.</em>
-                  </li>
-                </ul>
-              </li>
-              <li>
-                <a href="#n">Why is my code not working?</a>
-                <ul>
-                  <li>Check to make sure the promo code isn’t expired and that you’ve entered it correctly.</li>
-                  <li>Make sure the promo code is available in your country and the item you’ve selected is included in the offer.</li>
-                </ul>
-              </li>
-              <li class="last7days">
-                <a href="#n">LAST 7 DAYS PROMO CODES</a>
-                <ul>
-                  <%= render 'shared/promocodes_days' %>
-                </ul>
-              </li>
-            </ul>
-          </div><!--./toggle-->
-          <div class="last7days_pc">
-            <p>LAST 7 DAYS PROMO CODES</p>
-            <ul>
-              <%= render 'shared/promocodes_days' %>
-            </ul>
-          </div>
-          
-          <div class="lt_sort_box clearfix">
-            <ul class="clearfix">
-              <li><a href="/deals/promo_codes" class="pure-button">All Codes</a></li>
-              <li><a href="#" class="pure-button sort1">Price High</a></li>
-              <li><a href="#" class="pure-button sort2">Price Low</a></li>
-              <li><a href="#" class="pure-button sort3">Sale High</a></li>
-              <li><a href="#" class="pure-button sort4">Sale Low</a></li>
-            </ul>
-          </div>
-         
-        </div><!--./lt_cnt-->
+      <div class="lt_cnt note_pc">
+       <h2>Promotion Codes</h2>
+       <%= render 'deals/notes_promocode' %>
+      </div><!--./lt_cnt-->
+      
+      <div class="rt_cnt">
+        <h2>Promotion Codes | Hand-Pick On Amazon Sep. 18. 2019.</h2>
+        <div class="sort_box clearfix">
+          <ul>
+            <li><a href="/deals/promo_codes" class="pure-button">All Codes</a></li>
+            <li><a href="#" class="pure-button sort1">Price High</a></li>
+            <li><a href="#" class="pure-button sort2">Price Low</a></li>
+            <li><a href="#" class="pure-button sort3">Sale High</a></li>
+            <li><a href="#" class="pure-button sort4">Sale Low</a></li>
+          </ul>
+        </div>
         
-        <div class="rt_cnt">
-          <h2>Promotion Codes | Hand-Pick On Amazon Sep. 18. 2019.</h2>
-          <div class="sort_box clearfix">
-            <ul>
-              <li><a href="/deals/promo_codes" class="pure-button">All Codes</a></li>
-              <li><a href="#" class="pure-button sort1">Price High</a></li>
-              <li><a href="#" class="pure-button sort2">Price Low</a></li>
-              <li><a href="#" class="pure-button sort3">Sale High</a></li>
-              <li><a href="#" class="pure-button sort4">Sale Low</a></li>
-            </ul>
-          </div>
-          
-          <div class="card_wrap sort-list">
-            <%= render 'shared/amz_search' %>
-            <%= render 'promocodes_days/note_wadiz' %>
+        <div class="card_wrap sort-list">
+          <%= render 'shared/amz_search' %>
+          <%= render 'promocodes_days/note_wadiz' %>
+          <%= render 'deals/body_promocode' %>
+        </div>
 
-            <!-- <div id="movie-card-list">
-              <div class="movie-card" data-section="deals">
-                <div class="movie-card__overlay"></div>                
-                <div class="movie-card__content">
-                  <div class="movie-card__header">
-                    <h1 class="movie-card__title">Amazon Prime Day 2019</h1>
-                    <a href="/blogs/blog_01_amz_prime"><h4 class="movie-card__info">What's Prime?</h4></a>
-                  </div>
-                  <p class="movie-card__desc">Prime Day 2019 is a two-day parade of epic deals, starting July 15 at 12am through July 16. Prime Day is an annual celebration with awesome deals and exciting product launches, plus live entertainment and more, exclusively for Prime members.  &emsp;- Amazon.com -</p>
-                  <a target="_blank" class="try_prime" href="https://amzn.to/2YcWjd1">"Try Free 30-day Trial"</a>
-                  <a class="btn btn-outline movie-card__button" target="_blank" href="https://amzn.to/2LJ977V">Get Prime-Day Early Deals</a>
-                </div>
-              </div>
-            </div>
-             -->
-            <%= render 'deals/body_promocode' %>
-          </div>
-          <p class="updating">Promotional codes are still updating... :D <a href="/promocodes_days/day_04">GO TO PROMO CODES OF YESTERDAY</a></h2>
-          
-        </div><!--./rt_cnt-->    
+        <!-- Note for Mobile -->
+        <div class="lt_cnt note_mobile">
+          <h2>Promo Codes of Amazon</h2>
+         <%= render 'deals/notes_promocode' %>
+        </div>
+        <!-- End -->
 
-     </div><!--./codes-->
-     <button id='goup'><img src="<%=asset_path 'goup.png' %>"></button>
+        <p class="updating">Promotional codes are still updating... :D <a href="/promocodes_days/day_04">GO TO PROMO CODES OF YESTERDAY</a></h2>
+        
+      </div><!--./rt_cnt-->  
+
+    </div><!--./codes-->
   </div>
 </div>
-
-
 <script><%= render(:partial => 'codes', :handlers => [:erb], :formats => [:js]) %></script>

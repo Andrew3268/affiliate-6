@@ -2,7 +2,7 @@
 @media screen and (min-width:640px){
   .codes{}
   .codes .lt_cnt .toggle{margin-top:10px;}
-  .codes .lt_cnt .qs_mobile{display:none;}
+  .codes .lt_cnt .qs_mobile, .codes .note_mobile{display:none;}
   .codes .lt_cnt .toggle>ul{}
   .codes .lt_cnt .toggle>ul>li{padding:8px 0;border-bottom:1px solid #3d3d3d;background:url(<%=asset_path 'toggle_show_btn.png' %>) top 10px right 10px no-repeat;}
   .codes .lt_cnt .toggle>ul>li.on{border-bottom:1px solid #3d3d3d;background:url(<%=asset_path 'toggle_hide_btn.png' %>) top 12px right 10px no-repeat;}
@@ -116,6 +116,7 @@
 }
 
 @media screen and (max-width:640px){
+  .codes .note_pc{display:none;}
   .codes .lt_cnt .toggle{margin-top:10px;}
   .codes .lt_cnt .toggle>ul>li{padding:8px 0;border-bottom:1px solid #3d3d3d;background:url(<%=asset_path 'toggle_show_btn.png' %>) top 10px right 10px no-repeat;}
   .codes .lt_cnt .toggle>ul>li.on{border-bottom:1px solid #3d3d3d;background:url(<%=asset_path 'toggle_hide_btn.png' %>) top 12px right 10px no-repeat;}
@@ -218,6 +219,8 @@
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
+  .codes .note_pc{display:none;}
+  .codes .note_mobile{display:block;}
   .codes .lt_cnt .toggle{margin-top:-7px;}
   .codes .lt_cnt .toggle>ul>.last7days{display:block;}
   .codes .lt_cnt .last7days_pc{display:none;}
@@ -227,6 +230,7 @@
   .codes .lt_cnt .bestdeals>ul>li>a{text-decoration:none;color:#000;display:block;background:#fff;}
   .codes .lt_cnt .lt_sort_box.on{display:none;}
   .codes .rt_cnt .sort_box ul li{float:left;width:17.7%;margin:1%;}
+  .codes .rt_cnt .sort_box ul li a{border-radius:10px;text-decoration:none;color:#fff;display:block;background:#000;text-align:center;padding:10px 0px;}
   .codes .most_categories .toggle>ul>li{width:50%;}
   .codes .card_wrap .deals_description{margin-bottom:10px;padding:0 5px;color:#616161;}
   .codes .card_wrap .card .inner>.code_high>.mobile_code{display:block;margin-bottom:13px;}
@@ -342,6 +346,7 @@
 .quicksearch .rt_cnt .tg tr td a:hover{color:#7bc242;}
 
 @media screen and (max-width:640px){
+  .quicksearch .lt_cnt h2.quick_h2{display:none;}
   .quicksearch .rt_cnt .tg{width:100%;margin:0;}
   .quicksearch .rt_cnt .tg tr th,
   .quicksearch .rt_cnt .tg tr td{font-size:12px;}
