@@ -35,5 +35,7 @@ class HomeController < ApplicationController
                     # image: "<%=asset_path 'visual_01.jpg' %>"
                   }
   end 
+
+  
 end
 

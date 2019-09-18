@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   get 'deals/shoes'
   get 'deals/sneakers01M'
   get 'deals/sneakers01W'
+  get 'deals/categories'
 
   get 'most_reviews/coffee_gadgets'
 
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   # root 'home#index'
   # root 'home#index_01'
   root 'home#index_02'
+
 
   resources :recommends
   # root 'recommends#index'
