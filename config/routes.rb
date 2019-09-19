@@ -60,6 +60,7 @@ Rails.application.routes.draw do
   get 'blogs/blog_04_thebestdealsofweek'
   get 'blogs/promocodes'
   get 'blogs/labordeals'
+  get 'blogs/be_rich'
 
   get 'promocodes_days/day_01'
   get 'promocodes_days/day_02'

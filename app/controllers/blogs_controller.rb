@@ -33,6 +33,7 @@ class BlogsController < ApplicationController
     @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(50)
   end
 
+
   private
 
   def find_blog
