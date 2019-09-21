@@ -22,7 +22,7 @@
          <p class="keyword"><%= @gadget.gg_option_04 %></p>
 
          <% if @gadget.gg_option_03.present? %>
-          <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
+          <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Learn More on <em><%= @gadget.gg_spare_01 %></em></a>
          <% else %>
           <p>$<%= @gadget.gg_aprice %></p>
           <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
@@ -45,7 +45,7 @@
 
       <div class="show_box_down clearfix">
         <h2>You may also like...</h2>
-        <% @relative_sub_category.shuffle.take(4).each do |subcategory| %>
+        <% @relative_sub_category.shuffle.take(8).each do |subcategory| %>
           <% if subcategory.subcategory_id == @gadget.subcategory_id %>
             <div class="sbd_box">
               <div class="down_img">

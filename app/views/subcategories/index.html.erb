@@ -1,31 +1,20 @@
 <header id="header">
-  <%= render 'shared/header' %> 
+  <%= render 'shared/header_short' %> 
 </header>
-    
-<!-- <div class="category_wrap">
+
+<div class="subcategory_wrap common_wrap clearfix">
   <div class="wrap">
-   <h1>List of Sub_Categories</h1>
-    <%= link_to "Add New Category", new_subcategory_path %>
-    <table>
-      <tr>
-        <th>Sub Category</th>
-        <th>Sub Category ID</th>
-        <th colspan="2">Option</th>
-      </tr>
-      <% @subcategories.each do |subcategory| %>
-       <tr>
-        <td><%= subcategory.subname %></td>
-        <td><%= link_to "Edit", edit_subcategory_path(subcategory) %></td>
-        <td><%= link_to "Delete", subcategory_path(subcategory), method: :delete, data: {confirm: "Are you sure?"} %></td>
-       </tr>
+
+   <ul class="clearfix">
+    <li><a href="/categories">CATEGORIES,</a></li>
+    <li><a href="/subcategories"># KEYWORD</a></li>
+   </ul>
+
+   <div class="subcategories">
+     <% Subcategory.all.each do |subcategory| %>
+        <span>#<%= link_to subcategory.subname, gadgets_path(subcategory: subcategory.subname) %>,</span>
       <% end %>
-    </table>
-  </div>
-</div> -->
-
-<div class="subcategory_wrap clearfix">
-  <div class="wrap">
-
+   </div>
 
     <% if can? :update, @category %>    
       <div class="categories">
