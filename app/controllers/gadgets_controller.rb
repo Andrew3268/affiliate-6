@@ -17,12 +17,12 @@ class GadgetsController < ApplicationController
       @gadgets = Gadget.where(category_id: @category_id).order("created_at DESC").page(params[:page]).per_page(50)
     end
 
-    if params[:subcategory].blank?
-      @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(50)
-    else
-      @subcategory_id = Subcategory.find_by(subname: params[:subcategory]).id
-      @gadgets = Gadget.where(subcategory_id: @subcategory_id).order("created_at DESC").page(params[:page]).per_page(50)
-    end
+    # if params[:subcategory].blank?
+    #   @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(50)
+    # else
+    #   @subcategory_id = Subcategory.find_by(subname: params[:subcategory]).id
+    #   @gadgets = Gadget.where(subcategory_id: @subcategory_id).order("created_at DESC").page(params[:page]).per_page(50)
+    # end
 
     if params[:search]
       @gadget_search_term = params[:search]

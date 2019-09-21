@@ -32,7 +32,7 @@
           <div class="on_gadgets">
             
               <div class="current_category">
-                <% if params[:subcategory].present? %>
+                <!--<% if params[:subcategory].present? %>
                  <span>- # <%= params[:subcategory] %> -</span>
                   <p><%= link_to "All categories", categories_path %></p>
                 <% else %>
@@ -43,7 +43,17 @@
                     <span>- Everything -</span>
                     <p><%= link_to "All categories", categories_path %></p>
                   <% end %>
+                <% end %>-->
+
+
+                <% if params[:category].present? %>
+                  <span>- <%= params[:category] %> -</span>
+                  <p><%= link_to "All categories", categories_path %></p>
+                <% else %>
+                  <span>- Everything -</span>
+                  <p><%= link_to "All categories", categories_path %></p>
                 <% end %>
+                
               </div>
               
               <div class="card_wrap clearfix" >
