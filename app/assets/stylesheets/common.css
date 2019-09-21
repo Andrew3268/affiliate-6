@@ -253,6 +253,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .common_layout{margin:30px 0 0 0;}
 .common_layout .lt_cnt{float:left;width:290px;margin-right:2%;}
 .common_layout .lt_cnt h2{color:#000;border-bottom:2px solid #616161;padding-bottom:3px;margin-bottom:10px;font-family: 'Montserrat', sans-serif;}
+.common_layout .lt_cnt img{width:100%;}
 .common_layout .rt_cnt{float:left;width:73%;}
 .common_layout .rt_cnt h2{color:#000;border-bottom:2px solid #616161;padding-bottom:3px;margin-bottom:10px;font-family: 'Montserrat', sans-serif;}
 .common_layout .lt_cnt .note{margin-bottom:20px;padding:0 17px;}
