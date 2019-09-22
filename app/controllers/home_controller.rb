@@ -25,17 +25,15 @@ class HomeController < ApplicationController
                     site: "@OhIgottabuythis",
                     title: 'The Best Deals, Coupons, Promo Codes, Discounts',
                     description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
-                    image: "<%=asset_path 'visual_01.jpg' %>",
+                    image: 'https://i.pinimg.com/564x/ff/c1/e5/ffc1e5c2a49a3ed756d47b0532916ca8.jpg',
                   },
                   og: {
                     title: 'The Best Deals, Coupons, Promo Codes, Discounts',
                     description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net',
-                    image: "<%=asset_path 'visual_01.jpg' %>"
+                    image: 'https://i.pinimg.com/564x/ff/c1/e5/ffc1e5c2a49a3ed756d47b0532916ca8.jpg'
                   }
-  end 
-
-  
+  end   
 end
 
