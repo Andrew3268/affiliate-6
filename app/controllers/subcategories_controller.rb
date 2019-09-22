@@ -5,6 +5,12 @@ class SubcategoriesController < ApplicationController
 
   def index
     @subcategories = Subcategory.all.order("created_at DESC")
+    if params[:subcategory].blank?
+      @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(50)
+    else
+      @subcategory_id = Category.find_by(name: params[:subcategory]).id
+      @gadgets = Gadget.where(subcategory_id: @subcategory_id).order("created_at DESC").page(params[:page]).per_page(50)
+    end
   end
 
   def show

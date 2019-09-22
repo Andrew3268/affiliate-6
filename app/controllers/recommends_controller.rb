@@ -17,14 +17,14 @@ class RecommendsController < ApplicationController
                     site: "@OhIgottabuythis",
                     title: 'Featured Gadgets',
                     description: 'we help you find the best gadgets what you are looking for',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/a7/5d/d3/a75dd30418dec26b3c0fdc3bcf831486.jpg',
                   },
                   og: {
                     title: 'Featured Gadgets',
                     description: 'we help you find the best gadgets what you are looking for',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/recommends/',
-                    # image:
+                    image:'https://i.pinimg.com/564x/a7/5d/d3/a75dd30418dec26b3c0fdc3bcf831486.jpg'
                   }
   end
 
@@ -40,14 +40,14 @@ class RecommendsController < ApplicationController
                     site: "@OhIgottabuythis",
                     title: 'Featured Gadgets',
                     description: 'we help you find the best gadgets what you are looking for',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/a7/5d/d3/a75dd30418dec26b3c0fdc3bcf831486.jpg',
                   },
                   og: {
                     title: 'Featured Gadgets',
                     description: 'we help you find the best gadgets what you are looking for',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/recommends/',
-                    # image:
+                    image: 'https://i.pinimg.com/564x/a7/5d/d3/a75dd30418dec26b3c0fdc3bcf831486.jpg'
                   }
   end
 

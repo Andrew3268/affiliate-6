@@ -19,20 +19,20 @@ class HomeController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
-                  keywords: 'gadget,deals,coupon,promo codes,bargains',
+                  keywords: 'gadget,deals,coupon,promo codes,bargains,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'The Best Deals, Coupons, Promo Codes, Discounts',
                     description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
-                    # image: "<%=asset_path 'visual_01.jpg' %>"
+                    image: "<%=asset_path 'visual_01.jpg' %>",
                   },
                   og: {
                     title: 'The Best Deals, Coupons, Promo Codes, Discounts',
                     description: 'It is discount platform but also trending item platform | Oh,igottabuythis is here to discover awesome gadgets. Find thousands of Amazon best deals, coupon codes, promotions you love.',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net',
-                    # image: "<%=asset_path 'visual_01.jpg' %>"
+                    image: "<%=asset_path 'visual_01.jpg' %>"
                   }
   end 
 

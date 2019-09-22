@@ -1,6 +1,6 @@
 class GadgetsController < ApplicationController
 
-  before_action :find_gadget, only: [:show, :edit, :update, :destroy]
+  before_action :find_gadget, only: [:show, :edit, :update, :destroy, :keywords]
   before_action :authenticate_user!, except: [:index, :show]
   # before_action :log_impression, :only=> [:show]
   load_and_authorize_resource

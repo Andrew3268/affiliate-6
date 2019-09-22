@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'It is discount platform but also trending item platform',
-                  keywords: 'about us,feedback,question',
+                  keywords: 'about us,feedback,question,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'If you have any question or give feedback just do it!!',
-                  keywords: 'about us,feedback,question',
+                  keywords: 'about us,feedback,question,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",

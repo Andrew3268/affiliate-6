@@ -30,20 +30,20 @@ class PromocodesDaysController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
-                  keywords: 'promo codes,amazon,coupon,deals',
+                  keywords: 'promo codes,amazon,coupon,deals,recommend,recommendation,under',
                   twitter: {
                   card: "summary",
                   site: "@OhIgottabuythis",
                   title: 'Promo Codes, Coupon Codes on Amazon',
                   description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
-                  # image: 
+                  image: 'https://i.pinimg.com/564x/76/9b/c5/769bc5e3d66dd9b8ffe3d765a70811e7.jpg',
                   },
                   og: {
                     title: 'Promo Codes, Coupon Codes on Amazon',
                     description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/promo_codes',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/76/9b/c5/769bc5e3d66dd9b8ffe3d765a70811e7.jpg'
                   }
   end
 end

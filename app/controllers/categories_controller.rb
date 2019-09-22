@@ -10,20 +10,20 @@ class CategoriesController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Find the coolest itmes we picked from all of the world',
-                  keywords: 'gadgets,geeky,home,kitchen,travel,outdoor,smartphone,fashion',
+                  keywords: 'gadgets,geeky,home,kitchen,travel,outdoor,smartphone,fashion,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Categories of awesome gadgets',
                     description: 'Find the coolest itmes we picked from all of the world',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/dd/ff/3c/ddff3c48c8c282caf3c7ea0f428df231.jpg',
                   },
                   og: {
                     title: 'Categories of awesome gadgets',
                     description: 'Find the coolest itmes we picked from all of the world',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/categories/',
-                    # image:
+                    image: 'https://i.pinimg.com/564x/dd/ff/3c/ddff3c48c8c282caf3c7ea0f428df231.jpg'
                   }
 
   end

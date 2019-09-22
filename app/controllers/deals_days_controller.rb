@@ -30,20 +30,20 @@ class DealsDaysController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
-                  keywords: 'best price,best deals,latest deals,amazon',
+                  keywords: 'best price,best deals,latest deals,amazon,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Updated daily with best deals of Amazon',
                     description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/af/3b/53/af3b537235cb922e14e546abb7e49e48.jpg',
                   },
                   og: {
                     title: 'Updated daily with best deals of Amazon',
                     description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/bestdeals',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/af/3b/53/af3b537235cb922e14e546abb7e49e48.jpg'
                   }
   end
 

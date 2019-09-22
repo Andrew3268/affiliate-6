@@ -5,20 +5,20 @@ class DealsController < ApplicationController
                     site: 'Oh,igottabuythis',
                     revierse: true,
                     description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
-                    keywords: 'promo codes,amazon,coupon,deals',
+                    keywords: 'promo codes,amazon,coupon,deals,recommend,recommendation,under',
                     twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Promo Codes, Coupon Codes on Amazon',
                     description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/76/9b/c5/769bc5e3d66dd9b8ffe3d765a70811e7.jpg',
                     },
                     og: {
                       title: 'Promo Codes, Coupon Codes on Amazon',
                       description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
                       type: 'website',
                       url: 'http://www.ohigottabuythis.net/deals/promo_codes',
-                      # image: 
+                      image: 'https://i.pinimg.com/564x/76/9b/c5/769bc5e3d66dd9b8ffe3d765a70811e7.jpg'
                     }
   end
 
@@ -27,20 +27,20 @@ class DealsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
-                  keywords: 'best price,best deals,latest deals,amazon',
+                  keywords: 'best price,best deals,latest deals,amazon,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Updated daily with best deals of Amazon',
                     description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/af/3b/53/af3b537235cb922e14e546abb7e49e48.jpg',
                   },
                   og: {
                     title: 'Updated daily with best deals of Amazon',
                     description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/bestdeals',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/af/3b/53/af3b537235cb922e14e546abb7e49e48.jpg'
                   }
   end
 
@@ -52,20 +52,20 @@ class DealsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Take promotions, sales, offer, brand deals on Amazon',
-                  keywords: 'promotions,sales,offer,brand deals,amazon',
+                  keywords: 'promotions,sales,offer,brand deals,amazon,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Promotions on Amazon',
                     description: 'Take promotions, sales, offer, brand deals on Amazon',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/2f/00/26/2f00260f304d80d222d75dfc7198f7d0.jpg',
                   },
                   og: {
                     title: 'Promotions on Amazon',
                     description: 'Take promotions, sales, offer, brand deals on Amazon',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/promotions',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/2f/00/26/2f00260f304d80d222d75dfc7198f7d0.jpg'
                   }
   end
 
@@ -74,20 +74,20 @@ class DealsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
-                  keywords: 'search,quick search,deals,sales,amazon',
+                  keywords: 'search,quick search,deals,sales,amazon,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Quick Search on Amazon',
                     description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/0a/7c/b6/0a7cb6c6875ed1219e2d39b93307b4f2.jpg',
                   },
                   og: {
                     title: 'Quick Search on Amazon',
                     description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/quick_search',
-                    # image: 
+                    image: 'https://i.pinimg.com/564x/0a/7c/b6/0a7cb6c6875ed1219e2d39b93307b4f2.jpg'
                   }
 
   end
@@ -98,14 +98,14 @@ class DealsController < ApplicationController
                   revierse: true,
                   description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
                                 So we’ve done the work for you. ',
-                  keywords: 'most reviews,highest reviewed,popular, amazon reviews',
+                  keywords: 'most reviews,highest reviewed,popular, amazon reviews,recommend,recommendation,under',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Most-Reviewed Products on Amazon',
                     description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
                                 So we’ve done the work for you. ',
-                    image: 'https://i.pinimg.com/564x/62/76/c0/6276c0be1f32d32072554f912385770e.jpg',
+                    image: 'https://i.pinimg.com/564x/b9/37/7e/b9377e7f26b8703acfebc2cc289306f2.jpg',
                   },
                   og: {
                     title: 'Most-Reviewed Products on Amazon',
@@ -113,7 +113,7 @@ class DealsController < ApplicationController
                                 So we’ve done the work for you. ',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/most_reviewed',
-                    image: 'https://i.pinimg.com/564x/62/76/c0/6276c0be1f32d32072554f912385770e.jpg'
+                    image: 'https://i.pinimg.com/564x/b9/37/7e/b9377e7f26b8703acfebc2cc289306f2.jpg'
                   }
   end
 

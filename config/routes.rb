@@ -26,8 +26,7 @@ Rails.application.routes.draw do
   # root 'home#index'
   # root 'home#index_01'
   root 'home#index_02'
-
-
+  
   resources :recommends
   # root 'recommends#index'
   # root 'recommends#index_02'
@@ -37,7 +36,7 @@ Rails.application.routes.draw do
 
   resources :subcategories
   # root 'subcategories#index'
-
+  
   get 'editors/index'
   get 'editors/editor_01'
 
