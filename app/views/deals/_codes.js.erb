@@ -1,163 +1,165 @@
 
-    //Begin sort by price&percentage 
-    function sortMeBy(arg, sel, elem, order) {
-    var $selector = $(sel),
-      $element = $selector.children(elem);
-  
-    $element.sort(function(a, b) {
-      var an = parseInt(a.getAttribute(arg)),
-        bn = parseInt(b.getAttribute(arg));
-  
-      if (order == 'asc') {
-        if (an > bn)
-          return 1;
-        if (an < bn)
-          return -1;
-      } else if (order == 'desc') {
-        if (an < bn)
-          return 1;
-        if (an > bn)
-          return -1;
-      }
-      return 0;
-    });
-  
-    $element.detach().appendTo($selector);
-    }
-    
-    $(document).on('click', '.sort1', function() {
-      sortMeBy('data-price', '.sort-list', 'div.card', 'desc');
-    });
-    $(document).on('click', '.sort2', function() {
-      sortMeBy('data-price', '.sort-list', 'div.card', 'asc');
-    });
-    $(document).on('click', '.sort3', function() {
-      sortMeBy('data-score', '.sort-list', 'div.card', 'desc');
-    });
-    $(document).on('click', '.sort4', function() {
-      sortMeBy('data-score', '.sort-list', 'div.card', 'asc');
-    });
-  //End
-  
-  //Begin sticky&following sidebar
-    $(function () {
-      var offset = $(".codes .lt_cnt .lt_sort_box").offset();
-      var topPadding = 100;
-      $(window).scroll(function () {
-          if ($(window).scrollTop() > 1200) {
-              $(".codes .lt_cnt .lt_sort_box").addClass("on");
-  
-          } else {
-              $(".codes .lt_cnt .lt_sort_box").removeClass("on");
-            };
-        });
-    });
-  //End
-  
-  //Begin Opne&Close Toggle _Menu 
-  var menu_status;
-  $(".codes .lt_cnt .toggle>ul>li>a").on("click", function(){
-    menu_status = $(this).parent().hasClass("on");
-    //console.log(menu_status);
-    if(menu_status == true){
-      //지금 열려있는 상태 -- 닫는기능
-      $(this).parent().removeClass("on");
-      $(this).next().slideUp();
-    }else{
-      //지금 닫혀있는 상태 - 여는기능
-      $(".codes .lt_cnt .toggle>ul>li").removeClass("on");
-      $(".codes .lt_cnt .toggle>ul>li>ul").slideUp();
-      $(this).parent().addClass("on");
-      $(this).next().slideDown();
-    }
-  });
-  //End
+//Begin sort by price&percentage 
+function sortMeBy(arg, sel, elem, order) {
+var $selector = $(sel),
+  $element = $selector.children(elem);
 
-  //Begin goup button
-  // var b =document.getElementById('goup');
-  // window.onscroll=function(){
-  // 'use strict';
-  // if(window.pageYOffset>500){
-  //   b.style.display='block';
-  // }
-  //   else{
-  //        b.style.display='none';
-  //       }
-  // };
-  // b.onclick=function(){
-  //   'use strict';
-  //   window.scrollTo(0,0);
-  // };
-  //End
+$element.sort(function(a, b) {
+  var an = parseInt(a.getAttribute(arg)),
+    bn = parseInt(b.getAttribute(arg));
 
+  if (order == 'asc') {
+    if (an > bn)
+      return 1;
+    if (an < bn)
+      return -1;
+  } else if (order == 'desc') {
+    if (an < bn)
+      return 1;
+    if (an > bn)
+      return -1;
+  }
+  return 0;
+});
 
-  // Opening and Closing the Modal 
-    function openModal() {
-      document.getElementById('myModal').classList.add('show'); 
-    }
-    function closeModal() {
-      document.getElementById('myModal').classList.remove('show'); 
-    }
-    // Clicking on the <div class="column"> or on <img> nested inside: 
-    var gallery = document.getElementById('gallery'); 
-    gallery.addEventListener('click', function(e){
-      var target = e.target; 
-      // if the target has the classes flex and column, or if it's an <img> 
-      if (target.querySelectorAll('.flex, .column') || target.nodeName === 'IMG') {
-        console.log(target); 
-        openModal();  
-      }
-    }); 
-    // Clicking on the X button inside pop up modal: 
-    var closeButton = document.querySelector('.close'); 
-    closeButton.addEventListener('click', function(e) {
-      closeModal(); 
-    }); 
-    // Next and Previous Functions 
-    // changeSlide(-1): to go back one slide 
-    // changeSlide(1): to go forward one slide 
-    function changeSlide(n) {
-      showSlides(slideIndex += n); 
-    }
-    // Get current slide: set slideIndex and n equal to each other: 
-    // currentSlide(1)
-    // n = 1 
-    // slideIndex = 1 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    // match starting value of slideIndex with the currentSlide(1); counting from 1
-    // so we're 1 over the actual nodeList count of 6  
-    var slideIndex = 1; 
-    function showSlides(n) { 
-      var slides = document.getElementsByClassName("slides");
-      if (n > slides.length) { // when we hit the end, we're at n = 7 
-        slideIndex = 1; // so set slideIndex back to 1 for later, when slideIndex = n in showSlides
-      }
-      // for changeSlide(-1): 
-      // when when we're at slides[0], there's no such thing as -1 in a nodeList or array 
-      // so we have to reset slideIndex, and therefore n, back to the length of the slides, which is the last item in the array...
-      if (n < 1) {  
-        console.log("less than 1: " + n); 
-        slideIndex = slides.length;
-      }
-      // loop through each item in slides and hide all the slides at first: 
-      for (var i = 0; i < slides.length; i++) {
-         slides[i].classList.add('hide'); // hide current slide 
-         slides[i].classList.remove('pop'); // make sure to remove pop by default 
-      }
-      // then when we click on the thumbnail image, we activate this: 
-      // we remove hide to show the image in slides connected to the thumbnail 
-      slides[slideIndex - 1].classList.remove('hide') // since we're starting at 1, we have to subtract 1 
-      slides[slideIndex - 1].classList.add('pop'); // then add pop, which shows the image 
-    }
+$element.detach().appendTo($selector);
+}
 
-   //For size table for delas of shoes  
-    $('#clickMeBtn').click(function(){
-      $('.popup-container').toggle();
+$(document).on('click', '.sort1', function() {
+  sortMeBy('data-price', '.sort-list', 'div.card', 'desc');
+});
+$(document).on('click', '.sort2', function() {
+  sortMeBy('data-price', '.sort-list', 'div.card', 'asc');
+});
+$(document).on('click', '.sort3', function() {
+  sortMeBy('data-score', '.sort-list', 'div.card', 'desc');
+});
+$(document).on('click', '.sort4', function() {
+  sortMeBy('data-score', '.sort-list', 'div.card', 'asc');
+});
+//End
+
+//Begin sticky&following sidebar
+$(function () {
+  var offset = $(".codes .lt_cnt .lt_sort_box").offset();
+  var topPadding = 100;
+  $(window).scroll(function () {
+      if ($(window).scrollTop() > 1200) {
+          $(".codes .lt_cnt .lt_sort_box").addClass("on");
+
+      } else {
+          $(".codes .lt_cnt .lt_sort_box").removeClass("on");
+        };
     });
+});
+//End
 
-    $('#closeBtn').click(function(){
-      $('.popup-container').toggle();
-    });
+//Begin Opne&Close Toggle _Menu 
+var menu_status;
+$(".codes .lt_cnt .toggle>ul>li>a").on("click", function(){
+menu_status = $(this).parent().hasClass("on");
+//console.log(menu_status);
+if(menu_status == true){
+  //지금 열려있는 상태 -- 닫는기능
+  $(this).parent().removeClass("on");
+  $(this).next().slideUp();
+}else{
+  //지금 닫혀있는 상태 - 여는기능
+  $(".codes .lt_cnt .toggle>ul>li").removeClass("on");
+  $(".codes .lt_cnt .toggle>ul>li>ul").slideUp();
+  $(this).parent().addClass("on");
+  $(this).next().slideDown();
+}
+});
+//End
 
+//Begin goup button
+// var b =document.getElementById('goup');
+// window.onscroll=function(){
+// 'use strict';
+// if(window.pageYOffset>500){
+//   b.style.display='block';
+// }
+//   else{
+//        b.style.display='none';
+//       }
+// };
+// b.onclick=function(){
+//   'use strict';
+//   window.scrollTo(0,0);
+// };
+//End
+
+
+// Opening and Closing the Modal 
+function openModal() {
+  document.getElementById('myModal').classList.add('show'); 
+}
+function closeModal() {
+  document.getElementById('myModal').classList.remove('show'); 
+}
+// Clicking on the <div class="column"> or on <img> nested inside: 
+var gallery = document.getElementById('gallery'); 
+gallery.addEventListener('click', function(e){
+  var target = e.target; 
+  // if the target has the classes flex and column, or if it's an <img> 
+  if (target.querySelectorAll('.flex, .column') || target.nodeName === 'IMG') {
+    console.log(target); 
+    openModal();  
+  }
+}); 
+// Clicking on the X button inside pop up modal: 
+var closeButton = document.querySelector('.close'); 
+closeButton.addEventListener('click', function(e) {
+  closeModal(); 
+}); 
+// Next and Previous Functions 
+// changeSlide(-1): to go back one slide 
+// changeSlide(1): to go forward one slide 
+function changeSlide(n) {
+  showSlides(slideIndex += n); 
+}
+// Get current slide: set slideIndex and n equal to each other: 
+// currentSlide(1)
+// n = 1 
+// slideIndex = 1 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+// match starting value of slideIndex with the currentSlide(1); counting from 1
+// so we're 1 over the actual nodeList count of 6  
+var slideIndex = 1; 
+function showSlides(n) { 
+  var slides = document.getElementsByClassName("slides");
+  if (n > slides.length) { // when we hit the end, we're at n = 7 
+    slideIndex = 1; // so set slideIndex back to 1 for later, when slideIndex = n in showSlides
+  }
+  // for changeSlide(-1): 
+  // when when we're at slides[0], there's no such thing as -1 in a nodeList or array 
+  // so we have to reset slideIndex, and therefore n, back to the length of the slides, which is the last item in the array...
+  if (n < 1) {  
+    console.log("less than 1: " + n); 
+    slideIndex = slides.length;
+  }
+  // loop through each item in slides and hide all the slides at first: 
+  for (var i = 0; i < slides.length; i++) {
+     slides[i].classList.add('hide'); // hide current slide 
+     slides[i].classList.remove('pop'); // make sure to remove pop by default 
+  }
+  // then when we click on the thumbnail image, we activate this: 
+  // we remove hide to show the image in slides connected to the thumbnail 
+  slides[slideIndex - 1].classList.remove('hide') // since we're starting at 1, we have to subtract 1 
+  slides[slideIndex - 1].classList.add('pop'); // then add pop, which shows the image 
+}
+
+//For size table for delas of shoes  
+$('#clickMeBtn').click(function(){
+  $('.popup-container').toggle();
+});
+
+$('#closeBtn').click(function(){
+  $('.popup-container').toggle();
+});
+
+
+// Silde Deals on Deals Page 
