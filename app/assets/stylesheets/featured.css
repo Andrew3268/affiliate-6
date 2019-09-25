@@ -444,6 +444,11 @@
 .promotions .admin{float:right;}
 .promotions .admin a{text-decoration:none;color:#616161;}
 .filter-node.filter-me {opacity:0 !important; visibility:hidden; position:absolute; top: 2000px;}
+/* new editor's pick tem */
+.pick_box{float:left;width:31.3333%;margin:0 1% 2% 1%;}
+.pick_box img{width:100%;}
+.pick_box h2{display:none;}
+
 
 @media screen and (max-width:640px){
   .promotions .featured .sm_pc .amzpromo button{width:105px;display:none;}
