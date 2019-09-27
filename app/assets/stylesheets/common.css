@@ -451,6 +451,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   
 /* Amazon Search3 */
 div#amzn-native-ad-0 .amzn-native-header{display:none;}
+div#amzn-native-ad-0 div.amzn-native-category-trigger-area{background-color:none;background:#000;}
 
 
 /* Error Page */
