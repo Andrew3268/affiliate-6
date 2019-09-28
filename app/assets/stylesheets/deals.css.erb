@@ -1,8 +1,11 @@
 /* Common css for Deals Page */
-.middle_box{border-bottom:1px solid #ccc;padding-bottom:10px;}
-.middle_box img{width:100%;}
+.middle_box, .middle_box_m{border-bottom:1px solid #ccc;padding-bottom:10px;}
+.middle_box img, .middle_box_m img{width:100%;}
+.middle_box_m{display:none;}
+{display:none;}
 @media screen and (max-width:640px){
-  .middle_box{padding-bottom:27px;}
+  .middle_box{display:none;}
+  .middle_box_m{display:block;padding-bottom:27px;}
 }
 
 
