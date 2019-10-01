@@ -19,30 +19,30 @@
     </div> -->
 
     <div class="cateogry_box">
-      <a href="/gadgets?category=Gadgets">
+      <a href="/gadgets?category=Tech+%26+Electronics">
         <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
         <div class="centered">TECH & ELECTRONIC</div>
       </a>
     </div>
 
     <div class="cateogry_box">
-      <a href="/gadgets?category=Geeky">
+      <a href="/gadgets?category=Geeky+%26+Hilarious">
         <img src="https://images.unsplash.com/photo-1544816565-c199d6f5d2d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">GEEKY</div>
+        <div class="centered">GEEKY & HILARIOUS</div>
       </a>
     </div>
 
     <div class="cateogry_box">
-      <a href="/gadgets?category=Home">
+      <a href="/gadgets?category=Home+%26+Living">
         <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">HOME</div>
+        <div class="centered">HOME & LIVING</div>
       </a>
     </div>
 
     <div class="cateogry_box">
-      <a href="/gadgets?category=Kitchen">
+      <a href="/gadgets?category=Kitchen+%26+Dining">
         <img src="https://images.unsplash.com/photo-1556910633-5099dc3971e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">KITCHEN</div>
+        <div class="centered">KITCHEN & DINING</div>
       </a>
     </div>
 
@@ -54,16 +54,16 @@
     </div>
 
     <div class="cateogry_box">
-      <a href="/gadgets?category=Outdoor">
+      <a href="/gadgets?category=Outdoor+%26+Sprots">
         <img src="https://images.unsplash.com/photo-1414016642750-7fdd78dc33d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">OUTDOOR</div>
+        <div class="centered">OUTDOOR & SPORTS</div>
       </a>
     </div>
 
     <div class="cateogry_box">
-      <a href="/gadgets?category=Cellphone">
+      <a href="/gadgets?category=Smartphone+Accessories">
         <img src="https://images.unsplash.com/photo-1488977321720-6672ab3ed60f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">CELLPHONE</div>
+        <div class="centered">SMARTPHONE ACCESSORIES</div>
       </a>
     </div>
 
@@ -98,9 +98,14 @@
          </tr>
         <% end %>
       </table>
-    </div>
-  </div>
+      <% Category.all.each do |category| %>
+        <span>#<%= link_to category.name, gadgets_path(category: category.name) %>,</span>
+      <% end %>
+    </div>    
+  </div>  
 <% end %>
+
+
 
 
 
