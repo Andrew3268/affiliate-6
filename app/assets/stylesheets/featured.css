@@ -69,7 +69,7 @@
 .featured .gnb_open, .featured .gnb_close, .featured .sm_mobile{display:none;}
 
 @media screen and (max-width:640px){
-	.featured{margin:30px 0 0 0;}
+	.featured{margin:15px 0 0 0;}
   .featured .deal h2{display:none;}
 	.featured .sm_pc{display:none;}
   .featured .most_pc{display:block;}
@@ -466,7 +466,7 @@
   .promotions .promotion_box{margin:10px 0 35px 0;}
   .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
   .promotions .promotion_box{float:none;width:100%;margin-bottom:35px;}
-  .promotions .guide_controll .form-control{width:95%;margin:10px 2.5%;}
+  .promotions .guide_controll .form-control{width:95%;margin:4px 2.5%;}
   .most_wrapper{margin-top:-25px;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){

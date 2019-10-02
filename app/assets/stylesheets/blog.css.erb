@@ -1,8 +1,19 @@
-.special_deals_box{margin-top:100px;;}
+.special_deals_box{margin-top:100px;}
 .special_deals_box h2{margin-bottom:40px;font-size:40px;color:#000;font-weight:500}
+.special_deals_box h2.week_m{display:none;}
 .special_deals_box .editors_pick .editors_box .special_inner p{margin-bottom:10px;}
 .special_deals_box .editors_pick .special_box{height:auto;margin:1%;}
 .special_deals_box .admin_controller{margin-bottom:30px;}
+@media screen and (max-width:640px){
+  .special_deals_box{margin-top:85px;}
+  .special_deals_box img{width:100%;}
+  .special_deals_box h2{margin-bottom:0;}
+  .special_deals_box h2.week_pc{display:none;}
+  .special_deals_box h2.week_m{display:block;}
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+  .special_deals_box img{width:100%;}
+}
 
 /* Begin Blog Main */
 .blog{font-family: 'Montserrat', sans-serif;}
