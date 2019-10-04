@@ -9,5 +9,6 @@ class User < ActiveRecord::Base
   has_many :recommends
   has_many :categories
   has_many :messages
+  has_many :hotdeals
 
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190903200702) do
+ActiveRecord::Schema.define(version: 20191004033653) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -96,6 +96,53 @@ ActiveRecord::Schema.define(version: 20190903200702) do
   end
 
   add_index "gadgets", ["slug"], name: "index_gadgets_on_slug", unique: true
+
+  create_table "hotdeals", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "h_title"
+    t.text     "h_description"
+    t.string   "h_image"
+    t.string   "h_link"
+    t.string   "h_price"
+    t.string   "h_list_price"
+    t.string   "h_percentage"
+    t.string   "h_keyword"
+    t.string   "h_spare_01"
+    t.string   "h_spare_02"
+    t.string   "h_spare_03"
+    t.string   "h_spare_04"
+    t.string   "h_spare_05"
+    t.string   "h_spare_06"
+    t.string   "h_spare_07"
+    t.string   "h_spare_08"
+    t.string   "h_spare_09"
+    t.string   "h_spare_10"
+    t.string   "h_spare_11"
+    t.string   "h_spare_12"
+    t.string   "h_spare_13"
+    t.string   "h_spare_14"
+    t.string   "h_spare_15"
+    t.string   "h_spare_16"
+    t.string   "h_spare_17"
+    t.string   "h_spare_18"
+    t.string   "h_spare_20"
+    t.text     "h_spare_21"
+    t.text     "h_spare_22"
+    t.text     "h_spare_23"
+    t.text     "h_spare_24"
+    t.text     "h_spare_25"
+    t.text     "h_spare_26"
+    t.text     "h_spare_27"
+    t.text     "h_spare_28"
+    t.text     "h_spare_29"
+    t.text     "h_spare_30"
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "himage_file_name"
+    t.string   "himage_content_type"
+    t.integer  "himage_file_size",    limit: 8
+    t.datetime "himage_updated_at"
+  end
 
   create_table "impressions", force: :cascade do |t|
     t.string   "impressionable_type"

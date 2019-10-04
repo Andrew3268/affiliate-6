@@ -1,0 +1,23 @@
+.hotdeal_wrap{margin-top:100px;}
+.hotdeals_nav{margin-top:100px;}
+.hotdeals_new{display:inline-block;margin-left:20px;padding:0 10px;background:#000}
+.hotdeals_new a{text-decoration:none;color:#fff;}
+
+.hotdeal_inner
+.hotdeal_inner p{margin-bottom:10px;}
+.show_wrap .show_box .show_inner h3{}
+.hotdeal_related{width:1000px;margin:30px auto 0 auto;}
+@media screen and (max-width:640px){
+  .hotdeals_nav{margin-top:80px;}
+  .hotdeal_related{width:100%;}
+
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+  .hotdeals_nav{margin-top:80px;}
+  .hotdeals_new a{font-size:15px;}
+  .hotdeal_related{width:100%;}
+
+}
+
+
+

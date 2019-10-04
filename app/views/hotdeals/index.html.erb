@@ -1,8 +1,9 @@
+<!-- <p id="notice"><%= notice %></p> -->
 <%= render 'shared/play_video' %><!-- for play youtube video-->
 
 <div class="layout"><!--layout-->
   <div class="wrap">  
-  <%= render 'shared/header' %>
+  <%= render 'shared/header_short' %>
 
   <!-- <div class="deals_main_menu">
     <ul>
@@ -10,7 +11,7 @@
       <li>Stores</li>
     </ul>
   </div> -->
-  <%= render 'deals/header' %>    
+  <%= render 'hotdeals/header' %>    
   
   <div class="codes common_layout">
 
@@ -20,7 +21,7 @@
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
-        <h2>Daily Deals | Hand-Pick On Amazon Oct. 03. 2019.<% if can? :update, @hotdeals %><%= link_to 'New Hotdeal', new_hotdeal_path %><% end %></h2>
+        <h2>Daily Deals | Hand-Pick On Amazon Oct. 03. 2019.  <% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'Add New Deals', new_hotdeal_path %></div><% end %></h2>
         
         <div class="sort_box clearfix">
           <!-- <div class="deals_des">We pick the best deals from all categories of Amazon!! We just hope you like it :D</div> -->
@@ -45,10 +46,11 @@
             <div class="inner">
               <span class="regular"><em><%= hotdeal.h_percentage %>% OFF</em> + free shipping</span>
               <span class="shipping_condition">Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items.</a></span>
-              <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p>
+              <!-- <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p> -->
+              <p><%= link_to hotdeal.h_title, hotdeal %></p>
               <div class="code_high">
                <address><span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span></address>
-               <em>*Pricing may change and deals can expire fast.</em>
+               <em>*Pricing may change and deals can expire fast. <%= link_to 'More Detail', hotdeal %></em>
                <% if can? :update, @hotdeals %>
                  <div class="admin">
                   <ul>
@@ -64,7 +66,6 @@
            </div>
           <% end %>
 
-          <%= render 'deals/body_bestdeals' %>
         </div>
 
         <!-- Note for mobile -->
@@ -83,4 +84,4 @@
     </div><!--./codes-->
   </div><!--./warp-->
 </div><!--./layout-->
-<script><%= render(:partial => 'codes', :handlers => [:erb], :formats => [:js]) %></script>
+<script><%= render(:partial => 'hotdeals', :handlers => [:erb], :formats => [:js]) %></script>

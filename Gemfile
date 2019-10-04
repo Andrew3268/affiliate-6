@@ -12,6 +12,9 @@ gem 'will_paginate', '~> 3.1', '>= 3.1.7'
 gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'meta-tags'
 gem 'friendly_id'
+gem 'paperclip', '~> 6.1'
+# gem "paranoia", "~> 2.2"
+
 
 # group :production do
 #   gem 'mysql2'

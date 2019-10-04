@@ -23,6 +23,7 @@ class DealsController < ApplicationController
   end
 
   def bestdeals
+    @hotdeals = Hotdeal.all.order("created_at DESC")
     set_meta_tags title: 'Updated daily with best deals of Amazon',
                   site: 'Oh,igottabuythis',
                   revierse: true,
@@ -42,9 +43,6 @@ class DealsController < ApplicationController
                     url: 'http://www.ohigottabuythis.net/deals/bestdeals',
                     image: 'https://i.pinimg.com/564x/af/3b/53/af3b537235cb922e14e546abb7e49e48.jpg'
                   }
-  end
-
-  def bestdeals2
   end
 
   def promotions

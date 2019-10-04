@@ -1,0 +1,31 @@
+<div class="layout"><!--layout-->
+  <%= render 'shared/header_short' %>
+  <div class="wrap">
+    <div class="hotdeal_wrap">
+      <%= simple_form_for(@hotdeal) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+      <!-- 
+        <div class="form-inputs">
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit %>
+        </div> -->
+
+        <%= f.input :himage %>
+        <%= f.input :h_title %>
+        <%= f.input :h_description %>
+        <%= f.input :h_image %>
+        <%= f.input :h_link %>
+        <%= f.input :h_price %>
+        <%= f.input :h_list_price %>
+        <%= f.input :h_percentage %>
+        <%= f.input :h_keyword %>
+
+        <%= f.button :submit %>
+
+        <% end %>
+    </div>
+  </div>
+</div>

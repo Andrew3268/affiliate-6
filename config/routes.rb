@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :hotdeals
+  # root 'hotdeals#index'
+
   get 'deals/promo_codes'
   get 'deals/coupons'
   get 'deals/quick_search'
@@ -17,7 +20,6 @@ Rails.application.routes.draw do
   get 'deals/sneakers01W'
   get 'deals/categories'
 
-  get 'most_reviews/coffee_gadgets'
 
   devise_for :users
   resources :gadgets
