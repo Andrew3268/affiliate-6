@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
     set_meta_tags title: 'Categories of awesome gadgets',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'Find the coolest itmes we picked from all of the world',
+                  description: 'Find the best itmes we picked and recommended from all of the world',
                   keywords: 'gadgets,geeky,home,kitchen,travel,outdoor,smartphone,fashion,recommend,recommendation,under',
                   twitter: {
                     card: "summary",

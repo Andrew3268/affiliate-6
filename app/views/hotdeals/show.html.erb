@@ -2,24 +2,42 @@
 <%= render 'shared/play_video' %><!-- for play youtube video-->
 <div class="layout">
   <%= render 'shared/header_short' %>
+  
   <div class="show_wrap clearfix">
     <div class="wrap">
-        
+    
       <div class="show_box clearfix">
-        <div class="show_img">
+        <%= render 'hotdeals/header' %>  
+        <!-- <p>Location Map</p> -->
+        <div class="show_img hotdeal_img">
           <a target="_blank" href="<%= @hotdeal.h_link %>"><img src="<%= @hotdeal.h_image %>"></a>
+          <div class="mark">
+            <span>HOT</span><em>DEALS</em>
+          </div>
+           <% if can? :update, @hotdeal %>
+            <div class="admin">
+              <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
+              <%= link_to 'Back', hotdeals_path %>
+            </div>
+          <% end %>
         </div>
         <div class="show_inner">
          <div class="hotdeal_inner">
-           <p><%= @hotdeal.h_percentage %>% OFF</p>
-           <h3><%= @hotdeal.h_title %></h3>
-           <p class="d_price">$<%= @hotdeal.h_price %> <span>$<%= @hotdeal.h_list_price %></span></p>
-           <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on <em>Amazon</em></a>
+           <h2><%= @hotdeal.h_title %></h2>
+
+           <p class="h_price">$<%= @hotdeal.h_price %> <span class="span_01">$<%= @hotdeal.h_list_price %></span><span class="span_02">( <%= @hotdeal.h_percentage %>% OFF )</span></p>
+           <div class="extra_info">
+             <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
+             <% if @hotdeal.h_spare_01.present? %><em>+ <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
+             <% if @hotdeal.h_spare_02.present? %><em>+ <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
+            </div>
+
+           <p class="description"><%= @hotdeal.h_description %></p>
+           
+           <div class="btn">
+            <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on &ensp;<em>Amazon</em></a>
+           </div>
           </div>
-          <% if can? :update, @hotdeal %>
-            <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
-            <%= link_to 'Back', hotdeals_path %>
-          <% end %>
         </div>
 
         <% if can? :update, @hotdeal %>
@@ -30,6 +48,7 @@
 
       </div>
       <div class="hotdeal_related">
+        <p>Related Products on Amazon</p>
         <script type="text/javascript">
         amzn_assoc_placement = "adunit0";
         amzn_assoc_tracking_id = "3628-20";

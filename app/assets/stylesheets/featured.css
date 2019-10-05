@@ -257,12 +257,12 @@
 .guide_show .last_column_box .column{border-bottom:1px solid #ccc;}
 .guide_show .shoes_column{float:left;width:20%;transition:0.3s;}
 .guide_show .column:hover{box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 10px 0 rgba(0, 0, 0, 0.2);cursor:pointer;}
-.guide_show .column img{width:100%;height:250px;object-fit:contain;}
+.guide_show .column img{width:100%;height:250px;object-fit:cover;}
 .guide_show .shoes_column img{object-fit:contain;padding:10px;}
 
 .guide_show .modal{overflow:scroll;background-color:white;position:fixed;left:0;top:-500%;height:100%;width:100%;transition:top 0.6s ease-in-out;z-index:500;}
 .guide_show .show{top:0;}
-.guide_show .modal-content{height: 100%; width: 90%;margin: 120px auto 0 auto;padding: 0;position:relative;}
+.guide_show .modal-content{height:100%;width:90%;margin:90px auto 0 auto;padding:0;position:relative;}
 .guide_show .close{color:black;font-size:60px;font-weight:bold;position:absolute;top:0;right:10px;z-index:2;}
 .guide_show .shoes_close{top:-50px;}
 .guide_show .close:hover,
@@ -278,11 +278,11 @@
 .guide_show .slides .inner_wrap .inner h2 a:hover{text-decoration:underline;}
 .guide_show .slides .inner_wrap .inner strong{font-size:14px;color:#ccc;font-weight:100;text-transform:uppercase;}
 .guide_show .slides .inner_wrap .inner .pricing{margin-top:30px;}
-.guide_show .slides .inner_wrap .inner em{display:block;font-weight:bold;font-size:20px;text-decoration:line-through;}
-.guide_show .slides .inner_wrap .inner p{font-weight:bold;font-size:20px;display:block;margin-bottom:60px;}
+.guide_show .slides .inner_wrap .inner .description{}
+.guide_show .slides .inner_wrap .inner .pricing p{font-weight:bold;font-size:20px;display:block;margin-bottom:20px;}
 .guide_show .slides .inner_wrap .inner .color{margin-bottom:0;font-weight:400;font-size:15px;color:#616161;}
 .guide_show .slides .inner_wrap .inner .size{font-weight:400;font-size:15px;color:#616161;margin-bottom:50px;}
-.guide_show .slides .inner_wrap .inner .btn{}
+.guide_show .slides .inner_wrap .inner .btn{margin-top:10%;display:block;}
 .guide_show .slides .inner_wrap .inner .btn a {text-decoration:none;background:#000;color:#fff;padding:15px 35px;margin-top:30px;font-weight:bold;}
 .guide_show .slides .inner_wrap .inner .btn a span{color:#08f;margin-left:5px;text-transform:uppercase;}
 .guide_show .slides .inner_wrap .inner .notes{margin-top:15px;}
@@ -310,7 +310,7 @@
   .guide_show .column_box .last_box, .guide_show .last_column_box .column{border:none;}
   .guide_show .column{width:48%;border:none;padding:0;margin:0 1% 25px 1%;box-shadow:0 4px 11px 0 rgba(221,221,221,.5);}
   .guide_show .column:hover{box-shadow: 0 0 0;}
-  .guide_show .column img{height:175px;object-fit:contain;border-radius:10px;}
+  .guide_show .column img{height:175px;border-radius:10px;}
   .guide_show .shoes_column img{object-fit:contain;}
   .guide_show .close{right:-20px;}
   .guide_show .modal-content{margin:50px auto 0 auto;}
@@ -318,7 +318,6 @@
   .guide_show .slides .inner_wrap .img_box{float:none;width:100%;height:auto;margin:0;margin-top:-200px;}
   .guide_show .slides .inner_wrap .inner{float:none;width:100%;margin-top:20px;}
   .guide_show .slides .inner_wrap .shoes_inner{margin-top:50px;}
-  .guide_show .slides .inner_wrap .inner em{margin-top:10px;}
   .guide_show .slides .inner_wrap .inner a {text-decoration:none;/*background:#000;color:#fff;padding:10px 25px;*/margin-top:30px;font-weight:bold;/*width:66%;*/}
   .guide_show .prev, .guide_show .next{margin:60% -8% 0 -8%;}
 }

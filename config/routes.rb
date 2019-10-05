@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   get 'guides/guide_02'
   get 'guides/guide_03'
   get 'guides/guide_04'
-  get 'guides/guide_05'
+  get 'guides/halloween'
   get 'guides/guide_06'
   get 'guides/guide_07'
   get 'guides/guide_08'

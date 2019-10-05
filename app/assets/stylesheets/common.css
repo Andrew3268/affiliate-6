@@ -239,12 +239,12 @@ header .gnb_m,header .gnb_open2{display:none;}
   .sub_nav .gnb_m>.gnb_close{display:block;position:absolute;right:0;top:12px;z-index:303;margin:0 5%;}
   .sub_nav .gnb_m>.gnb_close>img{width:50px;height:50px;}
 
-  .sub_nav .gnb_open{display:block;position:fixed;right:5px;top:170px;z-index:301;margin:0 5%;}
+  .sub_nav .gnb_open{display:block;position:fixed;right:5px;top:5px;z-index:301;margin:0 5%;}
   .sub_nav .gnb_open.on{display:none;}
   .sub_nav .gnb_open img{width:40px;height:40px;}
 
   .sub_nav .gnb_open_b{display:none;position:fixed;right:5px;top:40px;z-index:301;margin:0 5%;}
-  .sub_nav .gnb_open_b.on{display:block;right:5px;top:9px;}
+  .sub_nav .gnb_open_b.on{display:block;right:5px;top:5px;}
   .sub_nav .gnb_open_b img{width:40px;height:40px;}
   .sub_nav .gnb_kbg{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:301;}
 }

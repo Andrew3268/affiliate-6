@@ -20,7 +20,7 @@
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
-        <h2>Daily Deals | Hand-Pick On Amazon Oct. 04. 2019.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
+        <h2>Daily Deals | Hand-Pick On Amazon Oct. 05. 2019.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
         
         <div class="sort_box clearfix">
           <!-- <div class="deals_des">We pick the best deals from all categories of Amazon!! We just hope you like it :D</div> -->
@@ -37,32 +37,7 @@
           <%= render 'shared/amz_search' %>
           <%= render 'deals_days/note_wadiz' %>
 
-          <% @hotdeals.each do |hotdeal| %>
-           <div class="card clearfix" data-score="<%= hotdeal.h_percentage %>" data-price="<%= hotdeal.h_price %>">
-            <div class="image_box">
-              <a target="_blank" href="<%= hotdeal.h_link %>"><img src="<%= hotdeal.h_image %>" alt="<%= hotdeal.h_title %>" /></a>
-            </div>
-            <div class="inner">
-              <span class="regular"><em><%= hotdeal.h_percentage %>% OFF</em> + free shipping</span>
-              <span class="shipping_condition">Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items.</a></span>
-              <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p>
-              <div class="code_high">
-               <address><span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span></address>
-               <em>*Pricing may change and deals can expire fast.</em>
-               <% if can? :update, @hotdeals %>
-                 <div class="admin">
-                  <ul>
-                   <li><%= link_to 'Show', hotdeal %></li>
-                   <li><%= link_to 'Edit', edit_hotdeal_path(hotdeal) %></li>
-                   <li><%= link_to 'Destroy', hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-                  </ul>
-                 </div><!--/.amdin-->
-               <% end %>
-              </div><!--/.code_high-->
-            </div><!--/.inner --> 
-            <div class="deal_btn"><a target="_blank" href="<%= hotdeal.h_link %>">Shop Now at Amazon</a></div>
-           </div>
-          <% end %>
+          <%= render 'deals/body_hotdeals' %>
 
           <%= render 'deals/body_bestdeals' %>
         </div>
@@ -74,7 +49,7 @@
         </div>
         <!-- End -->
 
-        <p class="updating">We are still updating the best deals... :D <a href="/deals_days/day_02">GO TO THE BEST DEALS OF YESTERDAY</a></h2>
+        <p class="updating">We are still updating the best deals... :D <a href="/deals_days/day_03">GO TO THE BEST DEALS OF YESTERDAY</a></h2>
         
         
       </div><!--./rt_cnt-->    
