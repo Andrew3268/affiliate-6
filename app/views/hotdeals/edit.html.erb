@@ -2,7 +2,28 @@
 <%= render 'shared/header_short' %>
   <div class="hotdeal_wrap">
     <h1>Editing Hotdeal</h1>
-    <%= render 'form' %>
+    <div class="hotdeal_form">
+      <%= simple_form_for(@hotdeal) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <%= f.input :himage, label: 'Choose Image' %>
+        <%= f.select :h_spare_03, ([["Do You Have A Banner?", ""], "YES"])%><br /><br />
+        <%= f.input :h_title , label: 'Title Of Product' %>
+        <%= f.input :h_description, label: 'Description Of Product' %>
+        <%= f.input :h_image, label: 'Image URL' %>
+        <%= f.input :h_link, label: 'Product URL' %>
+        <%= f.input :h_price, label: 'Current Price' %>
+        <%= f.input :h_list_price, label: 'List Price' %>
+        <%= f.input :h_percentage, label: 'Discount Percentage' %>
+        <%= f.input :h_spare_01, label: 'Extra Deals?' %>
+        <%= f.input :h_spare_02, label: 'Coupon Deals?' %>
+        <%= f.input :h_keyword, label: 'Keyword' %>
+
+        <%= f.button :submit %>
+
+      <% end %>
+    </div>
     <%= link_to 'Show', @hotdeal %> |
     <%= link_to 'Back', hotdeals_path %>
   </div>

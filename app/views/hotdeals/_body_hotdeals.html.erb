@@ -32,4 +32,11 @@
   </div><!--/.inner --> 
   <div class="deal_btn"><a target="_blank" href="<%= hotdeal.h_link %>">Shop Now at Amazon</a></div>
  </div>
+
+ <% if hotdeal.h_spare_03.present? %>
+   <div class="show_banner">
+      <div class="banner_option"><%= hotdeal.h_spare_03 %></div>
+      <div class="banner_img"><img src="<%=asset_path 'bargain.png' %>" alt="banner"></div>
+   </div>
+ <% end %>
 <% end %>

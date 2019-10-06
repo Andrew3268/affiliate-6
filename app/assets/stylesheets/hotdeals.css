@@ -2,6 +2,10 @@
 .hotdeals_nav{margin-top:0;}
 .hotdeals_new{display:inline-block;margin-left:20px;padding:0 10px;background:#000}
 .hotdeals_new a{text-decoration:none;color:#fff;}
+.show_banner{}
+.show_banner .banner_option{display:none;}
+.show_banner .banner_img{border-bottom:1px solid #ccc;padding-bottom:10px;}
+.show_banner .banner_img img{width:100%;}
 
 /* Show Page */
 .show_wrap .show_box .show_inner .hotdeal_inner{}
