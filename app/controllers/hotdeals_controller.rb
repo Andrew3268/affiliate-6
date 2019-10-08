@@ -13,6 +13,25 @@ class HotdealsController < ApplicationController
   # GET /hotdeals/1
   # GET /hotdeals/1.json
   def show
+    set_meta_tags title: @hotdeal.h_title,
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: @hotdeal.h_description,
+                  keywords: @hotdeal.h_keyword,
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: @hotdeal.h_title,
+                    description: @hotdeal.h_description,
+                    image: @hotdeal.h_image
+                  },
+                  og: {
+                    title: @hotdeal.h_title,
+                    description: @hotdeal.h_description,
+                    type: 'website',
+                    url: hotdeal_url(@hotdeal),
+                    image: @hotdeal.h_image
+                  }
   end
 
   # GET /hotdeals/new

@@ -13,6 +13,7 @@ gem 'haml', '~> 5.0', '>= 5.0.4'
 gem 'meta-tags'
 gem 'friendly_id'
 gem 'paperclip', '~> 6.1'
+gem 'whenever', require: false
 # gem "paranoia", "~> 2.2"
 
 
