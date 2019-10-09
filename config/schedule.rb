@@ -1,3 +1,5 @@
+set :environment, 'staging' 
+
 require "tzinfo"
  
 def local(time)
@@ -10,7 +12,7 @@ end
 # end
 
 every 1.minutes do
-    runner "hotdeals.auto_delete_hotdeal", :environment => 'staging' 
+    runner "hotdeals.auto_delete_hotdeal"
     # rake "hotdeals:auto_delete_hotdeal", :environment => "production"
 end
 
