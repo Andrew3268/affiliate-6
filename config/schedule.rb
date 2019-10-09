@@ -1,19 +1,20 @@
 require "tzinfo"
  
-def local(time)
-        TZInfo::Timezone.get('Asia/Seoul').local_to_utc(Time.parse(time))
-end
-
-every 1.day, :at => '23:30 pm' do
-    runner "hotdeals.auto_delete_hotdeal"
-    rake "hotdeals:auto_delete_hotdeal", :environment => "development"
-end
-
-
-
-# every 1.day, :at => '19:10 pm' do
-#   rake "hotdeals:auto_delete_hotdeal"
+# def local(time)
+#         TZInfo::Timezone.get('Asia/Seoul').local_to_utc(Time.parse(time))
 # end
+
+# every 1.day, :at => '23:30 pm' do
+#     runner "hotdeals.auto_delete_hotdeal"
+#     rake "hotdeals:auto_delete_hotdeal", :environment => "production"
+# end
+
+every 1.minutes do
+    runner "hotdeals.auto_delete_hotdeal"
+    rake "hotdeals:auto_delete_hotdeal", :environment => "production"
+end
+
+
 
 
 # Use this file to easily define all of your cron jobs.

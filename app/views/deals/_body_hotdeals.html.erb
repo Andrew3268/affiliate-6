@@ -1,35 +1,43 @@
 <% @hotdeals.each do |hotdeal| %>
-   <div class="card clearfix" data-score="<%= hotdeal.h_percentage %>" data-price="<%= hotdeal.h_price %>">
-    <div class="image_box">
-      <a target="_blank" href="<%= hotdeal.h_link %>"><img src="<%= hotdeal.h_image %>" alt="<%= hotdeal.h_title %>" /></a>
-    </div>
-    <div class="inner">
-      <span class="regular"><em><%= hotdeal.h_percentage %>% OFF</em> + free shipping</span>
-      <span class="shipping_condition">Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items.</a></span>
-      <!-- <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p> -->
-      <p><%= link_to hotdeal.h_title, hotdeal %></p>
-      <div class="code_high">
-       <address><span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span>
-        <% if hotdeal.h_spare_01.present? %>
-          <div class="tooltip_common tooltip_orange"><span> + <%= hotdeal.h_spare_01 %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
-        <% end %>
-       </address>
-       <% if hotdeal.h_spare_01.present? %>
-         <div class="m_tooltip_common m_tooltip_orange"><span> + <%= hotdeal.h_spare_01 %> off Coupon</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div> 
-       <% end %>
+ <div class="card clearfix" data-score="<%= hotdeal.h_percentage %>" data-price="<%= hotdeal.h_price %>">
+  <div class="image_box">
+   <a target="_blank" href="<%= hotdeal.h_link %>"><img src="<%= hotdeal.h_image %>" alt="<%= hotdeal.h_title %>" title="<%= hotdeal.h_spare_04 %>"/></a>
+    <!-- < link_to (image_tag hotdeal.himage.url(:small), alt: hotdeal.h_title, title: hotdeal.h_spare_03), hotdeal > -->
+  </div>
+  <div class="inner">
+    <span class="regular"><em><%= hotdeal.h_percentage %>% OFF</em> + free shipping</span>
+    <span class="shipping_condition">Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items.</a></span>
+    <!-- <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p> -->
+    <p><%= link_to hotdeal.h_title, hotdeal %></p>
+    <div class="code_high">
+     <address><span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span>
+      <% if hotdeal.h_spare_01.present? %>
+        <div class="tooltip_common tooltip_orange"><span> + <%= hotdeal.h_spare_01 %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
+      <% end %>
+     </address>
+     <% if hotdeal.h_spare_01.present? %>
+       <div class="m_tooltip_common m_tooltip_orange"><span> + <%= hotdeal.h_spare_01 %> off Coupon</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div> 
+     <% end %>
 
-       <em>*Pricing may change and deals can expire fast. <%= link_to 'More Detail', hotdeal %></em>
-       <% if can? :update, @hotdeals %>
-         <div class="admin">
-          <ul>
-           <li><%= link_to 'Show', hotdeal %></li>
-           <li><%= link_to 'Edit', edit_hotdeal_path(hotdeal) %></li>
-           <li><%= link_to 'Destroy', hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
-          </ul>
-         </div><!--/.amdin-->
-       <% end %>
-      </div><!--/.code_high-->
-    </div><!--/.inner --> 
-    <div class="deal_btn"><a target="_blank" href="<%= hotdeal.h_link %>">Shop Now at Amazon</a></div>
+     <em>*Pricing may change and deals can expire fast. <%= link_to 'More Detail', hotdeal %></em>
+     <% if can? :update, @hotdeals %>
+       <div class="admin">
+        <ul>
+         <li><%= link_to 'Show', hotdeal %></li>
+         <li><%= link_to 'Edit', edit_hotdeal_path(hotdeal) %></li>
+         <li><%= link_to 'Destroy', hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+        </ul>
+       </div><!--/.amdin-->
+     <% end %>
+    </div><!--/.code_high-->
+  </div><!--/.inner --> 
+  <div class="deal_btn"><a target="_blank" href="<%= hotdeal.h_link %>">Shop Now at Amazon</a></div>
+ </div>
+
+ <% if hotdeal.h_spare_03.present? %>
+   <div class="show_banner">
+      <div class="banner_option"><%= hotdeal.h_spare_03 %></div>
+      <div class="banner_img"><img src="<%=asset_path 'bargain.png' %>" alt="banner"></div>
    </div>
+ <% end %>
 <% end %>
