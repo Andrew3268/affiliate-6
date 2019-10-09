@@ -6,6 +6,7 @@
     <%= f.input :himage, label: 'Choose Image' %>
     <%= f.select :h_spare_03, options_for_select([["Do You Have A Banner?", ""], "YES"])%><br /><br />
     <%= f.input :h_title , label: 'Title Of Product' %>
+    <%= f.input :h_spare_04, label: 'Image_Title' %>
     <%= f.input :h_description, label: 'Description Of Product' %>
     <%= f.input :h_image, label: 'Image URL' %>
     <%= f.input :h_link, label: 'Product URL' %>
@@ -14,7 +15,7 @@
     <%= f.input :h_percentage, label: 'Discount Percentage' %>
     <%= f.input :h_spare_01, label: 'Extra Deals?' %>
     <%= f.input :h_spare_02, label: 'Coupon Deals?' %>
-    <%= f.input :h_keyword, label: 'Keyword' %>
+    <%= f.input :h_keyword, label: 'Keyword (gadgets, amazon, under, recommended)' %>
 
     <%= f.button :submit %>
 
