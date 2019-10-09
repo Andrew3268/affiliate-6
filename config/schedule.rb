@@ -1,17 +1,17 @@
 require "tzinfo"
  
-# def local(time)
-#         TZInfo::Timezone.get('Asia/Seoul').local_to_utc(Time.parse(time))
-# end
+def local(time)
+        TZInfo::Timezone.get('Asia/Seoul').local_to_utc(Time.parse(time))
+end
 
-# every 1.day, :at => '23:30 pm' do
+# every 1.day, :at => '16:00 pm' do
 #     runner "hotdeals.auto_delete_hotdeal"
 #     rake "hotdeals:auto_delete_hotdeal", :environment => "production"
 # end
 
 every 1.minutes do
-    runner "hotdeals.auto_delete_hotdeal"
-    rake "hotdeals:auto_delete_hotdeal", :environment => "production"
+    runner "hotdeals.auto_delete_hotdeal", :environment => 'staging' 
+    # rake "hotdeals:auto_delete_hotdeal", :environment => "production"
 end
 
 
