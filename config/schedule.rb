@@ -1,4 +1,4 @@
-set :environment, 'staging' 
+# set :environment, 'staging' 
 
 require "tzinfo"
  

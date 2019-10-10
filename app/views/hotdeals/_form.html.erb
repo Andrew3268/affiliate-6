@@ -10,12 +10,15 @@
     <%= f.input :h_description, label: 'Description Of Product' %>
     <%= f.input :h_image, label: 'Image URL' %>
     <%= f.input :h_link, label: 'Product URL' %>
-    <%= f.input :h_list_price, label: 'List Price' %>
-    <%= f.input :h_price, label: 'Current Price' %>
-    <%= f.input :h_percentage, label: 'Discount Percentage' %>
-    <%= f.input :h_spare_01, label: 'Extra Deals?' %>
-    <%= f.input :h_spare_02, label: 'Coupon Deals?' %>
-    <%= f.input :h_keyword, label: 'Keyword (gadgets, amazon, under, recommended)' %>
+    <div class="pricing">
+      <%= f.input :h_list_price, label: 'List Price' %>
+      <%= f.input :h_price, label: 'Current Price' %>
+      <%= f.input :h_percentage, label: 'Discount Percentage' %>
+      <%= f.input :h_spare_01, label: 'Extra Deals?' %>
+      <%= f.input :h_spare_02, label: 'Coupon Deals?' %>
+    </div>
+    
+    <%= f.input :h_keyword, label: 'Keyword (  gadgets, amazon, under, recommended  )' %>
 
     <%= f.button :submit %>
 
