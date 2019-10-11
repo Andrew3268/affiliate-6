@@ -193,7 +193,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 }
 
 /* Deals&Gadgets sub menu */
-.sub_nav{margin-top:260px;font-family: 'Anton', sans-serif;}
+.sub_nav{margin-top:260px;/*;margin-top:175px;*/font-family: 'Anton', sans-serif;}
 .sub_nav .sub_nav_pc>ul>li{float:left;margin-right:30px;/*width:150px;*//*text-align:center;*/}
 /*.sub_nav .sub_nav_pc>ul>li.coumos1{width:135px;}
 .sub_nav .sub_nav_pc>ul>li.coumos{width:275px;}*/
@@ -206,6 +206,12 @@ header .gnb_m,header .gnb_open2{display:none;}
 .sub_nav .gnb_open_b,
 .sub_nav .gnb_m,
 .sub_nav .gnb_m>.gnb_close{display:none;}
+
+.deals_main_menu{margin-top:70px;}
+.deals_main_menu ul{font-family: 'Righteous', cursive;}
+.deals_main_menu ul li{float:left;margin-right:20px;position:relative;}
+.deals_main_menu ul li a{text-decoration:none;font-size:70px;color:#000;}
+.deals_main_menu ul li:nth-child(2){}
 
 @media screen and (max-width:640px){
   .sub_nav{margin-top:60px;}
