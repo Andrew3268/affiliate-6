@@ -8,6 +8,10 @@ class HotdealsController < ApplicationController
   # GET /hotdeals.json
   def index
     @hotdeals = Hotdeal.all.order("created_at DESC")
+    if params[:search]
+      @search_term = params[:search]
+      @hotdeals = @hotdeals.search_by(@search_term)
+    end
   end
 
   # GET /hotdeals/1

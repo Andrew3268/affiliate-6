@@ -3,14 +3,15 @@
   <button class="gnb_open_b"><img src="<%=asset_path 'open_black.png' %>" alt="open" /></button>
     <div class="sub_nav_pc">
       <ul class="clearfix">
-          <li class="coumos1"><a href="/deals/bestdeals">Daily Deals</a></li>
-          <li><a href="/deals/promo_codes">Promo Codes</a></li>
-          <li><a href="/deals/most_reviewed">Most-Reviewed</a></li>
-          <!-- <li><a href="/deals/picked_deals">Best Deals</a></li> -->
-          <!--<li><a href="deals-v2-onsale.html">On Sale</a></li>-->
-          <li class="coumos" ><a href="/deals/promotions">Coupon Codes & Promotions</a></li>
-          <li><a href="/deals/quick_search">Quick Search</a></li>
-          <li><% if can? :update, @hotdeals %><%= link_to 'New Hotdeal', new_hotdeal_path %><% end %></li>
+        <li class="coumos1"><a href="/deals/bestdeals">Daily Deals</a></li>
+        <li><a href="/deals/promo_codes">Promo Codes</a></li>
+        <li><a href="/deals/most_reviewed">Most-Reviewed</a></li>
+        <!-- <li><a href="/deals/picked_deals">Best Deals</a></li> -->
+        <!--<li><a href="deals-v2-onsale.html">On Sale</a></li>-->
+        <li class="coumos" ><a href="/deals/promotions">Coupon Codes & Promotions</a></li>
+        <li><a href="/deals/quick_search">Quick Search</a></li>
+        <li><% if can? :update, @hotdeals %><%= link_to 'New Hotdeal', new_hotdeal_path %><% end %></li>
+        <li><%= form_for "",url: hotdeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></li>
       </ul>
     </div>
     
