@@ -193,7 +193,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 }
 
 /* Deals&Gadgets sub menu */
-.sub_nav{margin-top:260px;/*;margin-top:175px;*/font-family: 'Anton', sans-serif;}
+.sub_nav{margin-top:260px;/*margin-top:175px;*/font-family: 'Anton', sans-serif;}
 .sub_nav .sub_nav_pc>ul>li{float:left;margin-right:30px;/*width:150px;*//*text-align:center;*/}
 /*.sub_nav .sub_nav_pc>ul>li.coumos1{width:135px;}
 .sub_nav .sub_nav_pc>ul>li.coumos{width:275px;}*/
@@ -211,7 +211,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 .deals_main_menu ul{font-family: 'Righteous', cursive;}
 .deals_main_menu ul li{float:left;margin-right:20px;position:relative;}
 .deals_main_menu ul li a{text-decoration:none;font-size:70px;color:#000;}
-.deals_main_menu ul li:nth-child(2){}
+.deals_main_menu ul li.nth_1{}
+
 
 @media screen and (max-width:640px){
   .sub_nav{margin-top:60px;}
@@ -230,6 +231,11 @@ header .gnb_m,header .gnb_open2{display:none;}
   .sub_nav .gnb_m>.gnb_close>img{width:50px;height:50px;}
   .sub_nav .gnb_open{display:block;position:fixed;right:-10px;top:2px;z-index:301;margin:0 5%;}
   .sub_nav .gnb_open img{width:40px;height:40px;}
+
+  .deals_main_menu ul li{float:none;margin:0;position:relative;margin-top:-18px;}
+  .deals_main_menu ul li.nth_1:after{position:absolute;height:7px;content:'';background:#000;width:70%;top:68%;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
+  .deals_main_menu ul li.nth_1 span{display:none;}
+  .deals_main_menu ul li a{float:none;font-size:37px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
