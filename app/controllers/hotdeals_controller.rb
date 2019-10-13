@@ -45,6 +45,12 @@ class HotdealsController < ApplicationController
                   }
   end
 
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @hotdeals = tag.hotdeals
+  end
+
+
   # GET /hotdeals/new
   def new
     @hotdeal = current_user.hotdeals.build

@@ -1,5 +1,8 @@
 .hotdeal_wrap{margin-top:100px;}
 .hotdeals_nav{margin-top:0;}
+.sub_nav .sub_nav_pc>ul>li.search{margin-right:0;}
+.hotdeals_nav li.search input{padding:5px;line-height:15px;width:277px;}
+/*.hotdeals_show .sub_nav_pc>ul>li>a{font-size:10px;}*/
 .hotdeals_new{display:inline-block;margin-left:20px;padding:0 10px;background:#000}
 .hotdeals_new a{text-decoration:none;color:#fff;}
 
@@ -56,7 +59,7 @@
 .dealpage_title{margin-top:60px;font-family: 'Righteous', cursive;}
 .dealpage_title p{position:relative;font-size:70px;}
 .dealpage_title p:after,
-.deals_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:50%;top:70%;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
+.deals_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:100%;top:70%;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
 
 .deals_card{float:left;font-family:'Raleway', Arial, sans-serif;position:relative;overflow:hidden;margin:1%;width:23%;background:#fff;text-align:left;color:#000000;box-shadow:0 0 5px rgba(0, 0, 0, 0.15);font-size:16px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-perspective:20em;perspective:20em;}
 .deals_card *{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
@@ -69,6 +72,7 @@
 .deals_card figcaption{padding:20px;}
 .deals_card h3, .deals_card p{margin:0;}
 .deals_card h3{font-size:20px;font-weight:700;margin-bottom:10px;z-index:101;}
+.deals_card h3 a{text-decoration:none;color:#000;}
 .deals_card p{font-size:0.9em;letter-spacing:1px;font-weight:400;line-height:1.4;height:4.2em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;word-break:break-all;-webkit-box-orient:vertical;-webkit-line-clamp:3}
 .deals_card p a{text-decoration:none;color:#000;}
 .deals_card .price{font-weight:500;font-size:1.5em;line-height:48px;letter-spacing:1px;}

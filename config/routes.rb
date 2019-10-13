@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   resources :hotdeals
+  get '/hotdeals/hashtag/:name', to:'hotdeals#hashtags'
   # root 'hotdeals#index'
 
   get 'deals/promo_codes'

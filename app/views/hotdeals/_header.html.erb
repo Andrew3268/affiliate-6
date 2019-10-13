@@ -1,4 +1,4 @@
-<div class="sub_nav hotdeals_nav">
+<div class="sub_nav hotdeals_nav hotdeals_show">
   <button class="gnb_open"><img src="<%=asset_path 'open_black.png' %>" alt="open" /></button>
   <button class="gnb_open_b"><img src="<%=asset_path 'open_black.png' %>" alt="open" /></button>
     <div class="sub_nav_pc">
@@ -11,7 +11,7 @@
         <li class="coumos" ><a href="/deals/promotions">Coupon Codes & Promotions</a></li>
         <li><a href="/deals/quick_search">Quick Search</a></li>
         <li><% if can? :update, @hotdeals %><%= link_to 'New Hotdeal', new_hotdeal_path %><% end %></li>
-        <li><%= form_for "",url: hotdeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></li>
+        <li class="search"><%= form_for "",url: hotdeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></li>
       </ul>
     </div>
     

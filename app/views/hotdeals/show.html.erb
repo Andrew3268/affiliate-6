@@ -5,9 +5,9 @@
   
   <div class="show_wrap clearfix">
     <div class="wrap">
-    
+    <%= render 'hotdeals/header' %>  
       <div class="show_box clearfix">
-        <%= render 'hotdeals/header' %>  
+        
         <!-- <p>Location Map</p> -->
         <div class="show_img hotdeal_img">
           <a target="_blank" href="<%= @hotdeal.h_link %>"><img src="<%= @hotdeal.h_image %>" alt="<%= @hotdeal.h_title %>" title="<%= @hotdeal.h_spare_04 %>"></a>

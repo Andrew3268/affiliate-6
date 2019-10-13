@@ -3,7 +3,7 @@
     <div class="image_box"><%= link_to image_tag(hotdeal.h_image), hotdeal %></div>
     <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
     <figcaption>
-      <h3>#hashtags</h3>
+      <h3><%= render_with_hashtags(hotdeal.h_spare_05.to_s) %></h3>
       <p><%= link_to hotdeal.h_title, hotdeal %></p>
       <div class="price">
         <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>

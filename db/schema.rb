@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191013045641) do
+ActiveRecord::Schema.define(version: 20191013133447) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -146,6 +146,14 @@ ActiveRecord::Schema.define(version: 20191013045641) do
   end
 
   add_index "hotdeals", ["slug"], name: "index_hotdeals_on_slug", unique: true
+
+  create_table "hotdeals_tags", id: false, force: :cascade do |t|
+    t.integer "hotdeal_id"
+    t.integer "tag_id"
+  end
+
+  add_index "hotdeals_tags", ["hotdeal_id"], name: "index_hotdeals_tags_on_hotdeal_id"
+  add_index "hotdeals_tags", ["tag_id"], name: "index_hotdeals_tags_on_tag_id"
 
   create_table "impressions", force: :cascade do |t|
     t.string   "impressionable_type"
@@ -305,6 +313,12 @@ ActiveRecord::Schema.define(version: 20191013045641) do
 
   create_table "subcategories", force: :cascade do |t|
     t.string   "subname"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
