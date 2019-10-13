@@ -1,4 +1,7 @@
 class Hotdeal < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :h_title, use: :slugged
+
   belongs_to :user
 
   has_attached_file :himage, styles: { medium: "600x500#", small: "350x250>" }, default_url: "/images/:style/missing.png"

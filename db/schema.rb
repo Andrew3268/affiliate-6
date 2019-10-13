@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191004033653) do
+ActiveRecord::Schema.define(version: 20191013045641) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -142,7 +142,10 @@ ActiveRecord::Schema.define(version: 20191004033653) do
     t.string   "himage_content_type"
     t.integer  "himage_file_size",    limit: 8
     t.datetime "himage_updated_at"
+    t.string   "slug"
   end
+
+  add_index "hotdeals", ["slug"], name: "index_hotdeals_on_slug", unique: true
 
   create_table "impressions", force: :cascade do |t|
     t.string   "impressionable_type"
