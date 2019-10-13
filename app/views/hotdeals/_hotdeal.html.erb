@@ -1,0 +1,14 @@
+<!-- < @hotdeals.each do |hotdeal| > -->
+  <figure class="deals_card">
+    <div class="image_box"><img src="<%= hotdeal.h_image %>"/></div>
+    <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
+    <figcaption>
+      <h3>#hashtags</h3>
+      <p><%= hotdeal.h_title %></p>
+      <div class="price">
+        <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
+      </div>
+      <div class="m_btn"><a href="#n">Buy Now</a></div>
+    </figcaption><a class="btn" href="/hotdeals/<%= hotdeal.id %>"></a>
+  </figure>
+<!-- < end >      -->

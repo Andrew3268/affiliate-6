@@ -1,0 +1,48 @@
+<div class="card_wrap clearfix">
+  <% @gadgets.each do |gadget| %>
+    <div class="card with-photo">
+      <div class="card-header">
+       <a target="_blank" href="<%= gadget.gg_url %>"><img src="<%= gadget.gg_img %>" alt="<%= gadget.gg_title %>" title="<%= gadget.gg_spare_05 %>"></a>
+      </div>
+      
+      <section class="card-body">
+        
+        <% if gadget.gg_youtube01.present? %>
+          <div class="js-overlay-start start" data-url= "<%= gadget.gg_youtube01 %>">
+            <button><img src="<%=asset_path 'youtube_02.png' %>" alt="Play Youtube" /></button>
+          </div>
+        <% end %>
+
+        <% if gadget.gg_option_01.present? %>
+          <div class="crowdfunding">
+            <p>#crowdfunding</p>
+          </div>
+        <% end %>
+
+        <% if gadget.gg_title.present? %>
+          <span>BY <%= gadget.gg_from %></span> 
+          <% if gadget.gg_option_02.present? %>
+            <a class="to_featured" href="<%= gadget.gg_option_02 %>">Discover More</a>
+          <% end %>
+          <!-- <h4><a target="_blank" href="<%= gadget.gg_url %>"><%= gadget.gg_title %></a></h4> -->
+          <h4><%= link_to gadget.gg_title, gadget %></h4>
+          <!-- <p><%= gadget.gg_intro %></p> -->
+
+          <div class="btn clearfix">
+            <% if gadget.gg_option_03.present? %>
+             <a class="learnmore" target="_blank" href="<%= gadget.gg_url %>">Learn More</a>
+            <% else %>
+            <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
+            <% end %>
+          </div>
+
+        <% end %>
+        <% if can? :update, gadget %>
+          <div class="btn clearfix admin">
+            <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
+          </div>   
+        <% end %>
+      </section>
+    </div>
+  <% end %>
+</div><!--./card_wrap-->

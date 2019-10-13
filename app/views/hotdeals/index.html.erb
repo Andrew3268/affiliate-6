@@ -3,102 +3,17 @@
 
 <div class="layout"><!--layout-->
   <div class="wrap">  
-  <%= render 'shared/header_short' %>
-  <div class="dealpage_title"><p>The Best Bargain</p></div>
-  <%= render 'hotdeals/header' %>  
-
-  <div class="search_box">
+    <%= render 'shared/header_short' %>
+    <div class="dealpage_title"><p>The Best Bargain</p></div>
+    <%= render 'hotdeals/header' %>  
     
-  </div>  
+    <div id="hotdeals">
+      <%= render @hotdeals %>
+    </div>
 
-  <% @hotdeals.each do |hotdeal| %>
-      <figure class="deals_card">
-        <div class="image_box"><img src="<%= hotdeal.h_image %>"/></div>
-        <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#hashtags</h3>
-          <p><%= hotdeal.h_title %></p>
-          <div class="price">
-            <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption><a class="btn" href="/hotdeals/<%= hotdeal.id %>"></a>
-      </figure>
-    <% end %>
-
-    <!-- <figure class="hotdeal_card">
-      <div class="image_box"><img src="https://images-na.ssl-images-amazon.com/images/I/61z5oOk5fzL._SY879_.jpg"/></div>
-      <div class="buy-now"><span><a target="_blank" href="https://amzn.to/2IzZsOl">buy now</a></span></div>
-      <figcaption>
-        <h3>Kurie Secco</h3>
-        <p>If you do the job badly enough, sometimes you don't get asked to do it again. </p>
-        <div class="price">
-          <s>$24.00</s>$19.00
-        </div>
-      </figcaption><a class="btn" href="#"></a>
-    </figure>
-
-    <figure class="hotdeal_card">
-      <div class="image_box"><img src="https://images-na.ssl-images-amazon.com/images/I/51dBsN4fpBL._SX522_.jpg"/></div>
-      <div class="buy-now"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-      <figcaption>
-        <h3>Zosaisan Invec</h3>
-        <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-        <div class="price">
-          <s>$24.00</s>$19.00
-        </div>
-      </figcaption><a href="#"></a>
-    </figure>
-
-    <figure class="hotdeal_card">
-      <div class="image_box"><img src="https://images-na.ssl-images-amazon.com/images/I/61z5oOk5fzL._SY879_.jpg"/></div>
-      <div class="buy-now"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-      <figcaption>
-        <h3>Kurie Secco</h3>
-        <p>If you do the job badly enough, sometimes you don't get asked to do it again. </p>
-        <div class="price">
-          <s>$24.00</s>$19.00
-        </div>
-      </figcaption><a href="#"></a>
-    </figure>
-
-    <figure class="hotdeal_card">
-      <div class="image_box"><img src="https://images-na.ssl-images-amazon.com/images/I/61z5oOk5fzL._SY879_.jpg"/></div>
-      <div class="buy-now"><span><a target="_blank" href="https://amzn.to/2IzZsOl">buy now</a></span></div>
-      <figcaption>
-        <h3>Kurie Secco</h3>
-        <p>If you do the job badly enough, sometimes you don't get asked to do it again. </p>
-        <div class="price">
-          <s>$24.00</s>$19.00
-        </div>
-      </figcaption><a class="btn" href="#"></a>
-    </figure>
-
-    <figure class="hotdeal_card">
-      <div class="image_box"><img src="https://images-na.ssl-images-amazon.com/images/I/51dBsN4fpBL._SX522_.jpg"/></div>
-      <div class="buy-now"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-      <figcaption>
-        <h3>Zosaisan Invec</h3>
-        <p>If your knees aren't green by the end of the day, you ought to seriously re-examine your life. </p>
-        <div class="price">
-          <s>$24.00</s>$19.00
-        </div>
-      </figcaption><a href="#"></a>
-    </figure>
-
-    <figure class="hotdeal_card">
-      <div class="image_box"><img src="https://images-na.ssl-images-amazon.com/images/I/61z5oOk5fzL._SY879_.jpg"/></div>
-      <div class="buy-now"> <i class="ion-android-add"></i><span>Add to Cart</span></div>
-      <figcaption>
-        <h3>Kurie Secco</h3>
-        <p>If you do the job badly enough, sometimes you don't get asked to do it again. </p>
-        <div class="price">
-          <s>$24.00</s>$19.00
-        </div>
-      </figcaption><a href="#"></a>
-    </figure> -->
-  
-
+    <div class="willpaginate">
+      <%= will_paginate @hotdeals %>
+    </div>
   </div><!--./warp-->
 </div><!--./layout-->
 <script><%= render(:partial => 'hotdeals', :handlers => [:erb], :formats => [:js]) %></script>
