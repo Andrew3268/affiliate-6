@@ -7,12 +7,19 @@ class PromocodesController < ApplicationController
   # GET /promocodes
   # GET /promocodes.json
   def index
-    @promocodes = Promocode.all.order("created_at DESC")
+    @promocodes = Promocode.all.order("created_at DESC").page(params[:page]).per_page(4)
 
     if params[:search]
       @search_term = params[:search]
       @promocodes = @promocodes.search_by(@search_term)
     end
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @promocodes }
+      format.js
+    end
+
   end
 
   # GET /promocodes/1

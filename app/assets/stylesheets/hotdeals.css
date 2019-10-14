@@ -9,7 +9,7 @@
 
 /* Show Page */
 .show_wrap .show_box .show_inner .hotdeal_inner{}
-.show_wrap .show_box .show_inner .hotdeal_inner h2{font-weight:500;line-height:1.2;font-size:20px;}
+.show_wrap .show_box .show_inner .hotdeal_inner h2{font-weight:500;line-height:1.2;font-size:20px;line-height:1.4;height:4.2em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;word-break:break-all;-webkit-box-orient:vertical;-webkit-line-clamp:3}
 .show_wrap .show_box .show_inner .hotdeal_inner p{font-size:15px;font-weight:400;margin:15px 0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price{font-size:25px;margin-bottom:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price .span_01{color:#616161;text-decoration:line-through;font-size:20px;}
@@ -92,7 +92,7 @@
 @media screen and (max-width:640px){
   .deals_card{width:48%;}
   .deals_card .buy-now{display:none;}
-  .deals_card .image_box{height:200px;padding:10px 10px 10 10px;}
+  .deals_card .image_box{height:200px;padding:0;}
   .deals_card h3{font-size:14px;}
   .deals_card p{font-size:13px;line-height:1.2;height:3.6em;}
   .deals_card .price{font-size:15px;}
@@ -109,7 +109,5 @@
   .deals_card .buy-now{display:block;}
   .deals_card .m_btn{display:block;}
 }
-
-
 
 

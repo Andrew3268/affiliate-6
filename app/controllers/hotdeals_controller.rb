@@ -1,13 +1,14 @@
 class HotdealsController < ApplicationController
   before_action :set_hotdeal, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  skip_before_action :authenticate, only: [:show, :index, :hashtags]
   respond_to :js, :json, :html
-  load_and_authorize_resource
+  skip_authorization_check only: :hashtags
+  load_and_authorize_resource except: :hashtags
 
   # GET /hotdeals
   # GET /hotdeals.json
   def index
-    @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(40)
+    @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(4)
     
     if params[:search]
       @search_term = params[:search]

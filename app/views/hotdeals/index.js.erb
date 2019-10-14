@@ -1,7 +1,7 @@
 $('#hotdeals').append('<%= j render(@hotdeals) %>');
 <% if @hotdeals.next_page %>
-  $('.pagination').replaceWith('<%= j will_paginate(@hotdeals) %>');
+  $('.willpaginate .pagination').replaceWith('<%= j will_paginate(@hotdeals) %>');
 <% else %>
-  $('.pagination').remove();
+  $('.willpaginate .pagination').remove();
 <% end %>
 <% sleep 1 %>

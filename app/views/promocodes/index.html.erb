@@ -10,7 +10,10 @@
     <div id="promocodes">
       <%= render @promocodes %>
     </div>
-
+    
+    <!-- <div class="promo_paginate"> -->
+      <%= will_paginate @hotdeals %>
+    <!-- </div> -->
   </div><!--./warp-->
 </div><!--./layout-->
 <script><%= render(:partial => 'promocodes', :handlers => [:erb], :formats => [:js]) %></script>

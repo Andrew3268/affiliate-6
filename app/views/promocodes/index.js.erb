@@ -1,0 +1,7 @@
+$('#promocodes').append('<%= j render(@promocodes) %>');
+<% if @promocodes.next_page %>
+  $('.promo_paginate .pagination').replaceWith('<%= j will_paginate(@promocodes) %>');
+<% else %>
+  $('.promo_paginate .pagination').remove();
+<% end %>
+<% sleep 1 %>

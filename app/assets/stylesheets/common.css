@@ -362,7 +362,6 @@ header .gnb_m,header .gnb_open2{display:none;}
 .translate{float:left;}
 
 /* for pagination */
-/*.willpaginate{display:none;}*/
 .pagination{}
 .pagination a{font-size:20px;text-decoration:none;color:#000;margin:0 0.5%;}
 .pagination a.next_page,.pagination a.previous_page{font-size:15px;}
