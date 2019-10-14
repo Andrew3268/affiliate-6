@@ -1,0 +1,36 @@
+<div class="wrap">  
+<%= render 'shared/header_short' %>
+  <div class="hotdeal_wrap">
+    <h1>Editing Promocode</h1>
+    <div class="hotdeal_form">
+      <%= simple_form_for(@promocode) do |f| %>
+        <%= f.error_notification %>
+        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+        <%= f.input :pimage, label: 'Choose Image' %>
+        <%= f.select :p_banner, ([["Do You Have A Banner?", ""], "YES"])%><br /><br />
+        <%= f.input :p_image, label: 'Image URL' %>
+        <%= f.input :p_link, label: 'Product URL' %>
+        <%= f.input :p_title , label: 'Title Of Product' %>
+        <%= f.input :p_image_title, label: 'Image_Title' %>
+        <%= f.input :p_hashtag, label: 'Hashtags' %>
+        <div class="pricing clearfix">
+          <%= f.input :p_list_price, label: 'List Price' %>
+          <%= f.input :p_price, label: 'Current Price' %>
+          <%= f.input :p_percentage, label: 'Discount Percentage' %>
+          <%= f.input :p_promocode, label: 'Promo Code' %>
+          <%= f.input :p_end_date, label: 'End Date' %>
+          <%= f.input :p_coupon_deal, label: 'Coupon Deals?' %>
+          <%= f.input :p_extra_deal, label: 'Extra Deals?' %>
+        </div>
+        <%= f.input :p_description, label: 'Description Of Product' %>
+        <%= f.input :p_keyword, label: 'Keyword (  gadgets, amazon, under, recommended, promo code  )' %>
+
+        <%= f.button :submit %>
+
+        
+      <% end %>
+    </div>
+
+    <%= link_to 'Show', @promocode %> |
+    <%= link_to 'Back', promocodes_path %>

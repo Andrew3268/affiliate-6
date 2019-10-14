@@ -1,0 +1,19 @@
+<!-- < @promocodes.each do |promocode| > -->
+  <figure class="deals_card">
+    <% if promocode.p_image.present? %>
+      <div class="image_box"><%= link_to image_tag(promocode.p_image), promocode %></div>
+    <% else %>
+      <div class="image_box"><%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %></div>
+    <% end %>
+    <div class="buy-now"><span><a target="_blank" href="<%= promocode.p_link %>">BUY NOW</a></span></div>
+    <figcaption>
+      <h3><%= promocode.p_hashtag %></h3>
+      <p><%= link_to promocode.p_title, promocode %></p>
+      <div class="price">
+        <em>$<%= promocode.p_list_price %></em>$<%= promocode.p_price %>
+      </div>
+      <div class="m_btn"><a href="<%= promocode.p_link %>">Buy Now</a></div>
+    </figcaption>
+  </figure>
+<!-- < end >  -->
+

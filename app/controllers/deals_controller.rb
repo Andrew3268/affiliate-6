@@ -1,6 +1,7 @@
 class DealsController < ApplicationController
 
   def promo_codes
+      @promocodes = Promocode.all.order("created_at DESC").limit(30)
       set_meta_tags title: 'Promo Codes, Coupon Codes on Amazon',
                     site: 'Oh,igottabuythis',
                     revierse: true,
@@ -23,7 +24,7 @@ class DealsController < ApplicationController
   end
 
   def bestdeals
-    @hotdeals = Hotdeal.all.order("created_at DESC")
+    @hotdeals = Hotdeal.all.order("created_at DESC").limit(30)
     set_meta_tags title: 'Updated daily with best deals of Amazon',
                   site: 'Oh,igottabuythis',
                   revierse: true,

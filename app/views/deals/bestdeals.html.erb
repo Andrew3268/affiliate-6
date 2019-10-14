@@ -20,10 +20,11 @@
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
-        <h2>Daily Deals | Hand-Pick On Amazon Oct. 13. 2019.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
+        <h2>Take a good items you love at the best price.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
+        <%= render 'deals_days/note_wadiz' %>
+        <%= render 'shared/amz_search' %>
         
         <div class="sort_box clearfix">
-          <!-- <div class="deals_des">We pick the best deals from all categories of Amazon!! We just hope you like it :D</div> -->
           <ul>
             <li><a href="/deals/bestdeals" class="pure-button">All Deals</a></li>
             <li><a href="#" class="pure-button sort1">Price High</a></li>
@@ -34,11 +35,7 @@
         </div>
         
         <div class="card_wrap sort-list">
-          <%= render 'shared/amz_search' %>
-          <%= render 'deals_days/note_wadiz' %>
-
           <%= render 'deals/body_hotdeals' %>
-
           <%= render 'deals/body_bestdeals' %>
         </div>
 
@@ -49,7 +46,7 @@
         </div>
         <!-- End -->
 
-        <p class="updating">We are still updating the best deals... :D <a href="/deals_days/day_04">GO TO THE BEST DEALS OF YESTERDAY</a></h2>
+        <p class="updating">We are still updating the best deals... :D <a href="/deals_days/day_05">GO TO THE BEST DEALS OF YESTERDAY</a></h2>
         
         
       </div><!--./rt_cnt-->    

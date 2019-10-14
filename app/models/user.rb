@@ -10,5 +10,6 @@ class User < ActiveRecord::Base
   has_many :categories
   has_many :messages
   has_many :hotdeals
+  has_many :promocodes
 
 end

@@ -7,7 +7,7 @@ class HotdealsController < ApplicationController
   # GET /hotdeals
   # GET /hotdeals.json
   def index
-    @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(8)
+    @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(40)
     
     if params[:search]
       @search_term = params[:search]

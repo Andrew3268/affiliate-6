@@ -1,0 +1,16 @@
+<!-- <p id="notice"><%= notice %></p> -->
+<%= render 'shared/play_video' %><!-- for play youtube video-->
+
+<div class="layout"><!--layout-->
+  <div class="wrap">  
+    <%= render 'shared/header_short' %>
+    <div class="dealpage_title"><p>The Promo Codes</p></div>
+    <%= render 'promocodes/header' %>  
+    
+    <div id="promocodes">
+      <%= render @promocodes %>
+    </div>
+
+  </div><!--./warp-->
+</div><!--./layout-->
+<script><%= render(:partial => 'promocodes', :handlers => [:erb], :formats => [:js]) %></script>

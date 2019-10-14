@@ -10,42 +10,43 @@
         
         <!-- <p>Location Map</p> -->
         <div class="show_img hotdeal_img">
-          <% if @hotdeal.h_image.present? %>
-            <a target="_blank" href="<%= @hotdeal.h_link %>"><img src="<%= @hotdeal.h_image %>" alt="<%= @hotdeal.h_title %>" title="<%= @hotdeal.h_spare_04 %>"></a>
+          <% if @promocode.p_image.present? %>
+           <a target="_blank" href="<%= @promocode.p_link %>"><img src="<%= @promocode.p_image %>" alt="<%= @promocode.p_title %>" title="<%= @promocode.p_image_title %>"></a>
           <% else %>
-            <%= link_to (image_tag @hotdeal.himage.url(:small), alt: @hotdeal.h_title, title: @hotdeal.h_spare_04), @hotdeal %>
+           <%= link_to (image_tag @promocode.pimage.url(:small), alt: @promocode.p_title, title: @promocode.p_image_title), @promocode %>
           <% end %>
           <div class="mark">
             <span>HOT</span><em>DEALS</em>
           </div>
-           <% if can? :update, @hotdeal %>
+           <% if can? :update, @promocode %>
             <div class="admin">
-              <%= link_to 'Back', hotdeals_path %> |
-              <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
-              <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Back', promocodes_path %> |
+              <%= link_to 'Edit', edit_promocode_path(@promocode) %> |
+              <%= link_to 'Delete', @promocode, method: :delete, data: { confirm: 'Are you sure?' } %>
             </div>
           <% end %>
         </div>
         <div class="show_inner">
          <div class="hotdeal_inner">
-           <h2><%= @hotdeal.h_title %></h2>
+           <h2><%= @promocode.p_title %></h2>
 
-           <p class="h_price">$<%= @hotdeal.h_price %> <span class="span_01">$<%= @hotdeal.h_list_price %></span><span class="span_02">( <%= @hotdeal.h_percentage %>% OFF )</span></p>
+           <p class="h_price">$<%= @promocode.p_price %> <span class="span_01">$<%= @promocode.p_list_price %></span><span class="span_02">( <%= @promocode.p_percentage %>% OFF )</span></p>
            <div class="extra_info">
+             <em>PROMO CODE: <%= @promocode.p_promocode %></em>
              <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
-             <% if @hotdeal.h_spare_01.present? %><em>+ <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
-             <% if @hotdeal.h_spare_02.present? %><em>+ <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
+             <% if @promocode.p_extra_deal.present? %><em>+ <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
+             <% if @promocode.p_coupon_deal.present? %><em>+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
             </div>
 
-           <p class="description"><%= @hotdeal.h_description %></p>
+           <p class="description"><%= @promocode.p_description %></p>
            
            <div class="btn">
-            <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on &ensp;<em>Amazon</em></a>
+            <a class="m_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
            </div>
           </div>
         </div>
 
-        <% if can? :update, @hotdeal %>
+        <% if can? :update, @promocode %>
           <div class="pinterest">
            <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
           </div>
@@ -61,7 +62,7 @@
         amzn_assoc_ad_type = "smart";
         amzn_assoc_marketplace = "amazon";
         amzn_assoc_region = "US";
-        amzn_assoc_default_search_phrase = "<%= @hotdeal.h_spare_04 %>";
+        amzn_assoc_default_search_phrase = "<%= @promocode.p_image_title %>";
         amzn_assoc_default_category = "All";
         amzn_assoc_linkid = "10a626d082cd5d1d67d4b8a2afc6ae3d";
         amzn_assoc_title = "Shop Related Products";

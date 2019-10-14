@@ -13,7 +13,9 @@
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
-        <h2>Promotion Codes | Hand-Pick On Amazon Oct. 13. 2019.</h2>
+        <h2>Promotion Codes | Hand-Pick On Amazon Oct. 14. 2019.<% if can? :update, @promocodes %><div class="hotdeals_new"><%= link_to 'New Code', new_promocode_path %></div><% end %></h2>
+        <%= render 'promocodes_days/note_wadiz' %>
+        <%= render 'shared/amz_search' %>
         <div class="sort_box clearfix">
           <ul>
             <li><a href="/deals/promo_codes" class="pure-button">All Codes</a></li>
@@ -25,8 +27,7 @@
         </div>
         
         <div class="card_wrap sort-list">
-          <%= render 'shared/amz_search' %>
-          <%= render 'promocodes_days/note_wadiz' %>
+          <%= render 'deals/body_promocodes' %>
           <%= render 'deals/body_promocode' %>
         </div>
 
@@ -37,7 +38,7 @@
         </div>
         <!-- End -->
 
-        <p class="updating">Promotional codes are still updating... :D <a href="/promocodes_days/day_01">GO TO PROMO CODES OF YESTERDAY</a></h2>
+        <p class="updating">Promotional codes are still updating... :D <a href="/promocodes_days/day_02">GO TO PROMO CODES OF YESTERDAY</a></h2>
         
       </div><!--./rt_cnt-->  
 
