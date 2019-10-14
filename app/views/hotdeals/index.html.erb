@@ -10,10 +10,8 @@
     <div id="hotdeals">
       <%= render @hotdeals %>
     </div>
-
-    <div class="willpaginate">
-      <%= will_paginate @hotdeals %>
-    </div>
+    <%= will_paginate @hotdeals %>
+    
   </div><!--./warp-->
 </div><!--./layout-->
 <script><%= render(:partial => 'hotdeals', :handlers => [:erb], :formats => [:js]) %></script>
