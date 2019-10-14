@@ -59,7 +59,7 @@
 .dealpage_title{margin-top:60px;font-family: 'Righteous', cursive;}
 .dealpage_title p{position:relative;font-size:70px;}
 .dealpage_title p:after,
-.deals_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:100%;top:70%;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
+.deals_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:100%;top:69.2%;margin-left:10px;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
 
 .deals_card{float:left;font-family:'Raleway', Arial, sans-serif;position:relative;overflow:hidden;margin:1%;width:23%;background:#fff;text-align:left;color:#000000;box-shadow:0 0 5px rgba(0, 0, 0, 0.15);font-size:16px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-perspective:20em;perspective:20em;}
 .deals_card *{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
