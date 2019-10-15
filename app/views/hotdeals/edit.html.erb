@@ -8,7 +8,9 @@
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
         <%= f.input :himage, label: 'Choose Image' %>
-        <%= f.select :h_spare_03, ([["Do You Have A Banner?", ""], "YES"])%><br /><br />
+        <%= f.select :h_spare_03, ([["Do You Have A Banner?", ""], "YES"])%>
+        <%= f.select :h_spare_06, ([["No PRIME", ""], "PRIME"])%>
+        <%= f.select :h_spare_07, ([["In Stock", ""], "Only in a few stock left"])%><br /><br />
         <%= f.input :h_image, label: 'Image URL' %>
         <%= f.input :h_link, label: 'Product URL' %>
         <%= f.input :h_title , label: 'Title Of Product' %>
@@ -18,6 +20,8 @@
           <%= f.input :h_list_price, label: 'List Price' %>
           <%= f.input :h_price, label: 'Current Price' %>
           <%= f.input :h_percentage, label: 'Discount Percentage' %>
+          <%= f.input :h_spare_08, label: 'Average Rate' %>
+          <%= f.input :h_spare_09, label: 'Number of Reviews' %>
           <%= f.input :h_spare_02, label: 'Coupon Deals?' %>
           <%= f.input :h_spare_01, label: 'Extra Deals?' %>
         </div>

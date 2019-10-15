@@ -32,12 +32,23 @@
 
            <p class="h_price">$<%= @hotdeal.h_price %> <span class="span_01">$<%= @hotdeal.h_list_price %></span><span class="span_02">( <%= @hotdeal.h_percentage %>% OFF )</span></p>
            <div class="extra_info">
+            <% if @hotdeal.h_spare_08.present? %>
+             <span class="basic_info">
+              <% if @hotdeal.h_spare_06.present? %>
+                <%= @hotdeal.h_spare_06 %> |
+              <% end %>
+                Avg <%= @hotdeal.h_spare_08 %> / <%= @hotdeal.h_spare_09 %>+ reviews 
+              <% if @hotdeal.h_spare_07.present? %>
+                | <%= @hotdeal.h_spare_07 %> 
+              <% end %>
+             </span> 
+            <% end %>
              <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
              <% if @hotdeal.h_spare_01.present? %><em>+ <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
              <% if @hotdeal.h_spare_02.present? %><em>+ <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
             </div>
 
-           <p class="description"><%= @hotdeal.h_description %></p>
+           <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
            
            <div class="btn">
             <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on &ensp;<em>Amazon</em></a>
