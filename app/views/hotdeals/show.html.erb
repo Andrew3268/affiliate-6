@@ -31,14 +31,14 @@
          <div class="hotdeal_inner">
            <h2 class="title"><%= @hotdeal.h_title %></h2>
 
-           <p class="h_price">$<%= @hotdeal.h_price %> <span class="span_01">$<%= @hotdeal.h_list_price %></span><span class="span_02">( <%= @hotdeal.h_percentage %>% OFF )</span></p>
+           <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
            <div class="extra_info">
             <% if @hotdeal.h_spare_08.present? %>
              <span class="basic_info">
               <% if @hotdeal.h_spare_06.present? %>
                 <%= @hotdeal.h_spare_06 %> |
               <% end %>
-                Avg <%= @hotdeal.h_spare_08 %> / <%= @hotdeal.h_spare_09 %>+ reviews 
+                Avg <%= @hotdeal.h_spare_08 %> / <%= number_with_delimiter(@hotdeal.h_spare_09) %>+ reviews 
               <% if @hotdeal.h_spare_07.present? %>
                 | <%= @hotdeal.h_spare_07 %> 
               <% end %>

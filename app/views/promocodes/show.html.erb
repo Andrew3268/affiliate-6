@@ -5,7 +5,7 @@
   
   <div class="show_wrap clearfix">
     <div class="wrap">
-    <%= render 'hotdeals/header' %>  
+    <%= render 'promocodes/header' %>  
       <div class="show_box clearfix">
         
         <!-- <p>Location Map</p> -->
@@ -31,9 +31,15 @@
          <div class="hotdeal_inner">
            <h2><%= @promocode.p_title %></h2>
 
-           <p class="h_price">$<%= @promocode.p_price %> <span class="span_01">$<%= @promocode.p_list_price %></span><span class="span_02">( <%= @promocode.p_percentage %>% OFF )</span></p>
+           <% running_total = 0 %>
+           <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
+           <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01"><%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02">( <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF )</span></p>
+           
+          <!--  <p class="h_price"><%= number_to_currency(@promocode.p_price) %> <span class="span_01"><%= number_to_currency(@promocode.p_list_price) %></span><span class="span_02">( <%= @promocode.p_percentage %>% OFF )</span></p> -->
+
            <div class="extra_info">
              <em>PROMO CODE: <%= @promocode.p_promocode %></em>
+             <!-- <em><%= @promocode.created_at.strftime("%d. %B. %H:%M ") %></em> -->
              <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
              <% if @promocode.p_extra_deal.present? %><em>+ <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
              <% if @promocode.p_coupon_deal.present? %><em>+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
