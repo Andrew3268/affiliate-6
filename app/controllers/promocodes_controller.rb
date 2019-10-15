@@ -45,6 +45,11 @@ class PromocodesController < ApplicationController
                   }
   end
 
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @promocodes = tag.promocodes
+  end
+
   # GET /promocodes/new
   def new
     @promocode = current_user.promocodes.build

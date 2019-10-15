@@ -8,7 +8,7 @@
   <% end %>
   <div class="buy-now"><span><a target="_blank" href="<%= promocode.p_link %>">BUY NOW</a></span></div>
   <figcaption>
-    <h3><%= promocode.p_hashtag %></h3>
+    <h3><%= render_with_phashtags(promocode.p_hashtag.to_s) %></h3>
     <p><%= link_to promocode.p_title, promocode %></p>
     <div class="price">
       <em>$<%= promocode.p_list_price %></em>$<%= promocode.p_price %>

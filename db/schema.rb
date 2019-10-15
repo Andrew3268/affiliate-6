@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191015050704) do
+ActiveRecord::Schema.define(version: 20191015055256) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -273,6 +273,14 @@ ActiveRecord::Schema.define(version: 20191015050704) do
   end
 
   add_index "promocodes", ["slug"], name: "index_promocodes_on_slug", unique: true
+
+  create_table "promocodes_tags", id: false, force: :cascade do |t|
+    t.integer "promocode_id"
+    t.integer "tag_id"
+  end
+
+  add_index "promocodes_tags", ["promocode_id"], name: "index_promocodes_tags_on_promocode_id"
+  add_index "promocodes_tags", ["tag_id"], name: "index_promocodes_tags_on_tag_id"
 
   create_table "recommends", force: :cascade do |t|
     t.integer  "user_id"
