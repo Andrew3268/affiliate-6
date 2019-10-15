@@ -71,7 +71,7 @@ header .gnb_pc>ul>li.membership>a{font-size:20px;}
 header .gnb_pc>ul.sub_index_02{float:left;} /* for index_02 */
 header .gnb_pc>ul>li{float:left;width:340px;text-align:center;}
 header .gnb_pc>ul.sub_index_02>li{float:left;width:300px;text-align:center;margin-right:20px;} /* for index_02 */
-header .gnb_pc>ul>li:nth-child(3){width:200px;}
+header .gnb_pc>ul>li:nth-child(3){width:258px;}
 header .gnb_pc>ul>li>a{font-size:60px;text-decoration:none;color:#000;line-height:60px;display:inline-block;font-weight:600;}
 header .gnb_pc>ul>li>a>em{display:block;font-size:17px;text-align:right;line-height:1;}
 header .gnb_pc>ul.sub_index_02>li>a>em{display:inline-block;font-size:17px;text-align:right;line-height:1;} /* for index_02 */
@@ -89,7 +89,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   header.on .visual img{width:260px;}
   header.on .gnb_pc>ul{float:left;margin:0 0 0 0;padding:10px 0;}
   header.on .gnb_pc>ul>li{float:left;width:150px;font-weight:400;text-align:center;}
-  header.on .gnb_pc>ul>li:nth-child(3){width:190px;}
+  header.on .gnb_pc>ul>li:nth-child(3){width:250px;}
   header.on .gnb_pc>ul>li>a{font-size:20px;line-height:50px;}
   header.on .gnb_pc>ul>li>a.active{background:#000;padding:0 10px;color:#fff;}
   header.on .gnb_pc>ul>li>a>em{display:inline-block;}
@@ -153,7 +153,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .fix_header .fix_visual img{width:260px;height:30px;margin-top:15px;}
   .fix_header ul{float:left;margin:0;padding:5px 0;}
   .fix_header ul>li{float:left;width:150px;font-weight:400;text-align:center;}
-  .fix_header ul>li:nth-child(3){width:190px;}
+  .fix_header ul>li:nth-child(3){width:240px;}
   .fix_header ul>li>a{text-decoration:none;color:#000;font-size:20px;line-height:50px;}
   .fix_header ul>li>a.active{background:rgba(26,26,255,0.2);padding:0 10px;}
   .fix_header ul>li>a>em{display:inline-block;}
@@ -471,6 +471,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .amz_search div#amzn-native-ad-0 div.amzn-native-category-trigger-area{background:#000;color:#fff;}
 .amz_search div#amzn-native-ad-0 .amzn-native-search-bar .amzn-native-search-bar-content .amzn-native-search-bar-form-holder input.amzn-native-search-go{background:#000;color:#fff;}
 .amz_search div#amzn-native-ad-0 .amzn-native-search-bar.amzn-native-search-bar-top .amzn-native-search-bar-content{width:100%;}
+.amz_search div#amzn-native-ad-0 div.arrow{border:5px solid #666;}
 
 
 /* Error Page */
