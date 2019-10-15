@@ -1,4 +1,6 @@
 class Promocode < ActiveRecord::Base
+  is_impressionable
+  
   extend FriendlyId
   friendly_id :p_title, use: :slugged
 

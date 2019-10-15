@@ -1,4 +1,6 @@
 class Hotdeal < ActiveRecord::Base
+  is_impressionable
+  
   extend FriendlyId
   friendly_id :h_title, use: :slugged
 

@@ -22,7 +22,8 @@
             <div class="admin">
               <%= link_to 'Back', hotdeals_path %> |
               <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
-              <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %>
+              <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
+              <%= @hotdeal.impressionist_count %> Views
             </div>
           <% end %>
         </div>

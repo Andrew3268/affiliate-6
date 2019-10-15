@@ -4,6 +4,7 @@ class HotdealsController < ApplicationController
   respond_to :js, :json, :html
   skip_authorization_check only: :hashtags
   load_and_authorize_resource except: :hashtags
+  impressionist actions: [:show], unique: [:ip_address]
 
   # GET /hotdeals
   # GET /hotdeals.json
@@ -25,6 +26,7 @@ class HotdealsController < ApplicationController
   # GET /hotdeals/1
   # GET /hotdeals/1.json
   def show
+    impressionist(@hotdeal)
     set_meta_tags title: @hotdeal.h_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,

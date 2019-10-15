@@ -1,8 +1,10 @@
 class PromocodesController < ApplicationController
   before_action :set_promocode, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
+  skip_before_action :authenticate, only: [:show, :index, :hashtags]
   respond_to :js, :json, :html
-  load_and_authorize_resource
+  skip_authorization_check only: :hashtags
+  load_and_authorize_resource except: :hashtags
+  impressionist actions: [:show], unique: [:ip_address]
 
   # GET /promocodes
   # GET /promocodes.json
@@ -24,6 +26,7 @@ class PromocodesController < ApplicationController
   # GET /promocodes/1
   # GET /promocodes/1.json
   def show
+    impressionist(@promocode)
     set_meta_tags title: @promocode.p_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
