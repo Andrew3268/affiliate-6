@@ -1,2 +1,7 @@
-<%= infinite_append ".list-news ul", { partial: "promocodes/promocode", collection: @promocodes }  %>
+$('#promocodes').append('<%= j render(@promocodes) %>');
+<% if @promocodes.next_page %>
+  $('.pagination').replaceWith('<%= j will_paginate(@promocodes) %>');
+<% else %>
+  $('.pagination').remove();
+<% end %>
 <% sleep 1 %>

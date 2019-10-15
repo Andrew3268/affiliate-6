@@ -7,7 +7,7 @@ class PromocodesController < ApplicationController
   # GET /promocodes
   # GET /promocodes.json
   def index
-    @promocodes = Promocode.all.order("created_at DESC").page(params[:page]).per_page(4)
+    @promocodes = Promocode.all.order("created_at DESC").page(params[:page]).per_page(48)
 
     if params[:search]
       @search_term = params[:search]
@@ -24,6 +24,25 @@ class PromocodesController < ApplicationController
   # GET /promocodes/1
   # GET /promocodes/1.json
   def show
+    set_meta_tags title: @promocode.p_title,
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: @promocode.p_description,
+                  keywords: @promocode.p_keyword,
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: @promocode.p_title,
+                    description: @promocode.p_description,
+                    image: @promocode.p_image
+                  },
+                  og: {
+                    title: @promocode.p_title,
+                    description: @promocode.p_description,
+                    type: 'website',
+                    url: promocode_url(@promocode),
+                    image: @promocode.p_image
+                  }
   end
 
   # GET /promocodes/new
@@ -78,7 +97,7 @@ class PromocodesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_promocode
-      @promocode = Promocode.find(params[:id])
+      @promocode = Promocode.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

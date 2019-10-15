@@ -7,18 +7,11 @@
     <div class="dealpage_title"><p>The Promo Codes</p></div>
     <%= render 'promocodes/header' %>  
     
-    <div class="list-news">
-      <ul>
-        <% @promocodes.each do |promocode| %>
-          <%= render promocode %> 
-        <% end %>
-      </ul>
-      <%= will_paginate @promocodes, renderer: WillPaginateInfinite::InfinitePagination %>
+    <div id="promocodes">
+      <%= render @promocodes %> 
     </div>
+    <%= will_paginate @promocodes %>
     
-    <!-- <div class="promo_paginate"> -->
-      
-    <!-- </div> -->
   </div><!--./warp-->
 </div><!--./layout-->
 <script><%= render(:partial => 'promocodes', :handlers => [:erb], :formats => [:js]) %></script>

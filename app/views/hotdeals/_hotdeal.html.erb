@@ -1,21 +1,19 @@
 <!-- < @hotdeals.each do |hotdeal| > -->
-<li>
-  <figure class="deals_card">
-    <% if hotdeal.h_image.present? %>
-      <div class="image_box"><%= link_to image_tag(hotdeal.h_image), hotdeal %></div>
-    <% else %>
-      <div class="image_box"><%= link_to (image_tag hotdeal.himage.url(:small), alt: hotdeal.h_title, title: hotdeal.h_spare_04), hotdeal %></div>
-    <% end %>
-    <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
-    <figcaption>
-      <h3><%= render_with_hashtags(hotdeal.h_spare_05.to_s) %></h3>
-      <p><%= link_to hotdeal.h_title, hotdeal %></p>
-      <div class="price">
-        <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
-      </div>
-      <div class="m_btn"><a href="<%= hotdeal.h_link %>">Buy Now</a></div>
-    </figcaption>
-  </figure>
-</li>
+<figure class="deals_card">
+  <% if hotdeal.h_image.present? %>
+    <div class="image_box"><%= link_to image_tag(hotdeal.h_image), hotdeal %></div>
+  <% else %>
+    <div class="image_box"><%= link_to (image_tag hotdeal.himage.url(:small), alt: hotdeal.h_title, title: hotdeal.h_spare_04), hotdeal %></div>
+  <% end %>
+  <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
+  <figcaption>
+    <h3><%= render_with_hashtags(hotdeal.h_spare_05.to_s) %></h3>
+    <p><%= link_to hotdeal.h_title, hotdeal %></p>
+    <div class="price">
+      <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
+    </div>
+    <div class="m_btn"><a href="<%= hotdeal.h_link %>">Buy Now</a></div>
+  </figcaption>
+</figure>
 <!-- < end >  -->
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191014063517) do
+ActiveRecord::Schema.define(version: 20191015050704) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -269,7 +269,10 @@ ActiveRecord::Schema.define(version: 20191014063517) do
     t.string   "pimage_content_type"
     t.integer  "pimage_file_size",    limit: 8
     t.datetime "pimage_updated_at"
+    t.string   "slug"
   end
+
+  add_index "promocodes", ["slug"], name: "index_promocodes_on_slug", unique: true
 
   create_table "recommends", force: :cascade do |t|
     t.integer  "user_id"
