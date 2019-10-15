@@ -14,7 +14,7 @@ gem 'meta-tags'
 gem 'friendly_id'
 gem 'paperclip', '~> 6.1'
 gem 'whenever', require: false
-# gem "paranoia", "~> 2.2"
+gem 'will_paginate_infinite', '~> 0.1.3'
 
 
 # group :production do

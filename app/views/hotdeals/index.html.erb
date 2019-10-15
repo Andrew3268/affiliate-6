@@ -7,10 +7,15 @@
     <div class="dealpage_title"><p>The Best Bargain</p></div>
     <%= render 'hotdeals/header' %>  
     
-    <div id="hotdeals">
-      <%= render @hotdeals %>
+    <div class="list-news">
+      <ul>
+        <% @hotdeals.each do |hotdeal| %>
+          <%= render hotdeal %> 
+        <% end %>
+      </ul>
+      <%= will_paginate @hotdeals, renderer: WillPaginateInfinite::InfinitePagination %>
     </div>
-    <%= will_paginate @hotdeals %>
+    
     
   </div><!--./warp-->
 </div><!--./layout-->

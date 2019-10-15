@@ -1,4 +1,5 @@
 <!-- < @promocodes.each do |promocode| > -->
+<li>
   <figure class="deals_card">
     <% if promocode.p_image.present? %>
       <div class="image_box"><%= link_to image_tag(promocode.p_image), promocode %></div>
@@ -15,5 +16,6 @@
       <div class="m_btn"><a href="<%= promocode.p_link %>">Buy Now</a></div>
     </figcaption>
   </figure>
+</li>
 <!-- < end >  -->
 

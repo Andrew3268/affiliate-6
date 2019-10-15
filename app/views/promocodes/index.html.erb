@@ -7,12 +7,17 @@
     <div class="dealpage_title"><p>The Promo Codes</p></div>
     <%= render 'promocodes/header' %>  
     
-    <div id="promocodes">
-      <%= render @promocodes %>
+    <div class="list-news">
+      <ul>
+        <% @promocodes.each do |promocode| %>
+          <%= render promocode %> 
+        <% end %>
+      </ul>
+      <%= will_paginate @promocodes, renderer: WillPaginateInfinite::InfinitePagination %>
     </div>
     
     <!-- <div class="promo_paginate"> -->
-      <%= will_paginate @hotdeals %>
+      
     <!-- </div> -->
   </div><!--./warp-->
 </div><!--./layout-->

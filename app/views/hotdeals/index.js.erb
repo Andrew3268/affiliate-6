@@ -1,7 +1,9 @@
-$('#hotdeals').append('<%= j render(@hotdeals) %>');
-<% if @hotdeals.next_page %>
-  $('.pagination').replaceWith('<%= j will_paginate(@hotdeals) %>');
-<% else %>
-  $('.pagination').remove();
-<% end %>
-<% sleep 1 %>
+// $('#hotdeals').append('<%= j render(@hotdeals) %>');
+// <% if @hotdeals.next_page %>
+//   $('.pagination').replaceWith('<%= j will_paginate(@hotdeals) %>');
+// <% else %>
+//   $('.pagination').remove();
+// <% end %>
+// <% sleep 1 %>
+
+<%= infinite_append ".list-news ul", @hotdeals %>

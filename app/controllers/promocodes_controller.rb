@@ -15,8 +15,7 @@ class PromocodesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @promocodes }
+      format.html
       format.js
     end
 

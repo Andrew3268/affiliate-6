@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery.min
 //= require jquery_ujs
+//= require will_paginate_infinite
 //= require main
 //= require_tree .
 
