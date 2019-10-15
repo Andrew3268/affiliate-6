@@ -395,7 +395,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 .about_us h2{margin-bottom:15px;color:#fff;background:#000;padding:7px 10px;border-radius:10px;display:inline-block;}
 .about_us h3{padding:0 10px;margin-bottom:5px;}
 .about_us p{padding:0 10px;margin-bottom:15px;line-height:25px;}
-.about_us .headline{font-size:150px;font-weight:bold;margin-bottom:25px;}
+.about_us .headline{font-size:150px;font-weight:bold;margin-bottom:-18px;}
+.about_us .headline em a{font-size:17px;color:#fff;}
 .about_us .mission .under_head{margin-bottom:55px;}
 .about_us .mission .left,
 .about_us .mission .right{float:left;width:48%;margin:0 1%;}
@@ -408,7 +409,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 @media screen and (max-width:640px){
   .about_us{width:100%;margin-top:100px;}
   .about_us .sections{margin-bottom:50px;}
-  .about_us .headline{font-size:65px;margin-bottom:7px;}
+  .about_us .headline{font-size:65px;margin-bottom:-10px;}
+  .about_us .headline em a{font-size:25px;color:#fff;}
   .about_us h2{font-size:15px;}
   .about_us h3{padding:0;}
   .about_us p{margin-bottom:20px;}

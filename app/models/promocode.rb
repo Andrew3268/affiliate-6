@@ -9,7 +9,7 @@ class Promocode < ActiveRecord::Base
       promocode = Promocode.find_by(id: self.id)
       phashtags = self.p_hashtag.scan(/#\w+/)
       phashtags.uniq.map do |hashtag|
-          tag = Tag.find_or_create_by(name: phashtag.downcase.delete('#'))
+          tag = Tag.find_or_create_by(name: hashtag.downcase.delete('#'))
           promocode.tags << tag
       end
   end
@@ -19,7 +19,7 @@ class Promocode < ActiveRecord::Base
       promocode.tags.clear
       phashtags = self.p_hashtag.scan(/#\w+/)
       phashtags.uniq.map do |hashtag|
-          tag = Tag.find_or_create_by(name: phashtag.downcase.delete('#'))
+          tag = Tag.find_or_create_by(name: hashtag.downcase.delete('#'))
           promocode.tags << tag
       end
   end
