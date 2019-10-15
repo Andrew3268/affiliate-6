@@ -28,22 +28,45 @@
         </li>
       </ul>
     </li>
-    <li class="last7days bestdeals">
+   <!--  <li class="last7days bestdeals">
       <a href="#n">LAST 7 DAYS DAILY DEALS</a>
       <ul>
         <%= render 'shared/bestdeals_days' %>
       </ul>
-    </li>
+    </li> -->
   </ul>
 </div><!--./toggle-->
-<div class="last7days_pc bestdeals">
+
+<!-- <div class="last7days_pc bestdeals">
   <p>LAST 7 DAYS DAILY DEALS</p>
   <ul>
     <%= render 'shared/bestdeals_days' %>
   </ul>
 </div>
+ -->
 
-<div class="lt_sort_box clearfix">
+ <div class="most_h_wrap clearfix">
+  <p class="most_h_tit">Most Popular Items</p>
+  <% @most_hotdeals.each_with_index do |most_h, i| %>
+    <div class="most_hotdeal clearfix">
+      <div class="numbering"><%= i+1 %></div>
+      <div class="image">
+        <% if most_h.h_image.present? %>
+        <div class="image_box"><%= link_to image_tag(most_h.h_image), most_h %></div>
+        <% else %>
+          <div class="image_box"><%= link_to (image_tag most_h.himage.url(:small), alt: most_h.h_title, title: hotdeal.most_h), most_h %></div>
+        <% end %>
+      </div>
+      <div class="inner">
+        <p><%= link_to most_h.h_title, most_h %></p>
+        <em><span>$<%= most_h.h_list_price %></span>$<%= most_h.h_price %></em>
+      </div>
+    </div>
+  <% end %>
+  <p class="bottom_line"><a href="/hotdeals">CHECK MORE DEALS</a></p>
+</div>
+
+<!-- <div class="lt_sort_box clearfix">
   <ul class="clearfix">
     <li><a href="/deals/bestdeals" class="pure-button">All Codes</a></li>
     <li><a href="#" class="pure-button sort1">Price High</a></li>
@@ -51,4 +74,4 @@
     <li><a href="#" class="pure-button sort3">Sale High</a></li>
     <li><a href="#" class="pure-button sort4">Sale Low</a></li>
   </ul>
-</div>
+</div> -->

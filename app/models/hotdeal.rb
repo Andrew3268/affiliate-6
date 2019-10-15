@@ -1,6 +1,9 @@
 class Hotdeal < ActiveRecord::Base
   is_impressionable
-  
+
+  has_many :impressions, :as=>:impressionable
+  is_impressionable :counter_cache => true, :unique => true
+
   extend FriendlyId
   friendly_id :h_title, use: :slugged
 

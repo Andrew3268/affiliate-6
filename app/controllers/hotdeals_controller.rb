@@ -8,6 +8,7 @@ class HotdealsController < ApplicationController
 
   # GET /hotdeals
   # GET /hotdeals.json
+  
   def index
     @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(48)
     
@@ -20,7 +21,6 @@ class HotdealsController < ApplicationController
       format.js
       format.html
     end
-
   end
 
   # GET /hotdeals/1
