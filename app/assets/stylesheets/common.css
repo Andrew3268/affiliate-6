@@ -208,7 +208,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .sub_nav .gnb_m,
 .sub_nav .gnb_m>.gnb_close{display:none;}
 
-.deals_main_menu{margin-top:70px;}
+.deals_main_menu{margin-top:60px;}
 .deals_main_menu ul{font-family: 'Righteous', cursive;}
 .deals_main_menu ul li{float:left;margin-right:20px;position:relative;}
 .deals_main_menu ul li a{text-decoration:none;font-size:70px;color:#000;}

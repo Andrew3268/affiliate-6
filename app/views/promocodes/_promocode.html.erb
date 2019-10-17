@@ -15,6 +15,12 @@
       <em>$<%= promocode.p_list_price %></em>$<%= promocode.p_price %>
     </div>
     <div class="m_btn"><%= link_to "GET CODE", promocode %></a></div>
+    <% if can? :update, @promocode %>
+     <div class="admin">
+       <%= link_to 'Edit', edit_promocode_path(promocode) %> | 
+       <%= link_to 'Destroy', promocode, method: :delete, data: { confirm: 'Are you sure?' } %>
+     </div><!--/.amdin-->
+    <% end %>
   </figcaption>
   
 </figure>
