@@ -151,7 +151,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .fix_header img{display:inline-block;float:left;width:50px;height:50px;margin:6px 10px 0 0;}
   .fix_header .fix_visual{float:left;height:100%;}
   .fix_header .fix_visual img{width:260px;height:30px;margin-top:15px;}
-  .fix_header ul{float:left;margin:0;padding:5px 0;}
+  .fix_header ul{float:left;margin:0;padding:5px 0;font-family: 'Righteous', cursive;}
   .fix_header ul>li{float:left;width:150px;font-weight:400;text-align:center;}
   .fix_header ul>li:nth-child(3){width:150px;}
   .fix_header ul>li>a{text-decoration:none;color:#000;font-size:20px;line-height:50px;}
@@ -194,7 +194,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 }
 
 /* Deals&Gadgets sub menu */
-.sub_nav{margin-top:260px;/*margin-top:175px;*/font-family: 'Anton', sans-serif;}
+.sub_nav{/*margin-top:260px;*//*margin-top:175px;*/font-family: 'Anton', sans-serif;}
 .sub_nav .sub_nav_pc>ul>li{float:left;margin-right:30px;/*width:150px;*//*text-align:center;*/}
 /*.sub_nav .sub_nav_pc>ul>li.coumos1{width:135px;}
 .sub_nav .sub_nav_pc>ul>li.coumos{width:275px;}*/
@@ -212,11 +212,12 @@ header .gnb_m,header .gnb_open2{display:none;}
 .deals_main_menu ul{font-family: 'Righteous', cursive;}
 .deals_main_menu ul li{float:left;margin-right:20px;position:relative;}
 .deals_main_menu ul li a{text-decoration:none;font-size:70px;color:#000;}
-.deals_main_menu ul li.nth_1{}
+.deals_main_menu ul li a:after{position:absolute;height:10px;content:'';background:#000;width:110%;top:69.2%;margin-left:10px;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
+.deals_main_menu ul li.nth_1:after{}
 
 
 @media screen and (max-width:640px){
-  .sub_nav{margin-top:60px;}
+  .sub_nav{}
   .shoes_nav{margin-top:20px;}
   .sub_nav .sub_nav_pc{display:none;}
   .sub_nav .gnb_m{display:block;background:#000;position:fixed;right:-800px;top:0;width:100%;z-index:303;}
@@ -234,6 +235,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .sub_nav .gnb_open img{width:40px;height:40px;}
 
   .deals_main_menu ul li{float:none;margin:0;position:relative;margin-top:-18px;}
+  .deals_main_menu ul li a:after{display:none;}
   .deals_main_menu ul li.nth_1:after{position:absolute;height:7px;content:'';background:#000;width:70%;top:68%;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
   .deals_main_menu ul li.nth_1 span{display:none;}
   .deals_main_menu ul li a{float:none;font-size:37px;}
@@ -277,16 +279,17 @@ header .gnb_m,header .gnb_open2{display:none;}
 .common_layout .lt_cnt .note>ul>li>a{color:#08f;text-decoration:none;}
 
 @media screen and (max-width:640px){
-  .common_layout{margin:20px 0 0 0;}
-  .common_layout .lt_cnt{float:none;width:100%;margin:0 0 30px 0;}
+  .common_layout{margin:0;}
+  .common_layout .lt_cnt{float:none;width:100%;margin:0;}
   .common_layout .lt_cnt h2{font-size:15px;}
+  .common_layout .lt_cnt .note{margin-bottom:10px;}
+  .common_layout .lt_cnt img{display:none;}
   .common_layout .rt_cnt{float:none;width:100%;}
   .common_layout .rt_cnt h2{font-size:16px;}
-  .common_layout .lt_cnt .note{margin-bottom:10px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
-  .common_layout{margin:30px 0 0 0;}
+  .common_layout{margin:0;}
   .common_layout .lt_cnt{float:none;width:100%;margin:0 0 30px 0;}
   .common_layout .rt_cnt{float:none;width:100%;}
   .common_layout .lt_cnt .note{margin-bottom:10px;}

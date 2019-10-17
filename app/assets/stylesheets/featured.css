@@ -89,7 +89,7 @@
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
-	.featured{margin:30px 0 0 0;}
+	.featured{margin:0;}
 	.featured .lt_cnt{float:left;width:28%;margin:0 2% 30px 0;}
 	.featured .rt_cnt{float:left;width:70%;}
   .featured .sm_pc.on{width:25.3%;}

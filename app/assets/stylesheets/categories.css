@@ -1,5 +1,5 @@
-.common_wrap{margin-top:100px;font-family: 'Montserrat', sans-serif;font-weight:bold;}
-.common_wrap ul{border-bottom:2px solid;}
+.common_wrap{font-family: 'Montserrat', sans-serif;font-weight:bold;}
+.common_wrap ul{}
 .common_wrap ul li{float:left;margin-right:30px;}
 .common_wrap ul li a{text-decoration:none;color:#000;font-size:35px;}
 .category_wrap .cateogry_box{float:left;width:31.33%;margin:1%;position:relative;}
@@ -31,7 +31,7 @@
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
-  .category_wrap{margin-top:65px;}
+  .category_wrap{}
   .category_wrap h2{margin-left:0%;font-size:30px;}
   .category_wrap .cateogry_box a{height:200px;}
   .category_wrap .cateogry_box a img{height:200px;}

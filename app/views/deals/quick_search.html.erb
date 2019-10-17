@@ -1,7 +1,13 @@
 <% content_for :title, "Quick Search on Amazon" %>
 <div class="layout"><!--layout-->
   <div class="wrap"> 
-  <%= render 'shared/header' %>
+  <%= render 'shared/header_short' %>
+  <div class="deals_main_menu clearfix">
+    <ul>
+      <li class="nth_1"><a href="">Amazon's Bargain <!-- <span>|</span> --> </a></li>
+      <!-- <li class="nth_2"><a href="">Discover more deals</a></li> -->
+    </ul>    
+  </div>
   <%= render 'deals/header' %> 
 
     <div class="quicksearch common_layout codes">

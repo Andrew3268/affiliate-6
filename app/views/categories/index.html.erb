@@ -1,77 +1,76 @@
-<% content_for :title, "Categories Of Coolest Products" %>
-<header id="header">
-  <%= render 'shared/header_short' %> 
-</header>
+<div class="layout">
+  <div class="category_wrap common_wrap clearfix">
+    <div class="wrap">
+      <%= render 'shared/header_short' %> 
+      <div class="deals_main_menu clearfix">
+        <ul>
+          <li class="nth_1"><a href="">Categories <!-- <span>|</span> --> </a></li>
+          <!-- <li class="nth_2"><a href="">Discover more deals</a></li> -->
+        </ul>    
+      </div>
+      
+      <!-- <div class="cateogry_box">
+        <a href="/blogs/gadget_test">
+          <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">Test</div>
+        </a>
+      </div> -->
 
-<div class="category_wrap common_wrap clearfix">
-  <div class="wrap">
-    <!-- <h2>CATEGORIES</h2> -->
-    <ul class="clearfix">
-      <li><a href="/categories">CATEGORIES</a></li>
-      <!-- <li><a href="/subcategories"># KEYWORD</a></li> -->
-    </ul>
-    
-    <!-- <div class="cateogry_box">
-      <a href="/blogs/gadget_test">
-        <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">Test</div>
-      </a>
-    </div> -->
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Tech+%26+Electronics">
+          <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">TECH & ELECTRONIC</div>
+        </a>
+      </div>
 
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Tech+%26+Electronics">
-        <img src="https://images.unsplash.com/photo-1468495244123-6c6c332eeece?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">TECH & ELECTRONIC</div>
-      </a>
-    </div>
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Geeky+%26+Hilarious">
+          <img src="https://images.unsplash.com/photo-1544816565-c199d6f5d2d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">GEEKY & HILARIOUS</div>
+        </a>
+      </div>
 
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Geeky+%26+Hilarious">
-        <img src="https://images.unsplash.com/photo-1544816565-c199d6f5d2d3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">GEEKY & HILARIOUS</div>
-      </a>
-    </div>
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Home+%26+Living">
+          <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">HOME & LIVING</div>
+        </a>
+      </div>
 
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Home+%26+Living">
-        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">HOME & LIVING</div>
-      </a>
-    </div>
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Kitchen+%26+Dining">
+          <img src="https://images.unsplash.com/photo-1556910633-5099dc3971e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">KITCHEN & DINING</div>
+        </a>
+      </div>
 
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Kitchen+%26+Dining">
-        <img src="https://images.unsplash.com/photo-1556910633-5099dc3971e8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">KITCHEN & DINING</div>
-      </a>
-    </div>
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Travel">
+          <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">TRAVEL</div>
+        </a>
+      </div>
 
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Travel">
-        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">TRAVEL</div>
-      </a>
-    </div>
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Outdoor+%26+Sports">
+          <img src="https://images.unsplash.com/photo-1414016642750-7fdd78dc33d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">OUTDOOR & SPORTS</div>
+        </a>
+      </div>
 
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Outdoor+%26+Sports">
-        <img src="https://images.unsplash.com/photo-1414016642750-7fdd78dc33d9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">OUTDOOR & SPORTS</div>
-      </a>
-    </div>
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Smartphone+Accessories">
+          <img src="https://images.unsplash.com/photo-1488977321720-6672ab3ed60f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">SMARTPHONE ACCESSORIES</div>
+        </a>
+      </div>
 
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Smartphone+Accessories">
-        <img src="https://images.unsplash.com/photo-1488977321720-6672ab3ed60f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">SMARTPHONE ACCESSORIES</div>
-      </a>
-    </div>
-
-    <div class="cateogry_box">
-      <a href="/gadgets?category=Fashion">
-        <img src="https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
-        <div class="centered">FASHION</div>
-      </a>
+      <div class="cateogry_box">
+        <a href="/gadgets?category=Fashion">
+          <img src="https://images.unsplash.com/photo-1491897554428-130a60dd4757?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+          <div class="centered">FASHION</div>
+        </a>
+      </div>
     </div>
   </div>
 </div>
