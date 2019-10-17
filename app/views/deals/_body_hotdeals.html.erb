@@ -26,7 +26,7 @@
 
      <em>*Pricing may change and deals can expire fast. <%= link_to 'More Detail', hotdeal %></em>
      <% if can? :update, @hotdeals %>
-       <div class="admin">
+       <div class="admin clearfix">
         <ul>
          <li><%= link_to 'Show', hotdeal %></li>
          <li><%= link_to 'Edit', edit_hotdeal_path(hotdeal) %></li>
