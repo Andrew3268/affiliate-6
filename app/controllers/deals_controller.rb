@@ -1,5 +1,10 @@
 class DealsController < ApplicationController
 
+  # def log_impression
+  #   @gadget.impressions.create(ip_address: request.remote_ip)
+  # end
+  
+
   def promo_codes
       @promocodes = Promocode.all.order("created_at DESC").limit(30)
       set_meta_tags title: 'Promo Codes, Coupon Codes on Amazon',

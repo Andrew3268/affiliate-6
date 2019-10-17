@@ -5,6 +5,14 @@ class HotdealsController < ApplicationController
   skip_authorization_check only: :hashtags
   load_and_authorize_resource except: :hashtags
   impressionist actions: [:show], unique: [:ip_address]
+  before_filter :log_impression, :only=> [:show]
+
+  def log_impression
+    @hotdeals = Hotdeal.friendly.find(params[:id])
+    # this assumes you have a current_user method in your authentication system
+    @hotdeals.impressions.create(ip_address: request.remote_ip,user_id:current_user.id)
+  end
+
 
   # GET /hotdeals
   # GET /hotdeals.json

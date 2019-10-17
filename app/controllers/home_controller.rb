@@ -8,6 +8,7 @@ class HomeController < ApplicationController
   #   @recommends = Recommend.all.order("created_at DESC").limit(5)
   # end
 
+
   def index_02
     @gadgets = Gadget.all.order("created_at DESC").page(params[:page]).per_page(50)
     if params[:search]
