@@ -16,12 +16,13 @@
       <%= f.input :p_spare_26, label: 'List Price' %>
       <!-- <%= f.input :p_price, label: 'Current Price' %> -->
       <%= f.input :p_spare_27, label: 'Discount Percentage' %>
-      <%= f.input :p_promocode, label: 'Promo Code' %>
-      <%= f.input :p_end_date, label: 'End Date' %>
       <%= f.input :p_spare_03, label: 'Average Rate' %>
       <%= f.input :p_spare_04, label: 'Number of Reviews' %>
       <%= f.input :p_coupon_deal, label: 'Coupon Deals?' %>
       <%= f.input :p_extra_deal, label: 'Extra Deals?' %>
+      <%= f.input :p_promocode, input_html: { class: "promo_code" }, label: 'Promo Code' %>
+      <%= f.input :p_end_date, input_html: { class: "promo_date" }, label: 'End Date' %>
+
     </div>
     <%= f.input :p_description, label: 'Description Of Product' %>
     <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under ' %>

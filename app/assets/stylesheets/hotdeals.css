@@ -39,7 +39,9 @@
 .hotdeal_form input, .hotdeal_form textarea{display:block;width:100%;height:40px;margin-bottom:20px;}
 .hotdeal_form textarea{height:80px;}
 .hotdeal_form label{font-size:13px;}
-.hotdeal_form .pricing div{float:left;width:18%;margin:1%;}
+.hotdeal_form .pricing div{float:left;;margin:1%;}
+.hotdeal_form .pricing div .promo_code{width:500px;margin-right:1%;}
+.hotdeal_form .pricing div .promo_date{width:300px;}
 
 
 @media screen and (max-width:640px){
@@ -50,6 +52,8 @@
   .hotdeal_form input, .hotdeal_form textarea{border:2px solid #000;}
   .hotdeal_form select{background:#000;color:#fff;padding:3px 7px;}
   .hotdeal_form .pricing div{float:none;width:100%;margin:0;}
+  .hotdeal_form .pricing div .promo_code{width:100%;margin:0;}
+  .hotdeal_form .pricing div .promo_date{width:100%;}
   .show_wrap .show_box .show_inner a.p_btn{width:100%;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){

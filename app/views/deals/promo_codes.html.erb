@@ -19,7 +19,7 @@
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
-        <h2>Promotion Codes | Hand-Pick On Amazon Oct. 17. 2019.<% if can? :update, @promocodes %><div class="hotdeals_new"><%= link_to 'New Code', new_promocode_path %></div><% end %></h2>
+        <h2>Promotion Codes | Hand-Pick On Amazon Oct. 18. 2019.<% if can? :update, @promocodes %><div class="hotdeals_new"><%= link_to 'New Code', new_promocode_path %></div><% end %></h2>
         <%= render 'promocodes_days/note_wadiz' %>
         <%= render 'shared/amz_search' %>
         <div class="sort_box clearfix">
@@ -33,6 +33,9 @@
         </div>
         
         <div class="card_wrap sort-list">
+          
+        <div class="middle_box"><a target="_blank" href="https://amzn.to/2oziOwd"><img src="<%=asset_path 'bargain.png' %>" alt="Save $10 when you spend $100" /></a></div>
+        <div class="middle_box_m"><a target="_blank" href="https://amzn.to/2oziOwd"><img src="<%=asset_path 'bargain_m.png' %>" alt="Save $10 when you spend $100" /></a></div>
           <%= render 'deals/body_promocodes' %>
           <%= render 'deals/body_promocode' %>
         </div>
@@ -44,7 +47,7 @@
         </div>
         <!-- End -->
 
-        <p class="updating"><a href="/promocodes_days/day_05">GO TO PROMO CODES OF YESTERDAY</a></h2>
+        <p class="updating"><a href="/promocodes_days/day_06">GO TO PROMO CODES OF YESTERDAY</a></h2>
         
       </div><!--./rt_cnt-->  
 
