@@ -24,6 +24,7 @@
               <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
               <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
               <%=@hotdeal.unique_impression_count %> Views
+              <%= @hotdeal.created_at.strftime("%d. %B.") %>
             </div>
           <% end %>
         </div>
@@ -46,6 +47,7 @@
               <% end %>
              </span> 
             <% end %>
+             <em>*Pricing may change and deals can expire fast.</em>
              <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
              <% if @hotdeal.h_spare_01.present? %><em>+ <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
              <% if @hotdeal.h_spare_02.present? %><em>+ <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>

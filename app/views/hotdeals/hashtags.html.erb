@@ -13,7 +13,14 @@
 
       <% @hotdeals.each do |hotdeal| %>
         <figure class="deals_card">
-          <div class="image_box"><%= link_to image_tag(hotdeal.h_image), hotdeal %></div>
+          <div class="image_box">
+            <% if hotdeal.h_image.present? %>
+              <%= link_to image_tag(hotdeal.h_image), hotdeal %>
+            <% else %>
+             <%= link_to (image_tag hotdeal.himage.url(:small), alt: hotdeal.h_title, title: hotdeal.h_spare_04), hotdeal %>
+            <% end %>
+            <div class="mark"><span><%= hotdeal.h_percentage %>%</span><em>OFF</em></div>
+          </div>
           <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
           <figcaption>
             <h3><%= render_with_hashtags(hotdeal.h_spare_05.to_s) %></h3>

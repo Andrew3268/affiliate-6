@@ -11,15 +11,19 @@
         <%= f.select :p_banner, ([["Do You Have A Banner?", ""], "YES"])%><br /><br />
         <%= f.select :p_spare_01, ([["NO prime?", ""], "Yes"])%>
         <%= f.select :p_spare_02, ([["In Stock", ""], "Only in a few stock left"])%><br /><br />
+        <div class="pricing clearfix">
+          <%= f.input :p_spare_26, label: 'List Price' %>
+          <%= f.input :p_spare_27, label: 'Discount Percentage' %>
+        </div>
         <%= f.input :p_image, label: 'Image URL' %>
         <%= f.input :p_link, label: 'Product URL' %>
         <%= f.input :p_title , label: 'Title Of Product' %>
         <%= f.input :p_image_title, label: 'Image_Title' %>
         <%= f.input :p_hashtag, label: 'Hashtags' %>
         <div class="pricing clearfix">
-          <%= f.input :p_spare_26, label: 'List Price' %>
+          <!-- <%= f.input :p_spare_26, label: 'List Price' %> -->
           <!-- <%= f.input :p_price, label: 'Current Price' %> -->
-          <%= f.input :p_spare_27, label: 'Discount Percentage' %>
+          <!-- <%= f.input :p_spare_27, label: 'Discount Percentage' %> -->
           <%= f.input :p_spare_03, label: 'Average Rate' %>
           <%= f.input :p_spare_04, label: 'Number of Reviews' %>
           <%= f.input :p_coupon_deal, label: 'Coupon Deals?' %>
@@ -28,7 +32,7 @@
           <%= f.input :p_end_date, input_html: { class: "promo_date" }, label: 'End Date' %>
         </div>
         <%= f.input :p_description, label: 'Description Of Product' %>
-        <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under ' %>
+        <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under $ ' %>
 
         <%= f.button :submit %>
 

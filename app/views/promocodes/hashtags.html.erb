@@ -14,7 +14,14 @@
     <% @promocodes.each do |promocode| %>
       <figure class="deals_card">
         <% if promocode.p_image.present? %>
-          <div class="image_box"><%= link_to image_tag(promocode.p_image), promocode %></div>
+          <div class="image_box">
+            <% if promocode.p_image.present? %>
+              <%= link_to image_tag(promocode.p_image), promocode %>
+            <% else %>
+              <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+            <% end %>
+            <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
+          </div>
         <% else %>
           <div class="image_box"><%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %></div>
         <% end %>
