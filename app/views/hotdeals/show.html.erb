@@ -23,7 +23,7 @@
               <%= link_to 'Back', hotdeals_path %> |
               <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
               <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
-              <%=@hotdeal.unique_impression_count %> Views
+              <%=@hotdeal.impressionist_count %> Views |
               <%= @hotdeal.created_at.strftime("%d. %B.") %>
             </div>
           <% end %>
