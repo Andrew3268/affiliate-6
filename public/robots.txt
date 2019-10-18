@@ -10,4 +10,6 @@ Disallow: /deals/categories
 Disallow: /deals/most_handpick
 Disallow: /deals/sneakers01M
 Disallow: /deals/sneakers01W
+Disallow: /messages/index
+Disallow: /messages/new
 

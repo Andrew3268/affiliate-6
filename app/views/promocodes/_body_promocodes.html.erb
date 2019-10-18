@@ -1,34 +1,55 @@
 <% @promocodes.each do |promocode| %>
   <div class="card clearfix" data-score="<%= promocode.p_percentage %>" data-price="<%= promocode.p_price %>">
     <div class="image_box">
-      <a target="_blank" href="<%= promocode.p_link %>"><img src="<%= promocode.p_image %>" alt="<%= promocode.p_title %>" title="<%= promocode.p_image_title %>"/></a>
+     <% if promocode.p_link.present? %>
+       <!-- <a target="_blank" href="<%= promocode.p_link %>"><img src="<%= promocode.p_image %>" alt="<%= promocode.p_title %>" title="<%= promocode.p_image_title %>"/></a> -->
+       <%= link_to image_tag(promocode.p_image), promocode %>
+     <% else %>
+      <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+     <% end %>
     </div>
     <div class="inner inner_top">
-      <span class="regular"><em><%= promocode.p_percentage %>% OFF</em> + free shipping</span>
+      <span class="regular"><em><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</em> + free shipping</span>
       <span class="shipping_condition">Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items.</a></span>
       <!-- <p><a target="_blank" href="<%= promocode.p_link %>"><%= promocode.p_title %></a></p> -->
       <p><%= link_to promocode.p_title, promocode %></p>
+
       <div class="code_high">
-        <address><span class="dis_price">$<%= promocode.p_price %></span><span class="ori_price">$<%= promocode.p_list_price %></span>
 
-        <% if promocode.p_extra_deal.present? %>
-          <div class="tooltip_common tooltip_red"><span> + Extra Discount</span><div class="content_common tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
-        <% end %>
-        <% if promocode.p_coupon_deal.present? %>
-          <div class="tooltip_common tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
-        <% end %>
-        </address>
-        <% if promocode.p_extra_deal.present? %>
-         <div class="m_tooltip_common m_tooltip_red"><span> + Extra Discount</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
-        <% end %>
-        <% if promocode.p_coupon_deal.present? %>
-         <div class="m_tooltip_common m_tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div> 
-       <% end %>
+       <% running_total = 0 %>
+       <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
+       <em class="discounted"><%= number_to_currency(running_total) %></em><span class="ori_price"><%= number_to_currency(promocode.p_spare_26) %></span>
 
-        <textarea readonly="readonly" class="code_area"><%= promocode.p_promocode %></textarea><button class="copycode">Copy</button>
-        <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p><span class="ex_date ex_date_new">Expiration Date : <%= promocode.p_end_date %></span><em>*Pricing may change and Amazon promotional codes can expire fast. <%= link_to 'More Detail', promocode %></em>
+        <div class="extra_info">
+          <% if promocode.p_extra_deal.present? %>
+            <div class="tooltip_common tooltip_red"><span> + Extra Discount</span><div class="content_common tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
+          <% end %>
+          <% if promocode.p_coupon_deal.present? %>
+            <div class="tooltip_common tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
+          <% end %>
+          </address>
+          <% if promocode.p_extra_deal.present? %>
+           <div class="m_tooltip_common m_tooltip_red"><span> + Extra Discount</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
+          <% end %>
+          <% if promocode.p_coupon_deal.present? %>
+           <div class="m_tooltip_common m_tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div> 
+         <% end %>
+      </div>
+<!-- 
+        <textarea readonly="readonly" class="code_area"><%= promocode.p_promocode %></textarea><button class="copycode">Copy</button> -->
+
+        <div class="code_main">
+          <div>
+            <span class="copy"><code><%= promocode.p_promocode %></code></span>
+            <button class="copy"><span class="icon-copy"></span>COPY</button>
+          </div>
+        </div>
+        <div class="confirmation"><span class="icon-checkmark"></span></div>
+
+        <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>--><span class="ex_date ex_date_new">Expiration Date : <%= promocode.p_end_date %></span><em>*Copy the code below and apply it top your checkout</em><em>*Pricing may change and Amazon promotional codes can expire fast.</em>
+
         <% if can? :update, @promocode %>
-         <div class="admin">
+         <div class="admin clearfix">
           <ul>
            <li><%= link_to 'Show', promocode %></li>
            <li><%= link_to 'Edit', edit_promocode_path(promocode) %></li>

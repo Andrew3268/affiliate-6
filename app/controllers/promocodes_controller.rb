@@ -5,6 +5,14 @@ class PromocodesController < ApplicationController
   skip_authorization_check only: :hashtags
   load_and_authorize_resource except: :hashtags
   impressionist actions: [:show], unique: [:ip_address]
+  before_filter :log_impression, :only=> [:show]
+
+  def log_impression
+    @promocodes = Promocode.friendly.find(params[:id])
+    # this assumes you have a current_user method in your authentication system
+    @promocodes.impressions.create(ip_address: request.remote_ip,user_id:current_user.id)
+  end
+
 
   # GET /promocodes
   # GET /promocodes.json
@@ -97,7 +105,7 @@ class PromocodesController < ApplicationController
   def destroy
     @promocode.destroy
     respond_to do |format|
-      format.html { redirect_to promocodes_url, notice: 'Promocode was successfully destroyed.' }
+      format.html { redirect_to 'promocodes_url', notice: 'Promocode was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
