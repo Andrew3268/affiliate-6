@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require will_paginate_infinite
 //= require main
+//= require trix
 //= require_tree .
 
 

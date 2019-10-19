@@ -15,6 +15,8 @@ gem 'friendly_id'
 gem 'paperclip', '~> 6.1'
 gem 'whenever', require: false
 gem 'will_paginate_infinite', '~> 0.1.3'
+gem 'trix'
+
 
 
 # group :production do

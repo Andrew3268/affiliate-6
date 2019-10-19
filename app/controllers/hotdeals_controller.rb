@@ -5,7 +5,6 @@ class HotdealsController < ApplicationController
   skip_authorization_check only: :hashtags
   load_and_authorize_resource except: :hashtags
   impressionist actions: [:show], unique: [:ip_address]
-  
   # before_filter :log_impression, :only=> [:show]
 
   # def log_impression
@@ -30,11 +29,13 @@ class HotdealsController < ApplicationController
       format.js
       format.html
     end
+    # @most_hotdeals = Hotdeal.order("impressions_count DESC").limit(10)
   end
 
   # GET /hotdeals/1
   # GET /hotdeals/1.json
   def show
+    # @most_hotdeals = Hotdeal.order("impressions_count DESC").limit(10)
     impressionist(@hotdeal)
     set_meta_tags title: @hotdeal.h_title,
                   site: 'Oh,igottabuythis',

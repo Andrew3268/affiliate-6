@@ -23,7 +23,7 @@
               <%= link_to 'Back', hotdeals_path %> |
               <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
               <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
-              <%=@hotdeal.impressionist_count %> Views |
+              <%= @hotdeal.impressionist_count(:filter=>:all) %> Views |
               <%= @hotdeal.created_at.strftime("%d. %B.") %>
             </div>
           <% end %>
@@ -53,10 +53,14 @@
              <% if @hotdeal.h_spare_02.present? %><em>+ <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
             </div>
 
-           <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
+            <%if @hotdeal.h_spare_21.present? %>
+              <div class="trix"><p><%= @hotdeal.h_spare_21.html_safe %></p></div>
+            <% else %>
+              <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
+            <% end %>
            
            <div class="btn">
-            <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on &ensp;<em>Amazon</em></a>
+            <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on&ensp;<em>Amazon</em></a>
            </div>
           </div>
         </div>
@@ -90,3 +94,5 @@
     
   </div>
 </div>
+
+

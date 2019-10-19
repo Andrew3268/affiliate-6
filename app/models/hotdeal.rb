@@ -1,5 +1,5 @@
 class Hotdeal < ActiveRecord::Base
-  is_impressionable
+  # is_impressionable
 
   has_many :impressions, :as=>:impressionable
   is_impressionable :counter_cache => true, :unique => true

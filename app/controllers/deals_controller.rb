@@ -33,7 +33,7 @@ class DealsController < ApplicationController
 
   def bestdeals
     @hotdeals = Hotdeal.all.order("created_at DESC").limit(30)
-    @most_hotdeals = Hotdeal.order("impressions_count DESC").limit(10)
+    @most_hotdeals = Hotdeal.order('impressions_count DESC').take(10)
     set_meta_tags title: 'Updated daily with best deals of Amazon',
                   site: 'Oh,igottabuythis',
                   revierse: true,
