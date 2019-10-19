@@ -13,24 +13,22 @@
 
     <% @promocodes.each do |promocode| %>
       <figure class="deals_card">
-        <% if promocode.p_image.present? %>
-          <div class="image_box">
-            <% if promocode.p_image.present? %>
-              <%= link_to image_tag(promocode.p_image), promocode %>
-            <% else %>
-              <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
-            <% end %>
-            <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
-          </div>
-        <% else %>
-          <div class="image_box"><%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %></div>
-        <% end %>
+        <div class="image_box">
+          <% if promocode.p_image.present? %>
+            <%= link_to image_tag(promocode.p_image), promocode %>
+          <% else %>
+            <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+          <% end %>
+          <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
+        </div>
         <div class="buy-now"><span><a target="_blank" href="<%= promocode.p_link %>">BUY NOW</a></span></div>
         <figcaption>
           <h3><%= render_with_phashtags(promocode.p_hashtag.to_s) %></h3>
           <p><%= link_to promocode.p_title, promocode %></p>
           <div class="price">
-            <em>$<%= promocode.p_list_price %></em>$<%= promocode.p_price %>
+            <% running_total = 0 %>
+            <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
+            <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
           </div>
           <div class="m_btn"><a href="<%= promocode.p_link %>">Buy Now</a></div>
         </figcaption>
