@@ -315,33 +315,33 @@
     // End
 
 
-// Copy Promocode on show page of promocode
-$(document).ready(function() {
-  $('button.copy').click(function(){
-    var btntxt = $(this).text();
-    
-     var copy = $(this).parent().find('.copy').text();
-     
-     var $temp = $("<input>");
-     $("body").append($temp);
-     $temp.val(copy).select();
-     document.execCommand("copy");
-     $temp.remove();
-    
-    
-    $('.confirmation').hide().html('CONFIRMED <b>' + btntxt + ' YOUR PROMO CODE <b>').fadeIn(100).delay(800).fadeOut(300);
+    // Copy Promocode on show page of promocode
+    $(document).ready(function() {
+      $('button.copy').click(function(){
+        var btntxt = $(this).text();
+        
+         var copy = $(this).parent().find('.copy').text();
+         
+         var $temp = $("<input>");
+         $("body").append($temp);
+         $temp.val(copy).select();
+         document.execCommand("copy");
+         $temp.remove();
+        
+        
+        $('.confirmation').hide().html('CONFIRMED <b>' + btntxt + ' YOUR PROMO CODE <b>').fadeIn(100).delay(800).fadeOut(300);
 
-    $( '.main' ).trigger( "click" );
-  });
-  
-  $('.main div').click(function(){
-      var range = document.createRange();
-      var selection = window.getSelection();
-      range.selectNodeContents(this);
-      selection.removeAllRanges();
-      selection.addRange(range);
-  });
-});
+        $( '.main' ).trigger( "click" );
+      });
+      
+      $('.main div').click(function(){
+          var range = document.createRange();
+          var selection = window.getSelection();
+          range.selectNodeContents(this);
+          selection.removeAllRanges();
+          selection.addRange(range);
+      });
+    });
 
   
   </script>

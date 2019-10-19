@@ -56,7 +56,9 @@
             <%if @hotdeal.h_spare_21.present? %>
               <div class="trix"><p><%= @hotdeal.h_spare_21.html_safe %></p></div>
             <% else %>
-              <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
+              <% if @hotdeal.h_description.present? %>
+                <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
+              <% end %>
             <% end %>
            
            <div class="btn">
