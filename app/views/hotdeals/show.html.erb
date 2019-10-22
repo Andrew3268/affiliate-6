@@ -53,6 +53,10 @@
             <% end %>
              <em>*Pricing may change and deals can expire fast.</em>
              <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
+             <% if @hotdeal.h_spare_10.present? %>
+              <% @hotdeal.h_spare_10 %>
+              <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
+             <% end %>
              <% if @hotdeal.h_spare_01.present? %><em>+ <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
              <% if @hotdeal.h_spare_02.present? %><em>+ <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
             </div>

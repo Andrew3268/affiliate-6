@@ -56,6 +56,11 @@
              </span> 
             <% end %>
             <em>+ FREE Shipping ( Free Shipping: <a class="prime" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
+
+            <% if @promocode.p_spare_05.present? %>
+              <% @promocode.p_spare_05 %>
+              <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
+            <% end %>
             
             <% if @promocode.p_extra_deal.present? %><em>+ <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
             <% if @promocode.p_coupon_deal.present? %><em>+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>

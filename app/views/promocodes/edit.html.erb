@@ -8,9 +8,10 @@
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
         <%= f.input :pimage, label: 'Choose Image' %>
-        <%= f.select :p_banner, ([["Do You Have A Banner?", ""], "YES"])%><br /><br />
+        <%= f.select :p_banner, ([["Do You Have A Banner?", ""], "YES"])%>
         <%= f.select :p_spare_01, ([["NO prime?", ""], "Yes"])%>
-        <%= f.select :p_spare_02, ([["In Stock", ""], "Only in a few stock left"])%><br /><br />
+        <%= f.select :p_spare_02, ([["In Stock", ""], "Only in a few stock left"])%>
+        <%= f.select :p_spare_05, ([["Subscribe & Save?", ""], "Yes"])%><br /><br />
         <div class="pricing clearfix">
           <%= f.input :p_spare_26, label: 'List Price' %>
           <%= f.input :p_spare_27, label: 'Discount Percentage' %>
