@@ -7,16 +7,16 @@
     <div class="gadgets">
       <div class="wrap">
 
-        <div class="home_top clearfix">
-          <div class="search_box">
-            <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
-            <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
-            <% end %>
-          </div>
+       <div class="home_top clearfix">
+        <div class="search_box">
+          <%= form_for "",url: gadgets_path, role: "search", method: :get do %>
+          <%= text_field_tag :search, @search_term, placeholder: "Search..." %>
+          <% end %>
         </div>
-        
-        <%= render 'home/gadget' %>
-        <%= will_paginate @gadgets %>
+       </div>
+
+       <%= render 'home/gadget' %>
+       <%= will_paginate @gadgets %>
     </div><!--./wrap-->
   </div><!--./gadgets-->
   <% if can? :update, @gadget %>

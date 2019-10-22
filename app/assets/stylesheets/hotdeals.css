@@ -11,6 +11,7 @@
 .show_wrap .show_box .show_inner a.p_btn{width:300px;text-align:center;}
 .show_wrap .show_box .show_inner .hotdeal_inner{}
 .show_wrap .show_box .show_inner .hotdeal_inner h2{font-weight:500;line-height:1.2;font-size:20px;line-height:1.4;height:4.2em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:3}
+
 .show_wrap .show_box .show_inner .hotdeal_inner p{font-size:15px;font-weight:400;margin:15px 0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price{font-size:25px;margin-bottom:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price .span_01{color:#616161;text-decoration:line-through;font-size:20px;}
@@ -30,6 +31,9 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .btn a{}
 .show_wrap .show_box .show_inner .hotdeal_inner .btn a em{font-weight:bold;font-size:15px;}
 .show_wrap .show_box .hotdeal_img{position:relative;}
+
+.show_wrap .show_box .hotdeal_img h2{font-weight:400;line-height:1.2;font-size:17px;line-height:1.4;height:4.2em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:3}
+
 .show_wrap .show_box .show_img .mark{width:50px;background:#000;font-size:13px;padding:7px;border-radius:10px;line-height:1.1;position:absolute;top:0;left:0;}
 .show_wrap .show_box .show_img .mark span{text-align:center;color:#fff;letter-spacing:3.1px;display:block;}
 .show_wrap .show_box .show_img .mark em{display:block;text-align:center;font-size:10px;color:#fff;}
@@ -142,6 +146,8 @@
 @media screen and (max-width:640px){
   .code_main div{width:100%;}
 }
+
+
 
 
 
