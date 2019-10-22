@@ -19,6 +19,7 @@
         <%= f.input :p_link, label: 'Product URL' %>
         <%= f.input :p_title , label: 'Title Of Product' %>
         <%= f.input :p_image_title, label: 'Image_Title' %>
+        <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under $ ' %>
         <%= f.input :p_hashtag, label: 'Hashtags' %>
         <div class="pricing clearfix">
           <!-- <%= f.input :p_spare_26, label: 'List Price' %> -->
@@ -32,8 +33,7 @@
           <%= f.input :p_end_date, input_html: { class: "promo_date" }, label: 'End Date' %>
         </div>
         <%= f.input :p_description, label: 'Description Of Product' %>
-        <%= f.input :p_spare_36, as: :trix_editor, label: 'Description Of Product with TRIX' %>
-        <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under $ ' %>
+        <%= f.input :p_spare_36, as: :trix_editor, label: 'Description Of Product with TRIX' %> 
 
         <%= f.button :submit %>
 

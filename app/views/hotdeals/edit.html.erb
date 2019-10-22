@@ -15,6 +15,7 @@
         <%= f.input :h_link, label: 'Product URL' %>
         <%= f.input :h_title , label: 'Title Of Product' %>
         <%= f.input :h_spare_04, label: 'Image_Title' %>
+        <%= f.input :h_keyword, label: ' gadgets, amazon, recommended, under $ ' %>
         <%= f.input :h_spare_05, label: 'Hashtags' %>
         <div class="pricing clearfix">
           <%= f.input :h_list_price, label: 'List Price' %>
@@ -27,7 +28,6 @@
         </div>
         <%= f.input :h_description, label: 'Description Of Product' %>
         <%= f.input :h_spare_21, as: :trix_editor, label: 'Description Of Product with TRIX' %>
-        <%= f.input :h_keyword, label: ' gadgets, amazon, recommended, under $ ' %>
 
         <%= f.button :submit %>
 
