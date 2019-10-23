@@ -425,6 +425,7 @@
 .promotions .guide_controll{background:#000;}
 .promotions .guide_controll .btn{font-size:19px;margin:0 0.5%;color:#fff;}
 .promotions .guide_controll .form-control{margin:10px 0;width:335px;padding:5px;line-height:25px;margin-left:35px;}
+.promotions .guide_controll em{color:#fff;font-size:20px;vertical-align:middle;letter-spacing:2px;margin-left:20px;font-weight:500;}
 .promotions .guide_controll p{font-size:40px;color:#fff;}
 .promotions .promotion_box{float:left;width:31.3333%;height:450px;margin:0 1% 2% 1%;border:1px solid;position:relative;}
 .promotions .promotion_box .image_box{}
@@ -459,6 +460,7 @@
   .promotions .featured .sm_pc .most_rev button{width:140px;}
   .promotions .featured .sm_pc .most_rev button.btn-primary{width:40px;background:#fff;color:#000;margin:0 10px;}
   .promotions .featured .sm_pc .guide_controll button{line-height:15px;font-size:15px;padding-top:15px;}
+  .promotions .guide_controll em{display:none;}
   .promotions .featured .sm_pc .popup_menu button{display:none;}
   .promotions .guide_controll{padding-left:20px;}
   .promotions .most_rev, .promotions .amzpromo{padding-left:0;}
@@ -473,6 +475,7 @@
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:35px;}
+  .promotions .guide_controll em{display:none;}
   .promotions .featured .sm_pc .most_rev button{width:130px;}
   .promotions .featured .sm_pc .most_rev button.reviewed{width:110px;}
   .promotions .featured .sm_pc .most_rev button.btn-primary{width:50px;margin-left:20px;}
@@ -481,7 +484,7 @@
   .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:20px;}
   .promotions .featured .sm_pc .guide_controll button.top_10{width:98px;font-size:15px;border:1px solid;margin-bottom:5px;}
   .promotions .guide_controll .btn{font-size:15px;}
-  .promotions .guide_controll .form-control{margin:3px 0 10px 0;width:100%;}
+  .promotions .guide_controll .form-control{margin:0 0 5px 0;width:100%;}
   .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
   .promotions .promotion_box{width:48%;}
   .most_wrapper{margin-top:-25px;}
