@@ -23,17 +23,17 @@
               <%= link_to 'Back', hotdeals_path %> |
               <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
               <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
+              <%= render 'hotdeals/body_sns' %><br>
               <%= @hotdeal.impressionist_count(:filter=>:all) %> Views |
               <%= @hotdeal.created_at.strftime("%d. %B.") %><br />
+              
               <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">| <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-              <%= render 'hotdeals/body_sns' %>
             </div>
           <% end %>
         </div>
         <div class="show_inner">
          <div class="hotdeal_inner">
            <h2 class="title"><%= @hotdeal.h_title %></h2>
-
 
            <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
 
