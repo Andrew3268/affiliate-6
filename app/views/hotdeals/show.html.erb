@@ -27,7 +27,7 @@
               <%= @hotdeal.impressionist_count(:filter=>:all) %> Views |
               <%= @hotdeal.created_at.strftime("%d. %B.") %><br />
               
-              <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">| <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+              <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02"> | <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
             </div>
           <% end %>
         </div>
