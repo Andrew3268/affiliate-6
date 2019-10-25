@@ -81,6 +81,8 @@
 .dealpage_title p{position:relative;font-size:70px;}
 .dealpage_title p:after,
 .deals_code_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:100%;top:69.2%;margin-left:10px;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
+.more_search{margin-top:15px;}
+.more_search input{width:35%;height:40px;padding:0 10px;}
 
 .deals_card{float:left;font-family:'Raleway', Arial, sans-serif;position:relative;overflow:hidden;margin:1%;width:23%;background:#fff;text-align:left;color:#000000;box-shadow:0 0 5px rgba(0, 0, 0, 0.15);font-size:16px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-perspective:20em;perspective:20em;}
 .deals_card *{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
@@ -114,6 +116,8 @@
 .show_banner .banner_img img{width:100%;}
 
 @media screen and (max-width:640px){
+  .more_search{margin:-10px 0 10px 0;}
+  .more_search input{width:100%;border:1px solid #ccc;}
   .deals_card{width:48%;}
   .deals_card .buy-now{display:none;}
   .deals_card .image_box{height:200px;padding:0;}
@@ -129,6 +133,8 @@
   .deals__main_menu ul .nth_2 a:after{height:7px;top:67%;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
+  .more_search{margin:-10px 0 10px 0;}
+  .more_search input{width:100%;border:1px solid #ccc;}
   .deals_card{width:48%;}
   .dealpage_title p{font-size:55px;}
   .deals_card .buy-now{display:block;}

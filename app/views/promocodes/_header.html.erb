@@ -4,21 +4,23 @@
     <div class="sub_nav_pc">
       <ul class="clearfix">
         <li class="coumos1"><a href="/deals/bestdeals">Daily Deals</a></li>
-        <li><a href="/deals/promo_codes">Promo Codes</a></li>
+        <li class="more"><a href="/hotdeals">[ More Deals ]</a></li>
+        <li><a href="/deals/promo_codes">Daily Codes</a></li>
+        <li class="more"><a href="/promocodes">[ More Codes ]</a></li>
         <li><a href="/deals/most_reviewed">Most-Reviewed</a></li>
-        <!-- <li><a href="/deals/picked_deals">Best Deals</a></li> -->
-        <!--<li><a href="deals-v2-onsale.html">On Sale</a></li>-->
         <li class="coumos" ><a href="/deals/promotions">Coupon Codes & Promotions</a></li>
         <li><a href="/deals/quick_search">Quick Search</a></li>
         <li><% if can? :update, @promocodes %><%= link_to 'New Code', new_promocode_path %><% end %></li>
-        <li class="search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></li>
+        <!-- <li class="search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></li> -->
       </ul>
     </div>
     
     <div class="gnb_m">
       <ul class="clearfix">
         <li><a href="/deals/bestdeals">DAILY DEALS,</a></li>
-        <li><a href="/deals/promo_codes">PROMO CODES,</a></li>
+        <li><a href="/hotdeals">[ MORE DEALS ],</a></li>
+        <li><a href="/deals/promo_codes">DAILY CODES,</a></li>
+        <li><a href="/promocodes">[ MORE CODES ],</a></li>
         <li><a href="/deals/most_reviewed">MOST-REVIEWED,</a></li>
         <!-- <li><a href="/deals/coupons">SALES & COUPONS,</a></li> -->
         <!--<li><a href="deals-v2-onsale.html">On Sale</a></li>-->
