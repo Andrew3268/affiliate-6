@@ -125,4 +125,7 @@ class DealsController < ApplicationController
                   }
   end
 
+  def stores
+  end
+
 end

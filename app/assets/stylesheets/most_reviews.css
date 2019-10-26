@@ -23,13 +23,17 @@ blockquote {font-family:'Oswald', sans-serif;line-height:1.2em;font-size:1.8em;c
 /* For Store Page */
 .st_warp{}
 .st_warp .st_left, .st_warp .st_right{float:left;width:48%;margin:1%;;padding:15px;}
-.st_warp .st_left{border-right:1px solid #ccc;}
+/*.st_warp .st_left{border-right:1px solid #ccc;}
+.st_warp .st_right{border-left:1px solid #ccc;}*/
 .st_warp .st_box{border-bottom:1px solid #ccc;padding-top:1%;}
 .st_warp .st_box .st_image{float:left;width:23%;margin:1%;}
-.st_warp .st_box .st_image img{width:80px;height:80px;}
-.st_warp .st_box .inner{float:left;width:73%;margin:1%;padding:7px 7px 0 0;}
+.st_warp .st_box .st_image img{width:130px;height:60px;}
+.st_warp .st_box .inner{float:left;width:71%;margin:0 2%;padding:7px 7px 0 0;}
 .st_warp .st_box .inner p{}
 .st_warp .st_box .inner em{}
+
+.st_warp .st_middle{margin-top:30px;}
+.st_warp .st_middle .st_middle_box{margin-bottom:30px;}
 
 
 

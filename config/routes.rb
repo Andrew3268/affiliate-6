@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   get 'deals/sneakers01M'
   get 'deals/sneakers01W'
   get 'deals/categories'
+  get 'deals/stores'
 
 
   devise_for :users
