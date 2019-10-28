@@ -2,6 +2,7 @@
 .most_article .intro{background:#000;color:#fff;padding:15px;margin-bottom:10px;text-align:center;}
 .most_article .boxes h2{font-size:23px;margin:30px 0 10px 0;letter-spacing:1.2px;color:#000;}
 .most_article .boxes h2.top_category{margin-top:0;}
+.most_article .boxes h2 a{font-size:23px;}
 .most_article .boxes a{text-decoration:none;color:#000;font-size:17px;letter-spacing:1.2px;display:block;margin-bottom:7px;padding-left:5px;}
 blockquote {font-family:'Oswald', sans-serif;line-height:1.2em;font-size:1.8em;column-span:2;-webkit-column-span:2;margin:0px;padding:0px;margin-left:5px;}
 .time{text-align:center;font-family:'PT Sans Narrow', sans-serif;border-top:3px solid #333;border-bottom:3px solid #333;font-size:15px;padding-top:12px;padding-bottom:12px;margin-bottom:30px;font-weight:700;text-transform:uppercase;}
