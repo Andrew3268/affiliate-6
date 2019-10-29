@@ -1,19 +1,20 @@
-<div class="fix_header_wrap clearfix">
-  <div class="wrap">
-   <div class="fix_header clearfix">
-     <a href="/"><img class="oh_logo" src="<%=asset_path 'oh_logo.jpg' %>" alt="ohigottabuythis" /></a>
-     <div class="fix_visual">
-      <h1><a href="/"><img src="<%=asset_path 'visual_01.jpg' %>" alt="ohigottabuythis" /></a></h1>
+  <div class="fix_header_wrap clearfix">
+    <!-- <div class="wrap"> -->
+     <div class="fix_header clearfix">
+       <a href="/"><img class="oh_logo" src="<%=asset_path 'oh_logo.jpg' %>" alt="ohigottabuythis" /></a>
+       <div class="fix_visual">
+        <h1><a href="/"><img src="<%=asset_path 'visual_01.jpg' %>" alt="ohigottabuythis" /></a></h1>
+       </div>
+       <ul class="clearfix">
+        <li><a href="/categories/">CATEGORY<span>,</span></a></li>
+        <li><a href="/recommends/">FEATURED<span>,</span></a></li>
+        <!-- <li><a href="/deals/bestdeals">DEALS <em>of Amazon</em></a></li> -->
+        <li><a href="/deals/bestdeals">BARGAIN <!-- <em>of Amazon</em> --></a></li>
+       </ul>      
      </div>
-     <ul class="clearfix">
-      <li><a href="/categories/">CATEGORY<span>,</span></a></li>
-      <li><a href="/recommends/">FEATURED<span>,</span></a></li>
-      <!-- <li><a href="/deals/bestdeals">DEALS <em>of Amazon</em></a></li> -->
-      <li><a href="/deals/bestdeals">BARGAIN <!-- <em>of Amazon</em> --></a></li>
-     </ul>      
-   </div>
+    <!-- </div> -->
   </div>
-</div>
+
 
 <header class="clearfix m_header">
   <div class="wrap">
@@ -40,6 +41,7 @@
   </div><!--./wrap-->
 </header>
 
-
-
-
+<script>
+  var new_width = $('.fix_header_wrap').width();
+  $('.fix_header').width(new_width); 
+</script>
