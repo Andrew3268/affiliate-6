@@ -55,9 +55,7 @@
         <div class="image_box"><%= link_to image_tag(most_h.h_image), most_h %></div>
         <% else %>
           <div class="image_box"><%= link_to (image_tag most_h.himage.url(:small), alt: most_h.h_title, title: most_h.h_spare_04), most_h %></div>
-        <% end %>
-        
-            
+        <% end %>            
       </div>
       <div class="inner">
         <p><%= link_to most_h.h_title, most_h %></p>
