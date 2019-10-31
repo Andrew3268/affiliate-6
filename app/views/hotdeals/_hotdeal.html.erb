@@ -13,7 +13,11 @@
     <h3><%= render_with_hashtags(hotdeal.h_spare_05.to_s) %></h3>
     <p><%= link_to hotdeal.h_title, hotdeal %></p>
     <div class="price">
-      <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
+      <% if hotdeal.h_list_price.present? %>
+        <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
+      <% else %>
+        <em><%= number_to_currency(hotdeal.h_spare_41) %></em><%= number_to_currency(hotdeal.h_spare_42) %>
+      <% end %>
     </div>
     <div class="m_btn"><a href="<%= hotdeal.h_link %>">Buy Now</a></div>
   </figcaption>
