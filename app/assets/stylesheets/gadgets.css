@@ -106,13 +106,16 @@
 }
 
 /* For Form */
-.gadget_form{margin-top:250px;}
-.form_border{width:70%;margin:0 auto;}
+.gadget_form{margin-top:100px;}
+.form_border{width:70%;}
 .form_border input, .form_border textarea{width:100%;height:40px;margin-bottom:20px;}
 .form_border textarea{height:100px;}
 .form_border trix-editor{min-height:15em;margin-bottom:20px;}
 .form_border .form_select{margin-bottom:20px;}
-.form_border .form_btn{width:40%;}
+.form_border .form_input .gg_input{margin:0 0 20px 0;}
+.form_border .form_input .gg_input input{float:left;width:31.33%;margin:1%;}
+.form_border .form_input .gg_input label.optional{display:none;}
+.form_border .form_btn input{width:100%;background:#000;color:#fff;padding:5px 20px;}
 
 @media screen and (max-width:680px){
   .gadget_form{margin-top:60px;}
@@ -126,15 +129,16 @@
 .show_wrap .show_box .show_img button img{width:40px;position:absolute;left:5px;bottom:33px;}
 .show_wrap .show_box .show_inner{float:left;width:48%;margin: 4% 0 10% 2%;}
 .show_wrap .show_box .show_inner h2{font-size:30px;}
-.show_wrap .show_box .show_inner h2 a{text-decoration:none;color:#000;background:none;padding:0;}
+.show_wrap .show_box .show_inner h2 a{text-decoration:none;color:#000;background:none;padding:0;line-height:1.1;}
 .show_wrap .show_box .show_inner h2 a:hover{text-decoration:underline;}
 .show_wrap .show_box .show_inner strong{text-transform:uppercase;font-size:17px;color:#616161;letter-spacing:5px;border-bottom:1px solid #616161;font-weight:400;}
 .show_wrap .show_box .show_inner span{}
 .show_wrap .show_box .show_inner span p{font-size:15px;font-weight:100;line-height:1.4;height:5.6em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:4}
-.show_wrap .show_box .show_inner p{margin:25px 0;font-size:20px;}
+.show_wrap .show_box .show_inner p{margin:25px 0;font-size:25px;}
 .show_wrap .show_box .show_inner a{text-decoration:none;color:#fff;background:#000;padding:15px 30px;display:inline-block;}
 .show_wrap .show_box .show_inner a em{color:#e47911;text-transform:uppercase;}
 .show_wrap .show_box .show_inner .trix{display:block;margin-top:20px;}
+.show_wrap .show_box .show_inner .trix ul{margin-left:20px;}
 .show_wrap .show_box .show_inner .trix ul li{list-style:disc;}
 .show_wrap .show_box .show_inner .keyword{display:none;}
 

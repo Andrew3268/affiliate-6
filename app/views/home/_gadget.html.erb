@@ -32,7 +32,7 @@
             <% if gadget.gg_option_03.present? %>
              <a class="learnmore" target="_blank" href="<%= gadget.gg_url %>">Learn More</a>
             <% else %>
-            <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
+            <em><%= number_to_currency(gadget.gg_aprice) %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
             <% end %>
           </div>
 
