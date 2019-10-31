@@ -15,7 +15,12 @@
     <!-- <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p> -->
     <p><%= link_to hotdeal.h_title, hotdeal %></p>
     <div class="code_high">
-     <address><span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span>
+     <address>
+        <% if hotdeal.h_price.present? %>
+         <span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span>
+        <% else %>
+          <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_41) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_42) %></span>
+        <% end %>
       <% if hotdeal.h_spare_01.present? %>
         <div class="tooltip_common tooltip_orange"><span> + <%= hotdeal.h_spare_01 %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
       <% end %>

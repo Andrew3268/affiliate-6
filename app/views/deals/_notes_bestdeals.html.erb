@@ -54,14 +54,18 @@
         <% if most_h.h_image.present? %>
         <div class="image_box"><%= link_to image_tag(most_h.h_image), most_h %></div>
         <% else %>
-          <div class="image_box"><%= link_to (image_tag most_h.himage.url(:small), alt: most_h.h_title, title: hotdeal.h_spare_04), most_h %></div>
+          <div class="image_box"><%= link_to (image_tag most_h.himage.url(:small), alt: most_h.h_title, title: most_h.h_spare_04), most_h %></div>
         <% end %>
         
             
       </div>
       <div class="inner">
         <p><%= link_to most_h.h_title, most_h %></p>
-        <em><span>$<%= most_h.h_list_price %></span>$<%= most_h.h_price %></em>
+        <% if most_h.h_list_price.present? %>
+          <em><span>$<%= most_h.h_list_price %></span>$<%= most_h.h_price %></em>
+        <% else %>
+          <em><span><%= number_to_currency(most_h.h_spare_42) %></span><%= number_to_currency(most_h.h_spare_41) %></em>
+        <% end %>
       </div>
     </div>
   <% end %>
