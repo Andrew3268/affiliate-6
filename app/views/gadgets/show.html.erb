@@ -22,6 +22,8 @@
          <h2><a target="_blank" href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
          <strong>BY <%= @gadget.gg_from %></strong>
          <p><%= number_to_currency(@gadget.gg_aprice) %></p>
+
+         <em class="about">About This</em>
          <% if @gadget.gg_intro.present? %>
            <span><p><%= @gadget.gg_intro %></p></span>
          <% end %>
