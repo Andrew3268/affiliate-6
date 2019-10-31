@@ -27,7 +27,7 @@
               <%= @hotdeal.impressionist_count(:filter=>:all) %> Views |
               <%= @hotdeal.created_at.strftime("%d. %B.") %><br />
               
-              <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02"> | <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+              <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
             </div>
           <% end %>
         </div>
@@ -35,8 +35,12 @@
          <div class="hotdeal_inner">
            <h2 class="title"><%= @hotdeal.h_title %></h2>
 
-           <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-
+           <% if @hotdeal.h_price.present? %>
+            <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+           <% else %>
+            <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+           <% end %>
+           
            <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->
 
            <div class="extra_info">
@@ -54,6 +58,13 @@
              </span> 
             <% end %>
              <em>*Pricing may change and deals can expire fast.</em>
+
+            <% if @hotdeal.h_spare_41.present? %>
+              <% running_total = 0 %>
+              <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
+              <em>* You can save <%= number_to_currency(running_total) %></em>
+            <% end %>
+
              <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
              <% if @hotdeal.h_spare_10.present? %>
               <% @hotdeal.h_spare_10 %>

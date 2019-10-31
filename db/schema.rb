@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191018061527) do
+ActiveRecord::Schema.define(version: 20191031162754) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -144,6 +144,21 @@ ActiveRecord::Schema.define(version: 20191018061527) do
     t.datetime "himage_updated_at"
     t.string   "slug"
     t.integer  "impressions_count"
+    t.integer  "h_spare_31"
+    t.integer  "h_spare_32"
+    t.integer  "h_spare_33"
+    t.integer  "h_spare_34"
+    t.integer  "h_spare_35"
+    t.float    "h_spare_41"
+    t.float    "h_spare_42"
+    t.float    "h_spare_43"
+    t.float    "h_spare_44"
+    t.float    "h_spare_45"
+    t.decimal  "h_spare_51"
+    t.decimal  "h_spare_52"
+    t.decimal  "h_spare_53"
+    t.decimal  "h_spare_54"
+    t.decimal  "h_spare_55"
   end
 
   add_index "hotdeals", ["slug"], name: "index_hotdeals_on_slug", unique: true
