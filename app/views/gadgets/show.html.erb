@@ -19,6 +19,9 @@
          <% if @gadget.gg_intro.present? %>
            <span><p><%= @gadget.gg_intro %></p></span>
          <% end %>
+         <% if @gadget.gg_pro_01.present? %>
+          <span class="trix"><%= @gadget.gg_pro_01.html_safe %></span>
+         <% end %>
          <p class="keyword"><%= @gadget.gg_option_04 %></p>
 
          <% if @gadget.gg_option_03.present? %>

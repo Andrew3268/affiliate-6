@@ -204,7 +204,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .sub_nav .shoes_nav_pc>ul{background:#000;padding:5px 0;}
 .sub_nav .shoes_nav_pc>ul>li{width:auto;margin:0 2%;}
 .sub_nav .sub_nav_pc>ul>li>a{text-decoration:none;color:#000;font-size:20px;display:block;font-weight:400;}
-.sub_nav .sub_nav_pc>ul>li>a.active{color:#000;font-weight:bold;border-bottom:2px solid #000;display:inline;}
+.sub_nav .sub_nav_pc>ul>li>a.active{color:#000;font-weight:bold;border-bottom:2px solid #000;display:inline;background:#ffff00;}
 .sub_nav .gnb_open,
 .sub_nav .gnb_open_b,
 .sub_nav .gnb_m,
