@@ -23,7 +23,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info{font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info .primeornot{display:none;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info em{color:#616161;font-weight:300;font-size:12px;display:block;margin-bottom:2px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .extra_info em a{background:none;color:#08f;padding:0;display:inline-block;}
+.show_wrap .show_box .show_inner .hotdeal_inner .extra_info em a{background:none;color:#08f;padding:0;display:inline;}
 .show_wrap .show_box .show_inner .hotdeal_inner .show_des{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:10px 0 20px 0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .description{margin:15px 0;line-height:1.4;height:5.6em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:4}
 .show_wrap .show_box .show_inner .hotdeal_inner .trix{font-weight:100;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin-bottom:20px;padding:10px;}
