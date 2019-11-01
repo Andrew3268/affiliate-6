@@ -141,7 +141,7 @@
 .show_wrap .show_box .show_inner .trix ul{margin-left:20px;}
 .show_wrap .show_box .show_inner .trix ul li{list-style:disc;}
 .show_wrap .show_box .show_inner .keyword{display:none;}
-.show_wrap .show_box .show_inner .about{font-size:20px;border-bottom:1px solid #ccc;display:block;}
+.show_wrap .show_box .show_inner .about{font-size:20px;border-bottom:1px solid #ccc;display:block;margin-top:25px;}
 
 .show_wrap .show_box_down{width:1000px;margin:60px auto 200px auto;}
 .show_wrap .show_box_down h2{margin:0 0 1% 1%;border-bottom:1px solid #616161;width:200px;}
