@@ -145,5 +145,6 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-  get '/sitemap' => 'sitemap#index',defaults: {format: "xml"}
+  # get '/sitemap' => 'sitemap#index',defaults: {format: "xml"}
+  get '/sitemap' => 'sitemap#deals',defaults: {format: "xml"}
 end
