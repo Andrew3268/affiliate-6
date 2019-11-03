@@ -72,14 +72,6 @@
             <% if @promocode.p_coupon_deal.present? %><em>+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
             </div>
 
-            <% if @promocode.p_spare_36.present? %>
-              <div class="trix"><%= @promocode.p_spare_36.html_safe %></div>
-            <% else %>
-              <% if @promocode.p_description.present? %>
-                <div class="show_des"><p class="description"><%= @promocode.p_description %></p></div>
-              <% end %>
-            <% end %>
-            
             <p class="code_line">Copy the code below and apply it top your checkout</p>
             <p class="code_line">End Date: <%= @promocode.p_end_date %></p>
             <div class="code_main">
@@ -94,6 +86,14 @@
             <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
            </div> 
 
+            <% if @promocode.p_spare_36.present? %>
+              <div class="trix"><%= @promocode.p_spare_36.html_safe %></div>
+            <% else %>
+              <% if @promocode.p_description.present? %>
+                <div class="show_des"><p class="description"><%= @promocode.p_description %></p></div>
+              <% end %>
+            <% end %>
+            
           </div>
         </div>
 
