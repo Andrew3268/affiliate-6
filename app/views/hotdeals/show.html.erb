@@ -49,9 +49,9 @@
               <% if @hotdeal.h_spare_06.present? %>
                 <div class="primeornot"><%= @hotdeal.h_spare_06 %> |</div>
               <% else %>
-                PRIME |
+                <!-- PRIME | -->
               <% end %>
-                Avg <%= @hotdeal.h_spare_08 %> / <%= number_with_delimiter(@hotdeal.h_spare_09) %>+ reviews 
+                Avg <%= @hotdeal.h_spare_08 %> | <%= number_with_delimiter(@hotdeal.h_spare_09) %>+ reviews 
               <% if @hotdeal.h_spare_07.present? %>
                 | <%= @hotdeal.h_spare_07 %> 
               <% end %>
