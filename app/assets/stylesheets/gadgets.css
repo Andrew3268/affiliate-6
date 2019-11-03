@@ -158,6 +158,7 @@
   .show_wrap .show_box{width:100%;margin:0;box-shadow:none;}
   .show_wrap .show_box .show_img{float:none;width:100%;margin:0 auto;}
   .show_wrap .show_box .show_img img{width:100%;border-radius:10px;}
+  .show_wrap .show_box .show_inner a{margin-top:0;}
   .show_wrap .show_box .show_inner{float:none;width:100%;margin-left:0;}
   .show_wrap .show_box .show_inner h2{font-size:20px;}
   .show_wrap .show_box .show_inner strong{font-size:15px;}

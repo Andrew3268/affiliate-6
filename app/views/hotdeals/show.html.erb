@@ -57,21 +57,21 @@
               <% end %>
              </span> 
             <% end %>
-             <em>*Pricing may change and deals can expire fast.</em>
-
-            <% if @hotdeal.h_spare_41.present? %>
+            
+             <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
+             <% if @hotdeal.h_spare_41.present? %>
               <% running_total = 0 %>
               <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
-              <em>* You can save <%= number_to_currency(running_total) %></em>
-            <% end %>
+              <em>+ You can save <%= number_to_currency(running_total) %> or more.</em>
+             <% end %>
 
-             <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
              <% if @hotdeal.h_spare_10.present? %>
               <% @hotdeal.h_spare_10 %>
               <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
              <% end %>
              <% if @hotdeal.h_spare_01.present? %><em>+ <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
              <% if @hotdeal.h_spare_02.present? %><em>+ <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
+             <em>*Pricing may change and deals can expire fast.</em>
             </div>
 
             <%if @hotdeal.h_spare_21.present? %>

@@ -470,15 +470,6 @@ header .gnb_m,header .gnb_open2{display:none;}
   .field_with_errors .error{top:172px;right:50px;}
   .flash_message{width:100%;margin:100px auto 0px auto;}
 }
-  
-/* Amazon Search3 */
-.amz_search{margin:7px 0;}
-.amz_search div#amzn-native-ad-0 .amzn-native-header{display:none;}
-.amz_search div#amzn-native-ad-0 div.amzn-native-category-trigger-area{background:#000;color:#fff;}
-.amz_search div#amzn-native-ad-0 .amzn-native-search-bar .amzn-native-search-bar-content .amzn-native-search-bar-form-holder input.amzn-native-search-go{background:#000;color:#fff;}
-.amz_search div#amzn-native-ad-0 .amzn-native-search-bar.amzn-native-search-bar-top .amzn-native-search-bar-content{width:100%;}
-.amz_search div#amzn-native-ad-0 div.arrow{border:5px solid #666;}
-
 
 /* Error Page */
 .errors_wrap{height:100vh;text-align:center;color:#fff;background:#000;font-family:"Helvetica Neue";font-size:16px;line-height:1.5;}
@@ -514,7 +505,6 @@ header .gnb_m,header .gnb_open2{display:none;}
   0%, 100%{margin-top:40px;margin-bottom:48px;box-shadow:0 40px 80px rgba(0, 0, 0, 0.24);}
   50%{margin-top:54px;margin-bottom:34px;box-shadow:0 24px 64px rgba(0, 0, 0, 0.4);}
 }
-
 @media screen and (max-width:640px){
   .errors_logo{width:320px;}
   .errors_ctn h1{line-height:20px;font-size:17px;}
@@ -526,5 +516,16 @@ header .gnb_m,header .gnb_open2{display:none;}
   .errors_ctn h1{line-height:30px;}
 }
 
+/* Amazon Widget */  
+ /* Amazon Search3 */
+.amz_search{margin:7px 0;}
+.amz_search div#amzn-native-ad-0 .amzn-native-header{display:none;}
+.amz_search div#amzn-native-ad-0 div.amzn-native-category-trigger-area{background:#000;color:#fff;}
+.amz_search div#amzn-native-ad-0 .amzn-native-search-bar .amzn-native-search-bar-content .amzn-native-search-bar-form-holder input.amzn-native-search-go{background:#000;color:#fff;}
+.amz_search div#amzn-native-ad-0 .amzn-native-search-bar.amzn-native-search-bar-top .amzn-native-search-bar-content{width:100%;}
+.amz_search div#amzn-native-ad-0 div.arrow{border:5px solid #666;}
+ /* Related Products */
+.amzn-native-brand{display:none;}
+/* End */
 
 
