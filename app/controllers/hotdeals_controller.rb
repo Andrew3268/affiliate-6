@@ -19,6 +19,25 @@ class HotdealsController < ApplicationController
   
   def index
     @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(48)
+    set_meta_tags title: 'Amazon Deals & Bargain',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'Find the best bargain on Amazon and save money',
+                  keywords: 'Amazon, deals, bargain',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Amazon Deals & Bargain',
+                    description: 'Find the best bargain on Amazon and save money',
+                    # image: @hotdeal.h_image
+                  },
+                  og: {
+                    title: 'Amazon Deals & Bargain',
+                    description: 'Find the best bargain on Amazon and save money',
+                    type: 'website',
+                    url: 'www.ohigottabuythis.net/hotdeals',
+                    # image: @hotdeal.h_image
+                  }
     
     if params[:search]
       @search_term = params[:search]
@@ -29,7 +48,8 @@ class HotdealsController < ApplicationController
       format.js
       format.html
     end
-    # @most_hotdeals = Hotdeal.order("impressions_count DESC").limit(10)
+    
+
   end
 
   # GET /hotdeals/1

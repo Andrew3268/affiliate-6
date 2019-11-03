@@ -19,6 +19,25 @@ class PromocodesController < ApplicationController
   # GET /promocodes.json
   def index
     @promocodes = Promocode.all.order("created_at DESC").page(params[:page]).per_page(48)
+    set_meta_tags title: 'Amazon Promo Codes & Coupons',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'Take the best deals with promo codes and coupons',
+                  keywords: 'Amazon, deals, promo codes, coupons',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Amazon Promo Codes & Coupons',
+                    description: 'Take the best deals with promo codes and coupons',
+                    # image: @hotdeal.h_image
+                  },
+                  og: {
+                    title: 'Amazon Promo Codes & Coupons',
+                    description: 'Take the best deals with promo codes and coupons',
+                    type: 'website',
+                    url: 'www.ohigottabuythis.net/promocodes',
+                    # image: @hotdeal.h_image
+                  }
 
     if params[:search]
       @search_term = params[:search]
@@ -29,6 +48,7 @@ class PromocodesController < ApplicationController
       format.html
       format.js
     end
+
 
   end
 

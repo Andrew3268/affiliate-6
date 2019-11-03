@@ -56,11 +56,11 @@
               <% end %>
              </span> 
             <% end %>
-            <em>* Pricing may change and deals can expire fast.</em>
             <% saving_total = 0 %>
             <% saving_total =  @promocode.p_spare_26 - (@promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26) %>
             <em>* You can save <%= number_to_currency(saving_total) %> or more.</em>
-
+            <em>* Code End Date: <%= @promocode.p_end_date %></em>
+            <em>* Pricing may change and deals can expire fast.</em>
             <em>+ FREE Shipping ( Free Shipping: <a class="prime" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
 
             <% if @promocode.p_spare_05.present? %>
@@ -72,13 +72,13 @@
             <% if @promocode.p_coupon_deal.present? %><em>+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
             </div>
 
-            <p class="code_line">Copy the code below and apply it top your checkout</p>
-            <p class="code_line">End Date: <%= @promocode.p_end_date %></p>
+            <p class="code_line">Click and copy this code then apply it at your checkout</p>
             <div class="code_main">
-              <div>
+              <button class="copy"><%= @promocode.p_promocode %></button>
+              <!-- <div>
                 <span class="copy"><code><%= @promocode.p_promocode %></code></span>
                 <button class="copy"><span class="icon-copy"></span>COPY</button>
-              </div>
+              </div> -->
             </div>
             <div class="confirmation"><span class="icon-checkmark"></span></div>
 

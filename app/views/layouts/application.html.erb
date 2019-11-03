@@ -307,11 +307,11 @@
 
 
     //Copy Promo Code on Promo_Codes Page
-    $("button").click(function(){
-      $(this).parent().find("textarea").select();
-        //$("textarea").select();
-        document.execCommand('copy');
-    });
+    // $("button").click(function(){
+    //   $(this).parent().find("textarea").select();
+    //     //$("textarea").select();
+    //     document.execCommand('copy');
+    // });
     // End
 
 
@@ -329,7 +329,7 @@
          $temp.remove();
         
         
-        $('.confirmation').hide().html('CONFIRMED <b>' + btntxt + ' YOUR PROMO CODE <b>').fadeIn(100).delay(800).fadeOut(300);
+        $('.confirmation').hide().html('CONFIRMED <b>' + ' YOUR PROMO CODE <b>').fadeIn(100).delay(800).fadeOut(300);
 
         $( '.main' ).trigger( "click" );
       });

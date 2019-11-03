@@ -144,6 +144,7 @@
 
 /* Copy Promocode */
 .code_main{}
+.code_main button{padding:10px;font-size:20px;width:300px;letter-spacing:7px;background:#000;color:#fff;margin-bottom:2px;}
 .code_main div{width:300px;background:#fff;border:1px solid #ccc;padding:8px;border-radius:2px;position:relative;margin-bottom:5px;}
 .code_main div span.copy{height:17px;display:block;max-width:204px;overflow:hidden;white-space:nowrap;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;position:relative;top:-1px;}
 .code_main div span.copy code{font-weight:300;font-family:'Montserrat', sans-serif;letter-spacing:2px;}
@@ -154,6 +155,7 @@
 
 @media screen and (max-width:640px){
   .code_main div{width:100%;}
+  .code_main button{width:100%;}
 }
 
 
