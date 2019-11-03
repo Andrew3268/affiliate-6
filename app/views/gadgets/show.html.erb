@@ -28,11 +28,13 @@
           <p><%= number_to_currency(@gadget.gg_aprice) %></p>
          <% end %>
 
-         <em class="about">About This</em>
+         
          <% if @gadget.gg_intro.present? %>
+           <em class="about">About This</em> 
            <span><p><%= @gadget.gg_intro %></p></span>
          <% end %>
          <% if @gadget.gg_pro_01.present? %>
+          <em class="about">About This</em>
           <span class="trix"><%= @gadget.gg_pro_01.html_safe %></span>
          <% end %>
          <p class="keyword"><%= @gadget.gg_option_04 %></p>
