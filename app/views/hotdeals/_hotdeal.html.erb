@@ -20,6 +20,12 @@
       <% end %>
     </div>
     <div class="m_btn"><a href="<%= hotdeal.h_link %>">Buy Now</a></div>
+    <% if can? :update, @hotdeal %>
+     <div class="admin">
+       <%= link_to 'Edit', edit_hotdeal_path(hotdeal) %> | 
+       <%= link_to 'Destroy', hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %>
+     </div><!--/.amdin-->
+    <% end %>
   </figcaption>
 </figure>
 <!-- < end >  -->
