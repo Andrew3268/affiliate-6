@@ -39,14 +39,15 @@
         <textarea readonly="readonly" class="code_area"><%= promocode.p_promocode %></textarea><button class="copycode">Copy</button> -->
 
         <div class="code_main">
-          <div>
+          <button class="copy"><%= promocode.p_promocode %></button>
+          <!-- <div>
             <span class="copy"><code><%= promocode.p_promocode %></code></span>
             <button class="copy"><span class="icon-copy"></span>COPY</button>
-          </div>
+          </div> -->
         </div>
         <div class="confirmation"><span class="icon-checkmark"></span></div>
 
-        <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>--><span class="ex_date ex_date_new">Expiration Date : <%= promocode.p_end_date %></span><em>*Copy the code below and apply it top your checkout</em><em>*Pricing may change and Amazon promotional codes can expire fast.</em>
+        <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>--><span class="ex_date ex_date_new">Expiration Date : <%= promocode.p_end_date %></span><em>* Click and copy this code then apply it at your checkout</em><em>* Pricing may change and promotional codes can expire fast.</em>
 
         <% if can? :update, @promocode %>
          <div class="admin clearfix">
