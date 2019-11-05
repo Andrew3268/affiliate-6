@@ -128,4 +128,10 @@ class DealsController < ApplicationController
   def stores
   end
 
+  def all_deals
+    @promocodes = Promocode.all.order("created_at DESC").limit(20)
+    @hotdeals = Hotdeal.all.order("created_at DESC").limit(20)
+  end
+
+
 end
