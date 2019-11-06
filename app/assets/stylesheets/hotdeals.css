@@ -145,17 +145,24 @@
 /* Copy Promocode */
 .code_main{}
 .code_main button{padding:10px;font-size:20px;width:300px;letter-spacing:7px;background:#000;color:#fff;margin-bottom:2px;}
+.code_main button.copy_m{display:none;}
 .code_main div{width:300px;background:#fff;border:1px solid #ccc;padding:8px;border-radius:2px;position:relative;margin-bottom:5px;}
-.code_main div span.copy{height:17px;display:block;max-width:204px;overflow:hidden;white-space:nowrap;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;position:relative;top:-1px;}
-.code_main div span.copy code{font-weight:300;font-family:'Montserrat', sans-serif;letter-spacing:2px;}
+.code_main div span.copied{height:17px;display:block;max-width:204px;overflow:hidden;white-space:nowrap;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;box-sizing:border-box;word-wrap:break-word;position:relative;top:-1px;}
+.code_main div span.copied code{font-weight:300;font-family:'Montserrat', sans-serif;letter-spacing:2px;}
 .code_main div button{position:absolute;height:100%;width:95px;right:0;top:0;background:#000;border:none;outline:none;color:#fff;cursor:pointer;}
 .code_main div button:active{background:#003580;transform:scale(0.9);}
 .icon-copy{font-size:11px;position:relative;top:-1px;margin-right:2px;}
 .confirmation{background:#feba01;color:#383838;padding:10px 15px;border-radius:3px;display:none;z-index:999;position:fixed;bottom:20px;left:20px;text-align:center;}
+.confirmation_m{font-size:0px;}
 
 @media screen and (max-width:640px){
+
   .code_main div{width:100%;}
-  .code_main button{width:100%;margin-top:10px;}
+  .code_main button{width:100%;}
+  .code_main button.copy{display:none;}
+  .code_main button.copy_m{display:block;}
+  .confirmation_m{font-size:13px;background:#feba01;color:#383838;padding:10px 15px;border-radius:3px;display:none;z-index:999;text-align:center;}
+  .confirmation{font-size:0;background:#fff;}
 }
 
 

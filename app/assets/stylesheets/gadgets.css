@@ -154,7 +154,7 @@
 
 
 @media screen and (max-width:680px){
-  .show_wrap{margin:100px 0 0 0;}
+  .show_wrap{margin:70px 0 0 0;}
   .show_wrap .show_box{width:100%;margin:0;box-shadow:none;}
   .show_wrap .show_box .show_img{float:none;width:100%;margin:0 auto;}
   .show_wrap .show_box .show_img img{width:100%;border-radius:10px;}
@@ -170,7 +170,7 @@
 }
 
 @media screen and (min-width:681px) and (max-width:1199px){
-  .show_wrap{margin-top:80px;}
+  .show_wrap{margin-top:70px;}
   .show_wrap .show_box{width:100%;}
   .show_wrap .show_box .show_inner h2{font-size:20px;}
   .show_wrap .show_box .show_inner strong{font-size:15px;}
