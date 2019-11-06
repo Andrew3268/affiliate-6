@@ -1,6 +1,4 @@
 <!-- <p id="notice"><%= notice %></p> -->
-
-<!-- <p id="notice"><%= notice %></p> -->
 <%= render 'shared/play_video' %><!-- for play youtube video-->
 
 <div class="layout"><!--layout-->
@@ -34,20 +32,30 @@
             <div class="sp_card clearfix">
               <div class="sp_image">
                 <img src="<%= storepromotion.sp_image %>" alt="<%= storepromotion.sp_title %>" title="">
-                <%= link_to 'Show', storepromotion %>
-                <%= link_to 'Edit', edit_storepromotion_path(storepromotion) %>
-                <%= link_to 'Destroy', storepromotion, method: :delete, data: { confirm: 'Are you sure?' } %>
+                <% if can? :update, storepromotion %>
+                  <div class="admin">
+                    <%= link_to 'Show', storepromotion %> |
+                    <%= link_to 'Edit', edit_storepromotion_path(storepromotion) %> |
+                    <%= link_to 'Destroy', storepromotion, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </div>
+                <% end %>
               </div>
               <div class="inner">
                 <p><%= storepromotion.sp_store_name %> | Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
-                <p><%= storepromotion.sp_title %></p>
-                <p><%= storepromotion.sp_description %></p>
+
+                <p class="sp_title"><%= storepromotion.sp_title %></p>
+                <!-- <p><%= storepromotion.sp_description %></p> -->
+                <!-- <em>End Date: <%= storepromotion.sp_end_date %></em> -->
                 <% if storepromotion.sp_promocode.present? %>
-                  <p>CODE: <%= storepromotion.sp_promocode %></p>
-                  <p>End Date: <%= storepromotion.sp_end_date %></p>
+                  <div class="sp_code"><p>CODE: <%= storepromotion.sp_promocode %></p></div>
                 <% end %>
+                <em>End Date: <%= storepromotion.sp_end_date %></em>
                 <!-- <p><%= storepromotion.spcategory.name %></p> -->
-                <div class="btn"><a href="<%= storepromotion.sp_link %>">Check This Deals</a></div>
+                <!-- <div class="btn"><a href="<%= storepromotion.sp_link %>">Check This Deals</a></div> -->
+              </div>
+
+              <div class="sp_btn">
+                <a href="<%= storepromotion.sp_link %>">Check This Deals</a>
               </div>
             </div>
           <% end %>
