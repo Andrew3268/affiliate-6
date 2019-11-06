@@ -1,0 +1,2 @@
+module SpcategoriesHelper
+end

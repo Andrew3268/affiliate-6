@@ -126,6 +126,8 @@ class DealsController < ApplicationController
   end
 
   def stores
+    @promotion = Storepromotion.where(spcategory_id: 1).limit(5)
+    @promotion_with_code = Storepromotion.where(spcategory_id: 2).limit(5)
   end
 
   def all_deals

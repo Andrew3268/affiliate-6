@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spc_name: MyString
+  spc_description: MyText
+  display_in_navbar: false
+
+two:
+  spc_name: MyString
+  spc_description: MyText
+  display_in_navbar: false

@@ -1,0 +1,23 @@
+<div class="hotdeal_form">
+  <%= simple_form_for(@storepromotion) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+    <div class="form-inputs">
+      <%= f.association :spcategory %>
+      <%= f.input :sp_store_name %>
+      <%= f.input :sp_image %>
+      <%= f.input :sp_link %>
+      <%= f.input :sp_title %>
+      <%= f.input :sp_description %>
+      <div class="pricing clearfix">
+        <%= f.input :sp_percentage_01 %>
+        <%= f.input :sp_percentage_02 %>
+        <%= f.input :sp_promocode, input_html: { class: "promo_code" } %>
+        <%= f.input :sp_end_date, input_html: { class: "promo_date" } %>
+      </div>
+    </div>
+
+    <div class="form_btn"><%= f.button :submit %></div>
+  <% end %>
+</div>

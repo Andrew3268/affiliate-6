@@ -1,0 +1,71 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<!-- <p id="notice"><%= notice %></p> -->
+<%= render 'shared/play_video' %><!-- for play youtube video-->
+
+<div class="layout"><!--layout-->
+  <div class="wrap">  
+    <%= render 'shared/header_short' %>
+    <div class="dealpage_title"><p>Sales & Promotions</p></div>
+
+    <div class="sp_wrap">
+      <div class="sp_left">
+        <div class="sp_menu">
+          <ul>
+            <li><a href="/storepromotions/">All Categories</a><br/></li>
+            <% Spcategory.all.each do |category| %>
+              <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
+            <% end %>
+            
+              <li><%= link_to 'New Storepromotion', new_storepromotion_path %></li>
+              <li><%= link_to "New Category", new_spcategory_path %></li>
+            
+          </ul>
+          <!-- Only in navbar
+          <% Spcategory.where(display_in_navbar: true).each do |category| %>
+            <%= link_to category.name, storepromotions_path(spcategory: category.name) %>
+          <% end %> -->
+        </div>
+      </div>
+
+      <div class="sp_right">
+        
+          <% @storepromotions.each do |storepromotion| %>
+            <div class="sp_card clearfix">
+              <div class="sp_image">
+                <img src="<%= storepromotion.sp_image %>" alt="<%= storepromotion.sp_title %>" title="">
+                <%= link_to 'Show', storepromotion %>
+                <%= link_to 'Edit', edit_storepromotion_path(storepromotion) %>
+                <%= link_to 'Destroy', storepromotion, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+              <div class="inner">
+                <p><%= storepromotion.sp_store_name %> | Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
+                <p><%= storepromotion.sp_title %></p>
+                <p><%= storepromotion.sp_description %></p>
+                <% if storepromotion.sp_promocode.present? %>
+                  <p>CODE: <%= storepromotion.sp_promocode %></p>
+                  <p>End Date: <%= storepromotion.sp_end_date %></p>
+                <% end %>
+                <!-- <p><%= storepromotion.spcategory.name %></p> -->
+                <div class="btn"><a href="<%= storepromotion.sp_link %>">Check This Deals</a></div>
+              </div>
+            </div>
+          <% end %>
+      </div>
+
+    </div><!--./sp_wrap-->
+  </div><!--./warp-->
+</div><!--./layout-->
+
+
+
+
+
+
+
+
+
+
+    
+        
+        

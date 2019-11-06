@@ -1,0 +1,19 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<p>
+  <strong>Sp title:</strong>
+  <%= @storepromotion.sp_title %>
+</p>
+
+<p>
+  <strong>Sp description:</strong>
+  <%= @storepromotion.sp_description %>
+</p>
+
+<p>
+  <strong>Spcategory:</strong>
+  <%= @storepromotion.spcategory.name %>
+</p>
+
+<%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
+<%= link_to 'Back', storepromotions_path %>

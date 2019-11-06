@@ -1,0 +1,19 @@
+<!-- <p id="notice"><%= notice %></p> -->
+
+<p>
+  <strong>Spc name:</strong>
+  <%= @spcategory.name %>
+</p>
+
+<p>
+  <strong>Spc description:</strong>
+  <%= @spcategory.spc_description %>
+</p>
+
+<p>
+  <strong>Display in navbar:</strong>
+  <%= @spcategory.display_in_navbar %>
+</p>
+
+<%= link_to 'Edit', edit_spcategory_path(@spcategory) %> |
+<%= link_to 'Back', spcategories_path %>

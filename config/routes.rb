@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   
+  resources :spcategories
+  resources :storepromotions
+  root 'storepromotions#index'
   resources :promocodes
   get '/promocodes/phashtag/:name', to:'promocodes#hashtags'
   # root 'promocodes#index'
@@ -33,7 +36,7 @@ Rails.application.routes.draw do
   # root 'gadgets#index01'
   # root 'home#index'
   # root 'home#index_01'
-  root 'home#index_02'
+  # root 'home#index_02'
   
   resources :recommends
   # root 'recommends#index'
