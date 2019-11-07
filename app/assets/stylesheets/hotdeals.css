@@ -153,7 +153,7 @@
 .code_main div button:active{background:#003580;transform:scale(0.9);}
 .icon-copy{font-size:11px;position:relative;top:-1px;margin-right:2px;}
 .confirmation{background:#feba01;color:#383838;padding:10px 15px;border-radius:3px;display:none;z-index:999;position:fixed;bottom:20px;left:20px;text-align:center;}
-.confirmation_m{font-size:0px;}
+
 
 @media screen and (max-width:640px){
 
@@ -162,7 +162,6 @@
   .code_main button.copy{display:none;}
   .code_main button.copy_m{display:block;}
   .confirmation_m{font-size:13px;background:#feba01;color:#383838;padding:10px 15px;border-radius:3px;display:none;z-index:999;text-align:center;}
-  .confirmation{font-size:0;background:#fff;}
 }
 
 

@@ -326,22 +326,40 @@
          $("body").append($temp);
          $temp.val(copy).select();
          document.execCommand("copy");
-         $temp.remove();
-        
+         $temp.remove();    
         
         $('.confirmation').hide().html('COPIED <b>' + btntxt).fadeIn(100).delay(800).fadeOut(300);
-        $('.confirmation_m').hide().html('COPIED <b>' + btntxt).fadeIn(100).delay(400).fadeOut(200);
 
-        $( '.main' ).trigger( "click" );
+
+        // $( '.main' ).trigger( "click" );
       });
       
-      $('.main div').click(function(){
-          var range = document.createRange();
-          var selection = window.getSelection();
-          range.selectNodeContents(this);
-          selection.removeAllRanges();
-          selection.addRange(range);
+      // $('.main div').click(function(){
+      //     var range = document.createRange();
+      //     var selection = window.getSelection();
+      //     range.selectNodeContents(this);
+      //     selection.removeAllRanges();
+      //     selection.addRange(range);
+      // });
+    });
+
+
+    $(document).ready(function() {
+      $('button.copy_m').click(function(){
+        var btntxt = $(this).text();
+        
+         var copy = $(this).parent().find('.copy_m').text();
+         
+         var $temp = $("<input>");
+         $("body").append($temp);
+         $temp.val(copy).select();
+         document.execCommand("copy");
+         $temp.remove();    
+        
+        $('.confirmation_m').hide().html('COPIED <b>' + btntxt).fadeIn(100).delay(400).fadeOut(200);
+
       });
+    
     });
 
   </script>
