@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'simple_form', '~> 4.0'
-gem 'devise', '~> 4.3'
+gem 'devise', '~> 4.7'
 gem 'impressionist', '~> 1.6', '>= 1.6.1'
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
 gem 'figaro'
