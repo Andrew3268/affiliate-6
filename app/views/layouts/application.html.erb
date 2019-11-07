@@ -348,11 +348,11 @@
       $('button.copy_m').click(function(){
         var btntxt = $(this).text();
         
-         var copy = $(this).parent().find('.copy_m').text();
+         var copy_m = $(this).parent().find('.copy_m').text();
          
          var $temp = $("<input>");
          $("body").append($temp);
-         $temp.val(copy).select();
+         $temp.val(copy_m).select();
          document.execCommand("copy_m");
          $temp.remove();    
         
