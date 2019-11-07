@@ -343,34 +343,6 @@
       // });
     });
 
-
-    $(document).ready(function() {
-      $('button.copy_m').click(function(){
-        var btntxt = $(this).text();
-        
-         var copy = $(this).parent().find('.copy_m').text();
-         
-         var $temp = $("<input>");
-         $("body").append($temp);
-         $temp.val(copy).select();
-         document.execCommand("copy");
-         $temp.remove();    
-        
-        $('.confirmation_m').hide().html('COPIED <b>' + btntxt).fadeIn(100).delay(800).fadeOut(300);
-
-
-        // $( '.main' ).trigger( "click" );
-      });
-      
-      // $('.main div').click(function(){
-      //     var range = document.createRange();
-      //     var selection = window.getSelection();
-      //     range.selectNodeContents(this);
-      //     selection.removeAllRanges();
-      //     selection.addRange(range);
-      // });
-    });
-
   </script>
 
   <!-- Content Insights of Amazon-->
