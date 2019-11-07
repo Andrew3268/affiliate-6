@@ -58,8 +58,7 @@
             <% end %>
             <% saving_total = 0 %>
             <% saving_total =  @promocode.p_spare_26 - (@promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26) %>
-            <em>* You can save <%= number_to_currency(saving_total) %> or more.</em>
-            <em>* Code End Date: <%= @promocode.p_end_date %></em>
+            <em>* Save <%= number_to_currency(saving_total) %> or more.</em>
             <em>* Pricing may change and deals can expire fast.</em>
             <em>+ FREE Shipping ( Free Shipping: <a class="prime" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
 
@@ -68,9 +67,10 @@
               <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
             <% end %>
             
-            <% if @promocode.p_extra_deal.present? %><em>+ <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
-            <% if @promocode.p_coupon_deal.present? %><em>+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
-            </div>
+            <% if @promocode.p_extra_deal.present? %><em class="extra_dh">+ <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
+            <% if @promocode.p_coupon_deal.present? %><em class="extra_dh">+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
+            <em>* Code End Date: <%= @promocode.p_end_date %></em>
+           </div>
 
             <p class="code_line">Click and copy this code then apply it at your checkout</p>
             <div class="code_main">

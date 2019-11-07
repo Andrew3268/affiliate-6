@@ -12,30 +12,30 @@
   <div class="all_wrap">
 
     <div class="all_promocodes">
-      <h2>오늘의 아마존 할인 코드</h2>
+      <h2>Today's Promo Codes On AMAZON</h2>
         <% @promocodes.each do |promocode| %>
           <p><%= promocode.p_title %></p>
           <p>Avg <%= promocode.p_spare_03 %> rates | <%= number_with_delimiter(promocode.p_spare_04) %>+ reviews </p>
           <% running_total = 0 %>
           <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
           <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code [ <%= promocode.p_promocode %> ])</span></p>
-          <a target="_blank" href="<%= promocode.p_link %>">[ 할인코드 사용하기 ]</a><br /><br />        
+          <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a><br /><br />        
         <% end %>
-      <em>더 많은 아마존 할인코드는 <a target="_blank" href="/promocodes">www.ohigottabuythis.net/promocodes</a></em>
+      <em>See more promo codes <a target="_blank" href="/promocodes">www.ohigottabuythis.net/promocodes</a></em>
     </div>
 
     <hr>
 
     <div class="all_hotdeals">
-      <h2>오늘의 아마존 핫딜</h2>
+      <h2>Today's Bargain on AMAZON</h2>
         <% @hotdeals.each do |hotdeal| %>
           <p><%= hotdeal.h_title %></p>
           <p>Avg <%= hotdeal.h_spare_08 %> rates | <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews </p>
           <p><%= number_to_currency(hotdeal.h_spare_41) %> (Was: <%= number_to_currency(hotdeal.h_spare_42) %> | <%= 
           number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF)</p>
-          <a target="_blank" href="<%= hotdeal.h_link %>">[ 핫딜 바로가기 ]</a><br /><br />
+          <a target="_blank" href="<%= hotdeal.h_link %>">[ Check it Out ]</a><br /><br />
         <% end %>
-      <span>더 많은 아마존 핫딜은 <a target="_blank" href="/hotdeals">www.ohigottabuythis.net/hotdeals</a></span>
+      <span>See more the best deals <a target="_blank" href="/hotdeals">www.ohigottabuythis.net/hotdeals</a></span>
     </div>
 
   </div>
