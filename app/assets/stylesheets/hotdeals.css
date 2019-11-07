@@ -152,16 +152,16 @@
 .code_main div button{position:absolute;height:100%;width:95px;right:0;top:0;background:#000;border:none;outline:none;color:#fff;cursor:pointer;}
 .code_main div button:active{background:#003580;transform:scale(0.9);}
 .icon-copy{font-size:11px;position:relative;top:-1px;margin-right:2px;}
-.confirmation{background:#feba01;color:#383838;padding:10px 15px;border-radius:3px;display:none;z-index:999;position:fixed;bottom:20px;left:20px;text-align:center;}
+.confirmation{background:#feba01;color:#383838;padding:10px 15px;border-radius:3px;display:none;z-index:999;text-align:center;position:fixed;bottom:20px;left:20px;/*position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);*/}
 
 
 @media screen and (max-width:640px){
 
   .code_main div{width:100%;}
-  .code_main button{width:100%;}
   .code_main button.copy{display:none;}
-  .code_main button.copy_m{display:block;}
+  .code_main button.copy_m{display:block;width:100%;}
   .confirmation_m{font-size:13px;background:#feba01;color:#383838;padding:10px 15px;border-radius:3px;display:none;z-index:999;text-align:center;}
+  .confirmation{display:none;}
 }
 
 
