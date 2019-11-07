@@ -353,7 +353,7 @@
          var $temp = $("<input>");
          $("body").append($temp);
          $temp.val(copy).select();
-         document.execCommand("copy");
+         document.execCommand("copy_m");
          $temp.remove();    
         
         $('.confirmation_m').hide().html('COPIED <b>' + btntxt).fadeIn(100).delay(400).fadeOut(200);
