@@ -73,17 +73,26 @@
            </div>
 
             <p class="code_line">Click and copy this code then apply it at your checkout</p>
-            <div class="code_main">
+            <!-- <div class="code_main">
               <button class="copy"><%= @promocode.p_promocode %></button>
-              <!-- <div>
-                <span class="copy"><code><%= @promocode.p_promocode %></code></span>
-                <button class="copy"><span class="icon-copy"></span>COPY</button>
-              </div> -->
+          
             </div>
             <div class="confirmation"><span class="icon-checkmark"></span></div>
             
-            <div class="code_main"><div class="copy_m"><%= @promocode.p_promocode %></div></div>
+            <div class="code_main"><div class="copy_m"><%= @promocode.p_promocode %></div></div> -->
             
+
+            <div class="text_copied intheshow">
+            <div class="container">
+              <div class="wrap">
+                <div class="box">
+                  <p data-copy-text=""><%= @promocode.p_promocode %></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
            <div class="btn">
             <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
            </div> 
