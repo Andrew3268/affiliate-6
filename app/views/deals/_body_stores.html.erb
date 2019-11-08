@@ -10,8 +10,10 @@
         <div class="st_box clearfix">
           <div class="st_image"><img src="<%= promo.sp_image %>" alt="" title=""></div>
           <div class="inner">
-            <p><em class="st_title"><%= promo.sp_store_name %></em> | <%= promo.sp_title %></p>
-            <span><%= promo.sp_description %></span>
+            <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF</p>
+            <span><%= promo.sp_title %></span>
+            <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div>
+            <!-- <span><%= promo.sp_description %></span> -->
           </div>
         </div>
       <% end %>
@@ -74,7 +76,7 @@
         </div>
       <% end %>
       
-      <div class="st_box clearfix">
+      <!-- <div class="st_box clearfix">
         <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
         <div class="inner">
           <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
@@ -112,7 +114,7 @@
           <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
           <span>Extra 40%~60% off Sale Shoes</span>
         </div>
-      </div>
+      </div> -->
 
        <div class="more_btn"><p>SEE MORE</p></div>
 
@@ -494,13 +496,13 @@
 <script type="text/javascript">
   $(document).ready(function(){
   $(".page1").hide();
-  $(".tab-menu-wp ul li:first").addClass("active");
+  $(".tab-menu-wp ul li:first").addClass("store_active");
   $(".page1:first").fadeIn();
   $(".tab-menu-wp ul li").click(function(){
       var index = $(this).index();
       $(".page1").hide();
-        $(".tab-menu-wp ul li").removeClass("active");
-      $(".tab-menu-wp ul li:eq("+index+")").addClass("active");
+        $(".tab-menu-wp ul li").removeClass("store_active");
+      $(".tab-menu-wp ul li:eq("+index+")").addClass("store_active");
         $(".page1:eq("+index+")").fadeIn();
     });
   });

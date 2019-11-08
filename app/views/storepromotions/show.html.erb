@@ -1,19 +1,88 @@
-<!-- <p id="notice"><%= notice %></p> -->
+<div class="layout">
+  <%= render 'shared/header_short' %>
+  
+  <div class="show_wrap clearfix">
+    <div class="wrap">
+    <%= render 'promocodes/header' %>  
+    
+      <div class="show_box clearfix">
+        
+        <!-- <p>Location Map</p> -->
+        <div class="show_img hotdeal_img">
 
-<p>
-  <strong>Sp title:</strong>
-  <%= @storepromotion.sp_title %>
-</p>
+          <img src="<%= @storepromotion.sp_image %>"> 
+          <% if can? :update, @storepromotion %>
+            <div class="admin">
+              <%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
+              <%= link_to 'Back', storepromotions_path %>
+            </div>
+          <% end %>
+        </div>
 
-<p>
-  <strong>Sp description:</strong>
-  <%= @storepromotion.sp_description %>
-</p>
+        <div class="show_inner">
+         <div class="hotdeal_inner">
+           <p><%= @storepromotion.sp_store_name %> | Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
+           <h2><%= @storepromotion.sp_title %></h2>
+           <p><%= @storepromotion.sp_description %></p>
 
-<p>
-  <strong>Spcategory:</strong>
-  <%= @storepromotion.spcategory.name %>
-</p>
+           
 
-<%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
-<%= link_to 'Back', storepromotions_path %>
+             <% if @storepromotion.sp_promocode.present? %>
+                <div class="extra_info">
+                  <em>* Pricing may change and deals can expire fast.</em>
+                  <em class="code_em">* End Date: <%= @storepromotion.sp_end_date %></em>
+                </div> 
+                <div class="text_copied intheshow">
+                  <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= @storepromotion.sp_promocode %></p></div></div></div>
+                </div>
+              <% else %>
+                <div class="extra_info">  
+                 <em>* Pricing may change and deals can expire fast.</em>
+                 <em>* End Date: <%= @storepromotion.sp_end_date %></em>
+                </div>
+              <% end %>
+            </div>
+
+            <div class="btn">
+            <a class="m_btn p_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
+           
+
+           <!-- <%= @storepromotion.spcategory.name %> -->
+           
+
+      
+         </div>
+        </div>
+
+        <% if can? :update, @storepromotion %>
+          <div class="pinterest">
+           <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+          </div>
+        <% end %>  
+
+      </div><!--./show_box-->
+      
+     
+
+    </div><!--./wrap-->
+  </div><!--./show_wrap-->
+</div><!--./layout-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

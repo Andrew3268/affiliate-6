@@ -7,6 +7,7 @@
     <div class="dealpage_title"><p>Sales & Promotions</p></div>
 
     <div class="sp_wrap">
+
       <div class="sp_left">
         <div class="sp_menu">
           <ul>
@@ -24,6 +25,7 @@
             <%= link_to category.name, storepromotions_path(spcategory: category.name) %>
           <% end %> -->
         </div>
+        
       </div>
 
       <div class="sp_right">
@@ -31,7 +33,24 @@
           <% @storepromotions.each do |storepromotion| %>
             <div class="sp_card clearfix">
               <div class="sp_image">
-                <img src="<%= storepromotion.sp_image %>" alt="<%= storepromotion.sp_title %>" title="">
+                <a target="_blank" href="<%= storepromotion.sp_link %>"><img src="<%= storepromotion.sp_image %>" alt="<%= storepromotion.sp_title %>" title=""></a>
+              </div>
+              <div class="inner">
+                <p><%= storepromotion.sp_store_name %> | Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
+
+                <p class="sp_title"><a target="_blank" href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_title %></a></p>
+                <!-- <p><%= storepromotion.sp_description %></p> -->
+                <!-- <em>End Date: <%= storepromotion.sp_end_date %></em> -->
+                <% if storepromotion.sp_promocode.present? %>
+                  <div class="text_copied store_code">
+                    <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
+                  </div>
+                  <em class="code_em">End Date: <%= storepromotion.sp_end_date %></em>
+                <% else %>
+                  <em>End Date: <%= storepromotion.sp_end_date %></em>
+                <% end %>
+                <!-- <p><%= storepromotion.spcategory.name %></p> -->
+                <!-- <div class="btn"><a href="<%= storepromotion.sp_link %>">Check This Deals</a></div> -->
                 <% if can? :update, storepromotion %>
                   <div class="admin">
                     <%= link_to 'Show', storepromotion %> |
@@ -40,23 +59,11 @@
                   </div>
                 <% end %>
               </div>
-              <div class="inner">
-                <p><%= storepromotion.sp_store_name %> | Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
-
-                <p class="sp_title"><%= storepromotion.sp_title %></p>
-                <!-- <p><%= storepromotion.sp_description %></p> -->
-                <!-- <em>End Date: <%= storepromotion.sp_end_date %></em> -->
-                <% if storepromotion.sp_promocode.present? %>
-                  <div class="sp_code"><p>CODE: <%= storepromotion.sp_promocode %></p></div>
-                <% end %>
-                <em>End Date: <%= storepromotion.sp_end_date %></em>
-                <!-- <p><%= storepromotion.spcategory.name %></p> -->
-                <!-- <div class="btn"><a href="<%= storepromotion.sp_link %>">Check This Deals</a></div> -->
-              </div>
 
               <div class="sp_btn">
                 <a href="<%= storepromotion.sp_link %>">Check This Deals</a>
               </div>
+
             </div>
           <% end %>
       </div>
