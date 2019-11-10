@@ -15,7 +15,7 @@
               <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
             <% end %>
             
-              <li><%= link_to 'New Storepromotion', new_storepromotion_path %></li>
+              <li><%= link_to 'New Store Promotion', new_storepromotion_path %></li>
               <li><%= link_to "New Category", new_spcategory_path %></li>
           </ul>
           <!-- Only in navbar
@@ -49,8 +49,7 @@
                     <em>End Date: <%= storepromotion.sp_end_date %></em>
                   <% end %>
                 </div>
-                <!-- <p><%= storepromotion.spcategory.name %></p> -->
-                <!-- <div class="btn"><a href="<%= storepromotion.sp_link %>">Check This Deals</a></div> -->
+                
                 <% if can? :update, storepromotion %>
                   <div class="admin">
                     <%= link_to 'Show', storepromotion %> |

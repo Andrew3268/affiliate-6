@@ -36,6 +36,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .btn{}
 .show_wrap .show_box .show_inner .hotdeal_inner .btn a{}
 .show_wrap .show_box .show_inner .hotdeal_inner .btn a em{font-weight:bold;font-size:15px;}
+.show_wrap .show_box .show_inner .hotdeal_inner p.sp_des{margin:0;}
 .show_wrap .show_box .hotdeal_img{position:relative;}
 
 .show_wrap .show_box .show_img .mark{width:50px;background:#000;font-size:13px;padding:7px;border-radius:10px;line-height:1.1;position:absolute;top:0;left:0;}

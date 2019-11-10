@@ -8,59 +8,23 @@
       <h2>LEFT DEALS & SALES</h2>
       <% @promotion.each do |promo| %>
         <div class="st_box clearfix">
-          <div class="st_image"><img src="<%= promo.sp_image %>" alt="" title=""></div>
+          <div class="st_image"><a target="_blank" href="<%= promo.sp_link %>"><img src="<%= promo.sp_image %>" alt="<%= promo.sp_title %>" title="<%= promo.sp_store_name %>"></a></div>
           <div class="inner">
-            <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF</p>
-            <span><%= promo.sp_title %></span>
-            <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div>
+            <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF <% if can? :update, promo %> | <%= link_to 'Edit', edit_storepromotion_path(promo) %><% end %></p>
+            <span><a target="_blank" href="<%= promo.sp_link %>"><%= promo.sp_title %></a></span>
+            <% if promo.sp_promocode.present? %>
+              <!-- <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div> -->
+              <div class="text_copied store_sti">
+                  <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
+                </div>
+            <% end %>
             <!-- <span><%= promo.sp_description %></span> -->
           </div>
         </div>
       <% end %>
+      <div class="more_btn"><a href="/storepromotions">SEE MORE</a></div>
 
-<!--       <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p><em class="st_title">Ann Taylor</em> |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-      <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-      <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-      <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-      <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div> -->
-
-      <div class="more_btn"><p>SEE MORE</p></div>
-
-    </div>
+    </div><!--./st_left-->
 
     <div class="st_right clarfix">
       
@@ -68,55 +32,23 @@
 
       <% @promotion_with_code.each do |promo| %>
         <div class="st_box clearfix">
-          <div class="st_image"><img src="<%= promo.sp_image %>" alt="" title=""></div>
+          <div class="st_image"><a target="_blank" href="<%= promo.sp_link %>"><img src="<%= promo.sp_image %>" alt="<%= promo.sp_title %>" title="<%= promo.sp_store_name %>"></a>
+          </div>
           <div class="inner">
-            <p><em class="st_title"><%= promo.sp_store_name %></em> | <%= promo.sp_title %></p>
-            <span><%= promo.sp_description %></span>
+            <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF <% if can? :update, promo %> | <%= link_to 'Edit', edit_storepromotion_path(promo) %><% end %></p>
+            
+            <span><a target="_blank" href="<%= promo.sp_link %>"><%= promo.sp_title %></a></span>
+            <% if promo.sp_promocode.present? %>
+              <!-- <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div> -->
+              <div class="text_copied store_sti">
+                  <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
+                </div>
+            <% end %>
+            <!-- <span><%= promo.sp_description %></span> -->
           </div>
         </div>
       <% end %>
-      
-      <!-- <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-      <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-      <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-      <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div>
-
-       <div class="st_box clearfix">
-        <div class="st_image"><img src="https://pbs.twimg.com/profile_images/715852271389655041/s-VdeDI5_400x400.jpg" alt="" title=""></div>
-        <div class="inner">
-          <p>Ann Taylor |세일 신발 추가 40%~60% off</p>
-          <span>Extra 40%~60% off Sale Shoes</span>
-        </div>
-      </div> -->
-
-       <div class="more_btn"><p>SEE MORE</p></div>
+      <div class="more_btn"><a href="/storepromotions">SEE MORE</a></div>
 
     </div><!--./st_right-->
    </div><!--./st_top-->

@@ -23,9 +23,9 @@
          <div class="hotdeal_inner">
            <p><%= @storepromotion.sp_store_name %> | Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
            <h2><%= @storepromotion.sp_title %></h2>
-           <p><%= @storepromotion.sp_description %></p>
+           <p class="sp_des"><%= @storepromotion.sp_description.html_safe %></p>
 
-           
+
 
              <% if @storepromotion.sp_promocode.present? %>
                 <div class="extra_info">
@@ -45,11 +45,6 @@
 
             <div class="btn">
             <a class="m_btn p_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
-           
-
-           <!-- <%= @storepromotion.spcategory.name %> -->
-           
-
       
          </div>
         </div>

@@ -8,9 +8,9 @@ class StorepromotionsController < ApplicationController
   def index
     if params.has_key?(:spcategory)
       @spcategory = Spcategory.find_by_name(params[:spcategory])
-      @storepromotions = Storepromotion.where(spcategory: @spcategory)
+      @storepromotions = Storepromotion.where(spcategory: @spcategory).order("created_at DESC")
     else
-      @storepromotions = Storepromotion.all
+      @storepromotions = Storepromotion.all.order("created_at DESC")
     end
   end
 

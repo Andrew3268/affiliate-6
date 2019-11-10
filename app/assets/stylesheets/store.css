@@ -1,7 +1,7 @@
 /* For Store Station Page["/deals/stores"] */
 .st_warp{}
 .st_warp .st_top_warp .st_top{float:left;width:68%;margin:1%;}
-.st_warp .st_top_warp .st_top .more_btn p{float:right;color:#3498db;}
+.st_warp .st_top_warp .st_top .more_btn a{float:right;color:#3498db;}
 .st_warp .st_top_warp .st_top_side{float:left;width:28%;margin:1%;}
 .st_warp .st_left, .st_warp .st_right{float:left;width:50%;padding:10px;box-shadow:0 0 5px rgba(0, 0, 0, 0.15);}
 /*.st_warp .st_left{border-right:1px solid #ccc;}
@@ -12,8 +12,16 @@
 .st_warp .st_box .inner{float:left;width:77%;margin-left:3%;padding:7px 7px 0 0;height:90px;}
 .st_warp .st_box .inner p{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;width:310px;overflow:hidden;word-break:break-word;font-size:13px;}
 .st_warp .st_box .inner p .st_title{background:yellow;}
+.st_warp .st_box .inner p a{background:#000;padding:0 5px;color:#fff;}
 .st_warp .st_box .inner em{}
 .st_warp .st_box .inner span{line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;font-size:13px;}
+.st_warp .st_box .inner span a{color:#616161;}
+.st_warp .st_box .inner span.no_code{font-size:12px;color:#616161;}
+.st_warp .st_box .inner .store_sti{}
+.st_warp .st_box .inner .store_sti .container .wrap{margin:0;}
+.st_warp .st_box .inner .store_sti .container .wrap .box{padding:3px;width:90%;margin-left:4%;border:1px dotted;}
+.st_warp .st_box .inner .store_sti .container .wrap .box p{font-size:12px;}
+.st_warp .st_box .inner .store_sti .container .wrap .box [data-copy-text] + i.material-icons{padding:3px;font-size:12px;}
 .st_warp .st_box .inner .store_code{margin:5px 0 3px 0;color:#616161;}
 .st_warp .st_middle{margin-top:30px;}
 .st_warp .st_middle .deals_card{width:18%;}
