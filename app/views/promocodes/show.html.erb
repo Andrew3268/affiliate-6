@@ -69,7 +69,7 @@
             
             <% if @promocode.p_extra_deal.present? %><em class="extra_dh">+ <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
             <% if @promocode.p_coupon_deal.present? %><em class="extra_dh">+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
-            
+
             <% if @promocode.p_spare_50.present? %>
               <% if @promocode.p_spare_50 < DateTime.now %>
               <% @promocode.p_spare_50 %>
@@ -81,14 +81,14 @@
             <% else %>
               <em>* Code End Date: <%= @promocode.p_end_date %></em>
             <% end %>
+           </div><!--./extra_info-->
 
             <p class="code_line">Click and copy this code then apply it at your checkout</p>
-            
             <div class="text_copied intheshow">
               <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= @promocode.p_promocode %></p></div></div></div>
             </div>
 
-           <div class="btn">
+           <div class="only_show">
             <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
            </div> 
 
