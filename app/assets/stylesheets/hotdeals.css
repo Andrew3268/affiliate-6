@@ -33,7 +33,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .trix ul{margin-left:25px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .trix ul li{list-style:disc;font-size:14px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .trix span{font-size:20px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .code_line{margin:0 0 7px 0;font-size:11.5px;color:#616161;}
+.show_wrap .show_box .show_inner .hotdeal_inner p.code_line{margin:0 0 7px 0;font-size:11.5px;color:#616161;}
 .show_wrap .show_box .show_inner .hotdeal_inner .btn{}
 .show_wrap .show_box .show_inner .hotdeal_inner .btn a{}
 .show_wrap .show_box .show_inner .hotdeal_inner .btn a em{font-weight:bold;font-size:15px;}
