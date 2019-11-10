@@ -70,7 +70,8 @@
 .sp_wrap .sp_right .inner .sp_title a{color:#000;}
 .sp_wrap .sp_right .inner .sp_code{margin-bottom:5px;}
 .sp_wrap .sp_right .inner em{font-size:12px;color:#616161;}
-.sp_wrap .sp_right .inner em.code_em{display:block;margin:-5px 0 0 1px;}
+.sp_wrap .sp_right .inner em.code_em{display:block;/*margin:-5px 0 0 1px;*/}
+.sp_wrap .sp_right .inner em.expired{color:#ff0000;}
 .sp_wrap .sp_right .inner .store_code{width:95%;}
 /*.sp_wrap .sp_right .inner .btn{margin-top:10px;}
 .sp_wrap .sp_right .inner .btn a{text-decoration:none;background:#000;color:#fff;padding:5px 20px;border-radius:10px;}*/

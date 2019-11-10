@@ -44,9 +44,25 @@
                     <div class="text_copied store_code">
                       <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
                     </div>
-                    <em class="code_em">End Date: <%= storepromotion.sp_end_date %></em>
+                    <em class="code_em">
+                      <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
+                      <% storepromotion.sp_spare_60 %>
+                        <em class="expired code_em">* This Promo Code has EXPIRED.</em>
+                      <% else %>
+                      <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
+                      <em class="code_em">* Pricing may change and deals can expire fast.</em>
+                      <% end %>
+                    </em>
                   <% else %>
-                    <em>End Date: <%= storepromotion.sp_end_date %></em>
+                    <em class="code_em">
+                      <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
+                      <% storepromotion.sp_spare_60 %>
+                        <em class="expired code_em">* This offer has EXPIRED.</em>
+                      <% else %>
+                       <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
+                       <em class="code_em">* Pricing may change and deals can expire fast.</em>
+                      <% end %>
+                    </em>
                   <% end %>
                 </div>
                 

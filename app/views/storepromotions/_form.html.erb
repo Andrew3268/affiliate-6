@@ -14,8 +14,9 @@
         <%= f.input :sp_percentage_01 %>
         <%= f.input :sp_percentage_02 %>
         <%= f.input :sp_promocode, input_html: { class: "promo_code" } %>
-        <%= f.input :sp_end_date, input_html: { class: "promo_date" } %>
+        <%= f.input :sp_end_date, input_html: { class: "promo_date" } %>        
       </div>
+      <%= f.input :sp_spare_60, label: 'Expired Date' %>
     </div>
 
     <div class="form_btn"><%= f.button :submit %></div>
