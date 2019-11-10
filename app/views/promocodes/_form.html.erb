@@ -28,8 +28,8 @@
       <%= f.input :p_extra_deal, label: 'Extra Deals?' %>
       <%= f.input :p_promocode, input_html: { class: "promo_code" }, label: 'Promo Code' %>
       <%= f.input :p_end_date, input_html: { class: "promo_date" }, label: 'End Date' %>
-
     </div>
+    <%= f.input :p_spare_50, label: 'Expired Date' %><br />
     <%= f.input :p_description, label: 'Description Of Product' %>
     <%= f.input :p_spare_36, as: :trix_editor, label: 'Description Of Product with TRIX' %>    
 

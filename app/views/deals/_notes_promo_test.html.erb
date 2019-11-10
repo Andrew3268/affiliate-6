@@ -43,12 +43,17 @@
   <p class="most_h_tit">Most Popular Codes</p>
   <% @most_promocodes.each_with_index do |promo_h, i| %>
     <div class="most_hotdeal clearfix">
-      <div class="numbering"><%= i+1 %></div>
       <div class="image">
         <% if promo_h.p_image.present? %>
-        <div class="image_box"><%= link_to image_tag(promo_h.p_image), promo_h %></div>
+          <div class="image_box">
+            <%= link_to image_tag(promo_h.p_image), promo_h %>
+            <div class="numbering"><%= i+1 %></div>
+          </div>
         <% else %>
-          <div class="image_box"><%= link_to (image_tag promo_h.pimage.url(:small), alt: promo_h.p_title, title: promocode.p_image_title), promo_h %></div>
+          <div class="image_box">
+            <%= link_to (image_tag promo_h.pimage.url(:small), alt: promo_h.p_title, title: promocode.p_image_title), promo_h %>
+            <div class="numbering"><%= i+1 %></div>
+          </div>
         <% end %>
       </div>
       <div class="inner">
@@ -56,6 +61,10 @@
         <% running_total = 0 %>
         <% running_total =  promo_h.p_spare_26 - (promo_h.p_spare_27 / 100) * promo_h.p_spare_26 %>
         <em><span class="span_01"><%= number_to_currency(promo_h.p_spare_26) %></span><%= number_to_currency(running_total) %></em>
+        <% if promo_h.p_spare_50 && (promo_h.p_spare_50 < DateTime.now) %>
+        <% promo_h.p_spare_50 %>
+         <p class="expired">Promo code has EXPIRED.</p>
+        <% end %>
       </div>
       
     </div>

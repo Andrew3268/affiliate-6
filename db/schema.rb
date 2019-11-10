@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191105183247) do
+ActiveRecord::Schema.define(version: 20191110071722) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -287,6 +287,10 @@ ActiveRecord::Schema.define(version: 20191105183247) do
     t.datetime "pimage_updated_at"
     t.string   "slug"
     t.integer  "impressions_count"
+    t.datetime "p_spare_50"
+    t.datetime "p_spare_51"
+    t.date     "p_spare_52"
+    t.date     "p_spare_53"
   end
 
   add_index "promocodes", ["slug"], name: "index_promocodes_on_slug", unique: true

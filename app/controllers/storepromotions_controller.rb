@@ -81,9 +81,6 @@ class StorepromotionsController < ApplicationController
     end
 end
 
-# t.datetime :sp_spare_60
-# t.datetime :sp_spare_61
-# t.date :sp_spare_62
-# t.date :sp_spare_63
+
       
 

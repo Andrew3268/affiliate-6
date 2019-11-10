@@ -1,14 +1,28 @@
 <!-- < @promocodes.each do |promocode| > -->
-
 <figure class="deals_card">
-  <div class="image_box">
+  <% if promocode.p_spare_50 && (promocode.p_spare_50 < DateTime.now) %>
+  <% promocode.p_spare_50 %>
+   <div class="image_box">
+    <div class="expried">
+      <% if promocode.p_image.present? %>
+        <%= link_to image_tag(promocode.p_image, alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+      <% else %>
+        <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+      <% end %>
+    </div>
+    <div class="mark mark_expried"><p>EXPIRED</p></div>
+   </div>
+  <% else %>
+   <div class="image_box">
     <% if promocode.p_image.present? %>
       <%= link_to image_tag(promocode.p_image, alt: promocode.p_title, title: promocode.p_image_title), promocode %>
     <% else %>
       <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
     <% end %>
     <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
-  </div>
+   </div>
+  <% end %>
+   
 
   <div class="buy-now"><span><%= link_to "GET CODE", promocode %></span></div>
   <figcaption>
