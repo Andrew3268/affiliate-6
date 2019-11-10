@@ -167,7 +167,7 @@ header .gnb_m,header .gnb_open2{display:none;}
   .m_header{display:block;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
-  .fix_header{height:50px;}
+  .fix_header{height:50px;margin:0;left:0;}
   .fix_header img{width:30px;height:30px;margin-top:11px;}
   .fix_header .fix_visual{float:left;height:100%;}
   .fix_header .fix_visual img{width:200px;height:25px;margin-top:13px;}

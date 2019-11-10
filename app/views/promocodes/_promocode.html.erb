@@ -3,7 +3,7 @@
 <figure class="deals_card">
   <div class="image_box">
     <% if promocode.p_image.present? %>
-      <%= link_to image_tag(promocode.p_image), promocode %>
+      <%= link_to image_tag(promocode.p_image, alt: promocode.p_title, title: promocode.p_image_title), promocode %>
     <% else %>
       <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
     <% end %>

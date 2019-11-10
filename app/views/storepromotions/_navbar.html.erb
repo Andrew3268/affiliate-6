@@ -1,0 +1,17 @@
+<div class="featured">
+  <button class="gnb_open"><img src="<%=asset_path 'open_black.png' %>" alt="모바일 메뉴 열기" /></button>
+  <!-- <div class="sm_pc"></div> -->
+  
+  <div class="sm_mobile sp_m">
+    <ul class="sp_ul">
+      <li><a href="/storepromotions/">All Stores</a><br/></li>
+      <% Spcategory.all.each do |category| %>
+        <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
+      <% end %>
+        <li><%= link_to 'New Storepromotion', new_storepromotion_path %></li>
+        <li><%= link_to "New Category", new_spcategory_path %></li>
+    </ul>
+    <button class="gnb_close"><img src="<%=asset_path 'close_white.png' %>" alt="모바일 메뉴 닫기" /></button>
+  </div>
+</div><!--./featured-->
+<div class="gnb_kbg"></div>

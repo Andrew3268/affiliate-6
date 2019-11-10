@@ -2,7 +2,7 @@
 <figure class="deals_card">
   <div class="image_box">
     <% if hotdeal.h_image.present? %>
-      <%= link_to image_tag(hotdeal.h_image), hotdeal %>
+      <%= link_to image_tag(hotdeal.h_image, alt: hotdeal.h_title, title: hotdeal.h_spare_04), hotdeal %>
     <% else %>
      <%= link_to (image_tag hotdeal.himage.url(:small), alt: hotdeal.h_title, title: hotdeal.h_spare_04), hotdeal %>
     <% end %>

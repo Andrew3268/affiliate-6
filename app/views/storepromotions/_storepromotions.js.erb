@@ -1,0 +1,25 @@
+ //Begin show menu on featured
+    var document_h = $(document).height();
+  //console.log(document_h);
+  $(".featured .sm_mobile").height(document_h);
+  
+  $(".featured .gnb_open").on("click", function(){
+    $(".featured .gnb_kbg").fadeIn(300);
+    $(".featured .sm_mobile").animate({
+      right : 0
+    },300);
+
+  });
+  $(".featured .gnb_kbg").on("click", function(){
+    $(".featured .gnb_kbg").fadeOut(300);
+    $(".featured .sm_mobile").animate({
+      right : -800
+    },300);
+  });
+  $(".featured .gnb_close").on("click", function(){
+    $(".featured .gnb_kbg").fadeOut(300);
+    $(".featured .sm_mobile").animate({
+      right : -800
+    },300);
+  });
+  //End show menu on featured

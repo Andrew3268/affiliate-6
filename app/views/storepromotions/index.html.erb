@@ -1,5 +1,4 @@
 <!-- <p id="notice"><%= notice %></p> -->
-<%= render 'shared/play_video' %><!-- for play youtube video-->
 
 <div class="layout"><!--layout-->
   <div class="wrap">  
@@ -11,44 +10,45 @@
       <div class="sp_left">
         <div class="sp_menu">
           <ul>
-            <li><a href="/storepromotions/">All Categories</a><br/></li>
+            <li><a href="/storepromotions/">All Stores</a><br/></li>
             <% Spcategory.all.each do |category| %>
               <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
             <% end %>
             
               <li><%= link_to 'New Storepromotion', new_storepromotion_path %></li>
               <li><%= link_to "New Category", new_spcategory_path %></li>
-            
           </ul>
           <!-- Only in navbar
           <% Spcategory.where(display_in_navbar: true).each do |category| %>
             <%= link_to category.name, storepromotions_path(spcategory: category.name) %>
           <% end %> -->
         </div>
-        
       </div>
+      <%= render 'storepromotions/navbar' %>
 
       <div class="sp_right">
         
           <% @storepromotions.each do |storepromotion| %>
             <div class="sp_card clearfix">
               <div class="sp_image">
-                <a target="_blank" href="<%= storepromotion.sp_link %>"><img src="<%= storepromotion.sp_image %>" alt="<%= storepromotion.sp_title %>" title=""></a>
+                <%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
               </div>
               <div class="inner">
-                <p><%= storepromotion.sp_store_name %> | Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
+                <p><span><%= storepromotion.sp_store_name %> |</span> Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
 
-                <p class="sp_title"><a target="_blank" href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_title %></a></p>
+                <p class="sp_title"><%= link_to storepromotion.sp_title, storepromotion %></p>
                 <!-- <p><%= storepromotion.sp_description %></p> -->
                 <!-- <em>End Date: <%= storepromotion.sp_end_date %></em> -->
-                <% if storepromotion.sp_promocode.present? %>
-                  <div class="text_copied store_code">
-                    <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
-                  </div>
-                  <em class="code_em">End Date: <%= storepromotion.sp_end_date %></em>
-                <% else %>
-                  <em>End Date: <%= storepromotion.sp_end_date %></em>
-                <% end %>
+                <div class="promocode_m">
+                  <% if storepromotion.sp_promocode.present? %>
+                    <div class="text_copied store_code">
+                      <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
+                    </div>
+                    <em class="code_em">End Date: <%= storepromotion.sp_end_date %></em>
+                  <% else %>
+                    <em>End Date: <%= storepromotion.sp_end_date %></em>
+                  <% end %>
+                </div>
                 <!-- <p><%= storepromotion.spcategory.name %></p> -->
                 <!-- <div class="btn"><a href="<%= storepromotion.sp_link %>">Check This Deals</a></div> -->
                 <% if can? :update, storepromotion %>
@@ -60,9 +60,8 @@
                 <% end %>
               </div>
 
-              <div class="sp_btn">
-                <a href="<%= storepromotion.sp_link %>">Check This Deals</a>
-              </div>
+              <div class="sp_btn"><a class="sp_btn_pc" href="<%= storepromotion.sp_link %>">Check This Deals</a></div>
+              <!-- <div class="sp_btn_m"><%= link_to "Check This Deals", storepromotion %></div> -->
 
             </div>
           <% end %>
@@ -71,6 +70,7 @@
     </div><!--./sp_wrap-->
   </div><!--./warp-->
 </div><!--./layout-->
+<script><%= render(:partial => 'storepromotions', :handlers => [:erb], :formats => [:js]) %></script>
 
 
 
@@ -81,6 +81,7 @@
 
 
 
-    
-        
-        
+
+
+
+

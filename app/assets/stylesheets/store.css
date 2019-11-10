@@ -20,7 +20,7 @@
 .st_warp .st_middle .st_middle_box{margin-bottom:30px;}
 
 
-/* Side Tab Menu */
+/* For Store Station Page["/deals/stores"] / Side Tab Menu */
 .tab-menu-test{width:100%;margin:auto;}
 .tab-menu-wp{padding:20px 10px 7px 10px;border-radius:4px;overflow:hidden;width:100%;border:1px solid #ccc;}
 .title-tab-menu{font-weight:bold;font-size:25px;padding:10px 0 0 0;text-transform:uppercase;}
@@ -39,15 +39,24 @@
 .all-show{float:right;padding:30px 10px 0px 0;cursor:pointer;color:#3498db;font-size:15px;text-transform:uppercase}
 
 
-/* Store Promotions ["/storepromotions"]*/
+/* Store Promotions Main Page ["/storepromotions"]*/
 .sp_wrap{margin-top:35px;font-family: 'Montserrat', sans-serif;}
 .sp_wrap .sp_left{float:left;width:25%;margin-right:2%;border:1px solid #ccc;border-radius:10px;padding:10px 10px 10px 20px;}
 .sp_wrap .sp_right{float:left;width:73%;}
 
+.sp_wrap .sp_left .sp_menu ul{}
+.sp_wrap .sp_left .sp_menu ul li{margin-bottom:5px;}
+.sp_wrap .sp_left .sp_menu ul li a{color:#000;font-size:15px;}
+/* Mobile Menu */
+.featured .sp_m{width:100%;}
+.featured .sm_mobile ul.sp_ul{padding:20px;font-family:'Anton', sans-serif;}
+.featured .sm_mobile ul.sp_ul li{line-height:1.1;}
+.featured .sm_mobile ul.sp_ul li a{color:#fff;font-size:40px;text-transform:uppercase;}
+
 .sp_wrap .sp_right .sp_card{border-bottom:1px solid #ccc;padding:20px 0;}
 .sp_wrap .sp_right .sp_card .admin{font-size:12px;}
 .sp_wrap .sp_right .sp_image{float:left;width:15%;height:104.39px;position:relative;}
-.sp_wrap .sp_right .sp_image img{width:100%;height:70px;object-fit:cover;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;}
+.sp_wrap .sp_right .sp_image img{width:100%;height:70px;object-fit:cover;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);}
 .sp_wrap .sp_right .inner{float:left;width:59%;margin:0 3%;}
 .sp_wrap .sp_right .inner .sp_title{margin:5px 0;font-weight:500;line-height:1.2;font-size:18px;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2}
 .sp_wrap .sp_right .inner .sp_title a{color:#000;}
@@ -57,6 +66,7 @@
 .sp_wrap .sp_right .inner .store_code{width:95%;}
 /*.sp_wrap .sp_right .inner .btn{margin-top:10px;}
 .sp_wrap .sp_right .inner .btn a{text-decoration:none;background:#000;color:#fff;padding:5px 20px;border-radius:10px;}*/
+.sp_wrap .sp_right .sp_btn_m{display:none;}
 .sp_wrap .sp_right .sp_btn{float:left;width:20%;position:relative;height:104.39px;}
 .sp_wrap .sp_right .sp_btn a{text-decoration:none;background:#000;color:#fff;padding:20px;border-radius:10px;display:block;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:100%;}
 
@@ -66,15 +76,16 @@
   .sp_wrap .sp_right{float:none;width:100%;}
   .sp_wrap .sp_right .sp_card{float:left;width:48%;margin:1%;box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);padding: 5px 10px 10px 10px;}
   .sp_wrap .sp_right .sp_image{float:none;width:100%;}
+  .sp_wrap .sp_right .sp_image img{height:100%;object-fit:contain;}
   .sp_wrap .sp_right .inner{float:none;width:100%;}
   .sp_wrap .sp_right .inner .sp_title{font-size:12px;}
   .sp_wrap .sp_right .inner em{font-size:10px;}
   .sp_wrap .sp_right .inner em.code_em{margin-top:16px;}
-  .sp_wrap .sp_right .inner .text_copied .container .wrap .box{padding:3px;}
-  .sp_wrap .sp_right .inner .text_copied .container .wrap .box p{font-size:10px;text-align:center;}
-  .sp_wrap .sp_right .inner [data-copy-text] + i.material-icons{font-size:10px;padding:2px;right:0;left:50%;top:23px;transform:translate(-50%, 0);text-align:center;border:1px solid #000;width:102%;}
-  .sp_wrap .sp_right .sp_btn{float:none;width:100%;position:static;height:auto;margin-top:10px;}
-  .sp_wrap .sp_right .sp_btn a{padding:15px;text-align:center;position:static;padding:15px;border-radius:10px;display:block;top:0;left:0;transform:translate(0, 0);width:100%;}
+  .sp_wrap .sp_right .inner span{display:none;}
+  .sp_wrap .sp_right .inner .promocode_m{display:none;}
+  .sp_wrap .sp_right .sp_btn{display:none;}
+  .sp_wrap .sp_right .sp_btn_m{display:block;text-align:center;padding:3px 0;background:#000;}
+  .sp_wrap .sp_right .sp_btn_m a{color:#fff;}
 }
 
 
