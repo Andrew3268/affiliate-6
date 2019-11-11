@@ -71,6 +71,6 @@ class SpcategoriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def spcategory_params
-      params.require(:spcategory).permit(:name, :spc_description, :display_in_navbar)
+      params.require(:spcategory).permit(:name, :spc_description, :display_in_navbar, :spc_category_num)
     end
 end
