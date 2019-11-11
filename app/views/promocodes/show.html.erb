@@ -75,11 +75,11 @@
               <% @promocode.p_spare_50 %>
                 <em class="expired">* This promo code has EXPIRED.</em>
               <% else %>
-               <em>* Code End Date: <%= @promocode.p_end_date %></em>
+               <em>* Code End Date: <%= @promocode.p_end_date %> or while supplies last.</em>
               <% end %>
              </div>
             <% else %>
-              <em>* Code End Date: <%= @promocode.p_end_date %></em>
+              <em>* Code End Date: <%= @promocode.p_end_date %> or while supplies last.</em>
             <% end %>
            </div><!--./extra_info-->
 

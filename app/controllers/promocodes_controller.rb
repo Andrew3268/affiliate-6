@@ -126,7 +126,7 @@ class PromocodesController < ApplicationController
   def destroy
     @promocode.destroy
     respond_to do |format|
-      format.html { redirect_to 'promocodes_url', notice: 'Promocode was successfully destroyed.' }
+      format.html { redirect_to promocodes_url, notice: 'Promocode was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
