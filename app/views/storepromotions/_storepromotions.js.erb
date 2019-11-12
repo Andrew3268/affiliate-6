@@ -23,3 +23,34 @@
     },300);
   });
   //End show menu on featured
+
+  //Show more / Less more menu
+  $(".show-more").click(function () {
+    if($(".text").hasClass("show-more-height")) {
+        $(this).text("(Show Less)");
+    } else {
+        $(this).text("(Show More)");
+    }
+    $(".text").toggleClass("show-more-height");
+  });
+  //End
+
+  //Adding Class "show-more-height" by width
+   $(document).ready(function() {
+    var $window = $(window);
+      // Function to handle changes to style classes based on window width
+      function checkWidth() {
+      if ($window.width() < 980) {
+          $('.sp_menu').removeClass('show-more-height')
+          };
+
+      if ($window.width() >= 980) {
+          $('.sp_menu').addClass('show-more-height');
+      }
+    }
+    // Execute on load
+    checkWidth();
+    // Bind event listener
+        $(window).resize(checkWidth);
+  });
+  //End

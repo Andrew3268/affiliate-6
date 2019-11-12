@@ -8,20 +8,24 @@
 
       <div class="sp_left">
         <div class="sp_menu">
-          <ul>
-            <li><a href="/storepromotions/">All Stores</a><br/></li>
-            <% Spcategory.all.each do |category| %>
-              <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
-            <% end %>
-            
-              <li><%= link_to 'New Store Promotion', new_storepromotion_path %></li>
-              <li><%= link_to "New Category", new_spcategory_path %></li>
-          </ul>
-          <!-- Only in navbar
-          <% Spcategory.where(display_in_navbar: true).each do |category| %>
-            <%= link_to category.name, storepromotions_path(spcategory: category.name) %>
-          <% end %> -->
+          <div class="text show-more-height">
+            <ul>
+              <li><a href="/storepromotions/">All Stores</a></li>
+              <% Spcategory.all.each do |category| %>
+                <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
+              <% end %>
+              <% if can? :update, @storepromotions %>
+                <li class="admin"><%= link_to 'New Store', new_storepromotion_path %></li>
+                <li class="admin"><%= link_to "New Category", new_spcategory_path %></li>
+              <% end %>
+            </ul>
+            <!-- Only in navbar
+            <% Spcategory.where(display_in_navbar: true).each do |category| %>
+              <%= link_to category.name, storepromotions_path(spcategory: category.name) %>
+            <% end %> -->
+          </div>
         </div>
+        <div class="show-more">(Show More)</div>
       </div>
       <%= render 'storepromotions/navbar' %>
 
@@ -80,14 +84,12 @@
             </div>
           <% end %>
       </div>
+      <%= will_paginate @storepromotion %>
 
     </div><!--./sp_wrap-->
   </div><!--./warp-->
 </div><!--./layout-->
 <script><%= render(:partial => 'storepromotions', :handlers => [:erb], :formats => [:js]) %></script>
-
-
-
 
 
 
