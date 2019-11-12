@@ -56,7 +56,7 @@
    <div class="st_top_side clearfix">
     <div class="tab-menu-test">
       <div class="title-tab-menu">
-        <span>Yeni</span> Telefonlar
+        <span>What's</span>Trend?
       </div>
       <div class="tab-menu-wp">
         <ul>
@@ -248,175 +248,47 @@
 
   <div class="st_middle clearfix">
     <div class="st_middle_box clearfix">
-    <h2>Aliexpress Deals</h2>
-        
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
+      <h2>Aliexpress Deals</h2>        
+      <% @sdcategory_01.each do |sd01| %>
+        <figure class="deals_card deal_stores">
+          <div class="image_box">
+            <%= link_to image_tag(sd01.sd_image, alt: sd01.sd_title, title: sd01.sd_image_title), sd01 %>
+            <div class="mark"><span><%= sd01.sd_percentage %>%</span><em>OFF</em></div>
           </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>      
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
+          <div class="buy-now"><span><a target="_blank" href="<%= sd01.sd_link %>">BUY NOW</a></span></div>
+          <figcaption>
+            <h3>#HashTag</h3>
+            <p class="store_title"><%= link_to sd01.sd_title, sd01 %></p>
+            <div class="price">
+              <em><%= number_to_currency(sd01.sd_spare_31) %></em><%= number_to_currency(sd01.sd_spare_32) %>
+            </div>
+            <div class="m_btn"><a href="<%= sd01.sd_link %>">Buy Now</a></div>
+          </figcaption>
+        </figure>
+      <% end %>    
     </div><!--./st_middle_box-->
 
     <hr>
 
     <div class="st_middle_box clearfix">
-    <h2>Walmart Deals</h2>
-        
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
+      <h2>Walmart Deals</h2>
+      <% @sdcategory_02.each do |sd02| %>
+        <figure class="deals_card deal_stores">
+          <div class="image_box">
+            <%= link_to image_tag(sd02.sd_image, alt: sd02.sd_title, title: sd02.sd_image_title), sd02 %>
+            <div class="mark"><span><%= sd02.sd_percentage %>%</span><em>OFF</em></div>
           </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
-      <figure class="deals_card">
-        <div class="image_box">
-          <img src="https://m.media-amazon.com/images/I/81cQCLifykL._SR400,400_.jpg">
-          <div class="mark"><span>50%</span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="#n">BUY NOW</a></span></div>
-        <figcaption>
-          <h3>#HashTag</h3>
-          <p>Wireless Earbuds,AIKELA TWS Bluetooth 5.0 Headphones 3500mAh with LED Charging Dock 140H Playtime 3D Stereo Sound Noise Canceling IPX7 Waterproof in-Ear Headset Earphones with Built-in Mic for Sports</p>
-          <div class="price">
-            <em>$38.47</em>$129.95
-          </div>
-          <div class="m_btn"><a href="#n">Buy Now</a></div>
-        </figcaption>
-      </figure>
-
+          <div class="buy-now"><span><a target="_blank" href="<%= sd02.sd_link %>">BUY NOW</a></span></div>
+          <figcaption>
+            <h3>#HashTag</h3>
+            <p class="store_title"><%= link_to sd02.sd_title, sd02 %></p>
+            <div class="price">
+              <em><%= number_to_currency(sd02.sd_spare_31) %></em><%= number_to_currency(sd02.sd_spare_32) %>
+            </div>
+            <div class="m_btn"><a href="<%= sd02.sd_link %>">Buy Now</a></div>
+          </figcaption>
+        </figure>
+      <% end %>    
     </div><!--./st_middle_box-->
 
 
@@ -425,6 +297,7 @@
 
 </div><!--./st_wrap-->
 
+<!-- Side Tab Menu -->
 <script type="text/javascript">
   $(document).ready(function(){
   $(".page1").hide();

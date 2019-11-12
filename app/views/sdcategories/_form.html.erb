@@ -1,13 +1,13 @@
 <div class="hotdeal_form ">
   <%= render 'shared/header_short' %>
-  <%= simple_form_for(@spcategory) do |f| %>
+  <%= simple_form_for(@sdcategory) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
       <div class="pricing clearfix">
         <%= f.input :name %>
-        <%= f.input :spc_category_num %>
+        <%= f.input :sdcategoriy_num %>
         <!-- <%= f.input :display_in_navbar %> -->
       </div>
     </div>
@@ -15,4 +15,3 @@
     <div class="form_btn"><%= f.button :submit %></div>
   <% end %>
 </div>
-  

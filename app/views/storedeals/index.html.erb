@@ -1,0 +1,25 @@
+<div class="layout"><!--layout-->
+  <div class="wrap">  
+    <%= render 'shared/header_short' %>
+    <div class="sd_category">
+      <% if params[:sdcategory].present? %>
+        <div class="dealpage_title"><p>Deals Of <span><%= params[:sdcategory] %></span></p></div>
+      <% else %>
+        <div class="dealpage_title"><p>Deals By Stores</p></div>    
+      <% end %>
+    </div>
+
+    <%= render 'storedeals/navbar' %>
+    <div id="promocodes">
+      <%= render @storedeals %> 
+    </div>
+    
+  </div><!--./warp-->
+</div><!--./layout-->
+<script><%= render(:partial => 'storedeals', :handlers => [:erb], :formats => [:js]) %></script>
+
+
+
+
+
+

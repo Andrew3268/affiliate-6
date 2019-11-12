@@ -1,0 +1,108 @@
+<%= render 'shared/play_video' %><!-- for play youtube video-->
+<div class="layout">
+  <%= render 'shared/header_short' %>
+  
+  <div class="show_wrap clearfix">
+    <div class="wrap">
+    <%= render 'storedeals/navbar' %>  
+      <div class="show_box clearfix">
+        
+        <!-- <p>Location Map</p> -->
+        
+        <div class="show_img hotdeal_img">
+          <% if @storedeal.sd_image.present? %>
+            <a target="_blank" href="<%= @storedeal.sd_link %>"><img src="<%= @storedeal.sd_image %>" alt="<%= @storedeal.sd_title %>" title="<%= @storedeal.sd_spare_04 %>"></a>
+          <% else %>
+            <%= link_to (image_tag @storedeal.himage.url(:small), alt: @storedeal.sd_title, title: @storedeal.sd_spare_04), @storedeal %>
+          <% end %>
+          <div class="mark"><span>HOT</span><em>DEALS</em></div>
+          <% if can? :update, @storedeal %>
+            <div class="admin">
+              <p>Admin Management</p>
+              <%= link_to 'Back', storedeals_path %> |
+              <%= link_to 'Edit', edit_storedeal_path(@storedeal) %> |
+              <%= link_to 'Delete', @storedeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
+              <%= @storedeal.created_at.strftime("%d. %B.") %><br />
+            </div>
+          <% end %>
+        </div>
+        <div class="show_inner">
+         <div class="hotdeal_inner">
+           <h2 class="title"><%= @storedeal.sd_title %></h2>
+            
+            <% if @storedeal.sd_spare_32.present? %>
+              <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_32) %> <span class="span_01"><%= number_to_currency(@storedeal.sd_spare_31) %></span><span class="span_02">( <%= @storedeal.sd_percentage %>% OFF )</span></p>
+            <% else %>
+              <% running_total = 0 %>
+              <% running_total =  (@storedeal.sd_spare_33 - @storedeal.sd_spare_34) / @storedeal.sd_spare_33 * 100 %>
+              <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_34) %> <span class="span_01"><%= number_to_currency(@storedeal.sd_spare_33) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+            <% end %>
+
+            <div class="extra_info">
+               <% if @storedeal.sd_spare_01.present? %>
+                 <span class="basic_info">
+                  Avg <%= @storedeal.sd_spare_01 %> | <%= number_with_delimiter(@storedeal.sd_spare_02) %>+ reviews 
+                 </span> 
+               <% end %>
+               <em>* Pricing may change and deals can expire fast.</em>
+               <% if @storedeal.sd_spare_31.present? %>
+                <% running_total = 0 %>
+                <% running_total =  @storedeal.sd_spare_31.to_i - @storedeal.sd_spare_32.to_i %>
+                <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
+               <% else %>
+                <% running_total = 0 %>
+                <% running_total =  @storedeal.sd_spare_33.to_i - @storedeal.sd_spare_34.to_i %>
+                <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
+               <% end %>
+               <em>+ FREE Shipping</a></em>
+
+              <% if @storedeal.sd_spare_65.present? %>
+                <% if @storedeal.sd_spare_65 < DateTime.now %>
+                <% @storedeal.sd_spare_65 %>
+                  <em class="expired">* This deal has EXPIRED.</em>
+                <% else %>
+                  <em>* End Date: <%= @storedeal.sd_end_date %> or while supplies last.</em>
+                <% end %>
+              <% else %>
+                <em>* End Date: <%= @storedeal.sd_end_date %> or while supplies last.</em>
+              <% end %>
+
+            </div><!--./extra_info-->
+
+            <% if @storedeal.sd_promocode.present? %>
+              <div class="text_copied intheshow">
+                <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= @storedeal.sd_promocode %></p></div></div></div>
+              </div>
+            <% end %>
+
+            <div class="only_show"><a class="m_btn p_btn" target="_blank" href="<%= @storedeal.sd_link %>">Check it out on&ensp;<em><%= @storedeal.sdcategory.name %></em></a></div>
+
+            <%if @storedeal.sd_spare_50.present? %>
+              <div class="trix"><span>Features</span><p><%= @storedeal.sd_spare_50.html_safe %></p></div>
+            <% else %>
+              <% if @storedeal.sd_description.present? %>
+                <div class="show_des"><p class="description"><%= @storedeal.sd_description %></p></div>
+              <% end %>
+            <% end %>
+           
+           
+           </div>
+          </div>
+        </div>
+
+        <% if can? :update, @storedeal %>
+          <div class="pinterest">
+           <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+          </div>
+        <% end %>  
+
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+
+
+
+

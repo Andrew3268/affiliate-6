@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :sdcategories
+  resources :storedeals
   resources :spcategories
   resources :storepromotions
   # root 'storepromotions#index'

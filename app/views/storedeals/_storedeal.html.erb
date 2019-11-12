@@ -1,0 +1,36 @@
+<figure class="deals_card">
+   <div class="image_box">
+    <%= link_to image_tag(storedeal.sd_image, alt: storedeal.sd_title, title: storedeal.sd_image_title), storedeal %>
+    <div class="mark"><span><%= storedeal.sd_percentage %>%</span><em>OFF</em></div>
+   </div>
+   <% if storedeal.sd_promocode.present? %>
+    <div class="buy-now"><span><%= link_to "GET CODE", storedeal %></span></div>
+   <% else %>   
+    <div class="buy-now"><span><a target="_blank" href="<%= storedeal.sd_link %>">BUY NOW</a></span></div>
+   <% end %>
+
+  <figcaption>
+    <h3>#HashTags</h3>
+    <span><%= storedeal.sdcategory.name %></span>
+    <p class="store_title"><%= link_to storedeal.sd_title, storedeal %></p>
+    <div class="price">
+      <em><%= number_to_currency(storedeal.sd_spare_31) %></em><%= number_to_currency(storedeal.sd_spare_32) %>
+    </div>
+
+    <% if storedeal.sd_promocode.present? %>
+      <div class="m_btn"><%= link_to "GET CODE", storedeal %></a></div>
+    <% else %>
+      <div class="m_btn"><span><a target="_blank" href="<%= storedeal.sd_link %>">BUY NOW</a></span></div>
+    <% end %>
+    <% if can? :update, @storedeal %>
+     <div class="admin">
+       <%= link_to 'Edit', edit_storedeal_path(storedeal) %> | 
+       <%= link_to 'Destroy', storedeal, method: :delete, data: { confirm: 'Are you sure?' } %>
+     </div><!--/.amdin-->
+    <% end %>
+  </figcaption>
+  
+</figure>
+
+
+

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191110071722) do
+ActiveRecord::Schema.define(version: 20191112003010) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -408,6 +408,16 @@ ActiveRecord::Schema.define(version: 20191110071722) do
   add_index "roles", ["name", "resource_type", "resource_id"], name: "index_roles_on_name_and_resource_type_and_resource_id"
   add_index "roles", ["name"], name: "index_roles_on_name"
 
+  create_table "sdcategories", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "name"
+    t.string   "sdcategoriy_num"
+    t.text     "description"
+    t.boolean  "display_in_navbar", default: true
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+  end
+
   create_table "spcategories", force: :cascade do |t|
     t.integer  "user_id"
     t.string   "name"
@@ -417,6 +427,91 @@ ActiveRecord::Schema.define(version: 20191110071722) do
     t.datetime "created_at",                       null: false
     t.datetime "updated_at",                       null: false
   end
+
+  create_table "storedeals", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "sd_title"
+    t.text     "sd_description"
+    t.string   "sd_image"
+    t.string   "sd_link"
+    t.string   "sd_price"
+    t.string   "sd_list_price"
+    t.string   "sd_percentage"
+    t.string   "sd_image_title"
+    t.string   "sd_hashtag"
+    t.string   "sd_coupon_deal"
+    t.string   "sd_extra_deal"
+    t.string   "sd_banner"
+    t.string   "sd_keyword"
+    t.string   "sd_promocode"
+    t.string   "sd_end_date"
+    t.string   "sd_spare_01"
+    t.string   "sd_spare_02"
+    t.string   "sd_spare_03"
+    t.string   "sd_spare_04"
+    t.string   "sd_spare_05"
+    t.string   "sd_spare_06"
+    t.string   "sd_spare_07"
+    t.string   "sd_spare_08"
+    t.string   "sd_spare_09"
+    t.string   "sd_spare_10"
+    t.string   "sd_spare_11"
+    t.string   "sd_spare_12"
+    t.string   "sd_spare_13"
+    t.string   "sd_spare_14"
+    t.string   "sd_spare_15"
+    t.string   "sd_spare_16"
+    t.string   "sd_spare_17"
+    t.string   "sd_spare_18"
+    t.string   "sd_spare_19"
+    t.string   "sd_spare_20"
+    t.integer  "sd_spare_21"
+    t.integer  "sd_spare_22"
+    t.integer  "sd_spare_23"
+    t.integer  "sd_spare_24"
+    t.integer  "sd_spare_25"
+    t.integer  "sd_spare_26"
+    t.integer  "sd_spare_27"
+    t.integer  "sd_spare_28"
+    t.integer  "sd_spare_29"
+    t.float    "sd_spare_30"
+    t.float    "sd_spare_31"
+    t.float    "sd_spare_32"
+    t.float    "sd_spare_33"
+    t.float    "sd_spare_34"
+    t.float    "sd_spare_35"
+    t.float    "sd_spare_36"
+    t.float    "sd_spare_37"
+    t.float    "sd_spare_38"
+    t.float    "sd_spare_39"
+    t.decimal  "sd_spare_41"
+    t.decimal  "sd_spare_42"
+    t.decimal  "sd_spare_43"
+    t.decimal  "sd_spare_44"
+    t.decimal  "sd_spare_45"
+    t.decimal  "sd_spare_46"
+    t.decimal  "sd_spare_47"
+    t.decimal  "sd_spare_48"
+    t.decimal  "sd_spare_49"
+    t.text     "sd_spare_50"
+    t.text     "sd_spare_51"
+    t.text     "sd_spare_52"
+    t.text     "sd_spare_53"
+    t.text     "sd_spare_54"
+    t.date     "sd_spare_61"
+    t.date     "sd_spare_62"
+    t.date     "sd_spare_63"
+    t.date     "sd_spare_64"
+    t.datetime "sd_spare_65"
+    t.datetime "sd_spare_66"
+    t.datetime "sd_spare_67"
+    t.datetime "sd_spare_68"
+    t.integer  "sdcategory_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+  end
+
+  add_index "storedeals", ["sdcategory_id"], name: "index_storedeals_on_sdcategory_id"
 
   create_table "storepromotions", force: :cascade do |t|
     t.integer  "user_id"

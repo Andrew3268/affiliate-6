@@ -128,6 +128,8 @@ class DealsController < ApplicationController
   def stores
     @promotion = Storepromotion.where(spcategory_id: 1).order("created_at DESC").limit(5)
     @promotion_with_code = Storepromotion.where(spcategory_id: 2).order("created_at DESC").limit(5)
+    @sdcategory_01 = Storedeal.where(sdcategory_id: 1).order("created_at DESC").limit(5)
+    @sdcategory_02 = Storedeal.where(sdcategory_id: 2).order("created_at DESC").limit(5)
   end
 
   def all_deals

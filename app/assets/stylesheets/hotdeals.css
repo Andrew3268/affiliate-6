@@ -116,6 +116,13 @@
 .deals_card .m_btn a{text-decoration:none;color:#fff;}
 .deals_card:hover .buy-now,
 .deals_card:hover .buy-now {opacity:1;-webkit-transform:rotateX(0deg);transform:rotateX(0deg);}
+/* Store Station Page "/deals/stores */
+.deals_card p.store_title{height:2.8em;-webkit-line-clamp:2;font-size:13px;}
+.deal_stores .image_box{height:200px;}
+.deal_stores figcaption{padding:0px 20px;}
+.deal_stores h3{font-size:17px;margin-bottom:5px;}
+.deals_card .price{font-size:17px;}
+
 
 /* banner */
 .show_banner{}
@@ -139,6 +146,9 @@
   .dealpage_title p{font-size:35px;}
   .dealpage_title p:after{height:5px;}
   .deals__main_menu ul .nth_2 a:after{height:7px;top:67%;}
+  /* Store Station Page "/deals/stores */
+  .deals_card p.store_title{height:2.4em;}
+
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .more_search{margin:-10px 0 10px 0;}
