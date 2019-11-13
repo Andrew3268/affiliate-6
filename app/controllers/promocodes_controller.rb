@@ -18,7 +18,7 @@ class PromocodesController < ApplicationController
   # GET /promocodes
   # GET /promocodes.json
   def index
-    @promocodes = Promocode.all.order("created_at DESC").page(params[:page]).per_page(48)
+    @promocodes = Promocode.all.order("created_at DESC").page(params[:page]).per_page(50)
     set_meta_tags title: 'Amazon Promo Codes & Coupons',
                   site: 'Oh,igottabuythis',
                   revierse: true,
