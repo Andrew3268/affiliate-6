@@ -62,7 +62,11 @@
         <% if most_h.h_list_price.present? %>
           <em><span>$<%= most_h.h_list_price %></span>$<%= most_h.h_price %></em>
         <% else %>
-          <em><span><%= number_to_currency(most_h.h_spare_42) %></span><%= number_to_currency(most_h.h_spare_41) %></em>
+          <% if most_h.h_spare_41.present? %>
+            <em><span><%= number_to_currency(most_h.h_spare_41) %></span><%= number_to_currency(most_h.h_spare_42) %></em>
+          <% else %>
+           <em><span><%= number_to_currency(most_h.h_spare_43) %></span><%= number_to_currency(most_h.h_spare_44) %></em>
+          <% end %>
         <% end %>
       </div>
     </div>

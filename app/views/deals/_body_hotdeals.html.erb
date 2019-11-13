@@ -19,7 +19,11 @@
         <% if hotdeal.h_price.present? %>
          <span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span>
         <% else %>
-          <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_41) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_42) %></span>
+          <% if hotdeal.h_spare_41.present? %>
+            <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_42) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_41) %></span>
+          <% else %>
+            <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_44) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_43) %></span>
+          <% end %>
         <% end %>
       <% if hotdeal.h_spare_01.present? %>
         <div class="tooltip_common tooltip_orange"><span> + <%= hotdeal.h_spare_01 %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
