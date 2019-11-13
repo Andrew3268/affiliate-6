@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191112003010) do
+ActiveRecord::Schema.define(version: 20191113035927) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -507,8 +507,9 @@ ActiveRecord::Schema.define(version: 20191112003010) do
     t.datetime "sd_spare_67"
     t.datetime "sd_spare_68"
     t.integer  "sdcategory_id"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "impressions_count"
   end
 
   add_index "storedeals", ["sdcategory_id"], name: "index_storedeals_on_sdcategory_id"
@@ -584,8 +585,9 @@ ActiveRecord::Schema.define(version: 20191112003010) do
     t.datetime "sp_spare_61"
     t.date     "sp_spare_62"
     t.date     "sp_spare_63"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.integer  "impressions_count"
   end
 
   add_index "storepromotions", ["spcategory_id"], name: "index_storepromotions_on_spcategory_id"

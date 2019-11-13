@@ -3,7 +3,7 @@
    <div class="st_top clearfix">
     <div class="st_left clearfix">
       
-      <h2>LEFT DEALS & SALES</h2>
+      <h2>Promotions with Code</h2>
       <% @promotion.each do |promo| %>
         <div class="st_box clearfix">
           <div class="st_image"><a target="_blank" href="<%= promo.sp_link %>"><img src="<%= promo.sp_image %>" alt="<%= promo.sp_title %>" title="<%= promo.sp_store_name %>"></a></div>
@@ -26,8 +26,7 @@
 
     <div class="st_right clarfix">
       
-      <h2>RIGHT DEALS & SALES</h2>
-
+      <h2>Sales & Promotions</h2>
       <% @promotion_with_code.each do |promo| %>
         <div class="st_box clearfix">
           <div class="st_image"><a target="_blank" href="<%= promo.sp_link %>"><img src="<%= promo.sp_image %>" alt="<%= promo.sp_title %>" title="<%= promo.sp_store_name %>"></a>
@@ -53,194 +52,46 @@
 
    <div class="st_top_side clearfix">
     <div class="tab-menu-test">
-      <div class="title-tab-menu">
-        <span>What's</span>Trend?
-      </div>
+      <div class="title-tab-menu"><span>What's</span> Trend?</div>
       <div class="tab-menu-wp">
         <ul>
-          <li>SAYFA 1</li>
-          <li>SAYFA 2</li>
+          <li>Promotions</li>
+          <li>Hot Deals</li>
           <!-- <li>SAYFA 3</li> -->
         </ul>
         <div class="clear"></div>
         
         <div class="page1">
-          
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51Cup-aObSL._SX425_.jpg" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            <p>Extra 40%~60% off Sale Shoes</p>
-          </div>
-          <div class="tab-menu-text-alt">
-            <span><em>$100.00</em> $50.00</span>
-          </div>
-        </div>
-        
-          <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://images-na.ssl-images-amazon.com/images/I/61WN0xvzGYL._SX679_.jpg" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            GM 5 PLUS5151
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-          
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="http://www.pngmart.com/files/2/IPhone-Apple-PNG-File.png" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            IPHONE 7 ÇOK UZUN BURASI
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://www.mts.ca/file_source/mts/assets/img/wireless_devices/android/LG-G4.png" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            LG G4
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t31.0-8/s960x960/17492776_273952066380058_7076800302457293385_o.jpg?oh=87fa7ba82c1f58e61fb1368c915b81cf&oe=59B43043" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            DOGUKAN AKGUN
-          </div>
-          <div class="tab-menu-text-alt">
-            Yazılımcı
-          </div>
-        </div>
-          <div class="all-show">
-            See More
-          </div>
+          <% @most_promotions.each do |mp| %>
+            <div class="tab-menu-text">
+              <div class="tab-menu-img"><%= link_to image_tag(mp.sp_image, alt: mp.sp_title, title: mp.sp_store_name), mp %></div>
+              <div class="tab-menu-text-title"><p><%= mp.sp_store_name %> | Up to <%= mp.sp_percentage_01 %>% Off</p>
+              </div>
+              <div class="tab-menu-text-alt"><p><%= link_to mp.sp_title, mp %></p></div>
+            </div>
+          <% end %>
+          <div class="all-show"><a href="/storepromotions">See More</a></div>
         </div>
         
         <div class="page1">
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://lh4.googleusercontent.com/S6zhIoUgVeDfKh7ohBaMvtm9mDaQQolRDtXdTQfwv4zMj82rOt6IsNrNM2OszjDLOYx8OMzyM0j8yQipYVn8gxTkSYQED1kE4lEco2Tcxjg8xA5FSHRfsUd1Xq_X1Z8nw7D17RtH" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            GM 5 PLUS4124
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
+          <% @most_deals.each do |md| %>  
+            <div class="tab-menu-text">
+              <div class="tab-menu-img"><%= link_to image_tag(md.sd_image, alt: md.sd_title, title: md.sd_image_title), md %></div>
+              <div class="tab-menu-text-alt"><p><%= link_to md.sd_title, md %></p></div>
+              <div class="tab-menu-text-alt">
+               <span><em><%= number_to_currency(md.sd_spare_31) %></em> <%= number_to_currency(md.sd_spare_32) %></span>
+              </div>
+            </div>
+          <% end %>
+          <div class="all-show"><a href="/storedeals">See More</a></div>
         </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="http://www.pngmart.com/files/2/IPhone-Apple-PNG-File.png" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            IPHONE 7
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://www.mts.ca/file_source/mts/assets/img/wireless_devices/android/LG-G4.png" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            LG G4
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t31.0-8/s960x960/17492776_273952066380058_7076800302457293385_o.jpg?oh=87fa7ba82c1f58e61fb1368c915b81cf&oe=59B43043" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            DOGUKAN AKGUN
-          </div>
-          <div class="tab-menu-text-alt">
-            Yazılımcı
-          </div>
-        </div>
-           <div class="all-show">
-            Tümünü göster
-          </div>
-        </div>
-        
-        <div class="page1">
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://lh4.googleusercontent.com/S6zhIoUgVeDfKh7ohBaMvtm9mDaQQolRDtXdTQfwv4zMj82rOt6IsNrNM2OszjDLOYx8OMzyM0j8yQipYVn8gxTkSYQED1kE4lEco2Tcxjg8xA5FSHRfsUd1Xq_X1Z8nw7D17RtH" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            GM 5 PLUS511
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="http://www.pngmart.com/files/2/IPhone-Apple-PNG-File.png" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            IPHONE 7
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://www.mts.ca/file_source/mts/assets/img/wireless_devices/android/LG-G4.png" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            LG G4
-          </div>
-          <div class="tab-menu-text-alt">
-            Teknoloji Haberleri
-          </div>
-        </div>
-        
-        <div class="tab-menu-text">
-          <div class="tab-menu-img">
-            <img src="https://scontent-frt3-1.xx.fbcdn.net/v/t31.0-8/s960x960/17492776_273952066380058_7076800302457293385_o.jpg?oh=87fa7ba82c1f58e61fb1368c915b81cf&oe=59B43043" alt="" />
-          </div>
-          <div class="tab-menu-text-title">
-            DOGUKAN AKGUN
-          </div>
-          <div class="tab-menu-text-alt">
-            Yazılımcı
-          </div>
-        </div>
-           <div class="all-show">
-            Tümünü göster
-          </div>
-        </div>
+      
+       </div>
       </div>
     </div>
 
 
    </div><!--./st_top_side-->
-
   </div><!--./st_top_wrap-->
 
   <hr>

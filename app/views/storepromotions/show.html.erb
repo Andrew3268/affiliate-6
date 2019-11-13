@@ -13,8 +13,8 @@
           <img src="<%= @storepromotion.sp_image %>"> 
           <% if can? :update, @storepromotion %>
             <div class="admin">
-              <%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
               <%= link_to 'Back', storepromotions_path %> |
+              <%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
               <%= @storepromotion.impressionist_count %> views
             </div>
           <% end %>

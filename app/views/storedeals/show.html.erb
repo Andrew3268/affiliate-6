@@ -22,7 +22,8 @@
               <%= link_to 'Back', storedeals_path %> |
               <%= link_to 'Edit', edit_storedeal_path(@storedeal) %> |
               <%= link_to 'Delete', @storedeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
-              <%= @storedeal.created_at.strftime("%d. %B.") %><br />
+              <%= @storedeal.impressionist_count %> views<br />
+              <%= @storedeal.created_at.strftime("%d. %B.") %>
             </div>
           <% end %>
         </div>

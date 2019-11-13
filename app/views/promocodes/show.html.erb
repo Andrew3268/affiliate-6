@@ -26,6 +26,7 @@
               <%= render 'promocodes/body_sns' %><br>
               <%= @promocode.impressionist_count(:filter=>:all) %> Views |
               <%= @promocode.created_at.strftime("%d. %B.") %>
+              <%= @promocode.p_title %>
               <% running_total = 0 %>
               <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
               <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> )</span></p>
@@ -93,7 +94,7 @@
            </div> 
 
             <% if @promocode.p_spare_36.present? %>
-              <div class="trix"><%= @promocode.p_spare_36.html_safe %></div>
+              <div class="trix trix-container gradient"><span>Features</span><p><%= @promocode.p_spare_36.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
             <% else %>
               <% if @promocode.p_description.present? %>
                 <div class="show_des"><p class="description"><%= @promocode.p_description %></p></div>

@@ -39,4 +39,11 @@ $(".gadgets_wrapper main .gnb_kbg_b").on("click", function(){
 });   
 //End
 
+// Show orLess More
+$('.show-btn').click(function() {
+  $('.trix-container').toggleClass("show");
+  $(this).toggleClass("rotate");
+});
+
+
 

@@ -13,10 +13,10 @@
             </div>
           <% end %>
           <% if can? :update, @gadget %>
-          <h3>Admin Management</h3>
-          <p><%= @gadget.gg_title %></p>
-          <div class="btn clearfix admin">
-            <em><%= link_to "Edit", edit_gadget_path(@gadget) %></em><%= link_to "Delete", gadget_path(@gadget), method: :delete, data: {confirm: "Are you sure?"}%>
+            <h3>Admin Management</h3>
+            <p><%= @gadget.gg_title %></p>
+            <div class="btn clearfix admin">
+              <a href="/">Back</a> | <em><%= link_to "Edit", edit_gadget_path(@gadget) %></em> | <%= link_to "Delete", gadget_path(@gadget), method: :delete, data: {confirm: "Are you sure?"}%>
           </div>   
         <% end %>
         </div>
@@ -40,7 +40,8 @@
          <% end %>
          <% if @gadget.gg_pro_01.present? %>
           <em class="about">About This</em>
-          <span class="trix"><%= @gadget.gg_pro_01.html_safe %></span>
+          <span class="trix trix-container gradient"><%= @gadget.gg_pro_01.html_safe %>
+          <button class="show-btn fa fa-chevron-down"></button></span>
          <% end %>
          <p class="keyword"><%= @gadget.gg_option_04 %></p>
 
@@ -78,23 +79,5 @@
     
   </div>
 </div>
-
-<!-- Social Shring -->
-<!-- <ul class="social">
-
-  <a class="facebook" id="shareFB" href="https://www.facebook.com/sharer/sharer.php?u=<%= url_for([@gadget, { 
-   only_path: false }]) %>&t=<%= @gadget.gg_title %>"
-   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"   target="_blank" title="Share on Facebook"><li><i class="fa fa-facebook"></i><span>Share on Facebook</span></a></li></a>
-  <script type="text/javascript">document.getElementById("shareFB").setAttribute("href", "https://www.facebook.com/sharer/sharer.php?u=" + document.URL);
-  </script>
-
-  <a class="twitter" href="https://twitter.com/share?url=<%= url_for([@gadget, { 
-   only_path: false }]) %>&via=ohigottabuythis&text=<%= @gadget.gg_title %>"
-   onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"
-   target="_blank" title="Share on Twitter">
-   <li><i class="fa fa-twitter"></i><span>Share on Twitter</span></a></li>
-  </a>
-</ul> -->
-
-
+<script><%= render(:partial => 'gadgets', :handlers => [:erb], :formats => [:js]) %></script>
 

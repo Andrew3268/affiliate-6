@@ -2,6 +2,7 @@ class StoredealsController < ApplicationController
   before_action :set_storedeal, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   load_and_authorize_resource
+  impressionist actions: [:show], unique: [:ip_address]
 
   # GET /storedeals
   # GET /storedeals.json
@@ -18,6 +19,7 @@ class StoredealsController < ApplicationController
   # GET /storedeals/1
   # GET /storedeals/1.json
   def show
+    impressionist(@storedeal)
   end
 
   # GET /storedeals/new
