@@ -1,7 +1,5 @@
 <div class="st_warp">
-
  <div class="st_top_warp clearfix">
-
    <div class="st_top clearfix">
     <div class="st_left clearfix">
       
@@ -15,8 +13,8 @@
             <% if promo.sp_promocode.present? %>
               <!-- <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div> -->
               <div class="text_copied store_sti">
-                  <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
-                </div>
+                <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
+              </div>
             <% end %>
             <!-- <span><%= promo.sp_description %></span> -->
           </div>
@@ -40,9 +38,9 @@
             <span><a target="_blank" href="<%= promo.sp_link %>"><%= promo.sp_title %></a></span>
             <% if promo.sp_promocode.present? %>
               <!-- <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div> -->
-              <div class="text_copied store_sti">
-                  <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
-                </div>
+              <!-- <div class="text_copied store_sti">
+                <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
+              </div> -->
             <% end %>
             <!-- <span><%= promo.sp_description %></span> -->
           </div>
@@ -67,6 +65,7 @@
         <div class="clear"></div>
         
         <div class="page1">
+          
         <div class="tab-menu-text">
           <div class="tab-menu-img">
             <img src="https://images-na.ssl-images-amazon.com/images/I/51Cup-aObSL._SX425_.jpg" alt="" />

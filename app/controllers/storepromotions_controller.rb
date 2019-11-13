@@ -2,6 +2,8 @@ class StorepromotionsController < ApplicationController
   before_action :set_storepromotion, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
   load_and_authorize_resource
+  impressionist actions: [:show], :unique => [:impressionable_id, :ip_address]
+
 
   # GET /storepromotions
   # GET /storepromotions.json
