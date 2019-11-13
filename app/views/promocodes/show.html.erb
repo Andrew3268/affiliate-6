@@ -25,7 +25,7 @@
               <%= link_to 'Delete', @promocode, method: :delete, data: { confirm: 'Are you sure?' } %> |
               <%= render 'promocodes/body_sns' %><br>
               <%= @promocode.impressionist_count(:filter=>:all) %> Views |
-              <%= @promocode.created_at.strftime("%d. %B.") %>
+              <%= @promocode.created_at.strftime("%d. %B.") %><br>
               <%= @promocode.p_title %>
               <% running_total = 0 %>
               <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>

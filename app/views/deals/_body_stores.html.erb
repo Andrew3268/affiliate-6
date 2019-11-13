@@ -1,17 +1,16 @@
 <div class="st_warp">
  <div class="st_top_warp clearfix">
+
    <div class="st_top clearfix">
-    <div class="st_left clearfix">
       
       <h2>Promotions with Code</h2>
-      <% @promotion.each do |promo| %>
+      <% @storepromotions.each do |promo| %>
         <div class="st_box clearfix">
           <div class="st_image"><a target="_blank" href="<%= promo.sp_link %>"><img src="<%= promo.sp_image %>" alt="<%= promo.sp_title %>" title="<%= promo.sp_store_name %>"></a></div>
           <div class="inner">
             <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF <% if can? :update, promo %> | <%= link_to 'Edit', edit_storepromotion_path(promo) %><% end %></p>
             <span><a target="_blank" href="<%= promo.sp_link %>"><%= promo.sp_title %></a></span>
             <% if promo.sp_promocode.present? %>
-              <!-- <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div> -->
               <div class="text_copied store_sti">
                 <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
               </div>
@@ -21,34 +20,9 @@
         </div>
       <% end %>
       <div class="more_btn"><a href="/storepromotions">SEE MORE</a></div>
-
-    </div><!--./st_left-->
-
-    <div class="st_right clarfix">
-      
-      <h2>Sales & Promotions</h2>
-      <% @promotion_with_code.each do |promo| %>
-        <div class="st_box clearfix">
-          <div class="st_image"><a target="_blank" href="<%= promo.sp_link %>"><img src="<%= promo.sp_image %>" alt="<%= promo.sp_title %>" title="<%= promo.sp_store_name %>"></a>
-          </div>
-          <div class="inner">
-            <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF <% if can? :update, promo %> | <%= link_to 'Edit', edit_storepromotion_path(promo) %><% end %></p>
-            
-            <span><a target="_blank" href="<%= promo.sp_link %>"><%= promo.sp_title %></a></span>
-            <% if promo.sp_promocode.present? %>
-              <!-- <div class="store_code"><p>Code: <%= promo.sp_promocode %></p></div> -->
-              <!-- <div class="text_copied store_sti">
-                <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
-              </div> -->
-            <% end %>
-            <!-- <span><%= promo.sp_description %></span> -->
-          </div>
-        </div>
-      <% end %>
-      <div class="more_btn"><a href="/storepromotions">SEE MORE</a></div>
-
-    </div><!--./st_right-->
+    
    </div><!--./st_top-->
+
 
    <div class="st_top_side clearfix">
     <div class="tab-menu-test">
@@ -88,11 +62,10 @@
       
        </div>
       </div>
-    </div>
+    </div><!--./st_top_side-->
 
-
-   </div><!--./st_top_side-->
-  </div><!--./st_top_wrap-->
+   </div><!--./st_top_wrap-->
+  </div><!--./st_warp-->
 
   <hr>
 
