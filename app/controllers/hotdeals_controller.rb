@@ -18,7 +18,7 @@ class HotdealsController < ApplicationController
   # GET /hotdeals.json
   
   def index
-    @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(50)
+    @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(48)
     set_meta_tags title: 'Amazon Deals & Bargain',
                   site: 'Oh,igottabuythis',
                   revierse: true,

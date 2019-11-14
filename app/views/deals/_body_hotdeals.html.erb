@@ -10,7 +10,13 @@
     <% end %> 
   </div>
   <div class="inner">
-    <span class="regular"><em><%= hotdeal.h_percentage %>% OFF</em> + free shipping</span>
+    <% if hotdeal.h_percentage.present? %>
+      <span class="regular"><em><%= hotdeal.h_percentage %>% OFF</em> + free shipping</span>
+    <% else %>
+      <% running_total = 0 %>
+      <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+      <span class="regular"><em><%= number_to_percentage(running_total, precision: 0) %> OFF</em> + free shipping</span>
+    <% end %>
     <span class="shipping_condition">Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items.</a></span>
     <!-- <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p> -->
     <p><%= link_to hotdeal.h_title, hotdeal %></p>

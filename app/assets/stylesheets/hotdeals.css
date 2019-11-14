@@ -95,9 +95,9 @@
 .more_search{margin-top:15px;}
 .more_search input{width:35%;height:40px;padding:0 10px;}
 
-.deals_card{float:left;font-family:'Raleway', Arial, sans-serif;position:relative;overflow:hidden;margin:1%;width:18%;background:#fff;text-align:left;color:#000000;box-shadow:0 0 5px rgba(0, 0, 0, 0.15);font-size:16px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-perspective:20em;perspective:20em;}
+.deals_card{float:left;font-family:'Raleway', Arial, sans-serif;position:relative;overflow:hidden;margin:1%;width:23%;background:#fff;text-align:left;color:#000000;box-shadow:0 0 5px rgba(0, 0, 0, 0.15);font-size:16px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-perspective:20em;perspective:20em;}
 .deals_card *{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
-.deals_card .image_box{width:100%;height:200px;padding:15px 15px 5px 15px;position:relative;}
+.deals_card .image_box{width:100%;height:250px;padding:15px 15px 5px 15px;position:relative;}
 .deals_card .image_box .mark{position:absolute;top:0;left:0;background:#000;color:#fff;width:50px;padding:7px;line-height:1.1;font-size:13px;text-align:center;}
 .deals_card .image_box .mark span{letter-spacing:3.1px;}
 .deals_card .image_box .mark em{display:block;letter-spacing:3.1px;}
