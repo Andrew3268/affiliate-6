@@ -673,6 +673,10 @@ nav.most_m_popup ul li{padding:6px 10px 3px 10px;border-bottom:1px solid #ccc;}
 .all_wrap .all_hotdeals, .all_wrap .all_promocodes{margin:0 1% 20px 1%;}
 .all_wrap .all_hotdeals span, .all_wrap .all_promocodes em{margin-top:20px;display:block;}
 
+/* Tab Menu */
+
+
+/* About SNS */
 .for_sns{width:500px;}
 .for_sns .wrapping{position:relative;margin-bottom:30px;}
 .for_sns .wrapping .image{width:500px;height:500px;}
@@ -684,4 +688,85 @@ nav.most_m_popup ul li{padding:6px 10px 3px 10px;border-bottom:1px solid #ccc;}
 .for_sns .wrapping .info p span{font-size:15px;}
 .for_sns .wrapping .info table{border-collapse: collapse;width:100%;}
 .for_sns .wrapping .info table, td, th{border: 1px solid #000;}
+
+
+
+
+
+.alldeals_tabs{}
+.alldeals_tabs input[type=radio]{display:none;}
+.alldeals_tabs label {
+  transition: background 0.4s ease-in-out, height 0.2s linear;
+  display: inline-block;
+  cursor: pointer;
+  color: #2EBEB9;
+  width: 20%;
+  height: 3em;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  background: #FCFCFC;
+  text-align: center;
+  line-height: 3em; 
+}
+.alldeals_tabs label:last-of-type {
+  border-bottom: none; 
+}
+.alldeals_tabs label:hover {
+  background: #259692;
+  color:#ffffff;
+}
+@media screen and (max-width: 1600px) {
+.alldeals_tabs label {
+  width: 15%; } 
+}
+@media screen and (max-width: 900px) {
+.alldeals_tabs label {
+  width: 20%; 
+  } 
+}
+@media screen and (max-width: 600px) {
+.alldeals_tabs label {
+  width: 100%;
+  display: block;
+  border-bottom: 2px solid #C7C6C4;
+  border-radius: 0; 
+} 
+}
+@media screen and (max-width: 600px) {
+.alldeals_tabs {
+  margin: 0; 
+} 
+}
+
+#tab1:checked + label, #tab2:checked + label, #tab3:checked + label, #tab4:checked + label {
+  background: #2EBEB9;
+  color: #FFFFFF; }
+
+.tab-content {
+  position: absolute;
+  top: -9999px;
+  padding: 10px; 
+}
+
+.tab-content-wrapper{
+  background: #FCFCFC;
+  border-top: #2EBEB9 5px solid;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  border-top-right-radius: 3px;
+  
+}
+@media screen and (max-width: 600px) {
+.tab-content-wrapper, .tab1-content-wrapper {
+  border: none;
+  border-radius: 0; 
+} 
+}
+
+#tab1:checked ~ .tab-content-wrapper #tab-content-1, #tab2:checked ~ .tab-content-wrapper #tab-content-2, #tab3:checked ~ .tab-content-wrapper #tab-content-3, #tab4:checked ~ .tab-content-wrapper #tab-content-4 {
+  position: relative;
+  top: 0px;
+ }
+
+
 
