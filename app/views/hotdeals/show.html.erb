@@ -11,11 +11,13 @@
         <!-- <p>Location Map</p> -->
         
         <div class="show_img hotdeal_img">
-          <% if @hotdeal.h_image.present? %>
-            <a target="_blank" href="<%= @hotdeal.h_link %>"><img src="<%= @hotdeal.h_image %>" alt="<%= @hotdeal.h_title %>" title="<%= @hotdeal.h_spare_04 %>"></a>
-          <% else %>
-            <%= link_to (image_tag @hotdeal.himage.url(:small), alt: @hotdeal.h_title, title: @hotdeal.h_spare_04), @hotdeal %>
-          <% end %>
+          <div class="img_box">
+            <% if @hotdeal.h_image.present? %>
+              <a target="_blank" href="<%= @hotdeal.h_link %>"><img src="<%= @hotdeal.h_image %>" alt="<%= @hotdeal.h_title %>" title="<%= @hotdeal.h_spare_04 %>"></a>
+            <% else %>
+              <%= link_to (image_tag @hotdeal.himage.url(:small), alt: @hotdeal.h_title, title: @hotdeal.h_spare_04), @hotdeal %>
+            <% end %>
+          </div>
           <div class="mark"><span>HOT</span><em>DEALS</em></div>
           <% if can? :update, @hotdeal %>
             <div class="admin">
