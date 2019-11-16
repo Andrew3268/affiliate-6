@@ -64,6 +64,11 @@
         <% if promo_h.p_spare_50 && (promo_h.p_spare_50 < DateTime.now) %>
         <% promo_h.p_spare_50 %>
          <p class="expired">Promo code has EXPIRED.</p>
+        <% else %>
+          <% if promo_h.p_spare_51 && (promo_h.p_spare_51 <= DateTime.now) %>
+          <% promo_h.p_spare_51 %>
+            <p class="endtoday">Promo code expires today.</p>
+          <% end %>
         <% end %>
       </div>
       

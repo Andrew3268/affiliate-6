@@ -80,7 +80,7 @@ class StorepromotionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def storepromotion_params
       params.require(:storepromotion).permit(:sp_title, :sp_description, :spcategory_id, :sp_store_name, :sp_image, :sp_promocode,
-                     :sp_end_date, :sp_percentage_01, :sp_percentage_02, :sp_link, :sp_spare_60)
+                     :sp_end_date, :sp_percentage_01, :sp_percentage_02, :sp_link, :sp_spare_60, :sp_spare_61)
     end
 end
 

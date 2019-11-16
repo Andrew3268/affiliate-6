@@ -146,7 +146,7 @@ class PromocodesController < ApplicationController
                                       :p_spare_15, :p_spare_16, :p_spare_17, :p_spare_18, :p_spare_19, :p_spare_20, :p_spare_21,
                                       :p_spare_22, :p_spare_23, :p_spare_24, :p_spare_25, :p_spare_26, :p_spare_27, :p_spare_28,
                                       :p_spare_29, :p_spare_30, :p_spare_31, :p_spare_32, :p_spare_33, :p_spare_34, :p_spare_35,
-                                      :p_spare_36, :p_spare_37, :p_spare_38, :p_spare_39, :p_spare_40, :pimage, :p_spare_50)
+                                      :p_spare_36, :p_spare_37, :p_spare_38, :p_spare_39, :p_spare_40, :pimage, :p_spare_50, :p_spare_51)
     end
 end
 

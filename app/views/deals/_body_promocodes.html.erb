@@ -43,7 +43,12 @@
       </div>
 
         <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>-->
-        <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
+        <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
+        <% promocode.p_spare_51 %>  
+          <span class="ex_date endtoday">* This Promo Code expires today.</span>
+        <% else %>
+          <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
+        <% end %>
         <em>* Pricing may change and promotional codes can expire fast.</em>
         <em>* Click and copy this code then apply it at your checkout</em>
         <% if can? :update, @promocode %>
