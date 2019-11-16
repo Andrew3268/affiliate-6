@@ -19,14 +19,16 @@
     <% else %>
       <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
     <% end %>
-    <% if promocode.p_spare_51.present? %>
+    
       <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
       <% promocode.p_spare_51 %>
-        <div class="expried_wrap"><div class="mark term endtoday"><p>Ends Today</p></div></div>
+        <% if promocode.p_spare_51.present? %>
+          <div class="expried_wrap"><div class="mark term endtoday"><p>Ends Today</p></div></div>
+        <% end %>
       <% else %>
         <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
       <% end %>
-    <% end %>
+
    </div>
   <% end %>
    
