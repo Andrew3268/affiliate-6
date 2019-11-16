@@ -83,11 +83,11 @@
                  <% if @promocode.p_spare_51 <= DateTime.now %>
                  <% @promocode.p_spare_51 %>
                   <em class="endtoday">* This Promo Code expires today.</em> 
-                  <% end %>
                  <% else %>
                   <em>* Code End Date: <%= @promocode.p_end_date %> or while supplies last.</em>
                  <% end %> 
-               
+                <% end %>
+
               <% end %>
              <!-- </div> -->
             <% else %>
