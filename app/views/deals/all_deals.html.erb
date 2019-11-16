@@ -53,18 +53,15 @@
               <h2>Today's Promo Codes On Amazon</h2>
               <% @promocodes.each do |promocode| %>
                 <div class="all_box clearfix">
-                  <div class="image_wrap"><div class="img"><img src="<%= promocode.p_image %>"></div></div>
-                  <div class="inner">
-                    <p><%= promocode.p_title %></p>
-                    <% if promocode.p_spare_03.present? %>
-                      <p>Avg <%= promocode.p_spare_03 %> rates | <%= number_with_delimiter(promocode.p_spare_04) %>+ reviews </p>
-                    <% end %>
-                    <% running_total = 0 %>
-                    <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
-                    <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code [ <%= promocode.p_promocode %> ])</span></p>
-                    <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a> <%= promocode.p_link %><br /><br />  
-                  </div> 
-                 </div>     
+                  <p><%= promocode.p_title %></p>
+                  <% if promocode.p_spare_03.present? %>
+                    <p>Avg <%= promocode.p_spare_03 %> rates | <%= number_with_delimiter(promocode.p_spare_04) %>+ reviews </p>
+                  <% end %>
+                  <% running_total = 0 %>
+                  <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
+                  <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code [ <%= promocode.p_promocode %> ])</span></p>
+                  <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a> <%= promocode.p_link %><br /><br />  
+                </div>     
                 <% end %>
               <em>더 많은 아마존 할인코드는 <a target="_blank" href="/promocodes">www.ohigottabuythis.net/promocodes</a></em>
             </div>
