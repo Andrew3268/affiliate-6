@@ -8,10 +8,10 @@
             <p>Main</p>
             <%= f.input :re_filter, label: "[gadgets, geeky, home&kitchen, fashion, travel]"%>
             <%= f.input :re_title %>
+            <%= f.input :re_image %>
             <%= f.input :sub_number_01, label: "Post Date"%>
             <%= f.input :re_intro %>
             <%= f.input :sub_intro %>
-            <%= f.input :re_image %>
           </div>
           <div class="input_image">
           </div>
@@ -22,7 +22,7 @@
             <p>Post Num.1</p>
             <%= f.input :sub_title_01 %>
             <%= f.input :sub_image_01 %>
-            <%= f.input :sub_intro_01 %>
+            <%= f.input :sub_intro_01, as: :trix_editor %>
             <%= f.input :sub_price_01 %>
             <%= f.input :sub_source_01 %>
             <%= f.input :sub_link_01 %>
@@ -32,7 +32,7 @@
             <p>Post Num.2</p>
             <%= f.input :sub_title_02 %>
             <%= f.input :sub_image_02 %>
-            <%= f.input :sub_intro_02 %>
+            <%= f.input :sub_intro_02, as: :trix_editor %>
             <%= f.input :sub_price_02 %>
             <%= f.input :sub_source_02 %>
             <%= f.input :sub_link_02 %>
@@ -42,7 +42,7 @@
             <p>Post Num.3</p>
             <%= f.input :sub_title_03 %>
             <%= f.input :sub_image_03 %>
-            <%= f.input :sub_intro_03 %>
+            <%= f.input :sub_intro_03, as: :trix_editor %>
             <%= f.input :sub_price_03 %>
             <%= f.input :sub_source_03 %>
             <%= f.input :sub_link_03 %>
@@ -52,7 +52,7 @@
             <p>Post Num.4</p>
             <%= f.input :sub_title_04 %>
             <%= f.input :sub_image_04 %>
-            <%= f.input :sub_intro_04 %>
+            <%= f.input :sub_intro_04, as: :trix_editor %>
             <%= f.input :sub_price_04 %>
             <%= f.input :sub_source_04 %>
             <%= f.input :sub_link_04 %>
@@ -62,7 +62,7 @@
             <p>Post Num.5</p>
             <%= f.input :sub_title_05 %>
             <%= f.input :sub_image_05 %>
-            <%= f.input :sub_intro_05 %>            
+            <%= f.input :sub_intro_05, as: :trix_editor %>            
             <%= f.input :sub_price_05 %>
             <%= f.input :sub_source_05 %>
             <%= f.input :sub_link_05 %>
@@ -75,7 +75,7 @@
             <p>Post Num.6</p>
             <%= f.input :sub_title_06 %>
             <%= f.input :sub_image_06 %>
-            <%= f.input :sub_intro_06 %>
+            <%= f.input :sub_intro_06, as: :trix_editor %>
             <%= f.input :sub_price_06 %>
             <%= f.input :sub_source_06 %>
             <%= f.input :sub_link_06 %>
@@ -85,7 +85,7 @@
             <p>Post Num.7</p>
             <%= f.input :sub_title_07 %>
             <%= f.input :sub_image_07 %>
-            <%= f.input :sub_intro_07 %>
+            <%= f.input :sub_intro_07, as: :trix_editor %>
             <%= f.input :sub_price_07 %>
             <%= f.input :sub_source_07 %>
             <%= f.input :sub_link_07 %>
@@ -95,7 +95,7 @@
             <p>Post Num.8</p>
             <%= f.input :sub_title_08 %>
             <%= f.input :sub_image_08 %>
-            <%= f.input :sub_intro_08 %>
+            <%= f.input :sub_intro_08, as: :trix_editor %>
             <%= f.input :sub_price_08 %>
             <%= f.input :sub_source_08 %>
             <%= f.input :sub_link_08 %>
@@ -105,7 +105,7 @@
             <p>Post Num.9</p>
             <%= f.input :sub_title_09 %>
             <%= f.input :sub_image_09 %>
-            <%= f.input :sub_intro_09 %>
+            <%= f.input :sub_intro_09, as: :trix_editor %>
             <%= f.input :sub_price_09 %>
             <%= f.input :sub_source_09 %>
             <%= f.input :sub_link_09 %>
@@ -115,7 +115,7 @@
             <p>Post Num.10</p>
             <%= f.input :sub_title_10 %>
             <%= f.input :sub_image_10 %>
-            <%= f.input :sub_intro_10 %>
+            <%= f.input :sub_intro_10, as: :trix_editor %>
             <%= f.input :sub_price_10 %>
             <%= f.input :sub_source_10 %>
             <%= f.input :sub_link_10 %>

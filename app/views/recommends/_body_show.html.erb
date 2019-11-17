@@ -30,11 +30,18 @@
   <div class="inner">
     <strong>1. <%= @recommend.sub_title_01 %></strong>
     <span>by <%= @recommend.sub_source_01 %></span>
-    <p><%= @recommend.sub_intro_01 %></p>
     <div class="btn clearfix">
       <em>$<%= @recommend.sub_price_01 %></em><a target="_blank" href="<%= @recommend.sub_link_01 %>">Buy Now</a>
     </div>
-    <address>Price may be changed after post published date.</address>
+    <em class="note">Price may be changed after post published date.</em>
+    <% if @recommend.sub_intro_01.present? %>
+      <div class="trix trix-container gradient recommend_trix">
+        <strong>About This</strong>
+        <p><%= @recommend.sub_intro_01.html_safe %></p>
+        <button class="show-btn fa fa-chevron-down"></button>
+      </div>
+    <% end %>
+    
     <div class="related">
      <script type="text/javascript">
       amzn_assoc_placement = "adunit0";
@@ -67,11 +74,18 @@
   <div class="inner">
     <strong>2. <%= @recommend.sub_title_02 %></strong>
     <span>by <%= @recommend.sub_source_02 %></span>
-    <p><%= @recommend.sub_intro_02 %></p>
     <div class="btn clearfix">
       <em>$<%= @recommend.sub_price_02 %></em><a target="_blank" href="<%= @recommend.sub_link_02 %>">Buy Now</a>
     </div>
-    <address>Price may be changed after post published date.</address>
+    <em class="note">price may be changed after post published date.</em>
+    <% if @recommend.sub_intro_02.present? %>
+      <div class="trix trix-container gradient recommend_trix">
+        <strong>About This</strong>
+        <p><%= @recommend.sub_intro_02.html_safe %></p>
+        <button class="show-btn fa fa-chevron-down"></button>
+      </div>
+    <% end %>
+    
     <div class="related">
      <script type="text/javascript">
       amzn_assoc_placement = "adunit0";
@@ -104,11 +118,18 @@
   <div class="inner">
     <strong>3. <%= @recommend.sub_title_03 %></strong>
     <span>by <%= @recommend.sub_source_03 %></span>
-    <p><%= @recommend.sub_intro_03 %></p>
     <div class="btn clearfix">
       <em>$<%= @recommend.sub_price_03 %></em><a target="_blank" href="<%= @recommend.sub_link_03 %>">Buy Now</a>
     </div>
-    <address>Price may be changed after post published date.</address>
+    <em class="note">Price may be changed after post published date.</em>
+    <% if @recommend.sub_intro_03.present? %>
+      <div class="trix trix-container gradient recommend_trix">
+        <strong>About This</strong>
+        <p><%= @recommend.sub_intro_03.html_safe %></p>
+        <button class="show-btn fa fa-chevron-down"></button>
+      </div>
+    <% end %>
+    
     <div class="related">
      <script type="text/javascript">
       amzn_assoc_placement = "adunit0";
@@ -141,11 +162,18 @@
   <div class="inner">
     <strong>4. <%= @recommend.sub_title_04 %></strong>
     <span>by <%= @recommend.sub_source_04 %></span>
-    <p><%= @recommend.sub_intro_04 %></p>
     <div class="btn clearfix">
       <em>$<%= @recommend.sub_price_04 %></em><a target="_blank" href="<%= @recommend.sub_link_04 %>">Buy Now</a>
     </div>
-    <address>Price may be changed after post published date.</address>
+    <em class="note">Price may be changed after post published date.</em>
+    <% if @recommend.sub_intro_04.present? %>
+      <div class="trix trix-container gradient recommend_trix">
+        <strong>About This</strong>
+        <p><%= @recommend.sub_intro_04.html_safe %></p>
+        <button class="show-btn fa fa-chevron-down"></button>
+      </div>
+    <% end %>
+    
     <div class="related">
      <script type="text/javascript">
       amzn_assoc_placement = "adunit0";
@@ -178,11 +206,18 @@
   <div class="inner">
     <strong>5. <%= @recommend.sub_title_05 %></strong>
     <span>by <%= @recommend.sub_source_05 %></span>
-    <p><%= @recommend.sub_intro_05 %></p>
     <div class="btn clearfix">
       <em>$<%= @recommend.sub_price_05 %></em><a target="_blank" href="<%= @recommend.sub_link_05 %>">Buy Now</a>
     </div>
-    <address>Price may be changed after post published date.</address>
+    <em class="note">Price may be changed after post published date.</em>
+    <% if @recommend.sub_intro_05.present? %>
+      <div class="trix trix-container gradient recommend_trix">
+        <strong>About This</strong>
+        <p><%= @recommend.sub_intro_05.html_safe %></p>
+        <button class="show-btn fa fa-chevron-down"></button>
+      </div>
+    <% end %>
+    
     <div class="related">
      <script type="text/javascript">
       amzn_assoc_placement = "adunit0";
@@ -216,11 +251,18 @@
     <div class="inner">
       <strong>6. <%= @recommend.sub_title_06 %></strong>
       <span>by <%= @recommend.sub_source_06 %></span>
-      <p><%= @recommend.sub_intro_06 %></p>
       <div class="btn clearfix">
         <em>$<%= @recommend.sub_price_06 %></em><a target="_blank" href="<%= @recommend.sub_link_06 %>">Buy Now</a>
       </div>
-      <address>Price may be changed after post published date.</address>
+      <em class="note">Price may be changed after post published date.</em>
+      <% if @recommend.sub_intro_06.present? %>
+        <div class="trix trix-container gradient recommend_trix">
+          <strong>About This</strong>
+          <p><%= @recommend.sub_intro_06.html_safe %></p>
+          <button class="show-btn fa fa-chevron-down"></button>
+        </div>
+      <% end %>
+      
       <div class="related">
        <script type="text/javascript">
         amzn_assoc_placement = "adunit0";
@@ -255,11 +297,18 @@
     <div class="inner">
       <strong>7. <%= @recommend.sub_title_07 %></strong>
       <span>by <%= @recommend.sub_source_07 %></span>
-      <p><%= @recommend.sub_intro_07 %></p>
       <div class="btn clearfix">
-        <em>$<%= @recommend.sub_price_07 %></em><a target="_blank" href="<%= @recommend.sub_link_07 %>">Buy Now</a>
+      <em>$<%= @recommend.sub_price_07 %></em><a target="_blank" href="<%= @recommend.sub_link_07 %>">Buy Now</a>
       </div>
-      <address>Price may be changed after post published date.</address>
+      <em class="note">Price may be changed after post published date.</em>
+      <% if @recommend.sub_intro_07.present? %>
+        <div class="trix trix-container gradient recommend_trix">
+          <strong>About This</strong>
+          <p><%= @recommend.sub_intro_07.html_safe %></p>
+          <button class="show-btn fa fa-chevron-down"></button>
+        </div>
+      <% end %>
+      
       <div class="related">
        <script type="text/javascript">
         amzn_assoc_placement = "adunit0";
@@ -294,11 +343,18 @@
     <div class="inner">
       <strong>8. <%= @recommend.sub_title_08 %></strong>
       <span>by <%= @recommend.sub_source_08 %></span>
-      <p><%= @recommend.sub_intro_08 %></p>
       <div class="btn clearfix">
         <em>$<%= @recommend.sub_price_08 %></em><a target="_blank" href="<%= @recommend.sub_link_08 %>">Buy Now</a>
       </div>
-      <address>Price may be changed after post published date.</address>
+      <em class="note">Price may be changed after post published date.</em>
+      <% if @recommend.sub_intro_08.present? %>
+        <div class="trix trix-container gradient recommend_trix">
+          <strong>About This</strong>
+          <p><%= @recommend.sub_intro_08.html_safe %></p>
+          <button class="show-btn fa fa-chevron-down"></button>
+        </div>
+      <% end %>
+      
       <div class="related">
        <script type="text/javascript">
         amzn_assoc_placement = "adunit0";
@@ -333,11 +389,18 @@
     <div class="inner">
       <strong>9. <%= @recommend.sub_title_09 %></strong>
       <span>by <%= @recommend.sub_source_09 %></span>
-      <p><%= @recommend.sub_intro_09 %></p>
       <div class="btn clearfix">
-        <em>$<%= @recommend.sub_price_09 %></em><a target="_blank" href="<%= @recommend.sub_link_09 %>">Buy Now</a>
+       <em>$<%= @recommend.sub_price_09 %></em><a target="_blank" href="<%= @recommend.sub_link_09 %>">Buy Now</a>
       </div>
-      <address>Price may be changed after post published date.</address>
+      <em class="note">Price may be changed after post published date.</em>
+      <% if @recommend.sub_intro_09.present? %>
+        <div class="trix trix-container gradient recommend_trix">
+          <strong>About This</strong>
+          <p><%= @recommend.sub_intro_09.html_safe %></p>
+          <button class="show-btn fa fa-chevron-down"></button>
+        </div>
+      <% end %>
+      
       <div class="related">
        <script type="text/javascript">
         amzn_assoc_placement = "adunit0";
@@ -370,13 +433,20 @@
       <% end %>
     </div>
     <div class="inner">
-      <strong><0. <%= @recommend.sub_title_10 %></strong>
+      <strong>10. <%= @recommend.sub_title_10 %></strong>
       <span>by <%= @recommend.sub_source_10 %></span>
-      <p><%= @recommend.sub_intro_10 %></p>
       <div class="btn clearfix">
         <em>$<%= @recommend.sub_price_10 %></em><a target="_blank" href="<%= @recommend.sub_link_10 %>">Buy Now</a>
       </div>
-      <address>Price may be changed after post published ate.</address>
+      <em class="note">Price may be changed after post published ate.</em>
+      <% if @recommend.sub_intro_10.present? %>
+        <div class="trix trix-container gradient recommend_trix">
+          <strong>About This</strong>
+          <p><%= @recommend.sub_intro_10.html_safe %></p>
+          <button class="show-btn fa fa-chevron-down"></button>
+        </div>
+      <% end %>
+      
       <div class="related">
        <script type="text/javascript">
         amzn_assoc_placement = "adunit0";
