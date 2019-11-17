@@ -1,0 +1,21 @@
+<% @recommends.each do |recommend| %>
+ <div class="filter-node promotion_box recommend_box" data-filter='["<%= recommend.re_filter %>","<%= recommend.re_title %>"]'>
+  <div class="image_box"><%= link_to (image_tag recommend.re_image), recommend %></div>
+  <div class="node-box inner">
+    <h2 class="re_title"><%= link_to recommend.re_title, recommend %></h2>
+    <!-- <p><%= link_to recommend.re_intro, recommend %></p> -->
+    <!-- <span>Last Updated: <%= recommend.sub_number_01 %></span> -->
+    <div class="clearfix admin">
+      <% if can? :update, recommend %>
+        <%= link_to "Edit", edit_recommend_path(recommend) %> | <%= link_to "Delete", recommend_path(recommend), method: :delete, data: {confirm: "Are you sure?"}%>
+      <% end %>  
+    </div>    
+  </div>
+  <div class="btn"><%= link_to "Read More", recommend %></div>
+  <% if can? :update, recommend %>
+    <div class="pinterest">
+     <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+    </div>
+  <% end %>
+ </div> 
+<% end %>

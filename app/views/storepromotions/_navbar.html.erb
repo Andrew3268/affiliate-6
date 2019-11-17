@@ -3,7 +3,8 @@
   <!-- <div class="sm_pc"></div> -->
   
   <div class="sm_mobile sp_m">
-    <ul class="sp_ul">
+    <ul class="sp_ul" id='sort'>
+      <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
       <li><a href="/storepromotions/">All Stores</a><br/></li>
       <% Spcategory.all.each do |category| %>
         <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>

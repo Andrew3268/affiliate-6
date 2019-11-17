@@ -1,6 +1,6 @@
 <div class="layout"><!--layout-->
  <div class="wrap">   
-  <%= render 'shared/header' %>
+  <%= render 'shared/header_short' %>
   
     <div class="cu_sub_nav">
       <ul class="clearfix">
@@ -9,20 +9,21 @@
         <!-- <li><a href="/editors/index">Editor's Pick</a></li> -->
         <!-- <li><a href="/blogs/index">Blog</a></li> -->
       </ul>
-    </div>
 
-    <div class="promotions common_layout clearfix">
-      <%= render 'recommends/navbar' %>
       <div class="admin">
         <% if can? :update, @recommends %>
-         <%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %>
+         <%= link_to "Add Featured", new_recommend_path, :class => "filter-button" %> | 
          <% if user_signed_in? %>
           <%= link_to "Log out", destroy_user_session_path, method: :delete, :class => "filter-button"%>
          <% end %>
         <% end %>
       </div>
-      <div class="filter-group guide_wrap">
-        <%= render 'recommends/body' %>
+    </div>
+
+    <div class="promotions common_layout clearfix">
+      <%= render 'recommends/navbar' %>
+      <div class="filter-group guide_wrap re_index">
+        <%= render 'recommends/body_index' %>
       </div><!--./guide_wrap-->
     </div>      
 

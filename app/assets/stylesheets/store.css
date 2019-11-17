@@ -71,13 +71,16 @@
 .sp_wrap .sp_left .sp_menu ul li{margin-bottom:5px;background:#08f;padding:5px 15px;border-radius:15px;}
 .sp_wrap .sp_left .sp_menu ul li.admin{background:#000;}
 .sp_wrap .sp_left .sp_menu ul li a{color:#fff;font-size:15px;display:block;}
-.sp_wrap .sp_left .sp_menu .show-more-height{height:300px;overflow:hidden;}
+.sp_wrap .sp_left .sp_menu .show-more-height{height:371px;overflow:hidden;}
+.sp_wrap .sp_left .sp_menu .store_search input{width:100%;padding:10px;border-radius:10px;border:1px solid #ccc;margin-bottom:5px;}
+.sp_wrap .sp_left .sp_menu button{background:#ccc;padding:5px 15px;margin-bottom:5px;border-radius:15px;width:100%;font-size:15px;color:#fff;}
 .sp_wrap .sp_left .show-more{text-align:center;background:#000;color:#fff;padding:5px 10px;border-radius:15px;}
 /* Mobile Menu */
 .featured .sp_m{width:100%;}
 .featured .sm_mobile ul.sp_ul{padding:20px;font-family:'Anton', sans-serif;overflow:scroll;height:80%;}
 .featured .sm_mobile ul.sp_ul li{line-height:1.1;}
 .featured .sm_mobile ul.sp_ul li a{color:#fff;font-size:40px;text-transform:uppercase;}
+.featured .sm_mobile .store_search input{padding:10px;width:80%;margin-bottom:5px;}
 
 .sp_wrap .sp_right .sp_card{border-bottom:1px solid #ccc;padding:20px 0;}
 .sp_wrap .sp_right .sp_card .admin{font-size:12px;}
@@ -120,8 +123,9 @@
   .sp_wrap .sp_left .sp_menu ul li a{font-size:12px;}
   .sp_wrap .sp_right .inner .sp_title{font-size:15px;}
   .sp_wrap .sp_right .sp_btn a{padding:10px;font-size:11px;text-align:center;}
+  .sp_wrap .sp_left .sp_menu .show-more-height{height:333px;}
+  .sp_wrap .sp_left .sp_menu button{font-size:11px;}
 }
-
 
 /******************************************************************************************************/
 /* Store Deals Main page "/storedeals" */
@@ -131,14 +135,6 @@
 .store_nav ul li a{color:#000;}
 .sub_nav .sub_nav_pc>ul>li.sd_all>a.active{background:#fff;border-bottom:none;}
 .sd_category div p span{background:#ffff00;padding:0 7px;}
-
-
-
-
-
-
-
-
 
 
 .store_top{}

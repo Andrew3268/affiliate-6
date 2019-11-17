@@ -14,6 +14,10 @@ class StorepromotionsController < ApplicationController
     else
       @storepromotions = Storepromotion.all.order("created_at DESC").page(params[:page]).per_page(50)
     end
+    if params[:search]
+      @search_term = params[:search]
+      @storepromotions = @storepromotions.search_by(@search_term)
+    end
   end
 
   # GET /storepromotions/1
