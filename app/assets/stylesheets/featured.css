@@ -499,7 +499,8 @@
   .promotions .promotion_box .inner h2.re_title{font-size:15px;}
   .promotions .promotion_box{width:48%;}
   .most_wrapper{margin-top:-25px;}
-  .promotions .recommend_box{width:33.33%;}
+  .promotions .recommend_box{width:31.33%;height:350px;}
+  .promotions .recommend_box img{height:150px;}
 }
 /* End Promotion */
 
