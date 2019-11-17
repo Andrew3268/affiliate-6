@@ -126,7 +126,7 @@
 .cu_wrap .inner>strong{font-size:26px;display:block;line-height:1.2;font-weight:100;}
 .cu_wrap .inner>strong>span{display:none;}
 .cu_wrap .inner>span{display:inline-block;border-bottom:1px solid #ccc;}
-.cu_wrap .inner>p{border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:10px;margin-top:20px;}
+.cu_wrap .inner>p{border-bottom:1px solid #ccc;margin-top:20px;}
 .cu_wrap .inner>h4{margin:10px 0 -20px 0;}
 .cu_wrap .inner>em.note{margin-top:-20px;}
 .cu_wrap .inner .btn{margin-top:20px;/*display:inline-block;*/}
