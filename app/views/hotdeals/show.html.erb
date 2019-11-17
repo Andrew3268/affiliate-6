@@ -21,21 +21,23 @@
           <div class="mark"><span>HOT</span><em>DEALS</em></div>
           <% if can? :update, @hotdeal %>
             <div class="admin">
-              <p>Admin Management</p>
+              <h4>Admin Management</h4>
               <%= link_to 'Back', hotdeals_path %> |
               <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
               <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
               <%= render 'hotdeals/body_sns' %><br>
               <%= @hotdeal.impressionist_count(:filter=>:all) %> Views |
               <%= @hotdeal.created_at.strftime("%d. %B.") %><br />
-              <%= @hotdeal.h_title %><br/>
-              <% if @hotdeal.h_spare_42.present? %>
-                <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-              <% else %>
-                <% running_total = 0 %>
-                <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
-                <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_44) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
-              <% end %>
+              <div class="sharing">
+                <p><%= @hotdeal.h_title %></p>
+                <% if @hotdeal.h_spare_42.present? %>
+                  <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+                <% else %>
+                  <% running_total = 0 %>
+                  <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
+                  <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_44) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                <% end %>
+              </div>
             </div>
           <% end %>
         </div>

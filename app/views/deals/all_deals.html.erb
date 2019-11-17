@@ -60,24 +60,26 @@
                   <% running_total = 0 %>
                   <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
                   <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code [ <%= promocode.p_promocode %> ])</span></p>
-                  <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a> <%= promocode.p_link %><br /><br />  
+                  <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a><br />
                 </div>     
                 <% end %>
-              <em>더 많은 아마존 할인코드는 <a target="_blank" href="/promocodes">www.ohigottabuythis.net/promocodes</a></em>
+              <span class="check_more"> <a target="_blank" href="/promocodes">Check More Promo Codes: www.ohigottabuythis.net/promocodes</a></span>
             </div>
             <hr>
             <div class="all_hotdeals">
               <h2>Today's Bargain On Amazon</h2>
                 <% @hotdeals.each do |hotdeal| %>
-                  <p><%= hotdeal.h_title %></p>
-                  <% if hotdeal.h_spare_08.present? %>
-                    <p>Avg <%= hotdeal.h_spare_08 %> rates | <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews </p>
-                  <% end %>
-                  <p><%= number_to_currency(hotdeal.h_spare_41) %> (Was: <%= number_to_currency(hotdeal.h_spare_42) %> | <%= 
-                  number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF)</p>
-                  <a target="_blank" href="<%= hotdeal.h_link %>">[ Take Deals ]</a><br /><br />
+                  <div class="all_box clearfix">
+                    <p><%= hotdeal.h_title %></p>
+                    <% if hotdeal.h_spare_08.present? %>
+                      <p>Avg <%= hotdeal.h_spare_08 %> rates | <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews </p>
+                    <% end %>
+                    <p><%= number_to_currency(hotdeal.h_spare_41) %> (Was: <%= number_to_currency(hotdeal.h_spare_42) %> | <%= 
+                    number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF)</p>
+                    <a target="_blank" href="<%= hotdeal.h_link %>">[ Take This Deals ]</a><br />
+                  </div>
                 <% end %>
-              <span>더 많은 아마존 핫딜은 <a target="_blank" href="/hotdeals">www.ohigottabuythis.net/hotdeals</a></span>
+              <span class="check_more"> <a target="_blank" href="/hotdeals">Check More Bargain: www.ohigottabuythis.net/hotdeals</a></span>
             </div>
           </div><!--./all_wrap-->
         </div><!--#/tab-content-2-->
