@@ -43,7 +43,7 @@
 
 /* Begin Featured Main Page */
 .featured{margin:-20px 0 0 0;}
-.featured .sm_pc.on{position:fixed;top:70px;width:290px;}
+.featured .sm_pc.on{position:fixed;top:70px;width:290px;display:none;}
 .featured .sm_pc .search_bar{position:relative;margin-top:20px;border:1px solid #ccc;}
 .featured .sm_pc .search_bar .form-control{padding:5px 0;width:80%;border:none;}
 .featured .sm_pc .search_bar img{position:absolute;top:3px;right:5px;}
