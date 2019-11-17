@@ -150,7 +150,8 @@
   .deals_card .image_box{height:200px;padding:0;}
   .deals_card .image_box .expried_wrap .mark_expried{width:55px;height:30px;}
   .deals_card .image_box .mark_expried p{font-size:10px;font-weight:bold;}
-  .deals_card .image_box .mark{font-size:11px;font-weight:600;width:40px;padding:3px;}
+  .deals_card .image_box .mark{font-size:11px;font-weight:600;width:60px;padding:3px;height:35px;}
+  .deals_card .image_box .exprie p{margin-top:9px;}
   .deals_card h3{font-size:14px;}
   .deals_card p{font-size:13px;line-height:1.2;height:3.6em;}
   .deals_card .price{font-size:15px;}
@@ -160,6 +161,8 @@
   .dealpage_title p{font-size:35px;}
   .dealpage_title p:after{height:5px;}
   .deals__main_menu ul .nth_2 a:after{height:7px;top:67%;}
+  .deals_card .image_box .endtoday{width:70px;height:35px;padding-top:6px;}
+  .deals_card .image_box .endtoday span{display:block;}
   /* Store Station Page "/deals/stores */
   .deals_card p.store_title{height:2.4em;}
 
