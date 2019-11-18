@@ -13,15 +13,39 @@
 
     <% @promocodes.each do |promocode| %>
       <figure class="deals_card">
-        <div class="image_box">
+        <% if promocode.p_spare_50 && (promocode.p_spare_50 < DateTime.now) %>
+         <% promocode.p_spare_50 %>
+         <div class="image_box">
+          <div class="expried">
+            <% if promocode.p_image.present? %>
+              <%= link_to image_tag(promocode.p_image, alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+            <% else %>
+              <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+            <% end %>
+          </div>
+          <div class="expried_wrap"><div class="mark term exprie"><p>EXPIRED</p></div></div>
+         </div>
+        <% else %>
+         <div class="image_box">
           <% if promocode.p_image.present? %>
-            <%= link_to image_tag(promocode.p_image), promocode %>
+            <%= link_to image_tag(promocode.p_image, alt: promocode.p_title, title: promocode.p_image_title), promocode %>
           <% else %>
             <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
           <% end %>
-          <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
-        </div>
-        <div class="buy-now"><span><a target="_blank" href="<%= promocode.p_link %>">BUY NOW</a></span></div>
+          
+            <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
+            <% promocode.p_spare_51 %>
+              <% if promocode.p_spare_51.present? %>
+                <div class="expried_wrap"><div class="mark term endtoday"><p><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</span>Ends Today</p></div></div>
+              <% end %>
+            <% else %>
+              <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
+            <% end %>
+
+         </div>
+        <% end %>
+         
+        <div class="buy-now"><span><%= link_to "GET CODE", promocode %></span></div>
         <figcaption>
           <h3><%= render_with_phashtags(promocode.p_hashtag.to_s) %></h3>
           <p><%= link_to promocode.p_title, promocode %></p>
@@ -30,8 +54,16 @@
             <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
             <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
           </div>
-          <div class="m_btn"><a href="<%= promocode.p_link %>">Buy Now</a></div>
+
+          <div class="m_btn"><%= link_to "GET CODE", promocode %></a></div>
+          <% if can? :update, @promocode %>
+           <div class="admin">
+             <%= link_to 'Edit', edit_promocode_path(promocode) %> | 
+             <%= link_to 'Destroy', promocode, method: :delete, data: { confirm: 'Are you sure?' } %>
+           </div><!--/.amdin-->
+          <% end %>
         </figcaption>
+        
       </figure>
     <% end %> 
 
