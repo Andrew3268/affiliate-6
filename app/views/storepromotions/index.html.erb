@@ -16,6 +16,12 @@
         <div class="sp_menu">
           <div class="text show-more-height">
             <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
+            <% if can? :update, @storepromotions %>
+             <ul>
+              <li class="admin"><%= link_to 'New Deals', new_storepromotion_path %></li>
+              <li class="admin"><%= link_to "New Store(Category)", new_spcategory_path %></li>
+             </ul>
+            <% end %>
             <button id='sort-button'>Sort By Alphabetically</button>
             <ul><li><a href="/storepromotions/">All Stores</a></li></ul>
             <ul id='sort'>
@@ -23,12 +29,6 @@
                 <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
               <% end %>
             </ul>
-            <% if can? :update, @storepromotions %>
-             <ul>
-              <li class="admin"><%= link_to 'New Store', new_storepromotion_path %></li>
-              <li class="admin"><%= link_to "New Category", new_spcategory_path %></li>
-             </ul>
-            <% end %>
             <!-- Only in navbar
             <% Spcategory.where(display_in_navbar: true).each do |category| %>
               <%= link_to category.name, storepromotions_path(spcategory: category.name) %>
@@ -89,6 +89,10 @@
                       </em>
                     <% end %>
                   </div><!--./promocode_m-->
+                <% else %>
+                  <div class="text_copied store_code">
+                    <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
+                  </div>
                 <% end %>
 
                 

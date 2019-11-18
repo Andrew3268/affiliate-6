@@ -5,16 +5,16 @@
 
     <div class="form-inputs">
       <%= f.association :spcategory %>
-      <%= f.input :sp_store_name %>
-      <%= f.input :sp_image %>
-      <%= f.input :sp_link %>
-      <%= f.input :sp_title %>
-      <%= f.input :sp_description, as: :trix_editor %>
+      <%= f.input :sp_store_name, label: 'Store Name' %>
+      <%= f.input :sp_image, label: 'Store Logo' %>
+      <%= f.input :sp_link, label: 'Store Link' %>
+      <%= f.input :sp_title, label: 'Title of Deal'%>
+      <%= f.input :sp_description, as: :trix_editor, label: 'Description of Deal' %>
       <div class="pricing clearfix">
-        <%= f.input :sp_percentage_01 %>
-        <%= f.input :sp_percentage_02 %>
-        <%= f.input :sp_promocode, input_html: { class: "promo_code" } %>
-        <%= f.input :sp_end_date, input_html: { class: "promo_date" } %>        
+        <%= f.input :sp_percentage_01, label: 'Percentage' %>
+        <%= f.input :sp_percentage_02, label: 'Percentage' %>
+        <%= f.input :sp_promocode, input_html: { class: "promo_code" }, label: 'Promotion Code' %>
+        <%= f.input :sp_end_date, input_html: { class: "promo_date" }, label: 'Ends Date' %>        
       </div>
       <%= f.input :sp_spare_60, label: 'Expired Date' %>
       <%= f.input :sp_spare_61, label: 'Ends Today' %>
