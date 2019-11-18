@@ -25,42 +25,49 @@
          <div class="hotdeal_inner">
            <p><%= @storepromotion.sp_store_name %> | Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
            <h2><%= @storepromotion.sp_title %></h2>
-           <p class="sp_des"><%= @storepromotion.sp_description.html_safe %></p>
 
-             <% if @storepromotion.sp_promocode.present? %>
-                <div class="extra_info">
-                  <em>* Pricing may change and deals can expire fast.</em>
-                  <em class="code_em">
+           <div class="trix"><p class="sp_des"><%= @storepromotion.sp_description.html_safe %></p></div>
+
+             <% if @storepromotion.sp_end_date.present? %>
+               <% if @storepromotion.sp_promocode.present? %>
+                  <div class="extra_info">
+                    <em>* Pricing may change and deals can expire fast.</em>
+                    <em class="code_em">
+                      <% if @storepromotion.sp_spare_60 < DateTime.now %>
+                      <% @storepromotion.sp_spare_60 %>
+                        <em class="expired">* This Promo Code has EXPIRED.</em>
+                      <% else %>
+                        <% if @storepromotion.sp_spare_61 <= DateTime.now %>
+                        <% @storepromotion.sp_spare_61 %>
+                          <em class="endtoday">* This coupon expires today.</em>
+                        <% else %>
+                          * End Date: <%= @storepromotion.sp_end_date %> 
+                        <% end %>
+                      <% end %>
+                    </em>
+                  </div> 
+                  <div class="text_copied intheshow">
+                    <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= @storepromotion.sp_promocode %></p></div></div></div>
+                  </div>
+                <% else %>
+                  <div class="extra_info">  
+                   <em>* Pricing may change and deals can expire fast.</em>
                     <% if @storepromotion.sp_spare_60 < DateTime.now %>
                     <% @storepromotion.sp_spare_60 %>
-                      <em class="expired">* This Promo Code has EXPIRED.</em>
+                      <em class="expired">This offer has EXPIRED.</em>
                     <% else %>
-                      <% if @storepromotion.sp_spare_61 <= DateTime.now %>
+                     <% if @storepromotion.sp_spare_61 <= DateTime.now %>
                       <% @storepromotion.sp_spare_61 %>
-                        <em class="endtoday">* This coupon expires today.</em>
+                        <em class="endtoday">* This offer expires today.</em>
                       <% else %>
-                        * End Date: <%= @storepromotion.sp_end_date %> 
+                        <em>* End Date: <%= @storepromotion.sp_end_date %></em>
                       <% end %>
                     <% end %>
-                  </em>
-                </div> 
+                  </div>
+                <% end %>
+              <% else %>
                 <div class="text_copied intheshow">
                   <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= @storepromotion.sp_promocode %></p></div></div></div>
-                </div>
-              <% else %>
-                <div class="extra_info">  
-                 <em>* Pricing may change and deals can expire fast.</em>
-                  <% if @storepromotion.sp_spare_60 < DateTime.now %>
-                  <% @storepromotion.sp_spare_60 %>
-                    <em class="expired">This offer has EXPIRED.</em>
-                  <% else %>
-                   <% if @storepromotion.sp_spare_61 <= DateTime.now %>
-                    <% @storepromotion.sp_spare_61 %>
-                      <em class="endtoday">* This offer expires today.</em>
-                    <% else %>
-                      <em>* End Date: <%= @storepromotion.sp_end_date %></em>
-                    <% end %>
-                  <% end %>
                 </div>
               <% end %>
 
