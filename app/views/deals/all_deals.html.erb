@@ -19,8 +19,11 @@
             <div class="common promocodes">
               <h2>오늘의 아마존 할인 코드</h2>
               <% @promocodes.each do |promocode| %>
-                <!-- <p><%= promocode.p_spare_06 %></p> -->
-                <p><%= promocode.p_title %></p>
+                <% if promocode.p_spare_06.present? %>
+                  <p><%= promocode.p_spare_06 %></p>
+                <% else %>
+                  <p><%= promocode.p_title %></p>
+                <% end %>
                 <% if promocode.p_spare_03.present? %>
                   <p>평균 평점: Avg <%= promocode.p_spare_03 %> rates | 리뷰 수: <%= number_with_delimiter(promocode.p_spare_04) %>+ reviews </p>
                 <% end %>
@@ -35,8 +38,11 @@
             <div class="common hotdeals">
               <h2>오늘의 아마존 핫딜</h2>
                 <% @hotdeals.each do |hotdeal| %>
-                  <!-- <p><%= hotdeal.h_spare_11 %></p> -->
-                  <p><%= hotdeal.h_title %></p>
+                  <% if hotdeal.h_spare_11.present? %>
+                    <p><%= hotdeal.h_spare_11 %></p>
+                  <% else %>
+                    <p><%= hotdeal.h_title %></p>
+                  <% end %>
                   <% if hotdeal.h_spare_08.present? %>
                     <p>평균 평점: Avg <%= hotdeal.h_spare_08 %> rates | 리뷰 수: <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews </p>
                   <% end %>
