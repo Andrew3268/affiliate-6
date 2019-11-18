@@ -28,10 +28,12 @@
               <%= render 'promocodes/body_sns' %><br>
               <%= @promocode.impressionist_count(:filter=>:all) %> Views |
               <%= @promocode.created_at.strftime("%d. %B.") %><br>
-              <%= @promocode.p_title %>
-              <% running_total = 0 %>
-              <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
-              <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> )</span></p>
+              <div class="sharing">
+                <%= @promocode.p_title %>
+                <% running_total = 0 %>
+                <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
+                <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> )</span></p>
+              </div>
             </div>
           <% end %>
         </div>
@@ -70,8 +72,8 @@
               <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
             <% end %>
             
-            <% if @promocode.p_extra_deal.present? %><em class="extra_dh">+ <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
-            <% if @promocode.p_coupon_deal.present? %><em class="extra_dh">+ <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
+            <% if @promocode.p_extra_deal.present? %><em class="extra_dh">+ Get <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
+            <% if @promocode.p_coupon_deal.present? %><em class="extra_dh">+ Clip the <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
 
             <% if @promocode.p_spare_50.present? %>
               <% if @promocode.p_spare_50 < DateTime.now %>

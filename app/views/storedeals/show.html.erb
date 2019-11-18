@@ -10,11 +10,13 @@
         <!-- <p>Location Map</p> -->
         
         <div class="show_img hotdeal_img">
-          <% if @storedeal.sd_image.present? %>
-            <a target="_blank" href="<%= @storedeal.sd_link %>"><img src="<%= @storedeal.sd_image %>" alt="<%= @storedeal.sd_title %>" title="<%= @storedeal.sd_spare_04 %>"></a>
-          <% else %>
-            <%= link_to (image_tag @storedeal.himage.url(:small), alt: @storedeal.sd_title, title: @storedeal.sd_spare_04), @storedeal %>
-          <% end %>
+          <div class="img_box">
+            <% if @storedeal.sd_image.present? %>
+              <a target="_blank" href="<%= @storedeal.sd_link %>"><img src="<%= @storedeal.sd_image %>" alt="<%= @storedeal.sd_title %>" title="<%= @storedeal.sd_spare_04 %>"></a>
+            <% else %>
+              <%= link_to (image_tag @storedeal.himage.url(:small), alt: @storedeal.sd_title, title: @storedeal.sd_spare_04), @storedeal %>
+            <% end %>
+          </div>
           <div class="mark"><span>HOT</span><em>DEALS</em></div>
           <% if can? :update, @storedeal %>
             <div class="admin">
@@ -79,7 +81,7 @@
             <div class="only_show"><a class="m_btn p_btn" target="_blank" href="<%= @storedeal.sd_link %>">Check it out on&ensp;<em><%= @storedeal.sdcategory.name %></em></a></div>
 
             <%if @storedeal.sd_spare_50.present? %>
-              <div class="trix"><span>Features</span><p><%= @storedeal.sd_spare_50.html_safe %></p></div>
+              <div class="trix trix-container gradient"><span>Features</span><p><%= @storedeal.sd_spare_50.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
             <% else %>
               <% if @storedeal.sd_description.present? %>
                 <div class="show_des"><p class="description"><%= @storedeal.sd_description %></p></div>
@@ -102,6 +104,7 @@
     
   </div>
 </div>
+<script><%= render(:partial => 'storedeals', :handlers => [:erb], :formats => [:js]) %></script>
 
 
 

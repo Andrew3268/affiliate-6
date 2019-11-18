@@ -53,6 +53,7 @@
 .show_wrap .show_box .show_img .mark span{text-align:center;color:#fff;letter-spacing:3.1px;display:block;}
 .show_wrap .show_box .show_img .mark em{display:block;text-align:center;font-size:10px;color:#fff;}
 .show_wrap .show_box .show_img .admin a{background:none;color:#fff;background:#000;padding:1px 5px;}
+.show_wrap .show_box .show_img .admin .sharing{font-size:10px;}
 .hotdeal_related{width:1000px;margin:30px auto 0 auto;font-family: 'Montserrat', sans-serif;}
 .hotdeal_related p{text-align:center;font-size:30px;margin-bottom:20px;}
 

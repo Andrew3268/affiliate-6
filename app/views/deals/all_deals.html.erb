@@ -111,19 +111,25 @@
          <div class="image"><img src="<%= hotdeal.h_image %>"></div>
          <div class="info">
           <div class="title"><p><%= hotdeal.h_spare_11 %></p></div>
-          <p><%= hotdeal.h_spare_11 %>은 현재 아마존에서 </p>
-          <p><%= number_to_currency(hotdeal.h_spare_42) %> <em><%= number_to_currency(hotdeal.h_spare_41) %></em><span>(<%= number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF) | + 미국내 무료배송(구매금액이 $25 이상 또는 Prime 맴버일 경우 해당)</p></span>
-          <p>Tips</p>
-          <p></p>
-          <p>$200이하 무관세 | 직배송 가능</p>
+          <% if hotdeal.h_spare_42.present? %>
+            <p class="h_price"><%= number_to_currency(hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF ) | + 미국내 무료배송( $25 이상 또는 Prime 맴버)</span></p>
+          <% else %>
+            <% running_total = 0 %>
+            <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+            <p class="h_price"><%= number_to_currency(hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_44)  %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) | + 미국내 무료배송( $25 이상 또는 Prime 맴버)</span></p>
+          <% end %>
+          <p class="tips">Tips</p>
+          <ul class="tips_ul">
+            <li>* 관부과세: 무관세 대상($200 이하)</li>
+            <li>* 직배송: 가능</li>
+            <li>+ 15% 쿠폰 할인</li>
+          </ul>
           <h4><a href="<%= hotdeal.h_link %>">Check This Deals</a></h4>
          </div>
         </div>
       <% end %>
     </div>
- -->
-
-
+  -->
 
 
  </div><!--./wrap-->
