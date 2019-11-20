@@ -138,6 +138,7 @@
   .codes .card_wrap .card .inner>.code_high .tooltip_purple .tooltip-content{background:#b400b4;}
 
   .codes .card_wrap .card .inner>.code_high>em{font-size:12px;color:#616161;display:block;}
+  .codes .card_wrap .card .inner>.code_high>em.expired{color:red;}
 
   .codes .card_wrap .card .inner>.code_high>p{color:#616161;font-size:13px;display:inline;/*border-bottom:0.4em solid rgba(51,51,255,0.2);position:relative;*/}
   .codes .card_wrap .card .inner>.code_high .discounted{color:#08f;font-size:25px;margin-right:5px;font-weight:700;display:inline-block;}
@@ -670,38 +671,6 @@ nav.most_m_popup ul li{padding:6px 10px 3px 10px;border-bottom:1px solid #ccc;}
   100%{transform-origin:top center;transform:rotateX(0deg);}
 }
 
-/* all_deals */
-.all_wrap{}
-.all_wrap .check_more{background:#000;color:#fff;padding:10px;}
-.all_wrap .check_more a{color:#fff;}
-.all_wrap .common{margin:0 1% 20px 1%;}
-.all_wrap .common span{margin-top:20px;}
-.all_wrap .common .h_price .span_01{color:#616161;text-decoration:line-through;font-size:15px;}
-.all_wrap .common .h_price .span_02{font-size:15px;}
-.all_wrap .common .h_price .span_02 em{color:#ff4d4d;font-weight:bold;}
-.all_box{border-bottom:1px solid #ccc;padding:5px;margin-bottom:10px;}
-
-
-
-
-/* About SNS */
-.for_sns{width:500px;}
-.for_sns .wrapping{margin-bottom:30px;}
-.for_sns .wrapping .image{width:350px;height:350px;}
-.for_sns .wrapping .image img{width:100%;height:100%;padding:30px;}
-.for_sns .wrapping .title{}
-.for_sns .wrapping .info{}
-.for_sns .wrapping .info .h_price .span_01{color:#616161;text-decoration:line-through;font-size:15px;}
-.for_sns .wrapping .info .h_price .span_02{font-size:15px;}
-.for_sns .wrapping .info p{font-size:17px;}
-.for_sns .wrapping .info p em{text-decoration:line-through;font-size:15px;}
-.for_sns .wrapping .info p span{font-size:15px;}
-.for_sns .wrapping .info a{color:#08f;display:block;}
-.for_sns .wrapping .info table{border-collapse: collapse;width:100%;}
-.for_sns .wrapping .info table, td, th{border: 1px solid #000;}
-
-
-
 /* Tab Menu */
 .alldeals_tabs{}
 .alldeals_tabs input[type=radio]{display:none;}
@@ -730,6 +699,47 @@ nav.most_m_popup ul li{padding:6px 10px 3px 10px;border-bottom:1px solid #ccc;}
 #tab2:checked ~ .tab-content-wrapper #tab-content-2, 
 #tab3:checked ~ .tab-content-wrapper #tab-content-3, 
 #tab4:checked ~ .tab-content-wrapper #tab-content-4{position:relative;top: 0px;}
+
+
+
+/* all_deals */
+.all_wrap{}
+.all_wrap .check_more{background:#000;color:#fff;padding:10px;}
+.all_wrap .check_more a{color:#fff;}
+.all_wrap .common{margin:0 1% 20px 1%;}
+.all_wrap .common span{margin-top:20px;}
+.all_wrap .common .h_price .span_01{color:#616161;text-decoration:line-through;font-size:15px;}
+.all_wrap .common .h_price .span_02{font-size:15px;}
+.all_wrap .common .h_price .span_02 em{color:#ff4d4d;font-weight:bold;}
+.all_box{border-bottom:1px solid #ccc;padding:5px;margin-bottom:10px;}
+
+/* About SNS */
+.for_sns{width:500px;}
+.for_sns .wrapping{margin-bottom:30px;}
+.for_sns .wrapping .image{width:350px;height:350px;}
+.for_sns .wrapping .image img{width:100%;height:100%;padding:30px;}
+.for_sns .wrapping .title{}
+.for_sns .wrapping p.title{font-size:15px;}
+.for_sns .wrapping .info{}
+.for_sns .wrapping .info .h_price .span_01{color:#616161;text-decoration:line-through;font-size:15px;}
+.for_sns .wrapping .info .h_price .span_02{font-size:15px;}
+.for_sns .wrapping .info .stock{color:#ff4d4d;}
+.for_sns .wrapping .info p.h_price{font-size:17px;}
+.for_sns .wrapping .info p.h_rate{font-size:15px;}
+.for_sns .wrapping .info p em{text-decoration:line-through;font-size:15px;}
+.for_sns .wrapping .info p span{font-size:15px;}
+.for_sns .wrapping .info em{display:block;font-size:13px;}
+.for_sns .wrapping .info em.coupon{color:green;}
+.for_sns .wrapping .info em.save_money{color:#ff4d4d;}
+.for_sns .wrapping .info a{color:#08f;font-size:20px;}
+
+
+
+
+
+
+
+
 
 
 

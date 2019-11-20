@@ -143,11 +143,8 @@ class HotdealsController < ApplicationController
     def hotdeal_params
       params.require(:hotdeal).permit(:h_title, :h_description, :h_image, :h_link, :h_price, :h_list_price, :h_percentage, :himage,
                                    :h_keyword, :h_spare_01, :h_spare_02, :h_spare_03, :h_spare_04, :h_spare_05, :h_spare_06, :h_spare_07,
-                                   :h_spare_08, :h_spare_09, :h_spare_10, :h_spare_11, :h_spare_12, :h_spare_13, :h_spare_14, :h_spare_15,
-                                   :h_spare_16, :h_spare_17, :h_spare_18, :h_spare_19, :h_spare_20, :h_spare_21, :h_spare_22, :h_spare_23,
-                                   :h_spare_24, :h_spare_25, :h_spare_26, :h_spare_27, :h_spare_28, :h_spare_29, :h_spare_30, :h_spare_31,
-                                   :h_spare_32, :h_spare_33, :h_spare_34, :h_spare_35, :h_spare_41, :h_spare_42, :h_spare_43, :h_spare_44, 
-                                   :h_spare_45, :h_spare_51, :h_spare_52, :h_spare_53, :h_spare_54, :h_spare_55)
+                                   :h_spare_08, :h_spare_09, :h_spare_10, :h_spare_11, :h_spare_21, :h_spare_41, :h_spare_42, :h_spare_43, 
+                                   :h_spare_44, :h_spare_12, :h_spare_13)
     end
 end
 

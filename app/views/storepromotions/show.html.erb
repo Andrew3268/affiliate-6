@@ -27,7 +27,7 @@
            <h2><%= @storepromotion.sp_title %></h2>
            <div class="store_info">
             <% if @storepromotion.sp_promocode.present? %>
-              <em>* Enter the promotional code "<%= @storepromotion.sp_promocode %>" at checkout to receive your savings.</em>
+              <em>* Enter the promotional code "<span><%= @storepromotion.sp_promocode %></span>" at checkout to receive your savings.</em>
             <% end %>
            </div>
            <% if @storepromotion.sp_description.present? %>
