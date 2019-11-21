@@ -8,8 +8,21 @@
         <div class="st_box clearfix">          
           <div class="st_image"><%= link_to image_tag(promo.sp_image, alt: promo.sp_title, title: promo.sp_store_name), promo %></div>
           <div class="inner">
-            <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF <% if can? :update, promo %> | <%= link_to 'Edit', edit_storepromotion_path(promo) %><% end %></p>
+            <p><em class="st_title"><%= promo.sp_store_name %></em> <% if promo.sp_spare_40.present? || promo.sp_spare_42.present?%><% else %>| Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF<% end %> <% if can? :update, promo %> | <%= link_to 'Edit', edit_storepromotion_path(promo) %><% end %></p>
             <span><%= link_to promo.sp_title, promo %></span>
+
+            <div class="pricing">
+              <% if promo.sp_spare_40.present? %>
+                <p class="h_price"><%= number_to_currency(promo.sp_spare_41) %> <em class="span_01"><%= number_to_currency(promo.sp_spare_40) %></em><em class="span_02">( <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF )</em></p>
+              <% else %>
+                <% if promo.sp_spare_42.present? %>
+                  <% running_total = 0 %>
+                  <% running_total =  (promo.sp_spare_42 - promo.sp_spare_43) / promo.sp_spare_42 * 100 %>
+                  <p class="h_price"><%= number_to_currency(promo.sp_spare_43) %> <em class="span_01"><%= number_to_currency(promo.sp_spare_42) %></em><em class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</em></p>
+                <% end %>
+              <% end %>
+            </div>
+
             <div class="date_info">
               <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
               <% promo.sp_spare_60 %>
@@ -47,9 +60,20 @@
           <% @most_promotions.each do |mp| %>
             <div class="tab-menu-text">
               <div class="tab-menu-img"><%= link_to image_tag(mp.sp_image, alt: mp.sp_title, title: mp.sp_store_name), mp %></div>
-              <div class="tab-menu-text-title"><p><%= mp.sp_store_name %> | Up to <%= mp.sp_percentage_01 %>% Off</p>
+              <div class="tab-menu-text-title"><p><%= mp.sp_store_name %> <% if mp.sp_spare_40.present? || mp.sp_spare_42.present?%><% else %>| Up to <%= mp.sp_percentage_01 %>% Off<% end %></p>
               </div>
               <div class="tab-menu-text-alt"><p><%= link_to mp.sp_title, mp %></p></div>
+              <div class="tab-menu-text-alt">
+                <% if mp.sp_spare_40.present? %>
+                  <p class="h_price"><%= number_to_currency(mp.sp_spare_41) %> <em class="span_01"><%= number_to_currency(mp.sp_spare_40) %></em><em class="span_02">( <%= number_to_percentage(mp.sp_percentage_01, precision: 0) %> OFF )</em></p>
+                <% else %>
+                  <% if mp.sp_spare_42.present? %>
+                    <% running_total = 0 %>
+                    <% running_total =  (mp.sp_spare_42 - mp.sp_spare_43) / mp.sp_spare_42 * 100 %>
+                    <p class="h_price"><%= number_to_currency(mp.sp_spare_43) %> <em class="span_01"><%= number_to_currency(mp.sp_spare_42) %></em><em class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</em></p>
+                  <% end %>
+                <% end %>
+              </div>
             </div>
           <% end %>
           <div class="all-show"><a href="/storepromotions">See More</a></div>
