@@ -31,10 +31,12 @@
 
            <% if @storepromotion.sp_spare_40.present? %>
             <p class="h_price"><%= number_to_currency(@storepromotion.sp_spare_41) %> <span class="span_01"><%= number_to_currency(@storepromotion.sp_spare_40) %></span><span class="span_02">( <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF )</span></p>
-          <% else %>
-            <% running_total = 0 %>
-            <% running_total =  (@storepromotion.sp_spare_42 - @storepromotion.sp_spare_43) / @storepromotion.sp_spare_42 * 100 %>
-            <p class="h_price"><%= number_to_currency(@storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(@storepromotion.sp_spare_42) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+           <% else %>
+            <% if @storepromotion.sp_spare_42.present? %>
+              <% running_total = 0 %>
+              <% running_total =  (@storepromotion.sp_spare_42 - @storepromotion.sp_spare_43) / @storepromotion.sp_spare_42 * 100 %>
+              <p class="h_price"><%= number_to_currency(@storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(@storepromotion.sp_spare_42) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+            <% end %>
           <% end %>
 
            <div class="store_info">

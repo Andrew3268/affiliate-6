@@ -47,9 +47,19 @@
                 <%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
               </div>
               <div class="inner">
-                <p><span><%= storepromotion.sp_store_name %> |</span> Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
+                <p><span><%= storepromotion.sp_store_name %> </span><% if storepromotion.sp_spare_42.present? %><% else %>| Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %></p>
 
                 <p class="sp_title"><%= link_to storepromotion.sp_title, storepromotion %></p>
+
+                <% if storepromotion.sp_spare_40.present? %>
+                  <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_41) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_40) %></span><span class="span_02">( <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF )</span></p>
+                <% else %>
+                  <% if storepromotion.sp_spare_42.present? %>
+                    <% running_total = 0 %>
+                    <% running_total =  (storepromotion.sp_spare_42 - storepromotion.sp_spare_43) / storepromotion.sp_spare_42 * 100 %>
+                    <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_42) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                  <% end %>
+                <% end %>
 
                 <em class="code_em em_box">
                   <% if storepromotion.sp_end_date.present? %>
