@@ -15,7 +15,7 @@
       <div class="sp_left">
         <div class="sp_menu">
           <div class="text show-more-height">
-            <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
+            <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div>
             <% if can? :update, @storepromotions %>
              <ul>
               <li class="admin"><%= link_to 'New Deals', new_storepromotion_path %></li>
@@ -43,22 +43,37 @@
         
           <% @storepromotions.each do |storepromotion| %>
             <div class="sp_card clearfix">
-              <div class="sp_image">
+              <div class="sp_image">                
                 <%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
               </div>
               <div class="inner">
                 <p><span><%= storepromotion.sp_store_name %> |</span> Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
 
                 <p class="sp_title"><%= link_to storepromotion.sp_title, storepromotion %></p>
-                <!-- <p><%= storepromotion.sp_description %></p> -->
-                <!-- <em>End Date: <%= storepromotion.sp_end_date %></em> -->
-                <% if storepromotion.sp_end_date.present? %>
+
+                <em class="code_em em_box">
+                  <% if storepromotion.sp_end_date.present? %>
+                    <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
+                    <% storepromotion.sp_spare_60 %>
+                      <em class="expired code_em">This offer has EXPIRED</em>
+                    <% else %>
+                      <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
+                      <% storepromotion.sp_spare_61 %>
+                       <em class="endtoday code_em">This offer expires TODAY</em>
+                      <% else %>
+                       <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
+                       <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                </em>
+                <!-- <% if storepromotion.sp_end_date.present? %>
                   <div class="promocode_m">
                     <% if storepromotion.sp_promocode.present? %>
                       <div class="text_copied store_code">
                         <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
                       </div>
-                      <em class="code_em">
+                      <em class="code_em em_box">
                         <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                         <% storepromotion.sp_spare_60 %>
                           <em class="expired code_em">* This Promo Code has EXPIRED.</em>
@@ -73,7 +88,7 @@
                         <% end %>
                       </em>
                     <% else %>
-                      <em class="code_em">
+                      <em class="code_em em_box">
                         <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                         <% storepromotion.sp_spare_60 %>
                           <em class="expired code_em">* This offer has EXPIRED.</em>
@@ -88,14 +103,13 @@
                         <% end %>
                       </em>
                     <% end %>
-                  </div><!--./promocode_m-->
-                <% else %>
-                  <div class="text_copied store_code">
-                    <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
                   </div>
-                <% end %>
+                <% else %>
+                    <div class="text_copied store_code">
+                      <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
+                    </div>
+                <% end %> -->
 
-                
                 <% if can? :update, storepromotion %>
                   <div class="admin">
                     <%= link_to 'Show', storepromotion %> |
@@ -103,12 +117,13 @@
                     <%= link_to 'Destroy', storepromotion, method: :delete, data: { confirm: 'Are you sure?' } %>
                   </div>
                 <% end %>
+                
+               
               </div>
 
               <div class="sp_btn"><a class="sp_btn_pc" href="<%= storepromotion.sp_link %>">Check This Deals</a></div>
-              <!-- <div class="sp_btn_m"><%= link_to "Check This Deals", storepromotion %></div> -->
 
-            </div>
+            </div><!--./sd_card-->
           <% end %>
       </div>
       <%= will_paginate @storepromotion %>

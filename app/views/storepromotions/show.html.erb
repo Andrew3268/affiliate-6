@@ -23,8 +23,20 @@
 
         <div class="show_inner">
          <div class="hotdeal_inner">
-           <p><%= @storepromotion.sp_store_name %> | Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
+           <% if @storepromotion.sp_spare_40.present? || @storepromotion.sp_spare_42.present?%>
+           <% else %>
+            <p><%= @storepromotion.sp_store_name %> | Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF</p>
+           <% end %>
            <h2><%= @storepromotion.sp_title %></h2>
+
+           <% if @storepromotion.sp_spare_40.present? %>
+            <p class="h_price"><%= number_to_currency(@storepromotion.sp_spare_41) %> <span class="span_01"><%= number_to_currency(@storepromotion.sp_spare_40) %></span><span class="span_02">( <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF )</span></p>
+          <% else %>
+            <% running_total = 0 %>
+            <% running_total =  (@storepromotion.sp_spare_42 - @storepromotion.sp_spare_43) / @storepromotion.sp_spare_42 * 100 %>
+            <p class="h_price"><%= number_to_currency(@storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(@storepromotion.sp_spare_42) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+          <% end %>
+
            <div class="store_info">
             <% if @storepromotion.sp_promocode.present? %>
               <em>* Enter the promotional code "<span><%= @storepromotion.sp_promocode %></span>" at checkout to receive your savings.</em>

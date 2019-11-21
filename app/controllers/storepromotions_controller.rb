@@ -10,9 +10,9 @@ class StorepromotionsController < ApplicationController
   def index
     if params.has_key?(:spcategory)
       @spcategory = Spcategory.find_by_name(params[:spcategory])
-      @storepromotions = Storepromotion.where(spcategory: @spcategory).order("created_at DESC").page(params[:page]).per_page(50)
+      @storepromotions = Storepromotion.where(spcategory: @spcategory).order("created_at DESC").page(params[:page]).per_page(30)
     else
-      @storepromotions = Storepromotion.all.order("created_at DESC").page(params[:page]).per_page(50)
+      @storepromotions = Storepromotion.all.order("created_at DESC").page(params[:page]).per_page(30)
     end
     if params[:search]
       @search_term = params[:search]
@@ -84,10 +84,12 @@ class StorepromotionsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def storepromotion_params
       params.require(:storepromotion).permit(:sp_title, :sp_description, :spcategory_id, :sp_store_name, :sp_image, :sp_promocode,
-                     :sp_end_date, :sp_percentage_01, :sp_percentage_02, :sp_link, :sp_spare_60, :sp_spare_61)
+                     :sp_end_date, :sp_percentage_01, :sp_percentage_02, :sp_link, :sp_spare_60, :sp_spare_61, :sp_spare_40, :sp_spare_41,
+                     :sp_spare_42, :sp_spare_43)
     end
 end
 
 
       
+
 

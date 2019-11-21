@@ -10,12 +10,20 @@
           <div class="inner">
             <p><em class="st_title"><%= promo.sp_store_name %></em> | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF <% if can? :update, promo %> | <%= link_to 'Edit', edit_storepromotion_path(promo) %><% end %></p>
             <span><%= link_to promo.sp_title, promo %></span>
-            <!-- < if promo.sp_promocode.present? >
-              <div class="text_copied store_sti">
-                <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promo.sp_promocode %></p></div></div></div>
-              </div>
-            < end > -->
-            <!-- <span><%= promo.sp_description %></span> -->
+            <div class="date_info">
+              <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
+              <% promo.sp_spare_60 %>
+                <em class="expired code_em">* This offer has EXPIRED</em>
+              <% else %>
+                <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
+                <% promo.sp_spare_61 %>
+                 <em class="endtoday code_em">* This offer expires TODAY</em>
+                <% else %>
+                 <em class="code_em">* End Date: <%= promo.sp_end_date %></em>
+                 <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                <% end %>
+              <% end %>
+            </div>
           </div>
         </div>
       <% end %>

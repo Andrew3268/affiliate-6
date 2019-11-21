@@ -4,18 +4,26 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.association :spcategory %>
+      <%= f.association :spcategory, label: 'Category Of Stores' %><br />
       <%= f.input :sp_store_name, label: 'Store Name' %>
       <%= f.input :sp_image, label: 'Store Logo' %>
       <%= f.input :sp_link, label: 'Store Link' %>
       <%= f.input :sp_title, label: 'Title of Deal'%>
-      <%= f.input :sp_description, as: :trix_editor, label: 'Description of Deal' %>
       <div class="pricing clearfix">
+        <%= f.input :sp_spare_40, label: 'List Price' %>
+        <%= f.input :sp_spare_41, label: 'Current Price' %>
         <%= f.input :sp_percentage_01, label: 'Percentage' %>
         <%= f.input :sp_percentage_02, label: 'Percentage' %>
+      </div>
+      <div class="pricing clearfix">
+        <%= f.input :sp_spare_42, label: 'List Price' %>
+        <%= f.input :sp_spare_43, label: 'Current Price' %>
+      </div>
+      <div class="pricing clearfix">
         <%= f.input :sp_promocode, input_html: { class: "promo_code" }, label: 'Promotion Code' %>
         <%= f.input :sp_end_date, input_html: { class: "promo_date" }, label: 'Ends Date' %>        
       </div>
+      <%= f.input :sp_description, as: :trix_editor, label: 'Description of Deal' %>
       <%= f.input :sp_spare_60, label: 'Expired Date' %>
       <%= f.input :sp_spare_61, label: 'Ends Today' %>
     </div>
