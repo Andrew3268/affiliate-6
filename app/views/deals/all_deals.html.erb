@@ -3,12 +3,110 @@
     <%= render 'shared/header_short' %>
     <div class="deals_main_menu clearfix"><ul><li class="nth_1"><a href="">All Deals</a></li></ul></div>
 
-  
+    <div class="alldeals_tabs">
+      <input type="radio" name="tab" id="tab1" checked="checked">
+      <label for="tab1">Amazon Hodeals(KOR)</label>
+      <input type="radio" name="tab" id="tab2">
+      <label for="tab2">Amazon Hodeals(ENG)</label>
+      <input type="radio" name="tab" id="tab3">
+      <label for="tab3">Naver Blog</label>
+      <!-- <input type="radio" name="tab" id="tab4">
+      <label for="tab4">Contact</label> -->
+    
+      <div class="tab-content-wrapper">
+        <div id="tab-content-1" class="tab-content">
+          <div class="all_wrap">
+            <div class="common promocodes">
+              <h2>오늘의 아마존 할인 코드</h2>
+              <% @promocodes.each do |promocode| %>
+                <% if promocode.p_spare_06.present? %>
+                  <p><%= promocode.p_spare_06 %></p>
+                <% else %>
+                  <p><%= promocode.p_title %></p>
+                <% end %>
+                <% if promocode.p_spare_03.present? %>
+                  <p>평균 평점: Avg <%= promocode.p_spare_03 %> rates | 리뷰 수: <%= number_with_delimiter(promocode.p_spare_04) %>+ reviews <% if promocode.p_spare_02.present? %>| <% promocode.p_spare_02 %>재고가 얼마 남지 않았습니다. <% end %></p>
+                <% end %>
+                <% running_total = 0 %>
+                <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
+                <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with 할인 코드 <em>" <%= promocode.p_promocode %> "</em>)</span></p>
+                <a target="_blank" href="<%= promocode.p_link %>">[ 할인코드 사용하기 ]</a><br /><br />        
+              <% end %>
+              <span class="check_more"><a target="_blank" href="/promocodes">할인코드 더보기 www.ohigottabuythis.net/promocodes</a></span>
+            </div>
+            <hr>
+            <div class="common hotdeals">
+              <h2>오늘의 아마존 핫딜</h2>
+                <% @hotdeals.each do |hotdeal| %>
+                  <% if hotdeal.h_spare_11.present? %>
+                    <p><%= hotdeal.h_spare_11 %></p>
+                  <% else %>
+                    <p><%= hotdeal.h_title %></p>
+                  <% end %>
+                  <% if hotdeal.h_spare_08.present? %>
+                    <p>평균 평점: Avg <%= hotdeal.h_spare_08 %> rates | 리뷰 수: <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews <% if hotdeal.h_spare_07.present? %>| <% hotdeal.h_spare_07 %>재고가 얼마 남지 않았습니다.<% end %> </p>
+                  <% end %>
 
+                  <% if hotdeal.h_spare_42.present? %>
+                  <p class="h_price"><%= number_to_currency(hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+                  <% else %>
+                    <% running_total = 0 %>
+                    <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+                    <p class="h_price"><%= number_to_currency(hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_44) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                  <% end %>
 
+                  <a target="_blank" href="<%= hotdeal.h_link %>">[ 핫딜 바로가기 ]</a><br /><br />
+                <% end %>
+              <span class="check_more"><a target="_blank" href="/hotdeals">핫딜 더보기 www.ohigottabuythis.net/hotdeals</a></span>
+            </div>
+          </div><!--./all_wrap-->
+        </div><!--#/tab-content-1-->
+
+        <div id="tab-content-2" class="tab-content">
+          <div class="all_wrap">
+            <div class="common promocodes">
+              <h2>Today's Promo Codes On Amazon</h2>
+              <% @promocodes.each do |promocode| %>
+                <div class="all_box clearfix">
+                  <p><%= promocode.p_title %></p>
+                  <% if promocode.p_spare_03.present? %>
+                    <p>Avg <%= promocode.p_spare_03 %> rates | <%= number_with_delimiter(promocode.p_spare_04) %>+ reviews <% if promocode.p_spare_02.present? %>| <%= promocode.p_spare_02 %> <% end %></p>
+                  <% end %>
+                  <% running_total = 0 %>
+                  <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
+                  <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code <em>" <%= promocode.p_promocode %> "</em>)</span></p>
+                  <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a><br />
+                </div>     
+                <% end %>
+              <span class="check_more"> <a target="_blank" href="/promocodes">Check More Promo Codes: www.ohigottabuythis.net/promocodes</a></span>
+            </div>
+            <hr>
+            <div class="common hotdeals">
+              <h2>Today's Bargain On Amazon</h2>
+                <% @hotdeals.each do |hotdeal| %>
+                  <div class="all_box clearfix">
+                    <p><%= hotdeal.h_title %></p>
+                    <% if hotdeal.h_spare_08.present? %>
+                      <p>Avg <%= hotdeal.h_spare_08 %> rates | <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews <% if hotdeal.h_spare_07.present? %>| <%= hotdeal.h_spare_07 %> <% end %></p>
+                    <% end %>
+                    <% if hotdeal.h_spare_42.present? %>
+                      <p class="h_price"><%= number_to_currency(hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+                    <% else %>
+                      <% running_total = 0 %>
+                      <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+                      <p class="h_price"><%= number_to_currency(hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_44) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                    <% end %>
+                    <a target="_blank" href="<%= hotdeal.h_link %>">[ Take This Deals ]</a><br />
+                  </div>
+                <% end %>
+              <span class="check_more"> <a target="_blank" href="/hotdeals">Check More Bargain: www.ohigottabuythis.net/hotdeals</a></span>
+            </div>
+          </div><!--./all_wrap-->
+
+        </div><!--#/tab-content-2-->
           <div class="for_sns">
             <% @blog_deals.each do |hotdeal| %>
-              <% if hotdeal.h_spare_13.present? %>
+              
               
                 <div class="wrapping">
                  <div><p class="title"><%= hotdeal.h_title %></p></div>
@@ -42,12 +140,21 @@
                  </div><!--./info-->
                 </div><!--./wrapping-->
                 <hr>
-              <% end %>
+              
             <% end %>
 
           </div><!--./for_sns-->
+        <div id="tab-content-3" class="tab-content">
+         
+        </div><!--#/tab-content-3-->
+
+        <div id="tab-content-4" class="tab-content">
+        </div>
+      </div>
+    </div>
 
 
+          
 
 
  </div><!--./wrap-->
