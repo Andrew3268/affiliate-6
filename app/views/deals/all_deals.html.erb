@@ -106,9 +106,9 @@
 
         <div id="tab-content-3" class="tab-content">
           <div class="for_sns">
-            <% @blog_deals.each do |hotdeal| %>
-              <% if hotdeal.h_spare_13.present? %>
-              <% hotdeal.h_spare_13 %>
+            <% if hotdeal.h_spare_13.present? %>
+            <% hotdeal.h_spare_13 %>
+              <% @blog_deals.each do |hotdeal| %>
                 <div class="wrapping">
                  <div><p class="title"><%= hotdeal.h_title %></p></div>
                  <div class="image"><img src="<%= hotdeal.h_image %>"></div>
