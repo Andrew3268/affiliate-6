@@ -13,8 +13,7 @@
         <%= f.select :h_spare_07, ([["In Stock", ""], "Only in a few stock left"])%>
         <%= f.select :h_spare_10, ([["Subscribe & Save?", ""], "Yes"])%>
         <%= f.select :h_spare_12, ([["No Tax?", ""], "Yes"])%>
-        <!-- <%= f.select :h_spare_13, ([["Write Blog?", ""], "Yes"])%> -->
-        <%= f.input :h_spare_13, label: 'test' %>
+        <%= f.select :h_spare_13, ([["Blog?", ""], "Write Blog"])%>
         <div class="form_btn"><%= f.button :submit %></div><br />
         <%= f.input :h_image, label: 'Image URL' %>
         <%= f.input :h_link, label: 'Product URL' %>

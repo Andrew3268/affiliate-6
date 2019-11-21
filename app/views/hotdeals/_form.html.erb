@@ -8,9 +8,8 @@
     <%= f.select :h_spare_06, options_for_select([["NO prime?", ""], "Yes"])%>
     <%= f.select :h_spare_07, options_for_select([["In Stock", ""], "Only in a few stock left"])%>
     <%= f.select :h_spare_10, options_for_select([["Subscribe & Save?", ""], "Yes"])%>
-    <%= f.select :h_spare_12, options_for_select([["No Tax?", ""], "Yes"])%><br /><br />
-    <%= f.input :h_spare_13, label: 'test' %>
-    <!-- <%= f.select :h_spare_13, options_for_select([["Write Blog?", ""], "Yes"])%> -->
+    <%= f.select :h_spare_12, options_for_select([["No Tax?", ""], "Yes"])%>
+    <%= f.select :h_spare_13, options_for_select([["Blog?", ""], "Write Blog"])%><br /><br />
     <%= f.input :h_image, label: 'Image URL' %>
     <%= f.input :h_link, label: 'Product URL' %>
     <%= f.input :h_title , label: 'Title Of Product' %>
