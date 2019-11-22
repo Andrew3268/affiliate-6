@@ -31,6 +31,7 @@
                 <% running_total = 0 %>
                 <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
                 <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with 할인 코드 <em>" <%= promocode.p_promocode %> "</em>)</span></p>
+                <p>*할인코드 만료일: <%= promocode.p_end_date %></p>
                 <a target="_blank" href="<%= promocode.p_link %>">[ 할인코드 사용하기 ]</a><br /><br />        
               <% end %>
               <span class="check_more"><a target="_blank" href="/promocodes">할인코드 더보기 www.ohigottabuythis.net/promocodes</a></span>
@@ -76,6 +77,7 @@
                   <% running_total = 0 %>
                   <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
                   <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code <em>" <%= promocode.p_promocode %> "</em>)</span></p>
+                  <p>*Ends Date: <%= promocode.p_end_date %></p>
                   <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a><br />
                 </div>     
                 <% end %>
@@ -154,8 +156,7 @@
     </div>
 
 
-          
-
+    
 
  </div><!--./wrap-->
 </div><!--./layout-->
