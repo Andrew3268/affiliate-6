@@ -29,6 +29,7 @@
               <%= @promocode.impressionist_count(:filter=>:all) %> Views |
               <%= @promocode.created_at.strftime("%d. %B.") %><br>
               <div class="sharing">
+                <p>Available On Amazon Now</p>
                 <%= @promocode.p_title %>
                 <% running_total = 0 %>
                 <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
