@@ -47,7 +47,12 @@
                 <%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
               </div>
               <div class="inner">
-                <p><span><%= storepromotion.sp_store_name %> </span><% if storepromotion.sp_spare_42.present? %><% else %>| Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %></p>
+                <p><span><%= storepromotion.sp_store_name %></span>
+                  <% if storepromotion.sp_spare_40.present? || storepromotion.sp_spare_42.present?%>
+                  <% else %>
+                  <% if storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %>
+                  <% end %>
+                </p>
 
                 <p class="sp_title"><%= link_to storepromotion.sp_title, storepromotion %></p>
 
