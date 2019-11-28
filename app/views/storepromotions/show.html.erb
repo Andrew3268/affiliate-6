@@ -25,9 +25,9 @@
          <div class="hotdeal_inner">
            <% if @storepromotion.sp_spare_40.present? || @storepromotion.sp_spare_42.present?%>
            <% else %>
-            <p><%= @storepromotion.sp_store_name %> <% if @storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %></p>
+            <p class="store_p"><%= @storepromotion.sp_store_name %> <% if @storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %></p>
            <% end %>
-           <h2><%= @storepromotion.sp_title %></h2>
+           <h2 class="store_h2"><%= @storepromotion.sp_title %></h2>
 
            <% if @storepromotion.sp_spare_40.present? %>
             <p class="h_price"><%= number_to_currency(@storepromotion.sp_spare_41) %> <span class="span_01"><%= number_to_currency(@storepromotion.sp_spare_40) %></span><span class="span_02">( <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF )</span></p>
@@ -40,16 +40,16 @@
           <% end %>
 
            <div class="store_info">
+            <em>* Click through to see <%= @storepromotion.sp_store_name %>'s special offers.</em>
             <% if @storepromotion.sp_promocode.present? %>
-              <em>* Enter this <%= @storepromotion.sp_store_name %> promo code "<span><%= @storepromotion.sp_promocode %></span>" at checkout to receive your savings.</em>
+              <em>* Enter <%= @storepromotion.sp_store_name %>'s' promo code "<span><%= @storepromotion.sp_promocode %></span>" at checkout to receive your savings.</em>
             <% else %>
               <em>*No Code Required</em>
             <% end %>
+
            <!-- </div> -->
 
-            <% if @storepromotion.sp_description.present? %>
-             <div class="trix"><%= @storepromotion.sp_description.html_safe %></div>
-            <% end %>
+           
 
              <% if @storepromotion.sp_end_date.present? %>
                <% if @storepromotion.sp_promocode.present? %>
@@ -89,9 +89,9 @@
                   </div>
                 <% end %>
               <% else %>
-                <div class="text_copied intheshow_store">
+                <!-- <div class="text_copied intheshow_store">
                   <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= @storepromotion.sp_promocode %></p></div></div></div>
-                </div>
+                </div> -->
               <% end %>
 
             </div><!--./store_info-->
@@ -99,6 +99,10 @@
             <div class="btn">
               <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
             </div>
+
+             <% if @storepromotion.sp_description.present? %>
+             <div class="trix"><p><%= @storepromotion.sp_description.html_safe %></p></div>
+            <% end %>
 
         </div><!--./hotdeal_inner-->
 
@@ -115,6 +119,7 @@
     </div><!--./wrap-->
   </div><!--./show_wrap-->
 </div><!--./layout-->
+
 
 
 
