@@ -42,11 +42,14 @@
            <div class="store_info">
             <% if @storepromotion.sp_promocode.present? %>
               <em>* Enter this <%= @storepromotion.sp_store_name %> promo code "<span><%= @storepromotion.sp_promocode %></span>" at checkout to receive your savings.</em>
+            <% else %>
+              <em>*No Code Required</em>
             <% end %>
-           </div>
-           <% if @storepromotion.sp_description.present? %>
-             <div class="trix"><p class="sp_des"><%= @storepromotion.sp_description.html_safe %></p></div>
-           <% end %>
+           <!-- </div> -->
+
+            <% if @storepromotion.sp_description.present? %>
+             <div class="trix"><%= @storepromotion.sp_description.html_safe %></div>
+            <% end %>
 
              <% if @storepromotion.sp_end_date.present? %>
                <% if @storepromotion.sp_promocode.present? %>
@@ -91,13 +94,13 @@
                 </div>
               <% end %>
 
-            </div>
+            </div><!--./store_info-->
 
             <div class="btn">
-            <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
-      
-         </div>
-        </div>
+              <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
+            </div>
+
+        </div><!--./hotdeal_inner-->
 
         <% if can? :update, @storepromotion %>
           <div class="pinterest">
