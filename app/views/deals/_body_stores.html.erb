@@ -23,20 +23,22 @@
               <% end %>
             </div>
 
-            <div class="date_info">
-              <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
-              <% promo.sp_spare_60 %>
-                <em class="expired code_em">* This offer has EXPIRED</em>
-              <% else %>
-                <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
-                <% promo.sp_spare_61 %>
-                 <em class="endtoday code_em">* This offer expires TODAY</em>
+            <% if promo.sp_end_date.present? %>
+              <div class="date_info">
+                <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
+                <% promo.sp_spare_60 %>
+                  <em class="expired code_em">* This offer has EXPIRED</em>
                 <% else %>
-                 <em class="code_em">* End Date: <%= promo.sp_end_date %></em>
-                 <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                  <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
+                  <% promo.sp_spare_61 %>
+                   <em class="endtoday code_em">* This offer expires TODAY</em>
+                  <% else %>
+                   <em class="code_em">* End Date: <%= promo.sp_end_date %></em>
+                   <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                  <% end %>
                 <% end %>
-              <% end %>
-            </div>
+              </div>
+            <% end %>
           </div>
         </div>
       <% end %>
