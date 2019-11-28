@@ -185,7 +185,7 @@
 }
 
 .intheshow{width:300px;margin-top:-10px;}
-.intheshow_store{width:400px;margin-top:-10px;}
+.intheshow_store{width:400px;margin-top:10px;}
 .text_copied_pc{}
 .text_copied_m{display:none;}
 .text_copied .container{display:flex;justify-content:center;align-items:center;width:100%;height:100%;}
