@@ -25,6 +25,8 @@
 .st_warp .st_middle{margin-top:30px;}
 .st_warp .st_middle .deals_card{width:18%;}
 .st_warp .st_middle .st_middle_box{margin-bottom:30px;}
+.catalog a{color:#333;}
+.catalog a.a01{font-size:20px;}
 
 /* For Store Station Page["/deals/stores"] / Side Tab Menu */
 .tab-menu-test{width:100%;margin:auto;}
@@ -35,7 +37,7 @@
 .clear{clear:both}
 .tab-menu-wp ul li{cursor:pointer;width:50%;text-align:center;display:block;color:#000;float:left;font-size:13px;padding-bottom:10px;}
 .store_active{border-bottom:3px solid #3498db;color:#08f;}
-.tab-menu-text{width:100%;height:71px;margin-top:15px;cursor:pointer;padding:3px 5px;transition:400ms all;border-bottom:1px solid #ccc;}
+.tab-menu-text{width:100%;height:81px;margin-top:15px;cursor:pointer;padding:3px 5px;transition:400ms all;border-bottom:1px solid #ccc;}
 /*.tab-menu-text:hover{background:rgba(0,0,0,.4);}*/
 .tab-menu-img img{width:50px;height:50px;overflow:hidden;float:left;/*border-radius:100%;*/object-fit:contain;}
 .tab-menu-text-title{color:#000;white-space: nowrap;text-overflow:ellipsis;overflow:hidden;padding-right:15px;font-size:13px;position:relative;left:10px;top:0;}

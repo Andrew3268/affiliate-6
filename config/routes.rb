@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   resources :sdcategories
   resources :storedeals
+  get '/storedeals/sdhashtag/:name', to:'storedeals#hashtags'
   resources :spcategories
   resources :storepromotions
   # root 'storepromotions#index'

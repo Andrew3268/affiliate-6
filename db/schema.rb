@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191113035927) do
+ActiveRecord::Schema.define(version: 20191129063917) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -513,6 +513,14 @@ ActiveRecord::Schema.define(version: 20191113035927) do
   end
 
   add_index "storedeals", ["sdcategory_id"], name: "index_storedeals_on_sdcategory_id"
+
+  create_table "storedeals_tags", id: false, force: :cascade do |t|
+    t.integer "storedeal_id"
+    t.integer "tag_id"
+  end
+
+  add_index "storedeals_tags", ["storedeal_id"], name: "index_storedeals_tags_on_storedeal_id"
+  add_index "storedeals_tags", ["tag_id"], name: "index_storedeals_tags_on_tag_id"
 
   create_table "storepromotions", force: :cascade do |t|
     t.integer  "user_id"

@@ -10,7 +10,7 @@
    <% end %>
 
   <figcaption>
-    <h3>#HashTags</h3>
+    <h3><%= render_with_sdhashtags(storedeal.sd_hashtag.to_s) %></h3>
     <p class="store_title"><span>@<%= storedeal.sdcategory.name %></span> | <%= link_to storedeal.sd_title, storedeal %></p>
     <div class="price">
       <em><%= number_to_currency(storedeal.sd_spare_31) %></em><%= number_to_currency(storedeal.sd_spare_32) %>

@@ -22,6 +22,11 @@ class StoredealsController < ApplicationController
     impressionist(@storedeal)
   end
 
+  def hashtags
+    tag = Tag.find_by(name: params[:name])
+    @storedeals = tag.storedeals
+  end
+
   # GET /storedeals/new
   def new
     @storedeal = Storedeal.new
