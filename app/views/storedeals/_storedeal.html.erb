@@ -11,8 +11,7 @@
 
   <figcaption>
     <h3>#HashTags</h3>
-    <span><%= storedeal.sdcategory.name %></span>
-    <p class="store_title"><%= link_to storedeal.sd_title, storedeal %></p>
+    <p class="store_title"><span>@<%= storedeal.sdcategory.name %></span> | <%= link_to storedeal.sd_title, storedeal %></p>
     <div class="price">
       <em><%= number_to_currency(storedeal.sd_spare_31) %></em><%= number_to_currency(storedeal.sd_spare_32) %>
     </div>

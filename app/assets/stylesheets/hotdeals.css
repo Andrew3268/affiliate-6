@@ -7,6 +7,8 @@
 .hotdeals_new a{text-decoration:none;color:#fff;}
 
 /* Show Page */
+.show_wrap .show_box h2.sd_title{padding:0 50px;font-size:24px;margin-top:30px;}
+.show_wrap .show_box .sd_inner{margin-top:10px;}
 .show_wrap .show_box .show_inner a.p_btn{width:300px;text-align:center;}
 .show_wrap .show_box .show_inner a.store_btn{width:400px;text-align:center;}
 .show_wrap .show_box .show_inner .hotdeal_inner{}
@@ -17,6 +19,10 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .top_line span{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;width:300px;overflow:hidden;display:inline-block;vertical-align:middle;font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner .top_line em{font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner p.store_p{font-size:15px;margin:0;}
+.show_wrap .show_box .show_inner .hotdeal_inner p.offer{font-size:15px;}
+.show_wrap .show_box .show_inner .hotdeal_inner p.offer span{background:#ffff00;padding:3px 5px;font-weight:bold;}
+.show_wrap .show_box .show_inner .hotdeal_inner p.offer em{font-weight:500;}
+.show_wrap .show_box .show_inner .hotdeal_inner p.offer em.pricing{color:#08f;font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner h2.store_h2{font-size:20px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price{font-size:25px;margin-bottom:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price .span_01{color:#616161;text-decoration:line-through;font-size:20px;}
@@ -55,6 +61,7 @@
 /*.show-btn:hover{background-color:#7a9c0f;}*/
 .show-btn.fa.rotate {transform:rotate(180deg); }
 
+.show_wrap .show_box .sd_image{margin-top:10px;}
 .show_wrap .show_box .show_img .mark{width:50px;background:#000;font-size:13px;padding:7px;border-radius:10px;line-height:1.1;position:absolute;top:0;left:0;}
 .show_wrap .show_box .show_img .mark span{text-align:center;color:#fff;letter-spacing:3.1px;display:block;}
 .show_wrap .show_box .show_img .mark em{display:block;text-align:center;font-size:10px;color:#fff;}
@@ -89,6 +96,7 @@
   .hotdeal_form .pricing div .promo_date{width:100%;}
   .show_wrap .show_box .show_inner a.p_btn{width:100%;}
   .show_wrap .show_box .show_inner a.store_btn{width:100%;}
+  .show_wrap .show_box h2.sd_title{font-size:15px;padding:0;margin:0;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .hotdeals_nav{margin-top:10px;}

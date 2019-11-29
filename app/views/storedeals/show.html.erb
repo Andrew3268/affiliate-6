@@ -8,8 +8,8 @@
       <div class="show_box clearfix">
         
         <!-- <p>Location Map</p> -->
-        
-        <div class="show_img hotdeal_img">
+        <h2 class="sd_title"><%= @storedeal.sd_title %></h2>
+        <div class="show_img hotdeal_img sd_image">
           <div class="img_box">
             <% if @storedeal.sd_image.present? %>
               <a target="_blank" href="<%= @storedeal.sd_link %>"><img src="<%= @storedeal.sd_image %>" alt="<%= @storedeal.sd_title %>" title="<%= @storedeal.sd_spare_04 %>"></a>
@@ -17,7 +17,7 @@
               <%= link_to (image_tag @storedeal.himage.url(:small), alt: @storedeal.sd_title, title: @storedeal.sd_spare_04), @storedeal %>
             <% end %>
           </div>
-          <div class="mark"><span>HOT</span><em>DEALS</em></div>
+          <!-- <div class="mark"><span>HOT</span><em>DEALS</em></div> -->
           <% if can? :update, @storedeal %>
             <div class="admin">
               <p>Admin Management</p>
@@ -29,9 +29,10 @@
             </div>
           <% end %>
         </div>
-        <div class="show_inner">
+        <div class="show_inner sd_inner">
          <div class="hotdeal_inner">
-           <h2 class="title"><%= @storedeal.sd_title %></h2>
+
+           <p class="offer"><span>@<%= @storedeal.sdcategory.name %></span> offers <em><%= @storedeal.sd_title %></em> on sale for <em class="pricing"><%= number_to_currency(@storedeal.sd_spare_32) %></em></p>
             
             <% if @storedeal.sd_spare_32.present? %>
               <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_32) %> <span class="span_01"><%= number_to_currency(@storedeal.sd_spare_31) %></span><span class="span_02">( <%= @storedeal.sd_percentage %>% OFF )</span></p>
