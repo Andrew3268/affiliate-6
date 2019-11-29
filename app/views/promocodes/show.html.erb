@@ -65,17 +65,17 @@
             <% saving_total = 0 %>
             <% saving_total =  @promocode.p_spare_26 - (@promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26) %>
             <em class="save_money">* Save <%= number_to_currency(saving_total) %> or more.</em>
-            <em>* Pricing may change and deals can expire fast.</em>
-            <em>+ FREE Shipping ( Free Shipping: <a class="prime" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
 
+          
+            <% if @promocode.p_extra_deal.present? %><em class="extra_dh">+ Get <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
+            <% if @promocode.p_coupon_deal.present? %><em class="extra_dh">+ Clip the <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
+            <em>+ FREE Shipping ( Free Shipping: <a class="prime" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
             <% if @promocode.p_spare_05.present? %>
               <% @promocode.p_spare_05 %>
               <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
             <% end %>
-            
-            <% if @promocode.p_extra_deal.present? %><em class="extra_dh">+ Get <%= @promocode.p_extra_deal %>% Off Extra Deal</em><% end %>
-            <% if @promocode.p_coupon_deal.present? %><em class="extra_dh">+ Clip the <%= @promocode.p_coupon_deal %> Off Coupon</em><% end %>
             <% if @promocode.p_spare_07.present? %><em>+ Find more <a href="<%= @promocode.p_spare_08 %>">"<%= @promocode.p_spare_07 %>"</a></em><% end %>
+            <em>* Pricing may change and deals can expire fast.</em>
 
             <% if @promocode.p_spare_50.present? %>
               <% if @promocode.p_spare_50 < DateTime.now %>
@@ -99,14 +99,16 @@
             <% end %>
            </div><!--./extra_info-->
 
-            <!-- <p class="code_line">Click and copy this code then apply it at your checkout</p> -->
-            <div class="text_copied intheshow">
+           <div class="code_btn">
+             <!-- <p class="code_line">Click and copy this code then apply it at your checkout</p> -->
+             <div class="text_copied intheshow">
               <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= @promocode.p_promocode %></p></div></div></div>
-            </div>
+             </div>
 
-           <div class="only_show">
-            <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
-           </div> 
+             <div class="only_show promocode_btn">
+              <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
+             </div> 
+            </div>
 
             <% if @promocode.p_spare_36.present? %>
               <div class="trix trix-container gradient"><span>Features</span><p><%= @promocode.p_spare_36.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>

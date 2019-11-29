@@ -82,7 +82,8 @@
               </div>
             <% end %>
 
-            <div class="only_show"><a class="m_btn p_btn" target="_blank" href="<%= @storedeal.sd_link %>">Check it out on&ensp;<em><%= @storedeal.sdcategory.name %></em></a></div>
+
+            <div class="only_show code_btn"><a class="m_btn p_btn" target="_blank" href="<%= @storedeal.sd_link %>">Check it out on&ensp;<em><%= @storedeal.sdcategory.name %></em></a></div>
 
             <%if @storedeal.sd_spare_50.present? %>
               <div class="trix trix-container gradient"><span>Features</span><p><%= @storedeal.sd_spare_50.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
