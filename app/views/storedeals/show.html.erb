@@ -57,17 +57,20 @@
                 <% running_total =  @storedeal.sd_spare_33.to_i - @storedeal.sd_spare_34.to_i %>
                 <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
                <% end %>
-               <em>+ FREE Shipping</a></em>
+               <!-- <em>+ FREE Shipping</a></em> -->
 
-              <% if @storedeal.sd_spare_65.present? %>
-                <% if @storedeal.sd_spare_65 < DateTime.now %>
-                <% @storedeal.sd_spare_65 %>
-                  <em class="expired">* This deal has EXPIRED.</em>
+
+              <% if @storedeal.sd_end_date.present? %>
+                <% if @storedeal.sd_spare_65.present? %>
+                  <% if @storedeal.sd_spare_65 < DateTime.now %>
+                  <% @storedeal.sd_spare_65 %>
+                    <em class="expired">EXPIRED</em>
+                  <% else %>
+                    <em>* End Date: <%= @storedeal.sd_end_date %> or while supplies last.</em>
+                  <% end %>
                 <% else %>
                   <em>* End Date: <%= @storedeal.sd_end_date %> or while supplies last.</em>
                 <% end %>
-              <% else %>
-                <em>* End Date: <%= @storedeal.sd_end_date %> or while supplies last.</em>
               <% end %>
 
             </div><!--./extra_info-->

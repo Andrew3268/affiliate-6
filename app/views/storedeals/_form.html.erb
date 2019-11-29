@@ -3,14 +3,19 @@
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
+
+
     <div class="form-inputs">
-      <%= f.association :sdcategory %><br/>
-      <%= f.input :sd_image %>
-      <%= f.input :sd_link %>
-      <%= f.input :sd_title %>
-      <%= f.input :sd_image_title %>
-      <%= f.input :sd_keyword %>
-      <%= f.input :sd_hashtag %>
+      <div class="select">
+        <em><%= f.association :sdcategory %></em>
+        <!-- <em><%= f.select :sd_spare_03, options_for_select([["Free Shipping?", ""], "YES"])%></em> -->
+      </div><br />
+      <%= f.input :sd_image, label: 'Image Of Prodcut' %>
+      <%= f.input :sd_link, label: 'Link Of Prodcut' %>
+      <%= f.input :sd_title, label: 'Title Of Prodcut' %>
+      <%= f.input :sd_image_title, label: 'Image_Title' %>
+      <%= f.input :sd_keyword, label: 'Keyword' %>
+      <%= f.input :sd_hashtag, label: 'Hashtag' %>
       <div class="pricing clearfix">
         <p>A Style (I know all)</p>
         <%= f.input :sd_spare_31, label: 'List Price' %>

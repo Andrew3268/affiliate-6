@@ -80,7 +80,7 @@
             <% if @promocode.p_spare_50.present? %>
               <% if @promocode.p_spare_50 < DateTime.now %>
               <% @promocode.p_spare_50 %>
-                <em class="expired">* This promo code has EXPIRED.</em>
+                <em class="expired">EXPIRED</em>
               <% else %>
 
                 <% if @promocode.p_spare_51.present? %>

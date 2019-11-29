@@ -58,7 +58,7 @@
                     <em class="code_em">
                       <% if @storepromotion.sp_spare_60 < DateTime.now %>
                       <% @storepromotion.sp_spare_60 %>
-                        <em class="expired">* This Promo Code has EXPIRED.</em>
+                        <em class="expired">EXPIRED.</em>
                       <% else %>
                         <% if @storepromotion.sp_spare_61 <= DateTime.now %>
                         <% @storepromotion.sp_spare_61 %>
@@ -77,7 +77,7 @@
                    <!-- <em>* Pricing may change and deals can expire fast.</em> -->
                     <% if @storepromotion.sp_spare_60 < DateTime.now %>
                     <% @storepromotion.sp_spare_60 %>
-                      <em class="expired">This offer has EXPIRED.</em>
+                      <em class="expired">EXPIRED</em>
                     <% else %>
                      <% if @storepromotion.sp_spare_61 <= DateTime.now %>
                       <% @storepromotion.sp_spare_61 %>

@@ -27,7 +27,7 @@
               <div class="date_info">
                 <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
                 <% promo.sp_spare_60 %>
-                  <em class="expired code_em">* This offer has EXPIRED</em>
+                  <em class="expired code_em">EXPIRED</em>
                 <% else %>
                   <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
                   <% promo.sp_spare_61 %>

@@ -2,7 +2,52 @@
 <%= render 'shared/header_short' %>
   <div class="hotdeal_wrap">
     <h1>Editing Storedeal</h1>
-    <%= render 'form' %>
+      <div class="hotdeal_form">
+        <%= simple_form_for(@storedeal) do |f| %>
+          <%= f.error_notification %>
+          <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+
+           
+          <div class="form-inputs">
+            <div class="select">
+              <em><%= f.association :sdcategory, label: 'Select Store' %></em>
+              <!-- <em><%= f.select :sd_spare_03, ([["Free Shipping?", ""], "Yes"])%></em> -->
+            </div><br />
+            <%= f.input :sd_image, label: 'Image Of Prodcut' %>
+            <%= f.input :sd_link, label: 'Link Of Prodcut' %>
+            <%= f.input :sd_title, label: 'Title Of Prodcut' %>
+            <%= f.input :sd_image_title, label: 'Image_Title' %>
+            <%= f.input :sd_keyword, label: 'Keyword' %>
+            <%= f.input :sd_hashtag, label: 'Hashtag' %>
+            <div class="pricing clearfix">
+              <p>A Style (I know all)</p>
+              <%= f.input :sd_spare_31, label: 'List Price' %>
+              <%= f.input :sd_spare_32, label: 'Current Price' %>
+              <%= f.input :sd_percentage, label: 'Percentage' %>
+            </div>
+            <div class="pricing clearfix">
+              <p>W Style (I don't know percentage)</p>
+              <%= f.input :sd_spare_33, label: 'List Price' %>
+              <%= f.input :sd_spare_34, label: 'Current Price' %>
+              <!-- <%= f.input :sd_spare_30, label: 'Percentage' %> -->
+            </div>  
+            <div class="pricing clearfix">
+              <%= f.input :sd_spare_01, label: 'Average Rate' %>
+              <%= f.input :sd_spare_02, label: 'Number of Reviews' %>
+              <%= f.input :sd_coupon_deal %>
+              <%= f.input :sd_extra_deal %>
+              <%= f.input :sd_promocode, input_html: { class: "promo_code" }, label: 'Promo Code' %>
+              <%= f.input :sd_end_date, input_html: { class: "promo_date" }, label: 'End Date' %>
+            </div>
+            <%= f.input :sd_spare_65, label: 'End Date' %><br />
+            <!-- <%= f.input :sd_banner %> -->
+            <%= f.input :sd_description %>
+            <%= f.input :sd_spare_50, as: :trix_editor, label: 'Description Of Product with TRIX'  %>
+          </div>
+
+          <div class="form_btn"><%= f.button :submit %></div>
+        <% end %>
+      </div>
 
     <%= link_to 'Show', @storedeal %> |
     <%= link_to 'Back', storedeals_path %>
