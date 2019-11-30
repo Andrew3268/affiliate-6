@@ -21,7 +21,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner p.store_p{font-size:15px;margin:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner p.offer{font-size:15px;}
 .show_wrap .show_box .show_inner .hotdeal_inner p.offer span{background:#ffff00;padding:3px 5px;font-weight:bold;}
-.show_wrap .show_box .show_inner .hotdeal_inner p.offer em{font-weight:500;}
+.show_wrap .show_box .show_inner .hotdeal_inner p.offer em{font-weight:500;word-break:break-word;}
 .show_wrap .show_box .show_inner .hotdeal_inner p.offer em.pricing{color:#08f;font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner h2.store_h2{font-size:20px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price{font-size:25px;margin-bottom:0;}
