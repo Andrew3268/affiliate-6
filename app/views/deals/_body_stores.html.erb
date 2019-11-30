@@ -118,14 +118,24 @@
         <figure class="deals_card deal_stores">
           <div class="image_box">
             <%= link_to image_tag(sd01.sd_image, alt: sd01.sd_title, title: sd01.sd_image_title), sd01 %>
-            <div class="mark"><span><%= sd01.sd_percentage %>%</span><em>OFF</em></div>
+            <% if sd01.sd_percentage? %>
+              <div class="mark"><span><%= sd01.sd_percentage %>%</span><em>OFF</em></div>
+            <% else %>
+              <% running_total = 0 %>
+              <% running_total =  (sd01.sd_spare_33 - sd01.sd_spare_34) / sd01.sd_spare_33 * 100 %>
+              <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %> OFF</div>
+            <% end %>
           </div>
           <div class="buy-now"><span><a target="_blank" href="<%= sd01.sd_link %>">BUY NOW</a></span></div>
           <figcaption>
             <h3><%= render_with_sdhashtags(sd01.sd_hashtag.to_s) %></h3>
             <p class="store_title"><%= link_to sd01.sd_title, sd01 %></p>
             <div class="price">
-              <em><%= number_to_currency(sd01.sd_spare_31) %></em><%= number_to_currency(sd01.sd_spare_32) %>
+              <% if sd01.sd_spare_31.present? %>
+                <em><%= number_to_currency(sd01.sd_spare_31) %></em><%= number_to_currency(sd01.sd_spare_32) %>
+              <% else %>
+                <em><%= number_to_currency(sd01.sd_spare_33) %></em><%= number_to_currency(sd01.sd_spare_34) %>
+              <% end %>
             </div>
             <div class="m_btn"><a href="<%= sd01.sd_link %>">Buy Now</a></div>
           </figcaption>
@@ -144,14 +154,24 @@
         <figure class="deals_card deal_stores">
           <div class="image_box">
             <%= link_to image_tag(sd02.sd_image, alt: sd02.sd_title, title: sd02.sd_image_title), sd02 %>
-            <div class="mark"><span><%= sd02.sd_percentage %>%</span><em>OFF</em></div>
+            <% if sd02.sd_percentage.present? %>
+              <div class="mark"><span><%= sd02.sd_percentage %>%</span><em>OFF</em></div>
+            <% else %>
+              <% running_total = 0 %>
+              <% running_total =  (sd02.sd_spare_33 - sd02.sd_spare_34) / sd02.sd_spare_33 * 100 %>
+              <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %> OFF</div>
+            <% end %>
           </div>
           <div class="buy-now"><span><a target="_blank" href="<%= sd02.sd_link %>">BUY NOW</a></span></div>
           <figcaption>
             <h3><%= render_with_sdhashtags(sd02.sd_hashtag.to_s) %></h3>
             <p class="store_title"><%= link_to sd02.sd_title, sd02 %></p>
             <div class="price">
-              <em><%= number_to_currency(sd02.sd_spare_31) %></em><%= number_to_currency(sd02.sd_spare_32) %>
+              <% if sd02.sd_spare_31.present? %>
+                <em><%= number_to_currency(sd02.sd_spare_31) %></em><%= number_to_currency(sd02.sd_spare_32) %>
+              <% else %>
+                <em><%= number_to_currency(sd02.sd_spare_33) %></em><%= number_to_currency(sd02.sd_spare_34) %>
+              <% end %>
             </div>
             <div class="m_btn"><a href="<%= sd02.sd_link %>">Buy Now</a></div>
           </figcaption>

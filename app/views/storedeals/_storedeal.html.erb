@@ -9,7 +9,7 @@
       <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %> OFF</div>
     <% end %>
    </div>
-   
+
    <% if storedeal.sd_promocode.present? %>
     <div class="buy-now"><span><%= link_to "GET CODE", storedeal %></span></div>
    <% else %>   
@@ -20,7 +20,11 @@
     <h3><%= render_with_sdhashtags(storedeal.sd_hashtag.to_s) %></h3>
     <p class="store_title"><span>@<%= storedeal.sdcategory.name %></span> | <%= link_to storedeal.sd_title, storedeal %></p>
     <div class="price">
-      <em><%= number_to_currency(storedeal.sd_spare_31) %></em><%= number_to_currency(storedeal.sd_spare_32) %>
+      <% if storedeal.sd_spare_31.present? %>
+        <em><%= number_to_currency(storedeal.sd_spare_31) %></em><%= number_to_currency(storedeal.sd_spare_32) %>
+      <% else %>
+        <em><%= number_to_currency(storedeal.sd_spare_33) %></em><%= number_to_currency(storedeal.sd_spare_34) %>
+      <% end %>
     </div>
 
     <% if storedeal.sd_promocode.present? %>
