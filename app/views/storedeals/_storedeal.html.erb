@@ -1,8 +1,15 @@
 <figure class="deals_card">
    <div class="image_box">
     <%= link_to image_tag(storedeal.sd_image, alt: storedeal.sd_title, title: storedeal.sd_image_title), storedeal %>
-    <div class="mark"><span><%= storedeal.sd_percentage %>%</span><em>OFF</em></div>
+    <% if storedeal.sd_percentage.present? %>
+      <div class="mark"><span><%= storedeal.sd_percentage %>%</span><em>OFF</em></div>
+    <% else %>
+      <% running_total = 0 %>
+      <% running_total =  (storedeal.sd_spare_33 - storedeal.sd_spare_34) / storedeal.sd_spare_33 * 100 %>
+      <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %> OFF</div>
+    <% end %>
    </div>
+   
    <% if storedeal.sd_promocode.present? %>
     <div class="buy-now"><span><%= link_to "GET CODE", storedeal %></span></div>
    <% else %>   

@@ -83,13 +83,17 @@
         
         <div class="page1">
           <% @most_deals.each do |md| %>  
-            <div class="tab-menu-text">
-              <div class="tab-menu-img"><%= link_to image_tag(md.sd_image, alt: md.sd_title, title: md.sd_image_title), md %></div>
-              <div class="tab-menu-text-alt"><p><%= link_to md.sd_title, md %></p></div>
-              <div class="tab-menu-text-alt">
-               <span><em><%= number_to_currency(md.sd_spare_31) %></em> <%= number_to_currency(md.sd_spare_32) %></span>
-              </div>
+           <div class="tab-menu-text">
+            <div class="tab-menu-img"><%= link_to image_tag(md.sd_image, alt: md.sd_title, title: md.sd_image_title), md %></div>
+            <div class="tab-menu-text-alt"><p><%= link_to md.sd_title, md %></p></div>
+            <div class="tab-menu-text-alt">
+             <% if md.sd_spare_31.present? %>
+              <span><em><%= number_to_currency(md.sd_spare_31) %></em> <%= number_to_currency(md.sd_spare_32) %></span>
+             <% else %>
+              <span><em><%= number_to_currency(md.sd_spare_33) %></em> <%= number_to_currency(md.sd_spare_34) %></span>
+             <% end %>
             </div>
+           </div>
           <% end %>
           <div class="all-show"><a href="/storedeals">See More</a></div>
         </div>
