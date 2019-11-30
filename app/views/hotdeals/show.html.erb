@@ -44,6 +44,7 @@
         </div>
         <div class="show_inner">
          <div class="hotdeal_inner">
+
            <h2 class="title"><%= @hotdeal.h_title %></h2>
 
            <% if @hotdeal.h_price.present? %>
@@ -107,8 +108,26 @@
                 <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
               <% end %>
             <% end %>
+
           </div>
         </div>
+
+        <!-- <div class="live_korea">
+          <button>Living in Korea</button>    
+          <div class="live">
+            <div class="ko_box">
+              <div class="short_info">
+                <div>가격</div>
+                <div>현지배송비</div>
+                <div>현지세금</div>
+                <div>직배송</div>
+                <div>배송비</div>
+                <div>가격비교</div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
 
         <% if can? :update, @hotdeal %>
           <div class="pinterest">
@@ -117,6 +136,11 @@
         <% end %>  
 
       </div>
+
+
+    
+
+
       <div class="hotdeal_related">
         <p>Related Products on Amazon</p>
         <script type="text/javascript">
@@ -140,6 +164,12 @@
 </div>
 <script><%= render(:partial => 'hotdeals', :handlers => [:erb], :formats => [:js]) %></script>
 
-
-
+<script>
+  $(document).ready(function(){
+    $("button").click(function(){
+      $(".live").removeClass("live");
+      $(".ko_box").addClass("block");
+    });
+});
+</script>
 

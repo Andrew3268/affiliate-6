@@ -219,3 +219,11 @@
 }
  
 
+/* for living in korea */
+.live_korea{}
+.live_korea .ko_box .short_info div{float:left;width:31.33%;margin:1%;box-shadow: 0 0 20px 0 rgba(0,0,0,.06);padding:15px;}
+.live{display:none;}
+.block{display:block;}
+
+
+
