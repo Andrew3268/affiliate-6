@@ -63,6 +63,9 @@
                 <% running_total =  @storedeal.sd_spare_33.to_i - @storedeal.sd_spare_34.to_i %>
                 <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
                <% end %>
+               <% if @storedeal.sd_promocode.present? %>
+                <em>* Enter <%= @storedeal.sdcategory.name %>'s promo code "<%= @storedeal.sd_promocode %>" at checkout to receive your savings.</em>
+               <% end %>
                <em>* Pricing may change and deals can expire fast.</em>
                <!-- <em>+ FREE Shipping</a></em> -->
 

@@ -88,9 +88,9 @@
             <div class="tab-menu-text-alt"><p><%= link_to md.sd_title, md %></p></div>
             <div class="tab-menu-text-alt">
              <% if md.sd_spare_31.present? %>
-              <span><em><%= number_to_currency(md.sd_spare_31) %></em> <%= number_to_currency(md.sd_spare_32) %></span>
+              <span><em><%= number_to_currency(md.sd_spare_31) %></em> <%= number_to_currency(md.sd_spare_32) %> | <span class="where">@<%= md.sdcategory.name %></span></span>
              <% else %>
-              <span><em><%= number_to_currency(md.sd_spare_33) %></em> <%= number_to_currency(md.sd_spare_34) %></span>
+              <span><em><%= number_to_currency(md.sd_spare_33) %></em> <%= number_to_currency(md.sd_spare_34) %> | @<%= md.sdcategory.name %></span>
              <% end %>
             </div>
            </div>
@@ -105,10 +105,12 @@
    </div><!--./st_top_wrap-->
   </div><!--./st_warp-->
 
-  <hr>
 
+  <div class="discovery"><p>TODAY'S DISCOVERY</p></div>
+  <hr>
+  
   <div class="catalog">
-    <a class="a01" href="/storedeals?sdcategory=Aliexpress">Aliexpress Deals</a> | 
+    <a class="a01" href="/storedeals?sdcategory=Aliexpress"><span>NEW</span> Aliexpress Deals</a> | 
     <a href="/storedeals">SEE MORE</a>
   </div>
   <div class="st_middle clearfix">
@@ -146,7 +148,7 @@
     <hr>
 
     <div class="catalog">
-      <a class="a01" href="/storedeals?sdcategory=Walmart">Walmart Deals</a> | 
+      <a class="a01" href="/storedeals?sdcategory=Walmart"><span>NEW</span> Walmart Deals</a> | 
       <a href="/storedeals">SEE MORE</a>
     </div>
     <div class="st_middle_box clearfix">

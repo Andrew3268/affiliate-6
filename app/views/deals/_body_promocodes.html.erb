@@ -47,13 +47,13 @@
         <% if promocode.p_spare_50.present? %>
           <% if promocode.p_spare_50 < DateTime.now %>
           <% promocode.p_spare_50 %>
-            <em class="expired">* This promo code has EXPIRED.</em>
+            <em class="expired">* EXPIRED</em>
           <% else %>
 
           <% if promocode.p_spare_51.present? %>
             <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
             <% promocode.p_spare_51 %>  
-              <span class="ex_date endtoday">* This Promo Code expires today.</span>
+              <span class="ex_date endtoday">* Expire Today</span>
             <% else %>
               <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
             <% end %>
@@ -63,8 +63,8 @@
           <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
         <% end %>                    
 
-        <em>* Pricing may change and promotional codes can expire fast.</em>
         <em>* Click and copy this code then apply it at your checkout</em>
+        <em>* Pricing may change and promotional codes can expire fast.</em>
         <% if can? :update, @promocode %>
          <div class="admin clearfix">
            <%= link_to 'Show', promocode %> |

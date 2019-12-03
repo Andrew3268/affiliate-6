@@ -1,7 +1,9 @@
 class StoredealsController < ApplicationController
   before_action :set_storedeal, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, except: [:index, :show]
-  load_and_authorize_resource
+  skip_before_action :authenticate, only: [:show, :index, :hashtags]
+  respond_to :js, :json, :html
+  skip_authorization_check only: :hashtags
+  load_and_authorize_resource except: :hashtags
   impressionist actions: [:show], unique: [:ip_address]
 
   # GET /storedeals
@@ -9,9 +11,9 @@ class StoredealsController < ApplicationController
   def index
     if params.has_key?(:sdcategory)
       @sdcategory = Sdcategory.find_by_name(params[:sdcategory])
-      @storedeals = Storedeal.where(sdcategory: @sdcategory)
+      @storedeals = Storedeal.where(sdcategory: @sdcategory).page(params[:page]).per_page(48)
     else
-      @storedeals = Storedeal.all.order("created_at DESC")
+      @storedeals = Storedeal.all.order("created_at DESC").page(params[:page]).per_page(48)
     end
     
   end

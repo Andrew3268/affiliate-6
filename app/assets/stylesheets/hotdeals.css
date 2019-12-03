@@ -35,7 +35,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.extra_dh{color:#007600;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.save_money{color:#B12704;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.expired{color:#fff;background:#ff0000;padding:5px 10px;width:100px;text-align:center;border-radius:15px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.endtoday{color:#ffa500;}
+.show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.endtoday{color:#fff;background:#ffa500;padding:5px 10px;width:110px;text-align:center;border-radius:15px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .code_btn{margin-top:30px;}
 
 .show_wrap .show_box .show_inner .hotdeal_inner .show_des{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:10px 0 20px 0;}
@@ -107,6 +107,7 @@
   .hotdeal_form input, .hotdeal_form textarea{border:2px solid #000;}
   .hotdeal_form label{font-size:11px;}
   .hotdeal_form select{background:#000;color:#fff;padding:3px 7px;}
+  .show_wrap .show_box .show_inner .hotdeal_inner h2{font-size:15px;}
 }
 
 /* Index Page */
@@ -222,8 +223,8 @@
 /* for living in korea */
 .live_korea{}
 .live_korea .ko_box .short_info div{float:left;width:31.33%;margin:1%;box-shadow: 0 0 20px 0 rgba(0,0,0,.06);padding:15px;}
-.live{display:none;}
-.block{display:block;}
-
+.ko_box{display:none;}
+.on{display:block;}
+.off{display:none;}
 
 

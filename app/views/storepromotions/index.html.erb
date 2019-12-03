@@ -52,6 +52,21 @@
                   <% else %>
                   <% if storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %>
                   <% end %>
+                  &ensp;
+                  <% if storepromotion.sp_end_date.present? %>
+                    <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
+                    <% storepromotion.sp_spare_60 %>
+                      <em class="expired code_em">EXPIRED</em>
+                    <% else %>
+                      <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
+                      <% storepromotion.sp_spare_61 %>
+                       <em class="endtoday code_em">Expire Today</em>
+                      <% else %>
+                       <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
+                       <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                      <% end %>
+                    <% end %>
+                  <% end %>
                 </p>
 
                 <p class="sp_title"><%= link_to storepromotion.sp_title, storepromotion %></p>
@@ -66,7 +81,7 @@
                   <% end %>
                 <% end %>
 
-                <em class="code_em em_box">
+                <!--<em class="code_em em_box">
                   <% if storepromotion.sp_end_date.present? %>
                     <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                     <% storepromotion.sp_spare_60 %>
@@ -77,11 +92,11 @@
                        <em class="endtoday code_em">This offer expires TODAY</em>
                       <% else %>
                        <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
-                       <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                       <em class="code_em">* Offers can be expired fast.</em>
                       <% end %>
                     <% end %>
                   <% end %>
-                </em>
+                </em>-->
                 <!-- <% if storepromotion.sp_end_date.present? %>
                   <div class="promocode_m">
                     <% if storepromotion.sp_promocode.present? %>

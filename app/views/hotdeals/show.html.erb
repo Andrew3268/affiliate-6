@@ -41,105 +41,108 @@
               </div>
             </div>
           <% end %>
-        </div>
+        </div><!--./show_img-->
+
+
+
         <div class="show_inner">
-         <div class="hotdeal_inner">
 
-           <h2 class="title"><%= @hotdeal.h_title %></h2>
+         <!--  <div class="alldeals_tabs show_tabs">
+            <input type="radio" name="tab" id="tab1" checked="checked">
+            <label for="tab1">I live in the United States.</label>
+            <input type="radio" name="tab" id="tab2">
+            <label for="tab2">I live in Korea.</label>
 
-           <% if @hotdeal.h_price.present? %>
-            <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-           <% else %>
-            <% if @hotdeal.h_spare_42.present? %>
-              <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-            <% else %>
-              <% running_total = 0 %>
-              <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
-              <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
-            <% end %>
-           <% end %>
-           
-           <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->
+            <div class="tab-content-wrapper">
+             <div id="tab-content-1" class="tab-content"> -->
 
-           <div class="extra_info">
-            <% if @hotdeal.h_spare_08.present? %>
-             <span class="basic_info">
-              <% if @hotdeal.h_spare_06.present? %>
-                <div class="primeornot"><%= @hotdeal.h_spare_06 %> |</div>
-              <% else %>
-                <!-- PRIME | -->
-              <% end %>
-                Avg <%= @hotdeal.h_spare_08 %> | <%= number_with_delimiter(@hotdeal.h_spare_09) %>+ reviews 
-              <% if @hotdeal.h_spare_07.present? %>
-                | <%= @hotdeal.h_spare_07 %> 
-              <% end %>
-             </span> 
-            <% end %>
+              <div class="hotdeal_inner">
+               <h2 class="title"><%= @hotdeal.h_title %></h2>
 
-             <% if @hotdeal.h_spare_41.present? %>
-              <% running_total = 0 %>
-              <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
-              <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
-             <% else %>
-              <% running_total = 0 %>
-              <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
-              <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
-             <% end %>
+               <% if @hotdeal.h_price.present? %>
+                <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+               <% else %>
+                <% if @hotdeal.h_spare_42.present? %>
+                  <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+                <% else %>
+                  <% running_total = 0 %>
+                  <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
+                  <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                <% end %>
+               <% end %>
+               
+               <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->
 
-             <% if @hotdeal.h_spare_01.present? %><em class="extra_dh">+ Get <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
-             <% if @hotdeal.h_spare_02.present? %><em class="extra_dh">+ Clip the <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
-             <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
-             <% if @hotdeal.h_spare_10.present? %>
-              <% @hotdeal.h_spare_10 %>
-              <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
-             <% end %>
-             <% if @hotdeal.h_spare_14.present? %><em>+ Find more <a href="<%= @hotdeal.h_spare_15 %>">"<%= @hotdeal.h_spare_14 %>"</a></em><% end %>
-             <em>* Pricing may change and deals can expire fast.</em>
-            </div>
+               <div class="extra_info">
+                <% if @hotdeal.h_spare_08.present? %>
+                 <span class="basic_info">
+                  <% if @hotdeal.h_spare_06.present? %>
+                    <div class="primeornot"><%= @hotdeal.h_spare_06 %> |</div>
+                  <% else %>
+                    <!-- PRIME | -->
+                  <% end %>
+                    Avg <%= @hotdeal.h_spare_08 %> | <%= number_with_delimiter(@hotdeal.h_spare_09) %>+ reviews 
+                  <% if @hotdeal.h_spare_07.present? %>
+                    | <%= @hotdeal.h_spare_07 %> 
+                  <% end %>
+                 </span> 
+                <% end %>
 
-            <div class="code_btn">
-              <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on&ensp;<em>Amazon</em></a>
-            </div>
+                 <% if @hotdeal.h_spare_41.present? %>
+                  <% running_total = 0 %>
+                  <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
+                  <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
+                 <% else %>
+                  <% running_total = 0 %>
+                  <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
+                  <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
+                 <% end %>
 
-            <%if @hotdeal.h_spare_21.present? %>
-              <div class="trix trix-container gradient"><span>Features</span><p><%= @hotdeal.h_spare_21.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
-            <% else %>
-              <% if @hotdeal.h_description.present? %>
-                <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
-              <% end %>
-            <% end %>
+                 <% if @hotdeal.h_spare_01.present? %><em class="extra_dh">+ Get <%= @hotdeal.h_spare_01 %>% Off Extra Deal</em><% end %>
+                 <% if @hotdeal.h_spare_02.present? %><em class="extra_dh">+ Clip the <%= @hotdeal.h_spare_02 %> Off Coupon</em><% end %>
+                 <em>+ FREE Shipping ( Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items. )</a></em>
+                 <% if @hotdeal.h_spare_10.present? %>
+                  <% @hotdeal.h_spare_10 %>
+                  <em>+ Check via Subscribe & Save ( Save 5% Off now and up to 15% Off on auto-deliveries <span><a href="https://amzn.to/2BzWhT4" target="_blank">Learn more</a></span> )</em>
+                 <% end %>
+                 <% if @hotdeal.h_spare_14.present? %><em>+ Find more <a href="<%= @hotdeal.h_spare_15 %>">"<%= @hotdeal.h_spare_14 %>"</a></em><% end %>
+                 <em>* Pricing may change and deals can expire fast.</em>
+                </div>
 
-          </div>
-        </div>
+                <div class="code_btn">
+                 <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on&ensp;<em>Amazon</em></a>
+                </div>
 
-        <!-- <div class="live_korea">
-          <button>Living in Korea</button>    
-          <div class="live">
-            <div class="ko_box">
-              <div class="short_info">
-                <div>가격</div>
-                <div>현지배송비</div>
-                <div>현지세금</div>
-                <div>직배송</div>
-                <div>배송비</div>
-                <div>가격비교</div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+                <%if @hotdeal.h_spare_21.present? %>
+                  <div class="trix trix-container gradient"><span>Features</span><p><%= @hotdeal.h_spare_21.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
+                <% else %>
+                  <% if @hotdeal.h_description.present? %>
+                    <div class="show_des"><p class="description"><%= @hotdeal.h_description %></p></div>
+                  <% end %>
+                <% end %>
 
+              </div><!--./extra_info-->
+             </div><!--./hotdeal_inner-->
 
+            <!-- </div> --><!--./tab-content-1-->
+
+            <!-- <div id="tab-content-2" class="tab-content">
+             Korea
+            </div> -->
+
+           <!-- </div> --><!--./tab-content-wrapper-->
+         <!-- </div> --><!--./show_tabs-->
+
+       </div><!--./show_inner-->
+
+        
         <% if can? :update, @hotdeal %>
           <div class="pinterest">
            <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
           </div>
         <% end %>  
 
-      </div>
-
-
-    
-
+      </div><!--./show_box-->
 
       <div class="hotdeal_related">
         <p>Related Products on Amazon</p>
@@ -163,13 +166,4 @@
   </div>
 </div>
 <script><%= render(:partial => 'hotdeals', :handlers => [:erb], :formats => [:js]) %></script>
-
-<script>
-  $(document).ready(function(){
-    $("button").click(function(){
-      $(".live").removeClass("live");
-      $(".ko_box").addClass("block");
-    });
-});
-</script>
 
