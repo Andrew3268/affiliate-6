@@ -42,6 +42,8 @@
         <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
       </div>
 
+      <em>* Enter this promo code at checkout to receive your savings.</em>
+
         <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>-->
 
         <% if promocode.p_spare_50.present? %>
@@ -62,9 +64,8 @@
         <% else %>
           <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
         <% end %>                    
-
-        <em>* Click and copy this code then apply it at your checkout</em>
-        <em>* Pricing may change and promotional codes can expire fast.</em>
+ 
+        <em>* Pricing may change and promo code can expire fast.</em>
         <% if can? :update, @promocode %>
          <div class="admin clearfix">
            <%= link_to 'Show', promocode %> |
