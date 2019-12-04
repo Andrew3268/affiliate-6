@@ -108,6 +108,7 @@
   .hotdeal_form label{font-size:11px;}
   .hotdeal_form select{background:#000;color:#fff;padding:3px 7px;}
   .show_wrap .show_box .show_inner .hotdeal_inner h2{font-size:15px;}
+  .show_wrap .show_box .show_inner a.store_btn{width:100%;}
 }
 
 /* Index Page */

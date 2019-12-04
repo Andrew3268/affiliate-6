@@ -184,9 +184,9 @@
   .show_wrap .show_box .show_inner strong{font-size:15px;}
   .show_wrap .show_box .show_inner span p{font-size:13px;}
   .show_wrap .show_box{width:100%;}
-
   .show_wrap .show_box_down{width:100%;margin:60px auto 200px auto;}
   .show_wrap .show_box_down .sbd_box .down_img{height:175px;}
+  .show_wrap .show_box .show_img .store_imgbox img{transform:translate(-40%, -50%);}
 }
 
 
