@@ -40,6 +40,7 @@
   .gadgets .card_wrap .card-body .pinterest{display:none;}
   .gadgets .card_wrap .start{top:-45px;}
   .add_gadget img{width:40px;}
+  .gadgets .card_wrap .card-header .home_img{width:100%;height:auto;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
@@ -49,6 +50,7 @@
   .gadgets .card_wrap .card-body h4{margin:15px 0;}
   .gadgets .card_wrap .start{top:-45px;} 
   .add_gadget img{width:60px;} 
+  .gadgets .card_wrap .card-header .home_img{width:100%;height:auto;}
 }
 
 
