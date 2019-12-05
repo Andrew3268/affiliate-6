@@ -18,12 +18,50 @@ class StorepromotionsController < ApplicationController
       @search_term = params[:search]
       @storepromotions = @storepromotions.search_by(@search_term)
     end
+    # set_meta_tags title: 'Take the best deals updated daily',
+    #               site: 'Oh,igottabuythis',
+    #               revierse: true,
+    #               description: 'Take the best deals with promo codes and coupons',
+    #               keywords: 'Amazon, deals, promo codes, coupons',
+    #               twitter: {
+    #                 card: "summary",
+    #                 site: "@OhIgottabuythis",
+    #                 title: 'Amazon Promo Codes & Coupons',
+    #                 description: 'Take the best deals with promo codes and coupons',
+    #                 # image: @hotdeal.h_image
+    #               },
+    #               og: {
+    #                 title: 'Amazon Promo Codes & Coupons',
+    #                 description: 'Take the best deals with promo codes and coupons',
+    #                 type: 'website',
+    #                 url: 'www.ohigottabuythis.net/promocodes',
+    #                 # image: @hotdeal.h_image
+    #               }
   end
 
   # GET /storepromotions/1
   # GET /storepromotions/1.json
   def show
     impressionist(@storepromotion)
+    # set_meta_tags title: @promocode.p_title,
+    #               site: 'Oh,igottabuythis',
+    #               revierse: true,
+    #               description: @promocode.p_description,
+    #               keywords: @promocode.p_keyword,
+    #               twitter: {
+    #                 card: "summary",
+    #                 site: "@OhIgottabuythis",
+    #                 title: @promocode.p_title,
+    #                 description: @promocode.p_description,
+    #                 image: @promocode.p_image
+    #               },
+    #               og: {
+    #                 title: @promocode.p_title,
+    #                 description: @promocode.p_description,
+    #                 type: 'website',
+    #                 url: promocode_url(@promocode),
+    #                 image: @promocode.p_image
+    #               }
   end
 
   # GET /storepromotions/new

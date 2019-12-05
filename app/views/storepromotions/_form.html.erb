@@ -32,3 +32,22 @@
     <div class="form_btn"><%= f.button :submit %></div>
   <% end %>
 </div>
+
+<!-- Site Info Popup -->
+<div class="form_popup">
+  <input type="checkbox" id="popup__1" class="popup__check" />
+  <div class="popup__base">
+    <label for="popup__1" class="popup__bg"></label>
+    <div class="popup__inner">
+      <div class="popup__calign">
+        <label for="popup__1" class="popup__close">+</label>
+      </div>
+      <div class="popup__textbox">
+        <p>Site Information</p>
+        <%= render 'storepromotions/table' %>
+      </div>
+    </div>
+  </div>
+  <!-- End popup -->
+  <label class="trigger" for="popup__1">Info</label>
+</div>

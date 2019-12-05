@@ -40,7 +40,7 @@
           <% end %>
 
            <div class="store_info">
-            <em>* Click through to see <%= @storepromotion.sp_store_name %>'s special offers.</em>
+            <em>* Click through to see <%= @storepromotion.spcategory.name %>'s special offers.</em>
             <% if @storepromotion.sp_promocode.present? %>
               <em>* Enter <%= @storepromotion.sp_store_name %>'s promo code "<span><%= @storepromotion.sp_promocode %></span>" at checkout to receive your savings.</em>
             <% else %>

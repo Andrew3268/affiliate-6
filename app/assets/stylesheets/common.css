@@ -128,16 +128,16 @@ header .gnb_m,header .gnb_open2{display:none;}
   header .gnb_pc>ul>li{float:left;width:180px;text-align:center;}
   header .gnb_pc>ul>li:nth-child(3){width:149px;}
   header .gnb_pc>ul>li>a{font-size:30px;line-height:1;}
-  header.on{border-bottom:1px solid #ccc;height:60px;}
-  header.on .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:6px 10px 0 0;}
-  header.on .visual{float:left;margin-top:15px;}
-  header.on .visual img{width:200px;}
-  header.on .gnb_pc>ul{margin:0 0 0 20px;padding:5px 0;}
-  header.on .gnb_pc>ul>li{width:108px}
-  header.on .gnb_pc>ul>li:nth-child(3){width:150px;}
-  header.on .gnb_pc>ul>li>a{font-size:17px;}
-  header.on .gnb_pc>ul>li>a>em{line-height:0;font-size:13px;}
-  header.on .gnb_pc>ul>li>a>span{display:none;}
+  .index_header .on{border-bottom:1px solid #ccc;height:60px;}
+  .index_header .on .gnb_pc>a>.oh_logo{display:inline-block;float:left;width:50px;height:50px;margin:6px 10px 0 0;}
+  .index_header .on .visual{float:left;margin-top:15px;}
+  .index_header .on .visual img{width:200px;}
+  .index_header .on .gnb_pc>ul{margin:0 0 0 20px;padding:5px 0;}
+  .index_header .on .gnb_pc>ul>li{width:108px}
+  .index_header .on .gnb_pc>ul>li:nth-child(3){width:150px;}
+  .index_header .on .gnb_pc>ul>li>a{font-size:17px;}
+  .index_header .on .gnb_pc>ul>li>a>em{line-height:0;font-size:13px;}
+  .index_header .on .gnb_pc>ul>li>a>span{display:none;}
 }
 
 @media screen and (max-width:400px){
