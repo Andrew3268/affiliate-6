@@ -25,7 +25,7 @@
          <div class="hotdeal_inner">
            <% if @storepromotion.sp_spare_40.present? || @storepromotion.sp_spare_42.present?%>
            <% else %>
-            <p class="store_p"><%= @storepromotion.sp_store_name %> <% if @storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %></p>
+            <p class="store_p"><%= @storepromotion.spcategory.name %> <% if @storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %></p>
            <% end %>
            <h2 class="store_h2"><%= @storepromotion.sp_title %></h2>
 
