@@ -77,25 +77,26 @@
             <% if @promocode.p_spare_07.present? %><em>+ Find more <a href="<%= @promocode.p_spare_08 %>">"<%= @promocode.p_spare_07 %>"</a></em><% end %>
             <em>* Pricing may change and deals can expire fast.</em>
 
-            <% if @promocode.p_spare_50.present? %>
-              <% if @promocode.p_spare_50 < DateTime.now %>
-              <% @promocode.p_spare_50 %>
-                <em class="expired">EXPIRED</em>
-              <% else %>
 
-                <% if @promocode.p_spare_51.present? %>
-                 <% if @promocode.p_spare_51 <= DateTime.now %>
-                 <% @promocode.p_spare_51 %>
-                  <em class="endtoday">* Expire Today</em> 
-                 <% else %>
-                  <em>* Code End Date: <%= @promocode.p_end_date %> or while supplies last.</em>
-                 <% end %> 
+            <% if @promocode.p_end_date.present? %>
+              <% if @promocode.p_spare_50.present? %>
+                <% if @promocode.p_spare_50 < DateTime.now %>
+                <% @promocode.p_spare_50 %>
+                  <em class="expired">EXPIRED</em>
+                <% else %>
+                  <% if @promocode.p_spare_51.present? %>
+                   <% if @promocode.p_spare_51 <= DateTime.now %>
+                   <% @promocode.p_spare_51 %>
+                    <em class="endtoday">* Expire Today</em> 
+                   <% else %>
+                    <em>* Code End Date: <%= @promocode.p_end_date %> or while supplies last.</em>
+                   <% end %> 
+                  <% end %>
                 <% end %>
-
+               <!-- </div> -->
+              <% else %>
+                <em>* Code End Date: <%= @promocode.p_end_date %> or while supplies last.</em>
               <% end %>
-             <!-- </div> -->
-            <% else %>
-              <em>* Code End Date: <%= @promocode.p_end_date %> or while supplies last.</em>
             <% end %>
            </div><!--./extra_info-->
 
