@@ -15,6 +15,25 @@ class StoredealsController < ApplicationController
     else
       @storedeals = Storedeal.all.order("created_at DESC").page(params[:page]).per_page(48)
     end
+    set_meta_tags title: 'The best deals of Aliexpress,Bestbuy,Walmart,Target',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'Discover the best bargain and save money',
+                  keywords: 'Aliexpress, Bestbuy, Walmart, Target, deals, promo codes, coupons',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Best Deals & Promotions',
+                    description: 'Discover the best bargain and save money',
+                    # image: @storedeal.sd_image
+                  },
+                  og: {
+                    title: 'Best Deals & Promotions',
+                    description: 'Discover the best bargain and save money',
+                    type: 'website',
+                    url: 'www.ohigottabuythis.net/promocodes',
+                    # image: @storedeal.sd_image
+                  }
     
   end
 
@@ -23,6 +42,25 @@ class StoredealsController < ApplicationController
   def show
     impressionist(@storedeal)
     # @relative_show = @storedeal.sdcategory.storedeal
+    set_meta_tags title: @storedeal.sd_title,
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: @storedeal.sd_spare_50,
+                  keywords: @storedeal.sd_keyword,
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: @storedeal.sd_title,
+                    description: @storedeal.sd_spare_50,
+                    image: @storedeal.sd_image
+                  },
+                  og: {
+                    title: @storedeal.sd_title,
+                    description: @storedeal.sd_spare_50,
+                    type: 'website',
+                    url: storedeal_url(@storedeal),
+                    image: @storedeal.sd_image
+                  }
   end
 
   def hashtags

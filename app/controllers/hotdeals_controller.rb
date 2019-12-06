@@ -60,18 +60,18 @@ class HotdealsController < ApplicationController
     set_meta_tags title: @hotdeal.h_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: @hotdeal.h_description,
+                  description: @hotdeal.h_spare_21,
                   keywords: @hotdeal.h_keyword,
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: @hotdeal.h_title,
-                    description: @hotdeal.h_description,
+                    description: @hotdeal.h_spare_21,
                     image: @hotdeal.h_image
                   },
                   og: {
                     title: @hotdeal.h_title,
-                    description: @hotdeal.h_description,
+                    description: @hotdeal.h_spare_21,
                     type: 'website',
                     url: hotdeal_url(@hotdeal),
                     image: @hotdeal.h_image

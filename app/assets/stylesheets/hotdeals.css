@@ -97,7 +97,7 @@
   .hotdeal_form .pricing div .promo_date{width:100%;}
   .show_wrap .show_box .show_inner a.p_btn{width:100%;}
   .show_wrap .show_box .show_inner a.store_btn{width:100%;}
-  .show_wrap .show_box h2.sd_title{font-size:15px;padding:0;margin:0;}
+  .show_wrap .show_box h2.sd_title{font-size:15px;padding:10px;margin:0;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .hotdeals_nav{margin-top:10px;}
