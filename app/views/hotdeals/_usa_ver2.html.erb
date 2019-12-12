@@ -16,28 +16,29 @@
  <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->
 
  <div class="info_wrap clearfix">
-  
-    <div class="box line_three">
-      <p>Shipping</p>
-      <em>Free</em>
+    <div class="first_block clearfix">
+      <div class="box line_three">
+        <p>Shipping</p>
+        <em>Free</em>
+      </div>
+      <div class="box line_three">
+        <p>Rating</p>
+        <% if @hotdeal.h_spare_08.present? %>
+          <em>Avg. <%= @hotdeal.h_spare_08 %> / 5.0</em>
+        <% else %>
+          <em>-</em>
+        <% end %>
+      </div>
+      <div class="box line_three">
+        <p>Reviews</p>
+        <% if @hotdeal.h_spare_09.present? %>
+          <em><%= number_with_delimiter(@hotdeal.h_spare_09) %>+</em>
+        <% else %>
+          <em>-</em>
+        <% end %>
+      </div>
     </div>
-    <div class="box line_three">
-      <p>Rating</p>
-      <% if @hotdeal.h_spare_08.present? %>
-        <em>Avg. <%= @hotdeal.h_spare_08 %> / 5.0</em>
-      <% else %>
-        <em>-</em>
-      <% end %>
-    </div>
-    <div class="box line_three">
-      <p>Reviews</p>
-      <% if @hotdeal.h_spare_09.present? %>
-        <em><%= number_with_delimiter(@hotdeal.h_spare_09) %>+</em>
-      <% else %>
-        <em>-</em>
-      <% end %>
-    </div>
-    <div class="info_box">
+    <div class="info_box clearfix">
       <span>* Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></span>
       <span>* Average rating and reviews may change after posted.</span>
     </div> 
@@ -48,64 +49,68 @@
   </div> -->
 
   <% if @hotdeal.h_spare_45.present? %>
-    <div class="box line_three">
-      <p>Savings</p>
-      <em>
-       <% if @hotdeal.h_spare_41.present? %>
-        <% running_total = 0 %>
-        <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
-        <em class="save_money"><%= number_to_currency(running_total) %></em>
-       <% else %>
-        <% running_total = 0 %>
-        <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
-        <em class="save_money"><%= number_to_currency(running_total) %></em>
-       <% end %>
-      </em>
-    </div>
-    <div class="box line_three">
-      <p>Coupon</p>
-      <% if @hotdeal.h_spare_02.present? %>
-        <em><%= @hotdeal.h_spare_02 %></em>
-      <% else %>
-        <em>-</em>
-      <% end %>
-    </div>
-    <div class="box line_three">
-      <p>Price Drops</p>
-      <em>
-        <% if @hotdeal.h_spare_45.present? %>
+    <div class="second_block clearfix">
+      <div class="box line_three">
+        <p>Savings</p>
+        <em>
+         <% if @hotdeal.h_spare_41.present? %>
           <% running_total = 0 %>
-          <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_42.to_i %>
-          <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>
+          <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
+          <em class="save_money"><%= number_to_currency(running_total) %></em>
+         <% else %>
+          <% running_total = 0 %>
+          <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
+          <em class="save_money"><%= number_to_currency(running_total) %></em>
+         <% end %>
+        </em>
+      </div>
+      <div class="box line_three">
+        <p>Coupon</p>
+        <% if @hotdeal.h_spare_02.present? %>
+          <em><%= @hotdeal.h_spare_02 %></em>
         <% else %>
-          <% running_total = 0 %>
-          <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_44.to_i %>
-          <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>
+          <em>-</em>
         <% end %>
-      </em>
+      </div>
+      <div class="box line_three">
+        <p>Price Drops</p>
+        <em>
+          <% if @hotdeal.h_spare_45.present? %>
+            <% running_total = 0 %>
+            <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_42.to_i %>
+            <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>
+          <% else %>
+            <% running_total = 0 %>
+            <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_44.to_i %>
+            <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>
+          <% end %>
+        </em>
+      </div>
     </div>
   <% else %>
-    <div class="box">
-      <p>Savings</p>
-      <em>
-       <% if @hotdeal.h_spare_41.present? %>
-        <% running_total = 0 %>
-        <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
-        <em class="save_money"><%= number_to_currency(running_total) %></em>
-       <% else %>
-        <% running_total = 0 %>
-        <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
-        <em class="save_money"><%= number_to_currency(running_total) %></em>
-       <% end %>
-      </em>
-    </div>
-    <div class="box">
-      <p>Coupon</p>
-      <% if @hotdeal.h_spare_02.present? %>
-        <em><%= @hotdeal.h_spare_02 %></em>
-      <% else %>
-        <em>-</em>
-      <% end %>
+    <div class="second_block clearfix">
+      <div class="box">
+        <p>Savings</p>
+        <em>
+         <% if @hotdeal.h_spare_41.present? %>
+          <% running_total = 0 %>
+          <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
+          <em class="save_money"><%= number_to_currency(running_total) %></em>
+         <% else %>
+          <% running_total = 0 %>
+          <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
+          <em class="save_money"><%= number_to_currency(running_total) %></em>
+         <% end %>
+        </em>
+      </div>
+      <div class="box">
+        <p>Coupon</p>
+        <% if @hotdeal.h_spare_02.present? %>
+          <em><%= @hotdeal.h_spare_02 %></em>
+        <% else %>
+          <em>-</em>
+        <% end %>
+      </div>
     </div>
   <% end %>
   <div class="info_box">
@@ -118,9 +123,11 @@
   </div>
 
   <% if @hotdeal.h_spare_14.present? %>
-    <div class="box">
-      <p>Search more by Keyword</p>
-      <em><a class="keyword" target="_blank" href="<%= @hotdeal.h_spare_15 %>"><%= @hotdeal.h_spare_14 %><i></i></a></em>
+    <div class="third_block clearfix">
+      <div class="box">
+        <p>Search more by Keyword</p>
+        <em><a class="keyword" target="_blank" href="<%= @hotdeal.h_spare_15 %>"><%= @hotdeal.h_spare_14 %></a><i></i></em>
+      </div>
     </div>
   <% end %>
 
