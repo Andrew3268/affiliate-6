@@ -7,11 +7,17 @@
      <% else %>
       <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
      <% end %>
+     <% if can? :update, @promocode %>
+       <div class="admin clearfix">
+         <%= link_to 'Edit', edit_promocode_path(promocode) %> |
+         <%= link_to 'Destroy', promocode, method: :delete, data: { confirm: 'Are you sure?' } %>
+       </div>
+     <% end %>
      
     </div>
     <div class="inner inner_top">
       <span class="regular"><em><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</em> + free shipping</span>
-      <span class="shipping_condition">Free Shipping: <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a> or $25+ of all other eligible items.</a></span>
+      <span class="shipping_condition">Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a></span>
       <!-- <p><a target="_blank" href="<%= promocode.p_link %>"><%= promocode.p_title %></a></p> -->
       <p><%= link_to promocode.p_title, promocode %></p>
 
@@ -20,6 +26,47 @@
        <% running_total = 0 %>
        <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
        <em class="discounted"><%= number_to_currency(running_total) %></em><span class="ori_price"><%= number_to_currency(promocode.p_spare_26) %></span>
+
+       <div class="info_wrap clearfix">
+        <div class="block clearfix">
+          <div class="box">
+            <p>Savings</p>
+            <em>
+              <% saving_total = 0 %>
+              <% saving_total =  promocode.p_spare_26 - (promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26) %>
+              <%= number_to_currency(saving_total) %>
+            </em>
+          </div>
+          <div class="box">
+            <p>Rating</p>
+            <% if promocode.p_spare_03.present? %>
+              <em>Avg. <%= promocode.p_spare_03 %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          </div>
+          <div class="box">
+            <p>Reviews</p>
+            <% if promocode.p_spare_04.present? %>
+              <em><%= number_with_delimiter(promocode.p_spare_04) %>+</em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          </div>
+          <div class="box">
+            <p>Coupon</p>
+            <% if promocode.p_coupon_deal.present? %>
+              <em><%= promocode.p_coupon_deal %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          </div>
+         </div>
+        </div>
+
+        <div class="text_copied text_copied_pc">
+        <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
+        </div>
 
        <% if promocode.p_end_date.present? %>
          <% if promocode.p_spare_50.present? %>
@@ -31,57 +78,25 @@
           <% if promocode.p_spare_51.present? %>
             <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
             <% promocode.p_spare_51 %>  
-              <span class="endtoday">Expire Today</span>
+              <span class="endtoday">End Today</span>
             <% else %>
-              <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
+              <span class="ex_date ex_date_new">* End Date : <%= promocode.p_end_date %></span>
             <% end %>
            <% end %>
           <% end %>
          <% else %>
-           <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
+           <span class="ex_date ex_date_new">* End Date : <%= promocode.p_end_date %></span>
          <% end %>
-       <% end %>                   
-
-        
-
-      <div class="text_copied text_copied_pc">
-        <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
-      </div>
-
-      <em>* Enter this promo code at checkout to receive your savings.</em>
-
-      <div class="extra_info">
-        <% if promocode.p_extra_deal.present? %>
-          <div class="tooltip_common tooltip_red"><span> + Extra Discount</span><div class="content_common tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
-        <% end %>
-
-        <% if promocode.p_coupon_deal.present? %>
-          <div class="tooltip_common tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
-        <% end %>
-
-      <!--   <% if promocode.p_extra_deal.present? %>
-         <div class="m_tooltip_common m_tooltip_red"><span> + Extra Discount</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
-        <% end %>
-        
-        <% if promocode.p_coupon_deal.present? %>
-         <div class="m_tooltip_common m_tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div> 
-       <% end %> -->
-      </div>
-
-
-        <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>-->
-
-         
- 
-        <em>* Pricing may change and promo code can expire fast.</em>
-        <% if can? :update, @promocode %>
-         <div class="admin clearfix">
-           <%= link_to 'Show', promocode %> |
-           <%= link_to 'Edit', edit_promocode_path(promocode) %> |
-           <%= link_to 'Destroy', promocode, method: :delete, data: { confirm: 'Are you sure?' } %>
-         </div>
-        <% end %>
-      </div>
+       <% else %>
+        <span class="ex_date ex_date_new">* End Date : End Soon</span>
+       <% end %>                           
+  
+      <!-- <em>* Enter this promo code at checkout to receive your savings.</em>
+      <em>* Pricing may change and promo code can expire fast.</em> -->
+      <!-- <div class="extra_info"></div> -->
+      
+      
+     </div>
     </div> 
     <div class="text_copied text_copied_m">
       <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
