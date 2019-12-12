@@ -57,18 +57,25 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em a.keyword{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;width:200px;overflow:hidden;word-break:break-word;font-size:13px;display:inline-block;line-height:1;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box{margin-bottom:10px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span{display:block;font-size:12px;color:#ccc;margin-left:15px;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul{margin-left:10px;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul li{list-style:disc;}
 /*.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span a{color:#08f;}*/
 
 @media screen and (max-width:640px){
+  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box{padding:10px 0;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em{font-size:15px;}
-  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span{margin:0;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p{font-size:11px;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em a.keyword{width:120px;}
+  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span{margin:0;}
+  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em .end_date{font-size:11px;}
+
 }
 @media screen and (min-width:641px) and (max-width:1199px){
+  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box{padding:10px 0;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em{font-size:15px;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p{font-size:11px;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em a.keyword{width:120px;}
+  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em .end_date{font-size:11px;}
 }
 
 .show_wrap .show_box .show_inner .hotdeal_inner .show_des{border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:10px 0 20px 0;}

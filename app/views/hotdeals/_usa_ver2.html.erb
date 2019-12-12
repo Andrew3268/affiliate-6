@@ -39,8 +39,12 @@
       </div>
     </div>
     <div class="info_box clearfix">
-      <span>* Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></span>
-      <span>* Average rating and reviews may change after posted.</span>
+      <span>
+        <ul>
+          <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime.<i></i></a></li>
+          <li>Average rating and reviews may change after posted.</li>
+        </ul>
+      </span>
     </div> 
 
   <!-- <div class="box">
@@ -114,12 +118,16 @@
     </div>
   <% end %>
   <div class="info_box">
-    <% if @hotdeal.h_spare_02.present? %>
-      <span>* Check coupon on detail page to receive your extra savings.</span>
-    <% end %>
-    <% if @hotdeal.h_spare_45.present? %>
-      <span>* Price dropped compare to last posted.</span>
-    <% end %>
+    <span>
+      <ul>
+        <% if @hotdeal.h_spare_02.present? %>
+          <li>Check coupon on detail page to receive your extra savings.</li>
+        <% end %>
+        <% if @hotdeal.h_spare_45.present? %>
+          <li>Price dropped compare to last posted.</li>
+        <% end %>
+      </ul>
+    </span>
   </div>
 
   <% if @hotdeal.h_spare_14.present? %>
