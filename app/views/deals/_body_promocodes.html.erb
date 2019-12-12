@@ -21,41 +21,16 @@
        <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
        <em class="discounted"><%= number_to_currency(running_total) %></em><span class="ori_price"><%= number_to_currency(promocode.p_spare_26) %></span>
 
-        <div class="extra_info">
-          <% if promocode.p_extra_deal.present? %>
-            <div class="tooltip_common tooltip_red"><span> + Extra Discount</span><div class="content_common tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
-          <% end %>
-          <% if promocode.p_coupon_deal.present? %>
-            <div class="tooltip_common tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
-          <% end %>
-          </address>
-          <% if promocode.p_extra_deal.present? %>
-           <div class="m_tooltip_common m_tooltip_red"><span> + Extra Discount</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
-          <% end %>
-          <% if promocode.p_coupon_deal.present? %>
-           <div class="m_tooltip_common m_tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div> 
-         <% end %>
-      </div>
-
-
-      <div class="text_copied text_copied_pc">
-        <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
-      </div>
-
-      <em>* Enter this promo code at checkout to receive your savings.</em>
-
-        <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>-->
-
-        <% if promocode.p_spare_50.present? %>
+       <% if promocode.p_spare_50.present? %>
           <% if promocode.p_spare_50 < DateTime.now %>
           <% promocode.p_spare_50 %>
-            <em class="expired">* EXPIRED</em>
+            <em class="expired">EXPIRED</em>
           <% else %>
 
           <% if promocode.p_spare_51.present? %>
             <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
             <% promocode.p_spare_51 %>  
-              <span class="ex_date endtoday">* Expire Today</span>
+              <span class="endtoday">Expire Today</span>
             <% else %>
               <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
             <% end %>
@@ -63,7 +38,38 @@
           <% end %>
         <% else %>
           <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
-        <% end %>                    
+        <% end %>                   
+
+        
+
+      <div class="text_copied text_copied_pc">
+        <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
+      </div>
+
+      <em>* Enter this promo code at checkout to receive your savings.</em>
+
+      <div class="extra_info">
+        <% if promocode.p_extra_deal.present? %>
+          <div class="tooltip_common tooltip_red"><span> + Extra Discount</span><div class="content_common tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
+        <% end %>
+
+        <% if promocode.p_coupon_deal.present? %>
+          <div class="tooltip_common tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="content_common tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div>
+        <% end %>
+
+      <!--   <% if promocode.p_extra_deal.present? %>
+         <div class="m_tooltip_common m_tooltip_red"><span> + Extra Discount</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by applying promotional code to the product that is being discounting.</p></div></div>
+        <% end %>
+        
+        <% if promocode.p_coupon_deal.present? %>
+         <div class="m_tooltip_common m_tooltip_green"><span> + <%= promocode.p_coupon_deal %> off Coupon</span><div class="m_content_common m_tooltip-content"><p>Get extra discount by clipping coupon to the product that is being discounting.</p></div></div> 
+       <% end %> -->
+      </div>
+
+
+        <!-- <p class="mobile_code"><span>Take <strong><%= promocode.p_percentage %>% off at $<%= promocode.p_list_price %></strong> with promo code: <strong class="m_codes"><%= promocode.p_promocode %></strong></span></p>-->
+
+         
  
         <em>* Pricing may change and promo code can expire fast.</em>
         <% if can? :update, @promocode %>
