@@ -8,12 +8,44 @@
         <div class="dealpage_title"><p>Bargain By Stores</p></div>    
       <% end %>
     </div>
+    <%= render 'deals/header_store' %>
 
-    <%= render 'storedeals/navbar' %>
-    <div id="promocodes">
-      <%= render @storedeals %> 
-    </div>
-    <%= will_paginate @storedeals %>
+    <div class="sp_wrap">
+
+      <div class="sp_left">
+        <div class="sp_menu">
+          <div class="text show-more-height">
+            <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div>
+            <% if can? :update, @storedeals %>
+             <ul>
+              <li class="admin"><%= link_to 'New Deal', new_storedeal_path %></li>
+              <li class="admin"><%= link_to "New Category", new_sdcategory_path %></li>
+             </ul>
+            <% end %>
+            <!-- <button id='sort-button'>Sort By Alphabetically</button> -->
+            <ul><li><a href="/storedeals/">All Stores</a></li></ul>
+            <ul id='sort'>
+              <% Sdcategory.all.each do |sdc| %>
+                <li><%= link_to sdc.name, storedeals_path(sdcategory: sdc.name) %></li>
+              <% end %>        
+            </ul>
+            <!-- Only in navbar
+            <% Spcategory.where(display_in_navbar: true).each do |category| %>
+              <%= link_to category.name, storepromotions_path(spcategory: category.name) %>
+            <% end %> -->
+          </div>
+        </div>
+        <!-- <div class="show-more">Show More</div> -->
+      </div><!--./sp_left-->
+
+      <div class="sp_right">
+        <div id="promocodes">
+          <%= render @storedeals %> 
+        </div>
+      </div>
+    
+      <%= will_paginate @storedeals %>
+    </div><!--./sp_wrap-->
     
   </div><!--./warp-->
 </div><!--./layout-->
@@ -21,6 +53,18 @@
 
 
 
+<!-- 
+<div class="sd_category">
+  <% if params[:sdcategory].present? %>
+    <div class="dealpage_title"><p>Bargain Of <span><%= params[:sdcategory] %></span></p></div>
+  <% else %>
+    <div class="dealpage_title"><p>Bargain By Stores</p></div>    
+  <% end %>
+</div>
 
-
+<% render 'storedeals/navbar' %>
+<div id="promocodes">
+  <% render @storedeals %> 
+</div>
+  -->
 

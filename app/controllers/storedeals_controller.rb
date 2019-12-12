@@ -15,6 +15,10 @@ class StoredealsController < ApplicationController
     else
       @storedeals = Storedeal.all.order("created_at DESC").page(params[:page]).per_page(48)
     end
+    if params[:search]
+      @search_term = params[:search]
+      @storedeals = @storedeals.search_by(@search_term)
+    end
     set_meta_tags title: 'The best deals of Aliexpress,Bestbuy,Walmart,Target',
                   site: 'Oh,igottabuythis',
                   revierse: true,

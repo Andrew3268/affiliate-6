@@ -14,7 +14,6 @@
 .show_wrap .show_box .show_inner .hotdeal_inner{}
 .show_wrap .show_box .show_inner .hotdeal_inner h2{font-weight:500;line-height:1.2;font-size:18px;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;padding:0 5px;}
 
-/*.show_wrap .show_box .show_inner .hotdeal_inner p{font-size:15px;font-weight:400;margin:15px 0;}*/
 .show_wrap .show_box .show_inner .hotdeal_inner .top_line{}
 .show_wrap .show_box .show_inner .hotdeal_inner .top_line span{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;width:300px;overflow:hidden;display:inline-block;vertical-align:middle;font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner .top_line em{font-weight:500;}
@@ -245,11 +244,5 @@
 }
  
 
-/* for living in korea */
-.live_korea{}
-.live_korea .ko_box .short_info div{float:left;width:31.33%;margin:1%;box-shadow: 0 0 20px 0 rgba(0,0,0,.06);padding:15px;}
-.ko_box{display:none;}
-.on{display:block;}
-.off{display:none;}
 
 

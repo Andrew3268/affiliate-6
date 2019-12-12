@@ -88,6 +88,8 @@
 .featured .sm_mobile ul.sp_ul li a{color:#fff;font-size:40px;text-transform:uppercase;}
 .featured .sm_mobile .store_search input{padding:10px;width:80%;margin-bottom:5px;}
 
+
+.sp_wrap .sp_right .sotre_card{width:31.33%;}
 .sp_wrap .sp_right .sp_card{border-bottom:1px solid #ccc;float:left;width:48%;margin:1%;height:100px;position:relative;}
 .sp_wrap .sp_right .sp_card .admin{font-size:12px;position:absolute;bottom:0;right:0;}
 .sp_wrap .sp_right .sp_image{float:left;width:15%;height:100px;position:relative;}
