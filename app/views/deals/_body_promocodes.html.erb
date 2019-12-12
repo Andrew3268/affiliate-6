@@ -21,7 +21,8 @@
        <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
        <em class="discounted"><%= number_to_currency(running_total) %></em><span class="ori_price"><%= number_to_currency(promocode.p_spare_26) %></span>
 
-       <% if promocode.p_spare_50.present? %>
+       <% if promocode.p_end_date.present? %>
+         <% if promocode.p_spare_50.present? %>
           <% if promocode.p_spare_50 < DateTime.now %>
           <% promocode.p_spare_50 %>
             <em class="expired">EXPIRED</em>
@@ -36,9 +37,10 @@
             <% end %>
            <% end %>
           <% end %>
-        <% else %>
-          <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
-        <% end %>                   
+         <% else %>
+           <span class="ex_date ex_date_new">* Expiration Date : <%= promocode.p_end_date %></span>
+         <% end %>
+       <% end %>                   
 
         
 

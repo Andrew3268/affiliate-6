@@ -61,13 +61,15 @@
         <% running_total = 0 %>
         <% running_total =  promo_h.p_spare_26 - (promo_h.p_spare_27 / 100) * promo_h.p_spare_26 %>
         <em><span class="span_01"><%= number_to_currency(promo_h.p_spare_26) %></span><%= number_to_currency(running_total) %></em>
-        <% if promo_h.p_spare_50 && (promo_h.p_spare_50 < DateTime.now) %>
-        <% promo_h.p_spare_50 %>
-         <p class="expired">EXPIRED.</p>
-        <% else %>
-          <% if promo_h.p_spare_51 && (promo_h.p_spare_51 <= DateTime.now) %>
-          <% promo_h.p_spare_51 %>
-            <p class="endtoday">Expire Today.</p>
+        <% if promo_h.p_end_date.present? %>
+          <% if promo_h.p_spare_50 && (promo_h.p_spare_50 < DateTime.now) %>
+          <% promo_h.p_spare_50 %>
+           <p class="expired">EXPIRED.</p>
+          <% else %>
+            <% if promo_h.p_spare_51 && (promo_h.p_spare_51 <= DateTime.now) %>
+            <% promo_h.p_spare_51 %>
+              <p class="endtoday">Expire Today.</p>
+            <% end %>
           <% end %>
         <% end %>
       </div>
