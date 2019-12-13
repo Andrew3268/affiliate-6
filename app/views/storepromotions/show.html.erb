@@ -62,7 +62,7 @@
                       <% else %>
                         <% if @storepromotion.sp_spare_61 <= DateTime.now %>
                         <% @storepromotion.sp_spare_61 %>
-                          <em class="endtoday">* Expire Today.</em>
+                          <em class="endtoday">* End Today</em>
                         <% else %>
                           * Ends Date: <%= @storepromotion.sp_end_date %> 
                         <% end %>
@@ -81,7 +81,7 @@
                     <% else %>
                      <% if @storepromotion.sp_spare_61 <= DateTime.now %>
                       <% @storepromotion.sp_spare_61 %>
-                        <em class="endtoday">* Expire Today</em>
+                        <em class="endtoday">* End Today</em>
                       <% else %>
                         <em>* End Date: <%= @storepromotion.sp_end_date %></em>
                       <% end %>
