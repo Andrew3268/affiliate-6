@@ -21,19 +21,20 @@
         <% end %>
         </div>
         <div class="show_inner">
-         <h2><a target="_blank" href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
-         <strong>BY <%= @gadget.gg_from %></strong>
-         <% if @gadget.gg_option_03.present? %>
-         <% else %>
-          <p><%= number_to_currency(@gadget.gg_aprice) %></p>
-         <% end %>
+         <div class="show_in_box">
+           <h2><a target="_blank" href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
+           <strong>BY <%= @gadget.gg_from %></strong>
+           <% if @gadget.gg_option_03.present? %>
+           <% else %>
+            <p><%= number_to_currency(@gadget.gg_aprice) %></p>
+           <% end %>
 
-         <% if @gadget.gg_option_03.present? %>
-          <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Learn More on <em><%= @gadget.gg_spare_01 %></em></a>
-         <% else %>
-          <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
-         <% end %>
-          
+           <% if @gadget.gg_option_03.present? %>
+            <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Learn More on <em><%= @gadget.gg_spare_01 %></em></a>
+           <% else %>
+            <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
+           <% end %>
+         </div>          
          <% if @gadget.gg_intro.present? %>
            <em class="about">About This</em> 
            <span><p><%= @gadget.gg_intro %></p></span>

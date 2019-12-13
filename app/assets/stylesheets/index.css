@@ -1,17 +1,17 @@
 .gadgets{margin:270px 0 0 0;}
 /*.index_gad{margin:30px 0;}*/
 .gadgets .card_wrap{column-width:300px;column-gap:10px;}
-.gadgets .card_wrap .card{margin:20px 4%;;position: relative;background: #fff; overflow: hidden;display:inline-block;}
+.gadgets .card_wrap .card{margin:15px 4%;;position: relative;background: #fff; overflow: hidden;display:inline-block;}
 .gadgets .card_wrap .card, 
-.gadgets .card-nav ul{/*box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);*//*border-radius:10px;*/border-bottom:1px solid #ccc;}
+.gadgets .card-nav ul{box-shadow:0 0 20px 0 rgba(0,0,0,0.06);border-radius:20px;padding:10px 10px 20px 10px;}
 .gadgets .card_wrap .card-header,
 .gadgets .card_wrap .card-body{position:relative;padding:5px;font-family: 'Montserrat', sans-serif;font-weight:100;}
 .gadgets .card_wrap .card-body span{border-bottom:1px solid #ccc;width:55%;display:inline;color:#616161;text-transform:uppercase;}
 .gadgets .card_wrap .card-body .to_featured{float:right;margin-right:1%;text-decoration:none;color:#fff;background:#ff4d4d;border-radius:10px;padding:0 10px;}
-.gadgets .card_wrap .card-body h4{margin-top:10px;line-height:1.2;font-weight:100;}
+.gadgets .card_wrap .card-body h4{margin-top:10px;font-weight:100;line-height:1.4;height: 3.5em;overflow: hidden;display:block;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;word-break:break-word;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
 .gadgets .card_wrap .card-body h4 a{text-decoration:none;color:#616161;font-size:20px;}
 .gadgets .card_wrap .card-body p{margin:10px 0;font-weight:300;color:#616161;}
-.gadgets .card_wrap .card-body .btn{margin:10px 0;display:inline-block;}
+.gadgets .card_wrap .card-body .btn{margin:10px 0;display:none;}
 .gadgets .card_wrap .card-body .btn>em{float:left;font-size:17px;background:#000;color:#fff;padding:3px 20px;border:1px solid #000;line-height:20px;}
 .gadgets .card_wrap .card-body .btn>a{float:left;text-decoration:none;color:#000;font-size:20px;border:1px solid #000;padding:3px 20px;line-height:20px;}
 .gadgets .card_wrap .card-body .btn .learnmore{background:#000;color:#fff;padding:3px 20px;}

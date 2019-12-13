@@ -45,7 +45,7 @@
 
     <div class="block clearfix">
       <div class="box line_three">
-        <p>Savings via code</p>
+        <p>You saved</p>
         <em>
            <% saving_total = 0 %>
            <% saving_total =  @promocode.p_spare_26 - (@promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26) %>
@@ -69,18 +69,20 @@
         <% end %>
       </div>
     </div>
-    <div class="info_box">
-      <span>
-        <ul>
-          <% if @promocode.p_coupon_deal.present? %>
-            <li>Check coupon on detail page to receive your extra savings.</li>
-          <% end %>
-          <% if @promocode.p_extra_deal.present? %>
-            <li>This item is on sale now and get extra discount via promo code.</li>
-          <% end %>
-        </ul>
-      </span>
-    </div>
+    <% if @promocode.p_coupon_deal.present? || @promocode.p_extra_deal.present? %>
+      <div class="info_box">
+        <span>
+          <ul>
+            <% if @promocode.p_coupon_deal.present? %>
+              <li>Check coupon on detail page to receive your extra savings.</li>
+            <% end %>
+            <% if @promocode.p_extra_deal.present? %>
+              <li>This item is on sale now and get extra discount via promo code.</li>
+            <% end %>
+          </ul>
+        </span>
+      </div>
+    <% end %>
 
     <div class="block clearfix">
       <div class="box">
@@ -110,24 +112,22 @@
           <% end %>
         </em>
       </div>
+
+      <% if @promocode.p_spare_07.present? %>
+        <div class="box">
+         <p>Search more by Keyword</p>
+         <em><a class="keyword" href="<%= @promocode.p_spare_08 %>"><%= @promocode.p_spare_07 %></a><i></i></em>
+        </div>
+      <% end %>
+
     </div>
     <!-- <div class="info_box">
       <span>* </span>
     </div> -->
 
-    <% if @promocode.p_spare_07.present? %>
-      <div class="block clearfix">
-        <div class="box">
-         <p>Search more by Keyword</p>
-         <em><a class="keyword" href="<%= @promocode.p_spare_08 %>"><%= @promocode.p_spare_07 %></a><i></i></em>
-        </div>
-      </div>
-    <% end %>
-
  </div>
  
- <div class="extra_info">
- </div><!--./extra_info-->
+  <div class="extra_info"></div><!--./extra_info-->
 
   <div class="code_btn">
    <!-- <p class="code_line">Click and copy this code then apply it at your checkout</p> -->
@@ -141,7 +141,7 @@
   </div>
 
   <% if @promocode.p_spare_36.present? %>
-    <div class="trix trix-container gradient"><span>Features</span><p><%= @promocode.p_spare_36.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
+    <div class="trix trix-container gradient"><span>About the product</span><p><%= @promocode.p_spare_36.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
   <% else %>
     <% if @promocode.p_description.present? %>
       <div class="show_des"><p class="description"><%= @promocode.p_description %></p></div>
