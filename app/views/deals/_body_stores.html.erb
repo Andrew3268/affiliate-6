@@ -19,7 +19,8 @@
                | <%= link_to 'Edit', edit_storepromotion_path(promo) %>
               <% end %>
             </p>
-            <span><%= link_to promo.sp_title, promo %></span>
+            <!-- <span><%= link_to promo.sp_title, promo %></span> -->
+            <span><a target="_blank" href="<%= promo.sp_link %>"><%= promo.sp_title %></a></span>
 
             <div class="pricing">
               <% if promo.sp_spare_40.present? %>
@@ -82,7 +83,8 @@
                   <% end %>
                 </p>
               </div>
-              <div class="tab-menu-text-alt"><p><%= link_to mp.sp_title, mp %></p></div>
+              <!-- <div class="tab-menu-text-alt"><p><%= link_to mp.sp_title, mp %></p></div> -->
+              <div class="tab-menu-text-alt"><p><a target="_blank" href="<%= mp.sp_link %>"><%= mp.sp_title %></a></p></div>
               <div class="tab-menu-text-alt">
                 <% if mp.sp_spare_40.present? %>
                   <p class="h_price"><%= number_to_currency(mp.sp_spare_41) %> <em class="span_01"><%= number_to_currency(mp.sp_spare_40) %></em><em class="span_02">( <%= number_to_percentage(mp.sp_percentage_01, precision: 0) %> OFF )</em></p>
