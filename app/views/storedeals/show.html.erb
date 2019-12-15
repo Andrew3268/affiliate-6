@@ -4,7 +4,7 @@
   
   <div class="show_wrap clearfix">
     <div class="wrap">
-    <%= render 'storedeals/navbar' %>  
+    <%= render 'deals/header_store' %>  
       <div class="show_box clearfix">
         
         <!-- <p>Location Map</p> -->
@@ -26,6 +26,17 @@
               <%= link_to 'Delete', @storedeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
               <%= @storedeal.impressionist_count %> views<br />
               <%= @storedeal.created_at.strftime("%d. %B.") %>
+              <div class="sharing">
+                <p>Available On <%= @storedeal.sdcategory.name %> Now</p>
+                <p><%= @storedeal.sd_title %></p>
+                <% if @storedeal.sd_spare_32.present? %>
+                  <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_32) %> <span class="span_01">( Was: <%= number_to_currency(@storedeal.sd_spare_31) %></span><span class="span_02"> | <%= number_to_percentage(@storedeal.sd_percentage, precision: 0) %> OFF )</span></p>
+                <% else %>
+                  <% running_total = 0 %>
+                  <% running_total =  (@storedeal.sd_spare_33 - @storedeal.sd_spare_34) / @storedeal.sd_spare_33 * 100 %>
+                  <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_34) %> <span class="span_01">( Was: <%= number_to_currency(@storedeal.sd_spare_33) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                <% end %>
+              </div><!--./sharing-->
             </div>
           <% end %>
         </div>
@@ -48,42 +59,115 @@
               <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_34) %> <span class="span_01"><%= number_to_currency(@storedeal.sd_spare_33) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
             <% end %>
 
-            <div class="extra_info">
-               <% if @storedeal.sd_spare_01.present? %>
-                 <span class="basic_info">
-                  Avg <%= @storedeal.sd_spare_01 %> | <%= number_with_delimiter(@storedeal.sd_spare_02) %>+ reviews 
-                 </span> 
-               <% end %>
-               <% if @storedeal.sd_spare_31.present? %>
-                <% running_total = 0 %>
-                <% running_total =  @storedeal.sd_spare_31.to_i - @storedeal.sd_spare_32.to_i %>
-                <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
-               <% else %>
-                <% running_total = 0 %>
-                <% running_total =  @storedeal.sd_spare_33.to_i - @storedeal.sd_spare_34.to_i %>
-                <em class="save_money">* Save <%= number_to_currency(running_total) %> or more.</em>
-               <% end %>
-               <% if @storedeal.sd_promocode.present? %>
-                <em>* Enter <%= @storedeal.sdcategory.name %>'s promo code "<%= @storedeal.sd_promocode %>" at checkout to receive your savings.</em>
-               <% end %>
-               <em>* Pricing may change and deals can expire fast.</em>
-               <!-- <em>+ FREE Shipping</a></em> -->
+            <div class="extra_info"></div><!--./extra_info-->
 
+            <!-- <div class="box">
+              <p></p>
+              <em></em>
+            </div> -->
 
-              <% if @storedeal.sd_end_date.present? %>
-                <% if @storedeal.sd_spare_65.present? %>
-                  <% if @storedeal.sd_spare_65 < DateTime.now %>
-                  <% @storedeal.sd_spare_65 %>
-                    <em class="expired">EXPIRED</em>
+            <div class="info_wrap clearfix">
+              <div class="block clearfix">
+                <div class="box line_three">
+                  <p>Shipping</p>
+                  <% if @storedeal.sdcategory_id == 2 || @storedeal.sdcategory_id == 3 || @storedeal.sdcategory_id == 4 %> 
+                    <em>Free</em>
                   <% else %>
-                    <em>* End Date: <%= @storedeal.sd_end_date %> or while supplies last.</em>
+                    <em>Free</em>
+                  <% end %>            
+                </div>
+                <div class="box line_three">
+                  <p>Rating</p>
+                  <% if @storedeal.sd_spare_01.present? %>
+                    <em>Avg. <%= @storedeal.sd_spare_01 %></em>
+                  <% else %>
+                    <em>-</em>
                   <% end %>
-                <% else %>
-                  <em>* End Date: <%= @storedeal.sd_end_date %> or while supplies last.</em>
-                <% end %>
+                </div>
+                <div class="box line_three">
+                  <p>Reviews</p>
+                  <% if @storedeal.sd_spare_02.present? %>
+                    <em><%= number_with_delimiter(@storedeal.sd_spare_02) %>+ </em>
+                  <% else %>
+                    <em>-</em>
+                  <% end %>
+                </div>
+              </div>
+              <div class="info_box clearfix">
+                <span>
+                  <ul>
+                    <% if @storedeal.sdcategory_id == 2 || @storedeal.sdcategory_id == 3 || @storedeal.sdcategory_id == 4 %> 
+                      <li>Free Shipping: $35+ of eligible items</li>
+                    <% end %>
+                    <li>Average rating and reviews may change after posted.</li>
+                  </ul>
+                </span>
+              </div> 
+          
+              <div class="block clearfix">
+                <div class="box">
+                  <p>You Saved</p>
+                  <em>
+                   <% if @storedeal.sd_spare_31.present? %>
+                    <% running_total = 0 %>
+                    <% running_total =  @storedeal.sd_spare_31.to_i - @storedeal.sd_spare_32.to_i %>
+                    <em class="save_money"><%= number_to_currency(running_total) %></em>
+                   <% else %>
+                    <% running_total = 0 %>
+                    <% running_total =  @storedeal.sd_spare_33.to_i - @storedeal.sd_spare_34.to_i %>
+                    <em class="save_money"><%= number_to_currency(running_total) %></em>
+                   <% end %>
+                  </em>
+                </div>
+                <div class="box">
+                  <p>Coupon</p>
+                  <% if @storedeal.sd_coupon_deal.present? %>
+                    <em><% @storedeal.sd_coupon_deal %></em>
+                  <% else %>
+                    <em>-</em>
+                  <% end %>
+                </div>
+              </div>
+              <% if @storedeal.sd_coupon_deal.present? %>
+                <div class="info_box clearfix">
+                  <span>
+                    <ul>
+                      <!-- <li>Line1</a></li> -->
+                      <% if @storedeal.sd_coupon_deal.present? %>
+                        <li>Line2</li>
+                      <% end %>
+                    </ul>
+                  </span>
+                </div> 
               <% end %>
-
-            </div><!--./extra_info-->
+              <div class="block clearfix">
+                <% if @storedeal.sd_end_date.present? %>
+                  <div class="box">
+                    <p>End Date</p>
+                    <em>
+                      <% if @storedeal.sd_spare_65.present? %>
+                        <% if @storedeal.sd_spare_65 < DateTime.now %>
+                        <% @storedeal.sd_spare_65 %>
+                          <em class="expired">EXPIRED</em>
+                        <% else %>
+                          <em><%= @storedeal.sd_end_date %></em>
+                        <% end %>
+                      <% else %>
+                        <em><%= @storedeal.sd_end_date %></em>
+                      <% end %>
+                    </em>
+                  </div>
+                <% end %>
+              </div>
+              <!-- <div class="info_box clearfix">
+                <span>
+                  <ul>
+                    <li>Line1</a></li>
+                    <li>Line2</li>
+                  </ul>
+                </span>
+              </div>  -->
+            </div><!--./info_wrap-->
 
             <% if @storedeal.sd_promocode.present? %>
               <div class="text_copied intheshow">

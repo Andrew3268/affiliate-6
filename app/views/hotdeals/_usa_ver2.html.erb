@@ -16,7 +16,7 @@
  <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->
 
  <div class="info_wrap clearfix">
-    <div class="first_block clearfix">
+    <div class="block clearfix">
       <div class="box line_three">
         <p>Shipping</p>
         <em>Free</em>
@@ -53,7 +53,7 @@
   </div> -->
 
   <% if @hotdeal.h_spare_45.present? %>
-    <div class="second_block clearfix">
+    <div class="block clearfix">
       <div class="box line_three">
         <p>You saved</p>
         <em>
@@ -92,7 +92,7 @@
       </div>
     </div>
   <% else %>
-    <div class="second_block clearfix">
+    <div class="block clearfix">
       <div class="box">
         <p>You saved</p>
         <em>
@@ -133,7 +133,7 @@
   <% end %>
 
   <% if @hotdeal.h_spare_14.present? %>
-    <div class="third_block clearfix">
+    <div class="block clearfix">
       <div class="box">
         <p>Search more by Keyword</p>
         <em><a class="keyword" target="_blank" href="<%= @hotdeal.h_spare_15 %>"><%= @hotdeal.h_spare_14 %></a><i></i></em>

@@ -6,32 +6,7 @@
     <%= render 'promocodes/header' %>  
     <div class="more_search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
 
-
-   <!--  <div class="slider" id="slider">
-      <div class="slide" id="slide">
-        
-        <div class="img_box">
-          <img class="item" src="http://via.placeholder.com/200x200?text=Product1">
-          <p>Test Description</p>
-          <em>From $20 ~</em>
-        </div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product1"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product1"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product1"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product2"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product2"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product2"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product2"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product3"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product3"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product3"></div>
-        <div class="img_box"><img class="item" src="http://via.placeholder.com/200x200?text=Product3"></div>
-      </div>
-      <button class="ctrl-btn pro-prev">Prev</button>
-      <button class="ctrl-btn pro-next">Next</button>
-    </div>
-
- -->
+    <!-- <% render 'shared/amz_slider' %> -->
 
     <div id="promocodes" class="clearfix">
       <%= render @promocodes %> 
@@ -42,66 +17,3 @@
 </div><!--./layout-->
 <script><%= render(:partial => 'promocodes', :handlers => [:erb], :formats => [:js]) %></script>
 
-<script type="text/javascript">
-  "use strict";
-
-productScroll();
-
-function productScroll() {
-  let slider = document.getElementById("slider");
-  let next = document.getElementsByClassName("pro-next");
-  let prev = document.getElementsByClassName("pro-prev");
-  let slide = document.getElementById("slide");
-  let item = document.getElementById("slide");
-
-  for (let i = 0; i < next.length; i++) {
-    //refer elements by class name
-
-    let position = 0; //slider postion
-
-    prev[i].addEventListener("click", function() {
-      //click previos button
-      if (position > 0) {
-        //avoid slide left beyond the first item
-        position -= 1;
-        translateX(position); //translate items
-      }
-    });
-
-    next[i].addEventListener("click", function() {
-      if (position >= 0 && position < hiddenItems()) {
-        //avoid slide right beyond the last item
-        position += 1;
-        translateX(position); //translate items
-      }
-    });
-  }
-
-  function hiddenItems() {
-    //get hidden items
-    let items = getCount(item, false);
-    let visibleItems = slider.offsetWidth / 210;
-    return items - Math.ceil(visibleItems);
-  }
-}
-
-function translateX(position) {
-  //translate items
-  slide.style.left = position * -210 + "px";
-}
-
-function getCount(parent, getChildrensChildren) {
-  //count no of items
-  let relevantChildren = 0;
-  let children = parent.childNodes.length;
-  for (let i = 0; i < children; i++) {
-    if (parent.childNodes[i].nodeType != 3) {
-      if (getChildrensChildren)
-        relevantChildren += getCount(parent.childNodes[i], true);
-      relevantChildren++;
-    }
-  }
-  return relevantChildren;
-}
-
-</script>

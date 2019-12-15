@@ -39,7 +39,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.save_money{color:#B12704;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.expired{color:#fff;background:#ff0000;padding:5px 10px;width:100px;text-align:center;border-radius:15px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info em.endtoday{color:#fff;background:#ffa500;padding:5px 10px;width:110px;text-align:center;border-radius:15px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .code_btn{margin-top:30px;}
+/*.show_wrap .show_box .show_inner .hotdeal_inner .code_btn{margin-top:30px;}*/
 
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap{margin-bottom:20px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a{color:#a6a6a6;background:none;padding:0;}
@@ -174,7 +174,7 @@
 .deals_card .image_box .term{width:70px;height:42px;/*background:#ff0000;*/}
 .deals_card .image_box .term p{margin-top:7px;font-size:11px;}
 .deals_card .image_box .exprie{background:#ff4d4d;}
-.deals_card .image_box .endtoday{background:#ffa500;width:80px;}
+.deals_card .image_box .endtoday{background:#ffa500;width:85px;}
 .deals_card .image_box .endtoday p{margin:0;}
 .deals_card .image_box .expried{-webkit-filter: grayscale(100%);filter: gray;height:100%;}
 .deals_card img{width:70%;height:70%;object-fit:contain;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);object-fit:contain;}

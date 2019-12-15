@@ -7,6 +7,7 @@
     <div class="dealpage_title"><p>The Best Bargain</p></div>
     <%= render 'hotdeals/header' %>  
       <div class="more_search"><%= form_for "",url: hotdeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
+      
       <div class="clearfix" id="hotdeals">      
         <%= render @hotdeals %> 
       </div>
