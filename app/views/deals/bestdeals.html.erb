@@ -23,6 +23,8 @@
         <h2>Take a good items you love at the best price.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
         <%= render 'deals_days/note_wadiz' %>
         <%= render 'shared/amz_search' %>
+
+        <%= render 'shared/amz_slider' %>
         
         <!-- <div class="sort_box clearfix">
           <ul>
