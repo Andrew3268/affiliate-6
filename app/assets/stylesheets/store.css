@@ -83,7 +83,7 @@
 .sp_wrap .sp_left .show-more{text-align:center;background:#000;color:#fff;padding:5px 10px;border-radius:15px;}
 /* Mobile Menu */
 .featured .sp_m{width:100%;}
-.featured .sm_mobile ul.sp_ul{padding:20px;font-family:'Anton', sans-serif;overflow:scroll;height:80%;}
+.featured .sm_mobile ul.sp_ul{padding:20px;font-family:'Anton', sans-serif;overflow:scroll;height:100%;}
 .featured .sm_mobile ul.sp_ul li{line-height:1.1;}
 .featured .sm_mobile ul.sp_ul li a{color:#fff;font-size:40px;text-transform:uppercase;}
 .featured .sm_mobile .store_search input{padding:10px;width:80%;margin-bottom:5px;}
@@ -121,6 +121,7 @@
   .sp_wrap{margin:0;}
   .sp_wrap .sp_left{display:none;}
   .sp_wrap .sp_right{float:none;width:100%;}
+  .sp_wrap .sp_right .sotre_card{width:48%;}
   .sp_wrap .sp_right .sp_card{float:left;width:48%;margin:1%;box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);padding: 5px 10px 10px 10px;height:220px;}
   .sp_wrap .sp_right .sp_image{float:none;width:100%;}
   .sp_wrap .sp_right .sp_image img{height:70%;object-fit:contain;z-index:-1;}
