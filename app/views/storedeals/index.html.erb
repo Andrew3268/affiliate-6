@@ -38,6 +38,17 @@
         <!-- <div class="show-more">Show More</div> -->
       </div><!--./sp_left-->
 
+      <label class="dropdown">
+        <div class="dd-button">Stores</div>
+        <input type="checkbox" class="dd-input" id="test">
+        <ul class="dd-menu">
+          <li><a href="/storedeals/">All Stores</a></li>
+          <% Sdcategory.all.each do |sdc| %>
+            <li><%= link_to sdc.name, storedeals_path(sdcategory: sdc.name) %></li>
+          <% end %>
+        </ul>
+      </label>
+
       <div class="sp_right">
         <div id="promocodes">
           <%= render @storedeals %> 

@@ -9,7 +9,7 @@
         <div class="dealpage_title"><p>Sales & Promotions</p></div>    
       <% end %>
     </div>
-    <!-- < render 'deals/header_store'> -->
+    <%= render 'deals/header_store' %>
 
     <div class="sp_wrap">
 
@@ -38,7 +38,17 @@
         </div>
         <div class="show-more">Show More</div>
       </div>
-      <%= render 'storepromotions/navbar' %>
+      
+      <label class="dropdown">
+        <div class="dd-button">Stores</div>
+        <input type="checkbox" class="dd-input" id="test">
+        <ul class="dd-menu">
+          <li><a href="/storepromotions/">All Stores</a></li>
+          <% Spcategory.all.each do |category| %>
+            <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
+          <% end %>
+        </ul>
+      </label>
 
       <div class="sp_right">
         
