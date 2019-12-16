@@ -16,7 +16,7 @@ gem 'paperclip', '~> 6.1'
 gem 'whenever', require: false
 gem 'will_paginate_infinite', '~> 0.1.3'
 gem 'trix'
-
+gem 'sitemap_generator'
 
 
 # group :production do
