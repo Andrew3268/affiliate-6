@@ -216,7 +216,6 @@
 .store-input + .sotre_menu{display:none;z-index:10;} 
 .store-input:checked + .sotre_menu{display:block;z-index:10;overflow:scroll;height:1000%;width:100%;} 
 .sotre_menu li{padding:10px 20px;cursor:pointer;white-space:nowrap;}
-.sotre_menu li:nth-child(1){padding-right:10px;padding:-left:10px;}
 .sotre_menu li a{display:block;margin:-10px -20px;padding:10px 20px;color:#000;font-size:15px;}
 .sotre_menu li.divider{padding:0;border-bottom:1px solid #ccc;}
 .sotre_menu li.search_li{padding:10px 10px;}
