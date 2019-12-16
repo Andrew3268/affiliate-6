@@ -38,14 +38,14 @@
         <!-- <div class="show-more">Show More</div> -->
       </div><!--./sp_left-->
 
-      <label class="dropdown">
-        <div class="dd-button">Stores</div>
-        <input type="checkbox" class="dd-input" id="test">
-        <ul class="dd-menu">
-          <li><a href="/storedeals/">All Stores</a></li>
+       <label class="dropdown">
+        <div class="store-button">Stores</div>
+        <input type="checkbox" class="store-input" id="test">
+        <ul class="sotre_menu">
+          <li><a href="/storepromotions/">All Stores</a></li>
           <% Sdcategory.all.each do |sdc| %>
             <li><%= link_to sdc.name, storedeals_path(sdcategory: sdc.name) %></li>
-          <% end %>
+          <% end %>        
         </ul>
       </label>
 
