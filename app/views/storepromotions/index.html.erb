@@ -42,8 +42,8 @@
       <label class="dropdown">
         <div class="store-button">Stores</div>
         <input type="checkbox" class="store-input" id="test">
-        <ul class="sotre_menu">
-          <li class="search_li"><div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div></li>
+        <ul class="store_menu">
+          <!-- <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div> -->
           <li><a href="/storepromotions/">All Stores</a></li>
           <% Spcategory.all.each do |category| %>
             <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>

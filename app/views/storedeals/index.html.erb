@@ -41,7 +41,7 @@
        <label class="dropdown">
         <div class="store-button">Stores</div>
         <input type="checkbox" class="store-input" id="test">
-        <ul class="sotre_menu">
+        <ul class="store_menu store_deal">
           <li><a href="/storepromotions/">All Stores</a></li>
           <% Sdcategory.all.each do |sdc| %>
             <li><%= link_to sdc.name, storedeals_path(sdcategory: sdc.name) %></li>
