@@ -94,66 +94,7 @@
                   <% end %>
                 <% end %>
 
-                <!--<em class="code_em em_box">
-                  <% if storepromotion.sp_end_date.present? %>
-                    <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
-                    <% storepromotion.sp_spare_60 %>
-                      <em class="expired code_em">EXPIRED</em>
-                    <% else %>
-                      <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
-                      <% storepromotion.sp_spare_61 %>
-                       <em class="endtoday code_em">This offer expires TODAY</em>
-                      <% else %>
-                       <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
-                       <em class="code_em">* Offers can be expired fast.</em>
-                      <% end %>
-                    <% end %>
-                  <% end %>
-                </em>-->
                 
-                <!-- <% if storepromotion.sp_end_date.present? %>
-                  <div class="promocode_m">
-                    <% if storepromotion.sp_promocode.present? %>
-                      <div class="text_copied store_code">
-                        <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
-                      </div>
-                      <em class="code_em em_box">
-                        <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
-                        <% storepromotion.sp_spare_60 %>
-                          <em class="expired code_em">* This Promo Code has EXPIRED.</em>
-                        <% else %>
-                          <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
-                          <% storepromotion.sp_spare_61 %>
-                            <em class="code_em endtoday">* This coupon expires today.</em>
-                          <% else %>
-                            <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
-                            <em class="code_em">* Pricing may change and deals can expire fast.</em>
-                          <% end %>
-                        <% end %>
-                      </em>
-                    <% else %>
-                      <em class="code_em em_box">
-                        <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
-                        <% storepromotion.sp_spare_60 %>
-                          <em class="expired code_em">* This offer has EXPIRED.</em>
-                        <% else %>
-                          <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
-                          <% storepromotion.sp_spare_61 %>
-                           <em class="code_em">* This offer expires today.</em>
-                          <% else %>
-                           <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em>
-                           <em class="code_em">* Pricing may change and deals can expire fast.</em>
-                          <% end %>
-                        <% end %>
-                      </em>
-                    <% end %>
-                  </div>
-                <% else %>
-                    <div class="text_copied store_code">
-                      <div class="container"><div class="wrap"><div class="box"><p data-copy-text=""><%= storepromotion.sp_promocode %></p></div></div></div>
-                    </div>
-                <% end %> -->
-
                 <% if can? :update, storepromotion %>
                   <div class="admin">
                     <!-- <%= link_to 'Show', storepromotion %> | -->
@@ -161,8 +102,7 @@
                     <%= link_to 'Destroy', storepromotion, method: :delete, data: { confirm: 'Are you sure?' } %>
                   </div>
                 <% end %>
-                
-               
+                               
               </div>
 
               <div class="sp_btn"><a class="sp_btn_pc" href="<%= storepromotion.sp_link %>">Check This Deals</a></div>
