@@ -26,10 +26,15 @@ SitemapGenerator::Sitemap.create do
   #   end
 
 
-  add hotdeals_path, :priority => 0.5, :changefreq => 'daily'
-  Hotdeal.find_each do |hotdeal|
-    add hotdeal_path(hotdeal), :lastmod => hotdeal.updated_at
-  end
+  # add hotdeals_path, :priority => 0.5, :changefreq => 'daily'
+  # Hotdeal.find_each do |hotdeal|
+  #   add hotdeal_path(hotdeal), :lastmod => hotdeal.updated_at
+  # end
+
+  # add gadgets_path, :priority => 0.5, :changefreq => 'daily'
+  # Gadget.find_each do |gadget|
+  #   add gadget_path(gadget), :lastmod => gadget.updated_at
+  # end
 
   # add promocodes_path, :priority => 0.5, :changefreq => 'daily'
   # Promocode.find_each do |promocode| 

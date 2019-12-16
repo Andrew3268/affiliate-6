@@ -153,5 +153,5 @@ Rails.application.routes.draw do
   #     resources :products
   #   end
   # get '/sitemap' => 'sitemap#index',defaults: {format: "xml"}
-  get '/sitemap' => 'sitemap#deals',defaults: {format: "xml"}
+  get '/sitemap' => 'sitemap#index',defaults: {format: "xml"}
 end
