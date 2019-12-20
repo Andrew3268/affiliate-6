@@ -90,20 +90,20 @@
                       <h4><%= link_to gadget.gg_title, gadget %></h4>
                       <!-- <p><%= gadget.gg_intro %></p> -->
 
-                      <div class="btn clearfix">
+                      <!-- <div class="btn clearfix">
                         <% if gadget.gg_option_03.present? %>
                          <a class="learnmore" target="_blank" href="<%= gadget.gg_url %>">Learn More</a>
                         <% else %>
                         <em>$<%= gadget.gg_aprice %></em><a target="_blank" href="<%= gadget.gg_url %>">Buy Now</a>
                         <% end %>
-                      </div>
+                      </div>-->
+ 
 
-
-                      <% if can? :update, gadget %>
+                      <!-- < if can? :update, gadget >
                         <div class="btn clearfix admin">
                           <em><%= link_to "Edit", edit_gadget_path(gadget) %></em><%= link_to "Delete", gadget_path(gadget), method: :delete, data: {confirm: "Are you sure?"}%>
                         </div>     
-                      <% end %>
+                      < end > -->
                     </section>
                   </div>
                 <% end %>
