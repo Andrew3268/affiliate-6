@@ -20,6 +20,7 @@
 .gadgets .card_wrap .card-header{} 
 .gadgets .card_wrap .card-header .home_img{width:350px;height:350px;}
 .gadgets .card_wrap .card-header .home_img img{display:block;width:100%;height:100%;margin:0 auto;border-radius:10px;object-fit:contain;}
+.gadgets .card_wrap .card-header .home_img img.cover{object-fit:cover;}
 .gadgets .card_wrap .with-photo/*do not delete*/
 .gadgets .card_wrap .card-header{height:208px;padding:0;overflow:hidden;}
 .gadgets .card_wrap .start{position:absolute;top:-45px;right:20px;}
