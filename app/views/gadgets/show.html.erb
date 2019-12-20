@@ -72,7 +72,11 @@
           <% if subcategory.subcategory_id == @gadget.subcategory_id %>
             <div class="sbd_box">
               <div class="down_img">
-                <%= link_to (image_tag subcategory.gg_img), subcategory %>
+                <% if subcategory.gg_img.present? %>
+                  <%= link_to (image_tag subcategory.gg_img), subcategory %>
+                <% else %>
+                  <%= link_to (image_tag subcategory.gg_option_06), subcategory %>
+                <% end %>
               </div>
               <div class="down_inner">
               </div>

@@ -48,7 +48,7 @@
   .gadgets{margin:160px 0 0 0;}
   .gadgets .card_wrap .card-header{padding:5px;}
   .gadgets .card_wrap .card-body{padding:10px;}
-  .gadgets .card_wrap .card-body h4{margin:15px 0;}
+  .gadgets .card_wrap .card-body h4{margin:15px 0;height:4em;}
   .gadgets .card_wrap .start{top:-45px;} 
   .add_gadget img{width:60px;} 
   .gadgets .card_wrap .card-header .home_img{width:100%;height:auto;}
