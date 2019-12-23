@@ -18,25 +18,25 @@ class StorepromotionsController < ApplicationController
       @search_term = params[:search]
       @storepromotions = @storepromotions.search_by(@search_term)
     end
-    # set_meta_tags title: 'Take the best deals updated daily',
-    #               site: 'Oh,igottabuythis',
-    #               revierse: true,
-    #               description: 'Take the best deals with promo codes and coupons',
-    #               keywords: 'Amazon, deals, promo codes, coupons',
-    #               twitter: {
-    #                 card: "summary",
-    #                 site: "@OhIgottabuythis",
-    #                 title: 'Amazon Promo Codes & Coupons',
-    #                 description: 'Take the best deals with promo codes and coupons',
-    #                 # image: @hotdeal.h_image
-    #               },
-    #               og: {
-    #                 title: 'Amazon Promo Codes & Coupons',
-    #                 description: 'Take the best deals with promo codes and coupons',
-    #                 type: 'website',
-    #                 url: 'www.ohigottabuythis.net/promocodes',
-    #                 # image: @hotdeal.h_image
-    #               }
+    set_meta_tags title: 'Take the best deals updated daily',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'Take the best offers & promotions with promo codes and coupons',
+                  keywords: 'bargain, deals, promo codes, coupons',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'Take the best deals updated daily',
+                    description: 'Take the best offers & promotions with promo codes and coupons',
+                    # image: @hotdeal.h_image
+                  },
+                  og: {
+                    title: 'Take the best deals updated daily',
+                    description: 'Take the best deals with promo codes and coupons',
+                    type: 'website',
+                    description: 'Take the best offers & promotions with promo codes and coupons',
+                    # image: @hotdeal.h_image
+                  }
   end
 
   # GET /storepromotions/1
@@ -44,25 +44,25 @@ class StorepromotionsController < ApplicationController
   def show
     @more_deals = Storepromotion.where(spcategory_id: @storepromotion.spcategory_id)
     impressionist(@storepromotion)
-    # set_meta_tags title: @promocode.p_title,
-    #               site: 'Oh,igottabuythis',
-    #               revierse: true,
-    #               description: @promocode.p_description,
-    #               keywords: @promocode.p_keyword,
-    #               twitter: {
-    #                 card: "summary",
-    #                 site: "@OhIgottabuythis",
-    #                 title: @promocode.p_title,
-    #                 description: @promocode.p_description,
-    #                 image: @promocode.p_image
-    #               },
-    #               og: {
-    #                 title: @promocode.p_title,
-    #                 description: @promocode.p_description,
-    #                 type: 'website',
-    #                 url: promocode_url(@promocode),
-    #                 image: @promocode.p_image
-    #               }
+    set_meta_tags title: @storepromotion.sp_title,
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: @storepromotion.sp_description,
+                  keywords: @storepromotion.sp_title,
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: @storepromotion.sp_title,
+                    description: @storepromotion.sp_description,
+                    image: @storepromotion.sp_image
+                  },
+                  og: {
+                    title: @storepromotion.sp_title,
+                    description: @storepromotion.sp_description,
+                    type: 'website',
+                    url: storepromotion_url(@storepromotion),
+                    image: @storepromotion.sp_image
+                  }
   end
 
   # GET /storepromotions/new
@@ -117,18 +117,18 @@ class StorepromotionsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_storepromotion
-      @storepromotion = Storepromotion.find(params[:id])
+      @storepromotion = Storepromotion.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def storepromotion_params
-      params.require(:storepromotion).permit(:sp_title, :sp_description, :spcategory_id, :sp_store_name, :sp_image, :sp_promocode,
+      params.require(:storepromotion).permit(:sp_title, :sp_description, :spcategory_id, :sp_store_name, :sp_image, :sp_storepromotion,
                      :sp_end_date, :sp_percentage_01, :sp_percentage_02, :sp_link, :sp_spare_60, :sp_spare_61, :sp_spare_40, :sp_spare_41,
                      :sp_spare_42, :sp_spare_43)
     end
 end
 
 
-      
+
 
 

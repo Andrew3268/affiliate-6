@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191130081551) do
+ActiveRecord::Schema.define(version: 20191223082500) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -598,8 +598,10 @@ ActiveRecord::Schema.define(version: 20191130081551) do
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.integer  "impressions_count"
+    t.string   "slug"
   end
 
+  add_index "storepromotions", ["slug"], name: "index_storepromotions_on_slug", unique: true
   add_index "storepromotions", ["spcategory_id"], name: "index_storepromotions_on_spcategory_id"
 
   create_table "subcategories", force: :cascade do |t|

@@ -57,8 +57,8 @@
             <div class="sp_card clearfix">
               <div class="sp_image">                
                 <%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
-
-                <% if storepromotion.sp_end_date.present? %>
+                <div class="date_m date_comm">
+                  <% if storepromotion.sp_end_date.present? %>
                     <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                     <% storepromotion.sp_spare_60 %>
                       <em class="expired code_em">EXPIRED</em>
@@ -72,6 +72,7 @@
                       <% end %>
                     <% end %>
                   <% end %>
+                </div>
               </div>
               <div class="inner">
                 <p><span class="index_title"><%= storepromotion.spcategory.name %></span>
@@ -80,6 +81,22 @@
                   <% if storepromotion.sp_percentage_01.present? %> Up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %>
                   <% end %>
                 </p>
+                <div class="date_pc date_comm">
+                  <% if storepromotion.sp_end_date.present? %>
+                    <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
+                    <% storepromotion.sp_spare_60 %>
+                      <em class="expired code_em">EXPIRED</em>
+                    <% else %>
+                      <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
+                      <% storepromotion.sp_spare_61 %>
+                       <em class="endtoday code_em">End Today</em>
+                      <% else %>
+                       <!-- <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em> -->
+                       <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                      <% end %>
+                    <% end %>
+                  <% end %>
+                </div>
 
                 <!-- <p class="sp_title"><%= link_to storepromotion.sp_title, storepromotion %></p> -->
                 <p class="sp_title"><a target="_blank" href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_title %></a></p>

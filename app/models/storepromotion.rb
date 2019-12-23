@@ -1,4 +1,8 @@
 class Storepromotion < ActiveRecord::Base
+
+  extend FriendlyId
+  friendly_id :sp_title, use: :slugged
+  
   is_impressionable :counter_cache => true, :unique => true
   belongs_to :spcategory
 
