@@ -29,7 +29,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price em{font-size:13px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .add_line{margin:0 0 10px 0;border:1px dashed #ccc;border-left:0;border-right:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .add_line ul{margin-left:25px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .add_line ul li{font-size:12px;color:#a6a6a6;list-style:disc;}
+.show_wrap .show_box .show_inner .hotdeal_inner .add_line ul li{font-size:12px;color:#a6a6a6;list-style:disc;padding:5px 0;}
 
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info{font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info .primeornot{display:none;}
@@ -168,7 +168,7 @@
 .deals_card{float:left;font-family:'Raleway', Arial, sans-serif;position:relative;overflow:hidden;margin:1%;width:23%;background:#fff;text-align:left;color:#000000;box-shadow:0 0 5px rgba(0, 0, 0, 0.15);font-size:16px;-webkit-transform:translateZ(0);transform:translateZ(0);-webkit-perspective:20em;perspective:20em;}
 .deals_card *{-webkit-box-sizing:border-box;box-sizing:border-box;-webkit-transition:all 0.3s ease-out;transition:all 0.3s ease-out;}
 .deals_card .image_box{width:100%;height:250px;padding:25px 25px 10px 25px;position:relative;}
-.deals_card .image_box .mark{position:absolute;top:0;left:0;background:#000;color:#fff;width:50px;padding:7px;line-height:1.1;font-size:13px;text-align:center;}
+.deals_card .image_box .mark{position:absolute;top:5px;left:5px;background:#000;color:#fff;width:50px;padding:7px;line-height:1.1;font-size:13px;text-align:center;border-radius:10px;}
 .deals_card .image_box .mark span{letter-spacing:3.1px;}
 .deals_card .image_box .mark em{display:block;letter-spacing:3.1px;}
 .deals_card .image_box .term{width:70px;height:42px;/*background:#ff0000;*/}
@@ -218,8 +218,9 @@
   .deals_card .image_box{height:200px;padding:20px;}
   .deals_card .image_box .expried_wrap .mark_expried{width:55px;height:30px;}
   .deals_card .image_box .mark_expried p{font-size:10px;font-weight:bold;}
-  .deals_card .image_box .mark{font-size:11px;font-weight:600;width:60px;padding:3px;height:30px;}
-  .deals_card .image_box .exprie p{margin-top:9px;}
+  .deals_card .image_box .mark{font-size:11px;font-weight:600;width:60px;padding:6px;height:35px;}
+  .deals_card .image_box .exprie p{margin-top:6px;}
+  .deals_card .image_box .term p{font-size:10px;}
   .deals_card h3{font-size:14px;}
   .deals_card p{font-size:13px;line-height:1.2;height:3.6em;}
   .deals_card .price{font-size:15px;}
@@ -229,7 +230,7 @@
   .dealpage_title p{font-size:35px;}
   .dealpage_title p:after{height:5px;}
   .deals__main_menu ul .nth_2 a:after{height:7px;top:67%;}
-  .deals_card .image_box .endtoday{width:70px;height:35px;padding-top:6px;}
+  .deals_card .image_box .endtoday{width:85px;height:35px;padding-top:6px;}
   .deals_card .image_box .endtoday span{display:block;}
   /* Store Station Page "/deals/stores */
   .deals_card p.store_title{height:2.4em;}
