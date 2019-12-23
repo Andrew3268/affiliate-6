@@ -11,6 +11,7 @@
 .show_wrap .show_box .sd_inner{margin-top:10px;}
 .show_wrap .show_box .show_inner a.p_btn{width:300px;text-align:center;}
 .show_wrap .show_box .show_inner a.store_btn{width:400px;text-align:center;}
+.show_wrap .show_box .show_inner a.store_btn em{text-transform:uppercase;}
 .show_wrap .show_box .show_inner .hotdeal_inner{}
 .show_wrap .show_box .show_inner .hotdeal_inner h2{font-weight:500;line-height:1.2;font-size:18px;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;padding:0 5px;}
 

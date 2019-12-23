@@ -42,6 +42,7 @@ class StorepromotionsController < ApplicationController
   # GET /storepromotions/1
   # GET /storepromotions/1.json
   def show
+    @more_deals = Storepromotion.where(spcategory_id: @storepromotion.spcategory_id)
     impressionist(@storepromotion)
     # set_meta_tags title: @promocode.p_title,
     #               site: 'Oh,igottabuythis',

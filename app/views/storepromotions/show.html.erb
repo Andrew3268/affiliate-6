@@ -17,6 +17,10 @@
               <%= link_to 'Back', storepromotions_path %> |
               <%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
               <%= @storepromotion.impressionist_count %> views
+              <div class="sharing">
+                <p>Available On <%= @storepromotion.spcategory.name %> Now</p>
+                <p><%= @storepromotion.sp_title %></p>
+              </div>
             </div>
           <% end %>
         </div>
@@ -48,8 +52,6 @@
             <% end %>
 
            <!-- </div> -->
-
-           
 
              <% if @storepromotion.sp_end_date.present? %>
                <% if @storepromotion.sp_promocode.present? %>
@@ -104,15 +106,28 @@
              <div class="trix"><p><%= @storepromotion.sp_description.html_safe %></p></div>
             <% end %>
 
-        </div><!--./hotdeal_inner-->
+          </div><!--./hotdeal_inner-->
+         </div><!--./show_inner-->
 
-        <% if can? :update, @storepromotion %>
-          <div class="pinterest">
-           <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
-          </div>
-        <% end %>  
+          <% if can? :update, @storepromotion %>
+            <div class="pinterest">
+             <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+            </div>
+          <% end %>  
 
       </div><!--./show_box-->
+
+      
+      <div class="like_more">
+       <p>Look at more <span><%= @storepromotion.spcategory.name %></span>'s offers </p>
+       <% @more_deals.shuffle.take(8).each do |spcategory| %>
+          <% if spcategory.spcategory_id == @storepromotion.spcategory_id %>
+            <ul>
+              <li><%= link_to spcategory.sp_title, spcategory %></li>
+            </ul>
+          <% end %>
+        <% end %>
+      </div>
       
     </div><!--./wrap-->
   </div><!--./show_wrap-->

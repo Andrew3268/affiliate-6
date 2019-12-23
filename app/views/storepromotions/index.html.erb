@@ -43,7 +43,7 @@
         <div class="store-button">Stores</div>
         <input type="checkbox" class="store-input" id="test">
         <ul class="store_menu">
-          <!-- <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div> -->
+          <!-- <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search here..." %><% end %></div> -->
           <li class="all_store"><a href="/storepromotions/">All Stores</a></li>
           <% Spcategory.all.each do |category| %>
             <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
@@ -90,7 +90,7 @@
                   <% if storepromotion.sp_spare_42.present? %>
                     <% running_total = 0 %>
                     <% running_total =  (storepromotion.sp_spare_42 - storepromotion.sp_spare_43) / storepromotion.sp_spare_42 * 100 %>
-                    <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_42) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                    <p class="h_price sp_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_42) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
                   <% end %>
                 <% end %>
 

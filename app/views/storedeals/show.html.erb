@@ -134,7 +134,7 @@
                     <ul>
                       <!-- <li>Line1</a></li> -->
                       <% if @storedeal.sd_coupon_deal.present? %>
-                        <li>Line2</li>
+                        <li>Check coupon on detail page to receive your extra savings.</li>
                       <% end %>
                     </ul>
                   </span>
@@ -158,6 +158,10 @@
                     </em>
                   </div>
                 <% end %>
+                <div class="box">
+                  <p>Search more on</p>
+                  <em><a target="_blank" href="https://www.amazon.com/s?k=<%= @storedeal.sd_title %>&tag=3628-20">Amazon<i></i></a></em>
+                </div>
               </div>
               <!-- <div class="info_box clearfix">
                 <span>
@@ -167,7 +171,11 @@
                   </ul>
                 </span>
               </div>  -->
+
+             
             </div><!--./info_wrap-->
+
+
 
             <% if @storedeal.sd_promocode.present? %>
               <div class="text_copied intheshow">

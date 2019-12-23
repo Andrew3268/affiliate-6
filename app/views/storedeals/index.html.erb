@@ -15,7 +15,7 @@
       <div class="sp_left">
         <div class="sp_menu">
           <div class="text show-more-height">
-            <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div>
+            <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search here..." %><% end %></div>
             <% if can? :update, @storedeals %>
              <ul>
               <li class="admin"><%= link_to 'New Deal', new_storedeal_path %></li>
