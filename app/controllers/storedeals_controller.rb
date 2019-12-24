@@ -38,14 +38,13 @@ class StoredealsController < ApplicationController
                     url: 'www.ohigottabuythis.net/promocodes',
                     # image: @storedeal.sd_image
                   }
-    
   end
 
   # GET /storedeals/1
   # GET /storedeals/1.json
   def show
     impressionist(@storedeal)
-    # @relative_show = @storedeal.sdcategory.storedeal
+    @more_deals = Storedeal.where(sdcategory_id: @storedeal.sdcategory_id)
     set_meta_tags title: @storedeal.sd_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,

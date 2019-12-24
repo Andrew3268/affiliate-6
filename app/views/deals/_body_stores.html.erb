@@ -12,11 +12,11 @@
               <% if promo.sp_spare_40.present? || promo.sp_spare_42.present?%>
               <% else %>
                 <% if promo.sp_percentage_01.present? %>
-                  | Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF
+                  Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF
                 <% end %>
               <% end %> 
               <% if can? :update, promo %>
-               | <%= link_to 'Edit', edit_storepromotion_path(promo) %>
+                <%= link_to 'Edit', edit_storepromotion_path(promo) %>
               <% end %>
             </p>
             <!-- <span><%= link_to promo.sp_title, promo %></span> -->
@@ -42,7 +42,7 @@
                 <% else %>
                   <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
                   <% promo.sp_spare_61 %>
-                   <em class="endtoday code_em">* This offer expires TODAY</em>
+                   <em class="endtoday code_em">End Today</em>
                   <% else %>
                    <em class="code_em">* End Date: <%= promo.sp_end_date %></em>
                    <!-- <em class="code_em">* Offers can be expired fast.</em> -->
@@ -82,6 +82,19 @@
                     <% end %>
                   <% end %>
                 </p>
+                <% if mp.sp_end_date.present? %>
+                  <div class="date_info">
+                    <% if mp.sp_spare_60 && (mp.sp_spare_60 < DateTime.now) %>
+                    <% mp.sp_spare_60 %>
+                      <em class="expired code_em">EXPIRED</em>
+                    <% else %>
+                      <% if mp.sp_spare_61 && (mp.sp_spare_61 <= DateTime.now) %>
+                      <% mp.sp_spare_61 %>
+                       <em class="endtoday code_em">End Today</em>
+                      <% end %>
+                    <% end %>
+                  </div>
+                <% end %>
               </div>
               <!-- <div class="tab-menu-text-alt"><p><%= link_to mp.sp_title, mp %></p></div> -->
               <div class="tab-menu-text-alt"><p><a target="_blank" href="<%= mp.sp_link %>"><%= mp.sp_title %></a></p></div>

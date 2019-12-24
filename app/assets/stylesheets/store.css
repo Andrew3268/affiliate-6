@@ -20,11 +20,12 @@
 .st_warp .st_box .inner .pricing .span_01{color:#616161;text-decoration:line-through;}
 .st_warp .st_box .inner .date_info{}
 .st_warp .st_box .inner .date_info em{font-size:12px;color:#616161;}
-.st_warp .st_box .inner .date_info em.expired{color:red;}
+.st_warp .st_box .inner .date_info em.expired{color:#ff4d4d;}
 .st_warp .st_box .inner .date_info em.endtoday{color:#ffa500;}
 .st_warp .st_middle{margin-top:30px;}
 .st_warp .st_middle .deals_card{width:18%;}
 .st_warp .st_middle .st_middle_box{margin-bottom:30px;}
+.discovery{margin-top:40px;font-size:20px;}
 .catalog a{color:#333;}
 .catalog a.a01{font-size:20px;}
 .catalog a.a01 span{background:#ff3333;color:#fff;padding:5px 7px;border-radius:13px;font-size:15px;}
@@ -43,6 +44,10 @@
 
 .tab-menu-img img{width:50px;height:50px;overflow:hidden;float:left;/*border-radius:100%;*/object-fit:contain;}
 .tab-menu-text-title{color:#000;white-space: nowrap;text-overflow:ellipsis;overflow:hidden;padding-right:15px;font-size:13px;position:relative;left:10px;top:0;}
+.tab-menu-text-title p{display:inline-block;}
+.tab-menu-text-title .date_info{display:inline;float:right;font-size:10px;}
+.tab-menu-text-title .date_info .expired{color:#ff4d4d;}
+.tab-menu-text-title .date_info .endtoday{color:#ffa500;}
 .tab-menu-text-alt{color:#000;font-size:13px;position:relative;left:10px;top:0;margin-bottom:10px;}
 .tab-menu-text-alt p a{display:inline-block;color:#616161;}
 .tab-menu-text-alt span{font-size:17px;margin-top:-10px;display:block;}

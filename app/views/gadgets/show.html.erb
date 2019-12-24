@@ -10,7 +10,7 @@
             <% if @gadget.gg_img.present? %>
               <a target="_blank" href="<%= @gadget.gg_url %>"><img src="<%= @gadget.gg_img %>" alt="<%=@gadget.gg_title %>" title="<%= @gadget.gg_spare_05 %>"></a>
             <% else %>
-              <a target="_blank" href="<%= @gadget.gg_url %>"><img src="<%= @gadget.gg_option_06 %>" alt="<%=@gadget.gg_title %>" title="<%= @gadget.gg_spare_05 %>"></a>
+              <a target="_blank" href="<%= @gadget.gg_url %>"><img class="cover" src="<%= @gadget.gg_option_06 %>" alt="<%=@gadget.gg_title %>" title="<%= @gadget.gg_spare_05 %>"></a>
             <% end %>
           </div>
           <% if @gadget.gg_youtube01.present? %>
@@ -24,37 +24,51 @@
           </div>   
         <% end %>
         </div>
-        <div class="show_inner">
-         <div class="show_in_box">
-           <h2><a target="_blank" href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
-           <strong>BY <%= @gadget.gg_from %></strong>
-           <% if @gadget.gg_option_03.present? %>
-           <% else %>
-            <p><%= number_to_currency(@gadget.gg_aprice) %></p>
-           <% end %>
+        <% if @gadget.gg_option_03.present? %>
+           <div class="show_inner">
+             <div class="show_in_box learn_more">
+               <h2><a target="_blank" href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
+               <strong>BY <%= @gadget.gg_from %></strong>
+                <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Learn More on <em><%= @gadget.gg_spare_01 %></em></a>
+             </div>          
+             <% if @gadget.gg_intro.present? %>
+               <em class="about">About This</em> 
+               <span><p><%= @gadget.gg_intro %></p></span>
+             <% end %>
+             <% if @gadget.gg_pro_01.present? %>
+              <em class="about">About This</em>
+              <span class="trix trix-container gradient"><%= @gadget.gg_pro_01.html_safe %>
+              <button class="show-btn fa fa-chevron-down"></button></span>
+             <% end %>
+             <p class="keyword"><%= @gadget.gg_option_04 %></p>
+             <!-- <div class="option_btn">
+               <a href="/gadgets?category=Tech">See More Tech</a>
+             </div> -->
+          </div><!--./show_inner-->
+        <% else %>
+          <div class="show_inner">
+             <div class="show_in_box">
+               <h2><a target="_blank" href="<%= @gadget.gg_url %>"><%= @gadget.gg_title %></a></h2>
+               <strong>BY <%= @gadget.gg_from %></strong>
+               <p><%= number_to_currency(@gadget.gg_aprice) %></p>
+               <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
+             </div>          
+             <% if @gadget.gg_intro.present? %>
+               <em class="about">About This</em> 
+               <span><p><%= @gadget.gg_intro %></p></span>
+             <% end %>
+             <% if @gadget.gg_pro_01.present? %>
+              <em class="about">About This</em>
+              <span class="trix trix-container gradient"><%= @gadget.gg_pro_01.html_safe %>
+              <button class="show-btn fa fa-chevron-down"></button></span>
+             <% end %>
+             <p class="keyword"><%= @gadget.gg_option_04 %></p>
+             <!-- <div class="option_btn">
+               <a href="/gadgets?category=Tech">See More Tech</a>
+             </div> -->
+          </div><!--./show_inner-->
+        <% end %>
 
-           <% if @gadget.gg_option_03.present? %>
-            <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Learn More on <em><%= @gadget.gg_spare_01 %></em></a>
-           <% else %>
-            <a class="m_btn" target="_blank" href="<%= @gadget.gg_url %>">Check it out on <em><%= @gadget.gg_spare_01 %></em></a>
-           <% end %>
-         </div>          
-         <% if @gadget.gg_intro.present? %>
-           <em class="about">About This</em> 
-           <span><p><%= @gadget.gg_intro %></p></span>
-         <% end %>
-         <% if @gadget.gg_pro_01.present? %>
-          <em class="about">About This</em>
-          <span class="trix trix-container gradient"><%= @gadget.gg_pro_01.html_safe %>
-          <button class="show-btn fa fa-chevron-down"></button></span>
-         <% end %>
-         <p class="keyword"><%= @gadget.gg_option_04 %></p>
-
-         
-         <!-- <div class="option_btn">
-           <a href="/gadgets?category=Tech">See More Tech</a>
-         </div> -->
-        </div>
 
        <!--  <a href="https://www.facebook.com/0higottabuythis/photos/a.197284250987000/312887269426697/?type=3&theater">Write Comments</a> -->
 

@@ -196,13 +196,30 @@
            
            </div>
           </div>
-        </div>
+        </div><!--./show_box-->
 
         <% if can? :update, @storedeal %>
           <div class="pinterest">
            <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
           </div>
         <% end %>  
+
+        <div class="like_more">
+         <p>Look at more <span><%= @storedeal.sdcategory.name %></span>'s bargain </p>
+         <% @more_deals.shuffle.take(8).each do |sdcategory| %>
+            <% if sdcategory.sdcategory_id == @storedeal.sdcategory_id %>
+              <ul>
+                <li><%= link_to sdcategory.sd_title, sdcategory %> - 
+                  <% if sdcategory.sd_spare_32.present? %>
+                    <%= number_to_currency(sdcategory.sd_spare_32) %>
+                  <% else %> 
+                    <%= number_to_currency(sdcategory.sd_spare_34) %>   
+                  <% end %>
+                </li>
+              </ul>
+            <% end %>
+          <% end %>
+        </div>
 
         <!--
           <% if @storedeal.sdcategory_id == 1 %> 
@@ -230,10 +247,8 @@
       <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  
       <div id="google_translate_element"></div> -->
            
-    
   </div>
 </div>
-
 <script><%= render(:partial => 'storedeals', :handlers => [:erb], :formats => [:js]) %></script>
 
 

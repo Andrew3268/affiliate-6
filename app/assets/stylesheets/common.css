@@ -242,8 +242,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 
   .deals_main_menu ul li{float:none;margin:0;position:relative;margin-top:-10px;}
   .deals_main_menu ul li a:after{display:none;}
-  .deals_main_menu ul li.nth_1:after{position:absolute;height:7px;content:'';background:#000;width:70%;top:68%;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
-  .deals_main_menu ul li.nth_1 span{display:none;}
+  /*.deals_main_menu ul li.nth_1:after{position:absolute;height:7px;content:'';background:#000;width:70%;top:68%;-webkit-transform:translateY(-5px);transform:translateY(-5px);}*/
+  /*.deals_main_menu ul li.nth_1 span{display:none;}*/
   .deals_main_menu ul li a{float:none;font-size:37px;}
 }
 
