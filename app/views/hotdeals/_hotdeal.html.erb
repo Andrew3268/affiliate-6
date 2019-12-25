@@ -8,6 +8,7 @@
     <% end %>
     <%if hotdeal.h_percentage.present? %>
       <div class="mark"><span><%= hotdeal.h_percentage %>%</span><em>OFF</em></div>
+      <!-- <div class="mark dropped"><em>price</em><em>more</em><em>dropped</em></div> -->
     <% else %>
       <% running_total = 0 %>
       <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>

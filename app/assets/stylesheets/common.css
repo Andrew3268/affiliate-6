@@ -389,6 +389,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .footer2 .footer_down{border-top:4px solid #000;padding:5px 0;}
 
 @media screen and (max-width:400px){
+  .pagination a{margin:0 2%;}
   .footer2 .footer_up ul li a{font-size:8px;}
   .footer2 .footer_up ul li a img{width:17px;}
 }

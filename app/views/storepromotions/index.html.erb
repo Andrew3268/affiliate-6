@@ -61,7 +61,7 @@
                   <% if storepromotion.sp_end_date.present? %>
                     <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                     <% storepromotion.sp_spare_60 %>
-                      <em class="expired code_em">EXPIRED</em>
+                      <em class="expired code_em">Expired</em>
                     <% else %>
                       <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
                       <% storepromotion.sp_spare_61 %>
@@ -85,7 +85,7 @@
                   <% if storepromotion.sp_end_date.present? %>
                     <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                     <% storepromotion.sp_spare_60 %>
-                      <em class="expired code_em">EXPIRED</em>
+                      <em class="expired code_em">Expired</em>
                     <% else %>
                       <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
                       <% storepromotion.sp_spare_61 %>

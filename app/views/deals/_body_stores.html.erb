@@ -38,7 +38,7 @@
               <div class="date_info">
                 <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
                 <% promo.sp_spare_60 %>
-                  <em class="expired code_em">EXPIRED</em>
+                  <em class="expired code_em">Expired</em>
                 <% else %>
                   <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
                   <% promo.sp_spare_61 %>
@@ -86,7 +86,7 @@
                   <div class="date_info">
                     <% if mp.sp_spare_60 && (mp.sp_spare_60 < DateTime.now) %>
                     <% mp.sp_spare_60 %>
-                      <em class="expired code_em">EXPIRED</em>
+                      <em class="expired code_em">Expired</em>
                     <% else %>
                       <% if mp.sp_spare_61 && (mp.sp_spare_61 <= DateTime.now) %>
                       <% mp.sp_spare_61 %>
