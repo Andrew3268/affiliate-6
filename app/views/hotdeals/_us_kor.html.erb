@@ -262,7 +262,7 @@
 
           <!-- Korea Dollar -->
           <% estimated_kor = 0 %>
-          <% estimated_kor = ((@hotdeal.h_spare_42.to_i + @hotdeal.h_spare_63.to_i) * @hotdeal.h_spare_68.to_i) + @hotdeal.h_spare_69 %>
+          <% estimated_kor = ((@hotdeal.h_spare_42.to_i + @hotdeal.h_spare_63.to_i) * @hotdeal.h_spare_68.to_i) + @hotdeal.h_spare_69.to_i %>
           <em><% number_to_currency(estimated_kor) %></em>
 
         <% end %>
