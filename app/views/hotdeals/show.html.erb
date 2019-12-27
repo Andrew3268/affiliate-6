@@ -44,7 +44,7 @@
           <% end %>
         </div><!--./show_img-->
 
-        <div class="show_inner">
+        <!-- <div class="show_inner">
           <div class="alldeals_tabs show_tabs">
             <input type="radio" name="tab" id="tab1" checked="checked">
             <label for="tab1">I live in the United States.</label>
@@ -53,19 +53,23 @@
 
             <div class="tab-content-wrapper">
              <div id="tab-content-1" class="tab-content">
-              <%= render 'hotdeals/usa_ver2' %>
+              < render 'hotdeals/usa_ver2' >
              </div>
 
              <div id="tab-content-2" class="tab-content">
-              <%= render 'hotdeals/korea' %>
+              < render 'hotdeals/korea_ver2' >
              </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
        <!-- <div class="show_inner">
         < render 'hotdeals/usa_ver2' >
        </div> -->
+
+       <div class="show_inner">
+        <%= render 'hotdeals/us_kor' %>
+       </div>
 
         
         <% if can? :update, @hotdeal %>

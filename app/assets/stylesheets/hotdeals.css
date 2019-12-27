@@ -63,6 +63,8 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul{margin-left:10px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul li{list-style:disc;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span i:before{content: "\f08e";font-family: FontAwesome;font-style: normal;margin-left:3px;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .hidden_box{display:none;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap ul.tokor{margin-top:10px;padding:0;}
 /*.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span a{color:#08f;}*/
 
 @media screen and (max-width:640px){
@@ -118,7 +120,7 @@
 .hotdeal_related p{text-align:center;font-size:30px;margin-bottom:20px;}
 
 /* Form Page */
-.hotdeal_form{width:800px;}
+.hotdeal_form{width:1000px;}
 .hotdeal_form input, .hotdeal_form textarea{display:block;width:100%;height:40px;margin-bottom:20px;}
 .hotdeal_form textarea{height:80px;}
 .hotdeal_form trix-editor{min-height:15em;}

@@ -19,7 +19,17 @@
     <div class="block clearfix">
       <div class="box line_three">
         <p>Shipping</p>
-        <em>Free</em>
+        <% if @hotdeal.h_spare_63.present? %>
+          <% if @hotdeal.h_spare_63 > 0 %>
+            <em><%= number_to_currency(@hotdeal.h_spare_63) %></em>
+          <% else %>
+            <% if @hotdeal.h_spare_63 = 0 %>
+            <em>Free <% number_to_currency(@hotdeal.h_spare_63) %></em>
+            <% end %>
+          <% end %>
+        <% else %>
+          <em>Free</em>
+        <%end %>
       </div>
       <div class="box line_three">
         <p>Rating</p>
@@ -71,9 +81,25 @@
       <div class="box line_three">
         <p>Coupon</p>
         <% if @hotdeal.h_spare_02.present? %>
-          <em><%= @hotdeal.h_spare_02 %></em>
+          <% if @hotdeal.h_spare_02.present? %>
+            <em><%= @hotdeal.h_spare_02 %></em>
+          <% else %>
+            <em>-</em>
+          <% end %>
         <% else %>
-          <em>-</em>
+          <% if @hotdeal.h_spare_61.present? %>
+            <% if @hotdeal.h_spare_61.present? %>
+              <em><%= number_to_percentage(@hotdeal.h_spare_61, precision: 0) %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          <% else %>
+            <% if @hotdeal.h_spare_62.present? %>
+              <em><%= number_to_currency(@hotdeal.h_spare_62) %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          <% end %>
         <% end %>
       </div>
       <div class="box line_three">
@@ -110,9 +136,25 @@
       <div class="box">
         <p>Coupon</p>
         <% if @hotdeal.h_spare_02.present? %>
-          <em><%= @hotdeal.h_spare_02 %></em>
+          <% if @hotdeal.h_spare_02.present? %>
+            <em><%= @hotdeal.h_spare_02 %></em>
+          <% else %>
+            <em>-</em>
+          <% end %>
         <% else %>
-          <em>-</em>
+          <% if @hotdeal.h_spare_61.present? %>
+            <% if @hotdeal.h_spare_61.present? %>
+              <em><%= number_to_percentage(@hotdeal.h_spare_61, precision: 0) %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          <% else %>
+            <% if @hotdeal.h_spare_62.present? %>
+              <em><%= number_to_currency(@hotdeal.h_spare_62) %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          <% end %>
         <% end %>
       </div>
     </div>

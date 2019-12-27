@@ -22,6 +22,7 @@
       <%= f.input :h_spare_41, label: 'Original Price' %>
       <%= f.input :h_spare_42, label: 'Current Price' %>
       <%= f.input :h_percentage, label: 'Discount Percentage' %>
+      <%= f.input :h_spare_63, label: 'Shipping Fee' %>
     </div>
     <p>(when we don't know sales of percentage)</p>
     <div class="pricing clearfix">
@@ -32,11 +33,23 @@
       <%= f.input :h_spare_08, label: 'Average Rate' %>
       <%= f.input :h_spare_09, label: 'Number of Reviews' %>
       <%= f.input :h_spare_02, label: 'Coupon Deals?' %>
+      <%= f.input :h_spare_61, label: 'Coupon(%)' %>
+      <%= f.input :h_spare_62, label: 'Coupon($)' %>
       <%= f.input :h_spare_45, label: 'Last Discount Price' %>
       <!-- <%= f.input :h_spare_01, label: 'Extra Deals?' %> -->
       <!--<%= f.input :h_list_price, label: '(Old)List Price' %>
       <%= f.input :h_price, label: '(Old)Current Price' %>-->
     </div>
+
+    <div class="pricing clearfix">
+      <%= f.input :h_spare_68, label: '고시환율' %>
+      <%= f.input :h_spare_64, label: '예상 관세 보증금' %>
+      <%= f.input :h_spare_65, label: '예상 배송대행지 배송비' %>
+      <%= f.input :h_spare_66, label: '관세율 ( 0.08 )' %>
+      <%= f.input :h_spare_67, label: '직배송료' %>
+      <%= f.input :h_spare_69, label: '과세운임' %>
+    </div>
+
     <div class="find_more">
       <%= f.input :h_spare_14, label: 'Amazon Choice' %>
       <%= f.input :h_spare_15, label: 'Amazon Choice Link' %>

@@ -12,3 +12,21 @@ $('.show-btn').click(function() {
 });
 
 
+//Begin Opne&Close Toggle _Menu 
+var menu_status;
+$(".codes .lt_cnt .toggle>ul>li>a").on("click", function(){
+menu_status = $(this).parent().hasClass("on");
+//console.log(menu_status);
+if(menu_status == true){
+  //지금 열려있는 상태 -- 닫는기능
+  $(this).parent().removeClass("on");
+  $(this).next().slideUp();
+}else{
+  //지금 닫혀있는 상태 - 여는기능
+  $(".codes .lt_cnt .toggle>ul>li").removeClass("on");
+  $(".codes .lt_cnt .toggle>ul>li>ul").slideUp();
+  $(this).parent().addClass("on");
+  $(this).next().slideDown();
+}
+});
+//End
