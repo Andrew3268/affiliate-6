@@ -34,7 +34,7 @@ class StorepromotionsController < ApplicationController
                     title: 'Take the best deals updated daily',
                     description: 'Take the best deals with promo codes and coupons',
                     type: 'website',
-                    description: 'Take the best offers & promotions with promo codes and coupons',
+                    url: 'www.ohigottabuythis.net/storepromotions',
                     # image: @hotdeal.h_image
                   }
   end
