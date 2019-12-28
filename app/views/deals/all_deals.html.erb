@@ -10,8 +10,10 @@
       <label for="tab2">Amazon Hodeals(ENG)</label>
       <input type="radio" name="tab" id="tab3">
       <label for="tab3">Naver Blog</label>
-      <!-- <input type="radio" name="tab" id="tab4">
-      <label for="tab4">Contact</label> -->
+      <input type="radio" name="tab" id="tab4">
+      <label for="tab4">Store Promotions</label>
+      <!-- <input type="radio" name="tab" id="tab5">
+      <label for="tab5">Contact</label> -->
     
       <div class="tab-content-wrapper">
 
@@ -78,7 +80,7 @@
                   <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
                   <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code <em>" <%= promocode.p_promocode %> "</em>)</span></p>
                   <p>*Ends Date: <%= promocode.p_end_date %></p>
-                  <a target="_blank" href="<%= promocode.p_link %>">[ Use Promo Code ]</a><br />
+                  <a target="_blank" href="<%= promocode.p_link %>"><%= promocode.p_link %></a><br />
                 </div>     
                 <% end %>
               <span class="check_more"> <a target="_blank" href="/promocodes">Check More Promo Codes: www.ohigottabuythis.net/promocodes</a></span>
@@ -151,6 +153,20 @@
         </div><!--#/tab-content-3-->
 
         <div id="tab-content-4" class="tab-content">
+          <div class="all_wrap">
+            <div class="common promocodes">
+              <% @storepromotions.each do |storepromotion| %>
+                <div class="all_box clearfix">
+                  <p><%= storepromotion.spcategory.name %></p>
+                  <p><%= storepromotion.sp_title %></p>
+                  <a href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_link %></a>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div id="tab-content-5" class="tab-content">
         </div>
       </div>
     </div>
