@@ -225,8 +225,6 @@
   <% coupon_p44 = (@hotdeal.h_spare_44.to_i * @hotdeal.h_spare_61.to_i / 100) %>
   <% number_to_currency(coupon_p44) %>
 
-
-
   <div class="block hidden_box clearfix">
     <div class="box total_box">
       <p>Estimated Purchase Price</p>
@@ -240,7 +238,7 @@
 
             <!-- Korea Dollar -->
             <% estimated_kor = 0 %>
-            <% estimated_kor = ((@hotdeal.h_spare_42.to_i - coupon_p42 + @hotdeal.h_spare_63) * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
+            <% estimated_kor = (estimated_us * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
             <em><% number_to_currency(estimated_kor) %></em>
           <% else %>
 
@@ -250,7 +248,7 @@
 
             <!-- Korea Dollar -->
             <% estimated_kor = 0 %>
-            <% estimated_kor = ((@hotdeal.h_spare_42.to_i -  @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63) * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
+            <% estimated_kor = (estimated_us * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
             <em><% number_to_currency(estimated_kor) %></em>
 
           <% end %>
@@ -262,7 +260,7 @@
 
           <!-- Korea Dollar -->
           <% estimated_kor = 0 %>
-          <% estimated_kor = ((@hotdeal.h_spare_42.to_i + @hotdeal.h_spare_63.to_i) * @hotdeal.h_spare_68.to_i) + @hotdeal.h_spare_69.to_i %>
+          <% estimated_kor = (estimated_us * @hotdeal.h_spare_68.to_i) + @hotdeal.h_spare_69.to_i %>
           <em><% number_to_currency(estimated_kor) %></em>
 
         <% end %>
@@ -277,8 +275,8 @@
 
             <!-- Korea Dollar -->
             <% estimated_kor = 0 %>
-            <% estimated_kor = ((@hotdeal.h_spare_44.to_i - coupon_p44 + @hotdeal.h_spare_63) * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
-            <em><% number_to_currency(estimated_kor) %></em>
+            <% estimated_kor = (estimated_us * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
+            <em><%= number_to_currency(estimated_kor) %></em>
 
           <% else %>
 
@@ -288,19 +286,19 @@
 
             <!-- Korea Dollar -->
             <% estimated_kor = 0 %>
-            <% estimated_kor = ((@hotdeal.h_spare_44.to_i - @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63) * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
+            <% estimated_kor = (estimated_us * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
             <em><% number_to_currency(estimated_kor) %></em>
 
           <% end %>
         <% else %>
 
           <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44 + @hotdeal.h_spare_63 %>
+          <% estimated_us = @hotdeal.h_spare_44.to_i + @hotdeal.h_spare_63.to_i %>
           <em><%= number_to_currency(estimated_us) %></em>
 
           <!-- Korea Dollar -->
           <% estimated_kor = 0 %>
-          <% estimated_kor = ((@hotdeal.h_spare_44 + @hotdeal.h_spare_63) * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
+          <% estimated_kor = (estimated_us * @hotdeal.h_spare_68) + @hotdeal.h_spare_69 %>
           <em><% number_to_currency(estimated_kor) %></em>
 
         <% end %>
@@ -398,7 +396,6 @@
                       <% tax_total_kor = 0 %>
                       <% tax_total_kor = estimated_kor * @hotdeal.h_spare_66 %>
                       <em><%= number_to_currency(tax_total_kor, unit: "") %>원</em>
-
                     <% end %>
                   </div>
                   <div class="box">
@@ -448,38 +445,38 @@
                     <% if @hotdeal.h_spare_42.present? %>
                       <% if @hotdeal.h_spare_61.present? %>
                         <% price_total = 0 %>
-                        <% price_total = @hotdeal.h_spare_42 + @hotdeal.h_spare_63 + @hotdeal.h_spare_65 + tax_total + vat_total - coupon_p42 %>
+                        <% price_total = @hotdeal.h_spare_42.to_i + @hotdeal.h_spare_63.to_i + @hotdeal.h_spare_65.to_i + tax_total + vat_total - coupon_p42 %>
                         <em><%= number_to_currency(price_total) %></em>
                         <!-- Korea Dollar -->
                         <% price_total_kor = 0 %>
-                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65 * @hotdeal.h_spare_68) + tax_total_kor + vat_total_kor %>
+                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65.to_i * @hotdeal.h_spare_68.to_i) + tax_total_kor + vat_total_kor %>
                         <em><%= number_to_currency(price_total_kor, unit: "") %>원</em>
                       <% else %>
                         <% price_total = 0 %>
-                        <% price_total = @hotdeal.h_spare_42 + @hotdeal.h_spare_63 + @hotdeal.h_spare_65 + tax_total + vat_total - @hotdeal.h_spare_62.to_i %>
+                        <% price_total = @hotdeal.h_spare_42.to_i + @hotdeal.h_spare_63.to_i + @hotdeal.h_spare_65.to_i + tax_total + vat_total - @hotdeal.h_spare_62.to_i %>
                         <em><%= number_to_currency(price_total) %></em>
                         <!-- Korea Dollar -->
                         <% price_total_kor = 0 %>
-                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65 * @hotdeal.h_spare_68) + tax_total_kor + vat_total_kor %>
+                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65.to_i * @hotdeal.h_spare_68.to_i) + tax_total_kor + vat_total_kor %>
                         <em><%= number_to_currency(price_total_kor, unit: "") %>원</em>
                       <% end %>
 
                     <% else %>
                       <% if @hotdeal.h_spare_61.present? %>
                         <% price_total = 0 %>
-                        <% price_total = @hotdeal.h_spare_44 + @hotdeal.h_spare_63 + @hotdeal.h_spare_65 + tax_total + vat_total - coupon_p44 %>
+                        <% price_total = @hotdeal.h_spare_44.to_i + @hotdeal.h_spare_63.to_i + @hotdeal.h_spare_65.to_i + tax_total + vat_total - coupon_p44 %>
                         <em><%= number_to_currency(price_total) %></em>
                         <!-- Korea Dollar -->
                         <% price_total_kor = 0 %>
-                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65 * @hotdeal.h_spare_68) + tax_total_kor + vat_total_kor %>
+                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65.to_i * @hotdeal.h_spare_68.to_i) + tax_total_kor + vat_total_kor %>
                         <em><%= number_to_currency(price_total_kor, unit: "") %>원</em>
                       <% else %>
                         <% price_total = 0 %>
-                        <% price_total = @hotdeal.h_spare_44 + @hotdeal.h_spare_63 + @hotdeal.h_spare_65 + tax_total + vat_total - @hotdeal.h_spare_62.to_i %>
+                        <% price_total = @hotdeal.h_spare_44.to_i + @hotdeal.h_spare_63.to_i + @hotdeal.h_spare_65.to_i + tax_total + vat_total - @hotdeal.h_spare_62.to_i %>
                         <em><%= number_to_currency(price_total) %></em>
                         <!-- Korea Dollar -->
                         <% price_total_kor = 0 %>
-                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65 * @hotdeal.h_spare_68) + tax_total_kor + vat_total_kor %>
+                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65.to_i * @hotdeal.h_spare_68.to_i) + tax_total_kor + vat_total_kor %>
                         <em><%= number_to_currency(price_total_kor, unit: "") %>원</em>
                       <% end %>
 
@@ -509,11 +506,11 @@
                     <% else %>
                       <% if @hotdeal.h_spare_61.present? %>
                         <% price_total = 0 %>
-                        <% price_total = @hotdeal.h_spare_44 + @hotdeal.h_spare_63 + @hotdeal.h_spare_65 - coupon_p44 %>
+                        <% price_total = @hotdeal.h_spare_44.to_i + @hotdeal.h_spare_63.to_i + @hotdeal.h_spare_65.to_i - coupon_p44 %>
                         <em><%= number_to_currency(price_total) %></em>
                         <!-- Korea Dollar -->
                         <% price_total_kor = 0 %>
-                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65 * @hotdeal.h_spare_68) %>
+                        <% price_total_kor = estimated_kor + (@hotdeal.h_spare_65.to_i * @hotdeal.h_spare_68.to_i) %>
                         <em><%= number_to_currency(price_total_kor) %></em>
                       <% else %>
                         <% price_total = 0 %>

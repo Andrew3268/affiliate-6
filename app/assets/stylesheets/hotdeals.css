@@ -49,6 +49,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .tax_box{float:left;width:23%;margin:1%;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .total_box{width:98%;margin:1%;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p{font-size:12px;margin:5px;color:#6d6e71;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p span{border:1px solid #6a6a6a;border-radius:100px;padding:0 5px;margin-right:3px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p a{color:#6d6e71;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em{font-size:17px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em a{color:#000;}

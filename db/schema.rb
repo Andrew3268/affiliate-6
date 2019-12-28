@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191226064609) do
+ActiveRecord::Schema.define(version: 20191228050825) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -316,6 +316,36 @@ ActiveRecord::Schema.define(version: 20191226064609) do
     t.datetime "p_spare_51"
     t.date     "p_spare_52"
     t.date     "p_spare_53"
+    t.integer  "p_spare_41"
+    t.integer  "p_spare_42"
+    t.integer  "p_spare_43"
+    t.integer  "p_spare_44"
+    t.integer  "p_spare_45"
+    t.float    "p_spare_54"
+    t.float    "p_spare_55"
+    t.float    "p_spare_56"
+    t.float    "p_spare_57"
+    t.float    "p_spare_58"
+    t.float    "p_spare_59"
+    t.float    "p_spare_60"
+    t.float    "p_spare_61"
+    t.float    "p_spare_62"
+    t.float    "p_spare_63"
+    t.float    "p_spare_64"
+    t.float    "p_spare_65"
+    t.float    "p_spare_66"
+    t.float    "p_spare_67"
+    t.float    "p_spare_68"
+    t.float    "p_spare_69"
+    t.float    "p_spare_70"
+    t.float    "p_spare_71"
+    t.float    "p_spare_72"
+    t.float    "p_spare_73"
+    t.decimal  "p_spare_80"
+    t.decimal  "p_spare_81"
+    t.decimal  "p_spare_82"
+    t.decimal  "p_spare_83"
+    t.decimal  "p_spare_84"
   end
 
   add_index "promocodes", ["slug"], name: "index_promocodes_on_slug", unique: true
