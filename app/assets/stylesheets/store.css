@@ -56,7 +56,7 @@
 .tab-menu-img p{text-align:center;font-weight:bold;}
 .tab-menu-img span{display:block;font-size:25px;text-align:center;line-height:1;}
 .tab-menu-img em.off{display:block;font-size:20px;text-align:center;line-height:1;}
-/*.tab-menu-img img{width:50px;height:50px;overflow:hidden;float:left;object-fit:contain;}*/
+.tab-menu-img img{width:50px;height:50px;overflow:hidden;float:left;object-fit:contain;}
 .tab-menu-text-title{color:#000;white-space: nowrap;text-overflow:ellipsis;overflow:hidden;padding-right:15px;font-size:13px;position:relative;left:10px;top:0;}
 .tab-menu-text-title p{display:inline-block;}
 .tab-menu-text-title .date_info{display:inline;float:right;font-size:10px;}
