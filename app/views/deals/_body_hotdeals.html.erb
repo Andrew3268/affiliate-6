@@ -74,10 +74,26 @@
         <div class="box">
           <p>Coupon</p>
           <% if hotdeal.h_spare_02.present? %>
-          <em><%= hotdeal.h_spare_02 %></em>
+          <% if hotdeal.h_spare_02.present? %>
+            <em><%= hotdeal.h_spare_02 %></em>
           <% else %>
             <em>-</em>
           <% end %>
+        <% else %>
+          <% if hotdeal.h_spare_61.present? %>
+            <% if hotdeal.h_spare_61.present? %>
+              <em><%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          <% else %>
+            <% if hotdeal.h_spare_62.present? %>
+              <em><%= number_to_currency(hotdeal.h_spare_62) %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
+          <% end %>
+        <% end %>
         </div>
       </div>
      </div>
