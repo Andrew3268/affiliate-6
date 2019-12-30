@@ -116,7 +116,7 @@
 .sp_wrap .sp_right .sp_image .date_m{display:none;}
 .sp_wrap .sp_right .sp_image .just_text{position:relative;}
 .sp_wrap .sp_right .sp_image .goto_d{position:absolute;top:0;left:0;font-size:18px;color:#fff;}
-.sp_wrap .sp_right .sp_image .goto_d a{color:rgb(0,0,0,0);display:block;}
+.sp_wrap .sp_right .sp_image .goto_d a{color:rgba(0,0,0,0);display:block;}
 .sp_wrap .sp_right .sp_image p{text-align:center;font-weight:bold;}
 .sp_wrap .sp_right .sp_image span{display:block;font-size:30px;text-align:center;line-height:1;}
 .sp_wrap .sp_right .sp_image em.off{display:block;font-size:25px;text-align:center;line-height:1;}
