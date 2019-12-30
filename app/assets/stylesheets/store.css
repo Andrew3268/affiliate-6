@@ -10,7 +10,7 @@
 .st_warp .st_box .st_image img{width:100%;height:70px;vertical-align:middle;object-fit:contain;}
 .st_warp .st_box .st_image .just_text{position:relative;}
 .st_warp .st_box .st_image .goto_d{position:absolute;top:0;left:0;font-size:18px;color:#fff;}
-.st_warp .st_box .st_image .goto_d a{color:rgb(0,0,0,0);display:block;}
+.st_warp .st_box .st_image .goto_d a{color:rgba(0,0,0,0);display:block;}
 .st_warp .st_box .st_image p{text-align:center;font-weight:bold;}
 .st_warp .st_box .st_image span{display:block;font-size:30px;text-align:center;line-height:1;}
 .st_warp .st_box .st_image em.off{display:block;font-size:25px;text-align:center;line-height:1;}
@@ -52,7 +52,7 @@
 .tab-menu-img{float:left;}
 .tab-menu-img .just_text{position:relative;}
 .tab-menu-img .goto_d{position:absolute;top:0;left:0;font-size:18px;color:#fff;}
-.tab-menu-img .goto_d a{color:rgb(0,0,0,0);display:block;}
+.tab-menu-img .goto_d a{color:rgba(0,0,0,0);display:block;}
 .tab-menu-img p{text-align:center;font-weight:bold;}
 .tab-menu-img span{display:block;font-size:25px;text-align:center;line-height:1;}
 .tab-menu-img em.off{display:block;font-size:20px;text-align:center;line-height:1;}
