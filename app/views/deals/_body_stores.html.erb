@@ -6,19 +6,41 @@
       <h2>New Offers & Promotions</h2>
       <% @storepromotions.each do |promo| %>
         <div class="st_box clearfix">          
-          <div class="st_image"><%= link_to image_tag(promo.sp_image, alt: promo.sp_title, title: promo.sp_store_name), promo %></div>
+          <!--<div class="st_image"><%= link_to image_tag(promo.sp_image, alt: promo.sp_title, title: promo.sp_store_name), promo %></div>-->
+          <div class="st_image">
+            <div class="just_text">
+              <p>UP TO</p><span><%= number_to_percentage(promo.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
+            </div>
+            <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", promo %></div>
+          </div>
           <div class="inner">
-            <p><em class="st_title"><%= promo.spcategory.name %></em> 
-              <% if promo.sp_spare_40.present? || promo.sp_spare_42.present?%>
-              <% else %>
-                <% if promo.sp_percentage_01.present? %>
-                  Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF
-                <% end %>
-              <% end %> 
-              <% if can? :update, promo %>
-                <%= link_to 'Edit', edit_storepromotion_path(promo) %>
+            <em class="st_title"><%= promo.spcategory.name %></em> 
+            <!--<% if promo.sp_spare_40.present? || promo.sp_spare_42.present?%>
+            <% else %>
+              <% if promo.sp_percentage_01.present? %>
+                Up to <%= number_to_percentage(promo.sp_percentage_01, precision: 0) %> OFF
               <% end %>
-            </p>
+            <% end %>-->
+            <% if can? :update, promo %>
+              <div class="admin"><%= link_to 'Edit', edit_storepromotion_path(promo) %></div>
+            <% end %>
+            <% if promo.sp_end_date.present? %>
+            <div class="date_info">
+              <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
+              <% promo.sp_spare_60 %>
+                <em class="expired code_em">Expired</em>
+              <% else %>
+                <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
+                <% promo.sp_spare_61 %>
+                 <em class="endtoday code_em">End Today</em>
+                <% else %>
+                 <em class="code_em">* End Date: <%= promo.sp_end_date %></em>
+                 <!-- <em class="code_em">* Offers can be expired fast.</em> -->
+                <% end %>
+              <% end %>
+            </div>
+          <% end %>
+            
             <!-- <span><%= link_to promo.sp_title, promo %></span> -->
             <span><a target="_blank" href="<%= promo.sp_link %>"><%= promo.sp_title %></a></span>
 
@@ -34,22 +56,6 @@
               <% end %>
             </div>
 
-            <% if promo.sp_end_date.present? %>
-              <div class="date_info">
-                <% if promo.sp_spare_60 && (promo.sp_spare_60 < DateTime.now) %>
-                <% promo.sp_spare_60 %>
-                  <em class="expired code_em">Expired</em>
-                <% else %>
-                  <% if promo.sp_spare_61 && (promo.sp_spare_61 <= DateTime.now) %>
-                  <% promo.sp_spare_61 %>
-                   <em class="endtoday code_em">End Today</em>
-                  <% else %>
-                   <em class="code_em">* End Date: <%= promo.sp_end_date %></em>
-                   <!-- <em class="code_em">* Offers can be expired fast.</em> -->
-                  <% end %>
-                <% end %>
-              </div>
-            <% end %>
           </div>
         </div>
       <% end %>
@@ -72,15 +78,21 @@
         <div class="page1">
           <% @most_promotions.each do |mp| %>
             <div class="tab-menu-text">
-              <div class="tab-menu-img"><%= link_to image_tag(mp.sp_image, alt: mp.sp_title, title: mp.sp_store_name), mp %></div>
+              <div class="tab-menu-img">
+                <!--<%= link_to image_tag(mp.sp_image, alt: mp.sp_title, title: mp.sp_store_name), mp %>-->
+                <div class="just_text">
+                  <p>UP TO</p><span><%= number_to_percentage(mp.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
+                </div>
+                <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", mp %></div>
+              </div>
               <div class="tab-menu-text-title">
                 <p><%= mp.spcategory.name %> 
-                  <% if mp.sp_spare_40.present? || mp.sp_spare_42.present?%>
+                  <!--<% if mp.sp_spare_40.present? || mp.sp_spare_42.present?%>
                   <% else %>
                     <% if mp.sp_percentage_01.present? %>
                       | Up to <%= mp.sp_percentage_01 %>% Off
                     <% end %>
-                  <% end %>
+                  <% end %>-->
                 </p>
                 <% if mp.sp_end_date.present? %>
                   <div class="date_info">
