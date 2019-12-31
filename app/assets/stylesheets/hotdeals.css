@@ -49,7 +49,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .tax_box{float:left;width:23%;margin:1%;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .total_box{width:98%;margin:1%;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p{font-size:12px;margin:5px;color:#6d6e71;}
-.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p span{border:1px solid #6a6a6a;border-radius:100px;padding:0 5px;margin-right:3px;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p span{border:1px solid #6a6a6a;border-radius:100px;padding:0 5px;margin-right:3px;display:none;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box p a{color:#6d6e71;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em{font-size:17px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em a{color:#000;}
@@ -64,7 +64,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul{margin-left:10px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul li{list-style:disc;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span i:before{content: "\f08e";font-family: FontAwesome;font-style: normal;margin-left:3px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .hidden_box{display:none;}
+/*.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .hidden_box{display:none;}*/
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap ul.tokor{margin-top:10px;padding:0;}
 /*.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span a{color:#08f;}*/
 
@@ -278,3 +278,63 @@
 
 
 
+
+
+
+
+
+
+.accordion-menu {
+  width: 100%;
+  margin-top:20px;
+  background: #fff;
+  border-radius: 4px;
+}
+.accordion-menu li.open .dropdownlink {
+  color: #CDDC39;
+  .fa-chevron-down {
+    transform: rotate(180deg);
+  }
+}
+.accordion-menu li:last-child .dropdownlink {
+  border-bottom: 0;
+}
+.dropdownlink {
+  cursor: pointer;
+  display: block;
+  font-size: 15px;
+  border-bottom: 1px solid #ccc;
+  color: #212121;
+  position: relative;
+  transition: all 0.4s ease-out;
+  i {
+    position: absolute;
+    top: 17px;
+    left: 16px;
+  }
+  .fa-chevron-down {
+    right: 20px;
+    left: auto;
+  }
+  
+}
+
+.dropdownlink .fa{float:right;}
+.submenuItems {
+  display: none;
+  background: #C8E6C9;
+  li {
+    border-bottom: 1px solid #B6B6B6;
+  }
+}
+
+.submenuItems a {
+  display: block;
+  color: #727272;
+  padding: 12px 12px 12px 45px;
+  transition: all 0.4s ease-out;
+  &:hover {
+    background-color: #CDDC39;
+    color: #fff;
+  }
+}

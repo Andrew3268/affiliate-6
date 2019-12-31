@@ -190,119 +190,237 @@
                 <li>
                   <a href="#n">Ship to KOREA</a>
                   <ul class="tokor">
-                    <div class="block clearfix">
-                      <div class="box">
-                        <p><span>1</span>직배송</p>
-                        <% if @promocode.p_spare_59.to_i > 0 %>
-                          <em><%= number_to_currency(@promocode.p_spare_59) %></em>
-                        <% else %>
-                          <% if @promocode.p_spare_59 = 0 %>
-                            <em>X <% number_to_currency(@promocode.p_spare_59) %></em>
+                    <% if @promocode.p_spare_59.present? %>
+                      <em>직배송이 가능한 상품입니다.</em>
+                      <div class="block clearfix">
+                        <div class="box">
+                          <p><span>1</span>직배송</p>
+                          <% if @promocode.p_spare_59.to_i > 0 %>
+                            <em><%= number_to_currency(@promocode.p_spare_59) %></em>
+                          <% else %>
+                            <% if @promocode.p_spare_59 = 0 %>
+                              <em>X <% number_to_currency(@promocode.p_spare_59) %></em>
+                            <% end %>
                           <% end %>
-                        <% end %>
-                      </div>
-                      <div class="box">
-                      <p><span>2</span>예상 관세 보증금</p>
-                        <% if @promocode.p_spare_60.present? %>
-                          <em><%= number_to_currency(@promocode.p_spare_60) %></em>
-                        <% else %>
-                          <em>-</em>
-                        <% end %>      
-                      </div>
-                    </div>
-                    <div class="info_box">
-                      <span>
-                        <ul>
-                          <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
-                          <li>직배송이 가능한 경우 배송대해업체의 배송비와 비교해보세요.</li>
-                        </ul>
-                      </span>
-                    </div>
-
-                    <div class="block clearfix">
-                      <div class="box">
-                        <p><a target="_blank" href="#n"><span>3</span>예상 질량 / 부피 부게 + </a></p>
-                        <% if @promocode.p_spare_09.present? %>
-                          <em><%= @promocode.p_spare_09 %></em>
-                        <% else %>
-                          <em>-</em>
-                        <% end %>
-                      </div>
-                      <div class="box">
-                        <p><span>4</span>예상 배대지 배송비</p>
-                        <% if @promocode.p_spare_61.present? %>
-                          <em><%= number_to_currency(@promocode.p_spare_61) %></em>
-                        <% else %>
-                          <em>-</em>
-                        <% end %>
-                      </div>
-                    </div>
-                    <div class="info_box">
-                      <span>
-                        <ul>
-                          <li>질량 무게와 부피부게 중 무거운 쪽을 최종 무게로 측정하여 배송비를 산출 합니다.</li>
-                          <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
-                          <li>부피무게로 배송비가 산출되는 경우 배송대행업체 마다 할인 프로모션을 진행하니 확인 하세요.</li>
-                        </ul>
-                      </span>
-                    </div>
-
-                    <div class="block clearfix">
-                      <% if @promocode.p_spare_62.present? %>
-                        <div class="box">
-                          <p><span>5</span>예상 관세</p>
-                          <% vat = 0 %>
-                          <% vat = estimated_kor * @promocode.p_spare_62 %>
-                          <em><%= number_to_currency(vat, unit: "") %>원</em>
-                        </div>
-
-                        <div class="box">
-                          <p><span>6</span>예상 부가세</p>
-                          <% tax = 0 %>
-                          <% tax = (estimated_kor + vat) * 0.1 %>
-                          <em><%= number_to_currency(tax, unit: "") %>원</em>
-                        </div>
-                      <% else %>
-                        <div class="box">
-                          <p><span>5</span>예상 관세</p>
-                          <em>-</em>
                         </div>
                         <div class="box">
-                          <p><span>6</span>예상 부가세</p>
-                          <em>-</em>
+                        <p><span>2</span>예상 관세 보증금</p>
+                          <% if @promocode.p_spare_60.present? %>
+                            <em><%= number_to_currency(@promocode.p_spare_60) %></em>
+                          <% else %>
+                            <em>-</em>
+                          <% end %>      
                         </div>
-                      <% end %>
-                    </div>
-                    <div class="info_box">
-                      <span>
-                        <ul>
-                          <li>목록통관 $200이하, 일반통관 $150이하 관부가세 면제</li>
-                        </ul>
-                      </span>
-                    </div>
+                      </div>
+                      <div class="info_box">
+                        <span>
+                          <ul>
+                            <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
+                            <li>직배송이 가능한 경우 배송대해업체의 배송비와 비교해보세요.</li>
+                          </ul>
+                        </span>
+                      </div>
 
-                    <div class="block clearfix">
-                      <div class="box total_box">
-                        <p>총 예상 구매 가격</p>
+                      <ul class="accordion-menu">
+                        <li>
+                         <div class="dropdownlink">
+                            배대지 이용
+                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                         </div>
+                          <ul class="submenuItems">
+                            <div class="block clearfix">
+                                <div class="box">
+                                  <p><a target="_blank" href="#n"><span>3</span>예상 질량 / 부피 부게 + </a></p>
+                                  <% if @promocode.p_spare_09.present? %>
+                                    <em><%= @promocode.p_spare_09 %></em>
+                                  <% else %>
+                                    <em>-</em>
+                                  <% end %>
+                                </div>
+                                <div class="box">
+                                  <p><span>4</span>예상 배대지 배송비</p>
+                                  <% if @promocode.p_spare_61.present? %>
+                                    <em><%= number_to_currency(@promocode.p_spare_61) %></em>
+                                  <% else %>
+                                    <em>-</em>
+                                  <% end %>
+                                </div>
+                              </div>
+                              <div class="info_box">
+                                <span>
+                                  <ul>
+                                    <li>질량 무게와 부피부게 중 무거운 쪽을 최종 무게로 측정하여 배송비를 산출 합니다.</li>
+                                    <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
+                                    <li>부피무게로 배송비가 산출되는 경우 배송대행업체 마다 할인 프로모션을 진행하니 확인 하세요.</li>
+                                  </ul>
+                                </span>
+                              </div>
+
+                              <div class="block clearfix">
+                                <% if @promocode.p_spare_62.present? %>
+                                  <div class="box">
+                                    <p><span>5</span>예상 관세</p>
+                                    <% vat = 0 %>
+                                    <% vat = estimated_kor * @promocode.p_spare_62 %>
+                                    <em><%= number_to_currency(vat, unit: "") %>원</em>
+                                  </div>
+
+                                  <div class="box">
+                                    <p><span>6</span>예상 부가세</p>
+                                    <% tax = 0 %>
+                                    <% tax = (estimated_kor + vat) * 0.1 %>
+                                    <em><%= number_to_currency(tax, unit: "") %>원</em>
+                                  </div>
+                                <% else %>
+                                  <div class="box">
+                                    <p><span>5</span>예상 관세</p>
+                                    <em>0원</em>
+                                  </div>
+                                  <div class="box">
+                                    <p><span>6</span>예상 부가세</p>
+                                    <em>0원</em>
+                                  </div>
+                                <% end %>
+                              </div>
+                              <div class="info_box">
+                                <span>
+                                  <ul>
+                                    <li>목록통관 $200이하, 일반통관 $150이하 관부가세 면제</li>
+                                  </ul>
+                                </span>
+                              </div>
+
+                              <div class="block clearfix">
+                                <div class="box total_box">
+                                  <p>배대지 이용시 총 예상 구매 가격</p>
+                                  <% if @promocode.p_spare_62.present? %>
+                                    <% total_price_kor = 0 %>
+                                    <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i  + tax + vat %>
+                                    <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
+                                  <% else %>
+                                    <% total_price_kor = 0 %>
+                                    <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i %>
+                                    <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
+                                  <% end %>
+                                </div>
+                              </div>
+                              <div class="info_box">
+                                <span>* 예상 구매가격은 참고용으로 정확한 금액이 아닙니다.</span>
+                                <span>* 총 예상 구매가격 = 제품가격 + 현지 배송비 + 세금 + 국제 배송비 + 관부가세</span>
+                                <span>* 환율은 관세청 고시환율 적용</span>
+                                <span>* </span>
+                              </div>
+                          </ul><!--./submenuItems-->
+                        </li>
+                      </ul><!--./accordion-menu-->
+                    <% else %>
+                      <em>직배송이 되지 않은 상품입니다. 배대지 이용을 추천합니다.</em>
+                      <div class="block clearfix">
+                        <div class="box">
+                          <p><a target="_blank" href="#n"><span>3</span>예상 질량 / 부피 부게 + </a></p>
+                          <% if @promocode.p_spare_09.present? %>
+                            <em><%= @promocode.p_spare_09 %></em>
+                          <% else %>
+                            <em>-</em>
+                          <% end %>
+                        </div>
+                        <div class="box">
+                          <p><span>4</span>예상 배대지 배송비</p>
+                          <% if @promocode.p_spare_61.present? %>
+                            <em><%= number_to_currency(@promocode.p_spare_61) %></em>
+                          <% else %>
+                            <em>-</em>
+                          <% end %>
+                        </div>
+                      </div>
+                      <div class="info_box">
+                        <span>
+                          <ul>
+                            <li>질량 무게와 부피부게 중 무거운 쪽을 최종 무게로 측정하여 배송비를 산출 합니다.</li>
+                            <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
+                            <li>부피무게로 배송비가 산출되는 경우 배송대행업체 마다 할인 프로모션을 진행하니 확인 하세요.</li>
+                          </ul>
+                        </span>
+                      </div>
+
+                      <div class="block clearfix">
                         <% if @promocode.p_spare_62.present? %>
-                          <% total_price_kor = 0 %>
-                          <% total_price_kor = estimated_kor + tax + vat + (@promocode.p_spare_61.to_i * @promocode.p_spare_57.to_i) %>
-                          <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
+                          <div class="box">
+                            <p><span>5</span>예상 관세</p>
+                            <% vat = 0 %>
+                            <% vat = estimated_kor * @promocode.p_spare_62 %>
+                            <em><%= number_to_currency(vat, unit: "") %>원</em>
+                          </div>
+
+                          <div class="box">
+                            <p><span>6</span>예상 부가세</p>
+                            <% tax = 0 %>
+                            <% tax = (estimated_kor + vat) * 0.1 %>
+                            <em><%= number_to_currency(tax, unit: "") %>원</em>
+                          </div>
                         <% else %>
-                          <% total_price_kor = 0 %>
-                          <% total_price_kor = estimated_kor + (@promocode.p_spare_61.to_i * @promocode.p_spare_57.to_i) %>
-                          <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
+                          <div class="box">
+                            <p><span>5</span>예상 관세</p>
+                            <em>0원</em>
+                          </div>
+                          <div class="box">
+                            <p><span>6</span>예상 부가세</p>
+                            <em>0원</em>
+                          </div>
                         <% end %>
                       </div>
-                    </div>
-                    <div class="info_box">
-                      <span>* 예상 구매가격은 참고용으로 정확한 금액이 아닙니다.</span>
-                      <span>* 총 예상 구매가격 = 제품가격 + 현지 배송비 + 세금 + 국제 배송비 + 관부가세</span>
-                      <span>* 환율은 관세청 고시환율 적용</span>
-                      <span>* </span>
-                    </div>
+                      <div class="info_box">
+                        <span>
+                          <ul>
+                            <% if @promocode.p_spare_62.present? %>
+                            <% else %>
+                              <li>무관세(관세없음) 상품입니다.</li>
+                            <% end %>
+                          </ul>
+                        </span>
+                      </div>
 
-                  </ul>
+                    <% end %>
+
+                    <% if @promocode.p_spare_59.present? %>
+                      <div class="block clearfix">
+                        <div class="box total_box">
+                          <p>직배송시 총 예상 구매 가격</p>
+                          <% total_price_kor = 0 %>
+                          <% total_price_kor = (estimated_us + @promocode.p_spare_59.to_i) * @promocode.p_spare_57.to_i %>
+                          <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
+                        </div>
+                      </div>
+                      <div class="info_box">
+                        <span>* 예상 구매가격은 참고용으로 정확한 금액이 아닙니다.</span>
+                        <span>* 총 예상 구매가격 = 제품가격 + 현지 배송비 + 세금 + 국제 배송비 + 관부가세</span>
+                        <span>* 환율은 관세청 고시환율 적용</span>
+                        <span>* 세금은 세일즈 텍스가 없는 오레곤, 델라웨어 지역으로 가정하고 계산됩니다.</span>
+                      </div>
+                    <% else %>
+                      <div class="block clearfix">
+                        <div class="box total_box">
+                          <p>배대지 이용시 총 예상 구매 가격</p>
+                          <% if @promocode.p_spare_62.present? %>
+                            <% total_price_kor = 0 %>
+                            <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i  + tax + vat %>
+                            <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
+                          <% else %>
+                            <% total_price_kor = 0 %>
+                            <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i %>
+                            <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
+                          <% end %>
+                        </div>
+                      </div>
+                      <div class="info_box">
+                        <span>* 예상 구매가격은 참고용으로 정확한 금액이 아닙니다.</span>
+                        <span>* 총 예상 구매가격 = 제품가격 + 현지 배송비 + 세금 + 국제 배송비 + 관부가세</span>
+                        <span>* 환율은 관세청 고시환율 적용</span>
+                        <span>* </span>
+                      </div>
+                    <% end %>
+
+                  </ul><!--./tokor-->
                 </li>
               </ul>
             </div><!--toggle-->
