@@ -16,27 +16,27 @@
         <%= f.select :h_spare_06, ([["Ship to Korea", ""], "Yes"])%>
         <div class="form_btn"><%= f.button :submit %></div><br />
         
-        <%= f.input :h_image, label: 'Image URL' %>
-        <%= f.input :h_link, label: 'Product URL' %>
-        <%= f.input :h_title , label: 'Title Of Product' %>
-        <%= f.input :h_spare_04, label: 'Image_Title' %>
-        <%= f.input :h_keyword, label: ' gadgets, amazon, recommended, under $ ' %>
-        <%= f.input :h_spare_05, label: 'Hashtags' %>
-        <%= f.input :h_spare_11, label: 'Korean Title' %>
-        <div class="pricing clearfix">
+        <div class="basic_info">
+          <%= f.input :h_image, label: 'Image URL' %>
+          <%= f.input :h_link, label: 'Product URL' %>
+          <%= f.input :h_title , label: 'Title Of Product' %>
+          <%= f.input :h_spare_04, label: 'Image_Title' %>
+          <%= f.input :h_keyword, label: ' gadgets, amazon, recommended, under $ ' %>
+          <%= f.input :h_spare_05, label: 'Hashtags' %>
+          <%= f.input :h_spare_11, label: 'Korean Title' %>
+        </div>
+        <div class="pricing stk clearfix">
           <!--<%= f.input :h_spare_41, label: 'Original Price' %>-->
           <!--<%= f.input :h_spare_42, label: 'Current Price' %>-->
           <%= f.input :h_spare_43, label: 'Original Price' %>
           <%= f.input :h_spare_44, label: 'Current Price' %>
           <!-- <%= f.input :h_percentage, label: 'Discount Percentage' %> -->
           <%= f.input :h_spare_63, label: 'Shipping Fee' %>
-        </div>
-        <!-- <p>(when we don't know sales of percentage)</p> -->
-        <!-- <div class="pricing clearfix">
-          <%= f.input :h_spare_43, label: 'Original Price' %>
-          <%= f.input :h_spare_44, label: 'Current Price' %>
-        </div> -->
-        <div class="pricing clearfix">
+        
+          <!-- <p>(when we don't know sales of percentage)</p> -->
+          <!-- <div class="pricing clearfix"> -->
+          <!--<%= f.input :h_spare_43, label: 'Original Price' %>-->
+          <!--<%= f.input :h_spare_44, label: 'Current Price' %>-->
           <%= f.input :h_spare_08, label: 'Average Rate' %>
           <%= f.input :h_spare_09, label: 'Number of Reviews' %>
           <!-- <%= f.input :h_spare_02, label: 'Coupon Deals?' %> -->
@@ -48,13 +48,13 @@
           <%= f.input :h_price, label: '(Old)Current Price' %>-->
         </div>
 
-        <div class="pricing clearfix">
+        <div class="pricing stk clearfix ">
           <%= f.input :h_spare_68, label: '고시환율' %>
+          <%= f.input :h_spare_67, label: '직배송료' %>
           <%= f.input :h_spare_64, label: '예상 관세 보증금' %>
           <%= f.input :h_spare_17, label: '예상 배송무게' %>
-          <%= f.input :h_spare_65, label: '예상 배송대행지 배송비' %>
+          <%= f.input :h_spare_65, label: '배송대행지 배송비' %>
           <%= f.input :h_spare_66, label: '관세율 ( 0.08 )' %>
-          <%= f.input :h_spare_67, label: '직배송료' %>
           <%= f.input :h_spare_69, label: '과세운임' %>
         </div>
 
@@ -72,4 +72,23 @@
     <%= link_to 'Show', @hotdeal %> |
     <%= link_to 'Back', hotdeals_path %>
   </div>
+</div>
+
+<!-- cost table for hodeals & promocodes -->
+<div class="form_popup">
+  <input type="checkbox" id="popup__1" class="popup__check" />
+  <div class="popup__base">
+    <label for="popup__1" class="popup__bg"></label>
+    <div class="popup__inner">
+      <div class="popup__calign">
+        <label for="popup__1" class="popup__close">+</label>
+      </div>
+      <div class="popup__textbox">
+        <p>배대지 평균 비용 및 과세운임</p>
+        <%= render 'hotdeals/table' %>
+      </div>
+    </div>
+  </div>
+  <!-- End popup -->
+  <label class="trigger" for="popup__1">Info</label>
 </div>

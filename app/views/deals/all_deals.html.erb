@@ -155,11 +155,24 @@
         <div id="tab-content-4" class="tab-content">
           <div class="all_wrap">
             <div class="common promocodes">
+              <p class="category">For SNS</p>
               <% @storepromotions.each do |storepromotion| %>
                 <div class="all_box clearfix">
                   <p><%= storepromotion.spcategory.name %></p>
                   <p><%= storepromotion.sp_title %></p>
                   <a href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_link %></a>
+                </div>
+              <% end %>
+            </div>
+
+            
+            <div class="common promocodes">
+              <p class="category">For Blogs</p>
+              <% @storepromotions.each do |storepromotion| %>
+                <div class="all_box clearfix">
+                  <p><%= storepromotion.spcategory.name %></p>
+                  <p><%= storepromotion.sp_title %></p>
+                  <a href="<%= storepromotion.sp_link %>">Shop Now</a>
                 </div>
               <% end %>
             </div>

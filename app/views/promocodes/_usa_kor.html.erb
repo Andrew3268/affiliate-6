@@ -188,7 +188,7 @@
             <div class="toggle">
               <ul>
                 <li>
-                  <a href="#n">Ship to KOREA</a>
+                  <a href="#n" class="stk">Ship to KOREA</a>
                   <ul class="tokor">
                     <% if @promocode.p_spare_59.present? %>
                       <em>직배송이 가능한 상품입니다.</em>
@@ -216,7 +216,6 @@
                         <span>
                           <ul>
                             <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
-                            <li>직배송이 가능한 경우 배송대해업체의 배송비와 비교해보세요.</li>
                           </ul>
                         </span>
                       </div>
@@ -246,12 +245,11 @@
                                   <% end %>
                                 </div>
                               </div>
-                              <div class="info_box">
+                              <div class="info_box direct">
                                 <span>
                                   <ul>
-                                    <li>질량 무게와 부피부게 중 무거운 쪽을 최종 무게로 측정하여 배송비를 산출 합니다.</li>
+                                    <li><a href="#n" class="stk">질량 무게 및 부피무게란<i></i></a></li>
                                     <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
-                                    <li>부피무게로 배송비가 산출되는 경우 배송대행업체 마다 할인 프로모션을 진행하니 확인 하세요.</li>
                                   </ul>
                                 </span>
                               </div>
@@ -282,10 +280,14 @@
                                   </div>
                                 <% end %>
                               </div>
-                              <div class="info_box">
+                              <div class="info_box direct">
                                 <span>
                                   <ul>
-                                    <li>목록통관 $200이하, 일반통관 $150이하 관부가세 면제</li>
+                                    <% if @promocode.p_spare_62.present? %>
+                                      <li>관세 및 부가세가 부가되는 제품입니니다.(<a target="_blank" class="stk" href="#n">관부과세란?<i></i></a>)</li>
+                                    <% else %>
+                                      <li>관세 및 부가세가 부가 되지 않는 제품입니니다.(<a target="_blank" class="stk" href="#n">관부과세란?<i></i></a>)</li>
+                                    <% end %>
                                   </ul>
                                 </span>
                               </div>
@@ -304,11 +306,13 @@
                                   <% end %>
                                 </div>
                               </div>
-                              <div class="info_box">
-                                <span>* 예상 구매가격은 참고용으로 정확한 금액이 아닙니다.</span>
-                                <span>* 총 예상 구매가격 = 제품가격 + 현지 배송비 + 세금 + 국제 배송비 + 관부가세</span>
-                                <span>* 환율은 관세청 고시환율 적용</span>
-                                <span>* </span>
+                              <div class="info_box direct">
+                                <span>
+                                  <ul>
+                                    <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
+                                    <li>관세청 고시환율을 적용합니다.</li>
+                                  </ul>
+                                </span>
                               </div>
                           </ul><!--./submenuItems-->
                         </li>
@@ -336,9 +340,8 @@
                       <div class="info_box">
                         <span>
                           <ul>
-                            <li>질량 무게와 부피부게 중 무거운 쪽을 최종 무게로 측정하여 배송비를 산출 합니다.</li>
+                            <li><a href="#n">질량 무게 및 부피무게란<i></i></a></li>
                             <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
-                            <li>부피무게로 배송비가 산출되는 경우 배송대행업체 마다 할인 프로모션을 진행하니 확인 하세요.</li>
                           </ul>
                         </span>
                       </div>
@@ -370,14 +373,15 @@
                         <% end %>
                       </div>
                       <div class="info_box">
-                        <span>
-                          <ul>
-                            <% if @promocode.p_spare_62.present? %>
-                            <% else %>
-                              <li>무관세(관세없음) 상품입니다.</li>
-                            <% end %>
-                          </ul>
-                        </span>
+                         <span>
+                            <ul>
+                              <% if @promocode.p_spare_62.present? %>
+                                <li>* 관세 및 부가세가 부가되는 제품입니니다.(<a target="_blank" href="#n">관부과세란?<i></i></a>)</li>
+                              <% else %>
+                                <li>* 관세 및 부가세가 부가 되지 않는 제품입니니다.(<a target="_blank" href="#n">관부과세란?<i></i></a>)</li>
+                              <% end %>
+                            </ul>
+                          </span>
                       </div>
 
                     <% end %>
@@ -387,15 +391,17 @@
                         <div class="box total_box">
                           <p>직배송시 총 예상 구매 가격</p>
                           <% total_price_kor = 0 %>
-                          <% total_price_kor = (estimated_us + @promocode.p_spare_59.to_i) * @promocode.p_spare_57.to_i %>
+                          <% total_price_kor = (estimated_us + @promocode.p_spare_59.to_i + @promocode.p_spare_60.to_i) * @promocode.p_spare_57.to_i %>
                           <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
                         </div>
                       </div>
                       <div class="info_box">
-                        <span>* 예상 구매가격은 참고용으로 정확한 금액이 아닙니다.</span>
-                        <span>* 총 예상 구매가격 = 제품가격 + 현지 배송비 + 세금 + 국제 배송비 + 관부가세</span>
-                        <span>* 환율은 관세청 고시환율 적용</span>
-                        <span>* 세금은 세일즈 텍스가 없는 오레곤, 델라웨어 지역으로 가정하고 계산됩니다.</span>
+                       <span>
+                        <ul>
+                          <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
+                          <li>관세청 고시환율을 적용합니다.</li>
+                        </ul>
+                       </span>
                       </div>
                     <% else %>
                       <div class="block clearfix">
@@ -413,10 +419,12 @@
                         </div>
                       </div>
                       <div class="info_box">
-                        <span>* 예상 구매가격은 참고용으로 정확한 금액이 아닙니다.</span>
-                        <span>* 총 예상 구매가격 = 제품가격 + 현지 배송비 + 세금 + 국제 배송비 + 관부가세</span>
-                        <span>* 환율은 관세청 고시환율 적용</span>
-                        <span>* </span>
+                       <span>
+                        <ul>
+                          <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
+                          <li>관세청 고시환율을 적용합니다.</li>
+                        </ul>
+                       </span>
                       </div>
                     <% end %>
 

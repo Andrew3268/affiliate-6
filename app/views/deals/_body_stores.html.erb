@@ -69,12 +69,32 @@
       <div class="title-tab-menu"><span>What's</span> Trend?</div>
       <div class="tab-menu-wp">
         <ul>
-          <li>Promotions</li>
           <li>Hot Deals</li>
+          <li>Promotions</li>
           <!-- <li>SAYFA 3</li> -->
         </ul>
         <div class="clear"></div>
         
+        <div class="page1">
+          <% @most_deals.each do |md| %>  
+           <div class="tab-menu-text">
+            <div class="tab-menu-img"><%= link_to image_tag(md.sd_image, alt: md.sd_title, title: md.sd_image_title), md %></div>
+            <div class="tab-menu-text-title">
+              <span class="where"><%= md.sdcategory.name %></span>
+            </div>
+            <div class="tab-menu-text-alt"><p><%= link_to md.sd_title, md %></p></div>
+            <div class="tab-menu-text-alt">
+             <% if md.sd_spare_31.present? %>
+              <span><em><%= number_to_currency(md.sd_spare_31) %></em> <%= number_to_currency(md.sd_spare_32) %> </span>
+             <% else %>
+              <span><em><%= number_to_currency(md.sd_spare_33) %></em> <%= number_to_currency(md.sd_spare_34) %></span>
+             <% end %>
+            </div>
+           </div>
+          <% end %>
+          <div class="all-show"><a href="/storedeals">See More</a></div>
+        </div>
+
         <div class="page1">
           <% @most_promotions.each do |mp| %>
             <div class="tab-menu-text">
@@ -124,26 +144,6 @@
             </div>
           <% end %>
           <div class="all-show"><a href="/storepromotions">See More</a></div>
-        </div>
-        
-        <div class="page1">
-          <% @most_deals.each do |md| %>  
-           <div class="tab-menu-text">
-            <div class="tab-menu-img"><%= link_to image_tag(md.sd_image, alt: md.sd_title, title: md.sd_image_title), md %></div>
-            <div class="tab-menu-text-title">
-              <span class="where"><%= md.sdcategory.name %></span>
-            </div>
-            <div class="tab-menu-text-alt"><p><%= link_to md.sd_title, md %></p></div>
-            <div class="tab-menu-text-alt">
-             <% if md.sd_spare_31.present? %>
-              <span><em><%= number_to_currency(md.sd_spare_31) %></em> <%= number_to_currency(md.sd_spare_32) %> </span>
-             <% else %>
-              <span><em><%= number_to_currency(md.sd_spare_33) %></em> <%= number_to_currency(md.sd_spare_34) %></span>
-             <% end %>
-            </div>
-           </div>
-          <% end %>
-          <div class="all-show"><a href="/storedeals">See More</a></div>
         </div>
       
        </div>

@@ -13,14 +13,16 @@
       <%= f.input :p_spare_27, label: 'Discount Percentage' %>
       <%= f.input :p_spare_54, label: 'Shipping Fee' %>
     </div>
-    <%= f.input :p_image, label: 'Image URL' %>
-    <%= f.input :p_link, label: 'Product URL' %>
-    <%= f.input :p_title , label: 'Title Of Product' %>
-    <%= f.input :p_image_title, label: 'Image_Title' %>
-    <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under $ ' %>
-    <%= f.input :p_hashtag, label: 'Hashtags' %>
-    <%= f.input :p_spare_06, label: 'Korean Title' %>  
-    <div class="pricing clearfix">
+    <div class="basic_info">
+      <%= f.input :p_image, label: 'Image URL' %>
+      <%= f.input :p_link, label: 'Product URL' %>
+      <%= f.input :p_title , label: 'Title Of Product' %>
+      <%= f.input :p_image_title, label: 'Image_Title' %>
+      <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under $ ' %>
+      <%= f.input :p_hashtag, label: 'Hashtags' %>
+      <%= f.input :p_spare_06, label: 'Korean Title' %>  
+    </div>
+    <div class="pricing stk clearfix">
       <!-- <%= f.input :p_spare_26, label: 'List Price' %> -->
       <!-- <%= f.input :p_price, label: 'Current Price' %> -->
       <!-- <%= f.input :p_spare_27, label: 'Discount Percentage' %> -->
@@ -31,13 +33,18 @@
       <%= f.input :p_spare_56, label: 'Coupon($)' %>
       <%= f.input :p_extra_deal, label: 'Extra Deals?' %>
     </div>
-    <div class="pricing clearfix">
+    <div class="pricing stk clearfix">
       <%= f.input :p_spare_57, label: '고시환율' %>
-      <%= f.input :p_spare_58, label: '과세운임' %>
       <%= f.input :p_spare_59, label: '직배송' %>
+      <%= f.input :p_spare_60, label: '관세 보증금' %>
       <%= f.input :p_spare_09, label: '예상 배송부게' %>
       <%= f.input :p_spare_61, label: '예상 대행 배송비' %>
-      <%= f.input :p_spare_62, label: '관세율' %>
+      <%= f.input :p_spare_62, label: '관세율( 0.08 )' %>
+      <%= f.input :p_spare_58, label: '과세운임' %>
+    </div>
+    <div class="find_more basic_info">
+      <%= f.input :p_spare_07, label: 'Amazon Choice' %>
+      <%= f.input :p_spare_08, label: 'Amazon Choice Link' %>
     </div>
     <div class="pricing clearfix">
       <%= f.input :p_promocode, input_html: { class: "promo_code" }, label: 'Promo Code' %>
@@ -45,10 +52,6 @@
     </div>
     <%= f.input :p_spare_50, label: 'Expired Date' %><br />
     <%= f.input :p_spare_51, label: 'Ends Today' %><br />
-    <div class="find_more">
-      <%= f.input :p_spare_07, label: 'Amazon Choice' %>
-      <%= f.input :p_spare_08, label: 'Amazon Choice Link' %>
-    </div>
     <!-- <%= f.input :p_description, label: 'Description Of Product' %> -->
     <%= f.input :p_spare_36, as: :trix_editor, label: 'Description Of Product with TRIX' %>    
 
@@ -58,3 +61,21 @@
   <% end %>
 </div>
 
+<!-- cost table for hodeals & promocodes -->
+<div class="form_popup">
+  <input type="checkbox" id="popup__1" class="popup__check" />
+  <div class="popup__base">
+    <label for="popup__1" class="popup__bg"></label>
+    <div class="popup__inner">
+      <div class="popup__calign">
+        <label for="popup__1" class="popup__close">+</label>
+      </div>
+      <div class="popup__textbox">
+        <p>배대지 평균 비용 및 과세운임</p>
+        <%= render 'hotdeals/table' %>
+      </div>
+    </div>
+  </div>
+  <!-- End popup -->
+  <label class="trigger" for="popup__1">Info</label>
+</div>

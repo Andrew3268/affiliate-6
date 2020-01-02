@@ -10,7 +10,7 @@
 .show_wrap .show_box h2.sd_title{padding:10px 50px;font-size:24px;margin-top:30px;border:2px solid;}
 .show_wrap .show_box .sd_inner{margin-top:10px;}
 .show_wrap .show_box .show_inner a.p_btn{width:300px;text-align:center;}
-.show_wrap .show_box .show_inner a.store_btn{width:400px;text-align:center;}
+.show_wrap .show_box .show_inner a.store_btn{width:400px;text-align:center;margin:0;border-radius:5px;}
 .show_wrap .show_box .show_inner a.store_btn em{text-transform:uppercase;}
 .show_wrap .show_box .show_inner .hotdeal_inner{}
 .show_wrap .show_box .show_inner .hotdeal_inner h2{font-weight:500;line-height:1.2;font-size:18px;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;padding:0 5px;}
@@ -44,6 +44,8 @@
 
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap{margin-bottom:20px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a{color:#a6a6a6;background:none;padding:0;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a.stk_main{color:#333333;font-weight:bold;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a.stk{color:#4c4c4c;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box{float:left;width:48%;margin:1%;text-align:center;box-shadow:0 0 20px 0 rgba(0,0,0,.06);padding:10px 5px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .line_three{width:31.33%;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .tax_box{float:left;width:23%;margin:1%;}
@@ -67,6 +69,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .hidden_box{display:none;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap ul.tokor{margin-top:10px;padding:0;}
 /*.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span a{color:#08f;}*/
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .direct{border:1px dashed #4c4c4c;border-left:0;border-right:0;}
 
 @media screen and (max-width:640px){
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box{padding:10px 0;}
@@ -121,7 +124,8 @@
 .hotdeal_related p{text-align:center;font-size:30px;margin-bottom:20px;}
 
 /* Form Page */
-.hotdeal_form{width:1000px;}
+.hotdeal_form{width:1200px;}
+.hotdeal_form .basic_info{width:800px;}
 .hotdeal_form input, .hotdeal_form textarea{display:block;width:100%;height:40px;margin-bottom:20px;}
 .hotdeal_form textarea{height:80px;}
 .hotdeal_form trix-editor{min-height:15em;}
@@ -129,6 +133,7 @@
 .hotdeal_form .pricing div{float:left;;margin:1%;}
 .hotdeal_form .pricing div .promo_code{width:500px;margin-right:1%;}
 .hotdeal_form .pricing div .promo_date{width:300px;}
+.hotdeal_form .stk div{width:10%;}
 .hotdeal_form .form_btn input{margin-top:10px;background:#000;color:#fff;padding:15px 0;}
 .hotdeal_form .find_more div{float:left;width:48%;margin:0  1%;}
 .hotdeal_form .select em{display:inline-block;width:200px;}
@@ -286,9 +291,11 @@
 
 .accordion-menu {
   width: 100%;
-  margin-top:20px;
+  margin:20px 0;
   background: #fff;
   border-radius: 4px;
+  border:1px solid #ccc;
+  padding:5px;
 }
 .accordion-menu li.open .dropdownlink {
   color: #CDDC39;
@@ -299,6 +306,11 @@
 .accordion-menu li:last-child .dropdownlink {
   border-bottom: 0;
 }
+
+
+.accordion-menu .info_box ul li, .accordion-menu .info_box ul li a{color:#4c4c4c;}
+
+
 .dropdownlink {
   cursor: pointer;
   display: block;
