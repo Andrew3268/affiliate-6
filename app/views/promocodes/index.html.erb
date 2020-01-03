@@ -4,9 +4,18 @@
     <%= render 'shared/header_short' %>
     <div class="dealpage_title"><p>The Promo Codes</p></div>
     <%= render 'promocodes/header' %>  
-    <div class="more_search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
+    
+    <!-- <div class="amz_slider_banner">
+      <div class="left">
+        <p>Never Pay Full Price.</p>
+        <span>I would find hot deals for you every day.</span>
+      </div> 
+      <div class="right"><render 'shared/amz_slider' ></div>
+    </div> -->
 
     <%= render 'shared/amz_slider' %>
+
+    <div class="more_search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
 
     <div id="promocodes" class="clearfix">
       <%= render @promocodes %> 
