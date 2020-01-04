@@ -50,7 +50,10 @@
     <div class="info_box">
       <span>
         <ul>
-          <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>      
+          <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or  <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>  
+          <% if @promocode.p_spare_54 > 0 %>
+            <li><a href="#n">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>    
+          <% end %>
           <li>Average ratings and reviews may change after posting.</li>
         <ul>
       </span>
@@ -156,6 +159,28 @@
 
       <!-- 과세가격(estimated_kor) ( { 제품가[제품가 - 쿠폰] + 현지 배송비 + 세금(세금이 없는 배대지 설정) + 보험료 등등} * 고시환율 + 과세운임 )-->
       <div class="block clearfix">
+        <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+          <div class="box hidden_box total_box">
+            <p>Estimated Purchase Price</p>
+            <% if @promocode.p_spare_55.present? %>
+              <% estimated_us = 0 %>
+              <% estimated_us = running_total - coupon_55 + @promocode.p_spare_54.to_i %>
+              <em><%= number_to_currency(estimated_us) %></em>
+            <% else %>
+              <% estimated_us = 0 %>
+              <% estimated_us = running_total - @promocode.p_spare_56.to_i + @promocode.p_spare_54.to_i %>
+              <em><%= number_to_currency(estimated_us) %></em>
+            <% end %>
+          </div>
+          <!-- <div class="info_box">
+            <span>
+              <ul>
+                <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
+              </ul>
+            </span>
+          </div> -->
+        <% end %>
+
         <div class="box hidden_box total_box">
           <p>Estimated Purchase Price</p>
           <% if @promocode.p_spare_55.present? %>

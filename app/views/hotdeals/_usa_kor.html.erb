@@ -214,8 +214,22 @@
   <% coupon_p61 = (@hotdeal.h_spare_44.to_i * @hotdeal.h_spare_61.to_i / 100) %>
   <% number_to_currency(coupon_p61) %>
 
-  <div class="block hidden_box clearfix">
-    <div class="box total_box">
+  <div class="block clearfix">
+    <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+      <div class="box hidden_box total_box">
+        <p>Estimated Purchase Price</p>
+        <% if @hotdeal.h_spare_61.present? %>
+          <% estimated_us = 0 %>
+          <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 + @hotdeal.h_spare_63.to_i %>
+          <em><%= number_to_currency(estimated_us) %></em>
+        <% else %>
+          <% estimated_us = 0 %>
+          <% estimated_us = @hotdeal.h_spare_44.to_i -  @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63.to_i %>
+          <em><%= number_to_currency(estimated_us) %></em>
+        <% end %>
+      </div>
+    <% end %>
+    <div class="box hidden_box total_box">
       <p>Estimated Purchase Price</p>
       <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
         <% if @hotdeal.h_spare_61.present? %>

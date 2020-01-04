@@ -114,7 +114,7 @@
 
 .show_wrap .show_box .sd_image{margin-top:10px;}
 .show_wrap .show_box .show_img .mark{width:50px;background:#000;font-size:13px;padding:7px;border-radius:10px;line-height:1.1;position:absolute;top:0;left:0;}
-.show_wrap .show_box .show_img .mark span{text-align:center;color:#fff;letter-spacing:3.1px;display:block;}
+.show_wrap .show_box .show_img .mark span{text-align:center;color:#fff;display:block;font-size:11px;}
 .show_wrap .show_box .show_img .mark em{display:block;text-align:center;font-size:10px;color:#fff;}
 .show_wrap .show_box .show_img .show_tag{margin-top:15px;}
 .show_wrap .show_box .show_img .show_tag h3 a{background:#000;color:#fff;padding:5px 10px;border-radius:15px;}
@@ -233,10 +233,10 @@
   .deals_card .image_box .exprie p{margin-top:6px;}
   .deals_card .image_box .term p{font-size:10px;}
   .deals_card h3{font-size:14px;}
-  .deals_card p{font-size:13px;line-height:1.2;height:3.6em;}
+  /*.deals_card p{font-size:13px;line-height:1.2;height:3.6em;}*/
   .deals_card .price{font-size:15px;}
-  .deals_card .m_btn{display:block;padding:3px;}
-  .deals_card .m_btn a{font-size:14px;}
+  /*.deals_card .m_btn{display:block;padding:3px;}
+  .deals_card .m_btn a{font-size:14px;}*/
   .deals_card figcaption{padding:5px 10px 10px 10px;}
   .dealpage_title p{font-size:35px;}
   .dealpage_title p:after{height:5px;}
@@ -254,7 +254,7 @@
   .deals_card img{width:85%;height:85%;}
   .dealpage_title p{font-size:55px;}
   .deals_card .buy-now{display:block;}
-  .deals_card .m_btn{display:block;}
+  /*.deals_card .m_btn{display:block;}*/
   .deal_stores figcaption{padding:0px 20px 10px 20px;}
 }
 
