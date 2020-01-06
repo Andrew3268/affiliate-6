@@ -11,7 +11,7 @@ class StoredealsController < ApplicationController
   def index
     if params.has_key?(:sdcategory)
       @sdcategory = Sdcategory.find_by_name(params[:sdcategory])
-      @storedeals = Storedeal.where(sdcategory: @sdcategory).page(params[:page]).per_page(48)
+      @storedeals = Storedeal.where(sdcategory: @sdcategory).order("created_at DESC").page(params[:page]).per_page(48)
     else
       @storedeals = Storedeal.all.order("created_at DESC").page(params[:page]).per_page(48)
     end
