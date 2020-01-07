@@ -10,7 +10,7 @@
         <!-- <p>Location Map</p> -->
         <h2 class="sd_title"><%= @storedeal.sd_title %></h2>
         <div class="show_img hotdeal_img sd_image">
-          <div class="img_box">
+          <div class="img_box sd_box">
             <% if @storedeal.sd_image.present? %>
               <a target="_blank" href="<%= @storedeal.sd_link %>"><img src="<%= @storedeal.sd_image %>" alt="<%= @storedeal.sd_title %>" title="<%= @storedeal.sd_spare_04 %>"></a>
             <% else %>

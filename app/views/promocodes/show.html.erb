@@ -40,6 +40,7 @@
                 <% running_total = 0 %>
                 <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
                 <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> )</span></p>
+                <p>#AmazonDeals #HotDeals #ohigottabuythis</p>
               </div>
             </div>
           <% end %>

@@ -44,7 +44,7 @@ class StoredealsController < ApplicationController
   # GET /storedeals/1.json
   def show
     impressionist(@storedeal)
-    @more_deals = Storedeal.where(sdcategory_id: @storedeal.sdcategory_id)
+    @more_deals = Storedeal.where(sdcategory_id: @storedeal.sdcategory_id).limit(10)
     set_meta_tags title: @storedeal.sd_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,

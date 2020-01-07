@@ -16,14 +16,14 @@
       <%= f.input :sd_image_title, label: 'Image_Title' %>
       <%= f.input :sd_keyword, label: 'Keyword' %>
       <%= f.input :sd_hashtag, label: 'Hashtag' %>
-      <div class="pricing clearfix">
+      <!-- <div class="pricing clearfix">
         <p>A Style (I know all)</p>
         <%= f.input :sd_spare_31, label: 'List Price' %>
         <%= f.input :sd_spare_32, label: 'Current Price' %>
         <%= f.input :sd_percentage, label: 'Percentage' %>
-      </div>
+       --></div>
       <div class="pricing clearfix">
-        <p>W Style (I don't know percentage)</p>
+        <!-- <p>W Style (I don't know percentage)</p> -->
         <%= f.input :sd_spare_33, label: 'List Price' %>
         <%= f.input :sd_spare_34, label: 'Current Price' %>
         <!-- <%= f.input :sd_spare_30, label: 'Percentage' %> -->
@@ -33,6 +33,8 @@
         <%= f.input :sd_spare_02, label: 'Number of Reviews' %>
         <%= f.input :sd_coupon_deal %>
         <%= f.input :sd_extra_deal %>
+      </div>
+      <div class="pricing clearfix">
         <%= f.input :sd_promocode, input_html: { class: "promo_code" }, label: 'Promo Code' %>
         <%= f.input :sd_end_date, input_html: { class: "promo_date" }, label: 'End Date' %>
       </div>
