@@ -33,7 +33,7 @@
             <p><%= link_to hotdeal.h_title, hotdeal %></p>
             <div class="price">
               <% if hotdeal.h_spare_43.present? %>
-                <em>$<%= hotdeal.h_spare_43 %></em>$<%= hotdeal.h_spare_42 %>
+                <em><%= number_to_currency(hotdeal.h_spare_43) %></em><%= number_to_currency(hotdeal.h_spare_44) %>
               <% else %>
                 <em><%= number_to_currency(hotdeal.h_spare_41) %></em><%= number_to_currency(hotdeal.h_spare_42) %>
               <% end %>
