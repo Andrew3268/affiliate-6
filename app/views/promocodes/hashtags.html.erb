@@ -36,7 +36,8 @@
               <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
               <% promocode.p_spare_51 %>
                 <% if promocode.p_spare_51.present? %>
-                  <div class="expried_wrap"><div class="mark term endtoday"><p><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</span>End Today</p></div></div>
+                  <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>  
+                  <div class="expried_wrap"><div class="mark term endtoday"><p>End</p><p>Today</p></div></div>
                 <% end %>
               <% else %>
                 <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>

@@ -23,6 +23,7 @@ class MessagesController < ApplicationController
                     url: 'http://www.ohigottabuythis.net/messages/',
                     # image:
                   }
+
   end
 
   def show
