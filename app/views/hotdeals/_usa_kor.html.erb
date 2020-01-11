@@ -128,17 +128,9 @@
       </div>
       <div class="box line_three">
         <p>Price dropped</p>
-        <em>
-          <% if @hotdeal.h_spare_45.present? %>
-            <% running_total = 0 %>
-            <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_42.to_i %>
-            <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>
-          <% else %>
-            <% running_total = 0 %>
-            <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_44.to_i %>
-            <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>
-          <% end %>
-        </em>
+          <% running_total = 0 %>
+          <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_44.to_i %>
+          <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>          
       </div>
     </div>
   <% else %>
