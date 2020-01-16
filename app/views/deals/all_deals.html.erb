@@ -162,8 +162,13 @@
               <p class="category">For SNS</p>
               <% @storepromotions.each do |storepromotion| %>
                 <div class="all_box clearfix">
-                  <p><%= storepromotion.spcategory.name %></p>
+                  <% if storepromotion.sp_store_name.present? %>
+                    <p><%= storepromotion.sp_store_name %></p>
+                  <% else %>
+                    <p><%= storepromotion.spcategory.name %></p>
+                  <% end %>
                   <p><%= storepromotion.sp_title %></p>
+                  <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_42) %></span><span class="span_02"></span></p>
                   <a href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_link %></a>
                 </div>
               <% end %>
@@ -174,8 +179,13 @@
               <p class="category">For Blogs</p>
               <% @storepromotions.each do |storepromotion| %>
                 <div class="all_box clearfix">
-                  <p><%= storepromotion.spcategory.name %></p>
+                  <% if storepromotion.sp_store_name.present? %>
+                    <p><%= storepromotion.sp_store_name %></p>
+                  <% else %>
+                    <p><%= storepromotion.spcategory.name %></p>
+                  <% end %>
                   <p><%= storepromotion.sp_title %></p>
+                  <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_42) %></span><span class="span_02"></span></p>
                   <a href="<%= storepromotion.sp_link %>">Shop Now</a>
                 </div>
               <% end %>

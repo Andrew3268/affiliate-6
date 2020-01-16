@@ -136,7 +136,7 @@ class DealsController < ApplicationController
     @promocodes = Promocode.all.order("created_at DESC").limit(20)
     @hotdeals = Hotdeal.all.order("created_at DESC").limit(20)
     @blog_deals = Hotdeal.all.order("created_at DESC").limit(30)
-    @storepromotions = Storepromotion.all.order("created_at DESC").limit(20)
+    @storepromotions = Storepromotion.all.order("created_at DESC").limit(25)
   end
 
 
