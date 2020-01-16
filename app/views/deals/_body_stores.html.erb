@@ -17,7 +17,11 @@
             </div>
           <% end %>
           <div class="inner">
-            <em class="st_title"><%= promo.spcategory.name %></em> 
+            <% if promo.sp_store_name.present? %>
+              <em class="st_title"><%= promo.sp_store_name %></em> 
+            <% else %>
+              <em class="st_title"><%= promo.spcategory.name %></em> 
+            <% end %>
             <!--<% if promo.sp_spare_40.present? || promo.sp_spare_42.present?%>
             <% else %>
               <% if promo.sp_percentage_01.present? %>
@@ -112,7 +116,11 @@
                 <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", mp %></div>
               </div>
               <div class="tab-menu-text-title">
-                <p><%= mp.spcategory.name %> 
+                <% if mp.sp_store_name.present? %>
+                  <p><%= mp.sp_store_name %></p>
+                <% else %>
+                  <p><%= mp.spcategory.name %></p>
+                <% end %>
                   <!--<% if mp.sp_spare_40.present? || mp.sp_spare_42.present?%>
                   <% else %>
                     <% if mp.sp_percentage_01.present? %>

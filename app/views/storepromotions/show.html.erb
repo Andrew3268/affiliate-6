@@ -22,7 +22,11 @@
               <%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
               <%= @storepromotion.impressionist_count %> views
               <div class="sharing">
-                <p>Available On <%= @storepromotion.spcategory.name %> Now</p>
+                <% if @storepromotion.sp_store_name.present? %>
+                  <p>Available On <%= @storepromotion.sp_store_name %> Now</p>
+                <% else %>
+                  <p>Available On <%= @storepromotion.spcategory.name %> Now</p>
+                <% end %>
                 <p><%= @storepromotion.sp_title %></p>
                 <p>#HotDeals #coupons #CouponCodes</p>
               </div>

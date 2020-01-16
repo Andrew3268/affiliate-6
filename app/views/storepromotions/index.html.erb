@@ -86,7 +86,11 @@
                 </div>
               </div>
               <div class="inner">
-                <p><span class="index_title"><%= storepromotion.spcategory.name %></span>
+                <% if storepromotion.sp_store_name.present? %>
+                  <p><span class="index_title"><%= storepromotion.sp_store_name %></span>
+                <% else %>
+                  <p><span class="index_title"><%= storepromotion.spcategory.name %></span>
+                <% end %>
                   <!--
                   <% if storepromotion.sp_spare_40.present? || storepromotion.sp_spare_42.present?%>
                   <% else %>
