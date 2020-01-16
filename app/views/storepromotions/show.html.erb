@@ -38,7 +38,14 @@
          <div class="hotdeal_inner">
            <% if @storepromotion.sp_spare_40.present? || @storepromotion.sp_spare_42.present?%>
            <% else %>
-            <p class="store_p"><%= @storepromotion.spcategory.name %> <% if @storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF<% end %></p>
+            <% if @storepromotion.sp_store_name.present? %>
+              <p class="store_p"><%= @storepromotion.sp_store_name %> 
+            <% else %>
+              <p class="store_p"><%= @storepromotion.spcategory.name %> 
+            <% end %>
+              <% if @storepromotion.sp_percentage_01.present? %>| Up to <%= number_to_percentage(@storepromotion.sp_percentage_01, precision: 0) %> OFF
+              <% end %>
+            </p>
            <% end %>
            <h2 class="store_h2"><%= @storepromotion.sp_title %></h2>
 
@@ -53,7 +60,11 @@
           <% end %>
 
            <div class="store_info">
-            <em>* Click through to see <%= @storepromotion.spcategory.name %>'s special offers.</em>
+            <% if @storepromotion.sp_store_name.present? %>
+              <em>* Click through to see <%= @storepromotion.sp_store_name %>'s special offers.</em>
+            <% else %>
+              <em>* Click through to see <%= @storepromotion.spcategory.name %>'s special offers.</em>
+            <% end %>
             <% if @storepromotion.sp_promocode.present? %>
               <em>* Enter <%= @storepromotion.sp_store_name %>'s promo code "<span><%= @storepromotion.sp_promocode %></span>" at checkout to receive your savings.</em>
             <% else %>
@@ -111,7 +122,11 @@
             </div><!--./store_info-->
 
             <div class="code_btn">
-              <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.spcategory.name %></em></a>
+              <% if @storepromotion.sp_store_name.present? %>
+                <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
+              <% else %>
+                <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.spcategory.name %></em></a>
+              <% end %>
             </div>
 
              <% if @storepromotion.sp_description.present? %>
@@ -131,7 +146,11 @@
 
       
       <div class="like_more">
-       <p>Look at more <span><%= @storepromotion.spcategory.name %></span>'s offers </p>
+       <% if @storepromotion.sp_store_name.present? %>
+        <p>Look at more <span><%= @storepromotion.sp_store_name %></span>'s offers </p>
+       <% else %>
+        <p>Look at more <span><%= @storepromotion.spcategory.name %></span>'s offers </p>
+       <% end %>
        <% @more_deals.shuffle.take(8).each do |spcategory| %>
           <% if spcategory.spcategory_id == @storepromotion.spcategory_id %>
             <ul>
