@@ -168,7 +168,9 @@
                     <p><%= storepromotion.spcategory.name %></p>
                   <% end %>
                   <p><%= storepromotion.sp_title %></p>
-                  <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01">( Was <%= number_to_currency(storepromotion.sp_spare_42) %> )</span><span class="span_02"></span></p>
+                  <% if storepromotion.sp_spare_42.present? %>
+                    <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01">( Was <%= number_to_currency(storepromotion.sp_spare_42) %> )</span><span class="span_02"></span></p>
+                  <% end %>
                   <a href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_link %></a>
                 </div><br />
               <% end %>
@@ -185,7 +187,9 @@
                     <p><%= storepromotion.spcategory.name %></p>
                   <% end %>
                   <p><%= storepromotion.sp_title %></p>
-                  <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01">( Was <%= number_to_currency(storepromotion.sp_spare_42) %> )</span><span class="span_02"></span></p>
+                  <% if storepromotion.sp_spare_42.present? %>
+                    <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01">( Was <%= number_to_currency(storepromotion.sp_spare_42) %> )</span><span class="span_02"></span></p>
+                  <% end %>
                   <a href="<%= storepromotion.sp_link %>">Shop Now</a>
                 </div><br />
               <% end %>
