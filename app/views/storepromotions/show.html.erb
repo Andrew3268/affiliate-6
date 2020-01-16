@@ -10,7 +10,11 @@
         <!-- <p>Location Map</p> -->
         <div class="show_img hotdeal_img">
           <div class="store_imgbox store_promotion">
-              <img src="<%= @storepromotion.sp_image %>"> 
+            <% if @storepromotion.sp_spare_02.present? %>
+              <img src="<%= @storepromotion.sp_spare_02 %>">
+            <% else %>  
+              <img src="<%= @storepromotion.sp_image %>">
+            <% end %>
           </div>
           <% if can? :update, @storepromotion %>
             <div class="admin">

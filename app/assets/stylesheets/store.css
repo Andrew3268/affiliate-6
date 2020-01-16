@@ -15,7 +15,7 @@
 .st_warp .st_box .st_image span{display:block;font-size:30px;text-align:center;line-height:1;}
 .st_warp .st_box .st_image em.off{display:block;font-size:25px;text-align:center;line-height:1;}
 .st_warp .st_box .inner{float:left;width:77%;margin-left:3%;padding:7px 7px 0 0;height:100px;}
-.st_warp .st_box .inner p{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;width:310px;overflow:hidden;word-break:break-word;font-size:13px;}
+.st_warp .st_box .inner p{text-overflow:ellipsis;white-space:nowrap;word-wrap:normal;width:310px;overflow:hidden;word-break:break-word;font-size:18px;}
 .st_warp .st_box .inner em.st_title{border:1px solid #ccc;padding:2px 5px;font-weight:bold;display:inline-block;font-size:13px;}
 .st_warp .st_box .inner .admin{display:inline-block;}
 .st_warp .st_box .inner .admin a{background:#000;padding:0 5px;color:#fff;}
@@ -130,9 +130,9 @@
 .sp_wrap .sp_right .inner .sp_title{margin:2px 0;font-weight:500;line-height:1.2;font-size:15px;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
 .sp_wrap .sp_right .inner .sp_title a{color:#616161;display:block;font-weight:100;}
 .sp_wrap .sp_right .inner .sp_code{margin-bottom:5px;}
-.sp_wrap .sp_right .inner .h_price{margin-top:7px;}
+/*.sp_wrap .sp_right .inner .h_price{margin-top:7px;}*/
 .sp_wrap .sp_right .inner .h_price .span_01{text-decoration:line-through;color:#616161;}
-.sp_wrap .sp_right .inner .sp_price{font-size:12px;}
+.sp_wrap .sp_right .inner .sp_price{font-size:15px;}
 .sp_wrap .sp_right .inner em{font-size:12px;color:#616161;}
 .sp_wrap .sp_right .inner em.em_box{margin-top:10px;}
 /*.sp_wrap .sp_right .inner em.expired{color:#ff4d4d;font-size:12px;}
@@ -170,6 +170,7 @@
   .sp_wrap .sp_right .inner em.endtoday{font-size:12px;padding:0 3px;}*/
   .sp_wrap .sp_right .inner span.index_title{display:none;}
   .sp_wrap .sp_right .inner .promocode_m{display:none;}
+  .sp_wrap .sp_right .inner .sp_price{font-size:12px;}
   .sp_wrap .sp_right .sp_btn{display:none;}
   .sp_wrap .sp_right .sp_btn_m{display:block;text-align:center;padding:3px 0;background:#000;}
   .sp_wrap .sp_right .sp_btn_m a{color:#fff;}

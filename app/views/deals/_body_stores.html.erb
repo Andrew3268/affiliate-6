@@ -5,14 +5,17 @@
       
       <h2>New Offers & Promotions</h2>
       <% @storepromotions.each do |promo| %>
-        <div class="st_box clearfix">          
-          <!--<div class="st_image"><%= link_to image_tag(promo.sp_image, alt: promo.sp_title, title: promo.sp_store_name), promo %></div>-->
-          <div class="st_image">
-            <div class="just_text">
-              <p>UP TO</p><span><%= number_to_percentage(promo.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
+        <div class="st_box clearfix">
+          <% if promo.sp_spare_02.present? %>
+            <div class="st_image"><%= link_to image_tag(promo.sp_spare_02, alt: promo.sp_title, title: promo.sp_store_name), promo %></div>
+          <% else %>
+            <div class="st_image">
+              <div class="just_text">
+                <p>UP TO</p><span><%= number_to_percentage(promo.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
+              </div>
+              <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", promo %></div>
             </div>
-            <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", promo %></div>
-          </div>
+          <% end %>
           <div class="inner">
             <em class="st_title"><%= promo.spcategory.name %></em> 
             <!--<% if promo.sp_spare_40.present? || promo.sp_spare_42.present?%>
@@ -99,10 +102,13 @@
           <% @most_promotions.each do |mp| %>
             <div class="tab-menu-text">
               <div class="tab-menu-img">
-                <!--<%= link_to image_tag(mp.sp_image, alt: mp.sp_title, title: mp.sp_store_name), mp %>-->
-                <div class="just_text">
-                  <p>UP TO</p><span><%= number_to_percentage(mp.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
-                </div>
+                <% if mp.sp_spare_02.present? %>
+                  <%= link_to image_tag(mp.sp_spare_02, alt: mp.sp_title, title: mp.sp_store_name), mp %>
+                <% else %>
+                  <div class="just_text">
+                    <p>UP TO</p><span><%= number_to_percentage(mp.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
+                  </div>
+                <% end %>
                 <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", mp %></div>
               </div>
               <div class="tab-menu-text-title">

@@ -56,11 +56,17 @@
           <% @storepromotions.each do |storepromotion| %>
             <div class="sp_card clearfix">
               <div class="sp_image">    
-                <!--<%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>-->
-              
-                <div class="just_text">
-                  <p>UP TO</p><span><%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
-                </div>
+                <% if storepromotion.sp_spare_02.present? %>
+                  <% if storepromotion.sp_image.present? %>
+                    <%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
+                  <% else %>
+                    <%= link_to image_tag(storepromotion.sp_spare_02, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
+                  <% end %>
+                <% else %>
+                  <div class="just_text">
+                    <p>UP TO</p><span><%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
+                  </div>
+                <% end %>
                 <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", storepromotion %></div>
                 <div class="date_m date_comm">
                   <% if storepromotion.sp_end_date.present? %>
