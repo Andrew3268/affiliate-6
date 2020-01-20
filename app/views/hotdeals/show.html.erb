@@ -42,12 +42,12 @@
                 <p><%= @hotdeal.h_title %></p>
                 <% if @hotdeal.h_spare_42.present? %>
                   <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-                  <p>#AmazonDeals #HotDeals #ohigottabuythis</p>
+                  <p>#AmazonDeals #HotDeals #ohigottabuythis <%= @hotdeal.h_spare_05 %></p>
                 <% else %>
                   <% running_total = 0 %>
                   <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
                   <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_44) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
-                  <p>#AmazonDeals #HotDeals #ohigottabuythis</p>
+                  <p>#AmazonDeals #HotDeals #ohigottabuythis <%= @hotdeal.h_spare_05 %></p>
                 <% end %>
               </div>
             </div>

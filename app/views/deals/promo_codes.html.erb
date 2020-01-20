@@ -22,8 +22,6 @@
         <h2>Take the best deals with promo codes<% if can? :update, @promocodes %><div class="hotdeals_new"><%= link_to 'New Code', new_promocode_path %></div><% end %></h2>
         <p class="deals_description">This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!</p>
         <%= render 'shared/amz_search' %>
-
-        <%= render 'shared/amz_slider' %>
         
         <!-- <div class="sort_box clearfix">
           <ul>

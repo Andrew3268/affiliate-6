@@ -13,8 +13,6 @@
       <div class="right"><render 'shared/amz_slider' ></div>
     </div> -->
 
-    <%= render 'shared/amz_slider' %>
-
     <div class="more_search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
 
     <div id="promocodes" class="clearfix">
