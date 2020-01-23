@@ -29,12 +29,14 @@
               <div class="sharing">
                 <p>Available On <%= @storedeal.sdcategory.name %> Now</p>
                 <p><%= @storedeal.sd_title %></p>
+                <p>#HotDeals #Coupons #CouponCodes <%= @storedeal.sd_hashtag %> #<%= @storedeal.sdcategory.name %></p>
                 <% if @storedeal.sd_spare_32.present? %>
                   <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_32) %> <span class="span_01">( Was: <%= number_to_currency(@storedeal.sd_spare_31) %></span><span class="span_02"> | <%= number_to_percentage(@storedeal.sd_percentage, precision: 0) %> OFF )</span></p>
                 <% else %>
                   <% running_total = 0 %>
                   <% running_total =  (@storedeal.sd_spare_33 - @storedeal.sd_spare_34) / @storedeal.sd_spare_33 * 100 %>
                   <p class="h_price"><%= number_to_currency(@storedeal.sd_spare_34) %> <span class="span_01">( Was: <%= number_to_currency(@storedeal.sd_spare_33) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                  <p>http://ohigottabuythis.net/storedeals/<%=(params[:id]) %></p>
                 <% end %>
               </div><!--./sharing-->
             </div>
