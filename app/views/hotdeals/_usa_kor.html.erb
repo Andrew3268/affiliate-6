@@ -42,7 +42,14 @@
       
       <div class="box line_three">
         <p>Shipping</p>
-          <% if @hotdeal.h_spare_63.present? %>         
+          <% if @hotdeal.h_spare_18.present? %> 
+            <% if @hotdeal.h_spare_18.present? %>         
+             <% @hotdeal.h_spare_18 %>
+             <em>Free</em>
+            <% else %>
+             <em>5.99</em>
+            <% end %>
+          <% else %>
             <% if @hotdeal.h_spare_63.present? %>         
               <% if @hotdeal.h_spare_63 > 0 %>            
                 <em><%= number_to_currency(@hotdeal.h_spare_63) %></em> 
@@ -53,14 +60,7 @@
               <% end %> 
             <% else %>  
               <em>Free</em>          
-            <%end %>  
-          <% else %>
-            <% if @hotdeal.h_spare_18.present? %>
-            <% @hotdeal.h_spare_18 %>
-            <em>Free</em>
-            <% else %>
-              <em>5.99</em>
-            <% end %>
+            <%end %> 
           <% end %>
       </div>
       

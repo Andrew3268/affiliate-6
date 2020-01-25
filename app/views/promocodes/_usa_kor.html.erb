@@ -18,12 +18,31 @@
     <div class="block clearfix">
       <div class="box line_three">
         <p>Shipping</p>
-        <% if @promocode.p_spare_54.present? %>
-          <% @promocode.p_spare_54 %>
-          <em>Free</em>
+
+
+        <% if @promocode.p_spare_10.present? %>
+          <% if @promocode.p_spare_10.present? %>
+            <% @promocode.p_spare_10 %>
+            <em>Free</em>
+          <% else %>
+            <em>5.99</em>
+          <% end %>
         <% else %>
-          <em>5.99</em>
+          <% if @promocode.p_spare_54.present? %>         
+            <% if @promocode.p_spare_54 > 0 %>            
+              <em><%= number_to_currency(@promocode.p_spare_54) %></em> 
+            <% else %>  
+              <% if @promocode.p_spare_54 = 0 %>  
+              <em>Free <% number_to_currency(@promocode.p_spare_54) %></em> 
+              <% end %> 
+            <% end %> 
+          <% else %>  
+            <em>Free</em>           
+          <%end %>  
         <% end %>
+
+
+
       </div>
       <div class="box line_three">
         <p>Rating</p>
@@ -45,8 +64,8 @@
     <div class="info_box">
       <span>
         <ul>
-          <% if @promocode.p_spare_54.present? %>
-            <% @promocode.p_spare_54 %>
+          <% if @promocode.p_spare_10.present? %>
+            <% @promocode.p_spare_10 %>
             <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or  <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>   
           <% else %>
             <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>
