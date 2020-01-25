@@ -4,12 +4,13 @@
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <%= f.input :himage, label: 'Choose Image' %>
-    <%= f.select :h_spare_03, options_for_select([["Do You Have A Banner?", ""], "YES"])%>
-    <%= f.select :h_spare_07, options_for_select([["In Stock", ""], "few stock left"])%>
-    <%= f.select :h_spare_10, options_for_select([["Subscribe & Save?", ""], "Yes"])%>
-    <%= f.select :h_spare_12, options_for_select([["No Tax?", ""], "Yes"])%>
-    <%= f.select :h_spare_13, options_for_select([["Write Blog?", ""], "Yes"])%>
-    <%= f.select :h_spare_06, options_for_select([["Ship to Korea", ""], "Yes"])%><br /><br />
+    <!-- <%= f.select :h_spare_03, options_for_select([["Do You Have A Banner?", ""], "YES"])%> -->
+    <!-- <%= f.select :h_spare_07, options_for_select([["In Stock", ""], "few stock left"])%> -->
+    <!-- <%= f.select :h_spare_10, options_for_select([["Subscribe & Save?", ""], "Yes"])%> -->
+    <!-- <%= f.select :h_spare_12, options_for_select([["No Tax?", ""], "Yes"])%> -->
+    <!-- <%= f.select :h_spare_13, options_for_select([["Write Blog?", ""], "Yes"])%> -->
+    <%= f.select :h_spare_63, options_for_select([["Free Shippng?", ""], "Yes"])%> <br /><br />
+    <!-- <%= f.select :h_spare_06, options_for_select([["Ship to Korea", ""], "Yes"])%>  -->
     
     <div class="basic_info">
       <%= f.input :h_image, label: 'Image URL' %>
@@ -18,7 +19,7 @@
       <%= f.input :h_spare_04, label: 'Image_Title' %>
       <%= f.input :h_keyword, label: ' gadgets, amazon, recommended, under $ ' %>
       <%= f.input :h_spare_05, label: 'Hashtags' %>
-      <%= f.input :h_spare_11, label: 'Korean Title' %>
+      <!-- <%= f.input :h_spare_11, label: 'Korean Title' %>  -->
     </div>
     <div class="pricing stk clearfix">
       <!--<%= f.input :h_spare_41, label: 'Original Price' %>-->
@@ -26,7 +27,7 @@
       <%= f.input :h_spare_43, label: 'Original Price' %>
       <%= f.input :h_spare_44, label: 'Current Price' %>
       <!-- <%= f.input :h_percentage, label: 'Discount Percentage' %> -->
-      <%= f.input :h_spare_63, label: 'Shipping Fee' %>
+      <!-- <%= f.input :h_spare_63, label: 'Shipping Fee' %> -->
     
       <!-- <p>(when we don't know sales of percentage)</p> -->
       <!-- <div class="pricing clearfix"> -->
@@ -43,7 +44,7 @@
       <%= f.input :h_price, label: '(Old)Current Price' %>-->
     </div>
 
-    <div class="pricing stk clearfix ">
+    <!-- <div class="pricing stk clearfix ">
       <%= f.input :h_spare_68, label: '고시환율' %>
       <%= f.input :h_spare_67, label: '직배송료' %>
       <%= f.input :h_spare_64, label: '예상 관세 보증금' %>
@@ -51,7 +52,7 @@
       <%= f.input :h_spare_65, label: '배송대행지 배송비' %>
       <%= f.input :h_spare_66, label: '관세율 ( 0.08 )' %>
       <%= f.input :h_spare_69, label: '과세운임' %>
-    </div>
+    </div> -->
 
     <div class="find_more">
       <%= f.input :h_spare_14, label: 'Amazon Choice' %>

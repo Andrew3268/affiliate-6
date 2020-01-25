@@ -43,16 +43,11 @@
       <div class="box line_three">
         <p>Shipping</p>
         <% if @hotdeal.h_spare_63.present? %>
-          <% if @hotdeal.h_spare_63 > 0 %>
-            <em><%= number_to_currency(@hotdeal.h_spare_63) %></em>
-          <% else %>
-            <% if @hotdeal.h_spare_63 = 0 %>
-            <em>Free <% number_to_currency(@hotdeal.h_spare_63) %></em>
-            <% end %>
-          <% end %>
-        <% else %>
+          <% @hotdeal.h_spare_63 %>
           <em>Free</em>
-        <%end %>
+        <% else %>
+          <em>5.99</em>
+        <% end %>
       </div>
       
       <div class="box line_three">
@@ -75,7 +70,13 @@
     <div class="info_box clearfix">
       <span>
         <ul>
-          <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime.<i></i></a></li>
+          <% if @hotdeal.h_spare_63.present? %>
+            <% @hotdeal.h_spare_63 %>
+            <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime.<i></i></a></li>
+          <% else %>
+            <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>
+          <% end %>
+          
           <li>Average ratings and reviews may change after posting.</li>
         </ul>
       </span>

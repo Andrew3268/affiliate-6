@@ -8,14 +8,15 @@
         <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
         <%= f.input :pimage, label: 'Choose Image' %>
-        <%= f.select :p_banner, ([["Do You Have A Banner?", ""], "YES"])%>
-        <%= f.select :p_spare_02, ([["In Stock", ""], "Only in a few stock left"])%>
-        <%= f.select :p_spare_05, ([["Subscribe & Save?", ""], "Yes"])%>
-        <%= f.select :p_spare_01, ([["Ship to Korea", ""], "Yes"])%><br /><br />
+        <!-- <%= f.select :p_banner, ([["Do You Have A Banner?", ""], "YES"])%> -->
+        <!-- <%= f.select :p_spare_02, ([["In Stock", ""], "Only in a few stock left"])%> -->
+        <!-- <%= f.select :p_spare_05, ([["Subscribe & Save?", ""], "Yes"])%> -->
+        <%= f.select :p_spare_54, ([["Free shipping?", ""], "Yes"])%><br /><br />
+        <!-- <%= f.select :p_spare_01, ([["Ship to Korea", ""], "Yes"])%> -->
         <div class="pricing clearfix">
           <%= f.input :p_spare_26, label: 'List Price' %>
           <%= f.input :p_spare_27, label: 'Discount Percentage' %>
-          <%= f.input :p_spare_54, label: 'Shipping Fee' %>
+          <!-- <%= f.input :p_spare_54, label: 'Shipping Fee' %> -->
         </div>
         <div class="basic_info">
           <%= f.input :p_image, label: 'Image URL' %>
@@ -24,7 +25,7 @@
           <%= f.input :p_image_title, label: 'Image_Title' %>
           <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under $ ' %>
           <%= f.input :p_hashtag, label: 'Hashtags' %>
-          <%= f.input :p_spare_06, label: 'Korean Title' %>  
+          <!-- <%= f.input :p_spare_06, label: 'Korean Title' %>   -->
         </div>
         <div class="pricing clearfix">
           <!-- <%= f.input :p_spare_26, label: 'List Price' %> -->
@@ -37,7 +38,8 @@
           <%= f.input :p_spare_56, label: 'Coupon($)' %>
           <%= f.input :p_extra_deal, label: 'Extra Deals?' %>
         </div>
-        <div class="pricing stk clearfix">
+
+        <!-- <div class="pricing stk clearfix">
           <%= f.input :p_spare_57, label: '고시환율' %>
           <%= f.input :p_spare_59, label: '직배송' %>
           <%= f.input :p_spare_60, label: '관세 보증금' %>
@@ -45,7 +47,8 @@
           <%= f.input :p_spare_61, label: '예상 대행 배송비' %>
           <%= f.input :p_spare_62, label: '관세율( 0.08 )' %>
           <%= f.input :p_spare_58, label: '과세운임' %>
-        </div>
+        </div> -->
+
         <div class="find_more basic_info">
           <%= f.input :p_spare_07, label: 'Amazon Choice' %>
           <%= f.input :p_spare_08, label: 'Amazon Choice Link' %>

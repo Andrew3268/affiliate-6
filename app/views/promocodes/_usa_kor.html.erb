@@ -19,16 +19,11 @@
       <div class="box line_three">
         <p>Shipping</p>
         <% if @promocode.p_spare_54.present? %>
-          <% if @promocode.p_spare_54 > 0 %>
-            <em><%= number_to_currency(@promocode.p_spare_54) %></em>
-          <% else %>
-            <% if @promocode.p_spare_54 = 0 %>
-            <em>Free <% number_to_currency(@promocode.p_spare_54) %></em>
-            <% end %>
-          <% end %>
-        <% else %>
+          <% @promocode.p_spare_54 %>
           <em>Free</em>
-        <%end %>
+        <% else %>
+          <em>5.99</em>
+        <% end %>
       </div>
       <div class="box line_three">
         <p>Rating</p>
@@ -50,11 +45,11 @@
     <div class="info_box">
       <span>
         <ul>
-          <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or  <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>  
           <% if @promocode.p_spare_54.present? %>
-            <% if @promocode.p_spare_54 > 0 %>
-              <li><a href="#n">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>    
-            <% end %>
+            <% @promocode.p_spare_54 %>
+            <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or  <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>   
+          <% else %>
+            <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>
           <% end %>
           <li>Average ratings and reviews may change after posting.</li>
         <ul>

@@ -30,7 +30,7 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price em{font-size:13px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .add_line{margin:0 0 10px 0;border:1px dashed #ccc;border-left:0;border-right:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .add_line ul{margin-left:25px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .add_line ul li{font-size:12px;color:#a6a6a6;list-style:disc;padding:5px 0;}
+.show_wrap .show_box .show_inner .hotdeal_inner .add_line ul li{font-size:12px;color:#616161;list-style:disc;padding:5px 0;}
 
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info{font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info .primeornot{display:none;}
@@ -43,7 +43,7 @@
 /*.show_wrap .show_box .show_inner .hotdeal_inner .code_btn{margin-top:30px;}*/
 
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap{margin-bottom:20px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a{color:#a6a6a6;background:none;padding:0;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a{color:#08f;background:none;padding:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a.stk_main{color:#333333;font-weight:bold;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap a.stk{color:#4c4c4c;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box{float:left;width:48%;margin:1%;text-align:center;box-shadow:0 0 20px 0 rgba(0,0,0,.06);padding:10px 5px;}
@@ -64,8 +64,8 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box{margin-bottom:10px;border:1px dashed #ccc;border-left:0;border-right:0;padding:3px 0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span{display:block;font-size:12px;color:#a6a6a6;margin-left:15px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul{margin-left:10px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul li{list-style:disc;}
-.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span i:before{content: "\f08e";font-family: FontAwesome;font-style: normal;margin-left:3px;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul li{list-style:disc;color:#616161;}
+.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span i:before{content: "\f08e";font-family: FontAwesome;font-style: normal;margin-left:3px;color:#08f;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .hidden_box{display:none;}
 .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap ul.tokor{margin-top:10px;padding:0;}
 /*.show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span a{color:#08f;}*/
@@ -238,8 +238,8 @@
   /*.deals_card .m_btn{display:block;padding:3px;}
   .deals_card .m_btn a{font-size:14px;}*/
   .deals_card figcaption{padding:5px 10px 10px 10px;}
-  .dealpage_title p{font-size:35px;}
-  .dealpage_title p:after{height:5px;}
+  .dealpage_title p{font-size:27.5px;}
+  .dealpage_title p:after{display:none;}
   .deals__main_menu ul .nth_2 a:after{height:7px;top:67%;}
   .deals_card .image_box .endtoday{width:50px;padding-top:6px;top:5px;left:60px;}
   .deals_card .image_box .endtoday span{display:block;}

@@ -15,12 +15,14 @@
   <div class="codes common_layout">
 
       <div class="lt_cnt note_pc">
-        <h2>Daily Deals of Amazon</h2>
+        <h2>Best Deals of Amazon</h2>
         <%= render 'deals/notes_bestdeals' %>
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
         <h2>Take a good items you love at the best price.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
+        <h2 class="for_m">Daily Deals of Amazon<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
+        <p class="for_m">Take a good items you love at the best price.</p>
         <p class="deals_description">Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily. We update these awesome deals every single day so come back again for more savings!</p>
         <%= render 'shared/amz_search' %>
         

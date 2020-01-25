@@ -224,14 +224,15 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 @media screen and (max-width:640px){
+  .deals_main_menu{display:none;}
   .sub_nav{}
   .shoes_nav{margin-top:20px;}
   .sub_nav .sub_nav_pc{display:none;}
   .sub_nav .gnb_m{display:block;background:#000;position:fixed;right:-800px;top:0;width:100%;z-index:303;}
   .sub_nav .gnb_m>ul{margin:10px 5% 0 5%;}
   .sub_nav .gnb_m>ul>li{border-right:none;float:none;margin:10px 0;}
-  .sub_nav .gnb_m>ul>li>a{text-decoration:none;font-size:35px;line-height:1.1;font-family: 'Anton', sans-serif;;text-align:left;color:#fff;display:block;border:1px solid;padding:5px;}
-  /*.sub_nav .gnb_m>ul>li>a.active{color:#fff;font-weight:500;border-bottom:2px solid #fff;}*/
+  .sub_nav .gnb_m>ul>li>a{text-decoration:none;font-size:27px;line-height:1.1;font-family: 'Anton', sans-serif;;text-align:left;color:#fff;display:block;border:1px solid;padding:7px;}
+  .sub_nav .gnb_m>ul>li.top_menu>a{border:none;font-size:37px;color:#08f;}
   .sub_nav .gnb_m>ul>li>a>em{font-size:17px;}
   .sub_nav .gnb_m>ul>li>ul{margin-left:30px;}
   .sub_nav .gnb_m>ul>li>ul>li{}
@@ -281,6 +282,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 .common_layout .lt_cnt img{width:100%;}
 .common_layout .rt_cnt{float:left;width:73%;font-family: 'Montserrat', sans-serif;}
 .common_layout .rt_cnt h2{color:#000;border-bottom:2px solid #616161;padding-bottom:3px;margin-bottom:10px;font-family: 'Montserrat', sans-serif;}
+.common_layout .rt_cnt h2.for_m{display:none;}
+.common_layout .rt_cnt p.for_m{font-weight:bold;color:#616161;display:none;}
 .common_layout .lt_cnt .note{margin-bottom:20px;padding:0 17px;}
 .common_layout .lt_cnt .note p{font-size:13px;color:#3d3d3d;}
 .common_layout .lt_cnt .note>ul>li{list-style:circle;font-size:13px;color:#3d3d3d;padding:5px 0;}
@@ -293,7 +296,9 @@ header .gnb_m,header .gnb_open2{display:none;}
   .common_layout .lt_cnt .note{margin-bottom:10px;}
   .common_layout .lt_cnt img{}
   .common_layout .rt_cnt{float:none;width:100%;}
-  .common_layout .rt_cnt h2{font-size:16px;}
+  .common_layout .rt_cnt h2{font-size:16px;display:none;}
+  .common_layout .rt_cnt h2.for_m{margin-top:60px;display:block;}
+  .common_layout .rt_cnt p.for_m{display:block;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
