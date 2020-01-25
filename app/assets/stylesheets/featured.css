@@ -469,7 +469,7 @@
   .promotions .guide_controll em{display:none;}
   .promotions .featured .sm_pc .popup_menu button{display:none;}
   .promotions .guide_controll{padding-left:20px;}
-  .promotions .most_rev, .promotions .amzpromo{padding-left:0;}
+  .promotions .most_rev, .promotions .amzpromo{padding-left:0;margin-top:100px;}
   .promotions .pop_menu{background:#fff;}
   .promotions .pop_menu .btn{color:#fff;text-shadow:-1.5px 0 #000, 0 1.5px #000, 1.5px 0 #000, 0 -1.5px #000;}
   .promotions .guide_controll .btn{margin:0;letter-spacing:0;}
