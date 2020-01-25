@@ -228,8 +228,8 @@ header .gnb_m,header .gnb_open2{display:none;}
   .sub_nav{}
   .shoes_nav{margin-top:20px;}
   .sub_nav .sub_nav_pc{display:none;}
-  .sub_nav .gnb_m{display:block;background:#000;position:fixed;right:-800px;top:0;width:100%;z-index:303;}
-  .sub_nav .gnb_m>ul{margin:10px 5% 0 5%;overflow:scroll;height:105%;}
+  .sub_nav .gnb_m{display:block;background:#000;position:fixed;right:-800px;top:0;width:100%;z-index:303;overflow:scroll;}
+  .sub_nav .gnb_m>ul{margin:10px 5% 0 5%;height:105%;}
   .sub_nav .gnb_m>ul>li{border-right:none;float:none;margin:10px 0;}
   .sub_nav .gnb_m>ul>li>a{text-decoration:none;font-size:27px;line-height:1.1;font-family: 'Anton', sans-serif;;text-align:left;color:#fff;display:block;border:1px solid;padding:7px;}
   .sub_nav .gnb_m>ul>li.top_menu>a{border:none;font-size:37px;color:#08f;}
