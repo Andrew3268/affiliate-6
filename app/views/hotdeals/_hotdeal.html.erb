@@ -14,7 +14,7 @@
       <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
       <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %></span><em>OFF</em></div>
       <% if hotdeal.h_spare_61.present? || hotdeal.h_spare_62.present? %>
-        <div class="mark endtoday wcoupon"><span class="wcou_01">extra</span><em class="wcoup">coupon</em></div>
+        <div class="mark endtoday wcoupon"><span class="wcou_01">Plus</span><em class="wcoup">coupon</em></div>
       <% end %>
     <% end %>
   </div>
