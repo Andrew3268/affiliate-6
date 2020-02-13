@@ -2,12 +2,17 @@
 <div class="layout"><!--layout-->
   <div class="wrap">  
     <%= render 'shared/header_short' %>
-    <div class="sd_category">
+    <!-- <div class="sd_category">
       <% if params[:spcategory].present? %>
         <div class="dealpage_title"><p>Promotions Of <span><%= params[:spcategory] %></span></p></div>
       <% else %>
         <div class="dealpage_title"><p>Sales & Promotions</p></div>    
       <% end %>
+    </div> -->
+    <div class="deals_main_menu clearfix">
+      <ul>
+        <li class="nth_1"><a href="/deals/bestdeals">Amazon's Bargain</a><a href="/storepromotions"><span>, Bargain By Store</span></a></li>
+      </ul>    
     </div>
     <%= render 'deals/header_store' %>
 

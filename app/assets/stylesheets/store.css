@@ -158,17 +158,20 @@
   .sp_wrap .sp_left{display:none;}
   .sp_wrap .sp_right{float:none;width:100%;}
   .sp_wrap .sp_right .sotre_card{width:48%;}
-  .sp_wrap .sp_right .sp_card{float:left;width:48%;margin:1%;box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);padding: 5px 10px 10px 10px;height:220px;}
-  .sp_wrap .sp_right .sp_image{float:none;width:100%;}
-  .sp_wrap .sp_right .sp_image img{height:70%;object-fit:contain;z-index:-1;}
+  .sp_wrap .sp_right .sp_card{float:left;width:48%;margin:1%;box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);padding: 5px 10px 10px 10px;height:275px;}
+  .sp_wrap .sp_right .sp_image{float:none;width:100%;margin-top:20px;height:170px;}
+  .sp_wrap .sp_right .sp_image img{height:100%;object-fit:contain;z-index:-1;}
   .sp_wrap .sp_right .date_comm em.expired{position:absolute;top:0;left:0;}
-  .sp_wrap .sp_right .inner{float:none;width:100%;margin:0;}
+  .sp_wrap .sp_right .inner{float:none;width:100%;margin:-10px 0 0 0;}
   .sp_wrap .sp_right .inner .sp_title{font-size:12px;}
   .sp_wrap .sp_right .inner em{font-size:10px;}
+  .sp_wrap .sp_right .sp_image span{font-size:55px;}
+  .sp_wrap .sp_right .sp_image em.off{font-size:30px;}
+  .sp_wrap .sp_right .sp_image .just_text p{font-size:20px;font-weight:300;}
   /*.sp_wrap .sp_right .inner em.code_em{margin-top:16px;}*/
   /*.sp_wrap .sp_right .inner em.expired{font-size:12px;padding:0 3px;}
   .sp_wrap .sp_right .inner em.endtoday{font-size:12px;padding:0 3px;}*/
-  .sp_wrap .sp_right .inner span.index_title{display:none;}
+  /*.sp_wrap .sp_right .inner span.index_title{display:none;}*/
   .sp_wrap .sp_right .inner .promocode_m{display:none;}
   .sp_wrap .sp_right .inner .sp_price{font-size:12px;}
   .sp_wrap .sp_right .sp_btn{display:none;}
