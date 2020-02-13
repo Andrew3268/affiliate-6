@@ -39,7 +39,7 @@ class Hotdeal < ActiveRecord::Base
       end
   end
 
-  has_attached_file :himage, styles: { medium: "600x500#", small: "350x250>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :himage, styles: { medium: "600x500#", small: "400x350>" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :himage, content_type: /\Aimage\/.*\z/
 
   def self.search_by(search_term)
