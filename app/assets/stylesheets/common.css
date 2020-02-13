@@ -224,7 +224,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 @media screen and (max-width:640px){
-  .deals_main_menu{display:none;}
+  /*.deals_main_menu{display:none;}*/
   .sub_nav{}
   .shoes_nav{margin-top:20px;}
   .sub_nav .sub_nav_pc{display:none;}

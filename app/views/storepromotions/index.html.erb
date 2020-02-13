@@ -18,7 +18,7 @@
 
     <div class="sp_wrap">
 
-      <div class="sp_left">
+      <div class="sp_left clearfix">
         <div class="sp_menu">
           <div class="text show-more-height">
             <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div>
@@ -56,7 +56,7 @@
         </ul>
       </label>
 
-      <div class="sp_right">
+      <div class="sp_right clearfix">
         
           <% @storepromotions.each do |storepromotion| %>
             <div class="sp_card clearfix">
