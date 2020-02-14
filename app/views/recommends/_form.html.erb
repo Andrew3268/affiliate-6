@@ -7,11 +7,11 @@
           <div class="input_header_box ib_comm ">
             <p>Main</p>
             <%= f.input :re_filter, label: "[gadgets, geeky, home&kitchen, fashion, travel]"%>
-            <%= f.input :re_title %>
-            <%= f.input :re_image %>
-            <%= f.input :sub_number_01, label: "Post Date"%>
-            <%= f.input :re_intro %>
-            <%= f.input :sub_intro %>
+            <%= f.input :re_image, label: 'Cover Iamge' %>
+            <%= f.input :re_title, label: 'Cover Title' %>
+            <%= f.input :sub_number_01, label: "Post Date [ex. OCT 30, 2019 ] "%>
+            <%= f.input :re_intro, label: 'Main Intro' %>
+            <%= f.input :sub_intro, as: :trix_editor, label: 'Sub Intro' %>
           </div>
           <div class="input_image">
           </div>
@@ -20,56 +20,68 @@
         <div class="input_body_left ib_comm clearfix">
           <div class="input_box">
             <p>Post Num.1</p>
-            <%= f.input :sub_title_01 %>
-            <%= f.input :sub_image_01 %>
-            <%= f.input :sub_price_01 %>
-            <%= f.input :sub_source_01 %>
+            <%= f.input :sub_image_01, label: 'Product Iamge' %>
+            <%= f.input :sub_link_01, label: 'Product Link' %>
+            <%= f.input :sub_title_01, label: 'Product Title' %>
+            <%= f.input :rec_spare_01, label: 'Rating' %>
+            <%= f.input :rec_spare_11, label: 'Reviews' %>
+            <%= f.input :sub_price_01, label: 'Current Price' %>
+            <%= f.input :sub_source_01, label: 'Source' %>
             <%= f.input :sub_intro_01, as: :trix_editor %>
-            <%= f.input :sub_link_01 %>
-            <%= f.input :sub_youtube_01 %>
+            <%= f.input :sub_youtube_01, label: 'Image URL' %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.2</p>
-            <%= f.input :sub_title_02 %>
-            <%= f.input :sub_image_02 %>
-            <%= f.input :sub_price_02 %>
-            <%= f.input :sub_source_02 %>
+            <%= f.input :sub_image_02, label: 'Product Iamge' %>
+            <%= f.input :sub_link_02, label: 'Product Link' %>
+            <%= f.input :sub_title_02, label: 'Product Title' %>
+            <%= f.input :rec_spare_02, label: 'Rating' %>
+            <%= f.input :rec_spare_12, label: 'Reviews' %>
+            <%= f.input :sub_price_02, label: 'Current Price' %>
+            <%= f.input :sub_source_02, label: 'Source' %>
             <%= f.input :sub_intro_02, as: :trix_editor %>
-            <%= f.input :sub_link_02 %>
+            
             <%= f.input :sub_youtube_02 %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.3</p>
-            <%= f.input :sub_title_03 %>
-            <%= f.input :sub_image_03 %>
-            <%= f.input :sub_price_03 %>
-            <%= f.input :sub_source_03 %>
+            <%= f.input :sub_image_03, label: 'Product Iamge' %>
+            <%= f.input :sub_link_03, label: 'Product Link' %>
+            <%= f.input :sub_title_03, label: 'Product Title' %>
+            <%= f.input :rec_spare_03, label: 'Rating' %>
+            <%= f.input :rec_spare_13, label: 'Reviews' %>
+            <%= f.input :sub_price_03, label: 'Current Price' %>
+            <%= f.input :sub_source_03, label: 'Source' %>
             <%= f.input :sub_intro_03, as: :trix_editor %>
-            <%= f.input :sub_link_03 %>
+            
             <%= f.input :sub_youtube_03 %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.4</p>
-            <%= f.input :sub_title_04 %>
-            <%= f.input :sub_image_04 %>
-            <%= f.input :sub_price_04 %>
-            <%= f.input :sub_source_04 %>
+            <%= f.input :sub_image_04, label: 'Product Iamge' %>
+            <%= f.input :sub_link_04, label: 'Product Link' %>
+            <%= f.input :sub_title_04, label: 'Product Title' %>
+            <%= f.input :rec_spare_04, label: 'Rating' %>
+            <%= f.input :rec_spare_14, label: 'Reviews' %>
+            <%= f.input :sub_price_04, label: 'Current Price' %>
+            <%= f.input :sub_source_04, label: 'Source' %>
             <%= f.input :sub_intro_04, as: :trix_editor %>
-            <%= f.input :sub_link_04 %>
             <%= f.input :sub_youtube_04 %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.5</p>
-            <%= f.input :sub_title_05 %>
-            <%= f.input :sub_image_05 %>
-            <%= f.input :sub_price_05 %>
-            <%= f.input :sub_source_05 %>
+            <%= f.input :sub_image_05, label: 'Product Iamge' %>
+            <%= f.input :sub_link_05, label: 'Product Link' %>
+            <%= f.input :sub_title_05, label: 'Product Title' %>
+            <%= f.input :rec_spare_05, label: 'Rating' %>
+            <%= f.input :rec_spare_15, label: 'Reviews' %>
+            <%= f.input :sub_price_05, label: 'Current Price' %>
+            <%= f.input :sub_source_05, label: 'Source' %>
             <%= f.input :sub_intro_05, as: :trix_editor %>            
-            <%= f.input :sub_link_05 %>
             <%= f.input :sub_youtube_05 %>
             <%= f.button :submit %>
           </div>
@@ -78,56 +90,66 @@
         <div class="input_body_right ib_comm clearfix">
           <div class="input_box">
             <p>Post Num.6</p>
-            <%= f.input :sub_title_06 %>
-            <%= f.input :sub_image_06 %>
-            <%= f.input :sub_price_06 %>
-            <%= f.input :sub_source_06 %>
+            <%= f.input :sub_image_06, label: 'Product Iamge' %>
+            <%= f.input :sub_link_06, label: 'Product Link' %>
+            <%= f.input :sub_title_06, label: 'Product Title' %>
+            <%= f.input :rec_spare_06, label: 'Rating' %>
+            <%= f.input :rec_spare_16, label: 'Reviews' %>
+            <%= f.input :sub_price_06, label: 'Current Price' %>
+            <%= f.input :sub_source_06, label: 'Source' %>
             <%= f.input :sub_intro_06, as: :trix_editor %>
-            <%= f.input :sub_link_06 %>
             <%= f.input :sub_youtube_06 %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.7</p>
-            <%= f.input :sub_title_07 %>
-            <%= f.input :sub_image_07 %>
-            <%= f.input :sub_price_07 %>
-            <%= f.input :sub_source_07 %>
+            <%= f.input :sub_image_07, label: 'Product Iamge' %>
+            <%= f.input :sub_link_07, label: 'Product Link' %>
+            <%= f.input :sub_title_07, label: 'Product Title' %>
+            <%= f.input :rec_spare_07, label: 'Rating' %>
+            <%= f.input :rec_spare_17, label: 'Reviews' %>
+            <%= f.input :sub_price_07, label: 'Current Price' %>
+            <%= f.input :sub_source_07, label: 'Source' %>
             <%= f.input :sub_intro_07, as: :trix_editor %>
-            <%= f.input :sub_link_07 %>
             <%= f.input :sub_youtube_07 %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.8</p>
-            <%= f.input :sub_title_08 %>
-            <%= f.input :sub_image_08 %>
-            <%= f.input :sub_price_08 %>
-            <%= f.input :sub_source_08 %>
+            <%= f.input :sub_image_08, label: 'Product Iamge' %>
+            <%= f.input :sub_link_08, label: 'Product Link' %>
+            <%= f.input :sub_title_08, label: 'Product Title' %>
+            <%= f.input :rec_spare_08, label: 'Rating' %>
+            <%= f.input :rec_spare_18, label: 'Reviews' %>
+            <%= f.input :sub_price_08, label: 'Current Price' %>
+            <%= f.input :sub_source_08, label: 'Source' %>
             <%= f.input :sub_intro_08, as: :trix_editor %>
-            <%= f.input :sub_link_08 %>
             <%= f.input :sub_youtube_08 %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.9</p>
-            <%= f.input :sub_title_09 %>
-            <%= f.input :sub_image_09 %>
-            <%= f.input :sub_price_09 %>
-            <%= f.input :sub_source_09 %>
+            <%= f.input :sub_image_09, label: 'Product Iamge' %>
+            <%= f.input :sub_link_09, label: 'Product Link' %>
+            <%= f.input :sub_title_09, label: 'Product Title' %>
+            <%= f.input :rec_spare_09, label: 'Rating' %>
+            <%= f.input :rec_spare_19, label: 'Reviews' %>
+            <%= f.input :sub_price_09, label: 'Current Price' %>
+            <%= f.input :sub_source_09, label: 'Source' %>
             <%= f.input :sub_intro_09, as: :trix_editor %>
-            <%= f.input :sub_link_09 %>
             <%= f.input :sub_youtube_09 %>
             <%= f.button :submit %>
           </div>
           <div class="input_box">
             <p>Post Num.10</p>
-            <%= f.input :sub_title_10 %>
-            <%= f.input :sub_image_10 %>
-            <%= f.input :sub_price_10 %>
-            <%= f.input :sub_source_10 %>
+            <%= f.input :sub_image_10, label: 'Product Iamge' %>
+            <%= f.input :sub_link_10, label: 'Product Link' %>
+            <%= f.input :sub_title_10, label: 'Product Title' %>
+            <%= f.input :rec_spare_10, label: 'Rating' %>
+            <%= f.input :rec_spare_20, label: 'Reviews' %>
+            <%= f.input :sub_price_10, label: 'Current Price' %>
+            <%= f.input :sub_source_10, label: 'Source' %>
             <%= f.input :sub_intro_10, as: :trix_editor %>
-            <%= f.input :sub_link_10 %>
             <%= f.input :sub_youtube_10 %>
             <%= f.button :submit %>
           </div>

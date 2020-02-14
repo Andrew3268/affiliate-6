@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191228050825) do
+ActiveRecord::Schema.define(version: 20200214063605) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -448,6 +448,36 @@ ActiveRecord::Schema.define(version: 20191228050825) do
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
     t.string   "slug"
+    t.string   "rec_spare_01"
+    t.string   "rec_spare_02"
+    t.string   "rec_spare_03"
+    t.string   "rec_spare_04"
+    t.string   "rec_spare_05"
+    t.string   "rec_spare_06"
+    t.string   "rec_spare_07"
+    t.string   "rec_spare_08"
+    t.string   "rec_spare_09"
+    t.string   "rec_spare_10"
+    t.string   "rec_spare_11"
+    t.string   "rec_spare_12"
+    t.string   "rec_spare_13"
+    t.string   "rec_spare_14"
+    t.string   "rec_spare_15"
+    t.string   "rec_spare_16"
+    t.string   "rec_spare_17"
+    t.string   "rec_spare_18"
+    t.string   "rec_spare_19"
+    t.string   "rec_spare_20"
+    t.string   "rec_spare_21"
+    t.string   "rec_spare_22"
+    t.string   "rec_spare_23"
+    t.string   "rec_spare_24"
+    t.string   "rec_spare_25"
+    t.string   "rec_spare_26"
+    t.string   "rec_spare_27"
+    t.string   "rec_spare_28"
+    t.string   "rec_spare_29"
+    t.string   "rec_spare_30"
   end
 
   add_index "recommends", ["slug"], name: "index_recommends_on_slug", unique: true

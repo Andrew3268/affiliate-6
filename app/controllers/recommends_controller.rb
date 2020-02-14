@@ -119,6 +119,8 @@ class RecommendsController < ApplicationController
                                       :sub_source_04, :sub_source_05, :sub_source_06, :sub_source_07, :sub_source_08, :sub_source_09, :sub_source_10, :sub_price_01, :sub_price_02,
                                       :sub_price_03, :sub_price_04, :sub_price_05, :sub_price_06, :sub_price_07, :sub_price_08, :sub_price_09, :sub_price_10, :sub_link_01,
                                       :sub_link_02, :sub_link_03, :sub_link_04, :sub_link_05, :sub_link_06, :sub_link_07, :sub_link_08, :sub_link_09, :sub_link_10, :sub_youtube_01,
-                                      :sub_youtube_02, :sub_youtube_03, :sub_youtube_04, :sub_youtube_05, :sub_youtube_06, :sub_youtube_07, :sub_youtube_08, :sub_youtube_09, :sub_youtube_10)
+                                      :sub_youtube_02, :sub_youtube_03, :sub_youtube_04, :sub_youtube_05, :sub_youtube_06, :sub_youtube_07, :sub_youtube_08, :sub_youtube_09, :sub_youtube_10,
+                                      :rec_spare_01, :rec_spare_02, :rec_spare_03, :rec_spare_04, :rec_spare_05, :rec_spare_06, :rec_spare_07, :rec_spare_08, :rec_spare_09, :rec_spare_10, 
+                                      :rec_spare_11, :rec_spare_12, :rec_spare_13, :rec_spare_14, :rec_spare_15, :rec_spare_16, :rec_spare_17, :rec_spare_18, :rec_spare_19, :rec_spare_20)
   end
 end
