@@ -68,6 +68,9 @@
            <em><span><%= number_to_currency(most_h.h_spare_43) %></span><%= number_to_currency(most_h.h_spare_44) %></em>
           <% end %>
         <% end %>
+        <% if can? :update, @hotdeal %>
+         <%= link_to 'Delete', most_h, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </div>
     </div>
   <% end %>

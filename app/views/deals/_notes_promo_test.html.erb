@@ -71,6 +71,9 @@
             <% end %>
           <% end %>
         <% end %>
+        <% if can? :update, @promocode %>
+         <%= link_to 'Delete', promo_h, method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </div>
       
     </div>

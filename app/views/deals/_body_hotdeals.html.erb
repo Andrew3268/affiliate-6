@@ -16,16 +16,41 @@
      <% end %>
   </div>
   <div class="inner">
+    <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 < Date.today) %>
+      <% else %>
+        <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 = Date.today) %>
+          <div class="new_mark">New</div>
+        <% end %>
+      <% end %>
     <% if hotdeal.h_percentage.present? %>
-      <span class="regular"><em><%= hotdeal.h_percentage %>% OFF</em> + free shipping</span>
+      <span class="regular">
+        <em><%= hotdeal.h_percentage %>% OFF</em>
+        <% if hotdeal.h_spare_63.present? %>
+        <% else %>
+         + free shipping
+        <% end %>
+      </span>
     <% else %>
       <% running_total = 0 %>
       <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
-      <span class="regular"><em><%= number_to_percentage(running_total, precision: 0) %> OFF</em> + free shipping</span>
+      <span class="regular">
+        <em><%= number_to_percentage(running_total, precision: 0) %> OFF</em>
+        <% if hotdeal.h_spare_63.present? %>
+        <% else %>
+          + free shipping
+        <% end %>
+      </span>
     <% end %>
-    <span class="shipping_condition">Free Shipping: Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a></span>
+    <% if hotdeal.h_spare_63.present? %>
+     <span class="shipping_condition"><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></span>
+    <% else %>
+     <span class="shipping_condition">Free Shipping: Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a></span>
+    <% end %>
     <!-- <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p> -->
-    <p><%= link_to hotdeal.h_title, hotdeal %></p>
+
+    <p>
+      <%= link_to hotdeal.h_title, hotdeal %>
+    </p>
     <div class="code_high">
      <address>
         <% if hotdeal.h_price.present? %>

@@ -48,7 +48,15 @@
   <div class="buy-now"><span><%= link_to "GET CODE", promocode %></span></div>
   <figcaption>
     <h3><%= render_with_phashtags(promocode.p_hashtag.to_s) %></h3>
-    <p><%= link_to promocode.p_title, promocode %></p>
+    <p>
+      <% if promocode.p_spare_52 && (promocode.p_spare_52 < Date.today) %>
+      <% else %>
+        <% if promocode.p_spare_52 && (promocode.p_spare_52 = Date.today) %>
+          <em>New</em>
+        <% end %>
+      <% end %>
+      <%= link_to promocode.p_title, promocode %>
+    </p>
     <div class="price">
       <% running_total = 0 %>
       <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>

@@ -16,8 +16,25 @@
      
     </div>
     <div class="inner inner_top">
-      <span class="regular"><em><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</em> + free shipping</span>
-      <span class="shipping_condition">Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a></span>
+      <% if promocode.p_spare_52 && (promocode.p_spare_52 < Date.today) %>
+      <% else %>
+        <% if promocode.p_spare_52 && (promocode.p_spare_52 = Date.today) %>
+          <div class="new_mark">New</div>
+        <% end %>
+      <% end %>
+      <span class="regular">
+        <em><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</em>
+        <% if promocode.p_spare_54.present? %>
+        <% else %>
+         + free shipping
+        <% end %>
+      </span>
+      <% if promocode.p_spare_54.present? %>
+        <span class="shipping_condition"><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></span>
+      <% else %>
+        <span class="shipping_condition">Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a></span>
+      <% end %>
+      
       <!-- <p><a target="_blank" href="<%= promocode.p_link %>"><%= promocode.p_title %></a></p> -->
       <p><%= link_to promocode.p_title, promocode %></p>
 
