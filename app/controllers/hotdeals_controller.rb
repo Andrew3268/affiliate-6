@@ -146,7 +146,7 @@ class HotdealsController < ApplicationController
                                    :h_spare_08, :h_spare_09, :h_spare_10, :h_spare_11, :h_spare_21, :h_spare_41, :h_spare_42, :h_spare_43, 
                                    :h_spare_44, :h_spare_45, :h_spare_12, :h_spare_13, :h_spare_14, :h_spare_15, :h_spare_16, :h_spare_17,
                                    :h_spare_61, :h_spare_62, :h_spare_63, :h_spare_64, :h_spare_65, :h_spare_66, :h_spare_67, :h_spare_68, 
-                                   :h_spare_69, :h_spare_18)
+                                   :h_spare_69, :h_spare_18, :h_spare_92)
     end
 end
 

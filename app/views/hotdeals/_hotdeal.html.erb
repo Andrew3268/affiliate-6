@@ -21,7 +21,15 @@
   <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
   <figcaption>
     <h3><%= render_with_hashtags(hotdeal.h_spare_05.to_s) %></h3>
-    <p><%= link_to hotdeal.h_title, hotdeal %></p>
+    <p>
+      <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 < Date.today) %>
+      <% else %>
+        <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 = Date.today) %>
+          <em>New</em>
+        <% end %>
+      <% end %>
+      <%= link_to hotdeal.h_title, hotdeal %>
+    </p>
     <div class="price">
       <% if hotdeal.h_list_price.present? %>
         <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
