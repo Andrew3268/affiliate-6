@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200216082628) do
+ActiveRecord::Schema.define(version: 20200217091537) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -688,6 +688,12 @@ ActiveRecord::Schema.define(version: 20200216082628) do
     t.datetime "updated_at",        null: false
     t.integer  "impressions_count"
     t.string   "slug"
+    t.datetime "sp_spare_90"
+    t.datetime "sp_spare_91"
+    t.datetime "sp_spare_92"
+    t.date     "sp_spare_93"
+    t.date     "sp_spare_94"
+    t.date     "sp_spare_95"
   end
 
   add_index "storepromotions", ["slug"], name: "index_storepromotions_on_slug", unique: true
