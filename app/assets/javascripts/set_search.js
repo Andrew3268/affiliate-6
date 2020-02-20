@@ -45,7 +45,7 @@
     
     var query = rootURL + key + type + search + coupon + shipping + fast + postTime + "&tag=oigbt-20";
 
-    window.open(query, '_blank');
-    
+    window.open(query);
+    // window.open(url);    
   });
 });
