@@ -4,8 +4,8 @@
     <input id="all-stories" name="post-type" type="radio" value="" checked>
     <label class="first" for="all-stories">All</label>
 
-    <input id="photo" name="post-type" type="radio" value="photo">
-    <label for="photo">Photo</label>
+    <input id="electronics" name="post-type" type="radio" value="electronics">
+    <label for="electronics">Electronics</label>
 
     <input id="video" name="post-type" type="radio" value="video">
     <label for="video">Video</label>
@@ -71,7 +71,7 @@
 
 <script type="text/javascript">
   $(document).ready(function(){
-  var rootURL = "https://facebook.com/search/";
+  var rootURL = "https://www.amazon.com/s?k=";
   
   $("select[name='time']").change(function(){
     if ( $(this).val() === "custom" ){
@@ -88,8 +88,9 @@
     var postMonth = $("select[name='month']").val();
     var postYear = $(".year").val();
     
-    var type = (postType === "") ? "" : postType+"/stories/";
-    var key  = (keyWord === "") ? "" : "str/"+keyWord+"/stories-keyword/";
+    var key  = (keyWord === "") ? "" : keyWord;
+    var type = (postType === "") ? "" : "&i=" + postType;
+    
     var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
     var month = (postMonth === "") ? "" : postMonth+"/";
     var year = (postYear === "") ? "" : postYear+"/";
@@ -106,7 +107,7 @@
       postTime = time;
     }
     
-    var query = rootURL+type + key + postTime +  "intersect";
+    var query = rootURL+ key + type + postTime + "&tag=oigbt-20";
 
     window.open(query, '_blank');
     
