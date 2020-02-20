@@ -540,3 +540,76 @@ header .gnb_m,header .gnb_open2{display:none;}
 /* End */
 
 
+
+.set_search{}
+.set_banner{float:left;width:33%;margin-right:2%;border:1px solid #aaa;border-radius:10px;box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);}
+.set_banner .banner_box{float:left;width:48%;margin:1%;}
+.set_banner .banner_box img{width:100%;border-radius:10px;border:1px solid #ccc;}
+.set_search_box{float:left;width:63%;margin-left:2%;background:white;margin:0 auto 50px auto;border-radius:5px;box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);padding:25px;border:1px solid #aaa;}
+.set_search_box h2{font-weight:300;margin:0 0 20px;}
+.disable{display:none;}
+/*.post-type, */.search-type, .coupon-type, .shipping-type, .fast-type{display:table;width:100%;/*table-layout:fixed;*/margin-bottom:20px;}
+.post-type{}
+/*.on_off{width:20%;}*/
+.op_wrap{float:left;width:48%;margin:1%;}
+.post-type input, .search-type input, .coupon-type input, .shipping-type input, .fast-type input{display:none;}
+.post-type input:checked + label, .search-type input:checked + label, .coupon-type input:checked + label, .shipping-type input:checked + label, .fast-type input:checked + label{background:#08f;color:#fff;}
+/*.post-type label, */.search-type label, .coupon-type label, .shipping-type label, .fast-type label{display:table-cell;padding:10px;text-align:center;border:1px solid #e3e3e3;border-left:none;cursor:pointer;}
+.swich_on{border-top-right-radius:10px;border-bottom-right-radius:10px;}
+.swich_off{border-top-left-radius:10px;border-bottom-left-radius:10px;}
+/*.post-type label{float:left;width:20%;padding:10px;border:1px solid #ccc;}*/
+/*.post-type label:first-of-type, */.search-type label:first-of-type, .coupon-type label:first-of-type, .shipping-type label:first-of-type, .fast-type label:first-of-type{border-left:1px solid #e3e3e3;}
+.field {padding:15px 0;overflow:hidden;}
+.field span.label{width:20%;float:left;padding:10px 10px;}
+.field input, .field select{width:50%;float:left;padding:14px 10px;border:1px solid #e3e3e3;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:10px;background:#fff;color:#616161;font-size:14px;}
+.field .custom-time{padding-left:40%;padding-top:10px;clear:both;}
+.field .custom-time select, .field .custom-time input{float:left;width:45%;}
+.field .custom-time select {margin-right:5%;}
+.down_ct{overflow:visible;}
+.text-center {padding-top:30px;text-align:right;}
+.set_search_box button{width:40%;background:#08f;border:none;padding:15px 30px;color:#fff;font-weight:500;font-size:20px;border-radius:10px;}
+.search_dropdown{display:inline-block;}
+
+.reset_set{}
+.reset_set a{border:1px solid #ccc;padding:10px 50px;color:#616161;border-radius:10px;margin-left:1%;}
+
+/* DropDown Categories */
+.container_set{}
+/*Styling Selectbox*/
+.dropdown_set{width:365px;display:inline-block;background-color:#fff;border-radius:10px;border:1px solid #e3e3e3;transition:all .5s ease;position:relative;font-size:14px;color:#616161;height:100%;text-align:left;}
+.dropdown_set:focus{outline:0;}
+.dropdown_set .select{cursor:pointer;display:block;padding:12px;}
+.dropdown_set .select > i{font-size:13px;color:#888;cursor:pointer;transition:all .3s ease-in-out;float:right;line-height:20px;}
+.dropdown_set:hover{box-shadow:0 0 4px rgb(204, 204, 204);}
+.dropdown_set:active{background-color:#f8f8f8;}
+.dropdown_set.active:hover,
+.dropdown_set.active{box-shadow:0 0 4px rgb(204, 204, 204);border-radius:5px 5px 0 0;background-color:#f8f8f8;}
+.dropdown_set.active .select > i{transform:rotate(-90deg);}
+.dropdown_set .dropdown-menu{position: absolute;background-color:#fff;width:100%;left:0;margin-top:1px;box-shadow:0 1px 2px rgb(204, 204, 204);border-radius:0 1px 5px 5px;overflow:hidden;display:none;max-height:300px;overflow-y:auto;z-index:50;}
+.dropdown_set .dropdown-menu li{padding: 10px;transition:all .2s ease-in-out;cursor: pointer;} 
+.dropdown_set .dropdown-menu{padding: 0;list-style:none;}
+.dropdown_set .dropdown-menu li:hover{background-color: #f2f2f2;}
+.dropdown_set .dropdown-menu li:active{background-color:#e2e2e2;}
+
+
+@media screen and (max-width:640px){
+  .op_wrap{float:none;width:100%;margin:0;}
+  .set_search_box{width:100%;margin-bottom:0;}
+  .set_search_box button{width:100%;} 
+  .field span.label{width:100%;float:none;padding:0;}
+  .field input, .field select{width:100%;float:none;}
+  .field .custom-time{padding:10px 0 0 0;}
+  .field .custom-time select, .field .custom-time input{width:48%;margin:0 1% 0 1%;}
+  .dropdown_set{width:100%;}
+
+  .set_banner{display:none;float:none;width:100%;margin:0 0 20px 0 ;}
+}
+@media screen and (min-width:641px) and (max-width:1199px){
+}
+
+
+
+
+
+
+
