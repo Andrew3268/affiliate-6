@@ -110,7 +110,7 @@
 /* For Form */
 .gadget_form{margin-top:100px;}
 .form_border{width:70%;}
-.form_border input, .form_border textarea{width:100%;height:40px;margin-bottom:20px;}
+.form_border input, .form_border textarea{width:100%;height:40px;margin-bottom:20px;border:1px solid #ccc;}
 .form_border textarea{height:100px;}
 .form_border trix-editor{min-height:15em;margin-bottom:20px;}
 .form_border .form_select{margin-bottom:20px;}

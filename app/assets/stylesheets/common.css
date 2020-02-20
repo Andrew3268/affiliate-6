@@ -541,12 +541,12 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 
-.set_search{}
+.set_search{font-family:'Montserrat', sans-serif;}
 .set_banner{float:left;width:33%;margin-right:2%;border:1px solid #aaa;border-radius:10px;box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);}
 .set_banner .banner_box{float:left;width:48%;margin:1%;}
 .set_banner .banner_box img{width:100%;border-radius:10px;border:1px solid #ccc;}
-.set_search_box{float:left;width:63%;margin-left:2%;background:white;margin:0 auto 50px auto;border-radius:5px;box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);padding:25px;border:1px solid #aaa;}
-.set_search_box h2{font-weight:300;margin:0 0 20px;}
+.set_search_box{float:left;width:63%;margin-left:2%;background:white;margin:0 auto 50px auto;border-radius:5px;box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);padding:34px;border:1px solid #aaa;}
+.set_search_box h2{margin:0 0 20px;}
 .disable{display:none;}
 /*.post-type, */.search-type, .coupon-type, .shipping-type, .fast-type{display:table;width:100%;/*table-layout:fixed;*/margin-bottom:20px;}
 .post-type{}
@@ -594,13 +594,14 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 @media screen and (max-width:640px){
   .op_wrap{float:none;width:100%;margin:0;}
-  .set_search_box{width:100%;margin-bottom:0;}
+  .set_search_box{width:100%;margin-bottom:0;padding:15px;}
   .set_search_box button{width:100%;} 
   .field span.label{width:100%;float:none;padding:0;}
   .field input, .field select{width:100%;float:none;}
   .field .custom-time{padding:10px 0 0 0;}
   .field .custom-time select, .field .custom-time input{width:48%;margin:0 1% 0 1%;}
   .dropdown_set{width:100%;}
+  .set_search_box h2{font-size:16px;}
 
   .set_banner{display:none;float:none;width:100%;margin:0 0 20px 0 ;}
 }

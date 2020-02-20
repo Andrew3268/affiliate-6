@@ -21,6 +21,11 @@
             <p><%= @gadget.gg_title %></p>
             <div class="btn clearfix admin">
               <a href="/">Back</a> | <em><%= link_to "Edit", edit_gadget_path(@gadget) %></em> | <%= link_to "Delete", gadget_path(@gadget), method: :delete, data: {confirm: "Are you sure?"}%>
+              <div class="sharing">
+                <p><%= @gadget.gg_title %></p>
+                <p>Available on <em><%= @gadget.gg_spare_01 %> Now!! at </em> <em><%= @gadget.gg_aprice %></em></p>
+                <p>http://ohigottabuythis.net/gadgets/<%=(params[:id]) %></p>
+              </div>
           </div>   
         <% end %>
         </div>
