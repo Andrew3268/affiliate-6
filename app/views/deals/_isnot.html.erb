@@ -1,0 +1,115 @@
+<div class="box">
+  <h2>Simple Facebook Graph Search</h2>
+  <div class="post-type">
+    <input id="all-stories" name="post-type" type="radio" value="" checked>
+    <label class="first" for="all-stories">All</label>
+
+    <input id="photo" name="post-type" type="radio" value="photo">
+    <label for="photo">Photo</label>
+
+    <input id="video" name="post-type" type="radio" value="video">
+    <label for="video">Video</label>
+
+    <input id="share" name="post-type" type="radio" value="share">
+    <label for="share">Share</label>
+
+    <input id="note" name="post-type" type="radio" value="note">
+    <label for="note">Note</label>
+
+    <input id="offer" name="post-type" type="radio" value="offer">
+    <label class="last" for="offer">Offer</label>
+  </div>
+
+  <div class="field ">
+    <span class="label">Search Keyword</span>
+    <input type="text" class="keyword" placeholder="Keyword or website.com" value="">
+  </div>
+
+  <div class="field time">
+    <span class="label">Time & Date</span>
+    <select name="time">
+      <option value="">Anytime</option>
+      <option value="custom">Custom</option>
+      <option value="stories-live">Just now (live)</option>
+      <option value="today/date/stories">Today</option>
+      <option value="yesterday/date/stories">Yesterday</option>
+      <option value="this-week/date/stories">This week</option>
+      <option value="last-week/date/stories">Last week</option>
+      <option value="this-month/date/stories">This month</option>
+      <option value="last-month/date/stories">Last month</option>
+      <option value="this-year/date/stories">This year</option>
+      <option value="last-year/date/stories">Last year</option>
+    </select>
+
+    <div class="custom-time disable">
+      <div class="month">
+        <select name="month">
+          <option value="">All</option>
+          <option value="jan">January</option>
+          <option value="feb">February</option>
+          <option value="mar">March</option>
+          <option value="apr">April</option>
+          <option value="may">May</option>
+          <option value="jun">June</option>
+          <option value="jul">July</option>
+          <option value="aug">August</option>
+          <option value="sep">September</option>
+          <option value="oct">October</option>
+          <option value="nov">November</option>
+          <option value="dec">December</option>
+        </select>
+      </div>
+      <input type="text" maxlength="4" class="year" placeholder="Year" name="year">
+    </div>
+  </div>
+  
+  <div class="text-center">
+    <button class="search">Search</button>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  var rootURL = "https://facebook.com/search/";
+  
+  $("select[name='time']").change(function(){
+    if ( $(this).val() === "custom" ){
+      $(".custom-time").removeClass("disable");
+    } else {
+      $(".custom-time").addClass("disable");
+    }
+  });
+  
+  $(".search").on("click", function(){
+    var postType = $("input:radio[name='post-type']:checked").val();
+    var keyWord = $(".keyword").val();
+    var timeType = $(".time select").val();
+    var postMonth = $("select[name='month']").val();
+    var postYear = $(".year").val();
+    
+    var type = (postType === "") ? "" : postType+"/stories/";
+    var key  = (keyWord === "") ? "" : "str/"+keyWord+"/stories-keyword/";
+    var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
+    var month = (postMonth === "") ? "" : postMonth+"/";
+    var year = (postYear === "") ? "" : postYear+"/";
+    var postTime;
+    
+    if( timeType ==="custom" ){
+      if( month !== "" && year !==""){
+        postTime = month+year+"date-2/stories/";
+      } else {
+        postTime = "";
+      }
+    } else {
+      
+      postTime = time;
+    }
+    
+    var query = rootURL+type + key + postTime +  "intersect";
+
+    window.open(query, '_blank');
+    
+  });
+});
+</script>
