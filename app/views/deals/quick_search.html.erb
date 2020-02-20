@@ -1,4 +1,4 @@
-<% content_for :title, "Quick Search on Amazon" %>
+<!-- <% content_for :title, "Quick Search on Amazon" %> -->
 <div class="layout"><!--layout-->
   <div class="wrap"> 
   <%= render 'shared/header_short' %>
@@ -12,9 +12,11 @@
 
     <div class="quicksearch common_layout codes">
 
-      <div class="set_search clearfix">
-        <%= render 'deals/set_search' %>
-      </div>
+      <% if can? :update, @promocode %>
+        <div class="set_search clearfix">
+          <%= render 'deals/set_search' %>
+        </div>
+      <% end %>
       
         <div class="lt_cnt">
           <h2 class="quick_h2">Quick Search</h2>
