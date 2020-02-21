@@ -584,7 +584,7 @@ a.set_reset, a.set_reset_m{border:1px solid #ccc;padding:10px 50px;color:#616161
 a.set_reset_m{display:none;}
 
 @media screen and (max-width:640px){
-  .set_search{display:none;}
+  /*.set_search{display:none;}*/
   .op_wrap{float:none;width:100%;margin:0;}
   .set_search_box{width:100%;margin-bottom:0;padding:15px;}
   .set_search_box button{width:100%;} 
