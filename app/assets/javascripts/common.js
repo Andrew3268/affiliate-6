@@ -242,12 +242,18 @@ updateNav();
 
 //Search on Amazon[quick search]//
   $(document).ready(function(){
-   if (".wrap" <= 500){
-      var rootURL = "https://www.amazon.com/s?i=";
-   } else {
-     var rootURL = "https://www.amazon.com/s?k=";  
-   }
-  
+  // var rootURL = "https://www.amazon.com/s?k=";
+
+  var windowWidth = $( window ).width();
+    if(windowWidth < 500) {
+    //창 가로 크기가 500 미만일 경우
+    var rootURL = "https://www.amazon.com/s?i=";
+    } else {
+    //창 가로 크기가 500보다 클 경우
+    var rootURL = "https://www.amazon.com/s?k=";
+}
+
+
   
   $("select[name='time']").change(function(){
     if ( $(this).val() === "custom" ){
@@ -272,7 +278,7 @@ updateNav();
     var key  = (keyWord === "") ? "" : keyWord;
     var type = (postType === "") ? "" : "&i=" + postType;
     var prime = (primeType === "") ? "" : "&rh=p_85%3A1&dc&qid=" + primeType + "&ref=sr_nr_p_85_1";
-    var coupon = (couponType === "") ? "" : "&srs=" + couponType + "&s=relevancerank" + "&s?i=aps";
+    var coupon = (couponType === "") ? "" : "&srs=" + couponType + "&s=relevancerank";
     var shipping = (shippingType === "") ? "" : "&rh=" + shippingType;
     var fast = (fastType === "") ? "" : "&rh=" + fastType;
     var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
