@@ -364,7 +364,7 @@ if(isMobile()){
 
   //모바일페이지
   $(document).ready(function(){
-  var rootURL = "https://www.amazon.com/s?i=";
+  var rootURL = "https://www.amazon.com/s?i=aps";
 
   $("select[name='time']").change(function(){
     if ( $(this).val() === "custom" ){
@@ -386,7 +386,7 @@ if(isMobile()){
     var postMax = $("select[name='max']").val();
     // var postYear = $(".year").val();
     
-    var key  = (keyWord === "") ? "" : keyWord;
+    var key  = (keyWord === "") ? "" : "&field-keywords=" + keyWord;
     var type = (postType === "") ? "" : "&i=" + postType;
     var prime = (primeType === "") ? "" : "&rh=p_85%3A1&dc&qid=" + primeType + "&ref=sr_nr_p_85_1";
     var coupon = (couponType === "") ? "" : "&srs=" + couponType;
@@ -409,7 +409,7 @@ if(isMobile()){
       postTime = time;
     }
     
-    var query = rootURL+ key + type + prime + coupon + shipping + fast + postTime + "&tag=oigbt-20";
+    var query = rootURL+ type + prime + coupon + shipping + fast + postTime + key + "&tag=oigbt-20";
 
     window.open(query, '_blank');
     
