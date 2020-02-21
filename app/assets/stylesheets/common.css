@@ -548,17 +548,17 @@ header .gnb_m,header .gnb_open2{display:none;}
 .set_search_box{float:left;width:63%;margin-left:2%;background:white;margin:0 auto 50px auto;border-radius:5px;box-shadow:0 2px 10px rgba(0, 0, 0, 0.1);padding:34px;border:1px solid #aaa;}
 .set_search_box h2{margin:0 0 20px;}
 .disable{display:none;}
-/*.post-type, */.search-type, .coupon-type, .shipping-type, .fast-type{display:table;width:100%;/*table-layout:fixed;*/margin-bottom:20px;}
+/*.post-type, */.prime-type, .coupon-type, .shipping-type, .fast-type{display:table;width:100%;/*table-layout:fixed;*/margin-bottom:20px;}
 .post-type{}
 /*.on_off{width:20%;}*/
 .op_wrap{float:left;width:48%;margin:1%;}
-.post-type input, .search-type input, .coupon-type input, .shipping-type input, .fast-type input{display:none;}
-.post-type input:checked + label, .search-type input:checked + label, .coupon-type input:checked + label, .shipping-type input:checked + label, .fast-type input:checked + label{background:#08f;color:#fff;}
-/*.post-type label, */.search-type label, .coupon-type label, .shipping-type label, .fast-type label{display:table-cell;padding:10px;text-align:center;border:1px solid #e3e3e3;border-left:none;cursor:pointer;}
+.post-type input, .prime-type input, .coupon-type input, .shipping-type input, .fast-type input{display:none;}
+.post-type input:checked + label, .prime-type input:checked + label, .coupon-type input:checked + label, .shipping-type input:checked + label, .fast-type input:checked + label{background:#08f;color:#fff;}
+/*.post-type label, */.prime-type label, .coupon-type label, .shipping-type label, .fast-type label{display:table-cell;padding:10px;text-align:center;border:1px solid #e3e3e3;border-left:none;cursor:pointer;}
 .swich_on{border-top-right-radius:10px;border-bottom-right-radius:10px;}
 .swich_off{border-top-left-radius:10px;border-bottom-left-radius:10px;}
 /*.post-type label{float:left;width:20%;padding:10px;border:1px solid #ccc;}*/
-/*.post-type label:first-of-type, */.search-type label:first-of-type, .coupon-type label:first-of-type, .shipping-type label:first-of-type, .fast-type label:first-of-type{border-left:1px solid #e3e3e3;}
+/*.post-type label:first-of-type, */.prime-type label:first-of-type, .coupon-type label:first-of-type, .shipping-type label:first-of-type, .fast-type label:first-of-type{border-left:1px solid #e3e3e3;}
 .field {padding:15px 0;overflow:hidden;}
 .field span.label{width:20%;float:left;padding:10px 10px;}
 .field input, .field select{width:50%;float:left;padding:14px 10px;border:1px solid #e3e3e3;-webkit-appearance:none;-moz-appearance:none;appearance:none;border-radius:10px;background:#fff;color:#616161;font-size:14px;}
