@@ -5,10 +5,10 @@
 .most_article .boxes h2 a{font-size:23px;}
 .most_article .boxes a{text-decoration:none;color:#000;font-size:17px;letter-spacing:1.2px;display:block;margin-bottom:7px;padding:3px 0 3px 5px;}
 blockquote {font-family:'Oswald', sans-serif;line-height:1.2em;font-size:1.8em;column-span:2;-webkit-column-span:2;margin:0px;padding:0px;margin-left:5px;}
-.time{font-family:'PT Sans Narrow', sans-serif;font-size:15px;padding-bottom:12px;margin-bottom:30px;font-weight:700;text-transform:uppercase;}
+/*.time{font-family:'PT Sans Narrow', sans-serif;font-size:15px;padding-bottom:12px;margin-bottom:30px;font-weight:700;text-transform:uppercase;}*/
 @media only all and (min-width: 600px) {
   .most_article {-moz-columns:3;/* How many columns? */-webkit-columns:3;columns:3;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px;line-height:1.5em;font-size:1em;-webkit-column-rule:2px outset #444;-moz-column-rule:2px outset #444;column-rule:2px outset #444;}
-  .time{column-span: all;-webkit-column-span: all;}
+  /*.time{column-span: all;-webkit-column-span: all;}*/
 }
 
 @media screen and (max-width:640px){
