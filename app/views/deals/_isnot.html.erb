@@ -78,15 +78,26 @@
   </div>
 
   <div class="option_box op_wrap">
-      <p>Eligible For Prime</p>
-      <div class="prime-type on_off clearfix">
-        <input id="off" name="prime-type" type="radio" value="" checked>
-        <label class="first swich_off" for="off">OFF</label>
+    <p>Eligible For Prime</p>
+    <div class="prime-type on_off clearfix">
+      <input id="off" name="prime-type" type="radio" value="" checked>
+      <label class="first swich_off" for="off">OFF</label>
 
-        <input id="prime" name="prime-type" type="radio" value="p_85%3A2470955011">
-        <label for="prime" class="swich_on">ON</label>
-      </div>
+      <input id="prime" name="prime-type" type="radio" value="1582276412">
+      <label for="prime" class="swich_on">ON</label>
     </div>
+  </div>
+
+  <div class="option_box op_wrap">  
+    <p>Eligible for Free Shipping</p>
+    <div class="shipping-type on_off clearfix">
+      <input id="shipping_off" name="shipping-type" type="radio" value="" checked>
+      <label class="first swich_off" for="shipping_off">OFF</label>
+
+      <input id="shipping" name="shipping-type" type="radio" value="p_76%3A2661625011">
+      <label for="shipping" class="swich_on">ON</label>
+    </div>
+  </div>
 
   <div class="option_box op_wrap">  
     <p>Show Items With Coupons</p>
@@ -121,6 +132,7 @@
     var postType = $("input:radio[name='post-type']:checked").val();
     var primeType = $("input:radio[name='prime-type']:checked").val();
     var couponType = $("input:radio[name='coupon-type']:checked").val();
+    var shippingType = $("input:radio[name='shipping-type']:checked").val();
     var keyWord = $(".keyword").val();
     var timeType = $(".time select").val();
     var postMonth = $("select[name='month']").val();
@@ -129,8 +141,9 @@
     
     var key  = (keyWord === "") ? "" : keyWord;
     var type = (postType === "") ? "" : "&i=" + postType;
-    var prime = (primeType === "") ? "" : "&rh=" + primeType;
+    var prime = (primeType === "") ? "" : "&rh=p_85%3A1&dc&qid=" + primeType + "&ref=sr_nr_p_85_1";
     var coupon = (couponType === "") ? "" : "&srs=" + couponType;
+    var shipping = (shippingType === "") ? "" : "&rh=" + shippingType;
     var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
     var month = (postMonth === "") ? "" : postMonth+"-";
     var max = (postMax === "") ? "" : postMax;
