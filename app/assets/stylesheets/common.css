@@ -647,7 +647,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 button{background:#bad455;border:none;padding:10px 20px;}
 button.accordion{margin-bottom:10px;width:30%;margin-bottom:10px;background:#616161;color:#fff;font-size:15px;border-radius:10px;}
 button.accordion span{font-size:15px;font-weight:bold;}
-.panel{padding:0 18px;display:none;background-color:#fff;overflow:hidden;}
+.set_search_box .panel{padding:0 18px;display:none;background-color:#fff;overflow:hidden;}
+.set_search_box .feild_wrap, .set_search_box .option_wrap{margin-bottom:15px;}
 
 
 
