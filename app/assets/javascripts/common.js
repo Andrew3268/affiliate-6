@@ -267,7 +267,7 @@ updateNav();
     var key  = (keyWord === "") ? "" : keyWord;
     var type = (postType === "") ? "" : "&i=" + postType;
     var prime = (primeType === "") ? "" : "&rh=p_85%3A1&dc&qid=" + primeType + "&ref=sr_nr_p_85_1";
-    var coupon = (couponType === "") ? "" : "&srs=" + couponType + "&s=relevancerank";
+    var coupon = (couponType === "") ? "" : "&srs=" + couponType + "&s=relevancerank" + "&s?i=aps";
     var shipping = (shippingType === "") ? "" : "&rh=" + shippingType;
     var fast = (fastType === "") ? "" : "&rh=" + fastType;
     var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
