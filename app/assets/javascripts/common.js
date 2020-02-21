@@ -242,7 +242,12 @@ updateNav();
 
 //Search on Amazon[quick search]//
   $(document).ready(function(){
-  var rootURL = "https://www.amazon.com/s?k=";
+   if (".wrap" <= 500){
+      var rootURL = "https://www.amazon.com/s?i=";
+   } else {
+     var rootURL = "https://www.amazon.com/s?k=";  
+   }
+  
   
   $("select[name='time']").change(function(){
     if ( $(this).val() === "custom" ){
