@@ -617,7 +617,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 .box {
-  width: 500px;
+  width: 800px;
   background: white;
   margin: auto;
   border-radius: 5px;
@@ -633,9 +633,7 @@ h2 {
   display: none;
 }
 .post-type {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+  display: block;
   margin-bottom: 20px;
 }
 .post-type input {
@@ -646,16 +644,19 @@ h2 {
   color: white;
 }
 .post-type label {
-  display: table-cell;
+  /*display: table-cell;*/
+  display:inline-block;
+  margin-bottom:10px;
   padding: 10px;
   text-align: center;
-  border: 1px solid #e3e3e3;
-  border-left: none;
+  border:1px solid #ccc;
   cursor: pointer;
 }
-.post-type label:first-of-type {
+/*.post-type label:first-of-type {
   border-left: 1px solid #e3e3e3;
-}
+}*/
+
+
 .field {
   padding: 15px 0;
   overflow: hidden;
