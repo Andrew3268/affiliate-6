@@ -240,8 +240,7 @@ updateNav();
 
 
 
-
-
+//Search on Amazon[quick search]//
   $(document).ready(function(){
   var rootURL = "https://www.amazon.com/s?k=";
   
@@ -294,10 +293,9 @@ updateNav();
     
   });
 });
+//End//
 
-
-
-
+//See Categories on Amazon[quick search]//
 var acc = document.getElementsByClassName("accordion");
 var i;
 
@@ -312,3 +310,4 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+//End//
