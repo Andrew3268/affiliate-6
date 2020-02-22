@@ -2,7 +2,7 @@
 <div class="layout"><!--layout-->
   <div class="wrap">  
     <%= render 'shared/header_short' %>
-    <%= render 'shared/sub_header' %>
+    <%= render 'shared/header_amazon' %>
     <%= render 'shared/hotpro_header' %>
     
     <div class="more_search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>

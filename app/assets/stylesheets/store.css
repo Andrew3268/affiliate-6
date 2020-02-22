@@ -252,7 +252,7 @@
 }
 
 /* Dropdown Store Menu */
-.dropdown{display:inline-block;position:relative;display:none;margin-bottom:10px;width:100%;}
+.dropdown{display:inline-block;position:relative;display:none;margin:15px 0 10px 0;width:100%;}
 .store-button{display:inline-block;border:1px solid gray;border-radius:4px;padding:10px 30px 10px 20px;background-color:#fff;cursor:pointer;white-space:nowrap;width:100%;}
 .store-button:after{content:'';position:absolute;top:50%;right:15px;transform:translateY(-50%);width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid black;}
 .store-button:hover{background-color:#eee;}
