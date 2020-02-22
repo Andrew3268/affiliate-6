@@ -31,7 +31,7 @@
         <%end %>  
       </div>
       <div class="box line_three">
-        <p>Rating</p>
+        <p>Star Ratings</p>
         <% if @promocode.p_spare_03.present? %>
           <em>Avg. <%= @promocode.p_spare_03 %> / 5.0</em>
         <% else %>
@@ -39,7 +39,7 @@
         <% end %>
       </div>
       <div class="box line_three">
-        <p>Reviews</p>
+        <p>Customer Ratings</p>
         <% if @promocode.p_spare_04.present? %>
           <em><%= number_with_delimiter(@promocode.p_spare_04) %>+</em>
         <% else %>

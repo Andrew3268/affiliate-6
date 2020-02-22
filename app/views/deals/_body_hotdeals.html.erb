@@ -60,6 +60,29 @@
             <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_42) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_41) %></span>
           <% else %>
             <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_44) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_43) %></span>
+            <span>
+              <% if hotdeal.h_spare_02.present? %>
+                <% if hotdeal.h_spare_02.present? %>
+                  <em><%= hotdeal.h_spare_02 %></em>
+                <% else %>
+                  <!-- <em>-</em> -->
+                <% end %>
+              <% else %>
+                <% if hotdeal.h_spare_61.present? %>
+                  <% if hotdeal.h_spare_61.present? %>
+                    <em>w/ <%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %> Coupon</em>
+                  <% else %>
+                    <!-- <em>-</em> -->
+                  <% end %>
+                <% else %>
+                  <% if hotdeal.h_spare_62.present? %>
+                    <em>w/ <%= number_to_currency(hotdeal.h_spare_62) %> Coupon</em>
+                  <% else %>
+                    <!-- <em>-</em> -->
+                  <% end %>
+                <% end %>
+              <% end %>
+            </span>
           <% end %>
         <% end %>      
      </address>
@@ -81,7 +104,7 @@
          </em>
         </div>
         <div class="box">
-          <p>Rating</p>
+          <p>Star Rating</p>
           <% if hotdeal.h_spare_08.present? %>
           <em>Avg. <%= hotdeal.h_spare_08 %></em>
           <% else %>
@@ -89,37 +112,37 @@
           <% end %>
         </div>
         <div class="box">
-          <p>Reviews</p>
+          <p>Customer Ratings</p>
           <% if hotdeal.h_spare_09.present? %>
           <em><%= number_with_delimiter(hotdeal.h_spare_09) %>+</em>
           <% else %>
             <em>-</em>
           <% end %>
         </div>
-        <div class="box">
+        <!-- <div class="box">
           <p>Coupon</p>
           <% if hotdeal.h_spare_02.present? %>
-          <% if hotdeal.h_spare_02.present? %>
-            <em><%= hotdeal.h_spare_02 %></em>
+            <% if hotdeal.h_spare_02.present? %>
+              <em><%= hotdeal.h_spare_02 %></em>
+            <% else %>
+              <em>-</em>
+            <% end %>
           <% else %>
-            <em>-</em>
-          <% end %>
-        <% else %>
-          <% if hotdeal.h_spare_61.present? %>
             <% if hotdeal.h_spare_61.present? %>
-              <em><%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %></em>
+              <% if hotdeal.h_spare_61.present? %>
+                <em><%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %></em>
+              <% else %>
+                <em>-</em>
+              <% end %>
             <% else %>
-              <em>-</em>
-            <% end %>
-          <% else %>
-            <% if hotdeal.h_spare_62.present? %>
-              <em><%= number_to_currency(hotdeal.h_spare_62) %></em>
-            <% else %>
-              <em>-</em>
+              <% if hotdeal.h_spare_62.present? %>
+                <em><%= number_to_currency(hotdeal.h_spare_62) %></em>
+              <% else %>
+                <em>-</em>
+              <% end %>
             <% end %>
           <% end %>
-        <% end %>
-        </div>
+        </div> -->
       </div>
      </div>
 

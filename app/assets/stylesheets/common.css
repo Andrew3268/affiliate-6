@@ -578,7 +578,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .field .custom-time select {margin-right:5%;}
 .down_ct{overflow:visible;}
 .text-center{padding-top:30px;text-align:right;}
-.set_search_box button{width:40%;background:#08f;border:none;padding:15px 30px;color:#fff;font-weight:500;font-size:20px;border-radius:10px;}
+.set_search_box button{width:40%;background:#87c442;border:none;padding:15px 30px;color:#fff;font-weight:500;font-size:20px;border-radius:10px;}
 .search_dropdown{display:inline-block;}
 
 .set_search_box button{border:none;padding:10px 20px;}

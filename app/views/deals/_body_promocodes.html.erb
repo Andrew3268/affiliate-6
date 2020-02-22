@@ -43,6 +43,29 @@
        <% running_total = 0 %>
        <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
        <em class="discounted"><%= number_to_currency(running_total) %></em><span class="ori_price"><%= number_to_currency(promocode.p_spare_26) %></span>
+       <span>
+         <% if promocode.p_coupon_deal.present? %>
+            <% if promocode.p_coupon_deal.present? %>
+              <em><%= promocode.p_coupon_deal %></em>
+            <% else %>
+              <!-- <em>-</em> -->
+            <% end %>
+          <% else %>
+            <% if promocode.p_spare_55.present? %>
+              <% if promocode.p_spare_55.present? %>
+                <em>w/ <%= number_to_percentage(promocode.p_spare_55, precision: 0) %> Coupon</em>
+              <% else %>
+                <!-- <em>-</em> -->
+              <% end %>
+            <% else %>
+              <% if promocode.p_spare_56.present? %>
+                <em>w/ <%= number_to_currency(promocode.p_spare_56) %> Coupon</em>
+              <% else %>
+                <!-- <em>-</em> -->
+              <% end %>
+            <% end %>
+          <% end %>
+       </span>
 
        <% if promocode.p_end_date.present? %>
          <% if promocode.p_spare_50.present? %>
@@ -76,7 +99,7 @@
             </em>
           </div>
           <div class="box">
-            <p>Rating</p>
+            <p>Star Rating</p>
             <% if promocode.p_spare_03.present? %>
               <em>Avg. <%= promocode.p_spare_03 %></em>
             <% else %>
@@ -84,14 +107,14 @@
             <% end %>
           </div>
           <div class="box">
-            <p>Reviews</p>
+            <p>Customer Ratings</p>
             <% if promocode.p_spare_04.present? %>
               <em><%= number_with_delimiter(promocode.p_spare_04) %>+</em>
             <% else %>
               <em>-</em>
             <% end %>
           </div>
-          <div class="box">
+          <!-- <div class="box">
             <p>Coupon</p>
             <% if promocode.p_coupon_deal.present? %>
               <% if promocode.p_coupon_deal.present? %>
@@ -114,7 +137,7 @@
                 <% end %>
               <% end %>
             <% end %>
-          </div>
+          </div> -->
          </div>
         </div>
 
