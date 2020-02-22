@@ -4,12 +4,13 @@
 <div class="layout"><!--layout-->
   <div class="wrap">  
     <%= render 'shared/header_short' %>
+    <%= render 'shared/header_amazon' %>
+    <%= render 'shared/hotpro_header' %>
     <div class="dealpage_title">
       <% if params[:name].present? %>
         <p>#<%= params[:name] %></p>
       <% end %>
-    </div>
-    <%= render 'hotdeals/header' %>  
+    </div>  
 
       <% @hotdeals.each do |hotdeal| %>
         <figure class="deals_card">

@@ -140,7 +140,6 @@
 
 
 @media screen and (max-width:640px){
-  .hotdeals_nav{margin-top:10px;}
   .hotdeal_related{width:100%;}
   .hotdeal_related p{font-size:23px;}
   .hotdeal_form{width:100%;}
@@ -155,7 +154,6 @@
   .show_wrap .show_box .show_inner .hotdeal_inner .h_price{font-size:23px;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
-  .hotdeals_nav{margin-top:10px;}
   .hotdeals_new a{font-size:15px;}
   .hotdeal_related{width:100%;}
   .hotdeal_form{width:100%;}
@@ -167,7 +165,7 @@
 }
 
 /* Index Page */
-.dealpage_title{margin-top:60px;font-family: 'Righteous', cursive;}
+.dealpage_title{font-family: 'Righteous', cursive;}
 .dealpage_title p{position:relative;font-size:70px;}
 .dealpage_title p:after,
 .deals_code_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:100%;top:69.2%;margin-left:10px;-webkit-transform:translateY(-5px);transform:translateY(-5px);}
@@ -256,7 +254,7 @@
   .more_search input{width:100%;border:1px solid #ccc;}
   .deals_card{width:31.33%;}
   .deals_card img{width:85%;height:85%;}
-  .dealpage_title p{font-size:55px;}
+  .dealpage_title p{font-size:40px;}
   .deals_card .buy-now{display:block;}
   /*.deals_card .m_btn{display:block;}*/
   .deal_stores figcaption{padding:0px 20px 10px 20px;}
