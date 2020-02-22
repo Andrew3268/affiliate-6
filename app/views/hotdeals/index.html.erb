@@ -4,13 +4,8 @@
 <div class="layout"><!--layout-->
   <div class="wrap">  
     <%= render 'shared/header_short' %>
-    <!-- <div class="dealpage_title"><p>The Best Bargain on Amazon</p></div> -->
-    <div class="deals_main_menu clearfix">
-      <ul>
-        <li class="nth_1"><a href="/deals/bestdeals">Amazon's Bargain</a><a href="/storepromotions"><span>, Bargain By Store</span></a></li>
-      </ul>    
-    </div>
-    <%= render 'hotdeals/header' %>  
+    <%= render 'shared/sub_header' %>
+    <%= render 'shared/hotpro_header' %>  
 
       <div class="more_search"><%= form_for "",url: hotdeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>      
       <div class="clearfix" id="hotdeals">      
