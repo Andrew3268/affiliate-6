@@ -9,7 +9,7 @@
       <input type="radio" name="tab" id="tab2">
       <label for="tab2">Amazon Hodeals(ENG)</label>
       <input type="radio" name="tab" id="tab3">
-      <label for="tab3">Naver Blog</label>
+      <label for="tab3">Instagram</label>
       <input type="radio" name="tab" id="tab4">
       <label for="tab4">Store Promotions</label>
       <input type="radio" name="tab" id="tab5">
@@ -116,46 +116,83 @@
         </div><!--#/tab-content-2-->
 
         <div id="tab-content-3" class="tab-content">
-           <div class="for_sns">
-            <% @blog_deals.each do |hotdeal| %>
-              <% if hotdeal.h_spare_13.present? %>
-              
-                <div class="wrapping">
-                 <div><p class="title"><%= hotdeal.h_title %></p></div>
-                 <div class="image"><img src="<%= hotdeal.h_image %>"></div>
-                 <div class="info">
-                  <% if hotdeal.h_spare_42.present? %>
-                    <p class="h_price"><%= number_to_currency(hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-                  <% else %>
-                    <% running_total = 0 %>
-                    <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
-                    <p class="h_price"><%= number_to_currency(hotdeal.h_spare_44) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_43)  %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
-                  <% end %>
-                  <% if hotdeal.h_spare_08.present? %>
-                    <p class="h_rate">평균 평점: Avg <%= hotdeal.h_spare_08 %> / 5.0 rates | 리뷰 수: <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews <% if hotdeal.h_spare_07.present? %>| <% hotdeal.h_spare_07 %><span class="stock">재고가 얼마 남지 않음.</span></span><% end %></p>
-                  <% end %>
-
-                  <% if hotdeal.h_spare_41.present? %>
-                    <% running_total = 0 %>
-                    <% running_total =  hotdeal.h_spare_41.to_i - hotdeal.h_spare_42.to_i %>
-                    <em class="save_money">* <%= number_to_currency(running_total) %> 이상 절약 할 수 있습니다.</em>
-                   <% else %>
-                    <% running_total = 0 %>
-                    <% running_total =  hotdeal.h_spare_43.to_i - hotdeal.h_spare_44.to_i %>
-                    <em class="save_money">* <%= number_to_currency(running_total) %> 이상 절약 할 수 있습니다.</em>
-                   <% end %>
-
-                   <% if hotdeal.h_spare_02.present? %><em class="coupon">* 쿠폰을 통해 <%= hotdeal.h_spare_02 %> 추가 할인을 받을 수 있습니다.</em><% end %>
-                   <% if hotdeal.h_spare_12.present? %><% hotdeal.h_spare_12 %><em>* 본 상품은 무관세(관세없음) 대상입니다.</em><% end %>
-                   <em>* 가격과 핫딜 프로모션은 업데이트 날짜를 가준으로 변경 될 수 있습니다.</em>
-                   <h4><a href="<%= hotdeal.h_link %>">Check This Deals</a></h4>
-                 </div><!--./info-->
-                </div><!--./wrapping-->
-                <hr>
-              <% end %>
+          <div class="insta_wrap clearfix">
+            <% @insta_promo.each do |promo| %>
+              <div class="insta_promo card">
+                <div class="img">
+                  <img src="<%= promo.p_image %>">
+                </div>
+                <div class="inner">
+                  <h4><%= promo.p_title %></h4>
+                  <% running_total = 0 %>
+                  <% running_total =  promo.p_spare_26 - (promo.p_spare_27 / 100) * promo.p_spare_26 %>
+                  <div class="pricing">
+                    <span class="nth_1"><%= number_to_currency(promo.p_spare_26) %></span> <em></em>
+                    <span class="nth_2"><%= number_to_currency(running_total) %> </span>
+                    <br><strong>w/ coupon code</strong>
+                  </div>
+                  <p>Available at Amazon.com now</p>
+                </div>
+              </div>
             <% end %>
 
-          </div><!--./for_sns-->
+            <% @insta_hot.each do |hot| %>
+              <div class="insta_hot card">
+                <div class="img">
+                  <img src="<%= hot.h_image %>">
+                </div>
+                <div class="inner">
+                  <h4><%= hot.h_title %></h4>
+                  <% running_total = 0 %>
+                  <% running_total =  (hot.h_spare_43 - hot.h_spare_44) / hot.h_spare_43 * 100 %>
+                  <div class="pricing">
+                    <span class="nth_1"><%= number_to_currency(hot.h_spare_43) %></span> <em></em>
+                    <span class="nth_2"><%= number_to_currency(hot.h_spare_44) %></span>
+                    <!-- <span><%= number_to_percentage(running_total, precision: 0) %> OFF )</span> -->
+                  </div>
+                  <p>Available at Amazon.com now</p>
+                </div>
+              </div>
+            <% end %>
+
+            
+            <% @insta_store.each do |store| %>
+              <div class="insta_store card">
+                <div class="img">
+                  <% if store.sp_image.present? %>
+                    <img src="<%= store.sp_image %>">
+                  <% else %>
+                    <img src="<%= store.sp_spare_02 %>">
+                  <% end %>
+                </div>
+                <div class="inner">
+                  <h4><%= store.sp_title %></h4>
+                  <div class="pricing">
+                    <% if store.sp_spare_43.present? %>
+                      <% running_total = 0 %>
+                      <% running_total =  (store.sp_spare_42 - store.sp_spare_43) / store.sp_spare_42 * 100 %>
+                      <span class="nth_1"><%= number_to_currency(store.sp_spare_42) %></span> <em></em>
+                      <span class="nth_2"><%= number_to_currency(store.sp_spare_43) %></span>
+                      <!-- <%= number_to_percentage(running_total, precision: 0) %> OFF ) -->
+                    <% else %>
+                      <!-- <span class="nth_2"></span> -->
+                    <% end %>
+
+                  </div>
+                  <div class="where">
+                    <% if store.sp_store_name.present? %>
+                      <p>Available at <em>"<%= store.sp_store_name %>"</em> now</p>
+                    <% else%>
+                      <p>Available at <em>"<%= store.spcategory.name %>"</em> now</p>
+                    <% end %>
+                  </div>
+                </div>  
+              </div> 
+            <% end %>
+
+          </div>
+
+          
         </div><!--#/tab-content-3-->
 
         <div id="tab-content-4" class="tab-content">
@@ -200,6 +237,48 @@
         </div>        
 
         <div id="tab-content-5" class="tab-content">
+          <!-- <p>For Naver</p> -->
+          <!--  <div class="for_sns">
+            <% @blog_deals.each do |hotdeal| %>
+              <% if hotdeal.h_spare_13.present? %>
+              
+                <div class="wrapping">
+                 <div><p class="title"><%= hotdeal.h_title %></p></div>
+                 <div class="image"><img src="<%= hotdeal.h_image %>"></div>
+                 <div class="info">
+                  <% if hotdeal.h_spare_42.present? %>
+                    <p class="h_price"><%= number_to_currency(hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+                  <% else %>
+                    <% running_total = 0 %>
+                    <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+                    <p class="h_price"><%= number_to_currency(hotdeal.h_spare_44) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_43)  %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                  <% end %>
+                  <% if hotdeal.h_spare_08.present? %>
+                    <p class="h_rate">평균 평점: Avg <%= hotdeal.h_spare_08 %> / 5.0 rates | 리뷰 수: <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews <% if hotdeal.h_spare_07.present? %>| <% hotdeal.h_spare_07 %><span class="stock">재고가 얼마 남지 않음.</span></span><% end %></p>
+                  <% end %>
+
+                  <% if hotdeal.h_spare_41.present? %>
+                    <% running_total = 0 %>
+                    <% running_total =  hotdeal.h_spare_41.to_i - hotdeal.h_spare_42.to_i %>
+                    <em class="save_money">* <%= number_to_currency(running_total) %> 이상 절약 할 수 있습니다.</em>
+                   <% else %>
+                    <% running_total = 0 %>
+                    <% running_total =  hotdeal.h_spare_43.to_i - hotdeal.h_spare_44.to_i %>
+                    <em class="save_money">* <%= number_to_currency(running_total) %> 이상 절약 할 수 있습니다.</em>
+                   <% end %>
+
+                   <% if hotdeal.h_spare_02.present? %><em class="coupon">* 쿠폰을 통해 <%= hotdeal.h_spare_02 %> 추가 할인을 받을 수 있습니다.</em><% end %>
+                   <% if hotdeal.h_spare_12.present? %><% hotdeal.h_spare_12 %><em>* 본 상품은 무관세(관세없음) 대상입니다.</em><% end %>
+                   <em>* 가격과 핫딜 프로모션은 업데이트 날짜를 가준으로 변경 될 수 있습니다.</em>
+                   <h4><a href="<%= hotdeal.h_link %>">Check This Deals</a></h4>
+                 </div>
+                </div>
+                <hr>
+              <% end %>
+            <% end %>
+
+          </div> -->
+
         </div>
       </div>
     </div>
