@@ -1,0 +1,54 @@
+<div class="layout"><!--layout-->
+  <% if can? :update, @hotdeal %>
+    <div class="wrap">  
+      <%= render 'shared/header_short' %>
+      <%= render 'shared/header_marketing' %>
+
+        <div class="all_wrap">
+          <div class="common promocodes">
+            <h2>Today's Promo Codes On Amazon</h2>
+            <% @promocodes.each do |promocode| %>
+              <div class="all_box clearfix">
+                <p><%= promocode.p_title %></p>
+                <% if promocode.p_spare_03.present? %>
+                  <p>Avg <%= promocode.p_spare_03 %> rates | <%= number_with_delimiter(promocode.p_spare_04) %>+ reviews <% if promocode.p_spare_02.present? %>| <%= promocode.p_spare_02 %> <% end %></p>
+                <% end %>
+                <% running_total = 0 %>
+                <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
+                <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF with Promo Code <em>" <%= promocode.p_promocode %> "</em>)</span></p>
+                <% if promocode.p_end_date.present? %>
+                  <p>*Ends Date: <%= promocode.p_end_date %></p>
+                <% end %>
+                <a target="_blank" href="<%= promocode.p_link %>"><%= promocode.p_link %></a><br />
+              </div>   
+              <% end %>
+            <span class="check_more"> <a target="_blank" href="/promocodes">Check More Promo Codes: www.ohigottabuythis.net/promocodes</a></span>
+          </div>
+          <hr>
+          <div class="common hotdeals">
+            <h2>Today's Bargain On Amazon</h2>
+              <% @hotdeals.each do |hotdeal| %>
+                <div class="all_box clearfix">
+                  <p><%= hotdeal.h_title %></p>
+                  <% if hotdeal.h_spare_08.present? %>
+                    <p>Avg <%= hotdeal.h_spare_08 %> rates | <%= number_with_delimiter(hotdeal.h_spare_09) %>+ reviews <% if hotdeal.h_spare_07.present? %>| <%= hotdeal.h_spare_07 %> <% end %></p>
+                  <% end %>
+                  <% if hotdeal.h_spare_42.present? %>
+                    <p class="h_price"><%= number_to_currency(hotdeal.h_spare_42) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_41) %></span><span class="span_02"> | <%= number_to_percentage(hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
+                  <% else %>
+                    <% running_total = 0 %>
+                    <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+                    <p class="h_price"><%= number_to_currency(hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(hotdeal.h_spare_44) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                  <% end %>
+                  <a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_link %></a><br />
+                </div>
+              <% end %>
+            <span class="check_more"> <a target="_blank" href="/hotdeals">Check More Bargain: www.ohigottabuythis.net/hotdeals</a></span>
+          </div>
+         </div>
+       </div>
+    </div><!--./warp-->
+  <% end %>
+</div><!--./layout-->
+
+

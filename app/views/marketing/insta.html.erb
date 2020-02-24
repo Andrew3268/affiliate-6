@@ -1,0 +1,89 @@
+<div class="layout"><!--layout-->
+  <% if can? :update, @hotdeal %>
+    <div class="wrap">  
+      <%= render 'shared/header_short' %>
+      <%= render 'shared/header_marketing' %>
+
+      <div class="marketing_wrap">
+        <div class="insta_wrap clearfix">
+          <% @insta_promo.each do |promo| %>
+            <div class="insta_promo card">
+              <div class="img">
+                <img src="<%= promo.p_image %>">
+              </div>
+              <div class="inner">
+                <h4><%= promo.p_title %></h4>
+                <% running_total = 0 %>
+                <% running_total =  promo.p_spare_26 - (promo.p_spare_27 / 100) * promo.p_spare_26 %>
+                <div class="pricing">
+                  <span class="nth_1"><%= number_to_currency(promo.p_spare_26) %></span> <em></em>
+                  <span class="nth_2"><%= number_to_currency(running_total) %> </span>
+                  <br><strong>w/ coupon code</strong>
+                </div>
+                <p>Available at Amazon.com now</p>
+              </div>
+            </div>
+          <% end %>
+
+          <% @insta_hot.each do |hot| %>
+            <div class="insta_hot card">
+              <div class="img">
+                <img src="<%= hot.h_image %>">
+              </div>
+              <div class="inner">
+                <h4><%= hot.h_title %></h4>
+                <% running_total = 0 %>
+                <% running_total =  (hot.h_spare_43 - hot.h_spare_44) / hot.h_spare_43 * 100 %>
+                <div class="pricing">
+                  <span class="nth_1"><%= number_to_currency(hot.h_spare_43) %></span> <em></em>
+                  <span class="nth_2"><%= number_to_currency(hot.h_spare_44) %></span>
+                  <!-- <span><%= number_to_percentage(running_total, precision: 0) %> OFF )</span> -->
+                </div>
+                <p>Available at Amazon.com now</p>
+              </div>
+            </div>
+          <% end %>
+
+          
+          <% @insta_store.each do |store| %>
+            <div class="insta_store card">
+              <div class="img">
+                <% if store.sp_image.present? %>
+                  <img src="<%= store.sp_image %>">
+                <% else %>
+                  <img src="<%= store.sp_spare_02 %>">
+                <% end %>
+              </div>
+              <div class="inner">
+                <h4><%= store.sp_title %></h4>
+                <div class="pricing">
+                  <% if store.sp_spare_43.present? %>
+                    <% running_total = 0 %>
+                    <% running_total =  (store.sp_spare_42 - store.sp_spare_43) / store.sp_spare_42 * 100 %>
+                    <span class="nth_1"><%= number_to_currency(store.sp_spare_42) %></span> <em></em>
+                    <span class="nth_2"><%= number_to_currency(store.sp_spare_43) %></span>
+                    <!-- <%= number_to_percentage(running_total, precision: 0) %> OFF ) -->
+                  <% else %>
+                    <!-- <span class="nth_2"></span> -->
+                  <% end %>
+
+                </div>
+                <div class="where">
+                  <% if store.sp_store_name.present? %>
+                    <p>Available at <em>"<%= store.sp_store_name %>"</em> now</p>
+                  <% else%>
+                    <p>Available at <em>"<%= store.spcategory.name %>"</em> now</p>
+                  <% end %>
+                </div>
+              </div>  
+            </div> 
+          <% end %>
+
+        </div>
+      </div>
+          
+    </div><!--./warp-->
+  <% end %>
+</div><!--./layout-->
+
+

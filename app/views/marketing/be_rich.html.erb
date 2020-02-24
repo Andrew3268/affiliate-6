@@ -1,0 +1,14 @@
+<div class="layout"><!--layout-->
+  <% if can? :update, @hotdeal %>
+    <div class="wrap">  
+      <%= render 'shared/header_short' %>
+      <%= render 'shared/header_marketing' %>
+
+
+      <center class="lotto"><%= @lottery %></center>
+          
+    </div><!--./warp-->
+  <% end %>
+</div><!--./layout-->
+
+
