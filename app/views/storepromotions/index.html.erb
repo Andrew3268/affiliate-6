@@ -2,15 +2,15 @@
 <div class="layout"><!--layout-->
   <div class="wrap">  
     <%= render 'shared/header_short' %>
-    <!-- <div class="sd_category">
-      <% if params[:spcategory].present? %>
-        <div class="dealpage_title"><p>Promotions Of <span><%= params[:spcategory] %></span></p></div>
-      <% else %>
-        <div class="dealpage_title"><p>Sales & Promotions</p></div>    
-      <% end %>
-    </div> -->
     <%= render 'shared/header_bystore' %>
     <%= render 'deals/header_store' %>
+    <div class="sd_category">
+      <% if params[:spcategory].present? %>
+        <div class="dealpage_title sd_com"><p>Deals Of <span><%= params[:spcategory] %></span></p></div>
+      <% else %>
+        <!-- <div class="dealpage_title sd_com"><p>Sales & Promotions</p></div>     -->
+      <% end %>
+    </div>
 
     <div class="sp_wrap">
 
