@@ -4,6 +4,9 @@ class Hotdeal < ActiveRecord::Base
   has_many :impressions, :as=>:impressionable
   is_impressionable :counter_cache => true, :unique => true
 
+  validates :h_spare_43, presence: true
+  validates :h_spare_44, presence: true
+
   # def impression_count
   #   impressions.size
   # end
