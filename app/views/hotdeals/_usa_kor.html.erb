@@ -12,6 +12,7 @@
     <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
   <% end %>
  <% end %>
+
  
  <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->
 
@@ -76,9 +77,10 @@
       <span>
         <ul>
           <% if @hotdeal.h_spare_63.present? %>
-            <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>
-          <% else %>
             <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime.<i></i></a></li>
+            <!-- <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>             -->
+          <% else %>
+
           <% end %>
           <li>Average ratings and reviews may change after posting.</li>
         </ul>
@@ -204,6 +206,23 @@
       </div>
     </div>
   <% end %>
+
+  <!--
+  <% if @hotdeal.h_spare_07.present? || @hotdeal.h_spare_10.present? %>
+    <div class="info_box more_info">
+      <span>
+        <ul>
+          <% if @hotdeal.h_spare_07.present? %>
+            <li>Only few stocks left</li>
+          <% end %>
+          <% if @hotdeal.h_spare_10.present? %>
+            <li>You may save an additional 15% off on this month's Subscribe & Save items when you subscribe to 5 or more items during your current subscription month. </li>
+          <% end %>
+        </ul>
+      </span>
+    </div>
+  <% end %>
+  -->
 
 
   <% coupon_p61 = 0 %>
@@ -529,6 +548,7 @@
 
   <div class="code_btn">
    <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on&ensp;<em>Amazon</em></a>
+   <!-- <h6>If you purchase something through a post on our site, we may get a small commission of the sale.</h6> -->
   </div>
 
   <%if @hotdeal.h_spare_21.present? %>

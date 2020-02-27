@@ -35,9 +35,9 @@
                 <p><%= @storepromotion.sp_title %></p>
                 <p>#HotDeals #Coupons #CouponCodes 
                   <% if @storepromotion.sp_store_name.present? %>
-                    <p class="store_p">#<%= @storepromotion.sp_store_name %> 
+                    #<%= @storepromotion.sp_store_name %> 
                   <% else %>
-                    <p class="store_p">#<%= @storepromotion.spcategory.name %> 
+                    #<%= @storepromotion.spcategory.name %> 
                   <% end %>
                 </p>
                 <p>http://ohigottabuythis.net/storepromotions/<%=(params[:id]) %></p>
