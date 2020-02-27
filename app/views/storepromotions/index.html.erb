@@ -17,7 +17,7 @@
       <div class="sp_left clearfix">
         <div class="sp_menu">
           <div class="text show-more-height">
-            <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div>
+            <!-- <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div> -->
             <% if can? :update, @storepromotions %>
              <ul>
               <li class="admin"><%= link_to 'New Deals', new_storepromotion_path %></li>
