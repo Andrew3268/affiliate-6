@@ -272,6 +272,7 @@ if(isMobile()){
       var shippingType = $("input:radio[name='shipping-type']:checked").val();
       var fastType = $("input:radio[name='fast-type']:checked").val();
       var overseaType = $("input:radio[name='oversea-type']:checked").val();
+      var subscribeType = $("input:radio[name='subscribe-type']:checked").val();
       var keyWord = $(".keyword").val();
       var timeType = $(".time select").val();
       var postMonth = $("select[name='month']").val();
@@ -285,6 +286,7 @@ if(isMobile()){
       var shipping = (shippingType === "") ? "" : "&rh=" + shippingType;
       var fast = (fastType === "") ? "" : "&rh=" + fastType;
       var oversea = (overseaType === "") ? "" : "&rh=" + overseaType;
+      var subscribe = (subscribeType === "") ? "" : "&rh=" + subscribeType;
       var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
       var month = (postMonth === "") ? "" : postMonth+"-";
       var max = (postMax === "") ? "" : postMax;
@@ -302,7 +304,7 @@ if(isMobile()){
         postTime = time;
       }
       
-      var query = rootURL + type + prime + coupon + shipping + fast + oversea + postTime + key + "&tag=oigbt-20";
+      var query = rootURL + type + prime + coupon + shipping + fast + oversea + subscribe + postTime + key + "&tag=oigbt-20";
 
       window.open(query, '_blank');
       
@@ -331,6 +333,7 @@ if(isMobile()){
       var shippingType = $("input:radio[name='shipping-type']:checked").val();
       var fastType = $("input:radio[name='fast-type']:checked").val();
       var overseaType = $("input:radio[name='oversea-type']:checked").val();
+      var subscribeType = $("input:radio[name='subscribe-type']:checked").val();
       var keyWord = $(".keyword").val();
       var timeType = $(".time select").val();
       var postMonth = $("select[name='month']").val();
@@ -344,6 +347,7 @@ if(isMobile()){
       var shipping = (shippingType === "") ? "" : "&rh=" + shippingType;
       var fast = (fastType === "") ? "" : "&rh=" + fastType;
       var oversea = (overseaType === "") ? "" : "&rh=" + overseaType;
+      var subscribe = (subscribeType === "") ? "" : "&rh=" + subscribeType;
       var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
       var month = (postMonth === "") ? "" : postMonth+"-";
       var max = (postMax === "") ? "" : postMax;
@@ -361,7 +365,7 @@ if(isMobile()){
         postTime = time;
       }
       
-      var query = rootURL+ key + type + prime + coupon + shipping + fast + oversea + postTime + "&tag=oigbt-20";
+      var query = rootURL+ key + type + prime + coupon + shipping + fast + oversea + subscribe + postTime + "&tag=oigbt-20";
 
       window.open(query, '_blank');
       
