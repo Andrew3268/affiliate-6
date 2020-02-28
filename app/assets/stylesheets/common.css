@@ -563,9 +563,12 @@ header .gnb_m,header .gnb_open2{display:none;}
 .post-type{}
 /*.on_off{width:20%;}*/
 .op_wrap{float:left;width:31%;margin:1%;}
-.post-type input, .prime-type input, .coupon-type input, .shipping-type input, .fast-type input{display:none;}
-.post-type input:checked + label, .prime-type input:checked + label, .coupon-type input:checked + label, .shipping-type input:checked + label, .fast-type input:checked + label{background:#87c442;color:#fff;}
-.prime-type label, .coupon-type label, .shipping-type label, .fast-type label{display:table-cell;padding:10px;text-align:center;border:1px solid #e3e3e3;border-left:none;cursor:pointer;}
+/*.post-type input, .prime-type input, .coupon-type input, .shipping-type input, .fast-type input{display:none;}*/
+/*.post-type input:checked + label, .prime-type input:checked + label, .coupon-type input:checked + label, .shipping-type input:checked + label, .fast-type input:checked + label{background:#87c442;color:#fff;}*/
+/*.prime-type label, .coupon-type label, .shipping-type label, .fast-type label{display:table-cell;padding:10px;text-align:center;border:1px solid #e3e3e3;border-left:none;cursor:pointer;}*/
+.set_search_box .option_wrap .option_box .common input{display:none;}
+.set_search_box .option_wrap .option_box .common input:checked + label{background:#87c442;color:#fff;}
+.set_search_box .option_wrap .option_box .common label{display:table-cell;padding:10px;text-align:center;border:1px solid #e3e3e3;cursor:pointer;}
 .post-type label{display:inline-block;margin-bottom:10px;padding:10px;text-align:center;border:1px solid #ccc;cursor:pointer;font-size:11px;}
 .swich_on{border-top-right-radius:10px;border-bottom-right-radius:10px;}
 .swich_off{border-top-left-radius:10px;border-bottom-left-radius:10px;}
