@@ -224,8 +224,8 @@
 .show_banner .banner_img img{width:100%;}
 
 @media screen and (max-width:640px){
-  .more_search{margin:-10px 0 10px 0;}
-  .more_search input{width:100%;border:1px solid #ccc;}
+  .more_search{margin:10px 0;}
+  .more_search input{width:100%;border:1px solid #ccc;border-radius:10px;}
   .deals_card{width:48%;}
   .deals_card img{width:80%;height:80%;}
   .deals_card .buy-now{display:none;}
