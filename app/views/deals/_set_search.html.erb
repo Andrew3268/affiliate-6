@@ -104,27 +104,30 @@
       </div>
     </div>
 
-   <!--  <div class="option_box op_wrap">  
-      <p>Get it by tomorrow</p>
-      <div class="fast-type on_off clearfix">
-        <input id="coupon_off" name="fast-type" type="radio" value="" checked>
-        <label class="first swich_off" for="coupon_off">OFF</label>
+    <% if can? :update, @promocode %>
 
-        <input id="fast" name="fast-type" type="radio" value="2231352011">
-        <label for="fast" class="swich_on">ON</label>
+     <!--  <div class="option_box op_wrap">  
+        <p>Get it by tomorrow</p>
+        <div class="fast-type on_off clearfix">
+          <input id="coupon_off" name="fast-type" type="radio" value="" checked>
+          <label class="first swich_off" for="coupon_off">OFF</label>
+
+          <input id="fast" name="fast-type" type="radio" value="2231352011">
+          <label for="fast" class="swich_on">ON</label>
+        </div>
+      </div> -->
+
+      <div class="option_box op_wrap">  
+        <p>International Shipping</p>
+        <div class="oversea-type on_off common clearfix">
+          <input id="coupon_off" name="oversea-type" type="radio" value="" checked>
+          <label class="first swich_off" for="oversea_off">OFF</label>
+
+          <input id="oversea" name="oversea-type" type="radio" value="p_n_shipping_option-bin%3A3242350011&dc&qid=1582884089&rnid=2944662011">
+          <label for="oversea" class="swich_on">ON</label>
+        </div>
       </div>
-    </div> -->
-
-    <div class="option_box op_wrap">  
-      <p>International Shipping</p>
-      <div class="oversea-type on_off common clearfix">
-        <input id="coupon_off" name="oversea-type" type="radio" value="" checked>
-        <label class="first swich_off" for="coupon_off">OFF</label>
-
-        <input id="oversea" name="oversea-type" type="radio" value="p_n_shipping_option-bin%3A3242350011&dc&qid=1582884089&rnid=2944662011">
-        <label for="oversea" class="swich_on">ON</label>
-      </div>
-    </div>
+    <% end %>
 
 
     <a class="set_reset_m" href="/deals/quick_search">Reset</a>
