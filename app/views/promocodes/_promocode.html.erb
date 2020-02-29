@@ -30,6 +30,9 @@
         <% else %>
           <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
         <% end %>
+        <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
+          <div class="mark wcoupon wcp"><span class="wcou_01">Plus</span><em class="wcoup">coupon</em></div>
+        <% end %>
        </div>
     <% end %>
   <% else %>

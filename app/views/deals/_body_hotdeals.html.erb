@@ -71,13 +71,13 @@
               <% else %>
                 <% if hotdeal.h_spare_61.present? %>
                   <% if hotdeal.h_spare_61.present? %>
-                    <em>+ <%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %> Off Coupon</em>
+                    <em class="pcou">+ <%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %> Off Coupon</em>
                   <% else %>
                     <!-- <em>-</em> -->
                   <% end %>
                 <% else %>
                   <% if hotdeal.h_spare_62.present? %>
-                    <em>+ <%= number_to_currency(hotdeal.h_spare_62) %> Off Coupon</em>
+                    <em class="pcou">+ <%= number_to_currency(hotdeal.h_spare_62) %> Off Coupon</em>
                   <% else %>
                     <!-- <em>-</em> -->
                   <% end %>

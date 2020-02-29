@@ -124,7 +124,7 @@ class StorepromotionsController < ApplicationController
     def storepromotion_params
       params.require(:storepromotion).permit(:sp_title, :sp_description, :spcategory_id, :sp_store_name, :sp_image, :sp_storepromotion,
                      :sp_end_date, :sp_percentage_01, :sp_percentage_02, :sp_link, :sp_spare_60, :sp_spare_61, :sp_spare_40, :sp_spare_41,
-                     :sp_spare_42, :sp_spare_43, :sp_spare_01, :sp_promocode, :sp_spare_02, :sp_spare_93)
+                     :sp_spare_42, :sp_spare_43, :sp_spare_01, :sp_promocode, :sp_spare_02, :sp_spare_93, :sp_spare_03)
     end
 end
 

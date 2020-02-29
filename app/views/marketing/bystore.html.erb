@@ -41,7 +41,30 @@
             </div><br />
           <% end %>
         </div>
+
+        <div class="common promocodes">
+          <p class="category">For Korean</p>
+          <% @storepromotions.each do |storepromotion| %>
+            <div class="all_box clearfix">
+              <% if storepromotion.sp_store_name.present? %>
+                <p><%= storepromotion.sp_store_name %></p>
+              <% else %>
+                <p><%= storepromotion.spcategory.name %></p>
+              <% end %>
+              <p><%= storepromotion.sp_spare_01 %></p>
+              <% if storepromotion.sp_spare_42.present? %>
+                <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01">( Was <%= number_to_currency(storepromotion.sp_spare_42) %> )</span><span class="span_02"></span></p>
+              <% end %>
+              <a href="<%= storepromotion.sp_link %>">Shop Now</a>
+            </div><br />
+          <% end %>
+        </div>
+        
       </div> 
+
+
+      
+      
        
     </div><!--./warp-->
   <% end %>

@@ -54,13 +54,13 @@
           <% else %>
             <% if promocode.p_spare_55.present? %>
               <% if promocode.p_spare_55.present? %>
-                <em>+ <%= number_to_percentage(promocode.p_spare_55, precision: 0) %> Off Coupon</em>
+                <em class="pcou">+ <%= number_to_percentage(promocode.p_spare_55, precision: 0) %> Off Coupon</em>
               <% else %>
                 <!-- <em>-</em> -->
               <% end %>
             <% else %>
               <% if promocode.p_spare_56.present? %>
-                <em>+ <%= number_to_currency(promocode.p_spare_56) %> Off Coupon</em>
+                <em class="pcou">+ <%= number_to_currency(promocode.p_spare_56) %> Off Coupon</em>
               <% else %>
                 <!-- <em>-</em> -->
               <% end %>

@@ -183,12 +183,12 @@
 
     </div>
   <% end %>
-  <% if @hotdeal.h_spare_02.present? || @hotdeal.h_spare_45.present? %>
+  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? || @hotdeal.h_spare_45.present? %>
     <div class="info_box">
       <span>
         <ul>
-          <% if @hotdeal.h_spare_02.present? %>
-            <li>Check coupon on detail page to receive your extra savings.</li>
+          <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+            <li>Check coupon on the detail page to receive your extra savings.</li>
           <% end %>
           <% if @hotdeal.h_spare_45.present? %>
             <li>Price dropped compare to last posted.</li>
