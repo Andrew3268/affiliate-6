@@ -279,6 +279,8 @@ if(isMobile()){
       var timeType = $(".time select").val();
       var postMonth = $("select[name='month']").val();
       var postMax = $("select[name='max']").val();
+      var minPct = $("select[name='minpct']").val();
+      var maxPct = $("select[name='maxpct']").val();
       // var postYear = $(".year").val();
       
       var key  = (keyWord === "") ? "" : "&field-keywords=" + keyWord;
@@ -294,6 +296,8 @@ if(isMobile()){
       var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
       var month = (postMonth === "") ? "" : postMonth+"-";
       var max = (postMax === "") ? "" : postMax;
+      var mipct = (minPct === "") ? "" : "&rh=p_75%3A"+ minPct+ "-";
+      var mxpct = (maxPct === "") ? "" : maxPct;
       // var year = (postYear === "") ? "" : postYear+"/";
       var postTime;
       
@@ -308,7 +312,7 @@ if(isMobile()){
         postTime = time;
       }
       
-      var query = rootURL + type + mip + mxp + prime + coupon + shipping + fast + oversea + subscribe + postTime + key + "&tag=oigbt-20";
+      var query = rootURL + type + mip + mxp + mipct + mxpct + prime + coupon + shipping + fast + oversea + subscribe + postTime + key + "&tag=oigbt-20";
 
       window.open(query, '_blank');
       
@@ -344,6 +348,8 @@ if(isMobile()){
       var timeType = $(".time select").val();
       var postMonth = $("select[name='month']").val();
       var postMax = $("select[name='max']").val();
+      var minPct = $("select[name='minpct']").val();
+      var maxPct = $("select[name='maxpct']").val();
       // var postYear = $(".year").val();
       
       var key  = (keyWord === "") ? "" : keyWord;
@@ -359,6 +365,8 @@ if(isMobile()){
       var time = (timeType === "" || timeType === "custom") ? "": timeType + "/";
       var month = (postMonth === "") ? "" : postMonth+"-";
       var max = (postMax === "") ? "" : postMax;
+      var mipct = (minPct === "") ? "" : "&rh=p_75%3A"+ minPct+ "-";
+      var mxpct = (maxPct === "") ? "" : maxPct;
       // var year = (postYear === "") ? "" : postYear+"/";
       var postTime;
       
@@ -373,7 +381,7 @@ if(isMobile()){
         postTime = time;
       }
       
-      var query = rootURL+ key + mip + mxp +type + prime + coupon + shipping + fast + oversea + subscribe + postTime + "&tag=oigbt-20";
+      var query = rootURL+ key + mip + mxp + mipct + mxpct + type + prime + coupon + shipping + fast + oversea + subscribe + postTime + "&tag=oigbt-20";
 
       window.open(query, '_blank');
       

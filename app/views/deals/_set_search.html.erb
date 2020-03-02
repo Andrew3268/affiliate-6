@@ -10,42 +10,79 @@
 
 
   <div class="feild_wrap">
-    <div class="field">
-      <span class="label">Search Keyword</span>
+    <div class="keyword_box clearfix">
+      <p>Keyword</p>
+      <!-- <span class="label">Search Keyword</span> -->
       <input type="text" class="keyword" placeholder="Search Keyword" value="">
     </div>
 
     <% if can? :update, @promocode %>
       <div class="pricing_box clearfix">
         <!-- <span class="label">Search Keyword</span> -->
-        <div class="field price min">
+        <div class="price min">
+          <p>Min Price</p>
           <!-- <span class="label">Min Price</span> -->
           <input type="text" class="minprice" placeholder="Min Price" value="">
         </div>
 
-        <div class="field price max">
+        <div class="price max">
+          <p>Max Price</p>
           <!-- <span class="label">Max Price</span> -->
           <input type="text" class="maxprice" placeholder="Max Price" value="">
         </div>
       </div>
+
+
+      <div class="pct_box clearfix">
+        <div class="minpct pct">
+          <p>Min Pct Off</p>
+          <select name="minpct">
+            <!-- <option value="">Min Pct Off</option> -->
+            <option value="0">0%</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+            <option value="60">60%</option>
+            <option value="70">70%</option>
+            <option value="80">80%</option>
+            <option value="90">90%</option>
+          </select>
+        </div>
+
+        <div class="maxpct pct">
+          <p>Max Pct Off</p>
+          <select name="maxpct">
+            <!-- <option value="">Max Pct Off</option> -->
+            <option value="0">0%</option>
+            <option value="5">5%</option>
+            <option value="10">10%</option>
+            <option value="20">20%</option>
+            <option value="30">30%</option>
+            <option value="40">40%</option>
+            <option value="50">50%</option>
+            <option value="60">60%</option>
+            <option value="70">70%</option>
+            <option value="80">80%</option>
+            <option value="90">90%</option>
+          </select>
+        </div>
+      </div>
+
+
     <% end %>
+
+
 
   
     
-    <div class="field time">
+    <!-- <div class="field time">
       <span class="label">Search Option</span>
       <select name="time">
         <option value="">Select</option>
         <option value="custom">Set Discount Range</option>
-        <!-- <option value="stories-live">Just now (live)</option>
-        <option value="today/date/stories">Today</option>
-        <option value="yesterday/date/stories">Yesterday</option>
-        <option value="this-week/date/stories">This week</option>
-        <option value="last-week/date/stories">Last week</option>
-        <option value="this-month/date/stories">This month</option>
-        <option value="last-month/date/stories">Last month</option>
-        <option value="this-year/date/stories">This year</option>
-        <option value="last-year/date/stories">Last year</option> -->
       </select>
 
       <div class="custom-time disable">
@@ -80,9 +117,11 @@
             <option value="90">90%</option>
           </select>
         </div>
-        <!-- <input type="text" maxlength="4" class="year" placeholder="Year" name="year"> -->
-      </div><!--custom-time-->
-    </div><!--field-->
+        
+      </div>
+    </div> -->
+
+    
   </div><!--feild_wrap-->
   
 
