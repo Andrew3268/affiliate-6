@@ -10,11 +10,28 @@
 
 
   <div class="feild_wrap">
-    <div class="field ">
+    <div class="field">
       <span class="label">Search Keyword</span>
       <input type="text" class="keyword" placeholder="Search Keyword" value="">
     </div>
 
+    <% if can? :update, @promocode %>
+      <div class="pricing_box clearfix">
+        <!-- <span class="label">Search Keyword</span> -->
+        <div class="field price min">
+          <!-- <span class="label">Min Price</span> -->
+          <input type="text" class="minprice" placeholder="Min Price" value="">
+        </div>
+
+        <div class="field price max">
+          <!-- <span class="label">Max Price</span> -->
+          <input type="text" class="maxprice" placeholder="Max Price" value="">
+        </div>
+      </div>
+    <% end %>
+
+  
+    
     <div class="field time">
       <span class="label">Search Option</span>
       <select name="time">
@@ -106,16 +123,16 @@
 
     <% if can? :update, @promocode %>
 
-     <!--  <div class="option_box op_wrap">  
-        <p>Get it by tomorrow</p>
+      <div class="option_box op_wrap">  
+        <p>w/ Get it by tomorrow</p>
         <div class="fast-type on_off clearfix">
-          <input id="coupon_off" name="fast-type" type="radio" value="" checked>
-          <label class="first swich_off" for="coupon_off">OFF</label>
+          <input id="fast_off" name="fast-type" type="radio" value="" checked>
+          <label class="first swich_off" for="fast_off">OFF</label>
 
-          <input id="fast" name="fast-type" type="radio" value="2231352011">
+          <input id="fast" name="fast-type" type="radio" value="p_90%3A8308921011&dc&crid=12AG8FB7CS5F2&qid=1583144920&rnid=8308919011">
           <label for="fast" class="swich_on">ON</label>
         </div>
-      </div> -->
+      </div>
 
       <div class="option_box op_wrap">  
         <p>w/ International Shipping</p>
@@ -138,6 +155,8 @@
           <label for="subscribe" class="swich_on">ON</label>
         </div>
       </div>
+
+      
 
     <% end %>
 

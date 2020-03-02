@@ -143,4 +143,8 @@ class DealsController < ApplicationController
   end
 
 
+  def new_test
+  end
+
+
 end
