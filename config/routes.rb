@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  root 'deals#quick_search'
+
   resources :sitemap, only: [:index]
   get 'sitemap.xml', :controller => "sitemap", :action =>"xml"
   
@@ -48,7 +50,7 @@ Rails.application.routes.draw do
   # root 'gadgets#index01'
   # root 'home#index'
   # root 'home#index_01'
-  root 'home#index_02'
+  # root 'home#index_02'
   
   resources :recommends
   # root 'recommends#index'

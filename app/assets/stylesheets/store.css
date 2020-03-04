@@ -87,7 +87,7 @@
 
 /* Store Promotions Main Page ["/storepromotions"]*/
 .sp_wrap{margin-top:35px;font-family: 'Montserrat', sans-serif;}
-.sp_wrap .sp_left{float:left;width:25%;margin-right:2%;border:1px solid #ccc;border-radius:10px;padding:7px;}
+.sp_wrap .sp_left{float:left;width:25%;height:2017.500px;margin-right:2%;border:1px solid #ccc;border-radius:10px;padding:7px;overflow:scroll;}
 .sp_wrap .sp_right{float:left;width:73%;}
 
 .sp_wrap .sp_left .sp_menu{}
@@ -125,7 +125,7 @@
 .sp_wrap .sp_right .inner{float:left;width:80%;margin-left:5%;}
 .sp_wrap .sp_right .inner em.new_mark{color: #fff;background:#ff0000;font-size:14px;padding:2px 5px;margin-right:7px;border-radius:7px;font-weight:bold;}
 .sp_wrap .sp_right .inner p{display:inline-block;}
-.sp_wrap .sp_right .inner span.index_title{font-weight:500;border:1px solid #ccc;padding:0 5px;}
+.sp_wrap .sp_right .inner span.index_title{padding:3px 10px;background:#ffff00;color:#000;font-weight:bold;border-radius:10px;}
 .sp_wrap .sp_right .inner .date_pc{display:inline;float:right;}
 /*.sp_wrap .sp_right .inner .expire_date em{display:inline-block;}*/
 .sp_wrap .sp_right .inner .sp_title{margin:2px 0;font-weight:500;line-height:1.2;font-size:15px;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;-webkit-box-orient:vertical;-webkit-line-clamp:2;}
