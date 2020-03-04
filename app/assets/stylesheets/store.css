@@ -96,7 +96,7 @@
 .sp_wrap .sp_left .sp_menu ul li.admin{background:#000;}
 .sp_wrap .sp_left .sp_menu ul li.admin a{color:#fff;}
 .sp_wrap .sp_left .sp_menu ul li a{color:#000;font-size:15px;display:block;}
-.sp_wrap .sp_left .sp_menu .show-more-height{height:387px;overflow:hidden;}
+/*.sp_wrap .sp_left .sp_menu .show-more-height{height:387px;overflow:hidden;}*/
 .sp_wrap .sp_left .sp_menu .store_search input{width:100%;padding:10px;border-radius:10px;border:1px solid #ccc;margin-bottom:5px;}
 .sp_wrap .sp_left .sp_menu button{background:#616161;padding:5px 15px;margin-bottom:5px;border-radius:15px;width:100%;font-size:15px;color:#fff;}
 .sp_wrap .sp_left .show-more{text-align:center;background:#000;color:#fff;padding:5px 10px;border-radius:15px;}
