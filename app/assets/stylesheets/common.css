@@ -57,7 +57,7 @@ body{/*font-family: 'Noto Sans KR','맑은고딕',sans-serif;*/font-family: 'Not
 
 
 /* header */
-.container{margin:0 auto;padding:0 40px;/*max-width:90vw;*/max-width:1200px;}
+.container{margin:0 auto;/*padding:0 40px;*//*max-width:90vw;*/max-width:1200px;}
 .arrow{display:block;width:24px;height:24px;transform:rotate(-90deg);}
 .box-left, .box-center, .box-right{display:flex;flex-wrap:wrap;align-items:center;}
 .box-right{margin-left:auto;}
@@ -667,10 +667,10 @@ header .gnb_m,header .gnb_open2{display:none;}
 .field .custom-time select {margin-right:5%;}
 .down_ct{overflow:visible;}
 .text-center{padding-top:30px;text-align:right;}
-.set_search_box button{width:40%;background:#87c442;border:none;padding:15px 30px;color:#fff;font-weight:500;font-size:20px;border-radius:10px;}
+.set_search_box button{width:40%;background:#87c442;border:none;padding:15px 30px;color:#fff;font-weight:500;font-size:20px;border-radius:10px;border:3px solid #000;}
 .search_dropdown{display:inline-block;}
 
-.set_search_box button{border:none;padding:10px 20px;}
+/*.set_search_box button{border:none;padding:10px 20px;}*/
 .set_search_box button.accordion{margin-bottom:10px;width:30%;margin-bottom:10px;background:#fff;color:#616161;font-size:15px;border-radius:10px;border:1px solid #ccc;font-weight:300;}
 .set_search_box button.accordion span{font-size:15px;font-weight:bold;}
 .set_search_box .panel{padding:0 18px;display:none;background-color:#fff;overflow:hidden;}
@@ -692,6 +692,11 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 a.set_reset, a.set_reset_m{border:1px solid #ccc;padding:10px 50px;color:#616161;border-radius:10px;float:left;}
 a.set_reset_m{display:none;}
+
+.mid_banner{margin-bottom:40px;}
+.mid_banner .md_box{float:left;width:23%;margin:1%;border:2px solid;text-align:center;padding:15px 10px;}
+.mid_banner .md_box p{font-size:30px;}
+.mid_banner .md_box a{background:#00cd00;color:#fff;padding:10px 30px;border-radius:20px;display:block;border:3px solid #000;margin:10px 0;} 
 
 @media screen and (max-width:640px){
   .set_search_box .feild_wrap .keyword_box input{width:95%;}

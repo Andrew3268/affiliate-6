@@ -10,6 +10,26 @@
         <div class="set_search clearfix">
           <%= render 'deals/set_search' %>
         </div>
+
+        <% if can? :update, @storepromotion %>
+          <div class="mid_banner clearfix">
+            <div class="md_box">
+              <p>Amazon Fresh</p>
+              <em>- Groceries delivered right to your door -</em>
+              <a href="#n">Shop Now</a>
+            </div>
+
+            <div class="md_box">
+              <p>Outlet Deals</p>
+              <a href="#n">Shop Now</a>
+            </div>
+
+            <div class="md_box">
+              <p>Rewared</p>
+              <a href="#n">Shop Now</a>
+            </div>
+          </div>
+        <% end %>
       
         <div class="lt_cnt">
           <h2 class="quick_h2">Quick Search</h2>
@@ -32,6 +52,8 @@
           <table class="tg">
              <%= render 'deals/set_pct' %>
           </table>
+
+
           <div class="set_banner set_b_m">
             <%= render 'deals/set_promotion' %>
           </div>

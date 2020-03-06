@@ -53,7 +53,7 @@ class GadgetsController < ApplicationController
   def create
     @gadget = current_user.gadgets.build(gadget_params)
     if @gadget.save
-      redirect_to '/'
+      redirect_to '/gadgets'
     else
       render 'new'
     end
@@ -64,7 +64,7 @@ class GadgetsController < ApplicationController
 
   def update
     if @gadget.update(gadget_params)
-      redirect_to '/'
+      redirect_to '/gadgets'
     else
       render 'edit'
     end

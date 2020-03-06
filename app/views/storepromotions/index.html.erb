@@ -105,7 +105,7 @@
                         <em class="new_mark">New</em>
                       <% end %>
                     <% end %>
-                    <span class="index_title"><%= storepromotion.spcategory.name %></span>
+                    <span class="index_title"><%= link_to storepromotion.spcategory.name, storepromotions_path(spcategory: storepromotion.spcategory.name) %></span>
                   </p>
                 <% end %>
                   <!--
