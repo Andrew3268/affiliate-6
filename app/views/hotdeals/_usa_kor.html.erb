@@ -12,6 +12,13 @@
     <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
   <% end %>
  <% end %>
+ <% if @hotdeal.h_spare_07.present? %>
+   <div class="add_line">
+    <ul>
+      <li class="stocks">Only in a few stocks left.</li>
+    </ul>
+   </div>
+  <% end %>
 
  
  <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->

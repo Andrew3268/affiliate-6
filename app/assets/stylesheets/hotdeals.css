@@ -30,7 +30,8 @@
 .show_wrap .show_box .show_inner .hotdeal_inner .h_price em{font-size:13px;}
 .show_wrap .show_box .show_inner .hotdeal_inner .add_line{margin:0 0 10px 0;border:1px dashed #ccc;border-left:0;border-right:0;}
 .show_wrap .show_box .show_inner .hotdeal_inner .add_line ul{margin-left:25px;}
-.show_wrap .show_box .show_inner .hotdeal_inner .add_line ul li{font-size:12px;color:#616161;list-style:disc;padding:5px 0;}
+.show_wrap .show_box .show_inner .hotdeal_inner .add_line ul li{font-size:12px;color:#616161;list-style:disc;padding:1px 0;}
+.show_wrap .show_box .show_inner .hotdeal_inner .add_line ul li.stocks{color:red;}
 
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info{font-weight:500;}
 .show_wrap .show_box .show_inner .hotdeal_inner .extra_info .basic_info .primeornot{display:none;}
