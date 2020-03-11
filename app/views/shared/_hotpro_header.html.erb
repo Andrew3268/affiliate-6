@@ -5,12 +5,14 @@
       <ul class="clearfix">
        <li><a href="/deals/quick_search">Amazon Deal Finder</a></li>
        <li><a href="/deals/bestdeals">Today's Best</a></li>
-       <li><a href="/hotdeals">Bargains</a></li>
+       <li><a href="/hotdeals">Deals</a></li>
        <!-- <li class="coumos1 more"><a href="/deals/bestdeals"> [ Daily Deals ]</a></li> -->
        <li><a href="/promocodes">Coupon Codes</a></li>
+       <li class="todays_deal"><a target="_blank" href="/deals/promo_codes">Deal of the Day</a></li>
+        <li class="todays_deal"><a target="_blank" href="https://amzn.to/2IsIyRw">Lightning Deals</a></li>
        <!-- <li class="more"><a href="/deals/promo_codes">[ Daily Codes ]</a></li> -->
        <!-- <li><a href="/deals/most_reviewed">Most-Reviewed</a></li> -->
-       <li class="coumos" ><a href="/deals/promotions">Sales Offer & Promotions</a></li>
+       <!-- <li class="coumos" ><a href="/deals/promotions">Sales Offer & Promotions</a></li> -->
        <li class="new_code"><% if can? :update, @promocodes %><%= link_to 'New Code', new_promocode_path %><% end %></li>
        <li class="new_deal"><% if can? :update, @hotdeals %><%= link_to 'New Bargain', new_hotdeal_path %><% end %></li>
        <!-- <li class="search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></li> -->
@@ -20,18 +22,20 @@
     <div class="gnb_m">
       <ul class="clearfix">
        <p>MENU</p>
-       <li class="top_menu"><a href="/deals/bestdeals">AMAZON's BARGAIN</a></li>
+       <li class="top_menu"><a href="/deals/bestdeals">ALL ABOUT AMAZON</a></li>
        <li><a href="/deals/quick_search">AMAZON DEAL FINDER,</a></li>
        <li><a href="/deals/bestdeals">TODAY'S BEST</a></li>
-       <li><a href="/hotdeals">BARGAIN</a></li>
+       <li><a href="/hotdeals">Deals</a></li>
        <!-- <li><a href="/hotdeals"> - MORE DEALS,</a></li> -->
        <li><a href="/promocodes">COUPON CODES,</a></li>
+       <li><a target="_blank" href="/deals/promo_codes">DEAL OF THE DAY,</a></li>
+        <li><a target="_blank" href="https://amzn.to/2IsIyRw">LIGHTNING DEALS</a></li>
        <!-- <li><a href="/promocodes"> - MORE CODES,</a></li> -->
        <!-- <li><a href="/deals/most_reviewed">MOST-REVIEWED,</a></li> -->
        <!-- <li><a href="/deals/coupons">SALES & COUPONS,</a></li> -->
        <!--<li><a href="deals-v2-onsale.html">On Sale</a></li>-->
-       <li><a href="/deals/promotions">SALES OFFER & PROMOTIONS,</a></li>
-       <li class="top_menu"><a href="/deals/stores">BARGAIN BY STORE</a></li>
+       <!-- <li><a href="/deals/promotions">SALES OFFER & PROMOTIONS,</a></li> -->
+       <li class="top_menu"><a href="/deals/stores">FEATURED DISCOUNTS</a></li>
        <li><a href="/storepromotions">DEALS & PROMOTIONS,</a></li>
        <!-- <li><a href="/storedeals">THE BEST DEALS</a></li> -->
        <li class="new_code"><% if can? :update, @promocodes %><%= link_to 'New Code', new_promocode_path %><% end %></li>
