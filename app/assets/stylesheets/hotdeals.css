@@ -199,7 +199,7 @@
 .deals_card .buy_now{z-index:20;}
 .deals_card figcaption{padding:0 20px;}
 .deals_card h3, .deals_card p{margin:0;}
-.deals_card h3{font-size:17px;font-weight:700;margin-bottom:5px;z-index:101;}
+.deals_card h3{font-size:17px;font-weight:700;margin-bottom:5px;z-index:101;display:none;}
 .deals_card h3 a{text-decoration:none;color:#000;}
 .deals_card p{font-size:13px;letter-spacing:1px;font-weight:400;line-height:1.4;height:2.8em;overflow:hidden;display:-webkit-box;display:-ms-flexbox;display:box;vertical-align:top;text-overflow:ellipsis;word-break:break-all;-webkit-box-orient:vertical;-webkit-line-clamp:2}
 .deals_card p a{text-decoration:none;color:#000;word-break:break-word;}
