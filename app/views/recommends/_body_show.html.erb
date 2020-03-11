@@ -36,11 +36,11 @@
     <% if @recommend.rec_spare_01.present? %>
       <div class="review_rating clearfix">
         <div class="box">
-          <p>Rating</p>
+          <p>Star Ratings</p>
           <em>Avg. <%= @recommend.rec_spare_01 %> / 5.0</em>
         </div>
         <div class="box">
-          <p>Reviews</p>
+          <p>Customer Ratings</p>
           <em><%= number_with_delimiter(@recommend.rec_spare_11) %>+</em>
         </div>  
       </div>

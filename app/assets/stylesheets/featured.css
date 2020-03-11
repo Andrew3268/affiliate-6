@@ -420,7 +420,7 @@
 .promotions{font-family: 'Montserrat', sans-serif;color:#616161;}
 .promotions .re_index{margin-top:20px;}
 .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:60px;}
-.promotions .featured .sm_pc .guide_controll button.top_10{width:123px;}
+.promotions .featured .sm_pc .guide_controll button.top_10{width:123px;outline:none;}
 .promotions .featured .sm_pc .most_rev button{width:145px;}
 .promotions .featured .sm_pc .most_rev button.reviewed{width:121px;}
 .promotions .featured .sm_pc .most_rev button.btn-primary{width:50px;margin-left:50px;}
@@ -429,7 +429,7 @@
 .promotions .featured .sm_pc .amzpromo button.reviewed{width:80px;}
 .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:20px;}
 .promotions .featured .sm_mobile .guide_controll p{font-size:40px;color:#fff;}
-.promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;}
+.promotions .featured .sm_mobile .guide_controll button{float:none;width:100%;text-align:left;font-size:40px;outline:none;}
 .promotions .guide_controll{background:#000;}
 .promotions .guide_controll .btn{font-size:19px;margin:0 0.5%;color:#fff;}
 .promotions .guide_controll .form-control{margin:10px 0;width:335px;padding:5px;line-height:25px;margin-left:35px;}
@@ -496,7 +496,7 @@
   .promotions .featured .sm_pc .amzpromo button{width:112px;}
   .promotions .featured .sm_pc .amzpromo button.reviewed{width:69px;}
   .promotions .featured .sm_pc .amzpromo button.btn-primary{width:50px;margin-left:20px;}
-  .promotions .featured .sm_pc .guide_controll button.top_10{width:105px;font-size:15px;border:1px solid;margin-bottom:5px;}
+  .promotions .featured .sm_pc .guide_controll button.top_10{width:105px;font-size:15px;border:1px solid;margin-bottom:5px;outline:none;}
   .promotions .guide_controll .btn{font-size:15px;}
   .promotions .guide_controll .form-control{margin:0 0 5px 0;width:100%;}
   .promotions .promotion_box .inner h2 a:hover{text-decoration:none;}
