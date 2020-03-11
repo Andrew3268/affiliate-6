@@ -167,6 +167,7 @@
 /* Index Page */
 .dealpage_title{font-family: 'Righteous', cursive;margin-top:80px;}
 .dealpage_title p{position:relative;font-size:55px;}
+.hashtag_page{margin-top:0px;}
 /*.dealpage_title p:after,
 .deals_code_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:100%;top:69.2%;margin-left:10px;-webkit-transform:translateY(-5px);transform:translateY(-5px);}*/
 .sd_com{margin:0;}
@@ -255,7 +256,7 @@
   .more_search{margin:-10px 0 10px 0;}
   .more_search input{width:100%;border:1px solid #ccc;}
   .deals_card{width:31.33%;}
-  .deals_card img{width:85%;height:85%;}
+  .deals_card img{width:70%;height:70%;}
   .dealpage_title p{font-size:40px;}
   .deals_card .buy-now{display:block;}
   /*.deals_card .m_btn{display:block;}*/
