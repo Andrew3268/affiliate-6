@@ -73,11 +73,11 @@
                   <% if storepromotion.sp_end_date.present? %>
                     <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                     <% storepromotion.sp_spare_60 %>
-                      <em class="expired code_em">Expired</em>
+                      <em class="expired code_em">*Expired</em>
                     <% else %>
                       <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
                       <% storepromotion.sp_spare_61 %>
-                       <em class="endtoday code_em">End Today</em>
+                       <em class="endtoday code_em">*End Today</em>
                       <% else %>
                        <!-- <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em> -->
                        <!-- <em class="code_em">* Offers can be expired fast.</em> -->
@@ -119,11 +119,11 @@
                   <% if storepromotion.sp_end_date.present? %>
                     <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
                     <% storepromotion.sp_spare_60 %>
-                      <em class="expired code_em">Expired</em>
+                      <em class="expired code_em">*Expired</em>
                     <% else %>
                       <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
                       <% storepromotion.sp_spare_61 %>
-                       <em class="endtoday code_em">End Today</em>
+                       <em class="endtoday code_em">*End Today</em>
                       <% else %>
                        <!-- <em class="code_em">* End Date: <%= storepromotion.sp_end_date %></em> -->
                        <!-- <em class="code_em">* Offers can be expired fast.</em> -->
