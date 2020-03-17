@@ -307,7 +307,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 
 @media screen and (max-width:640px){
-  .deals_main_menu{margin-top:60px;}
+  .deals_main_menu{margin-top:60px;text-align:center;}
   .deals_main_menu ul li em{font-size:30px;}
   .sub_nav{}
   .shoes_nav{margin-top:20px;}

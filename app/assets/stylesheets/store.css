@@ -162,7 +162,7 @@
   .sp_wrap .sp_right .sotre_card{width:48%;}
   .sp_wrap .sp_right .sp_card{float:none;width:100%;margin:1%;box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);padding: 5px 10px 10px 10px;height:152px;}
   .sp_wrap .sp_right .sp_image{float:left;width:35%;margin-top:15px;height:140px;}
-  .sp_wrap .sp_right .sp_image img{height:100%;object-fit:contain;z-index:-1;}
+  .sp_wrap .sp_right .sp_image img{height:100%;object-fit:contain;z-index:-1;padding:10px;}
   .sp_wrap .sp_right .date_comm em.expired{position:absolute;top:0;left:0;}
   .sp_wrap .sp_right .inner{float:left;width:60%;margin:10px 0 0 5%;}
   .sp_wrap .sp_right .inner .sp_title{font-size:13px;}
