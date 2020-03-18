@@ -89,6 +89,7 @@
   .on_gadgets .current_category{margin-bottom:30px;}
   .on_gadgets .current_category span{font-size:20px;}
   .on_gadgets .current_category p a{font-size:15px;}
+  .on_gadgets .card_wrap .card{margin:20px 0 0 0;position:inherit;}
   .on_gadgets .card_wrap .card-header{padding:5px;}
   .on_gadgets .card_wrap .card-body{padding:10px;}
   .on_gadgets .card_wrap .card-body h4{margin:15px 0;font-size:20px;}

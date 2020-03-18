@@ -1,0 +1,26 @@
+<h1 class="dealpage_title">New Category of Store Deals | <%= link_to 'New Category', new_sdcategory_path %></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Category ID</th>
+      <th>Display in navbar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sdcategories.each do |sdcategory| %>
+      <tr>
+        <td><%= sdcategory.name %></td>
+        <td><%= sdcategory.sdcategoriy_num %></td>
+        <td><%= sdcategory.display_in_navbar %></td>
+        <td><%= link_to 'Show', sdcategory %></td>
+        <td><%= link_to 'Edit', edit_sdcategory_path(sdcategory) %></td>
+        <td><%= link_to 'Destroy', sdcategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<a href="/storedeals">Back To Store Deals</a> |
+<%= link_to 'Back', storedeals_path %> 

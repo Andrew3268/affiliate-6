@@ -1,0 +1,26 @@
+<h1 class="dealpage_title">Listing Spcategories | <%= link_to 'New Spcategory', new_spcategory_path %></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Category ID</th>
+      <th>Display in navbar</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @spcategories.each do |spcategory| %>
+      <tr>
+        <td><%= spcategory.name %></td>
+        <td><%= spcategory.spc_category_num %></td>
+        <!-- <td><%= spcategory.spc_description %></td> -->
+        <td><%= spcategory.display_in_navbar %></td>
+        <td><%= link_to 'Show', spcategory %></td>
+        <td><%= link_to 'Edit', edit_spcategory_path(spcategory) %></td>
+        <td><%= link_to 'Destroy', spcategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<a href="/storepromotions">Back To Store Promotions</a>

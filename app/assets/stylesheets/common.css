@@ -133,6 +133,9 @@ body{/*font-family: 'Noto Sans KR','맑은고딕',sans-serif;*/font-family: 'Not
 @media screen and (min-width:641px) and (max-width:1199px){
 }
 
+/* Common */
+.admin_page{margin-top:500px;}
+
 
 /*@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);*/
 /*@import url(font.css);*/
