@@ -19,7 +19,7 @@ class HotdealsController < ApplicationController
   
   def index
     @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(48)
-    set_meta_tags title: 'Amazon Deals & Bargain',
+    set_meta_tags title: 'Today Discovery on Amazon',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Find the best bargain on Amazon and save money',
