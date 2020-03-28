@@ -147,4 +147,8 @@ class DealsController < ApplicationController
   end
 
 
+  def store_sales
+  end
+
+
 end

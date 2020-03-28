@@ -37,6 +37,7 @@ Rails.application.routes.draw do
   get 'deals/stores'
   get 'deals/all_deals'
   get 'deals/new_test'
+  get 'deals/store_sales'
 
   get 'marketing/insta'
   get 'marketing/amz_deal_e'

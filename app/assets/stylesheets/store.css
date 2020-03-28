@@ -278,3 +278,50 @@
 }
 
 
+/* Store Sale */
+.store_wrap{margin-top:30px;}
+.store_wrap .store_top{}
+.store_wrap .store_top h2{background:#000;color:#fff;padding:50px;font-size:50px;float:left;width:48%;text-align:center;}
+.store_wrap .store_mid{margin-top:30px;}
+.store_wrap .store_mid .mid_com{padding:20px;border:3px solid;}
+.store_wrap .store_mid .mid_left{float:left;width:48%;margin-right:2%;}
+.store_wrap .store_mid .mid_right{float:left;width:48%;margin-left:2%;}
+.store_wrap .store_mid .mid_com span{font-size:40px;display:block;border-bottom:3px solid;}
+.store_wrap .store_mid .mid_com .card{margin:15px 0;}
+.store_wrap .store_mid .mid_com .card p.none{color:#fff;}
+.store_wrap .store_mid .mid_com .card em{font-weight:600;}
+.store_wrap .store_mid .mid_com .card em.ls{font-size:30px;}
+.store_wrap .store_mid .mid_com .card a{float:right;color:#000;font-size:20px;border-top:3px solid;border-bottom:3px solid;padding:10px 5px;}
+.store_wrap .store_mid .mid_com .card a:hover{background:#000;color:#fff;}
+
+
+@media screen and (max-width:640px){
+  .store_wrap .store_top h2{float:none;width:100%;margin:0;font-size:30px;padding:25px;}
+  .store_wrap .store_mid .mid_left{float:none;width:100%;margin:0 0 20px 0;}
+  .store_wrap .store_mid .mid_right{float:none;width:100%;margin:0 0 20px 0;}
+  .store_wrap .store_mid .mid_com span{font-size:30px;}
+  .store_wrap .store_mid .mid_com .card{margin:30px 0;}
+  .store_wrap .store_mid .mid_com .card br{display:none;}
+  .store_wrap .store_mid .mid_com .card p{width:70%;font-size:12px;}
+  .store_wrap .store_mid .mid_com .card em.ls{font-size:20px;}
+  .store_wrap .store_mid .mid_com .card a{font-size:15px;border:2px solid;}
+  .store_wrap .store_mid .mid_com .card strong{display:none;}
+}
+
+@media screen and (min-width:641px) and (max-width:1199px){
+  .store_wrap .store_top h2{float:none;width:100%;margin:0;}
+  .store_wrap .store_mid .mid_left{float:none;width:100%;margin:0 0 20px 0;}
+  .store_wrap .store_mid .mid_right{float:none;width:100%;margin:0 0 20px 0;}
+  .store_wrap .store_mid .mid_com .card a{border:2px solid;}
+}
+
+
+
+
+
+
+
+
+
+
+
