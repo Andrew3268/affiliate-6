@@ -281,7 +281,7 @@
 /* Store Sale */
 .store_wrap{margin-top:30px;}
 .store_wrap .store_top{}
-.store_wrap .store_top h2{background:#000;color:#fff;padding:50px;font-size:50px;float:left;width:48%;text-align:center;}
+.store_wrap .store_top h2{background:#000;color:#fff;padding:50px;font-size:40px;float:left;width:48%;text-align:center;}
 .store_wrap .store_mid{margin-top:30px;}
 .store_wrap .store_mid .mid_com{padding:20px;border:3px solid;}
 .store_wrap .store_mid .mid_left{float:left;width:48%;margin-right:2%;}

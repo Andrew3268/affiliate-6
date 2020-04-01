@@ -20,7 +20,7 @@
                   <span class="nth_2"><%= number_to_currency(running_total) %> </span>
                   <br><strong>w/ coupon code</strong>
                 </div>
-                <p>Available at Amazon.com now</p>
+                <p>Available on Amazon.com now</p>
               </div>
             </div>
           <% end %>
@@ -39,7 +39,7 @@
                   <span class="nth_2"><%= number_to_currency(hot.h_spare_44) %></span>
                   <!-- <span><%= number_to_percentage(running_total, precision: 0) %> OFF )</span> -->
                 </div>
-                <p>Available at Amazon.com now</p>
+                <p>Available on Amazon.com now</p>
               </div>
             </div>
           <% end %>
@@ -70,9 +70,9 @@
                 </div>
                 <div class="where">
                   <% if store.sp_store_name.present? %>
-                    <p>Available at <em>"<%= store.sp_store_name %>"</em> now</p>
+                    <p>Available on <em>"<%= store.sp_store_name %>"</em> now</p>
                   <% else%>
-                    <p>Available at <em>"<%= store.spcategory.name %>"</em> now</p>
+                    <p>Available on <em>"<%= store.spcategory.name %>"</em> now</p>
                   <% end %>
                 </div>
               </div>  
