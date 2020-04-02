@@ -294,6 +294,8 @@
 .store_wrap .store_mid .mid_com .card em.ls a{color:#000;font-size:30px;}
 .store_wrap .store_mid .mid_com .card em.rs a{float:right;color:#000;font-size:20px;border-top:3px solid;border-bottom:3px solid;padding:10px 5px;}
 .store_wrap .store_mid .mid_com .card em.rs a:hover{background:#000;color:#fff;}
+.store_wrap .store_mid .mid_com .card a.shop_m{display:none;color:#616161;border-bottom:1px solid #ccc;}
+
 
 
 @media screen and (max-width:640px){
@@ -307,6 +309,7 @@
   .store_wrap .store_mid .mid_com .card em.ls a{font-size:20px;display:block;}
   .store_wrap .store_mid .mid_com .card em.rs a{display:none;}
   .store_wrap .store_mid .mid_com .card strong{display:none;}
+  .store_wrap .store_mid .mid_com .card a.shop_m{display:block;margin-top:10px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
