@@ -25,6 +25,7 @@
             <div class="admin">
               <%= link_to 'Back', storepromotions_path %> |
               <%= link_to 'Edit', edit_storepromotion_path(@storepromotion) %> |
+              <%= render 'storepromotions/body_sns' %>
               <%= @storepromotion.impressionist_count %> views
               <div class="sharing">
                 <% if @storepromotion.sp_store_name.present? %>
