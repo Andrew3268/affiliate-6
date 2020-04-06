@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @barcategory.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @barcategory.description %>
+</p>
+
+<p>
+  <strong>Display in navbar:</strong>
+  <%= @barcategory.display_in_navbar %>
+</p>
+
+<%= link_to 'Edit', edit_barcategory_path(@barcategory) %> |
+<%= link_to 'Back', barcategories_path %>

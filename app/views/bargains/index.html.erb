@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Bargains | <%= link_to "New Category", new_barcategory_path %></h1>
+
+<br><br><br>
+All Categories<br>
+<% Barcategory.all.each do |bar| %>
+  <%= link_to bar.name, bargains_path(barcategory: bar.name) %>
+<% end %>
+<br><br><br>
+Only in Navbar<br>
+<% Barcategory.where(display_in_navbar: true).each do |bar| %>
+  <%= link_to bar.name, bargains_path(barcategory: bar.name) %>
+<% end %>
+<br><br><br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th>Barcategory</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bargains.each do |bargain| %>
+      <tr>
+        <td><%= bargain.title %></td>
+        <td><%= bargain.body %></td>
+        <td><%= bargain.barcategory.name %></td>
+        <td><%= link_to 'Show', bargain %></td>
+        <td><%= link_to 'Edit', edit_bargain_path(bargain) %></td>
+        <td><%= link_to 'Destroy', bargain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Bargain', new_bargain_path %>

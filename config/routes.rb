@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :barcategories
+  resources :bargains
   root 'deals#quick_search'
 
   resources :sitemap, only: [:index]

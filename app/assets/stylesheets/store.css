@@ -296,11 +296,12 @@
 .store_wrap .store_mid .mid_com .card em.rs a:hover{background:#000;color:#fff;}
 .store_wrap .store_mid .mid_com .card a.shop_m{display:none;color:#616161;border-bottom:1px solid #ccc;}
 .store_wrap .store_mid .mid_com .card a.address{display:block;color:#616161;}
-
-
+.store_pin{display:none;}
 
 @media screen and (max-width:640px){
+  .store_wrap{margin-top:13px;}
   .store_wrap .store_top h2{float:none;width:100%;margin:0;font-size:30px;padding:25px;}
+  .store_wrap .store_mid{margin:0;}
   .store_wrap .store_mid .mid_left{float:none;width:100%;margin:0 0 20px 0;}
   .store_wrap .store_mid .mid_right{float:none;width:100%;margin:0 0 20px 0;}
   .store_wrap .store_mid .mid_com span{font-size:30px;}
@@ -311,6 +312,7 @@
   .store_wrap .store_mid .mid_com .card em.rs a{display:none;}
   .store_wrap .store_mid .mid_com .card strong{display:none;}
   .store_wrap .store_mid .mid_com .card a.shop_m{display:block;margin-top:10px;}
+  .store_pin{display:block;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){

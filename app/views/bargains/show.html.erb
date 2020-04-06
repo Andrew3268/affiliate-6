@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @bargain.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @bargain.body %>
+</p>
+
+<p>
+  <strong>Barcategory:</strong>
+  <%= @bargain.barcategory.name %>
+</p>
+
+<%= link_to 'Edit', edit_bargain_path(@bargain) %> |
+<%= link_to 'Back', bargains_path %>
