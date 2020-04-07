@@ -13,13 +13,13 @@
 .cu_sub_nav ul>li>a.active{color:#000;font-weight:500;border-bottom:2px solid;}
 
 @media screen and (max-width:640px){
-  .cu_sub_nav{margin:60px 0 -10px 0;}
+  .cu_sub_nav{margin:20px 0 -10px 0;}
   .cu_sub_nav ul>li{float:left;width:50%;text-align:center;}
   .cu_sub_nav ul>li>a{font-size:16px;}
 }
 
 @media screen and (min-width:641px) and (max-width:1199px){
-  .cu_sub_nav{margin:70px 0 0 0;}
+  .cu_sub_nav{margin:20px 0 0 0;}
   .cu_sub_nav ul>li>a{margin-bottom:15px;}
 }
 

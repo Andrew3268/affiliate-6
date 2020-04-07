@@ -320,6 +320,7 @@
   .store_wrap .store_mid .mid_left{float:none;width:100%;margin:0 0 20px 0;}
   .store_wrap .store_mid .mid_right{float:none;width:100%;margin:0 0 20px 0;}
   .store_wrap .store_mid .mid_com .card em.rs a{border:2px solid;}
+  .store_pin{display:block;}
 
 }
 
