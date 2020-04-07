@@ -1,67 +1,33 @@
-<header class="site-header">
-  <div class="site-toolbar">
-    <div class="container"></div>
-  </div>
-  <div class="navbar-container">
-    <div class="container">
-      <nav class="site-navbar">
-        <div class="box-left">
-          <a href="/" class="site-logo navbar-item nav_logo">OIGBT</a>
-        </div>
-        <div class="box-right">
-          <ul id="primary-menu" class="main-menu navbar-nav">
-            <li id="menu-item-1811" class="menu-item current-menu-item"><a href="/">Home</a></li>
-            <li id="menu-item-1770" class="menu-item menu-item-has-children">
-              <a href="#" aria-haspopup="true" aria-expanded="false">All About Amazon</a>
-              <ul class="sub-menu">
-                <li id="menu-item-1799" class="menu-item"><a href="#">Amazon Deals Finder</a></li>
-                <li id="menu-item-1800" class="menu-item"><a href="#">Today's Deals</a></li>
-                <li id="menu-item-1771" class="menu-item"><a href="#">Today's Promo Codes</a></li>
-              </ul>
-              <li id="menu-item-1811" class="menu-item current-menu-item"><a href="/">Stores</a></li>
-            </li>
+<div class="layout"><!--layout-->
+  <div class="wrap"> 
+  
+    <div class="new_container clearfix">
+      <nav>
+        <input type="checkbox" id="nav" class="hidden">
 
-            <li id="menu-item-1774" class="menu-item menu-item-has-children">
-              <a href="#" aria-haspopup="true" aria-expanded="false">Featured</a>
-              <ul class="sub-menu">
-                <li id="menu-item-1775" class="menu-item menu-item-has-children">
-                  <li id="menu-item-1803" class="menu-item"><a href="#">Gadgets</a></li>
-                  <li id="menu-item-1804" class="menu-item"><a href="#">Editor's Pick</a></li>
-                  <!-- <a href="#" aria-haspopup="true" aria-expanded="false">Level 2</a>
-                  <ul class="sub-menu">
-                    <li id="menu-item-1776" class="menu-item menu-item-has-children">
-                      <a href="#">Level 3</a>
-                      <ul class="sub-menu">
-                        <li id="menu-item-1776" class="menu-item">
-                          <a href="#" aria-haspopup="true" aria-expanded="false">Level 4</a>
-                        </li>
-                        <li id="menu-item-1801" class="menu-item"><a href="#">Level 4a</a></li>
-                        <li id="menu-item-1802" class="menu-item"><a href="#">Level 4b</a></li>
-                      </ul>
-                    </li>
-                    <li id="menu-item-1801" class="menu-item"><a href="#">Level 3a</a></li>
-                    <li id="menu-item-1802" class="menu-item"><a href="#">Level 3b</a></li>
-                  </ul> -->
-                </li>
-                <!-- <li id="menu-item-1803" class="menu-item"><a href="#">Level 2a</a></li>
-                <li id="menu-item-1804" class="menu-item"><a href="#">Level 2b</a></li> -->
-              </ul>
-            </li>
-            <!-- <li id="menu-item-1777" class="menu-item"><a href="#">Our Work</a></li>
-            <li id="menu-item-1805" class="menu-item"><a href="#">The News</a></li>
-            <li id="menu-item-1806" class="menu-item"><a href="#">Contact Us</a></li> -->
+        <label for="nav" class="nav-btn">
+          <i></i>
+          <i></i>
+          <i></i>
+        </label>
+
+        <div class="logo">
+          <!-- <a href="/"><img class="oh_logo" src="<%=asset_path 'oh_logo.jpg' %>" alt="ohigottabuythis" /></a> -->
+          <a href="/"><img class="oh_logo_big" src="<%=asset_path 'visual_01.jpg' %>" alt="ohigottabuythis" /></a></h1>
+          <!-- <a href="/">Oh,i gotta buy this</a> -->
+        </div>
+        
+        <div class="nav-wrapper">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/deals/quick_search">Bargain</a></li>
+            <li><a href="/gadgets">Gadgets</a></li>
+            <li><a href="/recommends">Featured</a></li>
           </ul>
-          <div class="navbar-item">
-            <a class="responsive-nav">
-              <span class="line"></span>
-              <span class="line"></span>
-              <span class="line"></span>
-            </a>
-          </div>
         </div>
       </nav>
     </div>
   </div>
-</header>
-<!-- overlay -->
-<div class="site-overlay"></div>
+</div>
+
+<hr class="header_hr">

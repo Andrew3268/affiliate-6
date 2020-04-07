@@ -1,43 +1,38 @@
-<header id="header">
-  <%= render 'shared/header_short' %> 
-</header>
-
 <div class="subcategory_wrap common_wrap clearfix">
   <div class="wrap">
 
-   <ul class="clearfix">
-    <li><a href="/categories">CATEGORIES,</a></li>
-    <li><a href="/gadgets/keywords"># KEYWORD</a></li>
-   </ul>
+     <ul class="clearfix">
+      <li><a href="/categories">CATEGORIES,</a></li>
+      <li><a href="/gadgets/keywords"># KEYWORD</a></li>
+     </ul>
 
-   <div class="subcategories">
-     <% Subcategory.all.each do |subcategory| %>
-        <span>#<%= link_to subcategory.subname, gadgets_path(subcategory: subcategory.subname) %>,</span>
-      <% end %>
-   </div>
+     <div class="subcategories">
+       <% Subcategory.all.each do |subcategory| %>
+          <span>#<%= link_to subcategory.subname, gadgets_path(subcategory: subcategory.subname) %>,</span>
+        <% end %>
+     </div>
 
-    <% if can? :update, @category %>    
-      <div class="categories">
-        <div class="wrap">
-         <h2>List of categories for ADMIN</h2>
-          <%= link_to "Add New Sub_Category", new_subcategory_path %>
-          <table>
-            <tr>
-              <th>Category</th>
-              <th colspan="2">Option</th>
-            </tr>
-            <% @subcategories.each do |category| %>
-             <tr>
-              <td><%= category.subname %></td>
-              <td><%= link_to "Edit", edit_category_path(category) %></td>
-              <td><%= link_to "Delete", category_path(category), method: :delete, data: {confirm: "Are you sure?"} %></td>
-             </tr>
-            <% end %>
-          </table>
+      <% if can? :update, @category %>    
+        <div class="categories">
+          <div class="wrap">
+           <h2>List of categories for ADMIN</h2>
+            <%= link_to "Add New Sub_Category", new_subcategory_path %>
+            <table>
+              <tr>
+                <th>Category</th>
+                <th colspan="2">Option</th>
+              </tr>
+              <% @subcategories.each do |category| %>
+               <tr>
+                <td><%= category.subname %></td>
+                <td><%= link_to "Edit", edit_category_path(category) %></td>
+                <td><%= link_to "Delete", category_path(category), method: :delete, data: {confirm: "Are you sure?"} %></td>
+               </tr>
+              <% end %>
+            </table>
+          </div>
         </div>
-      </div>
-    <% end %>
-
-
+      <% end %>
+      
   </div>
 </div>

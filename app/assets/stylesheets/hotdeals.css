@@ -255,7 +255,7 @@
 
 }
 @media screen and (min-width:641px) and (max-width:1199px){
-  .more_search{margin:-10px 0 10px 0;}
+  .more_search{margin:10px 0;}
   .more_search input{width:100%;border:1px solid #ccc;}
   .deals_card{width:31.33%;}
   .deals_card img{width:70%;height:70%;}

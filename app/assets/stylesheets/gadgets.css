@@ -1,4 +1,4 @@
-.gadgets_wrapper{margin-top:100px;}
+.gadgets_wrapper{margin-top:20px;}
 .gadgets_wrapper main {}
 .gadgets_wrapper main #filter{float:left;width:290px;background:#fff;border-right:1px solid #ccc;}
 .gadgets_wrapper main #filter.on{position:fixed;top:100px;}
@@ -16,7 +16,6 @@
 
 @media screen and (max-width:680px){
   .gadgets_wrapper main #filter .ui-group label{}
-  .gadgets_wrapper{margin-top:60px;}
   .gadgets_wrapper main #filter{position:fixed;right:-800px;top:0;width:100%;z-index:302;background:#000;}
   .gadgets_wrapper main #filter.on{top:0;}
   .gadgets_wrapper main #filter .ui-group{margin:10px 0 0 5%;}
@@ -31,7 +30,6 @@
 }
 
 @media screen and (min-width:681px) and (max-width:1199px){
-  .gadgets_wrapper{margin-top:180px;}
   .gadgets_wrapper main #filter{position:fixed;right:-800px;top:0;width:50%;z-index:302;background:#000;color:#fff;}
   .gadgets_wrapper main #filter.on{top:0;}
   .gadgets_wrapper main #filter .ui-group{margin:10px 0 0 5%;}
@@ -42,11 +40,6 @@
   .gadgets_wrapper main .gnb_open{display:block;position:fixed;right:5px;top:160px;z-index:301;margin:0 5%;}
   .gadgets_wrapper main .gnb_open.on{display:none;}
   .gadgets_wrapper main .gnb_open img{width:40px;height:40px;}
-  /*
-  .gadgets_wrapper main .gnb_open_b{display:none;position:fixed;right:5px;top:40px;z-index:301;margin:0 5%;}
-  .gadgets_wrapper main .gnb_open_b.on{display:block;right:5px;top:10px;}
-  .gadgets_wrapper main .gnb_open_b img{width:40px;height:40px;}
-  */
   .gadgets_wrapper main .gnb_kbg{display:none;position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:301;}
   .gadgets_wrapper main .gnb_close{display:block;position:absolute;right:0;top:12px;z-index:303;margin:0 5%;}
   .gadgets_wrapper main .gnb_close img{width:50px;height:50px;}
@@ -97,8 +90,7 @@
 }
 
 @media screen and (min-width:681px) and (max-width:1199px){
-  .gadgets_wrapper{margin-top:65px;}
-    .on_gadgets .current_category{margin-bottom:30px;}
+  .on_gadgets .current_category{margin-bottom:30px;}
   .on_gadgets .current_category span{font-size:35px;}
   .on_gadgets .current_category p a{font-size:20px;}
   .on_gadgets{width:100%;}

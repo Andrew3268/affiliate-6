@@ -6,7 +6,7 @@
 */
 
 /* Sub Menu */
-.cu_sub_nav{margin-top:80px;font-family: 'Righteous', cursive;}
+.cu_sub_nav{margin-top:20px;font-family: 'Righteous', cursive;}
 .cu_sub_nav ul{}
 .cu_sub_nav ul>li{float:left;text-align:center;}
 .cu_sub_nav ul>li>a{text-decoration:none;color:#3d3d3d;display:block;font-size:50px;}
