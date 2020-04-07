@@ -297,6 +297,8 @@
 .store_wrap .store_mid .mid_com .card a.shop_m{display:none;color:#616161;border-bottom:1px solid #ccc;}
 .store_wrap .store_mid .mid_com .card a.address{display:block;color:#616161;}
 .store_pin{display:none;}
+.store_pin>span{box-shadow:0 .60em 0 0 #ff8da1;}
+.store_pin span span{position:relative;top:.68em;padding:0 1rem;-webkit-box-decoration-break:clone;box-decoration-break:clone;}
 
 @media screen and (max-width:640px){
   .store_wrap{margin-top:13px;}
@@ -320,7 +322,10 @@
   .store_wrap .store_mid .mid_left{float:none;width:100%;margin:0 0 20px 0;}
   .store_wrap .store_mid .mid_right{float:none;width:100%;margin:0 0 20px 0;}
   .store_wrap .store_mid .mid_com .card em.rs a{border:2px solid;}
-  .store_pin{display:block;}
+  .store_pin{display:block;margin-top:-10px;}
+  .store_pin>span{box-shadow:0 1em 0 0 #ff8da1;}
+  .store_pin span span{font-size:20px;}
+
 
 }
 
