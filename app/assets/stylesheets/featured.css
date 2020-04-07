@@ -105,7 +105,7 @@
 /* End Featured Main Page */
 
 /* Begin Featured Detail Page */
-.cu_wrap{margin-top:80px;font-family: 'Montserrat', sans-serif;}
+.cu_wrap{margin-top:20px;font-family: 'Montserrat', sans-serif;}
 .cu_wrap .detitle{}
 .cu_wrap .detitle h2{font-size:30px;display:inline;border-bottom:0.4em solid rgba(0,168,225,0.2);position:relative;}
 .cu_wrap .detitle h2 span{position:relative;top:0.4em;}
