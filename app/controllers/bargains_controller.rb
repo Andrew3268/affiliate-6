@@ -6,16 +6,58 @@ class BargainsController < ApplicationController
   def index
     if params.has_key?(:barcategory)
       @barcategory = Barcategory.find_by_name(params[:barcategory])
-      @bargains = Bargain.where(barcategory: @barcategory)
+      @bargains = Bargain.where(barcategory: @barcategory).order("created_at DESC").page(params[:page]).per_page(30)
     else
-      @bargains = Bargain.all
+      @bargains = Bargain.all.order("created_at DESC").page(params[:page]).per_page(30)
     end
+    if params[:search]
+      @search_term = params[:search]
+      @bargains = @bargains.search_by(@search_term)
+    end
+    set_meta_tags title: 'The best featured deals of Amazon',
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: 'Take the best offers & promotions with promo codes and coupons',
+                  keywords: 'bargain, deals, promo codes, coupons',
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: 'The best featured deals of Amazon',
+                    description: 'Take the best offers & promotions with promo codes and coupons',
+                    # image: @hotdeal.h_image
+                  },
+                  og: {
+                    title: 'The best featured deals of Amazon',
+                    description: 'Take the best deals with promo codes and coupons',
+                    type: 'website',
+                    url: 'www.ohigottabuythis.net/bargains',
+                    # image: @hotdeal.h_image
+                  }
     
   end
 
   # GET /bargains/1
   # GET /bargains/1.json
   def show
+    set_meta_tags title: @bargain.bar_title,
+                  site: 'Oh,igottabuythis',
+                  revierse: true,
+                  description: @bargain.bar_detail,
+                  keywords: @bargain.bar_title,
+                  twitter: {
+                    card: "summary",
+                    site: "@OhIgottabuythis",
+                    title: @bargain.bar_title,
+                    description: @bargain.bar_detail,
+                    image: @bargain.bar_image
+                  },
+                  og: {
+                    title: @bargain.bar_title,
+                    description: @bargain.bar_detail,
+                    type: 'website',
+                    url: bargain_url(@bargain),
+                    image: @bargain.bar_image
+                  }
   end
 
   # GET /bargains/new
@@ -70,7 +112,7 @@ class BargainsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_bargain
-      @bargain = Bargain.find(params[:id])
+      @bargain = Bargain.friendly.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

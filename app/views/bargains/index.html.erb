@@ -2,7 +2,7 @@
   <div class="wrap">
 
     <%= render 'shared/header_amazon' %>
-    <%= render 'deals/navbar_deals' %> 
+    <%= render 'deals/header_featured' %> 
     <%= render 'shared/botton_amz' %>
 
     <div class="bargain_wrap clearfix">
@@ -15,6 +15,7 @@
               <li><%= link_to "New Category", new_barcategory_path %></li>
             <% end %>
           </div>
+          <div class="search_pc"><%= form_for "",url: bargains_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search here..." %><% end %></div>
           <li><a class="all" href="/bargains">All Categories</a></li>
           <% Barcategory.all.each do |bar| %>
             <li><%= link_to bar.name, bargains_path(barcategory: bar.name) %></li>
@@ -22,11 +23,13 @@
         </ul>
       </div>
 
+      <div class="search_m">
+        <%= form_for "",url: bargains_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search here..." %><% end %>
+      </div>
       <label class="dropdown">
         <div class="store-button">Categories</div>
         <input type="checkbox" class="store-input" id="test">
         <ul class="store_menu">
-          <!-- <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search here..." %><% end %></div> -->
           <li class="all_store"><a href="/bargains">All Stores</a></li>
           <% Barcategory.all.each do |bar| %>
             <li><%= link_to bar.name, bargains_path(barcategory: bar.name) %></li>
@@ -67,6 +70,7 @@
             </div>
           </div>
         <% end %>
+        <%= will_paginate @bargain %>
       </div>
 
 

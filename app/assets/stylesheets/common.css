@@ -683,8 +683,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 .set_search_box .feild_wrap .pricing_box{margin:15px 0;}
 .set_search_box .feild_wrap .pricing_box .price{float:left;width:45%;}
 .set_search_box .feild_wrap .keyword_box input{float:left;background:#fff;width:45%;height:40px;border:1px solid #e3e3e3;border-radius:5px;padding:0 10px;}
-.set_search_box .feild_wrap .pricing_box input,
-.set_search_box .feild_wrap .pct_box select{float:left;background:#fff;width:100%;height:40px;border:1px solid #e3e3e3;border-radius:5px;padding:0 10px;}
+.set_search_box .feild_wrap .pricing_box input{float:left;background:#fff;width:100%;height:40px;border:1px solid #e3e3e3;border-radius:5px;padding:0 10px;}
+.set_search_box .feild_wrap .pct_box select{float:left;background:#87c442;width:100%;height:40px;border:1px solid #e3e3e3;border-radius:5px;padding:0 10px;color:#fff;}
 .set_search_box .feild_wrap .pricing_box .min,
 .set_search_box .feild_wrap .pct_box .minpct{margin-right:2.5%;}
 .set_search_box .feild_wrap .pricing_box .max,
