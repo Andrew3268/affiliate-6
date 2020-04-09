@@ -1,51 +1,79 @@
 <div class="layout"><!--layout-->
-  <div class="wrap">  
+  <div class="wrap">
 
+    <%= render 'shared/header_amazon' %>
+    <%= render 'deals/navbar_deals' %> 
+    <%= render 'shared/botton_amz' %>
 
-      <p id="notice"><%= notice %></p>
+    <div class="bargain_wrap clearfix">
 
-      <h1>Listing Bargains | <%= link_to "New Category", new_barcategory_path %></h1>
-
-      <br><br><br>
-      All Categories<br>
-      <% Barcategory.all.each do |bar| %>
-        <%= link_to bar.name, bargains_path(barcategory: bar.name) %>
-      <% end %>
-      <br><br><br>
-      Only in Navbar<br>
-      <% Barcategory.where(display_in_navbar: true).each do |bar| %>
-        <%= link_to bar.name, bargains_path(barcategory: bar.name) %>
-      <% end %>
-      <br><br><br>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Title</th>
-            <th>Body</th>
-            <th>Barcategory</th>
-            <th colspan="3"></th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <% @bargains.each do |bargain| %>
-            <tr>
-              <td><%= bargain.title %></td>
-              <td><%= bargain.body %></td>
-              <td><%= bargain.barcategory.name %></td>
-              <td><%= link_to 'Show', bargain %></td>
-              <td><%= link_to 'Edit', edit_bargain_path(bargain) %></td>
-              <td><%= link_to 'Destroy', bargain, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
+      <div class="left">
+        <ul>
+          <div class="admin clearfix">
+            <% if can? :update, @bargain %>
+              <li><%= link_to 'New Bargain |', new_bargain_path %></li> 
+              <li><%= link_to "New Category", new_barcategory_path %></li>
+            <% end %>
+          </div>
+          <li><a class="all" href="/bargains">All Categories</a></li>
+          <% Barcategory.all.each do |bar| %>
+            <li><%= link_to bar.name, bargains_path(barcategory: bar.name) %></li>
           <% end %>
-        </tbody>
-      </table>
+        </ul>
+      </div>
 
-      <br>
+      <label class="dropdown">
+        <div class="store-button">Categories</div>
+        <input type="checkbox" class="store-input" id="test">
+        <ul class="store_menu">
+          <!-- <div class="store_search"><%= form_for "",url: storedeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search here..." %><% end %></div> -->
+          <li class="all_store"><a href="/bargains">All Stores</a></li>
+          <% Barcategory.all.each do |bar| %>
+            <li><%= link_to bar.name, bargains_path(barcategory: bar.name) %></li>
+          <% end %>
+        </ul>
+      </label>
 
-      <%= link_to 'New Bargain', new_bargain_path %>
+      <div class="right clearfix">
+        <% @bargains.each do |bargain| %>
+          <div class="right_box">
+            <div class="image_box">
+              <div class="card">
+                <img src="<%= bargain.bar_image %>">
+              </div>
+            </div>
 
+            <div class="inner">
+              <div class="contents">
+                <p><%= bargain.barcategory.name %></p>
+                <span><%= bargain.bar_title %></span>
+                <em><%= bargain.bar_detail %></em>
+              </div>
+
+              <div class="btn">
+                <a href="<%= bargain.bar_link %>">Shop Now</a>
+              </div>
+
+              <div class="btn_m">
+                <a href="<%= bargain.bar_link %>">Shop Now</a>
+              </div>
+              
+              <% if can? :update, bargain %>
+                <div class="admin">
+                  <%= link_to 'Edit', edit_bargain_path(bargain) %> | 
+                  <%= link_to 'Destroy', bargain, method: :delete, data: { confirm: 'Are you sure?' } %>
+                </div>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+
+    </div>
+
+
+    
       
   </div>
 </div>
