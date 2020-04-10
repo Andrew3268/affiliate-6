@@ -5,7 +5,9 @@
       <ul class="clearfix">
         <li class="coumos1"><a class="active" href="/deals/quick_search">Amazon Deal Finder</a></li>
         <!-- <li><a href="/hotdeals">More Deals & Coupons</a></li> -->
-        <!-- <li><a href="/bargains">Featured Deals</a></li> -->
+        <% if can? :update, @recommend %>
+          <li><a href="/bargains">Featured Deals</a></li>
+        <% end %>
         <li><a href="/deals/bestdeals">Today's Discovery</a></li>
         <!-- <li class="more"><a href="/hotdeals">[ More Deals ]</a></li> -->
         <!-- <li><a href="/deals/promo_codes">Coupon Codes</a></li> -->
