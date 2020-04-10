@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Barcategories</h1>
+<div class="layout">
+  <div class="wrap">
+    <h1>Listing Barcategories</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Description</th>
-      <th>Display in navbar</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Display in navbar</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @barcategories.each do |barcategory| %>
-      <tr>
-        <td><%= barcategory.name %></td>
-        <td><%= barcategory.description %></td>
-        <td><%= barcategory.display_in_navbar %></td>
-        <td><%= link_to 'Show', barcategory %></td>
-        <td><%= link_to 'Edit', edit_barcategory_path(barcategory) %></td>
-        <td><%= link_to 'Destroy', barcategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @barcategories.each do |barcategory| %>
+          <tr>
+            <td><%= barcategory.name %></td>
+            <td><%= barcategory.description %></td>
+            <td><%= barcategory.display_in_navbar %></td>
+            <td><%= link_to 'Show', barcategory %></td>
+            <td><%= link_to 'Edit', edit_barcategory_path(barcategory) %></td>
+            <td><%= link_to 'Destroy', barcategory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Barcategory', new_barcategory_path %>
+    <%= link_to 'New Barcategory', new_barcategory_path %>
+  </div>
+</div>

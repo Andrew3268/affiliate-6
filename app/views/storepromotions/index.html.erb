@@ -64,9 +64,15 @@
                     <%= link_to image_tag(storepromotion.sp_spare_02, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
                   <% end %>
                 <% else %>
-                  <div class="just_text">
-                    <p>UP TO</p><span><%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
-                  </div>
+                  <% if storepromotion.sp_percentage_01.present? %>
+                    <div class="just_text">
+                      <p>UP TO</p><span><%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %></span><em class="off">OFF</em>
+                    </div>
+                  <% else %>
+                    <div class="just_text">
+                      <p>TAKE</p><span><%= number_to_currency(storepromotion.sp_spare_03, precision: 0) %></span><em class="off">OFF</em>
+                    </div>
+                  <% end %>
                 <% end %>
                 <div class="goto_d"><%= link_to "GOTO DETAIL PAGE", storepromotion %></div>
                 <div class="date_m date_comm">

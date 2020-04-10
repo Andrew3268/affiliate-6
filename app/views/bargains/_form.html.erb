@@ -1,17 +1,18 @@
+<div class="hotdeal_form">
+  <%= simple_form_for(@bargain) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    
+    <div class="basic_info">
+      <%= f.association :barcategory %>
+      <%= f.input :bar_image %>
+      <%= f.input :bar_title %>
+      <%= f.input :bar_detail %>
+      <%= f.input :bar_link %>
+    </div>
 
-<%= simple_form_for(@bargain) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-  <div class="form-inputs">
-    <%= f.association :barcategory %>
-    <%= f.input :bar_image %>
-    <%= f.input :bar_title %>
-    <%= f.input :bar_detail %>
-    <%= f.input :bar_link %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>
