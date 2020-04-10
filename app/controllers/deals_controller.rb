@@ -8,7 +8,7 @@ class DealsController < ApplicationController
   def promo_codes
       @promocodes = Promocode.all.order("created_at DESC").limit(30)
       @most_promocodes = Promocode.order("impressions_count DESC").limit(10)
-      set_meta_tags title: 'Promo Codes, Coupon Codes on Amazon',
+      set_meta_tags title: 'Amazon Promo Codes & Coupons',
                     site: 'Oh,igottabuythis',
                     revierse: true,
                     description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
@@ -16,12 +16,12 @@ class DealsController < ApplicationController
                     twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Promo Codes, Coupon Codes on Amazon',
+                    title: 'Amazon Promo Codes & Coupons',
                     description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
                     image: 'https://i.pinimg.com/564x/76/9b/c5/769bc5e3d66dd9b8ffe3d765a70811e7.jpg',
                     },
                     og: {
-                      title: 'Promo Codes, Coupon Codes on Amazon',
+                      title: 'Amazon Promo Codes & Coupons',
                       description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
                       type: 'website',
                       url: 'http://www.ohigottabuythis.net/deals/promo_codes',
@@ -32,7 +32,7 @@ class DealsController < ApplicationController
   def bestdeals
     @hotdeals = Hotdeal.all.order("created_at DESC").limit(30)
     @most_hotdeals = Hotdeal.order('impressions_count DESC').take(10)
-    set_meta_tags title: 'Updated daily with best deals of Amazon',
+    set_meta_tags title: 'Discover The Best Amazon Deals',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
@@ -40,12 +40,12 @@ class DealsController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Updated daily with best deals of Amazon',
+                    title: 'Discover The Best Amazon Deals',
                     description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
                     image: 'https://i.pinimg.com/564x/af/3b/53/af3b537235cb922e14e546abb7e49e48.jpg',
                   },
                   og: {
-                    title: 'Updated daily with best deals of Amazon',
+                    title: 'Discover The Best Amazon Deals',
                     description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/bestdeals',
@@ -76,7 +76,7 @@ class DealsController < ApplicationController
   end
 
   def quick_search
-    set_meta_tags title: 'Quick Search on Amazon',
+    set_meta_tags title: 'Amazon Deal Finder & Quick Deal Search',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
@@ -84,12 +84,12 @@ class DealsController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Quick Search on Amazon',
+                    title: 'Amazon Deal Finder & Quick Deal Search',
                     description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
                     image: 'https://i.pinimg.com/564x/0a/7c/b6/0a7cb6c6875ed1219e2d39b93307b4f2.jpg',
                   },
                   og: {
-                    title: 'Quick Search on Amazon',
+                    title: 'Amazon Deal Finder & Quick Deal Search',
                     description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/quick_search',

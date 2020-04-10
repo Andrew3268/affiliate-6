@@ -10,9 +10,9 @@
     <h2><span><%= @recommend.re_title %></span></h2>
     <p><%= @recommend.sub_intro %></p>
   </div>
-  <% if @recommend.sub_number_01.present? %>
-    <span class="post_date">UPDATED: <%= @recommend.sub_number_01 %> | <em>by Oh,i gotta buy this</em></span>
-  <% end %>
+  <!-- <% if @recommend.sub_number_01.present? %> -->
+    <!-- <span class="post_date">UPDATED: <%= @recommend.sub_number_01 %> | <em>by Oh,i gotta buy this</em></span> -->
+  <!-- <% end %> -->
   <% if can? :update, @recommend %>
     <div class="btn clearfix admin">
       <em><%= link_to "Edit", edit_recommend_path(@recommend) %></em><%= link_to "Delete", recommend_path(@recommend), method: :delete, data: {confirm: "Are you sure?"}%>
