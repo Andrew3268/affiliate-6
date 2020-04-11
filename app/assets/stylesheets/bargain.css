@@ -1,12 +1,12 @@
 .bargain_wrap{margin-top:20px;}
-.bargain_wrap .left{float:left;width:20%;padding:20px;}
+.bargain_wrap .left{float:left;width:22%;padding:20px;}
 .bargain_wrap .left ul{}
-.bargain_wrap .left ul li{}
-.bargain_wrap .left ul li a{color:#616161;font-size:20px;letter-spacing:1.2px;}
+.bargain_wrap .left ul li{margin:7px 0;}
+.bargain_wrap .left ul li a{color:#616161;font-size:15px;letter-spacing:1.2px;}
 .bargain_wrap .left ul .admin{}
 .bargain_wrap .left ul .admin li{float:left;margin-right:5px;}
 .bargain_wrap .left ul .admin li a{font-size:10px;}
-.bargain_wrap .right{float:left;width:78%;margin-left:2%;padding:10px;}
+.bargain_wrap .right{float:left;width:76%;margin-left:2%;padding:10px;}
 .bargain_wrap .right .right_box{margin-bottom:30px;height:172px;border:1px solid #ccc;border-radius:10px;border-bottom:3px solid #08f;}
 .bargain_wrap .right .image_box{float:left;width:20%;padding:10px;}
 .bargain_wrap .right .image_box .card{width:150px;height:150px;padding:7px;}
