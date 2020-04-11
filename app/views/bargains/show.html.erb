@@ -1,19 +1,64 @@
+<%= render 'shared/play_video' %><!-- for play youtube video-->
+<div class="layout">
+  <div class="show_wrap clearfix">
+    <div class="wrap">
+    <%= render 'shared/header_amazon' %>  
+    <%= render 'shared/hotpro_header' %>
+    <%= render 'shared/botton_amz' %>
+    
+      <div class="show_box clearfix">
+        
+        <!-- <p>Location Map</p> -->
+        
+        <div class="show_img hotdeal_img">
+          <div class="img_box deal_img_box">
+            <a target="_blank" href="<%= @bargain.bar_link %>"><img src="<%= @bargain.bar_image %>" alt="<%= @bargain.bar_title %>" title="<%= @bargain.bar_title %>"></a>
+          </div>
+          
+          <% if can? :update, @bargain %>
+            <div class="admin">
+              <h4>Admin Management</h4>
+              <%= link_to 'Back', bargains_path %> |
+              <%= link_to 'Edit', edit_bargain_path(@bargain) %> |
+              <%= link_to 'Delete', @bargain, method: :delete, data: { confirm: 'Are you sure?' } %> |
+              <%= render 'bargains/body_sns' %><br>
+              <%= @bargain.created_at.strftime("%d. %B.") %><br />
+              <div class="sharing">
+                <p>Available On Amazon Now</p>
+                <p><%= @bargain.bar_title %></p>
+                <p><%= @bargain.bar_detail %></p>
+              </div>
+            </div>
+          <% end %>
+        </div><!--./show_img-->
+ 
+       
+        <div class="bargian_inner">
+          <p><%= @bargain.bar_title %></p>
+          <em><%= @bargain.bar_detail %></em>
+          
+          <ul>
+            <li>Get Free shipping on order over $25 of eligible items or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>   
+          </ul>
+
+          <div class="btn"><a target="_blank" href="<%= @bargain.bar_link %>">Shop Now</a></div>
+        </div>
+       
+
+        
+        <% if can? :update, @bargain %>
+          <div class="pinterest">
+           <script async defer data-pin-hover="true" data-pin-tall="true" src="//assets.pinterest.com/js/pinit.js"></script>
+          </div>
+        <% end %>  
+
+      </div><!--./show_box-->
 
 
-<p>
-  <strong>Title:</strong>
-  <%= @bargain.bar_title %>
-</p>
+    </div>
+  </div>
+</div>
 
-<p>
-  <strong>Body:</strong>
-  <%= @bargain.bar_detail %>
-</p>
 
-<p>
-  <strong>Barcategory:</strong>
-  <%= @bargain.barcategory.name %>
-</p>
 
-<%= link_to 'Edit', edit_bargain_path(@bargain) %> |
-<%= link_to 'Back', bargains_path %>
+

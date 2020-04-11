@@ -14,6 +14,7 @@
 .bargain_wrap .right .inner{float:left;width:75%;margin-left:5%;position:relative;padding:10px;}
 .bargain_wrap .right .inner .contents{float:left;width:70%;}
 .bargain_wrap .right .inner .contents span{font-size:22px;line-height:1.1;margin:10px 0;display:block;/*vertical-align:top;text-overflow:ellipsis;word-break:break-word;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:1.4;height:2.8em;overflow:hidden;*/}
+.bargain_wrap .right .inner .contents span a{color:#000;}
 .bargain_wrap .right .inner .contents em{font-size:22px;display:block;color:#08f;font-weight:700;}
 .bargain_wrap .right .inner .btn{float:left;width:25%;margin-left:5%;height:162px;position:relative;}
 .bargain_wrap .right .inner .btn a{background:#08f;color:#fff;padding:10px;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:80%;text-align:center;}
@@ -25,6 +26,17 @@
 .bargain_wrap .search_pc input{width:100%;padding:7px 10px;}
 .bargain_wrap .search_m{display:none;}
 .bargain_wrap .search_m input{border:1.5px solid;padding:10px;width:40%;border-radius:10px;}
+
+
+/* Show Page */
+.bargian_inner{float:left;width:48%;margin:8% 0 10% 2%;}
+.bargian_inner p{font-size:30px;line-height:1.2;margin-bottom:15px;}
+.bargian_inner em{font-size:25px;color:#08f;}
+.bargian_inner ul{margin-top:20px;}
+.bargian_inner ul li{list-style:disc;font-size:13px;color:#616161;}
+.bargian_inner ul li a{color:#08f;font-weight:bold;}
+.bargian_inner .btn{text-align:center;margin-top:30px;}
+.bargian_inner .btn a{display:block;background:#08f;color:#fff;padding:10px 20px;border-radius:10px;}
 
 
 @media screen and (max-width:640px){
@@ -43,6 +55,16 @@
   .bargain_wrap .right .inner .btn_m a{background:#08f;color:#fff;padding:5px 10px;border-radius:15px;}
   .bargain_wrap .search_m{display:block;}
   .bargain_wrap .search_m input{width:100%;}
+
+  /*Show Page*/
+  .bargian_inner{float:none;width:100%;margin:20px 0 0 0;}
+  .bargian_inner p{font-size:20px;}
+  .bargian_inner em{font-size:17px;}
+  .bargian_inner ul{margin-top:20px;}
+  .bargian_inner ul li{margin-left:20px;list-style:disc;font-size:13px;color:#616161;}
+  .bargian_inner ul li a{color:#08f;font-weight:bold;}
+  .bargian_inner .btn{text-align:center;margin-top:30px;}
+  .bargian_inner .btn a{display:block;background:#08f;color:#fff;padding:10px 20px;border-radius:10px;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .bargain_wrap .left{display:none;}

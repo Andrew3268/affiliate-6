@@ -49,7 +49,7 @@
             <div class="inner">
               <div class="contents">
                 <p><%= bargain.barcategory.name %></p>
-                <span><%= bargain.bar_title %></span>
+                <span><%= link_to bargain.bar_title, bargain %></span>
                 <em><%= bargain.bar_detail %></em>
               </div>
 
@@ -60,6 +60,7 @@
               <div class="btn_m">
                 <a href="<%= bargain.bar_link %>">Shop Now</a>
               </div>
+
               
               <% if can? :update, bargain %>
                 <div class="admin">

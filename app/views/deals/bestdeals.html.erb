@@ -14,11 +14,11 @@
       </div><!--./lt_cnt-->
       
       <div class="rt_cnt">
-        <h2>Take a good items you love at the best price.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
-        <h2 class="for_m">Daily Deals of Amazon<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
-        <p class="for_m">Take a good items you love at the best price.</p>
-        <p class="deals_description">Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily. We update these awesome deals every single day so come back again for more savings!</p>
-        <%= render 'shared/amz_search' %>
+       <h2>Take a good items you love at the best price.<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
+       <h2 class="for_m">Daily Deals of Amazon<% if can? :update, @hotdeals %><div class="hotdeals_new"><%= link_to 'New Hotdeal', new_hotdeal_path %></div><% end %></h2>
+       <p class="for_m">Take a good items you love at the best price.</p>
+       <p class="deals_description">Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily. We update these awesome deals every single day so come back again for more savings!</p>
+       <!-- <%= render 'shared/amz_search' %> -->
         
         <!-- <div class="sort_box clearfix">
           <ul>
@@ -43,14 +43,14 @@
         </div>
 
         <!-- Note for mobile -->
-        <p class="updating updating_m"><a href="/promocodes">GO TO DISCOVER THE BEST DEALS MORE</a></h2>
+        <p class="updating updating_m"><a href="/hotdeals">DISCOVER THE BEST DEALS MORE</a>
         <div class="lt_cnt note_mobile">
           <h2>Daily Deals of Amazon</h2>
           <%= render 'deals/notes_bestdeals' %>
         </div>
         <!-- End -->
 
-        <p class="updating"><a href="/hotdeals">GO TO DISCOVER THE BEST DEALS MORE</a></h2>
+        <p class="updating"><a href="/hotdeals">DISCOVER THE BEST DEALS MORE</a>
         
         
       </div><!--./rt_cnt-->    
