@@ -36,10 +36,17 @@
  
        
         <div class="bargian_inner">
+          <% if @bargain.bar_spare_01.present? %>
+            <span class="type">Deals & Offers</span>
+          <% end %>
+          <% if @bargain.bar_spare_02.present? %>
+            <span class="type">Coupons</span>
+          <% end %>
           <p><%= @bargain.bar_title %></p>
           <em><%= @bargain.bar_detail %></em>
           
           <ul>
+            <li>Category: <%= @bargain.barcategory.name %></li>
             <li>Get Free shipping on order over $25 of eligible items or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>   
           </ul>
 

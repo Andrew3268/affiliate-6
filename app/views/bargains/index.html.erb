@@ -56,7 +56,8 @@
                 <% end %>
                 <span><%= link_to bargain.bar_title, bargain %></span>
                 <em><%= bargain.bar_detail %></em>
-                <p>Category: <a href="/bargains?barcategory=<%= bargain.barcategory.name %>"><%= bargain.barcategory.name %></a></p>
+                <!-- <p>Category: <a href="/bargains?barcategory=<%= bargain.barcategory.name %>"><%= bargain.barcategory.name %></a></p> -->
+                <p>Category: <%= bargain.barcategory.name %></p>
               </div>
 
               <div class="btn">
