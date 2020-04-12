@@ -60,9 +60,9 @@ body{/*font-family: 'Noto Sans KR','맑은고딕',sans-serif;*/font-family: 'Not
 .show_back,
 .mobile_btn{display:none;}
 
-.show_back{}
-.show_back a{z-index:999;display:block;}
-.show_back a img{width:30px;position:absolute;top:140px;left:27px;opacity:0.5;}
+.show_back{position:absolute;top:-10px;left:27px;opacity:0.5;}
+.show_back a{}
+.show_back a img{width:30px;}
 
 @media screen and (max-width:640px){
   .oh_menu,
