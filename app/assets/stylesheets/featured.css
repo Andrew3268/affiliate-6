@@ -251,7 +251,7 @@
 .guide_show_header{width:1000px;margin:0 auto;text-align:center;}
 .guide_show_header span{padding:80px;display:block;border-top:1px solid #ccc;border-right:1px solid #ccc;border-left:1px solid #ccc;font-size:40px;}
 .re_show_wrap{width:1000px;margin:0 auto;}
-.guide_location{width:1000px;margin:70px auto 0 auto;}
+.guide_location{width:1000px;margin:20px auto 0 auto;}
 .recommend_location{width:1200px;}
 .guide_location ul{}
 .guide_location ul li{float:left;margin-right:10px;}
