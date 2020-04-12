@@ -3,6 +3,8 @@
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
     
+    <%= f.select :bar_spare_01, options_for_select([["Deals?", ""], "YES"])%>
+    <%= f.select :bar_spare_02, options_for_select([["Coupons?", ""], "YES"])%><br /><br />
     <div class="basic_info">
       <%= f.association :barcategory %>
       <%= f.input :bar_image %>

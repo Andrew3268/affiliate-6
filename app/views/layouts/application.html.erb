@@ -41,8 +41,8 @@
 
   <%= render 'shared/new_header' %>
   <%= yield %> 
-  <%= render 'shared/footer2' %> 
-  <!-- <%= render 'shared/footer_m' %> -->
+  <div class="footer_wrap"><%= render 'shared/footer2' %></div>
+  <!-- <div class="footer_m_wrap"><%= render 'shared/footer_m' %></div> -->
   <%= javascript_include_tag 'application' %>
    <!-- for Isotope -->
   <!-- <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script> -->

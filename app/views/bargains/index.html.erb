@@ -1,6 +1,6 @@
 <div class="layout">
   <div class="wrap">
-
+    
     <%= render 'shared/header_amazon' %>
     <%= render 'deals/header_featured' %> 
     <%= render 'shared/botton_amz' %>
@@ -48,13 +48,19 @@
 
             <div class="inner">
               <div class="contents">
-                <p><%= bargain.barcategory.name %></p>
+                <% if bargain.bar_spare_01.present? %>
+                  <span class="type">Deals & Offers</span>
+                <% end %>
+                <% if bargain.bar_spare_02.present? %>
+                  <span class="type">Coupons</span>
+                <% end %>
                 <span><%= link_to bargain.bar_title, bargain %></span>
                 <em><%= bargain.bar_detail %></em>
+                <p>Category: <a href="/bargains?barcategory=<%= bargain.barcategory.name %>"><%= bargain.barcategory.name %></a></p>
               </div>
 
               <div class="btn">
-                <a href="<%= bargain.bar_link %>">Shop Now</a>
+                <a target="_blank" href="<%= bargain.bar_link %>">Shop Now</a>
               </div>
 
               <div class="btn_m">

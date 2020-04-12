@@ -117,7 +117,8 @@ class BargainsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bargain_params
-      params.require(:bargain).permit(:bar_title, :bar_detail, :barcategory_id, :bar_image, :bar_link)
+      params.require(:bargain).permit(:bar_title, :bar_detail, :barcategory_id, :bar_image, :bar_link, :bar_spare_01,
+                                      :bar_spare_02)
     end
 end
 
