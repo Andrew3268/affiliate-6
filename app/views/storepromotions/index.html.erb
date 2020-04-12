@@ -139,7 +139,12 @@
                 </div>
 
                 <!-- <p class="sp_title"><%= link_to storepromotion.sp_title, storepromotion %></p> -->
-                <p class="sp_title"><a target="_blank" href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_title %></a></p>
+                <div class="pc_btn">
+                  <p class="sp_title"><a target="_blank" href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_title %></a></p>
+                </div>
+                <div class="mobile_btn">
+                  <p class="sp_title"><a href="<%= storepromotion.sp_link %>"><%= storepromotion.sp_title %></a></p>
+                </div>
 
                 <% if storepromotion.sp_spare_40.present? %>
                   <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_41) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_40) %></span><span class="span_02">( <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF )</span></p>

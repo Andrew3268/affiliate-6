@@ -13,7 +13,7 @@
 .bargain_wrap .right .image_box .card img{width:100%;height:100%;object-fit:contain;}
 .bargain_wrap .right .inner{float:left;width:75%;margin-left:5%;position:relative;padding:10px;}
 .bargain_wrap .right .inner .contents{float:left;width:70%;}
-.bargain_wrap .right .inner .contents span.type{font-size:13px;width:30%;padding:5px;border-bottom:1px solid #ccc;margin:0;}
+.bargain_wrap .right .inner .contents .type{font-size:13px;width:30%;padding:5px;border-bottom:1px solid #ccc;margin:0;}
 .bargain_wrap .right .inner .contents span{font-size:22px;line-height:1.1;margin:10px 0;display:block;/*vertical-align:top;text-overflow:ellipsis;word-break:break-word;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:1.4;height:2.8em;overflow:hidden;*/}
 .bargain_wrap .right .inner .contents span a{color:#000;}
 .bargain_wrap .right .inner .contents em{font-size:22px;display:block;color:#08f;font-weight:700;}
@@ -46,19 +46,20 @@
 @media screen and (max-width:640px){
   .bargain_wrap .left{display:none;}
   .bargain_wrap .right{float:none;width:100%;padding:0;margin:0;}
-  .bargain_wrap .right .right_box{height:145px;}
+  .bargain_wrap .right .right_box{height:175px;}
   .bargain_wrap .right .image_box{width:30%;position:relative;}
   .bargain_wrap .right .image_box .card{width:120px;height:120px;}
   .bargain_wrap .right .image_box .card img{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);padding:15px;}
   .bargain_wrap .right .inner{width:68%;margin-left:2%;}
   .bargain_wrap .right .inner .contents{width:100%;}
-  .bargain_wrap .right .inner .contents span{font-size:15px;line-height:1.3;}
+  .bargain_wrap .right .inner .contents span{font-size:15px;vertical-align:top;text-overflow:ellipsis;word-break:break-word;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:1.3;height:2.6em;overflow:hidden;}
   .bargain_wrap .right .inner .contents em{font-size:17px;}
   .bargain_wrap .right .inner .btn{display:none;}
-  .bargain_wrap .right .inner .btn_m{display:block;float:right;}
+  .bargain_wrap .right .inner .btn_m{display:block;float:right;margin-top:10px;}
   .bargain_wrap .right .inner .btn_m a{background:#08f;color:#fff;padding:5px 10px;border-radius:15px;}
   .bargain_wrap .search_m{display:block;}
   .bargain_wrap .search_m input{width:100%;}
+  .bargain_wrap .right .inner .contents .type{width:50%;padding:0;}
 
   /*Show Page*/
   .bargian_inner{float:none;width:100%;margin:20px 0 0 0;}

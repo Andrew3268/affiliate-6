@@ -553,9 +553,17 @@
   <div class="extra_info">
   </div>
 
-  <div class="code_btn">
-   <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on&ensp;<em>Amazon</em></a>
-   <!-- <h6>If you purchase something through a post on our site, we may get a small commission of the sale.</h6> -->
+  <div class="pc_btn">
+    <div class="code_btn">
+     <a class="m_btn" target="_blank" href="<%= @hotdeal.h_link %>">Check it out on&ensp;<em>Amazon</em></a>
+     <!-- <h6>If you purchase something through a post on our site, we may get a small commission of the sale.</h6> -->
+    </div>
+  </div>
+  <div class="mobile_btn">
+    <div class="code_btn">
+     <a class="m_btn" href="<%= @hotdeal.h_link %>">Check it out on&ensp;<em>Amazon</em></a>
+     <!-- <h6>If you purchase something through a post on our site, we may get a small commission of the sale.</h6> -->
+    </div>
   </div>
 
   <%if @hotdeal.h_spare_21.present? %>

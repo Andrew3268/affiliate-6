@@ -483,9 +483,16 @@
     <div class="container_copy"><div class="wrap"><div class="box"><p data-copy-text=""><%= @promocode.p_promocode %></p></div></div></div>
   </div>
 
-   <div class="only_show promocode_btn">
-    <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
-   </div> 
+   <div class="pc_btn">
+     <div class="only_show promocode_btn">
+      <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
+     </div> 
+   </div>
+   <div class="mobile_btn">
+     <div class="only_show promocode_btn">
+      <a class="m_btn p_btn" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
+     </div> 
+   </div>
   </div>
 
   <% if @promocode.p_spare_36.present? %>

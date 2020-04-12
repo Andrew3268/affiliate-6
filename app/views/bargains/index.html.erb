@@ -49,10 +49,10 @@
             <div class="inner">
               <div class="contents">
                 <% if bargain.bar_spare_01.present? %>
-                  <span class="type">Deals & Offers</span>
+                  <div class="type">Deals & Offers</div>
                 <% end %>
                 <% if bargain.bar_spare_02.present? %>
-                  <span class="type">Coupons</span>
+                  <div class="type">Coupons</div>
                 <% end %>
                 <span><%= link_to bargain.bar_title, bargain %></span>
                 <em><%= bargain.bar_detail %></em>

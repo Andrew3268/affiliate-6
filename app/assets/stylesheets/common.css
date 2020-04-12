@@ -56,11 +56,13 @@ body{/*font-family: 'Noto Sans KR','맑은고딕',sans-serif;*/font-family: 'Not
 }
 
 
-/* Display:none; for Moblie */
+/* for Moblie */
+.mobile_btn{display:none;}
 @media screen and (max-width:640px){
   .oh_menu,
   .show_wrap .show_box .show_img .mark{display:none;}
-
+  .pc_btn{display:none;}
+  .mobile_btn{display:block;}
 }
 
 /* header */

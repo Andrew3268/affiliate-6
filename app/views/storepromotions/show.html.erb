@@ -130,13 +130,24 @@
               <% end %>
 
             </div><!--./store_info-->
+            <div class="pc_btn">
+              <div class="code_btn">
+                <% if @storepromotion.sp_store_name.present? %>
+                  <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
+                <% else %>
+                  <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.spcategory.name %></em></a>
+                <% end %>
+              </div>
+            </div>
 
-            <div class="code_btn">
-              <% if @storepromotion.sp_store_name.present? %>
-                <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
-              <% else %>
-                <a class="m_btn p_btn store_btn" target="_blank" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.spcategory.name %></em></a>
-              <% end %>
+            <div class="mobile_btn">
+              <div class="code_btn">
+                <% if @storepromotion.sp_store_name.present? %>
+                  <a class="m_btn p_btn store_btn" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.sp_store_name %></em></a>
+                <% else %>
+                  <a class="m_btn p_btn store_btn" href="<%= @storepromotion.sp_link %>">Check it out on &ensp;<em><%= @storepromotion.spcategory.name %></em></a>
+                <% end %>
+              </div>
             </div>
 
              <% if @storepromotion.sp_description.present? %>
