@@ -6,10 +6,22 @@
 
 Disallow: /blogs/blog_03_backtoschool
 Disallow: /blogs/promocodes
-Disallow: /deals/categories
-Disallow: /deals/most_handpick
-Disallow: /deals/sneakers01M
-Disallow: /deals/sneakers01W
 Disallow: /messages/index
 Disallow: /messages/new
+Disallow: /gadgets/new
+Disallow: /bargains/new
+Disallow: /recommends/new
+Disallow: /promocodes/new
+Disallow: /hotdeals/new
+Disallow: /storepromotions/new
+Disallow: /storedeals/new
+Disallow: /storedeals
+Disallow: /spcategories
+Disallow: /spcategories/new
+Disallow: /sdcategories
+Disallow: /sdcategories/new
+Disallow: /barcategories/new
+Disallow: /barcategories
+Disallow: /categories
+Disallow: /categories/new
 
