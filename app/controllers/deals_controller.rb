@@ -5,14 +5,14 @@ class DealsController < ApplicationController
   # end
   
 
-  def promo_codes
+  def promocodes
       @promocodes = Promocode.all.order("created_at DESC").limit(30)
       @most_promocodes = Promocode.order("impressions_count DESC").limit(10)
       set_meta_tags title: 'Amazon Promo Codes & Coupons',
                     site: 'Oh,igottabuythis',
                     revierse: true,
                     description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',
-                    keywords: 'promo codes,amazon,coupon,deals,recommend,recommendation,under',
+                    keywords: 'deals, coupons',
                     twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
@@ -36,7 +36,7 @@ class DealsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Check out the latest Amazon deals featuring hand-picked deals with low prices on top products updated daily!!',
-                  keywords: 'best price,best deals,latest deals,amazon,recommend,recommendation,under',
+                  keywords: 'deals, coupons',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
@@ -58,7 +58,7 @@ class DealsController < ApplicationController
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Take promotions, sales, offer, brand deals on Amazon',
-                  keywords: 'promotions,sales,offer,brand deals,amazon,recommend,recommendation,under',
+                  keywords: 'deals, coupons',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
@@ -75,22 +75,22 @@ class DealsController < ApplicationController
                   }
   end
 
-  def quick_search
-    set_meta_tags title: 'Amazon Deal Finder & Quick Deal Search',
+  def quicksearch
+    set_meta_tags title: 'Amazon Deals & Coupons quick finder and take more bargains',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
-                  keywords: 'search,quick search,deals,sales,amazon,recommend,recommendation,under',
+                  description: 'It is a discount and a trending item platform. It offers a quick way to find the best deals. You will find what you are looking for at a bargain.',
+                  keywords: 'deals, coupons',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Amazon Deal Finder & Quick Deal Search',
-                    description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
+                    title: 'Amazon Deals & Coupons quick finder and take more bargains',
+                    description: 'It is a discount and a trending item platform. It offers a quick way to find the best deals. You will find what you are looking for at a bargain.',
                     image: 'https://i.pinimg.com/564x/0a/7c/b6/0a7cb6c6875ed1219e2d39b93307b4f2.jpg',
                   },
                   og: {
-                    title: 'Amazon Deal Finder & Quick Deal Search',
-                    description: 'We offer a quick way to find the best deals. You will find what you are looking for at a great price',
+                    title: 'Amazon Deals & Coupons quick finder and take more bargains',
+                    description: 'It is a discount and a trending item platform. It offers a quick way to find the best deals. You will find what you are looking for at a bargain.',
                     type: 'website',
                     url: 'http://www.ohigottabuythis.net/deals/quick_search',
                     image: 'https://i.pinimg.com/564x/0a/7c/b6/0a7cb6c6875ed1219e2d39b93307b4f2.jpg'
@@ -98,13 +98,13 @@ class DealsController < ApplicationController
 
   end
 
-  def most_reviewed
+  def mostreviewed
     set_meta_tags title: 'Most-Reviewed Products on Amazon',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'When it comes to deciding whether or not to buy a product, reviews and user feedback are one of the most helpful. 
                                 So we’ve done the work for you. ',
-                  keywords: 'most reviews,highest reviewed,popular, amazon reviews,recommend,recommendation,under',
+                  keywords: 'review, deals',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",

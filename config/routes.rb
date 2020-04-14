@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :barcategories
   resources :bargains
-  root 'deals#quick_search'
+  root 'deals#quicksearch'
 
   resources :sitemap, only: [:index]
   get 'sitemap.xml', :controller => "sitemap", :action =>"xml"
@@ -20,29 +20,26 @@ Rails.application.routes.draw do
   get '/hotdeals/hashtag/:name', to:'hotdeals#hashtags'
   # root 'hotdeals#index'
 
-  get 'deals/promo_codes'
+  get 'deals/promocodes'
   get 'deals/coupons'
-  get 'deals/quick_search'
-  get 'deals/quick_search_01'
+  get 'deals/quicksearch'
   get 'deals/promotions'
   get 'deals/codes'
   get 'deals/bestdeals'
   get 'deals/bestdeals2'
   get 'deals/most_test'
-  get 'deals/most_reviewed'
+  get 'deals/mostreviewed'
   get 'deals/most_handpick'
   get 'deals/editors_pick'
   get 'deals/shoes'
-  get 'deals/sneakers01M'
-  get 'deals/sneakers01W'
   get 'deals/categories'
   get 'deals/stores'
   get 'deals/all_deals'
   get 'deals/new_test'
-  get 'deals/store_sales'
-  get 'deals/store_coupons'
-  get 'deals/store_dealoftheday'
-  get 'deals/store_weeklyad'
+  get 'deals/storesales'
+  get 'deals/storecoupons'
+  get 'deals/storedealoftheday'
+  get 'deals/storeweeklyad'
 
   get 'marketing/insta'
   get 'marketing/amz_deal_e'

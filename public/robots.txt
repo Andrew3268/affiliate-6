@@ -24,4 +24,13 @@ Disallow: /barcategories/new
 Disallow: /barcategories
 Disallow: /categories
 Disallow: /categories/new
-
+Disallow: /deals/stores
+Disallow: /deals/all_deals
+Disallow: /deals/new_test
+Disallow: /deals/shoes
+Disallow: /margetings/insta
+Disallow: /margetings/amz_deal_e
+Disallow: /margetings/be_rich
+Disallow: /margetings/bystore
+deals/shoes
+  
