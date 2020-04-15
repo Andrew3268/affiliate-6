@@ -123,7 +123,7 @@
       </div>
     <% end %>
 
-    <div class="block clearfix">
+    <!-- <div class="block clearfix">
       <div class="box">
         <p>End Date</p>
         <em>
@@ -142,7 +142,6 @@
                  <% end %> 
                 <% end %>
               <% end %>
-             <!-- </div> -->
             <% else %>
               <em class="end_date"><%= @promocode.p_end_date %></em>
             <% end %>
@@ -158,7 +157,7 @@
          <em><a class="keyword" href="<%= @promocode.p_spare_08 %>"><%= @promocode.p_spare_07 %></a><i></i></em>
         </div>
       <% end %>
-    </div>
+    </div> -->
 
       <% coupon_55 = 0 %>
       <% coupon_55 = running_total * @promocode.p_spare_55.to_i / 100 %>
@@ -167,16 +166,16 @@
       <!-- 과세가격(estimated_kor) ( { 제품가[제품가 - 쿠폰] + 현지 배송비 + 세금(세금이 없는 배대지 설정) + 보험료 등등} * 고시환율 + 과세운임 )-->
       <div class="block clearfix">
         <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
-          <div class="box hidden_box total_box">
+          <div class="box total_box">
             <p>Estimated Purchase Price</p>
             <% if @promocode.p_spare_55.present? %>
               <% estimated_us = 0 %>
               <% estimated_us = running_total - coupon_55 + @promocode.p_spare_54.to_i %>
-              <em><%= number_to_currency(estimated_us) %></em>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
             <% else %>
               <% estimated_us = 0 %>
               <% estimated_us = running_total - @promocode.p_spare_56.to_i + @promocode.p_spare_54.to_i %>
-              <em><%= number_to_currency(estimated_us) %></em>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
             <% end %>
           </div>
           <!-- <div class="info_box">
@@ -209,6 +208,53 @@
             <em><%= number_to_currency(estimated_kor, unit: "") %>원</em>
           <% end %>
         </div>
+      </div>
+
+      <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+        <div class="info_box">
+          <span>
+            <ul>
+              <li>The "Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </ul>
+            </ul>
+          </span>
+        </div>
+      <% end %>
+
+      <div class="block clearfix">
+        <div class="box">
+          <p>End Date</p>
+          <em>
+            <% if @promocode.p_end_date.present? %>
+              <% if @promocode.p_spare_50.present? %>
+                <% if @promocode.p_spare_50 < DateTime.now %>
+                <% @promocode.p_spare_50 %>
+                  <em class="n_expired">Expired</em>
+                <% else %>
+                  <% if @promocode.p_spare_51.present? %>
+                   <% if @promocode.p_spare_51 <= DateTime.now %>
+                   <% @promocode.p_spare_51 %>
+                    <em class="n_endtoday">End Today</em> 
+                   <% else %>
+                    <em class="end_date"><%= @promocode.p_end_date %></em>
+                   <% end %> 
+                  <% end %>
+                <% end %>
+               <!-- </div> -->
+              <% else %>
+                <em class="end_date"><%= @promocode.p_end_date %></em>
+              <% end %>
+            <% else %>
+             <em class="end_soon">End Soon</em>
+            <% end %>
+          </em>
+        </div>
+
+        <% if @promocode.p_spare_07.present? %>
+          <div class="box">
+           <p>Search more by Keyword</p>
+           <em><a class="keyword" href="<%= @promocode.p_spare_08 %>"><%= @promocode.p_spare_07 %></a><i></i></em>
+          </div>
+        <% end %>
       </div>
 
 

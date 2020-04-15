@@ -238,18 +238,19 @@
 
   <div class="block clearfix">
     <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
-      <div class="box hidden_box total_box">
+      <div class="box total_box">
         <p>Estimated Purchase Price</p>
         <% if @hotdeal.h_spare_61.present? %>
           <% estimated_us = 0 %>
           <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 + @hotdeal.h_spare_63.to_i %>
-          <em><%= number_to_currency(estimated_us) %></em>
+          <em class="total_p"><%= number_to_currency(estimated_us) %></em>
         <% else %>
           <% estimated_us = 0 %>
           <% estimated_us = @hotdeal.h_spare_44.to_i -  @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63.to_i %>
-          <em><%= number_to_currency(estimated_us) %></em>
+          <em class="total_p"><%= number_to_currency(estimated_us) %></em>
         <% end %>
       </div>
+
     <% end %>
     <div class="box hidden_box total_box">
       <p>Estimated Purchase Price</p>
@@ -283,6 +284,15 @@
       <% end %>
     </div>
   </div>
+  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+    <div class="info_box">
+      <span>
+        <ul>
+          <li>The "Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </ul>
+        </ul>
+      </span>
+    </div>
+  <% end %>
   
 
   <% if can? :update, @hotdeal %>
