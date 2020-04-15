@@ -242,11 +242,11 @@
         <p>Estimated Purchase Price</p>
         <% if @hotdeal.h_spare_61.present? %>
           <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 + @hotdeal.h_spare_63.to_i %>
+          <% estimated_us = @hotdeal.h_spare_44 - coupon_p61 + @hotdeal.h_spare_63.to_i %>
           <em class="total_p"><%= number_to_currency(estimated_us) %></em>
         <% else %>
           <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44.to_i -  @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63.to_i %>
+          <% estimated_us = @hotdeal.h_spare_44 - @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63.to_i %>
           <em class="total_p"><%= number_to_currency(estimated_us) %></em>
         <% end %>
       </div>
