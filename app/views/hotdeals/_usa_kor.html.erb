@@ -236,17 +236,17 @@
   <% coupon_p61 = (@hotdeal.h_spare_44.to_i * @hotdeal.h_spare_61.to_i / 100) %>
   <% number_to_currency(coupon_p61) %>
 
-  <div class="block clearfix">
+  <div class="block hidden_box clearfix">
     <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
       <div class="box total_box">
         <p>Estimated Purchase Price</p>
         <% if @hotdeal.h_spare_61.present? %>
           <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44 - coupon_p61 + @hotdeal.h_spare_63.to_i %>
+          <% estimated_us = @hotdeal.h_spare_44 - coupon_p61 %>
           <em class="total_p"><%= number_to_currency(estimated_us) %></em>
         <% else %>
           <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44 - @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63.to_i %>
+          <% estimated_us = @hotdeal.h_spare_44 - @hotdeal.h_spare_62.to_i %>
           <em class="total_p"><%= number_to_currency(estimated_us) %></em>
         <% end %>
       </div>
@@ -284,15 +284,17 @@
       <% end %>
     </div>
   </div>
-  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+
+ <!--  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
     <div class="info_box">
       <span>
         <ul>
-          <li>The "Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </ul>
+          <li>"Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
+          <li>"Estimated Purchase Price" is not included the shipping price.</li>
         </ul>
       </span>
     </div>
-  <% end %>
+  <% end %> -->
   
 
   <% if can? :update, @hotdeal %>

@@ -166,15 +166,15 @@
       <!-- 과세가격(estimated_kor) ( { 제품가[제품가 - 쿠폰] + 현지 배송비 + 세금(세금이 없는 배대지 설정) + 보험료 등등} * 고시환율 + 과세운임 )-->
       <div class="block clearfix">
         <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
-          <div class="box total_box">
+          <div class="box hidden_box total_box">
             <p>Estimated Purchase Price</p>
             <% if @promocode.p_spare_55.present? %>
               <% estimated_us = 0 %>
-              <% estimated_us = running_total - coupon_55 + @promocode.p_spare_54.to_i %>
+              <% estimated_us = running_total - coupon_55%>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
             <% else %>
               <% estimated_us = 0 %>
-              <% estimated_us = running_total - @promocode.p_spare_56.to_i + @promocode.p_spare_54.to_i %>
+              <% estimated_us = running_total - @promocode.p_spare_56.to_i %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
             <% end %>
           </div>
@@ -210,15 +210,16 @@
         </div>
       </div>
 
-      <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+     <!--  <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
         <div class="info_box">
           <span>
             <ul>
-              <li>The "Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </ul>
+              <li>The "Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
+              <li>"Estimated Purchase Price" is not included the shipping price.</li>
             </ul>
           </span>
         </div>
-      <% end %>
+      <% end %> -->
 
       <div class="block clearfix">
         <div class="box">
