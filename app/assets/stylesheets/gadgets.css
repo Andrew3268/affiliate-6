@@ -141,7 +141,7 @@
 .show_wrap .show_box .show_inner p{margin-top:20px;font-size:30px;}
 .show_wrap .show_box .show_inner a{color:#fff;background:#000;padding:15px 30px;display:inline-block;border-radius:30px;}
 .show_wrap .show_box .show_inner a em{color:#e47911;}
-.show_wrap .show_box .show_inner .m_btn{margin-top:20px;width:400px;}
+.show_wrap .show_box .show_inner .m_btn{margin-top:20px;width:400px;text-align:center;}
 .show_wrap .show_box .show_inner .promocode_btn a{border-radius:0.1875rem;margin:0;}
 .show_wrap .show_box .show_inner .only_show a em{color:#e47911;text-transform:uppercase;}
 .show_wrap .show_box .show_inner .trix{display:block;margin-top:10px;}
