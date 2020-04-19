@@ -13,7 +13,7 @@
         <!-- <%= f.select :h_spare_12, ([["No Tax?", ""], "Yes"])%> -->
         <!-- <%= f.select :h_spare_13, ([["Write Blog?", ""], "Yes"])%> -->
         <!-- <%= f.select :h_spare_06, ([["Ship to Korea", ""], "Yes"])%> -->
-        <!-- <%= f.select :h_spare_18, ([["Free Shippng?", ""], "Yes"])%> -->
+        <%= f.select :h_spare_18, ([["Yes, It's Free shipping", ""], "No, It's not"])%>
         <div class="form_btn"><%= f.button :submit %></div><br />
         
         <div class="basic_info">
@@ -31,7 +31,7 @@
           <%= f.input :h_spare_43, label: 'Original Price' %>
           <%= f.input :h_spare_44, label: 'Current Price' %>
           <!-- <%= f.input :h_percentage, label: 'Discount Percentage' %> -->
-          <%= f.input :h_spare_63, label: 'Shipping Fee' %>
+          <!-- <%= f.input :h_spare_63, label: 'Shipping Fee' %> -->
         
           <!-- <p>(when we don't know sales of percentage)</p> -->
           <!-- <div class="pricing clearfix"> -->

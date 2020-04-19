@@ -1,27 +1,93 @@
 <div class="hotdeal_inner">
  <h2 class="title"><%= @hotdeal.h_title %></h2>
 
- <% if @hotdeal.h_price.present? %>
-  <p class="h_price"><%= number_to_currency(@hotdeal.h_price) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_list_price) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
- <% else %>
-  <% if @hotdeal.h_spare_42.present? %>
-    <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_42) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_41) %></span><span class="span_02">( <%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF )</span></p>
-  <% else %>
-    <% running_total = 0 %>
-    <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
-    <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
-  <% end %>
- <% end %>
- <% if @hotdeal.h_spare_07.present? %>
-   <div class="add_line">
-    <ul>
-      <li class="stocks">Only in a few stocks left.</li>
-    </ul>
-   </div>
-  <% end %>
+    
+    <% if @hotdeal.h_spare_44.present? %>
+      <% if @hotdeal.h_spare_61.present? %>
+        <% running_total = 0 %>
+        <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43* 100 %>
+        <p class="h_price">
+          <%= number_to_currency(@hotdeal.h_spare_44) %>
+          <span class="span_01">
+            <%= number_to_currency(@hotdeal.h_spare_43) %>
+          </span>
+          <span class="span_02">
+            ( <%= number_to_percentage(running_total, precision: 0) %> OFF )
+          </span>
+        </p>
+      <% else %>
+        <% if @hotdeal.h_spare_62.present? || @hotdeal.h_spare_44.present? %>
+          <% running_total = 0 %>
+          <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
+          <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+        <% end %>
+      <% end %>
+      <div class="add_line">
+        <ul>
+          <% if @hotdeal.h_spare_61.present? %>
+            <% if @hotdeal.h_spare_61.present? %>
+              <li>+ extra <%= number_to_percentage(@hotdeal.h_spare_61, precision: 0) %> off coupon</li>
+            <% end %>
+          <% else %>
+            <% if @hotdeal.h_spare_62.present? %>
+              <li>+ extra <%= number_to_currency(@hotdeal.h_spare_62) %> off coupon</li>
+            <% end %>
+          <% end %>
+          <% if @hotdeal.h_spare_07.present? %>
+            <li class="stocks">Only in a few stocks left.</li>
+          <% end %>
+        </ul>
+      </div>
+    <% else %>
+      <% if @hotdeal.h_spare_61.present? %>
+          <% coupon_p61 = 0 %>
+          <% coupon_p61 = (@hotdeal.h_spare_43 * @hotdeal.h_spare_61 / 100) %>
+          <% number_to_currency(coupon_p61) %>
+          <p class="h_price">
+              <% coupon_deal = 0 %>
+              <% coupon_deal = (@hotdeal.h_spare_43.to_i - coupon_p61) %>
+              <%= number_to_currency(coupon_deal) %>
+            <span class="span_01">
+              <%= number_to_currency(@hotdeal.h_spare_43) %>
+            </span>
+            
+            <% if @hotdeal.h_spare_44.present? %>
+            <% else %>
+              <% if @hotdeal.h_spare_61.present? %>
+                <span class="via_show">Save <%= number_to_percentage(@hotdeal.h_spare_61, precision: 0) %> off via coupon </span>
+              <% end %>
+            <% end %>
+          </p>
+        <% else %>
+          <% if @hotdeal.h_spare_62.present? %>
+            <% coupon_dollar = 0 %>
+            <% coupon_dollar = @hotdeal.h_spare_43 - @hotdeal.h_spare_62 %>
+            <p class="h_price">
+                <%= number_to_currency(coupon_dollar) %>
+              <span class="span_01">
+                <%= number_to_currency(@hotdeal.h_spare_43) %>
+              </span>
+              <% if @hotdeal.h_spare_44.present? %>
+              <% else %>
+                <% if @hotdeal.h_spare_62.present? %>
+                  <span class="via_show">Save <%= number_to_currency(@hotdeal.h_spare_62) %> off via coupon </span>
+                <% end %>
+              <% end %>
+            </p>
+          <% end %>
+        <% end %>
+        <% if @hotdeal.h_spare_07.present? %>
+         <div class="add_line">
+          <ul>
+            <li class="stocks">Only in a few stocks left.</li>
+          </ul>
+         </div>
+        <% end %>
 
- 
- <!-- <p class="top_line">Amazon is offering "<span><%= @hotdeal.h_title %></span>" for only <em><%= number_to_currency(@hotdeal.h_price) %></em></p> -->
+
+    <% end %>
+
+    
 
  <div class="info_wrap clearfix">
 
@@ -50,7 +116,8 @@
       
       <div class="box line_three">
         <p>Shipping</p>
-        <% if @hotdeal.h_spare_63.present? %>         
+        <em>Free</em>
+        <!--<% if @hotdeal.h_spare_63.present? %>         
           <% if @hotdeal.h_spare_63 > 0 %>            
             <em><%= number_to_currency(@hotdeal.h_spare_63) %></em> 
           <% else %>  
@@ -60,7 +127,7 @@
           <% end %> 
         <% else %>  
           <em>Free</em>          
-        <%end %> 
+        <%end %>--> 
       </div>
       
       <div class="box line_three">
@@ -83,8 +150,8 @@
     <div class="info_box clearfix">
       <span>
         <ul>
-          <% if @hotdeal.h_spare_63.present? %>
-            <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime.<i></i></a></li>
+          <% if @hotdeal.h_spare_18.present? %>
+            <li>Get free shipping when you order $25+ of eligible items or Amazon Prime Members. <a target="_blank" href="/blogs/blog_01_amz_prime">What's Prime.<i></i></a></li>
             <!-- <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>             -->
           <% else %>
 
@@ -99,7 +166,7 @@
     <em></em>
   </div> -->
 
-  <% if @hotdeal.h_spare_45.present? %>
+  <!--<% if @hotdeal.h_spare_45.present? %>
     <div class="block clearfix">
       <div class="box line_three">
         <p>You saved</p>
@@ -143,7 +210,7 @@
         <p>Price dropped</p>
           <% running_total = 0 %>
           <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_44.to_i %>
-          <em><%= number_to_currency(running_total) %><!-- (Nov.12.2019 | was: $120.00) --></em>          
+          <em><%= number_to_currency(running_total) %></em>          
       </div>
     </div>
   <% else %>
@@ -212,7 +279,7 @@
         <em><a class="keyword" target="_blank" href="<%= @hotdeal.h_spare_15 %>"><%= @hotdeal.h_spare_14 %></a><i></i></em>
       </div>
     </div>
-  <% end %>
+  <% end %>-->
 
   <!--
   <% if @hotdeal.h_spare_07.present? || @hotdeal.h_spare_10.present? %>
@@ -236,20 +303,36 @@
   <% coupon_p61 = (@hotdeal.h_spare_44.to_i * @hotdeal.h_spare_61.to_i / 100) %>
   <% number_to_currency(coupon_p61) %>
 
-  <div class="block hidden_box clearfix">
+  <div class="block clearfix">
     <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
-      <div class="box total_box">
-        <p>Estimated Purchase Price</p>
-        <% if @hotdeal.h_spare_61.present? %>
-          <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44 - coupon_p61 %>
-          <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+        <% if @hotdeal.h_spare_44.present? %>
+          <div class="box total_box">
+            <p>Estimated Purchase Price</p>
+            <% if @hotdeal.h_spare_61.present? %>
+              <% estimated_us = 0 %>
+              <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 %>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+            <% else %>
+              <% estimated_us = 0 %>
+              <% estimated_us = @hotdeal.h_spare_44.to_i - @hotdeal.h_spare_62.to_i %>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+            <% end %>
+          </div>
         <% else %>
-          <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44 - @hotdeal.h_spare_62.to_i %>
-          <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+          <!-- <div class="box total_box">
+            <p>Estimated Purchase Price</p>
+            <% if @hotdeal.h_spare_61.present? %>
+              <% estimated_us = 0 %>
+              <% estimated_us = @hotdeal.h_spare_43.to_i - coupon_p61 %>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+            <% else %>
+              <% estimated_us = 0 %>
+              <% estimated_us = @hotdeal.h_spare_43 - @hotdeal.h_spare_62 %>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+            <% end %>
+          </div> -->
         <% end %>
-      </div>
+      
 
     <% end %>
     <div class="box hidden_box total_box">
@@ -285,16 +368,18 @@
     </div>
   </div>
 
- <!--  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
-    <div class="info_box">
-      <span>
-        <ul>
-          <li>"Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
-          <li>"Estimated Purchase Price" is not included the shipping price.</li>
-        </ul>
-      </span>
-    </div>
-  <% end %> -->
+  <% if @hotdeal.h_spare_44.present? %>
+    <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+      <div class="info_box">
+        <span>
+          <ul>
+            <li>"Estimated Purchase Price" is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
+          </ul>
+        </span>
+      </div>
+    <% end %>
+  <% else %>
+  <% end %>
   
 
   <% if can? :update, @hotdeal %>

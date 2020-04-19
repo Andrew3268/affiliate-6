@@ -6,18 +6,35 @@
     <% else %>
      <%= link_to (image_tag hotdeal.himage.url(:small), alt: hotdeal.h_title, title: hotdeal.h_spare_04), hotdeal %>
     <% end %>
-    <%if hotdeal.h_percentage.present? %>
-      <div class="mark"><span><%= hotdeal.h_percentage %>%</span><em>OFF</em></div>
-      <!-- <div class="mark dropped"><em>price</em><em>more</em><em>dropped</em></div> -->
+
+    <% if hotdeal.h_spare_44.present? %>
+      <% if hotdeal.h_spare_61.present?%>
+        <% running_total = 0 %>
+        <% running_total =  (hotdeal.h_spare_43.to_i - hotdeal.h_spare_44.to_i) / hotdeal.h_spare_43.to_i * 100 %>
+        <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %></span><em>OFF</em></div>
+        <% if hotdeal.h_spare_61.present? || hotdeal.h_spare_62.present? %>
+          <div class="mark endtoday wcoupon"><span class="wcou_01">extra</span><em class="wcoup">coupon</em></div>
+        <% end %>
+      <% end %>
+      <% if hotdeal.h_spare_62.present? || hotdeal.h_spare_44.present? %>
+        <% running_total = 0 %>
+        <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+        <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %></span><em>OFF</em></div>
+        <% if hotdeal.h_spare_61.present? || hotdeal.h_spare_62.present? %>
+          <div class="mark endtoday wcoupon"><span class="wcou_01">extra</span><em class="wcoup">coupon</em></div>
+        <% end %>
+      <% end %>
     <% else %>
-      <% running_total = 0 %>
-      <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
-      <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %></span><em>OFF</em></div>
-      <% if hotdeal.h_spare_61.present? || hotdeal.h_spare_62.present? %>
-        <div class="mark endtoday wcoupon"><span class="wcou_01">extra</span><em class="wcoup">coupon</em></div>
+      <% if hotdeal.h_spare_61.present? %>
+        <div class="mark"><span><%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %></span><em>OFF</em></div>
+      <% end %>
+      <% if hotdeal.h_spare_62.present? %>
+        <div class="mark"><span><%= number_to_currency(hotdeal.h_spare_62) %></span><em>OFF</em></div>
       <% end %>
     <% end %>
+  
   </div>
+
   <div class="buy-now"><span><a target="_blank" href="<%= hotdeal.h_link %>">BUY NOW</a></span></div>
   <figcaption>
     <h3><%= render_with_hashtags(hotdeal.h_spare_05.to_s) %></h3>
@@ -30,17 +47,33 @@
       <% end %>
       <%= link_to hotdeal.h_title, hotdeal %>
     </p>
+
+
     <div class="price">
-      <% if hotdeal.h_list_price.present? %>
-        <em>$<%= hotdeal.h_list_price %></em>$<%= hotdeal.h_price %>
+      
+      <% if hotdeal.h_spare_44.present? %>
+        <em><%= number_to_currency(hotdeal.h_spare_43) %></em><%= number_to_currency(hotdeal.h_spare_44) %>
       <% else %>
-        <% if hotdeal.h_spare_41.present? %>
-         <em><%= number_to_currency(hotdeal.h_spare_41) %></em><%= number_to_currency(hotdeal.h_spare_42) %>
+        <% if hotdeal.h_spare_61.present? %>
+          <% coupon_p61 = 0 %>
+          <% coupon_p61 = (hotdeal.h_spare_43.to_i * hotdeal.h_spare_61.to_i / 100) %>
+          <% number_to_currency(coupon_p61) %>
+            <% coupon_deal = 0 %>
+            <% coupon_deal = (hotdeal.h_spare_43.to_i - coupon_p61) %>
+            <em><%= number_to_currency(coupon_deal) %></em><%= number_to_currency(hotdeal.h_spare_43) %>
         <% else %>
-          <em><%= number_to_currency(hotdeal.h_spare_43) %></em><%= number_to_currency(hotdeal.h_spare_44) %>
+          <% if hotdeal.h_spare_62.present? %>
+            <% coupon_dollar = 0 %>
+            <% coupon_dollar = hotdeal.h_spare_43 - hotdeal.h_spare_62 %>
+              <em><%= number_to_currency(coupon_dollar) %></em><%= number_to_currency(hotdeal.h_spare_43) %>
+          </span>
+          <% end %>
         <% end %>
-      <% end %>
+      <% end %>       
+
     </div>
+
+
     <div class="m_btn"><a href="<%= hotdeal.h_link %>">Buy Now</a></div>
     <% if can? :update, @hotdeal %>
      <div class="admin">

@@ -8,7 +8,7 @@
     <div class="wrap">
     <div class="oh_menu">
       <%= render 'shared/header_amazon' %>  
-      <%= render 'shared/hotpro_header' %>
+      <%= render 'promocodes/navbar' %>
       <%= render 'shared/botton_amz' %>
     </div>
     
@@ -30,7 +30,7 @@
               <div class="mark"><span>BEST</span><em>DEALS</em></div>
             <% end %>
           <% end %>
-          <div class="show_tag"><h3><%= render_with_hashtags(@promocode.p_hashtag.to_s) %></h3></div>
+          <div class="show_tag"><h3><%= render_with_phashtags(@promocode.p_hashtag.to_s) %></h3></div>
            <% if can? :update, @promocode %>
             <div class="admin">
               <p>Admin Management</p>

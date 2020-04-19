@@ -1,3 +1,4 @@
+
 <div class="hotdeal_inner">
  <h2><%= @promocode.p_title %> </h2>
 
@@ -7,6 +8,14 @@
  <div class="add_line">
   <ul>
     <li>Take <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> at <%= number_to_currency(@promocode.p_spare_26) %> via code.</li>
+    <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+      <% if @promocode.p_spare_55.present? %>
+        <li>+ extra <%= number_to_percentage(@promocode.p_spare_55, precision: 0) %> off coupon</li>
+      <% else %>
+        <li>+ extra <%= number_to_currency(@promocode.p_spare_56) %> off coupon</li>
+      <% end %>
+    <% end %>
+    
     <% if @promocode.p_spare_02.present? %>
       <li class="stocks">Only in a few stocks left.</li>
     <% end %>
@@ -23,7 +32,8 @@
     <div class="block clearfix">
       <div class="box line_three">
         <p>Shipping</p>
-        <% if @promocode.p_spare_54.present? %>         
+        <em>Free</em>
+        <!--<% if @promocode.p_spare_54.present? %>         
           <% if @promocode.p_spare_54 > 0 %>            
             <em><%= number_to_currency(@promocode.p_spare_54) %></em> 
           <% else %>  
@@ -32,8 +42,8 @@
             <% end %> 
           <% end %> 
         <% else %>  
-          <em>Free</em>           
-        <%end %>  
+          <em>Free</em>       
+        <%end %>-->
       </div>
       <div class="box line_three">
         <p>Star Ratings</p>
@@ -55,18 +65,15 @@
     <div class="info_box">
       <span>
         <ul>
-          <% if @promocode.p_spare_54.present? %>         
-            <!-- <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>             -->
-            <li>Free Shipping: $25+ of eligible items, fulfilled by Amazon or  <a target="_blank" href="/blogs/blog_01_amz_prime">Prime<i></i></a></li>   
-          <% else %>
-            
-          <%end %>  
+          <% if @promocode.p_spare_10.present? %>         
+            <li>Get free shipping when you order $25+ of eligible items or Amazon Prime Members. <a target="_blank" href="/blogs/blog_01_amz_prime">What's Prime.<i></i></a></li>
+          <% end %>
           <li>Average ratings and reviews may change after posting.</li>
         <ul>
       </span>
     </div>
 
-    <div class="block clearfix">
+    <!-- <div class="block clearfix">
       <div class="box line_three">
         <p>You saved</p>
         <em>
@@ -107,8 +114,8 @@
           <em>-</em>
         <% end %>
       </div>
-    </div>
-    <% if @promocode.p_coupon_deal.present? || @promocode.p_spare_55.present? || @promocode.p_spare_56.present? || @promocode.p_extra_deal.present? %>
+    </div> -->
+    <!-- <% if @promocode.p_coupon_deal.present? || @promocode.p_spare_55.present? || @promocode.p_spare_56.present? || @promocode.p_extra_deal.present? %>
       <div class="info_box">
         <span>
           <ul>
@@ -121,7 +128,7 @@
           </ul>
         </span>
       </div>
-    <% end %>
+    <% end %> -->
 
     <!-- <div class="block clearfix">
       <div class="box">
@@ -159,69 +166,8 @@
       <% end %>
     </div> -->
 
-      <% coupon_55 = 0 %>
-      <% coupon_55 = running_total * @promocode.p_spare_55.to_i / 100 %>
-      <% number_to_currency(coupon_55) %>
 
-      <!-- 과세가격(estimated_kor) ( { 제품가[제품가 - 쿠폰] + 현지 배송비 + 세금(세금이 없는 배대지 설정) + 보험료 등등} * 고시환율 + 과세운임 )-->
-      <div class="block clearfix">
-        <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
-          <div class="box hidden_box total_box">
-            <p>Estimated Purchase Price</p>
-            <% if @promocode.p_spare_55.present? %>
-              <% estimated_us = 0 %>
-              <% estimated_us = running_total - coupon_55%>
-              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-            <% else %>
-              <% estimated_us = 0 %>
-              <% estimated_us = running_total - @promocode.p_spare_56.to_i %>
-              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-            <% end %>
-          </div>
-          <!-- <div class="info_box">
-            <span>
-              <ul>
-                <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
-              </ul>
-            </span>
-          </div> -->
-        <% end %>
-
-        <div class="box hidden_box total_box">
-          <p>Estimated Purchase Price</p>
-          <% if @promocode.p_spare_55.present? %>
-            <% estimated_us = 0 %>
-            <% estimated_us = running_total - coupon_55 + @promocode.p_spare_54.to_i %>
-            <em><%= number_to_currency(estimated_us) %></em> | 
-
-            <% estimated_kor = 0 %>
-            <% estimated_kor = (estimated_us * @promocode.p_spare_57.to_i) + @promocode.p_spare_58.to_i %>
-            <em><%= number_to_currency(estimated_kor, unit: "") %>원</em>
-
-          <% else %>
-            <% estimated_us = 0 %>
-            <% estimated_us = running_total - @promocode.p_spare_56.to_i + @promocode.p_spare_54.to_i %>
-            <em><%= number_to_currency(estimated_us) %></em> | 
-
-            <% estimated_kor = 0 %>
-            <% estimated_kor = (estimated_us * @promocode.p_spare_57.to_i) + @promocode.p_spare_58.to_i %>
-            <em><%= number_to_currency(estimated_kor, unit: "") %>원</em>
-          <% end %>
-        </div>
-      </div>
-
-     <!--  <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
-        <div class="info_box">
-          <span>
-            <ul>
-              <li>The "Estimated Purchase Price" on our website is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
-              <li>"Estimated Purchase Price" is not included the shipping price.</li>
-            </ul>
-          </span>
-        </div>
-      <% end %> -->
-
-      <div class="block clearfix">
+    <div class="block clearfix">
         <div class="box">
           <p>End Date</p>
           <em>
@@ -258,7 +204,68 @@
         <% end %>
       </div>
 
+      <% coupon_55 = 0 %>
+      <% coupon_55 = running_total * @promocode.p_spare_55.to_i / 100 %>
+      <% number_to_currency(coupon_55) %>
 
+      <!-- 과세가격(estimated_kor) ( { 제품가[제품가 - 쿠폰] + 현지 배송비 + 세금(세금이 없는 배대지 설정) + 보험료 등등} * 고시환율 + 과세운임 )-->
+      <div class="block clearfix">
+        <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+          <div class="box total_box">
+            <p>Estimated Purchase Price</p>
+            <% if @promocode.p_spare_55.present? %>
+              <% estimated_us = 0 %>
+              <% estimated_us = running_total - coupon_55%>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+            <% else %>
+              <% estimated_us = 0 %>
+              <% estimated_us = running_total - @promocode.p_spare_56 %>
+              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+            <% end %>
+          </div>
+          <!-- <div class="info_box">
+            <span>
+              <ul>
+                <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
+              </ul>
+            </span>
+          </div> -->
+        <% end %>
+
+        <div class="box hidden_box total_box">
+          <p>Estimated Purchase Price</p>
+          <% if @promocode.p_spare_55.present? %>
+            <% estimated_us = 0 %>
+            <% estimated_us = running_total - coupon_55 + @promocode.p_spare_54.to_i %>
+            <em><%= number_to_currency(estimated_us) %></em> | 
+
+            <% estimated_kor = 0 %>
+            <% estimated_kor = (estimated_us * @promocode.p_spare_57.to_i) + @promocode.p_spare_58.to_i %>
+            <em><%= number_to_currency(estimated_kor, unit: "") %>원</em>
+
+          <% else %>
+            <% estimated_us = 0 %>
+            <% estimated_us = running_total - @promocode.p_spare_56.to_i + @promocode.p_spare_54.to_i %>
+            <em><%= number_to_currency(estimated_us) %></em> | 
+
+            <% estimated_kor = 0 %>
+            <% estimated_kor = (estimated_us * @promocode.p_spare_57.to_i) + @promocode.p_spare_58.to_i %>
+            <em><%= number_to_currency(estimated_kor, unit: "") %>원</em>
+          <% end %>
+        </div>
+      </div>
+
+      <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+        <div class="info_box">
+          <span>
+            <ul>
+              <li>The "Estimated Purchase Price" is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
+            </ul>
+          </span>
+        </div>
+      <% end %>
+
+    
       <% if can? :update, @promocode %>
       <% if @promocode.p_spare_01.present? %>
       <% @promocode.p_spare_01 %>

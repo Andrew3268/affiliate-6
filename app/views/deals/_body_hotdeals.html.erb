@@ -16,145 +16,114 @@
      <% end %>
   </div>
   <div class="inner">
-    <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 < Date.today) %>
+    <!--<% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 < Date.today) %>
+    <% else %>
+      <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 = Date.today) %>
+        <div class="new_mark">New</div>
+      <% end %>
+    <% end %>-->
+    
+    <!--<% running_total = 0 %>
+    <% running_total =  (hotdeal.h_spare_43.to_i - hotdeal.h_spare_44.to_i) / hotdeal.h_spare_43.to_i * 100 %>
+    <span class="regular">
+      <em><%= number_to_percentage(running_total, precision: 0) %> OFF</em> + Free shipping
+    </span>-->
+    
+
+    <div class="dp_tit">
+      <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 < Date.today) %>
       <% else %>
         <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 = Date.today) %>
           <div class="new_mark">New</div>
         <% end %>
       <% end %>
-    <% if hotdeal.h_percentage.present? %>
-      <span class="regular">
-        <em><%= hotdeal.h_percentage %>% OFF</em>
-        <% if hotdeal.h_spare_63.present? %>
-        <% else %>
-         + free shipping
-        <% end %>
-      </span>
-    <% else %>
-      <% running_total = 0 %>
-      <% running_total =  (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
-      <span class="regular">
-        <em><%= number_to_percentage(running_total, precision: 0) %> OFF</em>
-        <% if hotdeal.h_spare_63.present? %>
-        <% else %>
-          + free shipping
-        <% end %>
-      </span>
-    <% end %>
-    <% if hotdeal.h_spare_63.present? %>
-     <span class="shipping_condition">Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a></span>
-     <!-- <span class="shipping_condition"><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></span> -->
-    <% else %>
-     
-    <% end %>
-    <!-- <p><a target="_blank" href="<%= hotdeal.h_link %>"><%= hotdeal.h_title %></a></p> -->
-
-    <p>
       <%= link_to hotdeal.h_title, hotdeal %>
-    </p>
+    </div>
     <div class="code_high">
      <address>
-        <% if hotdeal.h_price.present? %>
-         <span class="dis_price bestdeals">$<%= hotdeal.h_price %></span><span class="ori_price">$<%= hotdeal.h_list_price %></span>
-        <% else %>
-          <% if hotdeal.h_spare_41.present? %>
-            <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_42) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_41) %></span>
-          <% else %>
-            <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_44) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_43) %></span>
-            <span>
-              <% if hotdeal.h_spare_02.present? %>
-                <% if hotdeal.h_spare_02.present? %>
-                  <em><%= hotdeal.h_spare_02 %></em>
-                <% else %>
-                  <!-- <em>-</em> -->
-                <% end %>
-              <% else %>
-                <% if hotdeal.h_spare_61.present? %>
-                  <% if hotdeal.h_spare_61.present? %>
-                    <em class="pcou">+ <%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %> Off Coupon</em>
-                  <% else %>
-                    <!-- <em>-</em> -->
-                  <% end %>
-                <% else %>
-                  <% if hotdeal.h_spare_62.present? %>
-                    <em class="pcou">+ <%= number_to_currency(hotdeal.h_spare_62) %> Off Coupon</em>
-                  <% else %>
-                    <!-- <em>-</em> -->
-                  <% end %>
-                <% end %>
-              <% end %>
-            </span>
-          <% end %>
-        <% end %>      
-     </address>
-     
-     <div class="info_wrap clearfix">
-      <div class="block clearfix">
-        <div class="box">
-          <p>You saved</p>
-          <em>
-            <% if hotdeal.h_spare_41.present? %>
-            <% running_total = 0 %>
-            <% running_total =  hotdeal.h_spare_41.to_i - hotdeal.h_spare_42.to_i %>
-            <em class="save_money"><%= number_to_currency(running_total) %></em>
-           <% else %>
-            <% running_total = 0 %>
-            <% running_total =  hotdeal.h_spare_43.to_i - hotdeal.h_spare_44.to_i %>
-            <em class="save_money"><%= number_to_currency(running_total) %></em>
-           <% end %>
-         </em>
-        </div>
-        <div class="box">
-          <p>Star Rating</p>
-          <% if hotdeal.h_spare_08.present? %>
-          <em>Avg. <%= hotdeal.h_spare_08 %></em>
-          <% else %>
-            <em>-</em>
-          <% end %>
-        </div>
-        <div class="box">
-          <p>Customer Ratings</p>
-          <% if hotdeal.h_spare_09.present? %>
-          <em><%= number_with_delimiter(hotdeal.h_spare_09) %>+</em>
-          <% else %>
-            <em>-</em>
-          <% end %>
-        </div>
-        <!-- <div class="box">
-          <p>Coupon</p>
-          <% if hotdeal.h_spare_02.present? %>
-            <% if hotdeal.h_spare_02.present? %>
-              <em><%= hotdeal.h_spare_02 %></em>
-            <% else %>
-              <em>-</em>
-            <% end %>
-          <% else %>
-            <% if hotdeal.h_spare_61.present? %>
-              <% if hotdeal.h_spare_61.present? %>
-                <em><%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %></em>
-              <% else %>
-                <em>-</em>
-              <% end %>
-            <% else %>
-              <% if hotdeal.h_spare_62.present? %>
-                <em><%= number_to_currency(hotdeal.h_spare_62) %></em>
-              <% else %>
-                <em>-</em>
-              <% end %>
-            <% end %>
-          <% end %>
-        </div> -->
-      </div>
-     </div>
 
-     <!-- <em>*Pricing may change and deals can expire fast.</em> -->
+      <% if hotdeal.h_spare_44.present? %>        
+       <span class="dis_price bestdeals"><%= number_to_currency(hotdeal.h_spare_44) %></span><span class="ori_price"><%= number_to_currency(hotdeal.h_spare_43) %></span>
+        <% running_total = 0 %>
+        <% running_total = (hotdeal.h_spare_43 - hotdeal.h_spare_44) / hotdeal.h_spare_43 * 100 %>
+        <span class="via">
+          <em>( <%= number_to_percentage(running_total, precision: 0) %> off )</em>
+        </span>
+      <% else %>
+        <% if hotdeal.h_spare_61.present? %>
+          <% coupon_p61 = 0 %>
+          <% coupon_p61 = (hotdeal.h_spare_43.to_i * hotdeal.h_spare_61.to_i / 100) %>
+          <% number_to_currency(coupon_p61) %>
+          <span class="dis_price bestdeals">
+            <% coupon_deal = 0 %>
+            <% coupon_deal = (hotdeal.h_spare_43.to_i - coupon_p61) %>
+            <%= number_to_currency(coupon_deal) %>
+          </span>
+          <span class="ori_price">
+            <%= number_to_currency(hotdeal.h_spare_43) %>
+          </span>
+        <% else %>
+          <% if hotdeal.h_spare_62.present? %>
+            <% coupon_dollar = 0 %>
+            <% coupon_dollar = hotdeal.h_spare_43 - hotdeal.h_spare_62 %>
+            <span class="dis_price bestdeals">
+              <%= number_to_currency(coupon_dollar) %>
+            </span>
+            <span class="ori_price">
+            <%= number_to_currency(hotdeal.h_spare_43) %>
+          </span>
+          <% end %>
+        <% end %>
+      <% end %>
+       
+      
+      <span>
+        <% if hotdeal.h_spare_44.present? %>
+        <% else %>
+          <% if hotdeal.h_spare_61.present? %>
+            <span class="via">Save <%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %> via coupon </span>
+          <% else %>
+            <% if hotdeal.h_spare_62.present? %>
+              <span class="via">Save <%= number_to_currency(hotdeal.h_spare_62) %> off via coupon </span>
+            <% end %>
+          <% end %>
+        <% end %>
+
+
+        <% if hotdeal.h_spare_18.present? %>
+          <em class="pcou">+ free shipping when you order +$25 or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime.</a></em>
+        <% else %>
+          <em class="pcou">+ free shipping</em>
+        <% end %>
+
+        <% if hotdeal.h_spare_44.present? %>
+          <% if hotdeal.h_spare_61.present? %>
+            <% if hotdeal.h_spare_61.present? %>
+              <em class="pcou">+ extra <%= number_to_percentage(hotdeal.h_spare_61, precision: 0) %> off Coupon</em>
+            <% else %>
+            <% end %>
+          <% else %>
+            <% if hotdeal.h_spare_62.present? %>
+              <em class="pcou">+ extra <%= number_to_currency(hotdeal.h_spare_62) %> off Coupon</em>
+            <% else %>
+            <% end %>
+          <% end %>
+        <% end %>
+
+        <% if hotdeal.h_spare_07.present? %>
+          
+        <% end %>
+      </span>
+          
+     </address>
+    
     </div><!--/.code_high-->
   </div><!--/.inner --> 
   <div class="pc_btn">
-    <div class="deal_btn"><a target="_blank" href="<%= hotdeal.h_link %>">Shop Now</a></div>
+    <div class="deal_btn"><a target="_blank" href="<%= hotdeal.h_link %>">Get Deal</a></div>
   </div>
   <div class="mobile_btn">
-    <div class="deal_btn"><a href="<%= hotdeal.h_link %>">Shop Now</a></div>
+    <div class="deal_btn"><a href="<%= hotdeal.h_link %>">Get Deal</a></div>
   </div>
  </div>
 

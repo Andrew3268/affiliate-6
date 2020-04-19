@@ -94,7 +94,7 @@ updateNav();
           parent.appendChild(cpBtn);
 
           cpBtn.classList.add('material-icons');
-          cpBtn.textContent = 'Click To Copy';
+          cpBtn.textContent = 'Copy coupon for saving';
           cpBtn.setAttribute('title', 'Copy Code');
 
           copyText.addCopyEvent(cpBtn, el);

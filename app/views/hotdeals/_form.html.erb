@@ -9,7 +9,7 @@
     <!-- <%= f.select :h_spare_10, options_for_select([["Subscribe & Save?", ""], "Yes"])%> -->
     <!-- <%= f.select :h_spare_12, options_for_select([["No Tax?", ""], "Yes"])%> -->
     <!-- <%= f.select :h_spare_13, options_for_select([["Write Blog?", ""], "Yes"])%> -->
-    <!-- <%= f.select :h_spare_18, options_for_select([["Free Shippng?", ""], "Yes"])%> <br /><br /> -->
+    <%= f.select :h_spare_18, options_for_select([["Yes, It's Free shipping", ""], "No, It's not"]) %> <br /><br />
     <!-- <%= f.select :h_spare_06, options_for_select([["Ship to Korea", ""], "Yes"])%>  -->
     
     <div class="basic_info">
@@ -22,12 +22,10 @@
       <!-- <%= f.input :h_spare_11, label: 'Korean Title' %>  -->
     </div>
     <div class="pricing stk clearfix">
-      <!--<%= f.input :h_spare_41, label: 'Original Price' %>-->
-      <!--<%= f.input :h_spare_42, label: 'Current Price' %>-->
       <%= f.input :h_spare_43, label: 'Original Price' %>
       <%= f.input :h_spare_44, label: 'Current Price' %>
       <!-- <%= f.input :h_percentage, label: 'Discount Percentage' %> -->
-      <%= f.input :h_spare_63, label: 'Shipping Fee' %>
+      <!-- <%= f.input :h_spare_63, label: 'Shipping Fee' %> -->
     
       <!-- <p>(when we don't know sales of percentage)</p> -->
       <!-- <div class="pricing clearfix"> -->

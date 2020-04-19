@@ -8,7 +8,7 @@ class DealsController < ApplicationController
   def promocodes
       @promocodes = Promocode.all.order("created_at DESC").limit(30)
       @most_promocodes = Promocode.order("impressions_count DESC").limit(10)
-      set_meta_tags title: 'Amazon Promo Codes & Coupons',
+      set_meta_tags title: 'Take the Promo Codes & Coupons on Amazon',
                     site: 'Oh,igottabuythis',
                     revierse: true,
                     description: 'This list of Amazon promo codes makes it super easy for you to find great Amazon deals. Save with the verified Amazon coupon codes!! We update this list every single day so come back again for more savings!',

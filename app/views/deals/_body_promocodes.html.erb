@@ -16,56 +16,57 @@
      
     </div>
     <div class="inner inner_top">
-      <% if promocode.p_spare_52 && (promocode.p_spare_52 < Date.today) %>
+      <!--<% if promocode.p_spare_52 && (promocode.p_spare_52 < Date.today) %>
       <% else %>
         <% if promocode.p_spare_52 && (promocode.p_spare_52 = Date.today) %>
           <div class="new_mark">New</div>
         <% end %>
-      <% end %>
-      <span class="regular">
-        <em><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</em>
-        <% if promocode.p_spare_54.present? %>
-        <% else %>
-         + free shipping
-        <% end %>
-      </span>
+      <% end %>-->
+      <!-- <span class="regular">
+        <em><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</em> + free shipping
+      </span> -->
       <% if promocode.p_spare_54.present? %>
-        <span class="shipping_condition">Free Shipping: $25+ of eligible items, fulfilled by Amazon or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime</a></span>
-        <!-- <span class="shipping_condition"><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></span> -->
+        <span class="shipping_condition">Get free shipping when you order $25+ of eligible items or Amazon Prime Members. <a target="_blank" href="/blogs/blog_01_amz_prime">What's Prime.</a></span>
       <% else %>
-        
       <% end %>
       
       <!-- <p><a target="_blank" href="<%= promocode.p_link %>"><%= promocode.p_title %></a></p> -->
-      <p><%= link_to promocode.p_title, promocode %></p>
+      <div class="dp_tit">
+        <% if promocode.p_spare_52 && (promocode.p_spare_52 < Date.today) %>
+        <% else %>
+          <% if promocode.p_spare_52 && (promocode.p_spare_52 = Date.today) %>
+            <div class="new_mark">New</div>
+          <% end %>
+        <% end %>
+       <%= link_to promocode.p_title, promocode %>
+      </div>
 
       <div class="code_high">
 
        <% running_total = 0 %>
        <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
-       <em class="discounted"><%= number_to_currency(running_total) %></em><span class="ori_price"><%= number_to_currency(promocode.p_spare_26) %></span>
+       <em class="discounted"><%= number_to_currency(running_total) %></em><span class="ori_price"><%= number_to_currency(promocode.p_spare_26) %> </span>
+       <span class="via">Save <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> off via promo code </span>
+
        <span>
-         <% if promocode.p_coupon_deal.present? %>
-            <% if promocode.p_coupon_deal.present? %>
-              <em><%= promocode.p_coupon_deal %></em>
-            <% else %>
-              <!-- <em>-</em> -->
-            <% end %>
+        <% if promocode.p_spare_10.present? %>
+          <em class="pcou">+ Free shipping when you order +$25 or <a target="_blank" href="/blogs/blog_01_amz_prime">Prime.</a></em>
+        <% else %>
+          <em class="pcou">+ Free shipping</em>
+        <% end %>
+        <% if promocode.p_spare_55.present? %>
+          <% if promocode.p_spare_55.present? %>
+            <em class="pcou">+ extra <%= number_to_percentage(promocode.p_spare_55, precision: 0) %> Off Coupon</em>
           <% else %>
-            <% if promocode.p_spare_55.present? %>
-              <% if promocode.p_spare_55.present? %>
-                <em class="pcou">+ <%= number_to_percentage(promocode.p_spare_55, precision: 0) %> Off Coupon</em>
-              <% else %>
-                <!-- <em>-</em> -->
-              <% end %>
-            <% else %>
-              <% if promocode.p_spare_56.present? %>
-                <em class="pcou">+ <%= number_to_currency(promocode.p_spare_56) %> Off Coupon</em>
-              <% else %>
-                <!-- <em>-</em> -->
-              <% end %>
-            <% end %>
+            <!-- <em>-</em> -->
           <% end %>
+        <% else %>
+          <% if promocode.p_spare_56.present? %>
+            <em class="pcou">+ extra <%= number_to_currency(promocode.p_spare_56) %> Off Coupon</em>
+          <% else %>
+            <!-- <em>-</em> -->
+          <% end %>
+        <% end %>
        </span>
 
        <% if promocode.p_end_date.present? %>
@@ -89,7 +90,7 @@
         
        <% end %>        
 
-       <div class="info_wrap clearfix">
+       <!-- <div class="info_wrap clearfix">
         <div class="block clearfix">
           <div class="box">
             <p>You saved</p>
@@ -115,35 +116,11 @@
               <em>-</em>
             <% end %>
           </div>
-          <!-- <div class="box">
-            <p>Coupon</p>
-            <% if promocode.p_coupon_deal.present? %>
-              <% if promocode.p_coupon_deal.present? %>
-                <em><%= promocode.p_coupon_deal %></em>
-              <% else %>
-                <em>-</em>
-              <% end %>
-            <% else %>
-              <% if promocode.p_spare_55.present? %>
-                <% if promocode.p_spare_55.present? %>
-                  <em><%= number_to_percentage(promocode.p_spare_55, precision: 0) %></em>
-                <% else %>
-                  <em>-</em>
-                <% end %>
-              <% else %>
-                <% if promocode.p_spare_56.present? %>
-                  <em><%= number_to_currency(promocode.p_spare_56) %></em>
-                <% else %>
-                  <em>-</em>
-                <% end %>
-              <% end %>
-            <% end %>
-          </div> -->
          </div>
-        </div>
+        </div> -->
 
         <div class="text_copied text_copied_pc">
-        <div class="container_copy"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
+          <div class="container_copy"><div class="wrap"><div class="box"><p data-copy-text=""><%= promocode.p_promocode %></p></div></div></div>
         </div>
 
        <% if promocode.p_end_date.present? %>

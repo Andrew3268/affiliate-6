@@ -7,7 +7,7 @@
     <div class="wrap">
     <div class="oh_menu">
       <%= render 'shared/header_amazon' %>  
-      <%= render 'shared/hotpro_header' %>
+      <%= render 'hotdeals/navbar' %>
       <%= render 'shared/botton_amz' %>
     </div> 
       <div class="show_box clearfix">
@@ -23,7 +23,7 @@
             <% end %>
           </div>
           <% discount_rate = 0 %>
-          <% discount_rate =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
+          <% discount_rate =  (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
           <% if discount_rate < 50 %>
             <div class="mark"><span>GOOD</span><em>DEALS</em></div>
           <% else %>
@@ -49,7 +49,7 @@
                   <p>#AmazonDeals #HotDeals #ohigottabuythis <%= @hotdeal.h_spare_05 %></p>
                 <% else %>
                   <% running_total = 0 %>
-                  <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
+                  <% running_total =  (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
                   <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_43) %> <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_44) %></span><span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
                   <p>#AmazonDeals #HotDeals #ohigottabuythis <%= @hotdeal.h_spare_05 %></p>
                   <p>http://ohigottabuythis.net/hotdeals/<%=(params[:id]) %></p>
@@ -58,25 +58,6 @@
             </div>
           <% end %>
         </div><!--./show_img-->
-
-        <!-- <div class="show_inner">
-          <div class="alldeals_tabs show_tabs">
-            <input type="radio" name="tab" id="tab1" checked="checked">
-            <label for="tab1">I live in the United States.</label>
-            <input type="radio" name="tab" id="tab2">
-            <label for="tab2">I live in Korea.</label>
-
-            <div class="tab-content-wrapper">
-             <div id="tab-content-1" class="tab-content">
-              < render 'hotdeals/usa_ver2' >
-             </div>
-
-             <div id="tab-content-2" class="tab-content">
-              < render 'hotdeals/korea_ver2' >
-             </div>
-            </div>
-          </div>
-        </div> -->
 
        <div class="show_inner">
         <%= render 'hotdeals/usa_kor' %>
