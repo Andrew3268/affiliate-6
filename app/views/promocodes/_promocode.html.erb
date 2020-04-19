@@ -24,15 +24,15 @@
         <% if promocode.p_spare_51 && (promocode.p_spare_51 <= DateTime.now) %>
         <% promocode.p_spare_51 %>
           <% if promocode.p_spare_51.present? %>
-            <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>  
-            <div class="expried_wrap"><div class="mark term endtoday"><p>End</p><p>Today</p></div></div>
+            <div class="mark for_cou_end"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</span><em>coupon</em></div>
+            <div class="expried_wrap"><div class="mark term endtoday end_p_m"><p>End</p><p>Today</p></div></div>
           <% end %>
         <% else %>
-          <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
+          <div class="mark for_cou"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</span><em>coupon</em></div>
         <% end %>
-        <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
+        <!--<% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
           <div class="mark wcoupon wcp"><span class="wcou_01">extra</span><em class="wcoup">coupon</em></div>
-        <% end %>
+        <% end %>-->
        </div>
     <% end %>
   <% else %>
@@ -48,7 +48,7 @@
   <% end %>
   <!-- End Image Section--> 
 
-  <div class="buy-now"><span><%= link_to "GET CODE", promocode %></span></div>
+  <div class="buy-now"><span><%= link_to "GET COUPON", promocode %></span></div>
   <figcaption>
     <h3><%= render_with_phashtags(promocode.p_hashtag.to_s) %></h3>
     <p>
@@ -64,9 +64,12 @@
       <% running_total = 0 %>
       <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
       <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
+      <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
+        <div class="extra">+ extra <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> off coupon</div>
+      <% end %>
     </div>
 
-    <div class="m_btn"><%= link_to "GET CODE", promocode %></a></div>
+    <div class="m_btn"><%= link_to "GET COUPON", promocode %></a></div>
     <% if can? :update, @promocode %>
      <div class="admin">
        <%= link_to 'Edit', edit_promocode_path(promocode) %> | 
