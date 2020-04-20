@@ -22,18 +22,18 @@ class HotdealsController < ApplicationController
     set_meta_tags title: 'Discovery The Best Amazon Deals',
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'Find the best bargain on Amazon and save money',
+                  description: 'Take the best bargain on Amazon and save money',
                   keywords: 'Amazon, deals, bargain',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: 'Discovery The Best Amazon Deals',
-                    description: 'Find the best bargain on Amazon and save money',
+                    description: 'Take the best bargain on Amazon and save money',
                     # image: @hotdeal.h_image
                   },
                   og: {
                     title: 'Discovery The Best Amazon Deals',
-                    description: 'Find the best bargain on Amazon and save money',
+                    description: 'Take the best bargain on Amazon and save money',
                     type: 'website',
                     url: 'www.ohigottabuythis.net/hotdeals',
                     # image: @hotdeal.h_image
@@ -60,18 +60,18 @@ class HotdealsController < ApplicationController
     set_meta_tags title: @hotdeal.h_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: @hotdeal.h_spare_21,
-                  keywords: @hotdeal.h_keyword,
+                  description: 'Take the best bargain on Amazon and save money',
+                  keywords: 'deals, discounts',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: @hotdeal.h_title,
-                    description: @hotdeal.h_spare_21,
+                    description: 'Take the best bargain on Amazon and save money',
                     image: @hotdeal.h_image
                   },
                   og: {
                     title: @hotdeal.h_title,
-                    description: @hotdeal.h_spare_21,
+                    description: 'Take the best bargain on Amazon and save money',
                     type: 'website',
                     url: hotdeal_url(@hotdeal),
                     image: @hotdeal.h_image

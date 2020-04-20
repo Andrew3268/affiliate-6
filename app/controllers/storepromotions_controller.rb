@@ -47,18 +47,18 @@ class StorepromotionsController < ApplicationController
     set_meta_tags title: @storepromotion.sp_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: @storepromotion.sp_description,
+                  description: 'Browse the best deals, discounts & coupons. Never pay full price again',
                   keywords: @storepromotion.sp_title,
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: @storepromotion.sp_title,
-                    description: @storepromotion.sp_description,
+                    description: 'Browse the best deals, discounts & coupons. Never pay full price again',
                     image: @storepromotion.sp_image
                   },
                   og: {
                     title: @storepromotion.sp_title,
-                    description: @storepromotion.sp_description,
+                    description: 'Browse the best deals, discounts & coupons. Never pay full price again',
                     type: 'website',
                     url: storepromotion_url(@storepromotion),
                     image: @storepromotion.sp_image

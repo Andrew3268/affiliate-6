@@ -32,5 +32,5 @@ Disallow: /margetings/insta
 Disallow: /margetings/amz_deal_e
 Disallow: /margetings/be_rich
 Disallow: /margetings/bystore
-deals/shoes
+
   
