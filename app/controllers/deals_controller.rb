@@ -96,6 +96,8 @@ class DealsController < ApplicationController
                     image: 'https://i.pinimg.com/564x/0a/7c/b6/0a7cb6c6875ed1219e2d39b93307b4f2.jpg'
                   }
 
+    @recommends = Recommend.all.order("created_at DESC").limit(4)
+    
   end
 
   def mostreviewed

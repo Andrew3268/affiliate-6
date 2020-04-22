@@ -4,6 +4,19 @@
   <%= render 'deals/header_index' %> 
   <%= render 'shared/botton_amz' %>
 
+  <!-- <div class="index_featured clearfix">
+    <% @recommends.each do |rec| %>
+      <div class="in_card">
+        <div class="in_img_box">
+          <%= link_to (image_tag rec.re_image), rec %>
+        </div>
+        <div class="inner">
+          <p><%= link_to rec.re_title, rec %></p>
+        </div>
+     </div> 
+    <% end %>
+  </div> -->
+
     <div class="quicksearch common_layout codes">
 
         <div class="set_search clearfix">
@@ -26,7 +39,6 @@
           <h2>Simple Deal Finder on Amazon</h2>
           <h2 class="for_m">Simple Deal Finder on Amazon</h2>
           
-          <!-- <%= render 'shared/amz_search' %> -->
            
           <table class="tg">
              <%= render 'deals/set_pct' %>

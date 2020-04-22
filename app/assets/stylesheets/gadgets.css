@@ -150,6 +150,8 @@
 .show_wrap .show_box .show_inner .keyword{display:none;}
 .show_wrap .show_box .show_inner .about{font-size:20px;border-bottom:1px solid #ccc;display:block;margin-top:25px;}
 .show_wrap .show_box .show_inner .learn_more{text-align:center;margin-top:30px;}
+.show_wrap .show_box .show_inner .sharing{text-align:center;margin-top:7px;}
+.show_wrap .show_box .show_inner .sharing a{padding:5px;}
 
 .show_wrap .show_box_down{width:1000px;margin:60px auto 0 auto;}
 .show_wrap .show_box_down h2{margin:0 0 1% 1%;border-bottom:1px solid #616161;width:200px;}
@@ -172,6 +174,7 @@
   .show_wrap .show_box .show_inner strong{font-size:15px;}
   .show_wrap .show_box .show_inner span p{font-size:13px;}
   .show_wrap .show_box .show_inner .m_btn{width:100%;text-align:center;font-size:17px;}
+  .show_wrap .show_box .show_inner .sharing a{padding:7px;}
   .show_wrap .show_box_down{width:100%;margin:0;}
   .show_wrap .show_box_down .sbd_box{float:left;width:48%;margin:2% 1%;}
   .show_wrap .show_box_down .sbd_box .down_img{height:175px;}
