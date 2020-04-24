@@ -70,8 +70,8 @@
 
               
               <% if can? :update, bargain %>
-                <div class="admin">
-                  <%= link_to 'Edit', edit_bargain_path(bargain) %> | 
+                <div class="sp_admin">
+                  <%= link_to 'Edit | ', edit_bargain_path(bargain) %>
                   <%= link_to 'Destroy', bargain, method: :delete, data: { confirm: 'Are you sure?' } %>
                 </div>
               <% end %>
