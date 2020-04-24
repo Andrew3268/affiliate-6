@@ -8,7 +8,7 @@
           <li><%= link_to "New Store(Category)", new_spcategory_path %></li>
         <% end %>
       </div>
-      <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div>
+      <!-- <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div> -->
 
       <li><a href="/storepromotions/">All Stores</a></li>
       <% Spcategory.all.each do |category| %>
@@ -17,9 +17,9 @@
     </ul>
   </div>
 
-  <div class="search_m">
+  <!-- <div class="search_m">
     <%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %>
-  </div>
+  </div> -->
   <label class="dropdown">
     <div class="store-button">Categories</div>
     <input type="checkbox" class="store-input" id="test">
