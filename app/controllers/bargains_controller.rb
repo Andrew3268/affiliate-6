@@ -14,7 +14,7 @@ class BargainsController < ApplicationController
       @search_term = params[:search]
       @bargains = @bargains.search_by(@search_term)
     end
-    set_meta_tags title: 'The best featured deals on Amazon',
+    set_meta_tags title: 'The Best Deals, Coupons &amp; Promo Codes',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Take the best offers & promotions with promo codes and coupons',
@@ -22,12 +22,12 @@ class BargainsController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'The best featured deals on Amazon',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Take the best offers & promotions with promo codes and coupons',
                     # image: @hotdeal.h_image
                   },
                   og: {
-                    title: 'The best featured deals on Amazon',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Take the best deals with promo codes and coupons',
                     type: 'website',
                     url: 'www.ohigottabuythis.net/bargains',

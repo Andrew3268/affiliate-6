@@ -6,24 +6,42 @@
 .bargain_wrap .left ul .admin{}
 .bargain_wrap .left ul .admin li{float:left;margin-right:5px;}
 .bargain_wrap .left ul .admin li a{font-size:10px;}
-.bargain_wrap .right{float:left;width:76%;margin-left:2%;padding:10px;}
-.bargain_wrap .right .right_box{margin-bottom:30px;height:172px;border:1px solid #ccc;border-radius:10px;border-bottom:3px solid #08f;}
-.bargain_wrap .right .image_box{float:left;width:20%;padding:10px;}
+.bargain_wrap .right{float:left;width:76%;margin-left:2%;padding:10px;position:relative;}
+.bargain_wrap .right .right_box{margin-bottom:30px;height:172px;border:1px solid #ccc;border-radius:10px;border-bottom:3px solid #08f;position:relative;}
+.bargain_wrap .right .image_box .date_comm{position:absolute;top:7px;left:55px;}
+.bargain_wrap .right .image_box em.code_em{font-size:11px;color:#fff;padding:3px 10px;border-radius:20px;}
+.bargain_wrap .right .image_box em.expired{background:#ff0000;}
+.bargain_wrap .right .image_box em.endtoday{background:#ffa500;}
+.bargain_wrap .right .image_box{float:left;width:20%;padding:10px;position:relative;}
 .bargain_wrap .right .image_box .card{width:150px;height:150px;padding:7px;}
 .bargain_wrap .right .image_box .card img{width:100%;height:100%;object-fit:contain;}
+.bargain_wrap .right .image_box .new_mark{position:absolute;top:7px;left:7px;background:#08f;color:#fff;padding:3px 10px;border-radius:20px;font-size:11px;}
+.bargain_wrap .right .image_box .just_text{position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);text-align:center;font-size:25px;line-height:1.2;}
+.bargain_wrap .right .image_box .just_text span{display:block;font-size:30px;}
 .bargain_wrap .right .inner{float:left;width:75%;margin-left:5%;position:relative;padding:10px;}
 .bargain_wrap .right .inner .contents{float:left;width:70%;}
+.bargain_wrap .right .inner .contents .date_comm{position:absolute;top:7px;right:15px;}
 .bargain_wrap .right .inner .contents .type{font-size:13px;width:30%;padding:5px;border-bottom:1px solid #ccc;margin:0;}
 .bargain_wrap .right .inner .contents span{font-size:22px;line-height:1.1;margin:10px 0;display:block;/*vertical-align:top;text-overflow:ellipsis;word-break:break-word;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-height:1.4;height:2.8em;overflow:hidden;*/}
 .bargain_wrap .right .inner .contents span a{color:#000;}
+.bargain_wrap .right .inner .contents .index_title{margin:7px 0;}
+.bargain_wrap .right .inner .contents .index_title a{font-size:15px;border-bottom:1px solid #ccc;text-align:center;color:#616161;}
 .bargain_wrap .right .inner .contents em{font-size:22px;display:block;color:#08f;font-weight:700;}
+.bargain_wrap .right .inner .contents em.code_em{font-size:11px;color:#fff;padding:3px 10px;border-radius:20px;}
+.bargain_wrap .right .inner .contents em.expired{background:#ff0000;}
+.bargain_wrap .right .inner .contents em.endtoday{background:#ffa500;}
 .bargain_wrap .right .inner .contents p{color:#808080;font-size:12px;}
 .bargain_wrap .right .inner .contents p a{color:#808080;font-size:12px;}
+.bargain_wrap .right .inner .contents .sp_titlee a{font-size:17px;color:#616161;}
+.bargain_wrap .right .inner .contents p.h_price {font-size:20px;}
+.bargain_wrap .right .inner .contents .h_price span{display:inline-block;font-size:15px;}
+.bargain_wrap .right .inner .contents .h_price span.span_01{text-decoration:line-through;}
 .bargain_wrap .right .inner .btn{float:left;width:25%;margin-left:5%;height:162px;position:relative;}
 .bargain_wrap .right .inner .btn a{background:#08f;color:#fff;padding:10px;position:absolute;top:50%;left:50%;transform:translate(-50%, -50%);width:80%;text-align:center;}
 .bargain_wrap .right .inner .btn_m{display:none;}
-.bargain_wrap .right .inner .admin{position:absolute;top:5px;right:5px;}
-.bargain_wrap .right .inner .admin a{color:#000;}
+.bargain_wrap .right .inner .sp_admin{position:absolute;bottom:15px;left:10px;}
+.bargain_wrap .right .inner .sp_admin a{color:#ccc;font-size:11px;}
+.bargain_wrap .right .inner .pc
 
 .bargain_wrap .search_pc{border-bottom:2px solid green;margin-bottom:7px;}
 .bargain_wrap .search_pc input{width:100%;padding:7px 10px;}
@@ -60,6 +78,7 @@
   .bargain_wrap .search_m{display:block;}
   .bargain_wrap .search_m input{width:100%;}
   .bargain_wrap .right .inner .contents .type{width:50%;padding:0;}
+  .bargain_wrap .right .image_box .just_text{font-size:20px;}
 
   /*Show Page*/
   .bargian_inner{float:none;width:100%;margin:20px 0 0 0;}

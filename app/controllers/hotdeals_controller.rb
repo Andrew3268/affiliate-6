@@ -19,7 +19,7 @@ class HotdealsController < ApplicationController
   
   def index
     @hotdeals = Hotdeal.all.order("created_at DESC").page(params[:page]).per_page(48)
-    set_meta_tags title: 'Discovery The Best Amazon Deals',
+    set_meta_tags title: 'The Best Deals, Coupons &amp; Promo Codes',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Take the best bargain on Amazon and save money',
@@ -27,12 +27,12 @@ class HotdealsController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Discovery The Best Amazon Deals',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Take the best bargain on Amazon and save money',
                     # image: @hotdeal.h_image
                   },
                   og: {
-                    title: 'Discovery The Best Amazon Deals',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Take the best bargain on Amazon and save money',
                     type: 'website',
                     url: 'www.ohigottabuythis.net/hotdeals',

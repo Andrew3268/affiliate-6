@@ -19,7 +19,7 @@ class PromocodesController < ApplicationController
   # GET /promocodes.json
   def index
     @promocodes = Promocode.all.order("created_at DESC").page(params[:page]).per_page(48)
-    set_meta_tags title: 'Discover Amazon Promo Codes & Coupons',
+    set_meta_tags title: 'The Best Deals, Coupons &amp; Promo Codes',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Take the best deals with promo codes and coupons',
@@ -27,12 +27,12 @@ class PromocodesController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'Discover Amazon Promo Codes & Coupons',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Take the best deals with promo codes and coupons',
                     # image: @hotdeal.h_image
                   },
                   og: {
-                    title: 'Discover Amazon Promo Codes & Coupons',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Take the best deals with promo codes and coupons',
                     type: 'website',
                     url: 'www.ohigottabuythis.net/promocodes',

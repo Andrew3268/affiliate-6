@@ -18,7 +18,7 @@ class StorepromotionsController < ApplicationController
       @search_term = params[:search]
       @storepromotions = @storepromotions.search_by(@search_term)
     end
-    set_meta_tags title: 'See the best deals and offers at your favorite stores.',
+    set_meta_tags title: 'The Best Deals, Coupons &amp; Promo Codes',
                   site: 'Oh,igottabuythis',
                   revierse: true,
                   description: 'Browse the best deals, discounts & coupons. Never pay full price again',
@@ -26,12 +26,12 @@ class StorepromotionsController < ApplicationController
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
-                    title: 'See the best deals and offers at your favorite stores.',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Browse the best deals, discounts & coupons. Never pay full price again',
                     # image: @hotdeal.h_image
                   },
                   og: {
-                    title: 'See the best deals and offers at your favorite stores.',
+                    title: 'The Best Deals, Coupons &amp; Promo Codes',
                     description: 'Browse the best deals, discounts & coupons. Never pay full price again',
                     type: 'website',
                     url: 'www.ohigottabuythis.net/storepromotions',

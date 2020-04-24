@@ -1,0 +1,161 @@
+<div class="bargain_wrap clearfix">
+
+  <div class="left">
+    <ul>
+      <div class="admin clearfix">
+        <% if can? :update, @storepromotions %>
+          <li><%= link_to 'New Deals |', new_storepromotion_path %></li> 
+          <li><%= link_to "New Store(Category)", new_spcategory_path %></li>
+        <% end %>
+      </div>
+      <div class="store_search"><%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %></div>
+
+      <li><a href="/storepromotions/">All Stores</a></li>
+      <% Spcategory.all.each do |category| %>
+        <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
+      <% end %>
+    </ul>
+  </div>
+
+  <div class="search_m">
+    <%= form_for "",url: storepromotions_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search Store..." %><% end %>
+  </div>
+  <label class="dropdown">
+    <div class="store-button">Categories</div>
+    <input type="checkbox" class="store-input" id="test">
+    <ul class="store_menu">
+      <li class="all_store"><a href="/storepromotions/">All Stores</a></li>
+      <% Spcategory.all.each do |category| %>
+        <li><%= link_to category.name, storepromotions_path(spcategory: category.name) %></li>
+      <% end %>
+    </ul>
+  </label>
+
+  <div class="right clearfix">
+    <% @storepromotions.each do |storepromotion| %>
+      <div class="right_box">
+        <div class="image_box">
+          <div class="card">
+            <% if storepromotion.sp_spare_02.present? %>
+              <% if storepromotion.sp_image.present? %>
+                <%= link_to image_tag(storepromotion.sp_image, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
+              <% else %>
+                <%= link_to image_tag(storepromotion.sp_spare_02, alt: storepromotion.sp_title, title: storepromotion.sp_store_name), storepromotion %>
+              <% end %>
+            <% else %>
+              <% if storepromotion.sp_percentage_01.present? %>
+                <div class="just_text">
+                  <p>UP TO</p>
+                  <span><%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %></span>
+                  <em class="off">OFF</em>
+                </div>
+              <% else %>
+                <% if storepromotion.sp_spare_03.present? %>
+                  <div class="just_text">
+                    <p>TAKE</p><span><%= number_to_currency(storepromotion.sp_spare_03, precision: 0) %></span><em class="off">OFF</em>
+                  </div>
+                <% else %>
+                  <div class="just_text">
+                    <p>Free Shipping</p>
+                  </div>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div>
+
+         <!--  <div class="date_comm">
+            <% if storepromotion.sp_end_date.present? %>
+              <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
+              <% storepromotion.sp_spare_60 %>
+                <em class="expired code_em">Expired</em>
+              <% else %>
+                <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
+                <% storepromotion.sp_spare_61 %>
+                 <em class="endtoday code_em">End Today</em>
+                <% else %>
+                <% end %>
+              <% end %>
+            <% end %>
+          </div> -->
+
+          <% if storepromotion.sp_spare_93 && (storepromotion.sp_spare_93 < Date.today) %>
+          <% else %>
+            <% if storepromotion.sp_spare_93 && (storepromotion.sp_spare_93 = Date.today) %>
+              <em class="new_mark">New</em>
+            <% end %>
+          <% end %>
+
+
+
+        </div>
+
+        <div class="inner">
+          <div class="contents">
+            <p>
+              <div class="index_title"><%= link_to storepromotion.spcategory.name, storepromotions_path(spcategory: storepromotion.spcategory.name) %></div>
+            </p>
+            <div class="date_pc date_comm">
+              <% if storepromotion.sp_end_date.present? %>
+                <% if storepromotion.sp_spare_60 && (storepromotion.sp_spare_60 < DateTime.now) %>
+                <% storepromotion.sp_spare_60 %>
+                  <em class="expired code_em">Expired</em>
+                <% else %>
+                  <% if storepromotion.sp_spare_61 && (storepromotion.sp_spare_61 <= DateTime.now) %>
+                  <% storepromotion.sp_spare_61 %>
+                   <em class="endtoday code_em">End Today</em>
+                  <% else %>
+                  <% end %>
+                <% end %>
+              <% end %>
+            </div>
+
+            <span><%= link_to storepromotion.sp_title, storepromotion %></p></span>
+            
+            
+            <% if storepromotion.sp_spare_40.present? || storepromotion.sp_spare_42.present? %>
+              <% if storepromotion.sp_spare_40.present? %>
+                <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_41) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_40) %></span><span class="span_02">( <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF )</span></p>
+              <% else %>
+                <% if storepromotion.sp_spare_42.present? %>
+                  <% running_total = 0 %>
+                  <% running_total =  (storepromotion.sp_spare_42 - storepromotion.sp_spare_43) / storepromotion.sp_spare_42 * 100 %>
+                  <p class="h_price sp_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01"><%= number_to_currency(storepromotion.sp_spare_42) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+                <% end %>
+              <% end %>
+            <% else %>
+              <% if storepromotion.sp_percentage_01.present? %>
+                <em>Save up to <%= number_to_percentage(storepromotion.sp_percentage_01, precision: 0) %> OFF</em>
+              <% else %>
+                <% if storepromotion.sp_spare_03.present? %>
+                  <em>Save up to <%= number_to_currency(storepromotion.sp_spare_03, precision: 0) %> OFF</em>
+                <% else %>
+                <% end %>
+              <% end %>
+            <% end %>
+
+            
+            <% if can? :update, storepromotion %>
+              <div class="sp_admin">
+                <%= link_to 'Edit | ', edit_storepromotion_path(storepromotion) %>
+                <%= link_to 'Destroy', storepromotion, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="btn">
+            <a target="_blank" href="<%= storepromotion.sp_link %>">Shop Now</a>
+          </div>
+
+          <div class="btn_m">
+            <a href="<%= storepromotion.sp_link %>">Shop Now</a>
+          </div>
+
+          
+        </div>
+      </div>
+    <% end %>
+    <%= will_paginate @storepromotion %>
+  </div>
+
+
+</div>
