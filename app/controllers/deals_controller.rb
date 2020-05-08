@@ -152,5 +152,9 @@ class DealsController < ApplicationController
   def store_sales
   end
 
+  def categories
+    @bargains = Bargain.all.order("created_at DESC")
+  end
+
 
 end

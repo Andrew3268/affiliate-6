@@ -1,20 +1,7 @@
 <div class="layout"><!--layout-->
   <div class="wrap">
-    
-    <!-- <div class="deal_category_wrap">
-      <div class="category_body clearfix">
-        <div class="left">
-          <ul>
-            <li><a href="/deals/quick_search"># Amazon Deal Finder</a></li>
-            <li><a href="/hotdeals"># Today's Deals of Amazon</a></li>
-            <li><a href="/promocodes"># Today's Codes of Amazon</a></li>
-            <li><a href="/storepromotions"># Today's Deals by Store</a></li>
-          </ul>
-        </div>        
-      </div>
-    </div> -->
-    
-    <div class="category_mobile">
+
+    <!-- <div class="category_mobile">
       <a href="/deals/quicksearch"><img class="quick_img" src="<%=asset_path 'in_find.png' %>"></a>
       <a href="/hotdeals"><img class="quick_img" src="<%=asset_path 'in_deal.png' %>"></a>
       <a href="/promocodes"><img class="quick_img" src="<%=asset_path 'in_coupon.png' %>"></a>
@@ -22,7 +9,20 @@
       <a href="/deals/mostreviewed"><img class="quick_img" src="<%=asset_path 'in_rating.png' %>"></a>
       <a href="/gadgets"><img class="quick_img" src="<%=asset_path 'in_gadget.png' %>"></a>
       <a href="/recommends"><img class="quick_img" src="<%=asset_path 'in_pick.png' %>"></a>
-    </div>
+    </div> -->
+
+    <% @bargains.each do |bargain| %>
+      <div class="insta-category-box clearfix">
+        <div class="image-box">
+          <%= link_to image_tag(bargain.bar_image, alt: bargain.bar_title, title: bargain.bar_detail), bargain %>
+        </div>
+        <div class="inner">
+          <p><%= link_to bargain.bar_title, bargain %></p>
+          <span><%= link_to bargain.bar_detail, bargain %></span>
+        </div>
+
+      </div>
+    <% end %>
 
 
   </div>

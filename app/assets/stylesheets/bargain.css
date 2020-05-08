@@ -26,7 +26,7 @@
 .bargain_wrap .right .inner .contents span a{color:#000;}
 .bargain_wrap .right .inner .contents .index_title{margin:7px 0;}
 .bargain_wrap .right .inner .contents .index_title a{font-size:15px;border-bottom:1px solid #ccc;text-align:center;color:#616161;}
-.bargain_wrap .right .inner .contents em{font-size:22px;display:block;color:#08f;font-weight:700;}
+.bargain_wrap .right .inner .contents em{font-size:22px;display:block;color:#08f;font-weight:700;line-height:1.1;}
 .bargain_wrap .right .inner .contents em.code_em{font-size:11px;color:#fff;padding:3px 10px;border-radius:20px;}
 .bargain_wrap .right .inner .contents em.expired{background:#ff0000;}
 .bargain_wrap .right .inner .contents em.endtoday{background:#ffa500;}
