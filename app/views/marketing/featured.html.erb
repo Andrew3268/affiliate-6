@@ -1,0 +1,25 @@
+<div class="layout"><!--layout-->
+  <% if can? :update, @hotdeal %>
+    <div class="wrap">  
+      <%= render 'shared/header_marketing' %>
+
+        <div class="all_wrap">
+          <div class="common promocodes">
+            <h2>Featured Deals On Amazon</h2>
+            <% @bargains.each do |bargain| %>
+              <div class="all_box clearfix">
+                <p><%= bargain.bar_title %></p>
+                <p><%= bargain.bar_detail %></p>
+                <a target="_blank" href="<%= bargain.bar_link %>"><%= bargain.bar_link %></a><br />
+              </div>   
+              <% end %>
+            <span class="check_more"> <a target="_blank" href="/promocodes">Check More Featured Deals: www.ohigottabuythis.net/bargains</a></span>
+          </div>
+          <hr>
+          
+       </div>
+    </div><!--./warp-->
+  <% end %>
+</div><!--./layout-->
+
+

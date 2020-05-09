@@ -15,6 +15,10 @@ class MarketingController < ApplicationController
     @storepromotions = Storepromotion.all.order("created_at DESC").limit(30)
   end
 
+  def featured
+    @bargains = Bargain.all.order("created_at DESC").limit(20)
+  end
+
   def be_rich
     @random = *(1..45)
     @lottery = @random.sample(6).sort

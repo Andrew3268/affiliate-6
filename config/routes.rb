@@ -42,6 +42,7 @@ Rails.application.routes.draw do
   get 'marketing/insta'
   get 'marketing/amz_deal_e'
   get 'marketing/bystore'
+  get 'marketing/featured'
   get 'marketing/be_rich'
 
 
