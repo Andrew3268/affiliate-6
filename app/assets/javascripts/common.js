@@ -274,6 +274,7 @@ if(isMobile()){
       var overseaType = $("input:radio[name='oversea-type']:checked").val();
       var subscribeType = $("input:radio[name='subscribe-type']:checked").val();
       var keyWord = $(".keyword").val();
+      var brandWord = $(".brand").val();
       var minPrice = $(".minprice").val();
       var maxPrice = $(".maxprice").val();
       var timeType = $(".time select").val();
@@ -284,6 +285,7 @@ if(isMobile()){
       // var postYear = $(".year").val();
       
       var key  = (keyWord === "") ? "" : "&field-keywords=" + keyWord;
+      var brand  = (brandWord === "") ? "" : "&rh=p_89%3A" + brandWord;
       var mip  = (minPrice === "") ? "" : "&rh=p_74%3A" + minPrice+"00-";
       var mxp  = (maxPrice === "") ? "" : maxPrice+"00";
       var type = (postType === "") ? "" : "&i=" + postType;
@@ -312,7 +314,7 @@ if(isMobile()){
         postTime = time;
       }
       
-      var query = rootURL + type + mip + mxp + mipct + mxpct + prime + coupon + shipping + fast + oversea + subscribe + postTime + key + "&tag=oigbt-20";
+      var query = rootURL + type + mip + mxp + mipct + mxpct + prime + coupon + shipping + fast + oversea + subscribe + postTime + key + brand + "&tag=oigbt-20";
 
       window.open(query, '_blank');
       
@@ -343,6 +345,7 @@ if(isMobile()){
       var overseaType = $("input:radio[name='oversea-type']:checked").val();
       var subscribeType = $("input:radio[name='subscribe-type']:checked").val();
       var keyWord = $(".keyword").val();
+      var brandWord = $(".brand").val();
       var minPrice = $(".minprice").val();
       var maxPrice = $(".maxprice").val();
       var timeType = $(".time select").val();
@@ -353,6 +356,7 @@ if(isMobile()){
       // var postYear = $(".year").val();
       
       var key  = (keyWord === "") ? "" : keyWord;
+      var brand  = (brandWord === "") ? "" : "&rh=p_89%3A" + brandWord;
       var mip  = (minPrice === "") ? "" : "&rh=p_74%3A" + minPrice+"00-";
       var mxp  = (maxPrice === "") ? "" : maxPrice+"00";
       var type = (postType === "") ? "" : "&i=" + postType;
@@ -381,7 +385,7 @@ if(isMobile()){
         postTime = time;
       }
       
-      var query = rootURL+ key + mip + mxp + mipct + mxpct + type + prime + coupon + shipping + fast + oversea + subscribe + postTime + "&tag=oigbt-20";
+      var query = rootURL+ key + mip + mxp + mipct + mxpct + type + prime + coupon + shipping + fast + oversea + subscribe + postTime +  +"&tag=oigbt-20";
 
       window.open(query, '_blank');
       
