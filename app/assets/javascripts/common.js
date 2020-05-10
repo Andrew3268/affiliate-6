@@ -385,7 +385,7 @@ if(isMobile()){
         postTime = time;
       }
       
-      var query = rootURL+ key + mip + mxp + mipct + mxpct + type + prime + coupon + shipping + fast + oversea + subscribe + postTime +  +"&tag=oigbt-20";
+      var query = rootURL+ key + mip + mxp + mipct + mxpct + type + prime + coupon + shipping + fast + oversea + subscribe + postTime + brand + "&tag=oigbt-20";
 
       window.open(query, '_blank');
       
