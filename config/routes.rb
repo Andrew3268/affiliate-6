@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   resources :barcategories
   resources :bargains
-  root 'deals#quicksearch'
+  root 'gadgets#index'
 
   resources :sitemap, only: [:index]
   get 'sitemap.xml', :controller => "sitemap", :action =>"xml"
