@@ -23,7 +23,7 @@
 
 
 @media screen and (max-width:640px){
-  .common_wrap{margin-top:60px;}
+  .common_wrap{margin-top:10px;}
   .common_wrap ul li{margin-right:28px;}
   .common_wrap ul li a{font-size:23px;}
   .category_wrap .cateogry_box{float:none;width:100%;margin:5% 0;}  
@@ -35,6 +35,6 @@
   .category_wrap h2{margin-left:0%;font-size:30px;}
   .category_wrap .cateogry_box a{height:200px;}
   .category_wrap .cateogry_box a img{height:200px;}
-  .category_wrap .cateogry_box a .centered{font-size:30px;}
+  .category_wrap .cateogry_box a .centered{font-size:20px;}
 }
 
