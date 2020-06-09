@@ -59,18 +59,18 @@ class PromocodesController < ApplicationController
     set_meta_tags title: @promocode.p_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'Take the best deals with promo codes and coupons',
+                  description: @promocode.p_description,
                   keywords: 'Coupon, Promo Codes',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: @promocode.p_title,
-                    description: 'Take the best deals with promo codes and coupons',
+                    description: @promocode.p_description,
                     image: @promocode.p_image
                   },
                   og: {
                     title: @promocode.p_title,
-                    description: 'Take the best deals with promo codes and coupons',
+                    description: @promocode.p_description,
                     type: 'website',
                     url: promocode_url(@promocode),
                     image: @promocode.p_image

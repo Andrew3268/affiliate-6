@@ -42,18 +42,18 @@ class BargainsController < ApplicationController
     set_meta_tags title: @bargain.bar_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'Take the best offers & promotions with promo codes and coupons',
+                  description: @bargain.bar_detail,
                   keywords: @bargain.bar_title,
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: @bargain.bar_title,
-                    description: 'Take the best offers & promotions with promo codes and coupons',
+                    description: @bargain.bar_detail,
                     image: @bargain.bar_image
                   },
                   og: {
                     title: @bargain.bar_title,
-                    description: 'Take the best offers & promotions with promo codes and coupons',
+                    description: @bargain.bar_detail,
                     type: 'website',
                     url: bargain_url(@bargain),
                     image: @bargain.bar_image

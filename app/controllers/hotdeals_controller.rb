@@ -60,18 +60,18 @@ class HotdealsController < ApplicationController
     set_meta_tags title: @hotdeal.h_title,
                   site: 'Oh,igottabuythis',
                   revierse: true,
-                  description: 'Take the best bargain on Amazon and save money',
+                  description: @hotdeal.h_description,
                   keywords: 'deals, discounts',
                   twitter: {
                     card: "summary",
                     site: "@OhIgottabuythis",
                     title: @hotdeal.h_title,
-                    description: 'Take the best bargain on Amazon and save money',
+                    description: @hotdeal.h_description,
                     image: @hotdeal.h_image
                   },
                   og: {
                     title: @hotdeal.h_title,
-                    description: 'Take the best bargain on Amazon and save money',
+                    description: @hotdeal.h_description,
                     type: 'website',
                     url: hotdeal_url(@hotdeal),
                     image: @hotdeal.h_image
