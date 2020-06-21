@@ -1,4 +1,4 @@
-<div class="layout"><!--layout-->
+<!-- <div class="layout">
   <% if can? :update, @hotdeal %>
     <div class="wrap">  
       <%= render 'shared/header_marketing' %>
@@ -36,7 +36,7 @@
                 <div class="pricing">
                   <span class="nth_1"><%= number_to_currency(hot.h_spare_43) %></span> <em></em>
                   <span class="nth_2"><%= number_to_currency(hot.h_spare_44) %></span>
-                  <!-- <span><%= number_to_percentage(running_total, precision: 0) %> OFF )</span> -->
+                 
                 </div>
                 <p>Available on Amazon.com now</p>
               </div>
@@ -61,9 +61,9 @@
                     <% running_total =  (store.sp_spare_42 - store.sp_spare_43) / store.sp_spare_42 * 100 %>
                     <span class="nth_1"><%= number_to_currency(store.sp_spare_42) %></span> <em></em>
                     <span class="nth_2"><%= number_to_currency(store.sp_spare_43) %></span>
-                    <!-- <%= number_to_percentage(running_total, precision: 0) %> OFF ) -->
+                    
                   <% else %>
-                    <!-- <span class="nth_2"></span> -->
+                    
                   <% end %>
 
                 </div>
@@ -81,8 +81,9 @@
         </div>
       </div>
           
-    </div><!--./warp-->
+    </div>
   <% end %>
-</div><!--./layout-->
+</div>
 
 
+ -->

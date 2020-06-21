@@ -14,6 +14,7 @@ fieldset{border:0;}/*테두리삭제*/
 legend{display:none;}/* 숨김 */
 button{border:0;background:none;cursor:pointer;}
 table caption{display:none;}
+input, textarea, select{border:1px solid #ccc;-webkit-appearance:none;-moz-appearance:none;appearance:none;}
 
 textarea.code_area{resize:none;font-size:20px;height:31px;text-align:center;border:1px solid #616161;vertical-align:middle;}
 button.copycode{background:#000;color:#fff;font-size:17.5px;padding:5px;vertical-align:middle;}

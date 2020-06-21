@@ -1,4 +1,4 @@
-<div class="layout"><!--layout-->
+<!-- <div class="layout">
   <% if can? :update, @hotdeal %>
     <div class="wrap">  
       <%= render 'shared/header_marketing' %>
@@ -32,7 +32,7 @@
               <% else %>
                 <p><%= storepromotion.spcategory.name %> -- <%= storepromotion.sp_title %></p>
               <% end %>
-              <!-- <p><%= storepromotion.sp_title %></p> -->
+              
               <% if storepromotion.sp_spare_42.present? %>
                 <p class="h_price"><%= number_to_currency(storepromotion.sp_spare_43) %> <span class="span_01">( Was <%= number_to_currency(storepromotion.sp_spare_42) %> )</span><span class="span_02"></span></p>
               <% end %>
@@ -65,8 +65,9 @@
       
       
        
-    </div><!--./warp-->
+    </div>
   <% end %>
-</div><!--./layout-->
+</div>
 
 
+ -->
