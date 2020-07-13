@@ -65,7 +65,7 @@
       <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
       <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
       <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
-        <div class="extra">+ extra <%= number_to_percentage(promocode.p_spare_27, precision: 0) %> off coupon</div>
+        <div class="extra">+ extra coupon</div>
       <% end %>
     </div>
 

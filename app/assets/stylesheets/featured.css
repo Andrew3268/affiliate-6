@@ -492,6 +492,7 @@
   .promotions .recommend_box{float:left;width:48%;margin:1%;height:320px;}
   .promotions .recommend_box img{height:150px;}
   .promotions .recommend_box .inner{padding:15px 7px 7px 7px;}
+  .promotions .promotion_box img{-webkit-filter:none;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
   .promotions .featured .sm_pc .guide_controll button{float:left;width:70px;line-height:35px;}
