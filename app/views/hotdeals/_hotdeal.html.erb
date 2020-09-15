@@ -42,7 +42,7 @@
       <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 < Date.today) %>
       <% else %>
         <% if hotdeal.h_spare_92 && (hotdeal.h_spare_92 = Date.today) %>
-          <em>New</em>
+          <!-- <em>New</em> -->
         <% end %>
       <% end %>
       <%= link_to hotdeal.h_title, hotdeal %>

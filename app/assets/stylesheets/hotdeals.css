@@ -193,7 +193,7 @@
 .deals_card .image_box .dropped em{font-size:10px;}
 .deals_card .image_box .term{width:70px;height:40px;}
 .deals_card .image_box .term p{margin-top:7px;font-size:11px;}
-.deals_card .image_box .expried{-webkit-filter:grayscale(100%);filter:gray;height:100%;}
+/*.deals_card .image_box .expried{-webkit-filter:grayscale(100%);filter:gray;height:100%;}*/ /* 날짜 지나면 회색으로 변함  */
 .deals_card .image_box .exprie{background:#ff4d4d;}
 .deals_card .image_box .endtoday{background:#ffa500;width:55px;position:absolute;top:5px;left:85px;}
 .deals_card .image_box .wcoupon{background:#87c442;left:56px;}
