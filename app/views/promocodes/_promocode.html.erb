@@ -1,7 +1,15 @@
 <!-- < @promocodes.each do |promocode| > -->
 <figure class="deals_card">
+   <div class="image_box">
+      <% if promocode.p_image.present? %>
+        <%= link_to image_tag(promocode.p_image, alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+      <% else %>
+        <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
+      <% end %>
+      <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
+    </div>
   <!-- Start Image Section -->
-  <% if promocode.p_end_date.present? %>
+  <!-- <% if promocode.p_end_date.present? %>
     <% if promocode.p_spare_50 && (promocode.p_spare_50 < DateTime.now) %>
      <% promocode.p_spare_50 %>
      <div class="image_box">
@@ -12,7 +20,7 @@
           <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
         <% end %>
       </div>
-        <!-- <div class="expried_wrap"><div class="mark term exprie"><p>Expired</p></div></div> -->
+        <div class="expried_wrap"><div class="mark term exprie"><p>Expired</p></div></div>
      </div>
     <% else %>
      <div class="image_box">
@@ -30,9 +38,6 @@
         <% else %>
           <div class="mark for_cou"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %> OFF</span><em>coupon</em></div>
         <% end %>
-        <!--<% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
-          <div class="mark wcoupon wcp"><span class="wcou_01">extra</span><em class="wcoup">coupon</em></div>
-        <% end %>-->
        </div>
     <% end %>
   <% else %>
@@ -43,9 +48,8 @@
         <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
       <% end %>
       <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
-      <!-- <div class="ex_mark">Expired</div> -->
     </div>
-  <% end %>
+  <% end %>-->
   <!-- End Image Section--> 
 
   <div class="buy-now"><span><%= link_to "GET COUPON", promocode %></span></div>
