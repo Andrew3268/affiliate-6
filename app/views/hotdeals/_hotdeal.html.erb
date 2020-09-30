@@ -78,7 +78,8 @@
     <% if can? :update, @hotdeal %>
      <div class="admin">
        <%= link_to 'Edit', edit_hotdeal_path(hotdeal) %> | 
-       <%= link_to 'Destroy', hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %>
+       <%= link_to 'Destroy', hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> | 
+       <%= hotdeal.impressionist_count(:filter=>:all) %> Views 
      </div><!--/.amdin-->
     <% end %>
   </figcaption> 

@@ -77,7 +77,8 @@
     <% if can? :update, @promocode %>
      <div class="admin">
        <%= link_to 'Edit', edit_promocode_path(promocode) %> | 
-       <%= link_to 'Destroy', promocode, method: :delete, data: { confirm: 'Are you sure?' } %>
+       <%= link_to 'Destroy', promocode, method: :delete, data: { confirm: 'Are you sure?' } %> |
+       <%= promocode.impressionist_count(:filter=>:all) %> Views 
      </div><!--/.amdin-->
     <% end %>
   </figcaption>
