@@ -19,11 +19,18 @@
         <% if @hotdeal.h_spare_62.present? || @hotdeal.h_spare_44.present? %>
           <% running_total = 0 %>
           <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
+          <% running_save = @hotdeal.h_spare_43 - @hotdeal.h_spare_44 %>
+
           <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
         <% end %>
       <% end %>
       <div class="add_line">
         <ul>
+          <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+          <% else %>
+            <li>Save <%= number_to_currency(running_save) %></li>
+          <% end %>
+
           <% if @hotdeal.h_spare_61.present? %>
             <% if @hotdeal.h_spare_61.present? %>
               <li>+ extra <%= number_to_percentage(@hotdeal.h_spare_61, precision: 0) %> off coupon</li>
@@ -33,6 +40,7 @@
               <li>+ extra <%= number_to_currency(@hotdeal.h_spare_62) %> off coupon</li>
             <% end %>
           <% end %>
+          
           <% if @hotdeal.h_spare_07.present? %>
             <li class="stocks">Only in a few stocks left.</li>
           <% end %>
