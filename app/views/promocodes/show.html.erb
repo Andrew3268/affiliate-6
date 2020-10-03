@@ -45,7 +45,8 @@
                 <p><%= @promocode.p_title %></p>
                 <% running_total = 0 %>
                 <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
-                <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> )</span></p>
+                <% running_save = @promocode.p_spare_26 - @promocode.p_spare_27 %>
+                <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | You Save: <%= number_to_currency(running_save) %> )</span></p>
                 <p>#AmazonDeals #HotDeals #ohigottabuythis #CouponCodes #Coupons #PromoCode <%= @promocode.p_hashtag %></p>
                 <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p>
               </div>
@@ -63,15 +64,6 @@
           </div>
         <% end %>  
 
-
-        <!-- <div id="google_translate_element"></div>
-        <script type="text/javascript">
-        function googleTranslateElementInit() {
-          new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'ar,en,es,jv,ko,pa,pt,ru,zh-CN, jp', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false}, 'google_translate_element');
-        }
-        </script>
-        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>  
-        <div id="google_translate_element"></div> -->
 
       </div><!--./show_box-->
       
