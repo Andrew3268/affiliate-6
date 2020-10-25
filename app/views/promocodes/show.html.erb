@@ -47,7 +47,7 @@
                 <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
                 <% running_save = @promocode.p_spare_26 - running_total %>
                 <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | You Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
-                <p>#AmazonDeals #HotDeals #ohigottabuythis #CouponCodes #Coupons #PromoCode <%= @promocode.p_hashtag %></p>
+                <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
                 <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p>
               </div>
 
