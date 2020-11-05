@@ -4,14 +4,14 @@
  <% running_total = 0 %>
  <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
  <% running_save = @promocode.p_spare_26 - running_total %>
- <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01"><%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02">( <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF ) </span></p>
+ <p class="h_price"><em>List Price:</em> <!-- <% number_to_currency(running_total) %> --> <span class="span_01"><%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02">( <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF ) </span></p>
  <div class="add_line">
   <ul>
-    <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+   <!--  <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
       <li>Take <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> at <%= number_to_currency(@promocode.p_spare_26) %> via code</li>
     <% else %>
       <li>Take <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> at <%= number_to_currency(@promocode.p_spare_26) %> via code and save <%= number_to_currency(running_save) %></li>
-    <% end %>
+    <% end %> -->
     
     <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
       <% if @promocode.p_spare_55.present? %>
@@ -27,10 +27,6 @@
   </ul>
  </div>
 
- <!--  <div class="box">
-    <p></p>
-    <em></em>
-  </div> -->
 
  <div class="info_wrap clearfix">
 
@@ -38,17 +34,6 @@
       <div class="box line_three">
         <p>Shipping</p>
         <em>Free</em>
-        <!--<% if @promocode.p_spare_54.present? %>         
-          <% if @promocode.p_spare_54 > 0 %>            
-            <em><%= number_to_currency(@promocode.p_spare_54) %></em> 
-          <% else %>  
-            <% if @promocode.p_spare_54 = 0 %>  
-            <em>Free <% number_to_currency(@promocode.p_spare_54) %></em> 
-            <% end %> 
-          <% end %> 
-        <% else %>  
-          <em>Free</em>       
-        <%end %>-->
       </div>
       <div class="box line_three">
         <p>Star Ratings</p>
@@ -67,140 +52,9 @@
         <% end %>
       </div>
     </div>
-    <div class="info_box">
-      <span>
-        <ul>
-          <% if @promocode.p_spare_26 < 25.00 %>         
-            <li>Get free shipping when you order $25+ of eligible items or Amazon Prime Members. <a target="_blank" href="/blogs/blog_01_amz_prime">What's Prime.<i></i></a></li>
-          <% end %>
-          <li>Average ratings and reviews may change after posting.</li>
-        <ul>
-      </span>
-    </div>
-
-    <!-- <div class="block clearfix">
-      <div class="box line_three">
-        <p>You saved</p>
-        <em>
-           <% saving_total = 0 %>
-           <% saving_total =  @promocode.p_spare_26 - (@promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26) %>
-           <%= number_to_currency(saving_total) %>
-        </em>
-      </div>
-      <div class="box line_three">
-        <p>Coupon</p>
-        <% if @promocode.p_coupon_deal.present? %>
-          <% if @promocode.p_coupon_deal.present? %>
-            <em><%= @promocode.p_coupon_deal %></em>
-          <% else %>
-            <em>-</em>
-          <% end %>
-        <% else %>
-          <% if @promocode.p_spare_55.present? %>
-            <% if @promocode.p_spare_55.present? %>
-              <em><%= number_to_percentage(@promocode.p_spare_55, precision: 0) %></em>
-            <% else %>
-              <em>-</em>
-            <% end %>
-          <% else %>
-            <% if @promocode.p_spare_56.present? %>
-              <em><%= number_to_currency(@promocode.p_spare_56) %></em>
-            <% else %>
-              <em>-</em>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
-      <div class="box line_three">
-        <p>On Sale</p>
-        <% if @promocode.p_extra_deal.present? %>
-          <em><%= @promocode.p_extra_deal %>%</em>
-        <% else %>
-          <em>-</em>
-        <% end %>
-      </div>
-    </div> -->
-    <!-- <% if @promocode.p_coupon_deal.present? || @promocode.p_spare_55.present? || @promocode.p_spare_56.present? || @promocode.p_extra_deal.present? %>
-      <div class="info_box">
-        <span>
-          <ul>
-            <% if @promocode.p_coupon_deal.present? || @promocode.p_spare_55.present? || @promocode.p_spare_56.present?  %>
-              <li>Check the box for the coupon on the detail page to receive your extra savings.</li>
-            <% end %>
-            <% if @promocode.p_extra_deal.present? %>
-              <li>This item is on sale now and gets an extra discount via promo code.</li>
-            <% end %>
-          </ul>
-        </span>
-      </div>
-    <% end %> -->
-
-    <!-- <div class="block clearfix">
-      <div class="box">
-        <p>End Date</p>
-        <em>
-          <% if @promocode.p_end_date.present? %>
-            <% if @promocode.p_spare_50.present? %>
-              <% if @promocode.p_spare_50 < DateTime.now %>
-              <% @promocode.p_spare_50 %>
-                <em class="n_expired">Expired</em>
-              <% else %>
-                <% if @promocode.p_spare_51.present? %>
-                 <% if @promocode.p_spare_51 <= DateTime.now %>
-                 <% @promocode.p_spare_51 %>
-                  <em class="n_endtoday">End Today</em> 
-                 <% else %>
-                  <em class="end_date"><%= @promocode.p_end_date %></em>
-                 <% end %> 
-                <% end %>
-              <% end %>
-            <% else %>
-              <em class="end_date"><%= @promocode.p_end_date %></em>
-            <% end %>
-          <% else %>
-           <em class="end_soon">End Soon</em>
-          <% end %>
-        </em>
-      </div>
-
-      <% if @promocode.p_spare_07.present? %>
-        <div class="box">
-         <p>Search more by Keyword</p>
-         <em><a class="keyword" href="<%= @promocode.p_spare_08 %>"><%= @promocode.p_spare_07 %></a><i></i></em>
-        </div>
-      <% end %>
-    </div> -->
-
 
     <div class="block clearfix">
-        <!-- <div class="box">
-          <p>End Date</p>
-          <em>
-            <% if @promocode.p_end_date.present? %>
-              <% if @promocode.p_spare_50.present? %>
-                <% if @promocode.p_spare_50 < DateTime.now %>
-                <% @promocode.p_spare_50 %>
-                  <em class="n_expired">Expired</em>
-                <% else %>
-                  <% if @promocode.p_spare_51.present? %>
-                   <% if @promocode.p_spare_51 <= DateTime.now %>
-                   <% @promocode.p_spare_51 %>
-                    <em class="n_endtoday">End Today</em> 
-                   <% else %>
-                    <em class="end_date"><%= @promocode.p_end_date %></em>
-                   <% end %> 
-                  <% end %>
-                <% end %>
-               
-              <% else %>
-                <em class="end_date"><%= @promocode.p_end_date %></em>
-              <% end %>
-            <% else %>
-             <em class="end_soon">End Soon</em>
-            <% end %>
-          </em>
-        </div> -->
-
+  
         <% if @promocode.p_spare_07.present? %>
           <div class="box">
            <p>Search more by Keyword</p>
@@ -213,350 +67,71 @@
       <% coupon_55 = running_total * @promocode.p_spare_55.to_i / 100 %>
       <% number_to_currency(coupon_55) %>
 
-      <!-- 과세가격(estimated_kor) ( { 제품가[제품가 - 쿠폰] + 현지 배송비 + 세금(세금이 없는 배대지 설정) + 보험료 등등} * 고시환율 + 과세운임 )-->
       <div class="block clearfix">
         <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+          
           <div class="box total_box">
-            <p>Estimated Purchase Price</p>
+            <p>Estimated price when coupon is applied</p>
             <% if @promocode.p_spare_55.present? %>
               <% estimated_us = 0 %>
               <% estimated_us = running_total - coupon_55%>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+              <% you_save = @promocode.p_spare_26.to_i - estimated_us %>
+              <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
             <% else %>
               <% estimated_us = 0 %>
               <% estimated_us = running_total - @promocode.p_spare_56 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+              <% you_save = @promocode.p_spare_26.to_i - estimated_us %>
+              <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
             <% end %>
           </div>
-          <!-- <div class="info_box">
-            <span>
-              <ul>
-                <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
-              </ul>
-            </span>
-          </div> -->
+        
+        <% else %>
+          <div class="box total_box">
+            <p>Estimated Purchase Price</p>
+            <% you_save = @promocode.p_spare_26.to_i - running_total %>
+            <em class="total_p"><%= number_to_currency(running_total) %></em>
+            <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
+          </div>
         <% end %>
-
-        <div class="box hidden_box total_box">
-          <p>Estimated Purchase Price</p>
-          <% if @promocode.p_spare_55.present? %>
-            <% estimated_us = 0 %>
-            <% estimated_us = running_total - coupon_55 + @promocode.p_spare_54.to_i %>
-            <em><%= number_to_currency(estimated_us) %></em> | 
-
-            <% estimated_kor = 0 %>
-            <% estimated_kor = (estimated_us * @promocode.p_spare_57.to_i) + @promocode.p_spare_58.to_i %>
-            <em><%= number_to_currency(estimated_kor, unit: "") %>원</em>
-
-          <% else %>
-            <% estimated_us = 0 %>
-            <% estimated_us = running_total - @promocode.p_spare_56.to_i + @promocode.p_spare_54.to_i %>
-            <em><%= number_to_currency(estimated_us) %></em> | 
-
-            <% estimated_kor = 0 %>
-            <% estimated_kor = (estimated_us * @promocode.p_spare_57.to_i) + @promocode.p_spare_58.to_i %>
-            <em><%= number_to_currency(estimated_kor, unit: "") %>원</em>
-          <% end %>
-        </div>
       </div>
-
-      <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
-        <div class="info_box">
-          <span>
-            <ul>
-              <li>"Estimated Purchase Price" is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
-            </ul>
-          </span>
-        </div>
-      <% end %>
-
-    
-      <% if can? :update, @promocode %>
-      <% if @promocode.p_spare_01.present? %>
-      <% @promocode.p_spare_01 %>
-        <div class="codes">
-          <div class="lt_cnt">
-            <div class="toggle">
-              <ul>
-                <li>
-                  <a href="#n" class="stk">Ship to KOREA</a>
-                  <ul class="tokor">
-                    <% if @promocode.p_spare_59.present? %>
-                      <em>직배송이 가능한 상품입니다.</em>
-                      <div class="block clearfix">
-                        <div class="box">
-                          <p><span>1</span>직배송</p>
-                          <% if @promocode.p_spare_59.to_i > 0 %>
-                            <em><%= number_to_currency(@promocode.p_spare_59) %></em>
-                          <% else %>
-                            <% if @promocode.p_spare_59 = 0 %>
-                              <em>X <% number_to_currency(@promocode.p_spare_59) %></em>
-                            <% end %>
-                          <% end %>
-                        </div>
-                        <div class="box">
-                        <p><span>2</span>예상 관세 보증금</p>
-                          <% if @promocode.p_spare_60.present? %>
-                            <em><%= number_to_currency(@promocode.p_spare_60) %></em>
-                          <% else %>
-                            <em>-</em>
-                          <% end %>      
-                        </div>
-                      </div>
-                      <div class="info_box">
-                        <span>
-                          <ul>
-                            <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
-                          </ul>
-                        </span>
-                      </div>
-
-                      <ul class="accordion-menu">
-                        <li>
-                         <div class="dropdownlink">
-                            배대지 이용
-                            <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                         </div>
-                          <ul class="submenuItems">
-                            <div class="block clearfix">
-                                <div class="box">
-                                  <p><a target="_blank" href="#n"><span>3</span>예상 질량 / 부피 부게 + </a></p>
-                                  <% if @promocode.p_spare_09.present? %>
-                                    <em><%= @promocode.p_spare_09 %></em>
-                                  <% else %>
-                                    <em>-</em>
-                                  <% end %>
-                                </div>
-                                <div class="box">
-                                  <p><span>4</span>예상 배대지 배송비</p>
-                                  <% if @promocode.p_spare_61.present? %>
-                                    <em><%= number_to_currency(@promocode.p_spare_61) %></em>
-                                  <% else %>
-                                    <em>-</em>
-                                  <% end %>
-                                </div>
-                              </div>
-                              <div class="info_box direct">
-                                <span>
-                                  <ul>
-                                    <li><a href="#n" class="stk">질량 무게 및 부피무게란<i></i></a></li>
-                                    <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
-                                  </ul>
-                                </span>
-                              </div>
-
-                              <div class="block clearfix">
-                                <% if @promocode.p_spare_62.present? %>
-                                  <div class="box">
-                                    <p><span>5</span>예상 관세</p>
-                                    <% vat = 0 %>
-                                    <% vat = estimated_kor * @promocode.p_spare_62 %>
-                                    <em><%= number_to_currency(vat, unit: "") %>원</em>
-                                  </div>
-
-                                  <div class="box">
-                                    <p><span>6</span>예상 부가세</p>
-                                    <% tax = 0 %>
-                                    <% tax = (estimated_kor + vat) * 0.1 %>
-                                    <em><%= number_to_currency(tax, unit: "") %>원</em>
-                                  </div>
-                                <% else %>
-                                  <div class="box">
-                                    <p><span>5</span>예상 관세</p>
-                                    <em>0원</em>
-                                  </div>
-                                  <div class="box">
-                                    <p><span>6</span>예상 부가세</p>
-                                    <em>0원</em>
-                                  </div>
-                                <% end %>
-                              </div>
-                              <div class="info_box direct">
-                                <span>
-                                  <ul>
-                                    <% if @promocode.p_spare_62.present? %>
-                                      <li>관세 및 부가세가 부가되는 제품입니니다.(<a target="_blank" class="stk" href="#n">관부과세란?<i></i></a>)</li>
-                                    <% else %>
-                                      <li>관세 및 부가세가 부가 되지 않는 제품입니니다.(<a target="_blank" class="stk" href="#n">관부과세란?<i></i></a>)</li>
-                                    <% end %>
-                                  </ul>
-                                </span>
-                              </div>
-
-                              <div class="block clearfix">
-                                <div class="box total_box">
-                                  <p>배대지 이용시 총 예상 구매 가격</p>
-                                  <% if @promocode.p_spare_62.present? %>
-                                    <% total_price_kor = 0 %>
-                                    <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i  + tax + vat %>
-                                    <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
-                                  <% else %>
-                                    <% total_price_kor = 0 %>
-                                    <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i %>
-                                    <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
-                                  <% end %>
-                                </div>
-                              </div>
-                              <div class="info_box direct">
-                                <span>
-                                  <ul>
-                                    <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
-                                    <li>관세청 고시환율을 적용합니다.</li>
-                                  </ul>
-                                </span>
-                              </div>
-                          </ul><!--./submenuItems-->
-                        </li>
-                      </ul><!--./accordion-menu-->
-                    <% else %>
-                      <em>직배송이 되지 않은 상품입니다. 배대지 이용을 추천합니다.</em>
-                      <div class="block clearfix">
-                        <div class="box">
-                          <p><a target="_blank" href="#n"><span>3</span>예상 질량 / 부피 부게 + </a></p>
-                          <% if @promocode.p_spare_09.present? %>
-                            <em><%= @promocode.p_spare_09 %></em>
-                          <% else %>
-                            <em>-</em>
-                          <% end %>
-                        </div>
-                        <div class="box">
-                          <p><span>4</span>예상 배대지 배송비</p>
-                          <% if @promocode.p_spare_61.present? %>
-                            <em><%= number_to_currency(@promocode.p_spare_61) %></em>
-                          <% else %>
-                            <em>-</em>
-                          <% end %>
-                        </div>
-                      </div>
-                      <div class="info_box">
-                        <span>
-                          <ul>
-                            <li><a href="#n">질량 무게 및 부피무게란<i></i></a></li>
-                            <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
-                          </ul>
-                        </span>
-                      </div>
-
-                      <div class="block clearfix">
-                        <% if @promocode.p_spare_62.present? %>
-                          <div class="box">
-                            <p><span>5</span>예상 관세</p>
-                            <% vat = 0 %>
-                            <% vat = estimated_kor * @promocode.p_spare_62 %>
-                            <em><%= number_to_currency(vat, unit: "") %>원</em>
-                          </div>
-
-                          <div class="box">
-                            <p><span>6</span>예상 부가세</p>
-                            <% tax = 0 %>
-                            <% tax = (estimated_kor + vat) * 0.1 %>
-                            <em><%= number_to_currency(tax, unit: "") %>원</em>
-                          </div>
-                        <% else %>
-                          <div class="box">
-                            <p><span>5</span>예상 관세</p>
-                            <em>0원</em>
-                          </div>
-                          <div class="box">
-                            <p><span>6</span>예상 부가세</p>
-                            <em>0원</em>
-                          </div>
-                        <% end %>
-                      </div>
-                      <div class="info_box">
-                         <span>
-                            <ul>
-                              <% if @promocode.p_spare_62.present? %>
-                                <li>* 관세 및 부가세가 부가되는 제품입니니다.(<a target="_blank" href="#n">관부과세란?<i></i></a>)</li>
-                              <% else %>
-                                <li>* 관세 및 부가세가 부가 되지 않는 제품입니니다.(<a target="_blank" href="#n">관부과세란?<i></i></a>)</li>
-                              <% end %>
-                            </ul>
-                          </span>
-                      </div>
-
-                    <% end %>
-
-                    <% if @promocode.p_spare_59.present? %>
-                      <div class="block clearfix">
-                        <div class="box total_box">
-                          <p>직배송시 총 예상 구매 가격</p>
-                          <% total_price_kor = 0 %>
-                          <% total_price_kor = (estimated_us + @promocode.p_spare_59.to_i + @promocode.p_spare_60.to_i) * @promocode.p_spare_57.to_i %>
-                          <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
-                        </div>
-                      </div>
-                      <div class="info_box">
-                       <span>
-                        <ul>
-                          <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
-                          <li>관세청 고시환율을 적용합니다.</li>
-                        </ul>
-                       </span>
-                      </div>
-                    <% else %>
-                      <div class="block clearfix">
-                        <div class="box total_box">
-                          <p>배대지 이용시 총 예상 구매 가격</p>
-                          <% if @promocode.p_spare_62.present? %>
-                            <% total_price_kor = 0 %>
-                            <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i  + tax + vat %>
-                            <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
-                          <% else %>
-                            <% total_price_kor = 0 %>
-                            <% total_price_kor = (estimated_us + @promocode.p_spare_61.to_i) * @promocode.p_spare_57.to_i %>
-                            <em><%= number_to_currency(total_price_kor, unit: "", unit: "", precision: 0) %>원</em>
-                          <% end %>
-                        </div>
-                      </div>
-                      <div class="info_box">
-                       <span>
-                        <ul>
-                          <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
-                          <li>관세청 고시환율을 적용합니다.</li>
-                        </ul>
-                       </span>
-                      </div>
-                    <% end %>
-
-                  </ul><!--./tokor-->
-                </li>
-              </ul>
-            </div><!--toggle-->
-          </div><!--./lt_cnt-->
-        </div><!--./code-->
-      <% end %>
-      <% end %>
-
-    <!-- <div class="info_box">
-      <span>* </span>
-    </div> -->
-
- </div>
+     
+      <div class="info_box">
+        <span>
+          <ul>
+           <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+            <li>"Estimated Purchase Price" is for reference only. Please fully check the product detail on Amazon before purchasing.</li>
+           <% end %>
+           <% if @promocode.p_spare_26 < 25.00 %>         
+            <li>Get free shipping when you order $25+ of eligible items or Amazon Prime Members. <a target="_blank" href="/blogs/blog_01_amz_prime">What's Prime.<i></i></a></li>
+            <% end %>
+            <li>Average ratings and reviews may change after posting.</li>
+          </ul>
+        </span>
+      </div>
+  </div><!--./info_wrap-->
  
   <div class="extra_info"></div><!--./extra_info-->
 
   <div class="code_btn">
-   <!-- <p class="code_line">Click and copy this code then apply it at your checkout</p> -->
-   <div class="text_copied intheshow">
-    <div class="container_copy"><div class="wrap"><div class="box"><p data-copy-text=""><%= @promocode.p_promocode %></p></div></div></div>
-  </div>
+     <!-- <p class="code_line">Click and copy this code then apply it at your checkout</p> -->
+     <div class="text_copied intheshow">
+      <div class="container_copy"><div class="wrap"><div class="box"><p data-copy-text=""><%= @promocode.p_promocode %></p></div></div></div>
+     </div>
 
-   <div class="pc_btn">
-     <div class="only_show promocode_btn">
-      <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
-     </div> 
-   </div>
-   <div class="mobile_btn">
-     <div class="only_show promocode_btn">
-      <a class="m_btn p_btn" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
-     </div> 
-   </div>
+     <div class="pc_btn">
+       <div class="only_show promocode_btn">
+        <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
+       </div> 
+     </div>
+     <div class="mobile_btn">
+       <div class="only_show promocode_btn">
+        <a class="m_btn p_btn" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
+       </div> 
+     </div>
   </div>
-  <!-- <div class="sharing">
-    <div class="addthis_inline_share_toolbox_pf38"></div>
-  </div> -->
-
+  
   <% if @promocode.p_spare_36.present? %>
     <div class="trix trix-container gradient"><span>About the product</span><p><%= @promocode.p_spare_36.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>
   <% else %>

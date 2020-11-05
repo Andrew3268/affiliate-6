@@ -163,13 +163,13 @@
               <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
               <% you_saved = @hotdeal.h_spare_43.to_i - estimated_us %>
-              <p class="you-save">You Saved <%= number_to_currency(you_saved) %></p>
+              <p class="you-save">You've saved <%= number_to_currency(you_saved) %></p>
             <% else %>
               <% estimated_us = 0 %>
               <% estimated_us = @hotdeal.h_spare_44 - @hotdeal.h_spare_62 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
               <% you_saved = @hotdeal.h_spare_43.to_i - estimated_us %>
-              <p class="you-save">You Saved <%= number_to_currency(you_saved) %></p>
+              <p class="you-save">You've saved <%= number_to_currency(you_saved) %></p>
             <% end %>
           </div>
         <% end %>
@@ -179,7 +179,7 @@
         <p>Estimated Purchase Price</p>
         <% running_save = @hotdeal.h_spare_43 - @hotdeal.h_spare_44 %>
         <em class="total_p"><%= number_to_currency(@hotdeal.h_spare_44) %></em>
-        <p class="you-save">You Saved <%= number_to_currency(running_save) %></p>
+        <p class="you-save">You've saved <%= number_to_currency(running_save) %></p>
       </div>
     <% end %>
     
@@ -218,10 +218,7 @@
      <!-- <h6>If you purchase something through a post on our site, we may get a small commission of the sale.</h6> -->
     </div>
   </div>
-  <!-- <div class="sharing">
-    <div class="addthis_inline_share_toolbox_pf38"></div>
-  </div> -->
-            
+
 
   <%if @hotdeal.h_spare_21.present? %>
     <div class="trix trix-container gradient"><span>About the product</span><p><%= @hotdeal.h_spare_21.html_safe %></p><button class="show-btn fa fa-chevron-down"></button></div>

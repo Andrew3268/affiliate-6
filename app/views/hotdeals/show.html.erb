@@ -40,7 +40,7 @@
               <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
               <%= render 'hotdeals/body_sns' %><br>
               <%= @hotdeal.impressionist_count(:filter=>:all) %> Views |
-              <%= @hotdeal.created_at.strftime("%d. %B.") %><br />
+              <%= @hotdeal.created_at.strftime("%d. %B. %H:%M") %><br />
               <div class="sharing">
                 <p>Available On Amazon Now</p>
                 <p><%= @hotdeal.h_title %></p>

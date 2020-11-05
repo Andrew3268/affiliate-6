@@ -83,6 +83,8 @@
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em a.keyword{width:120px;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span{margin:0;}
   .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .box em .end_date{font-size:11px;}
+  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .total_box p.you-save{width:60%;}
+  .show_wrap .show_box .show_inner .hotdeal_inner .info_wrap .info_box span ul li{font-size:10px;}
 
 }
 @media screen and (min-width:641px) and (max-width:1199px){

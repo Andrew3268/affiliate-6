@@ -39,7 +39,7 @@
               <%= link_to 'Delete', @promocode, method: :delete, data: { confirm: 'Are you sure?' } %> |
               <%= render 'promocodes/body_sns' %><br>
               <%= @promocode.impressionist_count(:filter=>:all) %> Views |
-              <%= @promocode.created_at.strftime("%d. %B.") %><br>
+              <%= @promocode.created_at.strftime("%d. %B. %H:%M") %><br>
               <div class="sharing">
                 <p>Available On Amazon Now</p>
                 <p><%= @promocode.p_title %></p>
