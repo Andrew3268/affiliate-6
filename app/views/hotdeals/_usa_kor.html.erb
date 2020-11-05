@@ -21,15 +21,15 @@
           <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43 * 100 %>
           <% running_save = @hotdeal.h_spare_43 - @hotdeal.h_spare_44 %>
 
-          <p class="h_price"><%= number_to_currency(@hotdeal.h_spare_44) %> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
+          <p class="h_price"><em>List Price:</em> <!-- <% number_to_currency(@hotdeal.h_spare_44) %> --> <span class="span_01"><%= number_to_currency(@hotdeal.h_spare_43) %></span><span class="span_02">( <%= number_to_percentage(running_total, precision: 0) %> OFF )</span></p>
         <% end %>
       <% end %>
       <div class="add_line">
         <ul>
-          <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+         <!--  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
           <% else %>
-            <li>Save <%= number_to_currency(running_save) %></li>
-          <% end %>
+            <li>You Saved <%= number_to_currency(running_save) %></li>
+          <% end %> -->
 
           <% if @hotdeal.h_spare_61.present? %>
             <% if @hotdeal.h_spare_61.present? %>
@@ -91,35 +91,11 @@
           </ul>
          </div>
         <% end %>
-
-
     <% end %>
 
     
 
  <div class="info_wrap clearfix">
-
-    <div class="block hidden_box clearfix">
-      <div class="box line_three">
-        <p>Offer Price</p>
-        <em><%= number_to_currency(@hotdeal.h_spare_44) %></em>
-      </div>
-      <div class="box line_three">
-        <p>List Price</p>
-        <em><%= number_to_currency(@hotdeal.h_spare_43) %></em>
-      </div>
-      <div class="box line_three">
-        <p>Discount</p>
-        <% if @hotdeal.h_percentage.present? %>
-          <em><%= number_to_percentage(@hotdeal.h_percentage, precision: 0) %> OFF</em>
-        <% else %>
-          <% running_total = 0 %>
-          <% running_total =  (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
-          <em><%= number_to_percentage(running_total, precision: 0) %> OFF</em>
-        <% end %>
-      </div>
-    </div>
-
     <div class="block clearfix">
       
       <div class="box line_three">
@@ -155,13 +131,13 @@
         <% end %>
       </div>
     </div>
-    <div class="info_box clearfix">
+    <!-- <div class="info_box clearfix">
       <span>
         <ul>
           <% if @hotdeal.h_spare_44.present? %>
             <% if @hotdeal.h_spare_44 < 25.00 %>
               <li>Get free shipping when you order $25+ of eligible items or Amazon Prime Members. <a target="_blank" href="/blogs/blog_01_amz_prime">What's Prime.<i></i></a></li>
-              <!-- <li><a target="_blank" href="https://amzn.to/2uvHHM2">Take "Amazon Prime" to save Shipping and handling fee.</a><i></i></li>             -->
+              
             <% else %>
             <% end %>
           <% else %>
@@ -169,496 +145,66 @@
           <li>Average ratings and reviews may change after posting.</li>
         </ul>
       </span>
-    </div> 
+    </div>  -->
 
-  <!-- <div class="box">
-    <p></p>
-    <em></em>
-  </div> -->
-
-  <!--<% if @hotdeal.h_spare_45.present? %>
-    <div class="block clearfix">
-      <div class="box line_three">
-        <p>You saved</p>
-        <em>
-         <% if @hotdeal.h_spare_41.present? %>
-          <% running_total = 0 %>
-          <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
-          <em class="save_money"><%= number_to_currency(running_total) %></em>
-         <% else %>
-          <% running_total = 0 %>
-          <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
-          <em class="save_money"><%= number_to_currency(running_total) %></em>
-         <% end %>
-        </em>
-      </div>
-      <div class="box line_three">
-        <p>Coupon</p>
-        <% if @hotdeal.h_spare_02.present? %>
-          <% if @hotdeal.h_spare_02.present? %>
-            <em><%= @hotdeal.h_spare_02 %></em>
-          <% else %>
-            <em>-</em>
-          <% end %>
-        <% else %>
-          <% if @hotdeal.h_spare_61.present? %>
-            <% if @hotdeal.h_spare_61.present? %>
-              <em><%= number_to_percentage(@hotdeal.h_spare_61, precision: 0) %></em>
-            <% else %>
-              <em>-</em>
-            <% end %>
-          <% else %>
-            <% if @hotdeal.h_spare_62.present? %>
-              <em><%= number_to_currency(@hotdeal.h_spare_62) %></em>
-            <% else %>
-              <em>-</em>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
-      <div class="box line_three">
-        <p>Price dropped</p>
-          <% running_total = 0 %>
-          <% running_total =  @hotdeal.h_spare_45.to_i - @hotdeal.h_spare_44.to_i %>
-          <em><%= number_to_currency(running_total) %></em>          
-      </div>
-    </div>
-  <% else %>
-    <div class="block clearfix">
-      <div class="box">
-        <p>You saved</p>
-        <em>
-         <% if @hotdeal.h_spare_41.present? %>
-          <% running_total = 0 %>
-          <% running_total =  @hotdeal.h_spare_41.to_i - @hotdeal.h_spare_42.to_i %>
-          <em class="save_money"><%= number_to_currency(running_total) %></em>
-         <% else %>
-          <% running_total = 0 %>
-          <% running_total =  @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
-          <em class="save_money"><%= number_to_currency(running_total) %></em>
-         <% end %>
-        </em>
-      </div>
-
-      <div class="box">
-        <p>Coupon</p>
-        <% if @hotdeal.h_spare_02.present? %>
-          <% if @hotdeal.h_spare_02.present? %>
-            <em><%= @hotdeal.h_spare_02 %></em>
-          <% else %>
-            <em>-</em>
-          <% end %>
-        <% else %>
-          <% if @hotdeal.h_spare_61.present? %>
-            <% if @hotdeal.h_spare_61.present? %>
-              <em><%= number_to_percentage(@hotdeal.h_spare_61, precision: 0) %></em>
-            <% else %>
-              <em>-</em>
-            <% end %>
-          <% else %>
-            <% if @hotdeal.h_spare_62.present? %>
-              <em><%= number_to_currency(@hotdeal.h_spare_62) %></em>
-            <% else %>
-              <em>-</em>
-            <% end %>
-          <% end %>
-        <% end %>
-      </div>
-
-    </div>
-  <% end %>
-  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? || @hotdeal.h_spare_45.present? %>
-    <div class="info_box">
-      <span>
-        <ul>
-          <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
-            <li>Check coupon on the detail page to receive your extra savings.</li>
-          <% end %>
-          <% if @hotdeal.h_spare_45.present? %>
-            <li>Price dropped compared to the last post.</li>
-          <% end %>
-        </ul>
-      </span>
-    </div>
-  <% end %>
-
-  <% if @hotdeal.h_spare_14.present? %>
-    <div class="block clearfix">
-      <div class="box">
-        <p>Search more by Keyword</p>
-        <em><a class="keyword" target="_blank" href="<%= @hotdeal.h_spare_15 %>"><%= @hotdeal.h_spare_14 %></a><i></i></em>
-      </div>
-    </div>
-  <% end %>-->
-
-  <!--
-  <% if @hotdeal.h_spare_07.present? || @hotdeal.h_spare_10.present? %>
-    <div class="info_box more_info">
-      <span>
-        <ul>
-          <% if @hotdeal.h_spare_07.present? %>
-            <li>Only few stocks left</li>
-          <% end %>
-          <% if @hotdeal.h_spare_10.present? %>
-            <li>You may save an additional 15% off on this month's Subscribe & Save items when you subscribe to 5 or more items during your current subscription month. </li>
-          <% end %>
-        </ul>
-      </span>
-    </div>
-  <% end %>
-  -->
-
-
+  
   <% coupon_p61 = 0 %>
   <% coupon_p61 = (@hotdeal.h_spare_44.to_i * @hotdeal.h_spare_61.to_i / 100) %>
   <% number_to_currency(coupon_p61) %>
 
   <div class="block clearfix">
     <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+        
         <% if @hotdeal.h_spare_44.present? %>
           <div class="box total_box">
-            <p>Estimated Purchase Price</p>
+            <p>Estimated price when coupon is applied</p>
             <% if @hotdeal.h_spare_61.present? %>
               <% estimated_us = 0 %>
               <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+              <% you_saved = @hotdeal.h_spare_43.to_i - estimated_us %>
+              <p class="you-save">You Saved <%= number_to_currency(you_saved) %></p>
             <% else %>
               <% estimated_us = 0 %>
               <% estimated_us = @hotdeal.h_spare_44 - @hotdeal.h_spare_62 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
+              <% you_saved = @hotdeal.h_spare_43.to_i - estimated_us %>
+              <p class="you-save">You Saved <%= number_to_currency(you_saved) %></p>
             <% end %>
           </div>
-        <% else %>
-          <!-- <div class="box total_box">
-            <p>Estimated Purchase Price</p>
-            <% if @hotdeal.h_spare_61.present? %>
-              <% estimated_us = 0 %>
-              <% estimated_us = @hotdeal.h_spare_43.to_i - coupon_p61 %>
-              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-            <% else %>
-              <% estimated_us = 0 %>
-              <% estimated_us = @hotdeal.h_spare_43 - @hotdeal.h_spare_62 %>
-              <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-            <% end %>
-          </div> -->
         <% end %>
-      
-
+    
+    <% else %>
+      <div class="box total_box">
+        <p>Estimated Purchase Price</p>
+        <% running_save = @hotdeal.h_spare_43 - @hotdeal.h_spare_44 %>
+        <em class="total_p"><%= number_to_currency(@hotdeal.h_spare_44) %></em>
+        <p class="you-save">You Saved <%= number_to_currency(running_save) %></p>
+      </div>
     <% end %>
-    <div class="box hidden_box total_box">
-      <p>Estimated Purchase Price</p>
-      <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
-        <% if @hotdeal.h_spare_61.present? %>
-          <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 + @hotdeal.h_spare_63.to_i %>
-          <em><%= number_to_currency(estimated_us) %></em>
-          <!-- Korea Dollar -->
-          <% estimated_kor = 0 %>
-          <% estimated_kor = (estimated_us * @hotdeal.h_spare_68.to_i) + @hotdeal.h_spare_69.to_i %>
-          <em><%= number_to_currency(estimated_kor) %></em> 
-
-        <% else %>
-          <% estimated_us = 0 %>
-          <% estimated_us = @hotdeal.h_spare_44.to_i -  @hotdeal.h_spare_62.to_i + @hotdeal.h_spare_63.to_i %>
-          <em><%= number_to_currency(estimated_us) %></em>
-          <!-- Korea Dollar -->
-          <% estimated_kor = 0 %>
-          <% estimated_kor = (estimated_us * @hotdeal.h_spare_68.to_i) + @hotdeal.h_spare_69.to_i %>
-          <em><%= number_to_currency(estimated_kor) %></em>
-        <% end %>
-      <% else %>
-        <% estimated_us = 0 %>
-        <% estimated_us = @hotdeal.h_spare_44.to_i + @hotdeal.h_spare_63.to_i %>
-        <em><%= number_to_currency(estimated_us) %></em>
-        <!-- Korea Dollar -->
-        <% estimated_kor = 0 %>
-        <% estimated_kor = (estimated_us * @hotdeal.h_spare_68.to_i) + @hotdeal.h_spare_69.to_i %>
-        <em><%= number_to_currency(estimated_kor) %></em>
-      <% end %>
-    </div>
+    
   </div>
 
   <% if @hotdeal.h_spare_44.present? %>
-    <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+    
       <div class="info_box">
         <span>
           <ul>
-            <li>"Estimated Purchase Price" is for reference only. Please fully check the product detail on Amazon before purchasing. </li>
+            <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+              <li>"Estimated Purchase Price" is for reference only. Please fully check the product detail on Amazon before purchasing.</li>
+            <% end %>
+            <% if @hotdeal.h_spare_44 < 25.00 %>
+              <li>Get free shipping when you order $25+ of eligible items or Amazon Prime Members. <a target="_blank" href="/blogs/blog_01_amz_prime">What's Prime.<i></i></a></li>
+            <% end %>
+          <li>Average ratings and reviews may change after posting.</li>
           </ul>
         </span>
       </div>
-    <% end %>
-  <% else %>
-  <% end %>
-  
-
-  <% if can? :update, @hotdeal %>
-  <% if @hotdeal.h_spare_06.present? %>
-  <% @hotdeal.h_spare_06 %>
-    <div class="codes">
-      <div class="lt_cnt">
-        <div class="toggle">
-          <ul>
-            <li>
-              <a href="#n" class="stk stk_main">Ship to KOREA</a>
-              <ul class="tokor">
-                <% if @hotdeal.h_spare_67.present? %>
-                  <em>직배송이 가능한 상품입니다.</em>
-                  <div class="block clearfix">
-                    <div class="box">
-                      <p>직배송</p>
-                      <% if @hotdeal.h_spare_67.to_i > 0 %>
-                        <em><%= number_to_currency(@hotdeal.h_spare_67) %></em>
-                      <% else %>
-                        <% if @hotdeal.h_spare_67 = 0 %>
-                          <em>X <% number_to_currency(@hotdeal.h_spare_67) %></em>
-                        <% end %>
-                      <% end %>      
-                    </div>
-                    <div class="box">
-                      <p>예상 관세 보증금</p>
-                      <% if @hotdeal.h_spare_64.present? %>
-                        <em><%= number_to_currency(@hotdeal.h_spare_64) %></em>
-                      <% else %>
-                        <em>-</em>
-                      <% end %>      
-                    </div>
-                  </div>
-                  <div class="info_box">
-                    <span>
-                      <ul>
-                        <li><a target="_blank" href="#n">관세 보증금(Estimated Import Fees Deposit)이란?<i></i></a></li>
-                      </ul>
-                    </span>
-                  </div>
-
-                  <ul class="accordion-menu">
-                    <li>
-                     <div class="dropdownlink">
-                        배대지 이용
-                        <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                     </div>
-                      <ul class="submenuItems">
-                       
-                        <div class="block clearfix">
-                          <div class="box">
-                            <p><a target="_blank" href="#n">예상 질량 / 부피 부게 + </a></p>
-                            <em><%= @hotdeal.h_spare_17 %></em>
-                          </div>
-                          <div class="box">
-                            <p>예상 배송대행 배송비 + </p>
-                            <% if @hotdeal.h_spare_65.present? %> 
-                              <em><%= number_to_currency(@hotdeal.h_spare_65) %></em>
-                            <% else %>
-                              <em>-</em>
-                            <% end %>
-                          </div>
-                        </div>
-                        <div class="info_box direct">
-                          <span>
-                            <ul>
-                              <li><a href="#n" class="stk">질량 무게 및 부피무게란<i></i></a></li>
-                              <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
-                            </ul>
-                          </span>
-                        </div>
-
-                        <div class="block clearfix">
-                          <% if @hotdeal.h_spare_66.present? %>
-                            <div class="box">
-                              <p>예상 관세</p>
-                                <% tax = 0 %>
-                                <% tax = estimated_kor * @hotdeal.h_spare_66 %>
-                                <em><%= number_to_currency(tax, unit: "", precision: 0) %>원</em>
-                            </div>
-                            <div class="box">
-                              <p>예상 부과세</p>
-                                <% vat = 0 %>
-                                <% vat = (estimated_kor + tax) * 0.1 %>
-                                <em><%= number_to_currency(vat, unit: "", precision: 0) %>원</em>
-                            </div>
-                          <% else %>
-                            <div class="box">
-                              <p>예상 관세</p>
-                              <em>0원</em>
-                            </div>
-                            <div class="box">
-                              <p>예상 부과세</p>
-                              <em>0원</em>
-                            </div>
-                          <% end %>
-                        </div>
-                        <div class="info_box direct">
-                          <span>
-                            <ul>
-                              <% if @hotdeal.h_spare_66.present? %>
-                                <li>관세 및 부가세가 부가되는 제품입니니다.(<a target="_blank" class="stk" href="#n">관부과세란?<i></i></a>)</li>
-                              <% else %>
-                                <li>관세 및 부가세가 부가 되지 않는 제품입니니다.(<a target="_blank" class="stk" href="#n">관부과세란?<i></i></a>)</li>
-                              <% end %>
-                            </ul>
-                          </span>
-                        </div>
-                        <div class="block clearfix">
-                          <% if @hotdeal.h_spare_66.present? %>
-                            <div class="box total_box"><!-- 200달러 이상일때(관부가세 대상) -->
-                              <p>20만원 초과시 배대지 이용시 총 예상 구매 가격</p>
-                                <!-- Korea Dollar -->
-                                <% price_total_kor = 0 %>
-                                <% price_total_kor = (estimated_us + @hotdeal.h_spare_65.to_i) * @hotdeal.h_spare_68.to_i + tax + vat %>
-                                <em><%= number_to_currency(price_total_kor, unit: "", precision: 0) %>원</em>
-                            </div>
-                          <% else %>
-                            <div class="box total_box"><!-- 200이하 이상일때(관부가세 미대상) -->
-                              <p>20만원 미만 시 배대지 이용시 총 예상 구매 가격</p>
-                                <!-- Korea Dollar -->
-                                <% price_total_kor = 0 %>
-                                <% price_total_kor = (estimated_us + @hotdeal.h_spare_65.to_i) * @hotdeal.h_spare_68.to_i %>
-                                <em><%= number_to_currency(price_total_kor, unit: "", precision: 0) %></em>
-                            </div>
-                          <% end %>
-                        </div>
-                        <div class="info_box direct">
-                          <span>
-                            <ul>
-                              <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
-                              <li>관세청 고시환율을 적용합니다.</li>
-                            </ul>
-                          </span>
-                        </div>
-                         
-                      </ul><!--./submenuItems-->
-                    </li>
-                  </ul><!--./accordion-menu-->
-                <% else %>
-                  <!-- 직배송이 안될때 -->
-                  <em>직배송이 되지 않은 상품입니다. 배대지 이용을 추천합니다.</em>
-                  <div class="block clearfix">
-                    <div class="box">
-                      <p><a target="_blank" href="#n">예상 질량 / 부피 부게 + </a></p>
-                      <em><%= @hotdeal.h_spare_17 %></em>
-                    </div>
-                    <div class="box">
-                      <p>예상 배송대행 배송비 + </p>
-                      <% if @hotdeal.h_spare_65.present? %> 
-                        <em><%= number_to_currency(@hotdeal.h_spare_65) %></em>
-                      <% else %>
-                        <em>-</em>
-                      <% end %>
-                    </div>
-                  </div>
-                  <div class="info_box">
-                    <span>
-                      <ul>
-                        <li><a href="#n">질량 무게 및 부피무게란<i></i></a></li>
-                        <li>예상 배송대행 배송비는 가장 많이 이용하는 10개 업체의 무게별 평균 금액입니다.</li>
-                      </ul>
-                    </span>
-                  </div>
-
-                  <div class="block clearfix">
-                    <% if @hotdeal.h_spare_66.present? %>
-                      <div class="box">
-                        <p>예상 관세</p>
-                          <% tax = 0 %>
-                          <% tax = estimated_kor * @hotdeal.h_spare_66 %>
-                          <em><%= number_to_currency(tax, unit: "", precision: 0) %>원</em>
-                      </div>
-                      <div class="box">
-                        <p>예상 부과세</p>
-                          <% vat = 0 %>
-                          <% vat = (estimated_kor + tax) * 0.1 %>
-                          <em><%= number_to_currency(vat, unit: "", precision: 0) %>원</em>
-                      </div>
-                    <% else %>
-                      <div class="box">
-                        <p>예상 관세</p>
-                        <em>0원</em>
-                      </div>
-                      <div class="box">
-                        <p>예상 부과세</p>
-                        <em>0원</em>
-                      </div>
-                    <% end %>
-                  </div>
-                  <div class="info_box">
-                    <span>
-                      <ul>
-                        <% if @hotdeal.h_spare_66.present? %>
-                          <li>* 관세 및 부가세가 부가되는 제품입니니다.(<a target="_blank" href="#n">관부과세란?<i></i></a>)</li>
-                        <% else %>
-                          <li>* 관세 및 부가세가 부가 되지 않는 제품입니니다.(<a target="_blank" href="#n">관부과세란?<i></i></a>)</li>
-                        <% end %>
-                      </ul>
-                    </span>
-                  </div>
-                <% end %>
-
-                <% if @hotdeal.h_spare_67.present? %>
-                  <div class="block clearfix">
-                    <div class="box total_box">
-                      <p>직배송 시 총 예상 구매 가격</p>
-                      <% price_total = 0 %>
-                      <% price_total = estimated_us + @hotdeal.h_spare_67.to_i + @hotdeal.h_spare_64.to_i %>
-                      <em><% number_to_currency(price_total) %></em>
-                      <!-- Korea Dollar -->
-                      <% price_total_kor = 0 %>
-                      <% price_total_kor = price_total * @hotdeal.h_spare_68.to_i %>
-                      <em><%= number_to_currency(price_total_kor, unit: "", precision: 0) %>원</em>
-                    </div>
-                    <div class="info_box">
-                      <span>
-                        <ul>
-                          <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
-                          <li>관세청 고시환율을 적용합니다.</li>
-                        </ul>
-                      </span>
-                    </div>
-                  </div>
-                <% else %>
-                  <div class="block clearfix">
-                    <% if @hotdeal.h_spare_66.present? %>
-                      <div class="box total_box"><!-- 200달러 이상일때(관부가세 대상) -->
-                        <p>20만원 초과시 배대지 이용시 총 예상 구매 가격</p>
-                          <!-- Korea Dollar -->
-                          <% price_total_kor = 0 %>
-                          <% price_total_kor = (estimated_us + @hotdeal.h_spare_65.to_i) * @hotdeal.h_spare_68.to_i + tax + vat %>
-                          <em><%= number_to_currency(price_total_kor, unit: "", precision: 0) %>원</em>
-                      </div>
-                    <% else %>
-                      <div class="box total_box"><!-- 200이하 이상일때(관부가세 미대상) -->
-                        <p>20만원 미만 시 배대지 이용시 총 예상 구매 가격</p>
-                          <!-- Korea Dollar -->
-                          <% price_total_kor = 0 %>
-                          <% price_total_kor = (estimated_us + @hotdeal.h_spare_65.to_i) * @hotdeal.h_spare_68.to_i %>
-                          <em><%= number_to_currency(price_total_kor, unit: "", precision: 0) %></em>
-                      </div>
-                    <% end %>
-                  </div>@
-                  <div class="info_box">
-                   <span>
-                     <ul>
-                      <li>총 예상 구매 가격은 참고용으로 정확한 금액이 아닙니다.</li>
-                      <li>관세청 고시환율을 적용합니다.</li>
-                     </ul>
-                    </span>
-                  </div>
-                <% end %>
-              </ul>
-            </li>
-          </ul>
-        </div><!--./toggle-->
-      </div><!--./lt_cnt-->
-    </div><!--./codes-->
-  <% end %>
+    
   <% end %>
 
 
 </div><!--./info_wrap-->
-
-
-  <div class="extra_info">
-  </div>
 
   <div class="pc_btn">
     <div class="code_btn">

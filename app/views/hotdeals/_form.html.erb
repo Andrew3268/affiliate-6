@@ -18,7 +18,6 @@
       <%= f.input :h_title , label: 'Title Of Product' %>
       <%= f.input :h_spare_04, label: 'Image_Title' %>
       <!-- <%= f.input :h_keyword, label: ', gadgets, amazon, recommended, under' %> -->
-      <%= f.input :h_spare_05, label: 'Hashtags' %>
       <!-- <%= f.input :h_spare_11, label: 'Korean Title' %>  -->
     </div>
     <div class="pricing stk clearfix">
@@ -32,20 +31,11 @@
       <%= f.input :h_spare_61, label: 'Coupon(%)' %>
       <%= f.input :h_spare_62, label: 'Coupon($)' %>
       <%= f.input :h_spare_45, label: 'Last Discount Price' %>
+      <%= f.input :h_spare_05, label: 'Hashtags' %>
       <!-- <%= f.input :h_spare_01, label: 'Extra Deals?' %> -->
       <!--<%= f.input :h_list_price, label: '(Old)List Price' %>
       <%= f.input :h_price, label: '(Old)Current Price' %>-->
     </div>
-
-    <!-- <div class="pricing stk clearfix ">
-      <%= f.input :h_spare_68, label: '고시환율' %>
-      <%= f.input :h_spare_67, label: '직배송료' %>
-      <%= f.input :h_spare_64, label: '예상 관세 보증금' %>
-      <%= f.input :h_spare_17, label: '예상 배송무게' %>
-      <%= f.input :h_spare_65, label: '배송대행지 배송비' %>
-      <%= f.input :h_spare_66, label: '관세율 ( 0.08 )' %>
-      <%= f.input :h_spare_69, label: '과세운임' %>
-    </div> -->
 
     <div class="find_more">
       <!-- <%= f.input :h_spare_14, label: 'Amazon Choice' %> -->
@@ -60,21 +50,3 @@
   <% end %>
 </div>
 
-<!-- cost table for hodeals & promocodes -->
-<div class="form_popup">
-  <input type="checkbox" id="popup__1" class="popup__check" />
-  <div class="popup__base">
-    <label for="popup__1" class="popup__bg"></label>
-    <div class="popup__inner">
-      <div class="popup__calign">
-        <label for="popup__1" class="popup__close">+</label>
-      </div>
-      <div class="popup__textbox">
-        <p>배대지 평균 비용 및 과세운임</p>
-        <%= render 'hotdeals/table' %>
-      </div>
-    </div>
-  </div>
-  <!-- End popup -->
-  <label class="trigger" for="popup__1">Info</label>
-</div>

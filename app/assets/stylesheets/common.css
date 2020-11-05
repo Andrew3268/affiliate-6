@@ -327,8 +327,8 @@ header .gnb_m,header .gnb_open2{display:none;}
 
 @media screen and (max-width:640px){
   .deals_main_menu{text-align:center;margin-top:20px;}
-  .deals_main_menu ul li{padding:5px 0;border:1px solid;}
-  .deals_main_menu ul li.active{padding:5px 0;border-radius:0;}
+  .deals_main_menu ul li{padding:10px 0;border:1px solid;border-radius:15px}
+  .deals_main_menu ul li.active{padding:10px 0;border-radius:15px;}
   .sub_nav{}
   .shoes_nav{margin-top:20px;}
   .sub_nav .sub_nav_pc{display:none;}
@@ -710,7 +710,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .field .custom-time select {margin-right:5%;}
 .down_ct{overflow:visible;}
 .text-center{padding-top:30px;text-align:right;}
-.set_search_box button{width:40%;background:#87c442;border:none;padding:15px 30px;color:#fff;font-weight:500;font-size:20px;border-radius:10px;border:3px solid #000;}
+.set_search_box button{width:40%;background:#87c442;border:none;padding:15px 30px;color:#fff;font-weight:500;font-size:20px;border-radius:10px;border:2px dashed #000;}
 .search_dropdown{display:inline-block;}
 
 /*.set_search_box button{border:none;padding:10px 20px;}*/
@@ -719,6 +719,7 @@ header .gnb_m,header .gnb_open2{display:none;}
 .set_search_box .panel{padding:0 18px;display:none;background-color:#fff;overflow:hidden;}
 .set_search_box .feild_wrap, .set_search_box .option_wrap{width:102.5%;margin-bottom:30px;}
 .set_search_box .feild_wrap{width:104%;}
+.set_search_box .feild_wrap .keyword_box{margin-bottom:15px;}
 .set_search_box .feild_wrap .pct_none{display:none;}
 
 .set_search_box .feild_wrap .pricing_box{margin:15px 0;}
@@ -745,7 +746,7 @@ a.set_reset_m{display:none;}
   .set_search_box .feild_wrap .keyword_box input{width:95%;}
   .op_wrap{float:none;width:100%;margin:0;}
   .set_search_box{width:100%;margin:10px 0 0 0;padding:10px;}
-  .set_search_box button{width:100%;padding:10px;font-size:12px;} 
+  .set_search_box button{width:100%;padding:15px;font-size:30px;} 
   .field span.label{width:100%;float:none;padding:0;}
   .field input, .field select{width:100%;float:none;}
   .field .custom-time{padding:10px 0 0 0;}
