@@ -90,7 +90,7 @@
         <% else %>
           <div class="box total_box">
             <p>Estimated Purchase Price</p>
-            <% you_save = @promocode.p_spare_26.to_i - running_total.to_i %>
+            <% you_save = @promocode.p_spare_26.to_i - running_total %>
             <em class="total_p"><%= number_to_currency(running_total) %></em>
             <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
           </div>
