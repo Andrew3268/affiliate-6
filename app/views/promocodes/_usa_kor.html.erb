@@ -76,13 +76,13 @@
               <% estimated_us = 0 %>
               <% estimated_us = running_total - coupon_55%>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-              <% you_save = @promocode.p_spare_26.to_i - estimated_us %>
+              <% you_save = @promocode.p_spare_26.to_f - estimated_us %>
               <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
             <% else %>
               <% estimated_us = 0 %>
               <% estimated_us = running_total - @promocode.p_spare_56 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-              <% you_save = @promocode.p_spare_26.to_i - estimated_us.to_i %>
+              <% you_save = @promocode.p_spare_26.to_f - estimated_us.to_f %>
               <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
             <% end %>
           </div>
@@ -90,7 +90,7 @@
         <% else %>
           <div class="box total_box">
             <p>Estimated Purchase Price</p>
-            <% you_save = @promocode.p_spare_26.to_i - running_total %>
+            <% you_save = @promocode.p_spare_26.to_f - running_total.to_f %>
             <em class="total_p"><%= number_to_currency(running_total) %></em>
             <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
           </div>
