@@ -160,15 +160,15 @@
             <p>Estimated price when coupon is applied</p>
             <% if @hotdeal.h_spare_61.present? %>
               <% estimated_us = 0 %>
-              <% estimated_us = @hotdeal.h_spare_44.to_i - coupon_p61 %>
+              <% estimated_us = @hotdeal.h_spare_44- coupon_p61 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-              <% you_saved = @hotdeal.h_spare_43.to_i - estimated_us.to_i %>
+              <% you_saved = @hotdeal.h_spare_43.to_f - estimated_us.to_f %>
               <p class="you-save">You've saved <%= number_to_currency(you_saved) %></p>
             <% else %>
               <% estimated_us = 0 %>
               <% estimated_us = @hotdeal.h_spare_44 - @hotdeal.h_spare_62 %>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-              <% you_saved = @hotdeal.h_spare_43.to_i - estimated_us.to_i %>
+              <% you_saved = @hotdeal.h_spare_43.to_f - estimated_us.to_f %>
               <p class="you-save">You've saved <%= number_to_currency(you_saved) %></p>
             <% end %>
           </div>
@@ -177,7 +177,7 @@
     <% else %>
       <div class="box total_box">
         <p>Estimated Purchase Price</p>
-        <% running_save = @hotdeal.h_spare_43 - @hotdeal.h_spare_44 %>
+        <% running_save = @hotdeal.h_spare_43.to_f - @hotdeal.h_spare_44.to_f %>
         <em class="total_p"><%= number_to_currency(@hotdeal.h_spare_44) %></em>
         <p class="you-save">You've saved <%= number_to_currency(running_save) %></p>
       </div>

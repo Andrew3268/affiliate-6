@@ -1,4 +1,4 @@
-<!-- < @promocodes.each do |promocode| > -->
+<!-- < promocodes.each do |promocode| > -->
 <figure class="deals_card">
    <div class="image_box">
       <% if promocode.p_image.present? %>
@@ -67,14 +67,42 @@
     <div class="price">
       <% running_total = 0 %>
       <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
-      <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
+      <!-- <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %> -->
+      
+      <% coupon_55 = 0 %>
+      <% coupon_55 = running_total * promocode.p_spare_55.to_i / 100 %>
+      <% number_to_currency(coupon_55) %>
+
+      <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
+          
+          <% if promocode.p_spare_55.present? %>
+            <% estimated_us = 0 %>
+            <% estimated_us = running_total - coupon_55%>
+            <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(estimated_us) %>
+          <% else %>
+            <% estimated_us = 0 %>
+            <% estimated_us = running_total - promocode.p_spare_56 %>
+            <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(estimated_us) %>
+          <% end %>
+        
+      <% else %>
+          
+        <% you_save = promocode.p_spare_26.to_f - running_total.to_f %>
+        <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
+          
+      <% end %>
+
+
+
+
+
       <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
         <div class="extra">+ extra coupon</div>
       <% end %>
     </div>
 
     <div class="m_btn"><%= link_to "GET COUPON", promocode %></a></div>
-    <% if can? :update, @promocode %>
+    <% if can? :update, promocode %>
      <div class="admin">
        <%= link_to 'Edit', edit_promocode_path(promocode) %> | 
        <%= link_to 'Destroy', promocode, method: :delete, data: { confirm: 'Are you sure?' } %> |

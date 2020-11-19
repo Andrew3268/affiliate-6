@@ -18,7 +18,11 @@
         <div class="show_img hotdeal_img">
           <div class="img_box deal_img_box">
             <% if @promocode.p_image.present? %>
-             <a target="_blank" href="<%= @promocode.p_link %>"><img src="<%= @promocode.p_image %>" alt="<%= @promocode.p_title %>" title="<%= @promocode.p_image_title %>"></a>
+             <% if @promocode.p_image_title.present? %>
+              <a target="_blank" href="<%= @promocode.p_link %>"><img src="<%= @promocode.p_image %>" alt="<%= @promocode.p_title %>" title="<%= @promocode.p_image_title %>"></a>
+             <% else %>
+              <a target="_blank" href="<%= @promocode.p_link %>"><img src="<%= @promocode.p_image %>" alt="<%= @promocode.p_title %>" title="<%= @promocode.p_title %>"></a>
+             <% end %>
             <% else %>
              <%= link_to (image_tag @promocode.pimage.url(:small), alt: @promocode.p_title, title: @promocode.p_image_title), @promocode %>
             <% end %>
@@ -78,7 +82,11 @@
         amzn_assoc_ad_type = "smart";
         amzn_assoc_marketplace = "amazon";
         amzn_assoc_region = "US";
-        amzn_assoc_default_search_phrase = "<%= @promocode.p_image_title %>";
+        <% if @promocode.p_image_title.present? %>
+          amzn_assoc_default_search_phrase = "<%= @promocode.p_image_title %>";
+        <% else %>
+          amzn_assoc_default_search_phrase = "<%= @promocode.p_title %>";
+        <% end %>
         amzn_assoc_default_category = "All";
         amzn_assoc_linkid = "10a626d082cd5d1d67d4b8a2afc6ae3d";
         amzn_assoc_title = "Shop Related Products";

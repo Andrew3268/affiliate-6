@@ -1,4 +1,4 @@
-<!-- < @hotdeals.each do |hotdeal| > -->
+<!-- < hotdeals.each do |hotdeal| > -->
 <figure class="deals_card">
   <div class="image_box">
     <% if hotdeal.h_image.present? %>
@@ -51,7 +51,7 @@
 
     <div class="price">
       
-      <% if hotdeal.h_spare_44.present? %>
+    <!--   <% if hotdeal.h_spare_44.present? %>
         <em><%= number_to_currency(hotdeal.h_spare_43) %></em><%= number_to_currency(hotdeal.h_spare_44) %>
       <% else %>
         <% if hotdeal.h_spare_61.present? %>
@@ -69,13 +69,35 @@
           </span>
           <% end %>
         <% end %>
-      <% end %>       
+      <% end %>      
+ -->
 
+      <% coupon_p61 = 0 %>
+      <% coupon_p61 = (hotdeal.h_spare_44.to_i * hotdeal.h_spare_61.to_i / 100) %>
+      <% number_to_currency(coupon_p61) %>
+
+      <% if hotdeal.h_spare_61.present? || hotdeal.h_spare_62.present? %>
+        <% if hotdeal.h_spare_44.present? %>
+            <% if hotdeal.h_spare_61.present? %>
+              <% estimated_us = 0 %>
+              <% estimated_us = hotdeal.h_spare_44- coupon_p61 %>
+              <em><%= number_to_currency(hotdeal.h_spare_43) %></em><%= number_to_currency(estimated_us) %>
+            <% else %>
+              <% estimated_us = 0 %>
+              <% estimated_us = hotdeal.h_spare_44 - hotdeal.h_spare_62 %>
+              <em><%= number_to_currency(hotdeal.h_spare_43) %></em><%= number_to_currency(estimated_us) %>
+            <% end %>
+        <% end %>
+      <% else %>
+        <% running_save = hotdeal.h_spare_43.to_f - hotdeal.h_spare_44.to_f %>
+        <em><%= number_to_currency(hotdeal.h_spare_43) %></em><%= number_to_currency(hotdeal.h_spare_44) %>
+      <% end %>
+        
     </div>
 
 
     <div class="m_btn"><a href="<%= hotdeal.h_link %>">Buy Now</a></div>
-    <% if can? :update, @hotdeal %>
+    <% if can? :update, hotdeal %>
      <div class="admin">
        <%= link_to 'Edit', edit_hotdeal_path(hotdeal) %> | 
        <%= link_to 'Destroy', hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> | 

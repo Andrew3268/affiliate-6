@@ -76,7 +76,7 @@
               <% estimated_us = 0 %>
               <% estimated_us = running_total - coupon_55%>
               <em class="total_p"><%= number_to_currency(estimated_us) %></em>
-              <% you_save = @promocode.p_spare_26.to_f - estimated_us %>
+              <% you_save = @promocode.p_spare_26.to_f - estimated_us.to_f %>
               <p class="you-save">You've saved <%= number_to_currency(you_save) %></p>
             <% else %>
               <% estimated_us = 0 %>
