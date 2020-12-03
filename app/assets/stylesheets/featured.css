@@ -10,11 +10,11 @@
 .cu_sub_nav ul{}
 .cu_sub_nav ul>li{float:left;text-align:center;}
 .cu_sub_nav ul>li>a{text-decoration:none;color:#3d3d3d;display:block;font-size:50px;}
-.cu_sub_nav ul>li>a.active{color:#000;font-weight:500;border-bottom:2px solid;}
+.cu_sub_nav ul>li>a.active{color:#000;font-weight:500;border-bottom:2px solid;font-size:20px;}
 
 @media screen and (max-width:640px){
   .cu_sub_nav{margin:20px 0 -10px 0;}
-  .cu_sub_nav ul>li{float:left;width:50%;text-align:center;}
+  .cu_sub_nav ul>li{float:left;width:100%;text-align:center;}
   .cu_sub_nav ul>li>a{font-size:16px;}
 }
 

@@ -53,7 +53,7 @@
                 <% running_save = @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
                 <p class="h_price">
                   <%= number_to_currency(@hotdeal.h_spare_44) %>
-                  <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">You Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+                  <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
                     <span class="span_04"> | + Extra Coupon</span><% end %> )
                   </span>
                   <!-- <span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) </span> --> 
