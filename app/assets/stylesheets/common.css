@@ -72,6 +72,10 @@ body{/*font-family: 'Noto Sans KR','맑은고딕',sans-serif;*/font-family: 'Not
   .mobile_btn,
   .show_back{display:block;}
 }
+@media screen and (min-width:641px) and (max-width:1199px){
+  .oh_menu{display:none;}
+  .show_back{display:block;}
+}
 
 /* header */
 /*.container{margin:0 auto;max-width:1200px;}
@@ -858,7 +862,6 @@ a.set_reset_m{display:none;}
   .botton_m{display:block;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
-  .botton_m{display:block;}
 }
 
 
