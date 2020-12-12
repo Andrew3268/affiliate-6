@@ -36,6 +36,7 @@
             <% end %>
           <% end %>
           <div class="show_tag"><h3><%= render_with_hashtags(@hotdeal.h_spare_05.to_s) %></h3></div>
+
           <% if can? :update, @hotdeal %>
             <div class="admin">
               <h4>Admin Management</h4>
@@ -46,23 +47,29 @@
               <%= @hotdeal.impressionist_count(:filter=>:all) %> Views |
               <%= @hotdeal.created_at.strftime("%d. %B. %H:%M") %><br />
               <div class="sharing">
-                <p>Available On Amazon Now</p>
-                <p><%= @hotdeal.h_title %></p>
-                <% running_total = 0 %>
-                <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
-                <% running_save = @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
-                <p class="h_price">
-                  <%= number_to_currency(@hotdeal.h_spare_44) %>
-                  <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
-                    <span class="span_04"> | + Extra Coupon</span><% end %> )
-                  </span>
-                  <!-- <span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) </span> --> 
-                </p>
-                <p>#AmazonDeals #HotDeals</p>
-                <p>http://ohigottabuythis.net/hotdeals/<%=(params[:id]) %></p>
+                <div id="div_1">
+                  <p>Available On Amazon Now</p>
+                  <p><%= @hotdeal.h_title %></p>
+                  <% running_total = 0 %>
+                  <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
+                  <% running_save = @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
+                  <p class="h_price">
+                    <%= number_to_currency(@hotdeal.h_spare_44) %>
+                    <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+                      <span class="span_04"> | + Extra Coupon</span><% end %> )
+                    </span>
+                    <!-- <span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) </span> --> 
+                  </p>
+                  <p>#AmazonDeals #HotDeals</p>
+                  <p>http://ohigottabuythis.net/hotdeals/<%=(params[:id]) %></p>
+                </div>
+                <button id="div_1" href="#" name="copyButton">Copy Contents</button>
               </div>
+              
+
             </div>
           <% end %>
+
         </div><!--./show_img-->
 
        <div class="show_inner">
@@ -110,4 +117,18 @@
 <script><%= render(:partial => 'hotdeals', :handlers => [:erb], :formats => [:js]) %></script>
 
 
-
+<script type="text/javascript">
+  $(document).ready(function(){
+  $("button[name=copyButton]").click(function() {
+    var id = $(this).attr('id');
+    var el = document.getElementById(id);
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    return false;
+  });
+});
+</script>

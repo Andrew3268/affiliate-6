@@ -117,7 +117,7 @@
       <div class="box line_three">
         <p>Star Ratings</p>
         <% if @hotdeal.h_spare_08.present? %>
-          <em>Avg. <%= @hotdeal.h_spare_08 %> / 5.0</em>
+          <em><%= @hotdeal.h_spare_08 %></em>
         <% else %>
           <em>-</em>
         <% end %>
@@ -125,7 +125,7 @@
       <div class="box line_three">
         <p>Customer Ratings</p>
         <% if @hotdeal.h_spare_09.present? %>
-          <em><%= number_with_delimiter(@hotdeal.h_spare_09) %>+</em>
+          <em><%= number_with_delimiter(@hotdeal.h_spare_09) %></em>
         <% else %>
           <em>-</em>
         <% end %>
