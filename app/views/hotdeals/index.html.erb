@@ -7,7 +7,13 @@
     <%= render 'shared/botton_amz' %>
 
 
-      <div class="more_search"><%= form_for "",url: hotdeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>      
+      <div class="more_search"><%= form_for "",url: hotdeals_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>    
+
+      <% if can? :update, @promocodes %>
+        <div class="macro_new_bargain">
+          <%= link_to 'New Bargain', new_hotdeal_path %>
+        </div>  
+      <% end %>
 
       <div class="clearfix" id="hotdeals">      
         <%= render @hotdeals %> 

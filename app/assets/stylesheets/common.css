@@ -862,6 +862,7 @@ a.set_reset_m{display:none;}
   .botton_m{display:block;}
 }
 @media screen and (min-width:641px) and (max-width:1199px){
+  .botton_m{display:block;}
 }
 
 
