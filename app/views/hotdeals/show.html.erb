@@ -49,7 +49,7 @@
               <div class="sharing">
                 <div id="div_1">
                   <p>Available On Amazon Now</p>
-                  <p><%= @hotdeal.h_title %></p>
+                  <!-- <p><%= @hotdeal.h_title %></p> -->
                   <% running_total = 0 %>
                   <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
                   <% running_save = @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
