@@ -40,7 +40,7 @@
           <% if can? :update, @hotdeal %>
             <div class="admin">
               <h4>Admin Management</h4>
-              <%= link_to 'Back', hotdeals_path %> |
+              <%= link_to 'Back', hotdeals_path, :class => "admin_back_btn"  %> |
               <%= link_to 'Edit', edit_hotdeal_path(@hotdeal) %> |
               <%= link_to 'Delete', @hotdeal, method: :delete, data: { confirm: 'Are you sure?' } %> |
               <%= render 'hotdeals/body_sns' %><br>
