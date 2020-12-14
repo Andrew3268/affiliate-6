@@ -60,10 +60,10 @@
                     </span>
                     <!-- <span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) </span> --> 
                   </p>
-                  <p>#AmazonDeals #HotDeals</p>
+                  <p>#AmazonDeals #HotDeals #amazonCoupons</p>
                   <!-- <p>http://ohigottabuythis.net/hotdeals/<%=(params[:id]) %></p> -->
                 </div>
-                <button id="div_1" href="#" name="copyButton">Copy Contents</button>
+                <!-- <button id="div_1" href="#" name="copyButton">Copy Contents</button> -->
               </div>
               
 
@@ -73,6 +73,13 @@
         </div><!--./show_img-->
 
        <div class="show_inner">
+        <% if can? :update, @hotdeal %>
+            <div class="admin_macro_btn">
+              <%= link_to 'Back', hotdeals_path, :class => "admin_back_btn"  %> |
+              <%= render 'hotdeals/body_sns' %>
+              <button id="div_1" href="#" name="copyButton">Copy</button>
+            </div>
+          <% end %>
         <%= render 'hotdeals/usa_kor' %>
        </div>
 
