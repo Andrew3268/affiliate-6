@@ -178,7 +178,7 @@
 /* Index Page */
 .dealpage_title{font-family: 'Righteous', cursive;margin-top:80px;}
 .dealpage_title p{position:relative;font-size:55px;}
-.hashtag_page{margin-top:0px;}
+.hashtag_page{margin:0;}
 /*.dealpage_title p:after,
 .deals_code_main_menu ul .nth_2 a:after{position:absolute;height:10px;content:'';background:#000;width:100%;top:69.2%;margin-left:10px;-webkit-transform:translateY(-5px);transform:translateY(-5px);}*/
 .sd_com{margin:0;}
@@ -272,6 +272,7 @@
   .deals_card .image_box .endtoday span{display:block;}
   /* Store Station Page "/deals/stores */
   .deals_card p.store_title{height:2.4em;}
+  .hashtag_page{margin:0 0 0 45px;}
 
 }
 @media screen and (min-width:641px) and (max-width:1199px){

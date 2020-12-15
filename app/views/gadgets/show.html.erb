@@ -2,7 +2,12 @@
 <div class="layout">
   <div class="show_wrap clearfix">
     <div class="show_back">
-      <a href="/gadgets"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="back" /></a>
+      <button onclick="goBack()"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="back" /></button>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
     </div>
     <div class="wrap">
         

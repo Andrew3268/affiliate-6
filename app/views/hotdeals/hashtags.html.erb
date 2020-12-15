@@ -3,7 +3,15 @@
 
 <div class="layout"><!--layout-->
   <div class="wrap">  
-    <%= render 'shared/header_amazon' %>
+    <div class="show_back hotdeal_hashtag_p">
+      <button onclick="goBack()"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="back" /></button>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
+    </div>
+    <!-- <%= render 'shared/header_amazon' %> -->
     
     <div class="dealpage_title hashtag_page">
       <% if params[:name].present? %>
