@@ -3,8 +3,14 @@
   
   <div class="show_wrap clearfix">
     <div class="show_back">
-      <a href="/promocodes"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="back" /></a>
+      <button onclick="goBack()"><img class="go_back" src="<%=asset_path 'go_back.png' %>" alt="back" /></button>
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
     </div>
+
     <div class="wrap">
     <div class="oh_menu">
       <%= render 'shared/header_amazon' %>  
