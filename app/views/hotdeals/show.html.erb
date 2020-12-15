@@ -65,8 +65,27 @@
                 </div>
                 <!-- <button id="div_1" href="#" name="copyButton">Copy Contents</button> -->
               </div>
-              
+            </div>
 
+            <div class="admin">
+              <div class="sharing">
+                <div id="div_2">
+                  <p>Available On Amazon Now</p>
+                  <!-- <!-- <p><%= @hotdeal.h_title %></p> -->
+                  <% running_total = 0 %>
+                  <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
+                  <% running_save = @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
+                  <p class="h_price">
+                    <%= number_to_currency(@hotdeal.h_spare_44) %>
+                    <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+                      <span class="span_04"> | + Extra Coupon</span><% end %> )
+                    </span>
+                    <!-- <span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) </span> --> 
+                  </p>
+                  <p>#AmazonDeals #HotDeals #amazonCoupons</p>
+                  <p>http://ohigottabuythis.net/hotdeals/<%=(params[:id]) %></p>
+                </div>
+              </div>
             </div>
           <% end %>
 
@@ -74,12 +93,13 @@
 
        <div class="show_inner">
         <% if can? :update, @hotdeal %>
-            <div class="admin_macro_btn">
-              <%= link_to 'Back', hotdeals_path, :class => "admin_back_btn"  %> |
-              <%= render 'hotdeals/body_sns' %>
-              <button id="div_1" href="#" name="copyButton">Copy</button>
-            </div>
-          <% end %>
+          <div class="admin_macro_btn">
+            <%= link_to 'Back', hotdeals_path, :class => "admin_back_btn"  %>
+            <%= render 'hotdeals/body_sns' %>
+            <button id="div_1" href="#" name="copyButton">CopyF</button>
+            <button id="div_2" href="#" name="copyTwitter">CopyT</button>
+          </div>
+        <% end %>
         <%= render 'hotdeals/usa_kor' %>
        </div>
 
@@ -121,12 +141,26 @@
     </div>
   </div>
 </div>
-<script><%= render(:partial => 'hotdeals', :handlers => [:erb], :formats => [:js]) %></script>
-
 
 <script type="text/javascript">
   $(document).ready(function(){
   $("button[name=copyButton]").click(function() {
+    var id = $(this).attr('id');
+    var el = document.getElementById(id);
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    return false;
+  });
+});
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+  $("button[name=copyTwitter]").click(function() {
     var id = $(this).attr('id');
     var el = document.getElementById(id);
     var range = document.createRange();
