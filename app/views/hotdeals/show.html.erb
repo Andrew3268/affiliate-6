@@ -57,14 +57,15 @@
                   <p>Available On Amazon Now</p>
                   <!-- <p><%= @hotdeal.h_title %></p> -->
                   <% running_total = 0 %>
-                  <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
+                  <!-- <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %> -->
+                  <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43* 100 %>
                   <% running_save = @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
                   <p class="h_price">
                     <%= number_to_currency(@hotdeal.h_spare_44) %>
-                    <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+                    <span class="span_01">( <span class="span_02"><%= number_to_percentage(running_total, precision: 0) %> OFF </span>  | Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
                       <span class="span_04"> | + Extra Coupon</span><% end %> )
                     </span>
-                    <!-- <span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) </span> --> 
+                    
                   </p>
                   <p>#AmazonDeals #HotDeals #amazonCoupons</p>
                   <!-- <p>http://ohigottabuythis.net/hotdeals/<%=(params[:id]) %></p> -->
@@ -79,14 +80,15 @@
                   <p>Available On Amazon Now</p>
                   <!-- <!-- <p><%= @hotdeal.h_title %></p> -->
                   <% running_total = 0 %>
-                  <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %>
+                  <!-- <% running_total = (@hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i) / @hotdeal.h_spare_43.to_i * 100 %> -->
+                  <% running_total =  (@hotdeal.h_spare_43 - @hotdeal.h_spare_44) / @hotdeal.h_spare_43* 100 %>
                   <% running_save = @hotdeal.h_spare_43.to_i - @hotdeal.h_spare_44.to_i %>
                   <p class="h_price">
                     <%= number_to_currency(@hotdeal.h_spare_44) %>
-                    <span class="span_01">( Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
+                    <span class="span_01">( <span class="span_02"><%= number_to_percentage(running_total, precision: 0) %> OFF </span> | Was: <%= number_to_currency(@hotdeal.h_spare_43) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @hotdeal.h_spare_61.present? || @hotdeal.h_spare_62.present? %>
                       <span class="span_04"> | + Extra Coupon</span><% end %> )
                     </span>
-                    <!-- <span class="span_02"> | <%= number_to_percentage(running_total, precision: 0) %> OFF ) </span> --> 
+                    
                   </p>
                   <p>#AmazonDeals #HotDeals #amazonCoupons</p>
                   <p>http://ohigottabuythis.net/hotdeals/<%=(params[:id]) %></p>
