@@ -7,6 +7,12 @@
     
     <div class="more_search"><%= form_for "",url: promocodes_path, role: "search", method: :get do %><%= text_field_tag :search, @search_term, placeholder: "Search..." %><% end %></div>
 
+     <% if can? :update, @promocodes %>
+        <div class="macro_new_bargain">
+          <%= link_to 'New Promocode', new_promocode_path %>
+        </div>  
+      <% end %>
+
     <div id="promocodes" class="clearfix">
       <%= render @promocodes %> 
     </div>
