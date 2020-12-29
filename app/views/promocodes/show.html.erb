@@ -41,7 +41,9 @@
               <div class="mark"><span>BEST</span><em>DEALS</em></div>
             <% end %>
           <% end %>
-          <div class="show_tag"><h3><%= render_with_phashtags(@promocode.p_hashtag.to_s) %></h3></div>
+          <% if can? :update, @promocode %>
+            <div class="show_tag"><h3><%= render_with_phashtags(@promocode.p_hashtag.to_s) %></h3></div>
+          <% end %>
            <% if can? :update, @promocode %>
             <div class="admin">
               <p>Admin Management</p>
@@ -51,23 +53,50 @@
               <%= render 'promocodes/body_sns' %><br>
               <%= @promocode.impressionist_count(:filter=>:all) %> Views |
               <%= @promocode.created_at.strftime("%d. %B. %H:%M") %><br>
+
+
               <div class="sharing">
-                <p>Available On Amazon Now</p>
-                <p><%= @promocode.p_title %></p>
-                <% running_total = 0 %>
-                <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
-                <% running_save = @promocode.p_spare_26 - running_total %>
-                <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
-                <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
-                <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p>
+                <div id="div_3">
+                  <p>Available On Amazon Now</p>
+                  <!-- <p><%= @promocode.p_title %></p> -->
+                  <% running_total = 0 %>
+                  <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
+                  <% running_save = @promocode.p_spare_26 - running_total %>
+                  <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
+                  <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
+                  <!-- <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p> -->
+                </div>
               </div>
 
-              
             </div>
+
+            <div class="admin">
+              <div class="sharing">
+                <div id="div_4">
+                  <p>Available On Amazon Now</p>
+                  <% running_total = 0 %>
+                  <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
+                  <% running_save = @promocode.p_spare_26 - running_total %>
+                  <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
+                  </p>
+                  <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
+                  <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p>
+                </div>
+              </div>
+            </div>
+
           <% end %>
         </div>
 
         <div class="show_inner">
+          <% if can? :update, @promocode %>
+            <div class="admin_macro_btn">
+              <%= link_to 'Back', promocodes_path, :class => "admin_back_btn"  %>
+              <%= render 'promocodes/body_sns' %>
+              <button id="div_3" href="#" name="copyPF">CopyF</button>
+              <button id="div_4" href="#" name="copypT">CopyT</button>
+            </div>
+          <% end %>
           <%= render 'promocodes/usa_kor' %>
         </div>
 
@@ -106,4 +135,37 @@
   </div><!--./show_wrap-->
 </div><!--./layout-->
 <script><%= render(:partial => 'promocode', :handlers => [:erb], :formats => [:js]) %></script>
+
+<!-- copy text for facebook -->
+<script type="text/javascript">
+  $(document).ready(function(){
+  $("button[name=copyPF]").click(function() {
+    var id = $(this).attr('id');
+    var el = document.getElementById(id);
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    return false;
+  });
+});
+</script>
+<!-- copy text for twitter -->
+<script type="text/javascript">
+  $(document).ready(function(){
+  $("button[name=copypT]").click(function() {
+    var id = $(this).attr('id');
+    var el = document.getElementById(id);
+    var range = document.createRange();
+    range.selectNodeContents(el);
+    var sel = window.getSelection();
+    sel.removeAllRanges();
+    sel.addRange(range);
+    document.execCommand('copy');
+    return false;
+  });
+});
+</script>
 

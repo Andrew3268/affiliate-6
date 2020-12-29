@@ -41,7 +41,9 @@
               <div class="mark"><span>BEST</span><em>DEALS</em></div>
             <% end %>
           <% end %>
-          <div class="show_tag"><h3><%= render_with_hashtags(@hotdeal.h_spare_05.to_s) %></h3></div>
+          <% if can? :update, @hotdeal %>          
+            <div class="show_tag"><h3><%= render_with_hashtags(@hotdeal.h_spare_05.to_s) %></h3></div>
+          <% end %>
 
           <% if can? :update, @hotdeal %>
             <div class="admin">
