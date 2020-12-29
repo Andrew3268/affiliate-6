@@ -4,6 +4,7 @@
 # User-agent: *
 # Disallow: /
 
+Disallow: /auth
 Disallow: /blogs/blog_03_backtoschool
 Disallow: /blogs/promocodes
 Disallow: /messages/index
@@ -22,7 +23,6 @@ Disallow: /sdcategories
 Disallow: /sdcategories/new
 Disallow: /barcategories/new
 Disallow: /barcategories
-Disallow: /categories
 Disallow: /categories/new
 Disallow: /deals/stores
 Disallow: /deals/all_deals
