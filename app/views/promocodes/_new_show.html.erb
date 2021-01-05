@@ -135,13 +135,14 @@
  
   <div class="extra_info"></div><!--./extra_info-->
 
-  <% if @promocode.p_promocode.present? %>
+  
     <div class="code_btn">
-       <!-- <p class="code_line">Click and copy this code then apply it at your checkout</p> -->
-       <div class="text_copied intheshow">
-        <div class="container_copy"><div class="wrap"><div class="box"><p data-copy-text=""><%= @promocode.p_promocode %></p></div></div></div>
-       </div>
-
+       <% if @promocode.p_promocode.present? %>
+         <!-- <p class="code_line">Click and copy this code then apply it at your checkout</p> -->
+         <div class="text_copied intheshow">
+          <div class="container_copy"><div class="wrap"><div class="box"><p data-copy-text=""><%= @promocode.p_promocode %></p></div></div></div>
+         </div>
+       <% end %>
        <div class="pc_btn">
          <div class="only_show promocode_btn">
           <a class="m_btn p_btn" target="_blank" href="<%= @promocode.p_link %>">Check it out on &ensp;<em>Amazon</em></a>
@@ -153,6 +154,6 @@
          </div> 
        </div>
     </div>
-  <% end %>
+  
   
 </div><!--./hotdeal_inner-->
