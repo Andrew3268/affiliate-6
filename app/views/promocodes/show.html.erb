@@ -34,16 +34,21 @@
              <%= link_to (image_tag @promocode.pimage.url(:small), alt: @promocode.p_title, title: @promocode.p_image_title), @promocode %>
             <% end %>
           </div>
-          <% if @promocode.p_spare_27 < 50 %>
-            <div class="mark"><span>GOOD</span><em>DEALS</em></div>
-          <% else %>
-            <% if @promocode.p_spare_27 > 50 %>
-              <div class="mark"><span>BEST</span><em>DEALS</em></div>
+
+          <% if @promocode.p_promocode.present? %>
+            <% if @promocode.p_spare_27 < 50 %>
+              <div class="mark"><span>GOOD</span><em>DEALS</em></div>
+            <% else %>
+              <% if @promocode.p_spare_27 > 50 %>
+                <div class="mark"><span>BEST</span><em>DEALS</em></div>
+              <% end %>
             <% end %>
           <% end %>
+
           <% if can? :update, @promocode %>
             <div class="show_tag"><h3><%= render_with_phashtags(@promocode.p_hashtag.to_s) %></h3></div>
           <% end %>
+          
            <% if can? :update, @promocode %>
             <div class="admin">
               <p>Admin Management</p>
@@ -55,35 +60,75 @@
               <%= @promocode.created_at.strftime("%d. %B. %H:%M") %><br>
 
 
-              <div class="sharing">
-                <div id="div_3">
-                  <p>Available On Amazon Now</p>
-                  <!-- <p><%= @promocode.p_title %></p> -->
-                  <% running_total = 0 %>
-                  <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
-                  <% running_save = @promocode.p_spare_26 - running_total %>
-                  <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
-                  <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
-                  <!-- <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p> -->
+              <% if @promocode.p_promocode.present? %>
+                <div class="sharing">
+                  <div id="div_3">
+                    <p>Available On Amazon Now</p>
+                    <!-- <p><%= @promocode.p_title %></p> -->
+                    <% running_total = 0 %>
+                    <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
+                    <% running_save = @promocode.p_spare_26 - running_total %>
+                    <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
+                    <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
+                    <!-- <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p> -->
+                  </div>
                 </div>
-              </div>
+              <% else %>
+                <div class="sharing">
+                  <div id="div_3">
+                    <p>Available On Amazon Now</p>
+                    <% running_total = 0 %>
+                    <% running_total =  (@promocode.p_spare_28 - @promocode.p_spare_26) / @promocode.p_spare_28* 100 %>
+                    <% running_save = @promocode.p_spare_28.to_i - @promocode.p_spare_26.to_i %>
+                    <p class="h_price">
+                      <%= number_to_currency(@promocode.p_spare_26) %>
+                      <span class="span_01">( <span class="span_02"><%= number_to_percentage(running_total, precision: 0) %> OFF </span>  | Was: <%= number_to_currency(@promocode.p_spare_28) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+                        <span class="span_04"> | + Extra Coupon</span><% end %> )
+                      </span>
+                    </p>
+                    <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
+                  </div>
+                </div>
+              <% end %>
 
             </div>
 
-            <div class="admin">
-              <div class="sharing">
-                <div id="div_4">
-                  <p>Available On Amazon Now</p>
-                  <% running_total = 0 %>
-                  <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
-                  <% running_save = @promocode.p_spare_26 - running_total %>
-                  <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
-                  </p>
-                  <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
-                  <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p>
+
+            <% if @promocode.p_promocode.present? %>
+              <div class="admin">
+                <div class="sharing">
+                  <div id="div_4">
+                    <p>Available On Amazon Now</p>
+                    <% running_total = 0 %>
+                    <% running_total =  @promocode.p_spare_26 - (@promocode.p_spare_27 / 100) * @promocode.p_spare_26 %>
+                    <% running_save = @promocode.p_spare_26 - running_total %>
+                    <p class="h_price"><%= number_to_currency(running_total) %> <span class="span_01">( Was: <%= number_to_currency(@promocode.p_spare_26) %></span><span class="span_02"> | <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> OFF with Code: <%= @promocode.p_promocode %> | Save: <%= number_to_currency(running_save) %> <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>| + Extra Coupon<% end %>)</span></p>
+                    </p>
+                    <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
+                    <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p>
+                  </div>
                 </div>
               </div>
-            </div>
+            <% else %>
+              <div class="admin">
+                <div class="sharing">
+                  <div id="div_3">
+                    <p>Available On Amazon Now</p>
+                    <% running_total = 0 %>
+                    <% running_total =  (@promocode.p_spare_28 - @promocode.p_spare_26) / @promocode.p_spare_28* 100 %>
+                    <% running_save = @promocode.p_spare_28.to_i - @promocode.p_spare_26.to_i %>
+                    <p class="h_price">
+                      <%= number_to_currency(@promocode.p_spare_26) %>
+                      <span class="span_01">( <span class="span_02"><%= number_to_percentage(running_total, precision: 0) %> OFF </span>  | Was: <%= number_to_currency(@promocode.p_spare_28) %> | <span class="span_03">Save: <%= number_to_currency(running_save) %></span>  <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
+                        <span class="span_04"> | + Extra Coupon</span><% end %> )
+                      </span>
+                    </p>
+                    <p>#AmazonDeals #HotDeals #CouponCodes #Coupons #PromoCode</p>
+                    <p>http://ohigottabuythis.net/promocodes/<%=(params[:id]) %></p>
+                  </div>
+                </div>
+              </div>
+            <% end %>
 
           <% end %>
         </div>
@@ -97,7 +142,7 @@
               <button id="div_4" href="#" name="copypT">CopyT</button>
             </div>
           <% end %>
-          <%= render 'promocodes/usa_kor' %>
+          <%= render 'promocodes/new_show' %>
         </div>
 
         <% if can? :update, @promocode %>

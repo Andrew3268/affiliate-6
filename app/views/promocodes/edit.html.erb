@@ -1,58 +1,7 @@
 <div class="wrap">  
   <div class="hotdeal_wrap">
-    <h1>Editing Promocode</h1>
-    <div class="hotdeal_form">
-      <%= simple_form_for(@promocode) do |f| %>
-        <%= f.error_notification %>
-        <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
-
-        <%= f.input :pimage, label: 'Choose Image' %>
-        <!-- <%= f.select :p_banner, ([["Do You Have A Banner?", ""], "YES"])%> -->
-        <%= f.select :p_spare_02, ([["In Stock", ""], "Only in a few stock left"])%>
-        <!-- <%= f.select :p_spare_05, ([["Subscribe & Save?", ""], "Yes"])%> -->
-        <!-- <%= f.select :p_spare_10, ([["Yes, It's Free shipping", ""], "No, It's not"]) %><br /><br /> -->
-        <!-- <%= f.select :p_spare_01, ([["Ship to Korea", ""], "Yes"])%> -->
-        <div class="pricing clearfix">
-          <%= f.input :p_spare_26, label: 'List Price' %>
-          <%= f.input :p_spare_27, label: 'Discount Percentage' %>
-          <!-- <%= f.input :p_spare_54, label: 'Shipping( 5.99 )' %> -->
-        </div>
-        <div class="basic_info">
-          <%= f.input :p_image, label: 'Image URL' %>
-          <%= f.input :p_link, label: 'Product URL' %>
-          <%= f.input :p_title , label: 'Title Of Product' %>
-          <%= f.input :p_image_title, label: 'Image_Title' %>
-          <!-- <%= f.input :p_keyword, label: ' gadgets, amazon, recommended, promo code, coupon, under $ ' %> -->
-          <!-- <%= f.input :p_spare_06, label: 'Korean Title' %>   -->
-        </div>
-        <div class="pricing clearfix">
-          <%= f.input :p_spare_03, label: 'Average Rate' %>
-          <%= f.input :p_spare_04, label: 'Number of Reviews' %>
-          <%= f.input :p_spare_55, label: 'Coupon(%)' %>
-          <%= f.input :p_spare_56, label: 'Coupon($)' %>
-          <%= f.input :p_extra_deal, label: 'Extra Deals?' %>
-          <%= f.input :p_hashtag, label: 'Hashtags' %>
-        </div>
-
-        <div class="find_more basic_info">
-          <%= f.input :p_spare_07, label: 'Amazon Choice' %>
-          <%= f.input :p_spare_08, label: 'Amazon Choice Link' %>
-        </div>
-        <div class="pricing clearfix">
-          <%= f.input :p_promocode, input_html: { class: "promo_code" }, label: 'Promo Code' %>
-          <!-- <%= f.input :p_end_date, input_html: { class: "promo_date" }, label: 'End Date' %> -->
-        </div>
-        <!-- <%= f.input :p_spare_50, label: 'Expired Date' %><br /> -->
-        <!-- <%= f.input :p_spare_51, label: 'Ends Today' %><br /> -->
-        <!-- <%= f.input :p_spare_52, label: 'For New Sticker' %><br /> -->
-        <!-- <%= f.input :p_description, label: 'Description Of Product' %> -->
-        <%= f.input :p_spare_36, as: :trix_editor, label: 'Description Of Product with TRIX' %>
-
-        <div class="form_btn"><%= f.button :submit %></div>
-
-      <% end %>
-    </div>
-    <%= link_to 'Show', @promocode %> |
+    <h1>New Edit</h1>
+    <%= render 'new_form' %>
     <%= link_to 'Back', promocodes_path %>
   </div>
 </div>

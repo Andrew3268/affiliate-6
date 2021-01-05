@@ -13,6 +13,7 @@
       <li>Take <%= number_to_percentage(@promocode.p_spare_27, precision: 0) %> at <%= number_to_currency(@promocode.p_spare_26) %> via code and save <%= number_to_currency(running_save) %></li>
     <% end %> -->
     
+    <!-- if is has coupon -->
     <% if @promocode.p_spare_55.present? || @promocode.p_spare_56.present? %>
       <% if @promocode.p_spare_55.present? %>
         <li>+ extra <%= number_to_percentage(@promocode.p_spare_55, precision: 0) %> off coupon</li>

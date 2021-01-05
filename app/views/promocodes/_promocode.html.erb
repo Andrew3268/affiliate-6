@@ -6,7 +6,15 @@
       <% else %>
         <%= link_to (image_tag promocode.pimage.url(:small), alt: promocode.p_title, title: promocode.p_image_title), promocode %>
       <% end %>
-      <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
+
+      <% if promocode.p_promocode.present? %>
+        <div class="mark"><span><%= number_to_percentage(promocode.p_spare_27, precision: 0) %></span><em>OFF</em></div>
+      <% else %>
+        <% running_total = 0 %>
+        <% running_total =  (promocode.p_spare_28 - promocode.p_spare_26) / promocode.p_spare_28 * 100 %>
+        <div class="mark"><span><%= number_to_percentage(running_total, precision: 0) %></span><em>OFF</em></div>
+      <% end %>
+
     </div>
   <!-- Start Image Section -->
   <!-- <% if promocode.p_end_date.present? %>
@@ -64,42 +72,72 @@
       <% end %>
       <%= link_to promocode.p_title, promocode %>
     </p>
-    <div class="price">
-      <% running_total = 0 %>
-      <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
-      <!-- <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %> -->
-      
-      <% coupon_55 = 0 %>
-      <% coupon_55 = running_total * promocode.p_spare_55.to_i / 100 %>
-      <% number_to_currency(coupon_55) %>
 
-      <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
-          
-          <% if promocode.p_spare_55.present? %>
-            <% estimated_us = 0 %>
-            <% estimated_us = running_total - coupon_55%>
-            <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(estimated_us) %>
-          <% else %>
-            <% estimated_us = 0 %>
-            <% estimated_us = running_total - promocode.p_spare_56 %>
-            <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(estimated_us) %>
-          <% end %>
+    <% if promocode.p_promocode.present? %>
+      <div class="price">
+        <% running_total = 0 %>
+        <% running_total =  promocode.p_spare_26 - (promocode.p_spare_27 / 100) * promocode.p_spare_26 %>
+        <!-- <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %> -->
         
-      <% else %>
+        <% coupon_55 = 0 %>
+        <% coupon_55 = running_total * promocode.p_spare_55.to_i / 100 %>
+        <% number_to_currency(coupon_55) %>
+
+        <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
+            
+            <% if promocode.p_spare_55.present? %>
+              <% estimated_us = 0 %>
+              <% estimated_us = running_total - coupon_55%>
+              <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(estimated_us) %>
+            <% else %>
+              <% estimated_us = 0 %>
+              <% estimated_us = running_total - promocode.p_spare_56 %>
+              <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(estimated_us) %>
+            <% end %>
           
-        <% you_save = promocode.p_spare_26.to_f - running_total.to_f %>
-        <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
+        <% else %>
+            
+          <!-- <% you_save = promocode.p_spare_26.to_f - running_total.to_f %> -->
+          <em><%= number_to_currency(promocode.p_spare_26) %></em><%= number_to_currency(running_total) %>
+            
+        <% end %>
+
+
+        <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
+          <!-- <div class="extra">+ extra coupon</div> -->
+        <% end %>
+        <% if can? :update, promocode %>
+          <div class="extra">promocode</div>
+        <% end %>
+      </div>
+    
+    <% else %>
+
+      <div class="price">
+   
+        <% coupon_p61 = 0 %>
+        <% coupon_p61 = (promocode.p_spare_26.to_i * promocode.p_spare_55.to_i / 100) %>
+        <% number_to_currency(coupon_p61) %>
+
+        <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
+          <% if promocode.p_spare_26.present? %>
+              <% if promocode.p_spare_55.present? %>
+                <% estimated_us = 0 %>
+                <% estimated_us = promocode.p_spare_26- coupon_p61 %>
+                <em><%= number_to_currency(promocode.p_spare_28) %></em><%= number_to_currency(estimated_us) %>
+              <% else %>
+                <% estimated_us = 0 %>
+                <% estimated_us = promocode.p_spare_26 - promocode.p_spare_56 %>
+                <em><%= number_to_currency(promocode.p_spare_28) %></em><%= number_to_currency(estimated_us) %>
+              <% end %>
+          <% end %>
+        <% else %>
+          <% running_save = promocode.p_spare_28.to_f - promocode.p_spare_26.to_f %>
+          <em><%= number_to_currency(promocode.p_spare_28) %></em><%= number_to_currency(promocode.p_spare_26) %>
+        <% end %>
           
-      <% end %>
-
-
-
-
-
-      <% if promocode.p_spare_55.present? || promocode.p_spare_56.present? %>
-        <div class="extra">+ extra coupon</div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
 
     <div class="m_btn"><%= link_to "GET COUPON", promocode %></a></div>
     <% if can? :update, promocode %>
