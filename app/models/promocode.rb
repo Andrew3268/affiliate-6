@@ -5,6 +5,7 @@ class Promocode < ActiveRecord::Base
   is_impressionable :counter_cache => true, :unique => true
 
   # validates :p_promocode, presence: true
+  validates :p_spare_26, presence: true
 
   # def impression_count
   #   impressions.size

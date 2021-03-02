@@ -17,6 +17,9 @@ gem 'whenever', require: false
 gem 'will_paginate_infinite', '~> 0.1.3'
 gem 'trix'
 gem 'sitemap_generator'
+gem 'bigdecimal', '1.4.2'
+
+
 
 
 # group :production do
